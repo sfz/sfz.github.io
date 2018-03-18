@@ -1,7 +1,3 @@
----
-title: SFZ File Format
-lang: en
----
 # SFZ File Format
 
 The SFZ file format is a human readable instrument definition file format for
