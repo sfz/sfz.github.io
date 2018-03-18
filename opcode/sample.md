@@ -1,7 +1,5 @@
----
-title: sample Opcode
-lang: en
----
+# sample Opcode
+
 This is the most fundamental opcode of the SFZ file format.
 It allows you to load and assign a certain audio sample file.
 A variety of audio file formats are supported. 

@@ -1,7 +1,5 @@
----
-title: lokey Opcode
-lang: en
----
+# lokey Opcode
+
 Causes the associated region to play when a constraint on MIDI note is respected.
 Used in conjunction with [hikey](hikey), it makes the region play when the
 incoming note is equal to or higher than [lokey](lokey) and equal to or lower

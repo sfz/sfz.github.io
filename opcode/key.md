@@ -1,7 +1,5 @@
----
-title: key Opcode
-lang: en
----
+# key Opcode
+
 With this opcode you can cause a region to be played only when the incoming MIDI
 note is equal to **[note-value]**. If you want your region to be triggered by a
 range of notes, please see [lokey](lokey) and [hikey](hikey) opcodes.

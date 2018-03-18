@@ -1,7 +1,5 @@
----
-title: hivel Opcode
-lang: en
----
+# hivel Opcode
+
 Causes the associated region to play when a constraint on MIDI velocity is respected.
 Used in conjunction with [lovel](lovel), it makes the region play when the
 incoming note's velocity is equal to or higher than [lovel](lovel) and equal

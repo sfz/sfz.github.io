@@ -1,7 +1,5 @@
----
-title: seq_position Opcode
-lang: en
----
+# seq_position Opcode
+
 Used in conjunction with [seq_length](seq_length), it makes the region play
 when the internal sequence counter is equal to [seq_position](seq_position)
 value.

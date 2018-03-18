@@ -1,7 +1,5 @@
----
-title: hirand Opcode
-lang: en
----
+# hirand Opcode
+
 Causes the associated region to play when generated random number is between a
 defined range.
 Used in conjunction with [lorand](lorand), it makes the region play when the

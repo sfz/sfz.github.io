@@ -1,7 +1,5 @@
----
-title: lochan Opcode
-lang: en
----
+# lochan Opcode
+
 Causes the associated region to play when a constraint on MIDI channel is
 respected. Used in conjunction with [hichan](hichan), it makes the region play
 when the incoming note's MIDI channel is equal to or higher than [lochan](lochan)

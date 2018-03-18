@@ -1,7 +1,5 @@
----
-title: SFZ Global section
-lang: en
----
+# Global section
+
 Statements in this section shall apply to the entire SFZ instrument. In practice
 you may use this section to place articulation settings which should fit for most
 of the part of your instrument. For example you may assign certain envelope

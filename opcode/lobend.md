@@ -1,7 +1,5 @@
----
-title: lobend Opcode
-lang: en
----
+# lobend Opcode
+
 Causes the associated region to play when a constraint on MIDI pitch bend is
 respected. Used in conjunction with [hibend](hibend), it makes the region play
 when the last pitch bend value received is equal to or higher than

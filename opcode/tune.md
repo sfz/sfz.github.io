@@ -1,7 +1,5 @@
----
-title: tune Opcode
-lang: en
----
+# tune Opcode
+
 With this opcode you can fine tune the sample played. You can change the original
 pitch of the sample, increasing or decreasing it within the range of +-100 cents.
 If you want to increase or decrease the pitch to more than a semitone, please

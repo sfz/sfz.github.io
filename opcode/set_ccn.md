@@ -1,7 +1,5 @@
----
-title: set_ccN Opcode
-lang: en
----
+# set_ccN Opcode
+
 Sets a different initial MIDI controller value to the requested MIDI controller.
 
 ### Opcode Prototype

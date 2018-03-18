@@ -1,7 +1,5 @@
----
-title: seq_length Opcode
-lang: en
----
+# seq_length Opcode
+
 Used in conjunction with [seq_position](seq_position), it defines the length
 of a sequence. 
 

@@ -1,7 +1,5 @@
----
-title: transpose Opcode
-lang: en
----
+# transpose Opcode
+
 With this opcode you can change the original pitch of the sample, increasing or
 decreasing it within the range of +-127 semitones.
 If you want to increase or decrease the pitch within a semitone, please see the

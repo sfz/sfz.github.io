@@ -1,7 +1,5 @@
----
-title: script Opcode
-lang: en
----
+# script Opcode
+
 This is an extension to the SFZ file format which is currently only available
 with LinuxSampler. It allows to load real-time instrument scripts for SFZ
 instruments. Find out more about [Instrument Scripts](../scripts).
