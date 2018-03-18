@@ -6,14 +6,14 @@ formats you can open and modify such .sfz files simply with any text editor.
 
 ## Sections
 
-A sfz file is divided into sections. A section defines in which context the
-subsequent statements in the sfz file shall be interpreted as. For example You
-may want to declare a lowpass filter to be used either for the entire sfz
+A SFZ file is divided into sections. A section defines in which context the
+subsequent statements in the SFZ file shall be interpreted as. For example You
+may want to declare a lowpass filter to be used either for the entire SFZ
 instrument, or you may declare the lowpass filter to be only used for a certain
 region on the keyboard instead. A section is introduced by its section name,
 where the section name is placed in a pair of angle brackets. The section name
-is then followed by the respective sfz opcodes which shall be assigned to that
-particular section. The sections available with sfz are:
+is then followed by the respective SFZ opcodes which shall be assigned to that
+particular section. The sections available with SFZ are:
 
 | Section                      | Standard | Description
 | ---------------------------- | -------- | -----------
@@ -22,11 +22,11 @@ particular section. The sections available with sfz are:
 ## Opcodes
 
 The actual individual statements which make up the articulation definition of a
-sfz instrument are called opcodes. For example there is an opcode for loading and
+SFZ instrument are called opcodes. For example there is an opcode for loading and
 assigning a sample file to be played. And there is an opcode for defining envelope
 parameters, and so on. The opcodes available with the SFZ file format are:
 
-| Section                             | Standard          | Description
+| Opcode                              | Standard          | Description
 | ----------------------------------- | ----------------- | -----------
 | [hibend](opcode/hibend)             | SFZ v1            | Assign pitch pend upper limit to region.
 | [hichan](opcode/hichan)             | SFZ v1            | Assign MIDI channel upper limit to region.
