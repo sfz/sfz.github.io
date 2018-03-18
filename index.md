@@ -2,6 +2,8 @@
 title: SFZ File Format
 lang: en
 ---
+# SFZ File Format
+
 The SFZ file format is a human readable instrument definition file format for
 audio sample based virtual instruments. In contrast to many other sampler file
 formats you can open and modify such .sfz files simply with any text editor.
