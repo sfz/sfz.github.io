@@ -6,7 +6,7 @@ A variety of audio file formats are supported.
 
 ### Opcode Prototype
 
-[sample](sample)=**[path]**
+sample=**[path]**
 
 ### Parameter
 
@@ -17,15 +17,16 @@ sfz file's location.
 
 ### Allowed Sections
 
-May be used in sections <[`global`](../section/global)> and <`region`>, ... TODO.
+May be used in sections <[global](../section/global)> and \<region\>, ... TODO.
 
 ### Examples
 
 Loads the WAV file "organ_c3.wav" from the subdirectory "mysamples" and assigns
 it to the entire key range of the instrument. 
 
-<[`global`](../section/global)><br>
-[sample](sample)=mysamples/organ_c3.wav<br>
+<[global](../section/global)>
+
+sample=mysamples/organ_c3.wav
 
 ### Availability
 
