@@ -26,23 +26,23 @@ SFZ instrument are called opcodes. For example there is an opcode for loading an
 assigning a sample file to be played. And there is an opcode for defining envelope
 parameters, and so on. The opcodes available with the SFZ file format are:
 
-| Opcode                              | Standard          | Description
-| ----------------------------------- | ----------------- | -----------
-| [hibend](opcode/hibend)             | SFZ v1            | Assign pitch pend upper limit to region.
-| [hichan](opcode/hichan)             | SFZ v1            | Assign MIDI channel upper limit to region.
-| [hikey](opcode/hikey)               | SFZ v1            | Assign MIDI note number upper limit to region.
-| [hirand](opcode/hirand)             | SFZ v1            | Assign random number generator upper limit to region.
-| [hivel](opcode/hivel)               | SFZ v1            | Assign MIDI velocity upper limit to region.
-| [key](opcode/key)                   | SFZ v1            | Assign precise note number to region.
-| [lobend](opcode/lobend)             | SFZ v1            | Assign pitch bend lower limit to region.
-| [lochan](opcode/lochan)             | SFZ v1            | Assign MIDI channel lower limit to region.
-| [lokey](opcode/lokey)               | SFZ v1            | Assign MIDI note number lower limit to region.
-| [lorand](opcode/lorand)             | SFZ v1            | Assign random number generator lower limit to region.
-| [lovel](opcode/lovel)               | SFZ v1            | Assign MIDI velocity lower limit to region.
-| [sample](opcode/sample)             | SFZ v1            | Load and assign an audio sample file.
-| [script](opcode/script)             | LinuxSampler Ext. | Load an real-time instrument script for the instrument.
-| [seq_length](opcode/seq_length)     | SFZ v1            | Defines a round robin length.
-| [seq_position](opcode/seq_position) | SFZ v1            | Assigns a round robin position to a region.
-| [set_ccN](opcode/set_ccn)           | SFZ v2            | Assign initial value to MIDI controller.
-| [transpose](opcode/transpose)       | SFZ v1            | Transpose by given amount of semi tones.
-| [tune](opcode/tune)                 | SFZ v1            | Fine tuning by given amount of cents.
+| Opcode                              | Standard |   Min |   Max | Default | Description
+| :---                                | :---     |  ---: |  ---: |    ---: | :---
+| [lobend](opcode/lobend)             | SFZ v1   | -8192 |  8192 |   -8192 | Assign pitch bend lower limit to region.
+| [hibend](opcode/hibend)             | SFZ v1   | -8192 |  8192 |    8192 | Assign pitch pend upper limit to region.
+| [lochan](opcode/lochan)             | SFZ v1   |     1 |    16 |       1 | Assign MIDI channel lower limit to region.
+| [hichan](opcode/hichan)             | SFZ v1   |     1 |    16 |      16 | Assign MIDI channel upper limit to region.
+| [key](opcode/key)                   | SFZ v1   |     0 |   127 |       - | Assign precise note number to region.
+| [lokey](opcode/lokey)               | SFZ v1   |     0 |   127 |       - | Assign MIDI note number lower limit to region.
+| [hikey](opcode/hikey)               | SFZ v1   |     0 |   127 |       - | Assign MIDI note number upper limit to region.
+| [lorand](opcode/lorand)             | SFZ v1   |    0f |    1f |       - | Assign random number generator lower limit to region.
+| [hirand](opcode/hirand)             | SFZ v1   |    0f |    1f |       - | Assign random number generator upper limit to region.
+| [lovel](opcode/lovel)               | SFZ v1   |     0 |   127 |       0 | Assign MIDI velocity lower limit to region.
+| [hivel](opcode/hivel)               | SFZ v1   |     0 |   127 |     127 | Assign MIDI velocity upper limit to region.
+| [sample](opcode/sample)             | SFZ v1   |     - |     - |       - | Load and assign an audio sample file (string).
+| [script](opcode/script)             | LS Ext.  |     - |     - |       - | Load an real-time instrument script for the instrument (string).
+| [seq_length](opcode/seq_length)     | SFZ v1   |     1 |   100 |       - | Defines a round robin length.
+| [seq_position](opcode/seq_position) | SFZ v1   |     1 |   100 |       - | Assigns a round robin position to a region.
+| [set_ccN](opcode/set_ccn)           | SFZ v2   |     0 |   127 |       - | Assign initial value to MIDI controller.
+| [transpose](opcode/transpose)       | SFZ v1   |  -127 |   127 |       - | Transpose by given amount of semi tones.
+| [tune](opcode/tune)                 | SFZ v1   |  -100 |   100 |       - | Fine tuning by given amount of cents.
