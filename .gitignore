@@ -1,3 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+.bundle
+.vendor
+assets/css
+assets/js
+_site
+node_modules
+Gemfile.lock
+package-lock.json
+yarn.lock
