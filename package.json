@@ -1,7 +1,7 @@
 {
-	"name": "sfzformat",
+	"name": "SFZFormat",
 	"version": "0.1.0",
-	"author": "sfzformat organization",
+	"author": "SFZ Format Organization",
 	"homepage": "https://sfzformat.github.io/",
 	"scripts": {
 		"css": "node node_modules/npm-run-all/bin/run-s/index.js css-compile css-prefix css-minify",

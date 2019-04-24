@@ -1,7 +1,8 @@
 {% for post in site.posts limit:5 %}
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-<p>posted on <time datetime="{{ post.date | datetime | date_to_xmlschema }}"{% if updated %} data-updated="true"{% endif %}>{{ post.date | date: page.date_fmt }}</time></p>
+<p>Posted on <time datetime="{{ post.date | datetime | date_to_xmlschema }}"{% if updated %}
+              data-updated="true"{% endif %}>{{ post.date | date: page.date_fmt }}</time></p>
 
 {{ post.content }}
 
@@ -11,5 +12,5 @@
 {% endfor %}
 
 <p class="text-center" style="margin-top: 2em;">
-	<a class="btn btn-lg btn-default" href="/news/archive/"><i class="fa fa-calendar fa-fw"></i>News archive</a>
+	<a class="btn btn-lg btn-default" href="/news/archive/"><i class="fa fa-calendar fa-fw"></i> News archive</a>
 </p>

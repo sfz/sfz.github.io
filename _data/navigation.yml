@@ -1,0 +1,52 @@
+toc:
+    - title: Syntax
+      type: dropdown
+      pages:
+        - title: Headers
+          url: /headers/
+
+        - title: SFZ v1 Opcodes
+          url: /opcodes/sfz_1
+
+        - title: SFZ v2 Opcodes
+          url: /opcodes/sfz_2
+
+        - title: Extensions
+          url: /opcodes/aria_extensions
+
+        - title: Directives
+          url: /directives/
+
+    - title: Software
+      type: dropdown
+      pages:
+        - title: Players
+          url: /software/players
+
+        - title: Editors
+          url: /software/tools
+
+    - title: Tutorials
+      type: dropdown
+      pages:
+        - title: Basic / Template
+          url: /tutorials/basic_sfz_file
+
+        - title: Cymbal Muting
+          url: /tutorials/cymbal_muting
+
+        - title: Drum Basics
+          url: /tutorials/drum_basics
+
+        - title: Legato
+          url: /tutorials/legato
+
+        - title: Sustained Note Basics
+          url: /tutorials/sustained_note_basics
+
+        - title: Vibrato
+          url: /tutorials/vibrato
+
+#   - title: Downloads
+#     type: normal
+#     url: /downloads/

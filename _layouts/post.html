@@ -16,18 +16,20 @@
 					<article class="mb-4">
 							<h1>{{ page.title | escape }}</h1>
 							<p class="text-muted">
-								Posted on <time datetime="{{ page.date | datetime | date_to_xmlschema }}">{{ page.date | date: page.date_fmt }}</time>
+								Posted on <time datetime="{{ page.date | datetime | date_to_xmlschema }}">
+                                    {{ page.date | date: page.date_fmt }}</time>
 {% if page.author %}by {{ page.author }}{% endif %}
 							</p>
 {{ content }}
 {% if page.comments and site.disqus_shortname %}
-						<h2>{{ t_comments }}</h2>
+						<h2>Comments</h2>
 						<div id="disqus_thread"></div>
 						<noscript>Please enable JavaScript to view the comments.</noscript>
 {% endif %}
 					</article>
 					<p class="my-4 text-center">
-						<a class="btn btn-lg btn-default" href="/news/archive/"><i class="fa fa-calendar fa-fw"></i>News archive</a>
+						<a class="btn btn-lg btn-default" href="/news/archive/">
+                            <i class="fa fa-calendar fa-fw"></i> News archive</a>
 					</p>
 				</div>
 				<div class="col-md-3">

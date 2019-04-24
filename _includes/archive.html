@@ -1,23 +1,12 @@
-{% for language in site.data.i18n %}
-    {% if language[0] == page.lang %}
-        {% assign language = language[1] %}
-        {% break %}
-    {% endif %}
-{% endfor %}
-
-{% assign t_archive_caption = language.translation.archive_caption %}
-{% assign t_archive_header1 = language.translation.archive_header1 %}
-{% assign t_archive_header2 = language.translation.archive_header2 %}
-
 <table class="table table-striped">
-	<caption>{{ t_archive_caption }}</caption>
-	<thead><tr><th>{{ t_archive_header1 }}</th><th>{{ t_archive_header2 }}</th></tr></thead>
+	<caption>Full historical listing of all news posts, sorted by newest first.</caption>
+	<thead><tr><th>Post</th><th>Date</th></tr></thead>
 	<tbody>
-{% assign posts=site.posts | where:"lang", page.lang %}
-{% for post in posts %}
+{% for post in site.posts %}
 		<tr>
 			<td><a href="{{post.url}}">{{ post.title | escape }}</a></td>
-			<td><time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>{{ post.date | date: page.date_fmt }}</time></td>
+			<td><time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate{% if updated %}
+                 data-updated="true"{% endif %}>{{ post.date | date: page.date_fmt }}</time></td>
 		</tr>
 {% endfor %}
 	</tbody>
