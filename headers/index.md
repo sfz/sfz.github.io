@@ -33,4 +33,4 @@ organizational elements of SFZ.
 
 \#[include](/directives/include)
 
-[ARIA XML instrument bank](/aria/xml_instrument_bank)
+[ARIA XML instrument bank](/extensions/aria/xml_instrument_bank)

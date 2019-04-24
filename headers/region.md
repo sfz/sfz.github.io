@@ -64,7 +64,5 @@ in the 0~34 range AND last modulation wheel (cc1) message was in the 0-40 range.
 | -------------------------------- |
 | Engines supporting this element: |
 | ARIA                           ✓ |
-| Expression                     ✓ |
 | LinuxSampler                   ✓ |
-| Alchemy                        ✓ |
 | SFZ Element Type: Header         |

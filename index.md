@@ -13,9 +13,9 @@ insturments already, but we'll continue to add more.
 
 To make use of the SFZ format requires three things:
 
-- samples
-- a [SFZ player](software/players)
-- and a SFZ file
+- Samples
+- [SFZ player](software/players)
+- SFZ file
 
 which tells the player how to use the samples. The SFZ file itself can be created
 using any text editor, though for more complex cases with hundreds or thousands
@@ -50,12 +50,14 @@ Here are a couple of videos to help you get started with SFZ
 
 Text guides on how to make a simple instrument, covering the essential opcodes
 
-- [Drum basics](tutorials/drum_basics) - covers global, group and region headers,
-  sample, key, lovel/hivel, amp_velcurve_N, seq_length, seq_position and lorand/hirand.
+- [Drum basics](tutorials/drum_basics) - covers `global`, `group` and
+  `region` headers, `sample`, `key`, `lovel` / `hivel`, `amp_velcurve_N`,
+  `seq_length`, `seq_position` and `lorand` / `hirand`.
 
-- [Sustained note basics](tutorials/sustained_note_basics) - using a flute as an example.
-  Adds lokey/hikey, pitch_keycenter, xfin/xfout, locc/hicc, keyswitching, group,
-  off_by and off_mode.
+- [Sustained note basics](tutorials/sustained_note_basics) - using a flute
+  as an example.
+  Adds `lokey` / `hikey`, `pitch_keycenter`, `xfin` / `xfout`, `locc` / `hicc`,
+  `keyswitching`, `group`, `off_by` and `off_mode`.
 
 Some more advanced topics
 
@@ -65,9 +67,9 @@ Some more advanced topics
 - [Legato](tutorials/legato) - currently simple glides, will be expanded later
   to include true sampled legato.
 
-- [Cymbal muting](tutorials/cymbal_muting) - using group, off_by, off_mode and
-  polyphony to make hi-hat and cymbal notes mute previous notes in a musically
-  useful way.
+- [Cymbal muting](tutorials/cymbal_muting) - using `group`, `off_by`, `off_mode`
+  and `polyphony` to make hi-hat and cymbal notes mute previous notes
+  in a musically useful way.
 
 ### Other Online Resources
 

@@ -27,6 +27,6 @@ No longer available:
 - Alchemy
 
 Sforzando currently offers the most complete SFZ standard support, including
-[ARIA extensions](opcodes/aria_extensions), but SFZ files which only use the
-[SFZ 1](opcodes/sfz_1) or [SFZ 2](opcodes/sfz_2) standard will
+[ARIA extensions](/extensions/aria/opcodes), but SFZ files which only use the
+[SFZ 1](/opcodes/sfz_1) or [SFZ 2](/opcodes/sfz_2) standard will
 work with multiple SFZ players. 
