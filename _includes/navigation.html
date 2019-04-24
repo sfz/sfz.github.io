@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark rounded">
+	<a class="navbar-brand" href="/">
+		<img src="/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		{{ site.organization_name }}
+	</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+		aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarContent">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+{% for item in language.navigation.toc %}
+	{% if item.type == "normal" %}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ item.url }}"> {{ item.title }}</a>
+	{% else %}
+		{% assign item_id = 'navbar' | append: item.title %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="{{ item_id }}" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false"> {{ item.title }}</a>
+				<div class="dropdown-menu" aria-labelledby="{{ item_id }}">
+					{% for pag in item.pages %}
+						<a class="dropdown-item" href="{{ pag.url }}">{{ pag.title }}</a>
+					{% endfor %}
+				</div>
+	{% endif %}
+			</li>
+{% endfor %}
+		</ul>
+	</div>
+	<form class="form-inline my-2 my-lg-0" role="search" action="/search/">
+		<input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+	</form>
+</nav>

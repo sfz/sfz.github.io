@@ -1,0 +1,53 @@
+$blue: #337ab7;
+$navbar-dark-color:       rgba(#fff, .65);
+$navbar-dark-hover-color: rgba(#fff, .90);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "syntax-highlight";
+
+/* Styles applied site-wide. */
+
+.navbar {
+	background-color: #222;
+}
+aside .card-body {
+	padding: 0.5rem;
+}
+aside .nav-link {
+	padding: 0.35rem 0.25rem;
+}
+pre {
+	padding: 0.5rem 0.75rem;
+	border: 2px solid rgba($black, .2);
+	border-radius: 0.50rem;
+}
+#searchresults {
+	.cse .gsc-control-cse,
+	.gsc-control-cse {
+		padding: 0;
+	}
+	.gcsc-branding,
+	.gsc-result-info,
+	.gsc-table-result,
+	.gsc-thumbnail-inside,
+	.gsc-url-top,
+	.gs-spelling,
+	.gs-promotion table {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.gsc-adBlock {
+		padding: 0;
+	}
+	.gsc-cursor {
+		font-size: 14px;
+	}
+	.gsc-cursor-page {
+		margin-left: -1px;
+		padding: 4px 10px;
+		border: 1px solid #ddd;
+	}
+	.gsc-results .gsc-cursor-box {
+		margin-top: 2em;
+	}
+}

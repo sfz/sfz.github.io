@@ -1,0 +1,32 @@
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - new_post
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - setup.sh
+  - site.conf
+  - yarn.lock
+
+plugins_dir:
+  - jekyll-sitemap
+
+organization_name: sfzformat
+disqus_shortname: 
