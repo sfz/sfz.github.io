@@ -74,7 +74,7 @@ Some more advanced topics
 ### Other Online Resources
 
 - [The SFZ forum](https://www.plogue.com/plgfrms/viewforum.php?f=14) on Plogue.com
-- [The old rgc:audio SFZ file format page](legacy), online for posterity.
+- [The old rgc:audio SFZ file format page](/legacy), online for posterity.
 - [Peter L. Jones' SFZ page and drum mappings](http://www.drealm.info/sfz/).
 
 # Latest News
