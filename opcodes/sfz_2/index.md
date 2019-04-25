@@ -19,7 +19,7 @@ Instruments settings are opcodes used under the <[control](/headers/control)> ta
 [hint_*](hint_)
 
 Other Instruments settings opcodes are of the
-[Voice Lifecycle](/opcodes/sfz_1/categories/voice_lifecycle) category:
+[Voice Lifecycle](/opcodes/categories/voice_lifecycle) category:
 
 [polyphony_group](polyphony_group)
 

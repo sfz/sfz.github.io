@@ -12,7 +12,7 @@ toc:
           url: /opcodes/sfz_2
 
         - title: Extensions
-          url: /opcodes/aria_extensions
+          url: /extensions/aria/opcodes
 
         - title: Directives
           url: /directives/

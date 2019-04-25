@@ -21,6 +21,18 @@ pre {
 	border: 2px solid rgba($black, .2);
 	border-radius: 0.50rem;
 }
+table {
+	width:100%;
+	border-collapse:collapse;
+}
+th, td {
+	text-align:left;
+	padding:5px 10px;
+	border-bottom:1px solid #e5e5e5;
+}
+th {
+	color:#444;
+}
 #searchresults {
 	.cse .gsc-control-cse,
 	.gsc-control-cse {
