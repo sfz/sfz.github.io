@@ -59,10 +59,3 @@ the region to play. For instance:
 This region definition instructs the player to play the sample '440.wav' if
 there is an incoming note event in the 64-67 range AND the note has a velocity
 in the 0~34 range AND last modulation wheel (cc1) message was in the 0-40 range.
-
-| SFZ Level: SFZ 1                 |
-| -------------------------------- |
-| Engines supporting this element: |
-| ARIA                           ✓ |
-| LinuxSampler                   ✓ |
-| SFZ Element Type: Header         |

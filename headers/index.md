@@ -14,19 +14,15 @@ special opcodes for setting up MIDI CC controls. The curve headers, when used,
 are normally found at the end of the file, and define the curves used for
 shaping envelopes, parameter response etc.
 
-<[region](/headers/region)>
-
-<[group](/headers/group)>
-
-<[global](/headers/global)>
-
-<[control](/headers/control)>
-
-<[curve](/headers/curve)>
-
-<[effect](/headers/effect)>
-
-<[master](/headers/master)> (ARIA extension)
+| Header                        | Version | ARIA  | LinuxSampler |
+| :---                          |  :---:  | :---: |    :---:     |
+| <[region](/headers/region)>   | SFZ v1  |   ✓   |      ✓       |
+| <[group](/headers/group)>     | SFZ v1  |   ✓   |      ✓       |
+| <[global](/headers/global)>   | SFZ v2  |   ✓   |      ✓       |
+| <[control](/headers/control)> | SFZ v2  |   ✓   |      ✓       |
+| <[curve](/headers/curve)>     | SFZ v2  |   ✓   |      ✓       |
+| <[effect](/headers/effect)>   | SFZ v2  |   ✓   |      X       |
+| <[master](/headers/master)>   | ARIA    |   ✓   |      ✓       |     
 
 Also, though they are not SFZ headers, there are two other important
 organizational elements of SFZ.

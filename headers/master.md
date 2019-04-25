@@ -38,12 +38,3 @@ sample=../Samples/bobobo/bobobo_tenor_l_vl1_rr3.wav lorand=0.500 hirand=0.750
 <region>
 sample=../Samples/bobobo/bobobo_tenor_l_vl1_rr4.wav lorand=0.750
 ```
-
-| SFZ Level: ARIA Extension        |
-| -------------------------------- |
-| Engines supporting this element: |
-| ARIA                           ✓ |
-| Expression                     X |
-| LinuxSampler                   ✓ |
-| Alchemy                        X |
-| SFZ Element Type: Header         |
