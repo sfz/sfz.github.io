@@ -40,22 +40,19 @@
 | [on_hiccN](on_lo_hiccN)                       |                                                        |                                                           |   ✓   |      ✓       |
 | ***Performance Parameters***
 | ***Sample Player***
-| [delay](delay)
-| [delay_random](delay_random)
-| [delay_ccN](delay_ccN)
-| [offset](offset)
-| [offset_random](offset_random)
-| [offset_cc](offset_cc)
-| [end](end)
-| [count](count)
-| [loopmode](loop_mode)
-| [loop_mode](loop_mode)
-| [loopstart](loop_start)
-| [loop_start](loop_start)
-| [loop_end](loop_end)
-| [loopend](loop_end)
-| [sync_beats](sync_beats)
-| [sync_offset](sync_offset)
+| [delay](delay)                                | [Sound source](/categories/sound_source)               | [Sample Playback](/categories/sample_playback)            |   ✓   |      ✓       |
+| [delay_random](delay_random)                  |                                                        |                                                           |   ✓   |      ✓       |
+| [delay_ccN](delay)                            |                                                        |                                                           |   ✓   |      ✓       |
+| [offset](offset)                              |                                                        |                                                           |   ✓   |      ✓       |
+| [offset_random](offset_random)                |                                                        |                                                           |   ✓   |      X       |
+| [offset_cc](offset)                           |                                                        |                                                           |   ✓   |      X       |
+| [end](end)                                    |                                                        |                                                           |   ✓   |      ✓       |
+| [count](count)                                |                                                        |                                                           |   ✓   |      X       |
+| [loopmode / loop_mode](loop_mode)             |                                                        |                                                           |   ✓   |   Partial    |
+| [loopstart / loop_start](loop_start)          |                                                        |                                                           |   ✓   |      ✓       |
+| [loopend / loop_end](loop_end)                |                                                        |                                                           |   ✓   |      ✓       |
+| [sync_beats](sync_beats)                      |                                                        |                                                           |   ✓   |      X       |
+| [sync_offset](sync_offset)                    |                                                        |                                                           |   ✓   |      X       |
 | ***Amplifier***
 | [volume](volume)
 | [pan](pan)

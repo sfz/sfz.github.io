@@ -1,6 +1,3 @@
 # TODO
 
-- Add links to table elements
-- Remove obsolete players
-
-- Add better style for tables
+- Add opcode value ranges on related opcode pages.
