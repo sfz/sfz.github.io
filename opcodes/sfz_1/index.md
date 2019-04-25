@@ -33,8 +33,8 @@
 | [sw_previous](sw_previous)                    |                                                        |                                                           |   ✓   |      ✓       |
 | [sw_vel](sw_vel)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [trigger](trigger)                            |                                                        | [Triggers](/categories/triggers)                          |   ✓   |      ✓       |
-| [group](group)                                |                                                        | [Voice Lifecycle](/categories/voice_lifecycle)            |   ✓   |      ✓       |
-| [off_by](off_by)                              | [Instrument settings](/categories/instrument_settings) |                                                           |   ✓   |      ✓       |
+| [group](group)                                | [Instrument settings](/categories/instrument_settings) | [Voice Lifecycle](/categories/voice_lifecycle)            |   ✓   |      ✓       |
+| [off_by](off_by)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [off_mode](off_mode)                          |                                                        |                                                           |   ✓   |      ✓       |
 | [on_loccN](on_lo_hiccN)                       | [Region Logic](/categories/region_logic)               | [Triggers](/categories/triggers)                          |   ✓   |      ✓       |
 | [on_hiccN](on_lo_hiccN)                       |                                                        |                                                           |   ✓   |      ✓       |
