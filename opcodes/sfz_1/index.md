@@ -7,7 +7,8 @@
 | ***Input Controls***
 | [lochan](lo_hichan)                           | [Region Logic](/categories/region_logic)               | [MIDI Conditions](/categories/midi_conditions)            |   ✓   |      ✓       |
 | [hichan](lo_hichan)                           |                                                        |                                                           |   ✓   |      ✓       |
-| [lokey](lo_hikey)                             |                                                        | [Key Mapping](/categories/key_mapping)                    |   ✓   |      ✓       |
+| [key](key)                                    |                                                        | [Key Mapping](/categories/key_mapping)                    |   ✓   |      ✓       |
+| [lokey](lo_hikey)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [hikey](lo_hikey)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [lovel](lo_hivel)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [hivel](lo_hivel)                             |                                                        |                                                           |   ✓   |      ✓       |
@@ -54,10 +55,10 @@
 | [sync_beats](sync_beats)                      |                                                        |                                                           |   ✓   |      X       |
 | [sync_offset](sync_offset)                    |                                                        |                                                           |   ✓   |      X       |
 | ***Amplifier***
-| [volume](volume)
-| [pan](pan)
-| [width](width)
-| [position](position)
+| [volume](volume)                              | [Performance parameters](performance_parameters)       | [Amplifier](amplifier)                                    |   ✓   |      ✓       |
+| [pan](pan)                                    |                                                        |                                                           |   ✓   |      ✓       |
+| [width](width)                                |                                                        |                                                           |   ✓   |      X       |
+| [position](position)                          |                                                        |                                                           |   ✓   |      X       |
 | [amp_keytrack](amp_keytrack)
 | [amp_keycenter](amp_keycenter)
 | [amp_veltrack](amp_veltrack)

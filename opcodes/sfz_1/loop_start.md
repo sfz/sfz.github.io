@@ -14,9 +14,13 @@ to get anything other than the first defined loop to play.
 
 This opcode will not have any effect if [loop_mode](loop_mode) is set to no_loop.
 
-Examples:
+##### Examples
 
 ```
 loop_start=4503
 loop_start=12445
 ```
+
+|    Type    | Default |      Range      | 
+|    :---:   |  :---:  |      :---:      |
+|   integer  |    0    | 0 to 4294967296 |

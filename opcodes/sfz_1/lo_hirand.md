@@ -2,9 +2,9 @@
 
 Random values. The player will generate a new random number on every note-on event,
 in the range 0 to 1. The region will play if the random number is equal to or
-higher than lorand, and lower than hirand.
+higher than `lorand`, and lower than `hirand`.
 
-Examples:
+##### Examples
 
 ```
 lorand=0.2 hirand=0.4
@@ -12,13 +12,12 @@ lorand=0.2 hirand=0.4
 lorand=0.4 hirand=1
 ```
 
-Range: 0 to 1 (floating point)
-
-The most common application for this is randomized round robins. Note that hirand
-for a region should equal lorand for the next region - if we had, for example,
-hirand=0.249 for the first region and lorand=0.25 for the next, that would result
-in no sound playing if the random number generated was, for example, 0.2496343491.
-So, an 0.001 chance of no sound at all - a difficult problem to spot when testing.
+The most common application for this is randomized round robins. Note that
+`hirand` for a region should equal `lorand` for the next region - if we had, for
+example, `hirand`=0.249 for the first region and `lorand`=0.25 for the next,
+that would result in no sound playing if the random number generated was, for
+example, 0.2496343491. So, an 0.001 chance of no sound at all - a difficult
+problem to spot when testing.
 
 ```
 <region> hirand=0.25 sample=kick_vl1_rr1.wav
@@ -50,3 +49,8 @@ look like this:
 There are other potential uses which have nothing to do with round robins, for
 example having key fingering noises on a clarinet trigger sometimes
 (but not always) when a note is played.
+
+| Type  | Default  | Range  |
+| ---   | ---      | ---    |
+| float | lorand=0 | 0 to 1 |
+|       | hirand=1 |        |

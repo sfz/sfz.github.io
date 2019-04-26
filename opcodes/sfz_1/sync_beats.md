@@ -6,7 +6,7 @@ When sync_beats is specified and after input controls instruct the region to pla
 the playback will be postponed until the next multiple of the specified value
 is crossed.
 
-Examples:
+##### Examples
 
 ```
 sync_beats=4
@@ -18,4 +18,6 @@ played until beat 4 reaches.
 This opcode will only work in hosts featuring song position information
 (vstTimeInfo ppqPos).
 
-Maximum value is 32. Values can be decimals.
+|    Type    | Default |     Range     | 
+|    :---:   |  :---:  |     :---:     |
+|    float   |   0.0   | 0 to 32 beats |
