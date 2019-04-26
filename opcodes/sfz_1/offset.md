@@ -10,13 +10,18 @@ When modulating offset with a MIDI CC, it's generally not possible to ensure the
 offset will always land on a near-zero point, so a small [ampeg_attack](ampeg_attack)
 value can be used to create a quick fade-in and avoid clicks.
 
-Examples:
+##### Examples
 
 ```
 offset=3000
+
 offset=32425
 ```
 
 Uses include: having the player skip pre-attack pick noise in guitar samples;
 phase-aligning samples from various microphones; skipping the start of a
 saxophone sample in legato instruments.
+
+| Type    | Default | Range           |
+| ---     | ---     | ---             |
+| integer | 0       | 0 to 4294967296 |

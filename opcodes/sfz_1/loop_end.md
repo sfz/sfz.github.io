@@ -22,6 +22,6 @@ loop_end=4503
 loop_end=12445
 ```
 
-|    Type    | Default |      Range      | 
-|    :---:   |  :---:  |      :---:      |
-|   integer  |    0    | 0 to 4294967296 |
+| Type    | Default | Range           |
+| ---     | ---     | ---             |
+| integer | 0       | 0 to 4294967296 |

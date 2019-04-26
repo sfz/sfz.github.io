@@ -17,6 +17,6 @@ pan=0
 pan=43
 ```
 
-|    Type    | Default |     Range     |
-|    :---:   |  :---:  |     :---:     |
-|    float   |   0.0   | -100 to 100 % |
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0.0     | -100 to 100 % |

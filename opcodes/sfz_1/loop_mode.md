@@ -20,18 +20,18 @@ The possible values are:
                     it depressed or by using the sustain pedal (CC64).
                     The rest of the sample will play after note release.
 
-Default values:
-
-- ***no_loop***         for samples without a loop defined,
-- ***loop_continuous*** for samples with defined loop(s).
-
 ##### Examples
 
 ```
 loop_mode=no_loop
+
 loop_mode=loop_continuous
 ```
 
+| Type | Default                                                 | Range                         |
+| ---  | ---                                                     | ---                           |
+| text | ***no_loop*** for samples without a loop defined        | no_loop, one_shot             |
+|      | ***loop_continuous*** for samples with defined loop(s). | loop_continuous, loop_sustain |
 
 | Modulation Sources |     |
 | :---               | --- |

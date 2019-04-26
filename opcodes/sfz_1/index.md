@@ -2,17 +2,19 @@
 
 | Opcode                                        | Type                                                   | Category                                                  | Aria  | LinuxSampler |
 | :---                                          | :---                                                   | :---                                                      | :---: |    :---:     |
-| ***Main***
-| [sample](sample)                              | [Sound source](/categories/sound_source)               | [Sample Playback](/categories/sample_playback)            |   ✓   |      ✓       |
-| ***Input Controls***
-| [lochan](lo_hichan)                           | [Region Logic](/categories/region_logic)               | [MIDI Conditions](/categories/midi_conditions)            |   ✓   |      ✓       |
+| ***Sample Definition***                       | ***[Sound source](/categories/sound_source)***         | ***[Sample Playback](/categories/sample_playback)***
+| [sample](sample)                              |                                                        |                                                           |   ✓   |      ✓       |
+| ***Input Controls***                          | ***[Region Logic](/categories/region_logic)***         | ***[MIDI Conditions](/categories/midi_conditions)***
+| [lochan](lo_hichan)                           |                                                        |                                                           |   ✓   |      ✓       |
 | [hichan](lo_hichan)                           |                                                        |                                                           |   ✓   |      ✓       |
-| [key](key)                                    |                                                        | [Key Mapping](/categories/key_mapping)                    |   ✓   |      ✓       |
+|                                               | ***[Region Logic](/categories/region_logic)***         | ***[Key Mapping](/categories/key_mapping)***
+| [key](key)                                    |                                                        |                                                           |   ✓   |      ✓       |
 | [lokey](lo_hikey)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [hikey](lo_hikey)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [lovel](lo_hivel)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [hivel](lo_hivel)                             |                                                        |                                                           |   ✓   |      ✓       |
-| [loccN](lo_hiccN)                             |                                                        | [MIDI Conditions](/categories/midi_conditions)            |   ✓   |      ✓       |
+|                                               | ***[Region Logic](/categories/region_logic)***         | ***[MIDI Conditions](/categories/midi_conditions)***
+| [loccN](lo_hiccN)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [hiccN](lo_hiccN)                             |                                                        |                                                           |   ✓   |      ✓       |
 | [lobend](lo_hibend)                           |                                                        |                                                           |   ✓   |      ✓       |
 | [hibend](lo_hibend)                           |                                                        |                                                           |   ✓   |      ✓       |
@@ -46,7 +48,7 @@
 | [delay_ccN](delay)                            |                                                        |                                                           |   ✓   |      ✓       |
 | [offset](offset)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [offset_random](offset_random)                |                                                        |                                                           |   ✓   |      X       |
-| [offset_cc](offset)                           |                                                        |                                                           |   ✓   |      X       |
+| [offset_ccN](offset)                          |                                                        |                                                           |   ✓   |      X       |
 | [end](end)                                    |                                                        |                                                           |   ✓   |      ✓       |
 | [count](count)                                |                                                        |                                                           |   ✓   |      X       |
 | [loopmode / loop_mode](loop_mode)             |                                                        |                                                           |   ✓   |   Partial    |
@@ -59,99 +61,96 @@
 | [pan](pan)                                    |                                                        |                                                           |   ✓   |      ✓       |
 | [width](width)                                |                                                        |                                                           |   ✓   |      X       |
 | [position](position)                          |                                                        |                                                           |   ✓   |      X       |
-| [amp_keytrack](amp_keytrack)
-| [amp_keycenter](amp_keycenter)
-| [amp_veltrack](amp_veltrack)
-| [amp_velcurve_N](amp_velcurve_N)
-| [amp_random](amp_random)
-| [rt_decay](rt_decay)
-| [output](output)
-| [gain_ccN](gain_ccN)
-| [xfin_lokey](xfin_lokey)
-| [xfin_hikey](xfin_hikey)
-| [xfout_lokey](xfout_lokey)
-| [xfout_hikey](xfout_hikey)
-| [xf_keycurve](xf_keycurve)
-| [xfin_lovel](xfin_lovel)
-| [xfin_hivel](xfin_hivel)
-| [xfout_lovel](xfout_lovel)
-| [xfout_hivel](xfout_hivel)
-| [xf_velcurve](xf_velcurve)
-| [xfin_loccN](xfin_loccN)
-| [xfin_hiccN](xfin_hiccN)
-| [xfout_loccN](xfout_loccN)
-| [xfout_hiccN](xfout_hiccN)
-| [xf_cccurve](xf_cccurve)
+| [amp_keytrack](amp_keytrack)                  |                                                        |                                                           |   ✓   |      X       |
+| [amp_keycenter](amp_keycenter)                |                                                        |                                                           |   ✓   |      X       |
+| [amp_veltrack](amp_veltrack)                  |                                                        |                                                           |   ✓   |      ✓       |
+| [amp_velcurve_N](amp_velcurve_N)              |                                                        |                                                           |   ✓   |      ✓       |
+| [amp_random](amp_random)                      |                                                        |                                                           |   ✓   |      X       |
+| [rt_decay](rt_decay)                          |                                                        |                                                           |   ✓   |      ✓       |
+| [output](output)                              | [Instrument settings](/categories/instrument_settings) | [Voice Lifecycle](/categories/voice_lifecycle)            |   X   |      X       |
+| [gain_ccN](gain_ccN)                          | [Performance parameters](performance_parameters)       | [Amplifier](amplifier)                                    |   ✓   |      X       |
+| [xfin_lokey](xfin_lokey)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hikey](xfin_hikey)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_lokey](xfout_lokey)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hikey](xfout_hikey)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xf_keycurve](xf_keycurve)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_lovel](xfin_lovel)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hivel](xfin_hivel)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_lovel](xfout_lovel)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hivel](xfout_hivel)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xf_velcurve](xf_velcurve)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_loccN](xfin_loccN)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hiccN](xfin_hiccN)                      |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_loccN](xfout_loccN)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hiccN](xfout_hiccN)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xf_cccurve](xf_cccurve)                      |                                                        |                                                           |   ✓   |      ✓       |
 |  ***Amplifier EG***
-| [ampeg_delay](ampeg_delay)
-| [ampeg_delay_oncc](ampeg_delay_oncc)
-| [ampeg_start](ampeg_start)
-| [ampeg_attack](ampeg_attack)
-| [ampeg_attack_oncc](ampeg_attack_oncc)
-| [ampeg_hold](ampeg_hold)
-| [ampeg_hold_oncc](ampeg_hold_oncc)
-| [ampeg_decay](ampeg_decay)
-| [ampeg_decay_oncc](ampeg_decay_oncc)
-| [ampeg_sustain](ampeg_sustain)
-| [ampeg_sustain_oncc](ampeg_sustain_oncc)
-| [ampeg_release](ampeg_release)
-| [ampeg_release_oncc](ampeg_release_oncc)
-| [ampeg_vel2delay](ampeg_vel2delay)
-| [ampeg_vel2attack](ampeg_vel2attack)
-| [ampeg_vel2hold](ampeg_vel2hold)
-| [ampeg_vel2decay](ampeg_vel2decay)
-| [ampeg_vel2sustain](ampeg_vel2sustain)
-| [ampeg_vel2release](ampeg_vel2release)
-| ***Amplifier LFO***
-| [amplfo_delay](amplfo_delay)
-| [amplfo_fade](amplfo_fade)
-| [amplfo_freq](amplfo_freq)
-| [amplfo_depth](amplfo_depth)
-| [amplfo_depthccN](amplfo_depthccN)
-| [amplfo_depthchanaft](amplfo_depthchanaft)
-| [amplfo_depthpolyaft](amplfo_depthpolyaft)
-| [amplfo_freqccN](amplfo_freqccN)
-| [amplfo_freqchanaft](amplfo_freqchanaft)
-| [amplfo_freqpolyaft](amplfo_freqpolyaft)
-|  ***Pitch***
-| [transpose](transpose)
-| [tune](tune)
-| [pitch_keycenter](pitch_keycenter)
-| [pitch_keytrack](pitch_keytrack)
-| [pitch_veltrack](pitch_veltrack)
-| [pitch_random](pitch_random)
-| [bendup](bendup)
-| [bend_up](bend_up)
-| [benddown](benddown)
-| [bend_down](bend_down)
-| [bendstep](bendstep)
-| [bend_step](bend_step)
-|  ***Pitch EG***
-| [pitcheg_delay](pitcheg_delay)
-| [pitcheg_start](pitcheg_start)
-| [pitcheg_attack](pitcheg_attack)
-| [pitcheg_hold](pitcheg_hold)
-| [pitcheg_decay](pitcheg_decay)
-| [pitcheg_sustain](pitcheg_sustain)
-| [pitcheg_release](pitcheg_release)
-| [pitcheg_depth](pitcheg_depth)
-| [pitcheg_vel2delay](pitcheg_vel2delay)
-| [pitcheg_vel2attack](pitcheg_vel2attack)
-| [pitcheg_vel2hold](pitcheg_vel2hold)
-| [pitcheg_vel2decay](pitcheg_vel2decay)
-| [pitcheg_vel2release](pitcheg_vel2release)
-| [pitcheg_vel2depth](pitcheg_vel2depth)
-|  ***Pitch LFO***
-| [pitchlfo_delay](pitchlfo_delay)
-| [pitchlfo_fade](pitchlfo_fade)
-| [pitchlfo_freq](pitchlfo_freq)
-| [pitchlfo_depth](pitchlfo_depth)
-| [pitchlfo_depthccN](pitchlfo_depthccN)
-| [pitchlfo_depthchanaft](pitchlfo_depthchanaft)
-| [pitchlfo_depthpolyaft](pitchlfo_depthpolyaft)
-| [pitchlfo_freqccN](pitchlfo_freqccN)
-| [pitchlfo_freqchanaft](pitchlfo_freqchanaft)
-| [pitchlfo_freqpolyaft](pitchlfo_freqpolyaft)
+| [ampeg_delay](/categories/envelope_generators/sfz-1-egs)        | [Modulation](/categories/modulation) | [Envelope Generators](/categories/envelope_generators)    |   ✓   |      ✓       |
+| [ampeg_delay_oncc](/categories/envelope_generators/sfz-1-egs)   |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_start](/categories/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_attack](/categories/envelope_generators/sfz-1-egs)       |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_attack_oncc](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_hold](/categories/envelope_generators/sfz-1-egs)         |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_hold_oncc](/categories/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_decay](/categories/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_decay_oncc](/categories/envelope_generators/sfz-1-egs)   |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_sustain](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_sustain_oncc](/categories/envelope_generators/sfz-1-egs) |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_release](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_release_oncc](/categories/envelope_generators/sfz-1-egs) |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2delay](/categories/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2attack](/categories/envelope_generators/sfz-1-egs)   |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2hold](/categories/envelope_generators/sfz-1-egs)     |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2decay](/categories/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2sustain](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
+| [ampeg_vel2release](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
+| ***Amplifier LFO***                                             | [Modulation](/categories/modulation) | [LFO](/categories/lfo) 
+| [amplfo_delay](/categories/lfo#sfz-1-lfos-lfos)                 |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_fade](/categories/lfo#sfz-1-lfos-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_freq](/categories/lfo#sfz-1-lfos-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_depth](/categories/lfo#sfz-1-lfos-lfos)                 |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_depthccN](/categories/lfo#sfz-1-lfos-lfos)              |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_depthchanaft](/categories/lfo#sfz-1-lfos-lfos)          |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_depthpolyaft](/categories/lfo#sfz-1-lfos-lfos)          |                                      |                                                           |   X   |      X       |
+| [amplfo_freqccN](/categories/lfo#sfz-1-lfos-lfos)               |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_freqchanaft](/categories/lfo#sfz-1-lfos-lfos)           |                                      |                                                           |   ✓   |      ✓       |
+| [amplfo_freqpolyaft](/categories/lfo#sfz-1-lfos-lfos)           |                                      |                                                           |   X   |      X       |
+|  ***Pitch***                                  | [Performance parameters](performance_parameters)       | [Pitch](/categories/pitch)                                |
+| [transpose](transpose)                        |                                                        |                                                           |   ✓   |      ✓       |
+| [tune](tune)                                  |                                                        |                                                           |   ✓   |      ✓       |
+| [pitch_keycenter](pitch_keycenter)            |                                                        |                                                           |   ✓   |      ✓       |
+| [pitch_keytrack](pitch_keytrack)              |                                                        |                                                           |   ✓   |   Partial    |
+| [pitch_veltrack](pitch_veltrack)              |                                                        |                                                           |   ✓   |      ✓       |
+| [pitch_random](pitch_random)                  |                                                        |                                                           |   ✓   |      X       |
+| [bend_up / bendup](bend_up)                   |                                                        |                                                           |   ✓   |      X       |
+| [bend_down / benddown](bend_down)             |                                                        |                                                           |   ✓   |      X       |
+| [bend_step / bendstep](bend_step)             |                                                        |                                                           |   ✓   |      X       |
+|  ***Pitch EG***                                                 | [Modulation](/categories/modulation) | [Envelope Generators](/categories/envelope_generators)    |
+| [pitcheg_delay](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_start](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_attack](/categories/envelope_generators/sfz-1-egs)     |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_hold](/categories/envelope_generators/sfz-1-egs)       |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_decay](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_sustain](/categories/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_release](/categories/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_depth](/categories/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2delay](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2attack](/categories/envelope_generators/sfz-1-egs) |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2hold](/categories/envelope_generators/sfz-1-egs)   |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2decay](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2release](/categories/envelope_generators/sfz-1-egs)|                                      |                                                           |   ✓   |      ✓       |
+| [pitcheg_vel2depth](/categories/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      X       |
+|  ***Pitch LFO***                                                | [Modulation](/categories/modulation) | [LFO](/categories/lfo)                                    |
+| [pitchlfo_delay](/categories/lfo#sfz-1-lfos-lfos)               |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_fade](/categories/lfo#sfz-1-lfos)                     |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_freq](/categories/lfo#sfz-1-lfos)                     |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_depth](/categories/lfo#sfz-1-lfos)                    |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_depthccN](/categories/lfo#sfz-1-lfos)                 |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_depthchanaft](/categories/lfo#sfz-1-lfos)             |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_depthpolyaft](/categories/lfo#sfz-1-lfos)             |                                      |                                                           |   X   |      X       |
+| [pitchlfo_freqccN](/categories/lfo#sfz-1-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_freqchanaft](/categories/lfo#sfz-1-lfos)              |                                      |                                                           |   ✓   |      ✓       |
+| [pitchlfo_freqpolyaft](/categories/lfo#sfz-1-lfos)              |                                      |                                                           |   X   |      X       |
 |  ***Filters***
 | [fil_type](fil_type)
 | [filtype](fil_type)
@@ -165,32 +164,32 @@
 | [fil_veltrack](fil_veltrack)
 | [fil_random](fil_random)
 |  ***Filter EG***
-| [fileg_delay](fileg_delay)
-| [fileg_start](fileg_start)
-| [fileg_attack](fileg_attack)
-| [fileg_hold](fileg_hold)
-| [fileg_decay](fileg_decay)
-| [fileg_sustain](fileg_sustain)
-| [fileg_release](fileg_release)
-| [fileg_depth](fileg_depth)
-| [fileg_vel2delay](fileg_vel2delay)
-| [fileg_vel2attack](fileg_vel2attack)
-| [fileg_vel2hold](fileg_vel2hold)
-| [fileg_vel2decay](fileg_vel2decay)
-| [fileg_vel2sustain](fileg_vel2sustain)
-| [fileg_vel2release](fileg_vel2release)
-| [fileg_vel2depth](fileg_vel2depth)
+| [fileg_delay](/categories/envelope_generators/sfz-1-egs)
+| [fileg_start](/categories/envelope_generators/sfz-1-egs)
+| [fileg_attack](/categories/envelope_generators/sfz-1-egs)
+| [fileg_hold](/categories/envelope_generators/sfz-1-egs)
+| [fileg_decay](/categories/envelope_generators/sfz-1-egs)
+| [fileg_sustain](/categories/envelope_generators/sfz-1-egs)
+| [fileg_release](/categories/envelope_generators/sfz-1-egs)
+| [fileg_depth](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2delay](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2attack](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2hold](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2decay](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2sustain](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2release](/categories/envelope_generators/sfz-1-egs)
+| [fileg_vel2depth](/categories/envelope_generators/sfz-1-egs)
 |  ***Filter LFO***
-| [fillfo_delay](fillfo_delay)
-| [fillfo_fade](fillfo_fade)
-| [fillfo_freq](fillfo_freq)
-| [fillfo_depth](fillfo_depth)
-| [fillfo_depthccN](fillfo_depthccN)
-| [fillfo_depthchanaft](fillfo_depthchanaft)
-| [fillfo_depthpolyaft](fillfo_depthpolyaft)
-| [fillfo_freqccN](fillfo_freqccN)
-| [fillfo_freqchanaft](fillfo_freqchanaft)
-| [fillfo_freqpolyaft](fillfo_freqpolyaft)
+| [fillfo_delay](/categories/lfo#sfz-1-lfos)
+| [fillfo_fade](/categories/lfo#sfz-1-lfos)
+| [fillfo_freq](/categories/lfo#sfz-1-lfos)
+| [fillfo_depth](/categories/lfo#sfz-1-lfos)
+| [fillfo_depthccN](/categories/lfo#sfz-1-lfos)
+| [fillfo_depthchanaft](/categories/lfo#sfz-1-lfos)
+| [fillfo_depthpolyaft](/categories/lfo#sfz-1-lfos)
+| [fillfo_freqccN](/categories/lfo#sfz-1-lfos)
+| [fillfo_freqchanaft](/categories/lfo#sfz-1-lfos)
+| [fillfo_freqpolyaft](/categories/lfo#sfz-1-lfos)
 |  ***Per-Voice EQ***
 | [eq1_freq](eqN_freq)
 | [eq2_freq](eqN_freq)
