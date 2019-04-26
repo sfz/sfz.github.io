@@ -61,7 +61,7 @@
 | [loopend / loop_end](loop_end)                |                                                        |                                                           |   ✓   |      ✓       |
 | [sync_beats](sync_beats)                      |                                                        |                                                           |   ✓   |      X       |
 | [sync_offset](sync_offset)                    |                                                        |                                                           |   ✓   |      X       |
-| ***Amplifier***                   | ***[Performance parameters](/categories/performance_parameters)*** | ***[ Amplifier](amplifier)***
+| ***Amplifier***                   | ***[Performance parameters](/categories/performance_parameters)*** | ***[ Amplifier](/categories/amplifier)***
 | [volume](volume)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [pan](pan)                                    |                                                        |                                                           |   ✓   |      ✓       |
 | [width](width)                                |                                                        |                                                           |   ✓   |      X       |
@@ -74,7 +74,7 @@
 | [rt_decay](rt_decay)                          |                                                        |                                                           |   ✓   |      ✓       |
 |                                         | ***[Instrument settings](/categories/instrument_settings)*** | ***[Voice Lifecycle](/categories/voice_lifecycle)***
 | [output](output)                              |                                                        |                                                           |   X   |      X       |
-|                                   | ***[Performance parameters](/categories/performance_parameters)*** | ***[Amplifier](amplifier)***
+|                                   | ***[Performance parameters](/categories/performance_parameters)*** | ***[Amplifier](/categories/amplifier)***
 | [gain_ccN](gain_ccN)                          |                                                        |                                                           |   ✓   |      X       |
 | [xfin_lokey](xfin_lokey)                      |                                                        |                                                           |   ✓   |      ✓       |
 | [xfin_hikey](xfin_hikey)                      |                                                        |                                                           |   ✓   |      ✓       |
@@ -158,7 +158,7 @@
 | [pitchlfo_freqccN](/categories/lfo#sfz-1-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqchanaft](/categories/lfo#sfz-1-lfos)              |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqpolyaft](/categories/lfo#sfz-1-lfos)              |                                      |                                                           |   X   |      X       |
-|  ***Filters***                                | ***[Performance parameters](performance_parameters)*** | ***[Filters](/categories/filters)***
+|  ***Filters***                    | ***[Performance parameters](/categories/performance_parameters)*** | ***[Filters](/categories/filters)***
 | [fil_type / filtype](fil_type)                                  |                                      |                                                         | Partial |   Partial    |
 | [cutoff](cutoff)                                                |                                      |                                                           |   ✓   |      ✓       |
 | [cutoff_ccN](cutoff_ccN)                                        |                                      |                                                           |   ✓   |      ✓       |
@@ -196,7 +196,7 @@
 | [fillfo_freqccN](/categories/lfo#sfz-1-lfos)                    |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_freqchanaft](/categories/lfo#sfz-1-lfos)                |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_freqpolyaft](/categories/lfo#sfz-1-lfos)                |                                      |                                                           |   X   |      X       |
-|  ***Per-Voice EQ***
+|  ***Per-Voice EQ***               | ***[Performance parameters](/categories/performance_parameters)*** | ***[EQ](/categories/eq)***
 | [eq1_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |
 | [eq2_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |
 | [eq3_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |
