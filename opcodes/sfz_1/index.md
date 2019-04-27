@@ -159,7 +159,7 @@
 | [pitchlfo_freqchanaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqpolyaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   X   |      X       |
 |  ***Filters***                         | ***[Performance parameters](/categories/performance_parameters)*** | ***[Filters](/types/filters)***
-| [fil_type / filtype](fil_type)                                  |                                      |                                                         | Partial |   Partial    |
+| [fil_type / filtype](fil_type)                                  |                                      |                                                           | [Partial](/opcodes/sfz_1/fil_type#players-support) | [Partial](/opcodes/sfz_1/fil_type#players-support) |
 | [cutoff](cutoff)                                                |                                      |                                                           |   ✓   |      ✓       |
 | [cutoff_ccN](cutoff_ccN)                                        |                                      |                                                           |   ✓   |      ✓       |
 | [cutoff_chanaft](cutoff_chanaft)                                |                                      |                                                           |   ✓   |      ✓       |

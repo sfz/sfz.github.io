@@ -17,7 +17,7 @@ Cutoff and resonance can be modulated by the [LFO](/categories/lfo) and
 
 [cutoff](/opcodes/sfz_1/cutoff)
 
-[cutoff_onccN](/opcodes/sfz_1/cutoff)
+[cutoff_ccN](/opcodes/sfz_1/cutoff_ccN)
 
 [resonance](/opcodes/sfz_1/resonance)
 
