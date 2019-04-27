@@ -1,3 +1,5 @@
+---
+---
 # XML instrument bank
 
 An ARIA-specific element, an XML bank is a collection of several SFZ instruments

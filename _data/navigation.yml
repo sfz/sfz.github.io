@@ -6,16 +6,19 @@ toc:
           url: /headers/
 
         - title: SFZ v1 Opcodes
-          url: /opcodes/sfz_1
+          url: /opcodes/sfz_1/
 
         - title: SFZ v2 Opcodes
-          url: /opcodes/sfz_2
+          url: /opcodes/sfz_2/
 
         - title: Extensions
-          url: /extensions/aria/opcodes
+          url: /opcodes/aria/
 
         - title: Directives
           url: /directives/
+
+        - title: Types & Categories
+          url: /categories/
 
     - title: Software
       type: dropdown
@@ -46,6 +49,12 @@ toc:
 
         - title: Vibrato
           url: /tutorials/vibrato
+
+        - title: SFZ 1 Pitch LFO
+          url: /tutorials/lfo_sfz1
+
+        - title: SFZ 2 Pitch LFO
+          url: /tutorials/lfo_sfz2
 
 #   - title: Downloads
 #     type: normal

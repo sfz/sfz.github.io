@@ -31,7 +31,7 @@ if it's outside that range it does not play. For smooth fades controlled by CC
 (such as crossfaded dynamic layers or crossfaded vibrato layers on sustained
 instruments), other opcodes such as [xfin_loccN / xfin_hiccN](/opcodes/xfin_lo_hiccN)
 and [xfout_loccN / xfout_hiccN](/opcodes/xfout_lo_hiccN) should be used, or perhaps
-the [amplitude_onccN](/extensions/aria/opcodes/amplitude_onccN) ARIA extension.
+the [amplitude_onccN](/opcodes/aria/amplitude_onccN) ARIA extension.
 
 | Type    | Default   | Range    |
 | ---     | ---       | ---      |

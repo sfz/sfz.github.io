@@ -1,3 +1,5 @@
+---
+---
 # ‹region›
 
 Inside the definition file, a region starts with the <region\> header. A region

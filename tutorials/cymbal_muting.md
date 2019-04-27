@@ -1,3 +1,5 @@
+---
+---
 # Cymbal muting
 
 A lot of the information in this article deals with implementing sampled hi-hats

@@ -17,12 +17,12 @@ if [[ $INI__settings__setup_done == 0 ]]; then
 	sed -i 's,'setup_done\=0','setup_done\=1',g' ./site.conf
 fi
 
-if [ ! -d "node_modules" ]; then
+if [ ! -d "node_modules" ] || [ "$1" == "install" ]; then
 	echo "Running yarn install..."
 	yarn --no-bin-links
 fi
 
-if [ ! -f "assets/css/style.min.css" ]; then
+if [ ! -f "assets/css/style.min.css" ] || [ "$1" == "assets" ]; then
 	echo "Running yarn dist..."
 	yarn dist
 fi

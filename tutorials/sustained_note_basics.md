@@ -1,3 +1,5 @@
+---
+---
 # Sustained note basics
 
 We've covered the basic opcodes required to map simple drum instruments on

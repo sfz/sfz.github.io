@@ -1,3 +1,5 @@
+---
+---
 # SFZ Headers
 
 SFZ files are subdivided into sections by headers. The region header is the most

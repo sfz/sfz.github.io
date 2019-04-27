@@ -10,8 +10,8 @@ Region off mode. This opcode will determinate how a region is turned off by an
                 when the amplifier envelope generator expired.
 
 ARIA also adds off_mode=time which can be used to specify a time independent of
-the sample release time using [off_time](/extensions/aria/opcodes/off_time),
-and also [off_shape](/extensions/aria/opcodes/off_shape) and [off_curve](/extensions/aria/opcodes/off_curve)
+the sample release time using [off_time](/opcodes/aria/off_time),
+and also [off_shape](/opcodes/aria/off_shape) and [off_curve](/opcodes/aria/off_curve)
 to control the curve of the fadeout.
 
 ##### Examples

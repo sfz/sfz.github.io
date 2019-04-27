@@ -1,3 +1,5 @@
+---
+---
 # Extended MIDI CCs
 
 In the MIDI specification, MIDI continous controls can have numbers from 1 to 127.
@@ -32,8 +34,6 @@ host tempo (bpm): 142
 | -------------------------------- |
 | Engines supporting this opcode:  |
 | ARIA                           ✓ |
-| Expression                     X |
 | LinuxSampler                   X |
-| Alchemy                        X |
 | Opcode Type: Region Logic        |
 | Category: MIDI Conditions        |

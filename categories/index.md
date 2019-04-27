@@ -1,24 +1,26 @@
+---
+---
 # Categories
 
 ## Modulation
 
 Modulation opcodes comprise of all the LFO and EG controls
 
-[Envelope Generators](eg)
+[Envelope Generators](/types/envelope_generators)
 
-[LFO](lfo)
+[LFO](/types/lfo)
 
-## Performance parameters
+## Performance Parameters
 
-Performance parameters are all sound modifiers including:
+Performance Parameters are all sound modifiers including:
 
-[Pitch](pitch_(type))
+[Pitch](/types/pitch)
 
-[Amplifier](amplifier_(type))
+[Amplifier](/types/amplifier)
 
-[Filter](filter_(type))
+[Filter](/types/filter)
 
-[EQ](eq_(type))
+[EQ](/types/eq)
 
 Most Performance parameters are targets for the Modulation opcodes
 
@@ -26,14 +28,17 @@ Most Performance parameters are targets for the Modulation opcodes
 
 Region Logic opcodes define the conditions under which a voice plays or stops:
 
-[Key Mapping]()
+[Key Mapping](/types/key_mapping)
 
-[MIDI Conditions]()
+[MIDI Conditions](/types/midi_conditions)
 
-[Internal Conditions]()
+[Internal Conditions](/types/internal_conditions)
 
-[Triggers]()
+[Triggers](/types/triggers)
 
-## Sound source
+## Sound Source
 
-Sound source defines the nature of the voice generated. It could be samples or oscillators.
+Sound Source defines the nature of the voice generated.
+It could be samples or oscillators
+
+[Sample Playback](/types/sample_playback)

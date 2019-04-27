@@ -1,7 +1,9 @@
+---
+---
 # ‹group›
 
 The group header is different than the [group](/opcodes/sfz_1/group) opcode, and
-it's important to avoid confusing the two. ARIA adds the [polyphony_group](/extensions/aria/opcodes/polyphony_group)
+it's important to avoid confusing the two. ARIA adds the [polyphony_group](/opcodes/aria/polyphony_group)
 opcode as an alias for group, to reduce this confusion.
 
 Groups allow entering common parameters for multiple regions. A group is defined

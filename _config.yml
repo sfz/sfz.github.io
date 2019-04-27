@@ -21,8 +21,9 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - setup.sh
+  - setup
   - site.conf
+  - TODO.md
   - yarn.lock
 
 url: "https://sfzformat.github.io"

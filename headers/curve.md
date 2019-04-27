@@ -1,3 +1,5 @@
+---
+---
 # ‹curve›
 
 A header for defining curves for MIDI CC controls. One curve header is used to
