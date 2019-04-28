@@ -1,3 +1,5 @@
+---
+---
 # lovel / hivel
 
 If a note with velocity value equal to or higher than `lovel` AND equal to or lower

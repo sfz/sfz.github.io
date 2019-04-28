@@ -1,3 +1,5 @@
+---
+---
 # seq_length
 
 Sequence length, used together with [seq_position](/opcodes/seq_position)

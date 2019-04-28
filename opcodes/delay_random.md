@@ -1,3 +1,5 @@
+---
+---
 # delay_random
 
 Region random delay time, in seconds.

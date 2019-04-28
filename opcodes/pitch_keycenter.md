@@ -1,3 +1,5 @@
+---
+---
 # pitch_keycenter
 
 Root key for the `sample`. For samples which only need to be played at their

@@ -1,3 +1,5 @@
+---
+---
 # effect1
 
 Level of effect1 send, in percentage (reverb in Cakewalk sfz).

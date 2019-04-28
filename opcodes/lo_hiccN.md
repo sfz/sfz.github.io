@@ -1,3 +1,5 @@
+---
+---
 # loccN / hiccN
 
 Defines the range of the last MIDI controller N required for the region to play.

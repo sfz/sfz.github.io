@@ -1,3 +1,5 @@
+---
+---
 # seq_position
 
 Sequence position. The region will play if the internal sequence counter is

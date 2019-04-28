@@ -1,3 +1,5 @@
+---
+---
 # sample
 
 Possibly the most important opcode, this is the one that tells the sampler which

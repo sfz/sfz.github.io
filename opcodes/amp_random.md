@@ -1,3 +1,5 @@
+---
+---
 # amp_random
 
 Random volume for the region, in decibels.

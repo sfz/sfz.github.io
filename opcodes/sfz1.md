@@ -1,3 +1,5 @@
+---
+---
 # SFZ v1 Opcodes
 
 | Opcode                                        | Category                                               | Type                                                      | Aria  | LinuxSampler |

@@ -1,3 +1,5 @@
+---
+---
 # offset_random
 
 Random offset added to the region offset, in sample units. In many cases, will

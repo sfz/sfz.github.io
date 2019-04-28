@@ -1,4 +1,6 @@
-# xfout_lokey/xfout_hikey
+---
+---
+# xfout_lokey / xfout_hikey
 
 Fade out control based on MIDI note number (keyboard position).
 

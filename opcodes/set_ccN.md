@@ -1,4 +1,7 @@
-set_ccN
+---
+---
+# set_ccN
+
 Sets a default initial value for MIDI CC number X, when the instrument is
 initially loaded. Used under the <[control](/headers/control)> header.
 

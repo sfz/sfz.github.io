@@ -1,3 +1,5 @@
+---
+---
 # count
 
 The number of times the sample will be played. If this opcode is specified, the

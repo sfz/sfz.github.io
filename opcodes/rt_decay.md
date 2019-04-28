@@ -1,3 +1,5 @@
+---
+---
 # rt_decay
 
 Applies only to regions that triggered through [trigger](trigger)=release.

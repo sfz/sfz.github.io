@@ -1,3 +1,5 @@
+---
+---
 # eqN_freq
 
 Frequency of the equalizer band, in Hertz.

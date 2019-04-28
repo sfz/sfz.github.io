@@ -1,3 +1,5 @@
+---
+---
 # delay
 
 Region `delay` time, in seconds. If a `delay` value is specified, the region
