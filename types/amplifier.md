@@ -10,73 +10,72 @@ and crossfades:
 
 #### SFZ v1
 
-[volume](/opcodes/sfz_1/volume)
+[volume](/opcodes/volume)
 
-[amp_keycenter](/opcodes/sfz_1/amp_keycenter)
+[amp_keycenter](/opcodes/amp_keycenter)
 
-[amp_keytrack](/opcodes/sfz_1/amp_keytrack)
+[amp_keytrack](/opcodes/amp_keytrack)
 
-[amp_veltrack](/opcodes/sfz_1/amp_veltrack)
+[amp_veltrack](/opcodes/amp_veltrack)
 
-[pan](/opcodes/sfz_1/pan)
+[pan](/opcodes/pan)
 
-[width](/opcodes/sfz_1/width)
+[width](/opcodes/width)
 
-[position](/opcodes/sfz_1/position)
+[position](/opcodes/position)
 
-[xfin_loccN](/opcodes/sfz_1/xfin_lo_hiccN)
+[xfin_loccN](/opcodes/xfin_lo_hiccN)
 
-[xfin_hiccN](/opcodes/sfz_1/xfin_lo_hiccN)
+[xfin_hiccN](/opcodes/xfin_lo_hiccN)
 
-[xfout_loccN](/opcodes/sfz_1/xfout_lo_hiccN)
+[xfout_loccN](/opcodes/xfout_lo_hiccN)
 
-[xfout_hiccN](/opcodes/sfz_1/xfout_lo_hiccN)
+[xfout_hiccN](/opcodes/xfout_lo_hiccN)
 
-[xf_cccurve](/opcodes/sfz_1/xf_cccurve)
+[xf_cccurve](/opcodes/xf_cccurve)
 
-[xfin_lokey](/opcodes/sfz_1/xfin_lo_hikey)
+[xfin_lokey](/opcodes/xfin_lo_hikey)
 
-[xfin_hikey](/opcodes/sfz_1/xfin_lo_hikey)
+[xfin_hikey](/opcodes/xfin_lo_hikey)
 
-[xfout_lokey](/opcodes/sfz_1/xfout_lo_hikey)
+[xfout_lokey](/opcodes/xfout_lo_hikey)
 
-[xfout_hikey](/opcodes/sfz_1/xfout_lo_hikey)
+[xfout_hikey](/opcodes/xfout_lo_hikey)
 
-[xf_keycurve](/opcodes/sfz_1/xf_keycurve)
+[xf_keycurve](/opcodes/xf_keycurve)
 
-[xfin_lovel](/opcodes/sfz_1/xfin_lo_hivel)
+[xfin_lovel](/opcodes/xfin_lo_hivel)
 
-[xfin_hivel](/opcodes/sfz_1/xfin_lo_hivel)
+[xfin_hivel](/opcodes/xfin_lo_hivel)
 
-[xfout_lovel](/opcodes/sfz_1/xfout_lo_hivel)
+[xfout_lovel](/opcodes/xfout_lo_hivel)
 
-[xfout_hivel](/opcodes/sfz_1/xfout_lo_hivel)
+[xfout_hivel](/opcodes/xfout_lo_hivel)
 
-[xf_velcurve](/opcodes/sfz_1/xf_velcurve)
+[xf_velcurve](/opcodes/xf_velcurve)
 
 #### SFZ v2
 
-[volume_onccN](/opcodes/sfz_1/volume)
+[volume_onccN](/opcodes/volume)
 
-[phase](/opcodes/sfz_2/phase)
+[phase](/opcodes/phase)
 
-[width_onccN](/opcodes/sfz_2/width_onccN)
+[width_onccN](/opcodes/width_onccN)
 
 #### ARIA Extensions
 
-[amplitude](/opcodes/aria/amplitude)
+[amplitude](/opcodes/amplitude)
 
-[amplitude_onccN](/opcodes/aria/amplitude_onccN)
+[amplitude_onccN](/opcodes/amplitude_onccN)
 
-[pan_law](/opcodes/aria/pan_law)
+[pan_law](/opcodes/pan_law)
 
 TODO
 
-[pan_keycenter]()
+[pan_keycenter](/opcodes/pan_keycenter)
 
-[pan_keytrack]()
+[pan_keytrack](/opcodes/pan_keytrack)
 
-[pan_veltrack]()
+[pan_veltrack](/opcodes/pan_veltrack)
 
-[position_onccN]()
-
+[position_onccN](/opcodes/position_onccN)

@@ -19,7 +19,7 @@ modulation, curve 0 is used. The built-in ARIA curves are:
 6. Xfout power curve
 
 These can be overwritten, but as they are used by the engine for their normal
-functions, it's safer to use [curve_index](/opcodes/sfz_2/curve_index) numbers
+functions, it's safer to use [curve_index](/opcodes/curve_index) numbers
 of 7 and above for custom curves.
 
 Examples:

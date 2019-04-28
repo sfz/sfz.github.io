@@ -13,24 +13,24 @@ Cutoff and resonance can be modulated by the [LFO](/categories/lfo) and
 
 #### SFZ v1
 
-[fil_type](/opcodes/sfz_1/fil_type)
+[fil_type](/opcodes/fil_type)
 
-[cutoff](/opcodes/sfz_1/cutoff)
+[cutoff](/opcodes/cutoff)
 
-[cutoff_ccN](/opcodes/sfz_1/cutoff_ccN)
+[cutoff_ccN](/opcodes/cutoff_ccN)
 
-[resonance](/opcodes/sfz_1/resonance)
+[resonance](/opcodes/resonance)
 
 #### SFZ v2
 
-[resonance_onccN](/opcodes/sfz_2/resonance_onccN)
+[resonance_onccN](/opcodes/resonance_onccN)
 
-[fil2_type](/opcodes/sfz_2/fil2_type)
+[fil2_type](/opcodes/fil2_type)
 
-[cutoff2](/opcodes/sfz_2/cutoff2)
+[cutoff2](/opcodes/cutoff2)
 
-[cutoff2_onccN](/opcodes/sfz_2/cutoff2)
+[cutoff2_onccN](/opcodes/cutoff2)
 
-[resonance2](/opcodes/sfz_2/resonance2)
+[resonance2](/opcodes/resonance2)
 
-[resonance2_onccN](/opcodes/sfz_2/resonance2)
+[resonance2_onccN](/opcodes/resonance2)

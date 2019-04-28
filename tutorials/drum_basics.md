@@ -15,7 +15,7 @@ apply this knowledge to instruments such as piano, guitar, violin and flute.*
 A very simple instrument to make would be an electronic drum kit with one sample
 for each sound. A functional mapping for an entire sampled drum machine using
 one-shot samples could be made using only the region header, and two opcodes
-[sample](/opcodes/sfz_1/sample) and [key](/opcodes/sfz_1/key). With kick, snare
+[sample](/opcodes/sample) and [key](/opcodes/key). With kick, snare
 and hi-hat samples on their standard General MIDI notes, this could be the
 entire SFZ file:
 
@@ -29,7 +29,7 @@ This would work. Load this into an SFZ player, hit the C on MIDI note 36, and
 you get the kick sample playing. However, each sound would play only while a
 note is held. With drums it's usually a good idea to play the entire sample, so
 a very short note will result in a complete drum hit sounding. We can do that
-with the [loop_mode](/opcodes/sfz_1/loop_mode) opcode, which is also used for
+with the [loop_mode](/opcodes/loop_mode) opcode, which is also used for
 looping (as the name implies), but `loop_mode=one_shot` causes the sampler to
 play the entire sample from start to end, ignoring note off.
 
@@ -74,7 +74,7 @@ kick_vl4.wav
 ```
 
 To trigger the quiet sample at low MIDI note velocities, we'd use the
-[lovel and hivel](/opcodes/sfz_1/lo_hivel) opcodes like this:
+[lovel and hivel](/opcodes/lo_hivel) opcodes like this:
 
 ```
 <region>key=36 lovel=0 hivel=31 sample=kick_vl1.wav
@@ -116,7 +116,7 @@ However, the quiet samples will play quieter than they should - because of
 standard velocity tracking, each sample would play at full volume if the
 velocity was 127, but we actually need each sample to play at full volume at the
 velocity which is equal to its hivel value. This can be done in various ways,
-and the way we recommend is the [amp_velcurve_N](/opcodes/sfz_1/amp_velcurve_N)
+and the way we recommend is the [amp_velcurve_N](/opcodes/amp_velcurve_N)
 opcode, like this:
 
 ```
@@ -132,8 +132,8 @@ opcode, like this:
 Let's say that each dynamic layer also contains four round robins - four samples
 with roughly the same dynamic. This allows us to include some variation, and
 sound more natural - fast parts won't sound like a "machine gun". There are two
-basic ways to put round robins to use. One is to use the [seq_length](/opcodes/sfz_1/seq_length)
-and [seq_position](/opcodes/sfz_1/seq_position) opcodes, like this:
+basic ways to put round robins to use. One is to use the [seq_length](/opcodes/seq_length)
+and [seq_position](/opcodes/seq_position) opcodes, like this:
 
 ```
 <global>loop_mode=one_shot
@@ -166,7 +166,7 @@ in every group. Those two opcodes could be moved to the global level if all we
 wanted was a kick drum, but as we're going to have other instruments with other
 keys and possibly different numbers of round robins, we kept them at the group
 level. The other way to use round robins is randomized, using the
-[lorand and hirand](/opcodes/sfz_1/lo_hirand) opcodes. This will make the sample
+[lorand and hirand](/opcodes/lo_hirand) opcodes. This will make the sample
 player generate a random number, then play the region whose lorand to hirand
 range includes that random number. Whether robins should be used in this random
 way or the above sequential way, the answer is "it depends". It seems that more

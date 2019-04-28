@@ -25,6 +25,10 @@ exclude:
   - site.conf
   - TODO.md
   - yarn.lock
+  - assets/css/style.css
+  - assets/css/style.css.map
+  - assets/css/style.min.css.map
+  - assets/js/scripts.min.js.map
 
 url: "https://sfzformat.github.io"
 

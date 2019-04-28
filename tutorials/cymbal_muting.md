@@ -24,10 +24,10 @@ MIDI CC 4 - the common hi-hat pedal assignment in electronic drum kits.
 The above hi-hat has no muting implemented, so playing
 a closed hit after an open one would result in the open hit unrealistically
 continuing to ring. The simplest way to take care of that is to put all the
-regions in the same <[group](/headers/group)> and use [off_by](/opcodes/sfz_1/off_by)
+regions in the same <[group](/headers/group)> and use [off_by](/opcodes/off_by)
 to make that group mute itself - that
 will mean any hi-hat hit will mute any currently playing hi-hat hit.
-Setting [off_mode](/opcodes/sfz_1/off_mode) to normal and using [ampeg_release](/opcodes/sfz_1/ampeg_release)
+Setting [off_mode](/opcodes/off_mode) to normal and using [ampeg_release](/opcodes/ampeg_release)
 or [off_time](/extensions/aria/opcodes/off_time) to set the time it takes for
 the previous sample to fade out also helps this sound a bit more natural.
 
@@ -53,11 +53,11 @@ mute open hits, and open hits would mute nothing. So, we need to put each hi-hat
 articulation in a different group. This, however, means we need a group which
 mutes several other groups, and regions in a group cannot have multiple or
 varying off_by values. So, what we have to do is use silence - either the silence*
-setting of [sample](/opcodes/sfz_1/sample) ARIA extension, or an actual file of
+setting of [sample](/opcodes/sample) ARIA extension, or an actual file of
 a short silence. Note that the silence samples also have to have off_by settings
 the same as the hi-hat samples in their mute group. Also, since group 1 doesn't
 mute anything, we don't need to add any silence regions to that group.
-Note that the [group](/opcodes/sfz_1/group) opcode used here and the <[group](/headers/group)>
+Note that the [group](/opcodes/group) opcode used here and the <[group](/headers/group)>
 header are completely separate concepts - "group" for the remainder of this
 article refers to the opcode, not the header, though group headers are also used
 in the code examples.
@@ -173,7 +173,7 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 This works reasonably well. Another potential refinement is to also avoid
 excessive buildup when the more open articulations (which with some hi-hat pairs
 can ring for upwards of 20 seconds), while still allowing enough for ride
-patterns on an open hi-hat to sound right. We can do this by using the [polyphony](/opcodes/sfz_2/polyphony)
+patterns on an open hi-hat to sound right. We can do this by using the [polyphony](/opcodes/polyphony)
 opcode to put a limit on the number of polyphony voices used by a specific group.
 Note this must be set for the silence regions, also, so that every region in a
 group will have the same off_by and polyphony as all the other regions in that
@@ -327,7 +327,7 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 ## Header organization
 
 That is as complex as it gets, though there are a few minor points to be aware of.
-Many drum kits with round robins will set [seq_length](/opcodes/sfz_1/seq_length)
+Many drum kits with round robins will set [seq_length](/opcodes/seq_length)
 at the <[global](/headers/global)> level, and in those cases, the silence regions
 would only trigger for the first hit in the round robin sequence, unless they
 have seq_length set to 1 to override the global setting. Also, the <[master](/headers/master)>

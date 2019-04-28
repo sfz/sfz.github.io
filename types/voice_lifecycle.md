@@ -5,23 +5,23 @@
 voice Lifecycle opcodes are part of the [Instruments settings](/categories/instrument_settings)
 category of opcodes:
 
-[group](/opcodes/sfz_1/group)
+[group](/opcodes/group)
 
-[off_by](/opcodes/sfz_1/off_by)
+[off_by](/opcodes/off_by)
 
-[off_mode](/opcodes/sfz_1/off_mode)
+[off_mode](/opcodes/off_mode)
 
-[output](/opcodes/sfz_1/output)
+[output](/opcodes/output)
 
 #### SFZ v2
 
-[polyphony](/opcodes/sfz_2/polyphony)
+[polyphony](/opcodes/polyphony)
 
-[rt_dead](/opcodes/sfz_2/rt_dead)
+[rt_dead](/opcodes/rt_dead)
 
 #### ARIA Extensions
 
-[polyphony_group](/opcodes/aria/polyphony_group)
+[polyphony_group](/opcodes/polyphony_group)
 
 TODO
 

@@ -7,20 +7,20 @@ category of opcodes:
 
 ### SFZ v1
 
-[lobpm](/opcodes/sfz_1/lo_hibpm)
+[lobpm](/opcodes/lo_hibpm)
 
-[hibpm](/opcodes/sfz_1/lo_hibpm)
+[hibpm](/opcodes/lo_hibpm)
 
-[lorand](/opcodes/sfz_1/lo_hirand)
+[lorand](/opcodes/lo_hirand)
 
-[hirand](/opcodes/sfz_1/lo_hirand)
+[hirand](/opcodes/lo_hirand)
 
-[seq_length](/opcodes/sfz_1/seq_length)
+[seq_length](/opcodes/seq_length)
 
-[seq_position](/opcodes/sfz_1/seq_position)
+[seq_position](/opcodes/seq_position)
 
 ### SFZ v2
 
-[lotimer](/opcodes/sfz_2/lo_hitimer)
+[lotimer](/opcodes/lo_hitimer)
 
-[hitimer](/opcodes/sfz_2/lo_hitimer)
+[hitimer](/opcodes/lo_hitimer)

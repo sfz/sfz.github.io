@@ -1,38 +1,32 @@
 ---
 ---
-# Instruments settings
+# Instruments Settings
 
-Instruments settings are opcodes used under the <[control](/headers/control)> tag:
+Instruments Settings are opcodes used under the <[control](/headers/control)>
+header:
 
-[default_path](/opcodes/sfz_2/default_path)
-
-[octave_offset](/opcodes/sfz_2/octave_offset)
-
-[set_ccN](/opcodes/sfz_2/set_ccN)
-
-[set_hdccN](/opcodes/aria/set_hdccN)
-
-[label_ccN](label_ccN)
-
-[#define](/directives/define)
-
-[hint_*](/opcodes/aria/hint_)
+| Name                                    | Version |
+| ---                                     | ---     |
+| [default_path](/opcodes/default_path)   | SFZ v2  |
+| [octave_offset](/opcodes/octave_offset) | SFZ v2  |
+| [set_ccN](/opcodes/set_ccN)             | SFZ v2  |
+| [#define](/directives/define)           | SFZ v2  |
+| [label_ccN](label_ccN)                  |  TODO   |
+| [set_hdccN](/opcodes/set_hdccN)         |  ARIA   |
+| [hint_*](/opcodes/hint_)                |  ARIA   |
 
 Other Instruments settings opcodes are of the
-[Voice Lifecycle](/types/voice_lifecycle) category:
+[Voice Lifecycle](/types/voice_lifecycle) type:
 
-[polyphony_group](polyphony_group)
+| Name                              | Version |
+| ---                               | ---     |
+| [off_by](/opcodes/off_by)         | SFZ v1  |
+| [off_mode](/opcodes/off_mode)     | SFZ v1  |
+| [polyphony](/opcodes/polyphony)   | SFZ v1  |
+| [rt_dead](/opcodes/rt_dead)       | SFZ v2  |
+| [output](/opcodes/output)         | SFZ v2  |
+| [polyphony_group](polyphony_group)|  ARIA   |
+| [note_polyphony](note_polyphony)  |  TODO   |
+| [note_selfmask](note_selfmask)    |  TODO   |
 
-[off_by](/opcodes/sfz_1/off_by)
 
-[off_mode](/opcodes/sfz_1/off_mode)
-
-[polyphony](/opcodes/sfz_2/polyphony)
-
-[note_polyphony](note_polyphony)
-
-[note_selfmask](note_selfmask)
-
-[rt_dead](/opcodes/sfz_2/rt_dead)
-
-[output](/opcodes/sfz_2/output)

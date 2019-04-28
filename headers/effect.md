@@ -23,12 +23,12 @@ com.mda.SubSynth
 com.mda.RezFilter
 ```
 
-Also see [param_offset](/opcodes/aria/param_offset) for how to
+Also see [param_offset](/opcodes/param_offset) for how to
 configure the parameters for these effects in ARIA.
 The order of the parameters is the same as at [the plugin version of the MDA effects](http://mda.smartelectronix.com/).
 These effects are not part of the SFZ engine, so it is not possible to, for
 example, have one MIDI CC parameter control two parameters in the same effect,
-or use [curve_index](/opcodes/aria/curve_index). Example usage below:
+or use [curve_index](/opcodes/curve_index). Example usage below:
 
 ```
 <control>

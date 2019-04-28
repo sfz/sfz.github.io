@@ -24,25 +24,25 @@ in as a plugin.
 
 [Here's a very simple example of a pitch LFO integration](/tutorials/lfo_sfz1)
 
-[(lfo type)_delay](/opcodes/sfz_1/(lfo_type)_delay)
+[(lfo type)_delay](/opcodes/(lfo_type)_delay)
 
-[(lfo type)_fade](/opcodes/sfz_1/(lfo_type)_fade)
+[(lfo type)_fade](/opcodes/(lfo_type)_fade)
 
-[(lfo type)_freq](/opcodes/sfz_1/(lfo_type)_freq)
+[(lfo type)_freq](/opcodes/(lfo_type)_freq)
 
-[(lfo type)_depth](/opcodes/sfz_1/(lfo_type)_depth)
+[(lfo type)_depth](/opcodes/(lfo_type)_depth)
 
-[(lfo type)_depthccN](/opcodes/sfz_1/(lfo_type)_depth)
+[(lfo type)_depthccN](/opcodes/(lfo_type)_depth)
 
-[(lfo type)_depthchanaft](/opcodes/sfz_1/(lfo_type)_depthchanaft)
+[(lfo type)_depthchanaft](/opcodes/(lfo_type)_depthchanaft)
 
-[(lfo type)_depthpolyaft](/opcodes/sfz_1/(lfo_type)_depthpolyaft)
+[(lfo type)_depthpolyaft](/opcodes/(lfo_type)_depthpolyaft)
 
-[(lfo type)_freqccN](/opcodes/sfz_1/(lfo_type)_freqccN)
+[(lfo type)_freqccN](/opcodes/(lfo_type)_freqccN)
 
-[(lfo type)_freqchanaft](/opcodes/sfz_1/(lfo_type)_freqchanaft)
+[(lfo type)_freqchanaft](/opcodes/(lfo_type)_freqchanaft)
 
-[(lfo type)_freqpolyaft](/opcodes/sfz_1/(lfo_type)_freqpolyaft)
+[(lfo type)_freqpolyaft](/opcodes/(lfo_type)_freqpolyaft)
 
 #### Assignable LFOs (SFZ 2)
 
@@ -50,39 +50,39 @@ Much like the Flex EG, these newer LFO can target almost any tone-defining param
 
 [Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo_sfz1)
 
-[lfoX_wave](/opcodes/sfz_2/lfoX_wave)
+[lfoX_wave](/opcodes/lfoX_wave)
 
-[lfoX_freq](/opcodes/sfz_2/lfoX_freq)
+[lfoX_freq](/opcodes/lfoX_freq)
 
-[lfoX_freq_onccN](/opcodes/sfz_2/lfoX_freq)
+[lfoX_freq_onccN](/opcodes/lfoX_freq)
 
-[lfoX_freq_smoothccN](/opcodes/sfz_2/lfoX_freq_smoothccN)
+[lfoX_freq_smoothccN](/opcodes/lfoX_freq_smoothccN)
 
-[lfoX_freq_stepccN](/opcodes/sfz_2/lfoX_freq_stepccN)
+[lfoX_freq_stepccN](/opcodes/lfoX_freq_stepccN)
 
-[lfoX_delay](/opcodes/sfz_2/lfoX_delay)
+[lfoX_delay](/opcodes/lfoX_delay)
 
-[lfoX_delay_onccN](/opcodes/sfz_2/lfoX_delay)
+[lfoX_delay_onccN](/opcodes/lfoX_delay)
 
-[lfoX_fade](/opcodes/sfz_2/lfoX_fade)
+[lfoX_fade](/opcodes/lfoX_fade)
 
-[lfoX_fade_onccN](/opcodes/sfz_2/lfoX_fade)
+[lfoX_fade_onccN](/opcodes/lfoX_fade)
 
-[lfoX_phase](/opcodes/sfz_2/lfoX_phase)
+[lfoX_phase](/opcodes/lfoX_phase)
 
-[lfoX_phase_onccN](/opcodes/sfz_2/lfoX_phase)
+[lfoX_phase_onccN](/opcodes/lfoX_phase)
 
-[lfoX_count](/opcodes/sfz_2/lfoX_count)
+[lfoX_count](/opcodes/lfoX_count)
 
 #### ARIA extensions
 
-[lfoX_wave2](/opcodes/aria/lfoX_wave2)
+[lfoX_wave2](/opcodes/lfoX_wave2)
 
-[lfoX_offset / lfoX_offset2](/opcodes/aria/lfoX_offset)
+[lfoX_offset / lfoX_offset2](/opcodes/lfoX_offset)
 
-[lfoX_ratio / lfoX_ratio2](/opcodes/aria/lfoX_ratio)
+[lfoX_ratio / lfoX_ratio2](/opcodes/lfoX_ratio)
 
-[lfoX_scale / lfoX_scale2](/opcodes/aria/lfoX_scale)
+[lfoX_scale / lfoX_scale2](/opcodes/lfoX_scale)
 
 #### Assignable LFO Destinations
 

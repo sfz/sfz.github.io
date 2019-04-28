@@ -1,6 +1,9 @@
 .bundle
 .vendor
 _site
+assets/css/*.map
+assets/css/style.css
+assets/js/*.map
 node_modules
 Gemfile.lock
 package-lock.json

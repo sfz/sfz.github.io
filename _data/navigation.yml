@@ -6,13 +6,13 @@ toc:
           url: /headers/
 
         - title: SFZ v1 Opcodes
-          url: /opcodes/sfz_1/
+          url: /opcodes/sfz1
 
         - title: SFZ v2 Opcodes
-          url: /opcodes/sfz_2/
+          url: /opcodes/sfz2
 
-        - title: Extensions
-          url: /opcodes/aria/
+        - title: ARIA Extensions
+          url: /opcodes/aria
 
         - title: Directives
           url: /directives/
