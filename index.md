@@ -31,9 +31,9 @@ distribute the SFZ format files for free, for either free or commercial applicat
 
 - Here's a [basic SFZ file](/tutorials/basic_sfz_file) you can copy to start your own
 - Here is the [list of SFZ headers](/headers/)
-- The [list of SFZ 1](/opcodes/sfz_1/) can be found here.
-- You can browse the many SFZ 2 opcodes [starting here](/opcodes/sfz_2/).
-- A few opcodes have been added to [ARIA / Sforzando](/extensions/aria/opcodes/)
+- The [list of SFZ 1](/opcodes/sfz1) can be found here.
+- You can browse the many SFZ 2 opcodes [starting here](/opcodes/sfz2).
+- A few opcodes have been added to [ARIA / Sforzando](/opcodes/aria)
     for more flexibility
 
 ### SFZ Programming Video Tutorials

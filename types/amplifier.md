@@ -60,7 +60,7 @@ and crossfades:
 
 [phase](/opcodes/phase)
 
-[width_onccN](/opcodes/width_onccN)
+[width_onccN](/opcodes/width)
 
 #### ARIA Extensions
 
@@ -78,4 +78,4 @@ TODO
 
 [pan_veltrack](/opcodes/pan_veltrack)
 
-[position_onccN](/opcodes/position_onccN)
+[position_onccN](/opcodes/position)

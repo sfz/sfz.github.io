@@ -33,19 +33,19 @@ These are 6-points Delay-Attack-Hold-Decay-Sustain-Release.
 [(eg type)_depth](/opcodes/(eg_type)_depth)
 <br/><br/>
 
-[(eg type)_start_oncc](/opcodes/(eg_type)_start_oncc)
+[(eg type)_start_oncc](/opcodes/(eg_type)_start)
 
-[(eg type)_delay_oncc](/opcodes/(eg_type)_delay_oncc)
+[(eg type)_delay_oncc](/opcodes/(eg_type)_delay)
 
-[(eg type)_attack_oncc](/opcodes/(eg_type)_attack_oncc)
+[(eg type)_attack_oncc](/opcodes/(eg_type)_attack)
 
-[(eg type)_hold_oncc](/opcodes/(eg_type)_hold_oncc)
+[(eg type)_hold_oncc](/opcodes/(eg_type)_hold)
 
-[(eg type)_decay_oncc](/opcodes/(eg_type)_decay_oncc)
+[(eg type)_decay_oncc](/opcodes/(eg_type)_decay)
 
-[(eg type)_sustain_oncc](/opcodes/(eg_type)_sustain_oncc)
+[(eg type)_sustain_oncc](/opcodes/(eg_type)_sustain)
 
-[(eg type)_release_oncc](/opcodes/(eg_type)_release_oncc)
+[(eg type)_release_oncc](/opcodes/(eg_type)_release)
 <br/><br/>
 
 [(eg type)_vel2delay](/opcodes/(eg_type)_vel2delay)
@@ -81,9 +81,9 @@ set accordingly.
 
 [egN_loop](/opcodes/egN_loop)
 
-[egN_time_onccX](/opcodes/egN_time_onccX)
+[egN_time_onccX](/opcodes/egN_time)
 
-[egN_level_onccX](/opcodes/egN_level_onccX)
+[egN_level_onccX](/opcodes/egN_level)
 
 #### Flex EGs destinations
 

@@ -16,4 +16,4 @@ to a hard limit using [note_selfmask](note_selfmask).
 Limiting note_polyphony is useful for controlling both the sound buildup and
 resource usage on long-ringing instruments such as piano with the sustain pedal
 pressed down or hammered dulcimer. An alternative for those use cases is using
-[ampeg_release](ampeg_release) with [off_mode](off_mode) set to normal.
+[ampeg_release]((eg_type)_release) with [off_mode](off_mode) set to normal.

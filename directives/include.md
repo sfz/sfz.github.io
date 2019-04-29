@@ -7,7 +7,7 @@ creating larger, more complex SFZ files. The file to which #include points is,
 in effect, pasted into the SFZ file at the point of the #include. This means that
 the file structure needs to be respected - after all #includes are processed,
 <[control](/headers/control)> header needs to be before the regions in the file,
-[curve](/opcodes/curve) opcodes need to be at the bottom etc. This can be
+<[curve](/headers/curve)> opcodes need to be at the bottom etc. This can be
 nested - #included files can contain more #includes of their own, though of course recursion must be avoided!
 
 *Either a filename or a path can be used. If the #included files are in another

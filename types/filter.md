@@ -8,8 +8,8 @@ category of opcodes:
 Filter opcodes influence the timbre of the layer played. Two filters can be used
 at the same time. Further frequency shaping can be added via EQ opcodes.
 
-Cutoff and resonance can be modulated by the [LFO](/categories/lfo) and
-[Envelope Generators](/categories/envelope_generators)
+Cutoff and resonance can be modulated by the [LFO](/types/lfo) and
+[Envelope Generators](/types/envelope_generators)
 
 #### SFZ v1
 
@@ -23,7 +23,7 @@ Cutoff and resonance can be modulated by the [LFO](/categories/lfo) and
 
 #### SFZ v2
 
-[resonance_onccN](/opcodes/resonance_onccN)
+[resonance_onccN](/opcodes/resonance)
 
 [fil2_type](/opcodes/fil2_type)
 

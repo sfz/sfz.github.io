@@ -51,4 +51,4 @@ category of opcodes:
 
 [sostenuto_lo](/opcodes/sostenuto_lo)
 
-[sw_label](/opcodes/sw_label) TODO
+[sw_label](/opcodes/sw_default_label) TODO

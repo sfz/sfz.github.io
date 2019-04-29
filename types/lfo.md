@@ -30,15 +30,15 @@ in as a plugin.
 
 [(lfo type)_freq](/opcodes/(lfo_type)_freq)
 
+[(lfo type)_freqccX](/opcodes/(lfo_type)_freq)
+
 [(lfo type)_depth](/opcodes/(lfo_type)_depth)
 
-[(lfo type)_depthccN](/opcodes/(lfo_type)_depth)
+[(lfo type)_depthccX](/opcodes/(lfo_type)_depth)
 
 [(lfo type)_depthchanaft](/opcodes/(lfo_type)_depthchanaft)
 
 [(lfo type)_depthpolyaft](/opcodes/(lfo_type)_depthpolyaft)
-
-[(lfo type)_freqccN](/opcodes/(lfo_type)_freqccN)
 
 [(lfo type)_freqchanaft](/opcodes/(lfo_type)_freqchanaft)
 
@@ -50,43 +50,43 @@ Much like the Flex EG, these newer LFO can target almost any tone-defining param
 
 [Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo_sfz1)
 
-[lfoX_wave](/opcodes/lfoX_wave)
+[lfoN_wave](/opcodes/lfoN_wave)
 
-[lfoX_freq](/opcodes/lfoX_freq)
+[lfoN_freq](/opcodes/lfoN_freq)
 
-[lfoX_freq_onccN](/opcodes/lfoX_freq)
+[lfoN_freq_onccX](/opcodes/lfoN_freq)
 
-[lfoX_freq_smoothccN](/opcodes/lfoX_freq_smoothccN)
+[lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
 
-[lfoX_freq_stepccN](/opcodes/lfoX_freq_stepccN)
+[lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
 
-[lfoX_delay](/opcodes/lfoX_delay)
+[lfoN_delay](/opcodes/lfoN_delay)
 
-[lfoX_delay_onccN](/opcodes/lfoX_delay)
+[lfoN_delay_onccX](/opcodes/lfoN_delay)
 
-[lfoX_fade](/opcodes/lfoX_fade)
+[lfoN_fade](/opcodes/lfoN_fade)
 
-[lfoX_fade_onccN](/opcodes/lfoX_fade)
+[lfoN_fade_onccX](/opcodes/lfoN_fade)
 
-[lfoX_phase](/opcodes/lfoX_phase)
+[lfoN_phase](/opcodes/lfoN_phase)
 
-[lfoX_phase_onccN](/opcodes/lfoX_phase)
+[lfoN_phase_onccX](/opcodes/lfoN_phase)
 
-[lfoX_count](/opcodes/lfoX_count)
+[lfoN_count](/opcodes/lfoN_count)
 
 #### ARIA extensions
 
-[lfoX_wave2](/opcodes/lfoX_wave2)
+[lfoN_wave2](/opcodes/lfoN_wave2)
 
-[lfoX_offset / lfoX_offset2](/opcodes/lfoX_offset)
+[lfoN_offset / lfoN_offset2](/opcodes/lfoN_offset)
 
-[lfoX_ratio / lfoX_ratio2](/opcodes/lfoX_ratio)
+[lfoN_ratio / lfoN_ratio2](/opcodes/lfoN_ratio)
 
-[lfoX_scale / lfoX_scale2](/opcodes/lfoX_scale)
+[lfoN_scale / lfoN_scale2](/opcodes/lfoN_scale)
 
 #### Assignable LFO Destinations
 
-These destinations are added as a suffix to 'lfoX_'. For example,
+These destinations are added as a suffix to 'lfoN_'. For example,
 lfo01_pitch=100 makes LFO 01 affect pitch with a max depth of 100 cents, and
 lfo03_freq_lfo01_oncc117=1.3 would make LFO 03 add up to 1.3 Hertz to the
 frequency of LFO 01, with the amount modulated by MIDI CC 117.

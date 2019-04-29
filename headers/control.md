@@ -13,7 +13,7 @@ following special directives, which should not be used under other headers:
 
 [octave_offset](/opcodes/octave_offset)
 
-[note_offset](/opcodes/note_offset) TODO
+note_offset TODO
 
 #### ARIA Extensions
 

@@ -19,7 +19,7 @@ sustain, staccato, spiccato and pizzicato in a violin. With the SFZ 1 or SFZ 2
 spec, an instrument which uses `sw_last` to select articulations will not have a
 default articulation preselected, meaning when loaded, it will play no sound
 until one of the keyswitches is pressed - only after that will the instrument
-respond to notes. The ARIA extensions include [sw_default](/opcodes/sw_default)
+respond to notes. The ARIA extensions include [sw_default](/opcodes/sw_default_label)
 as a solution to this.
 
 The difference between this and [sw_down](/opcodes/sw_down) is that sw_last

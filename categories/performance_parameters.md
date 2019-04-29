@@ -12,5 +12,5 @@ Performance Parameters are all sound modifiers including:
 
 [EQ](/types/eq)
 
-Most Performance Parameters are targets for the [Modulation](/category/modulation)
+Most Performance Parameters are targets for the [Modulation](/categories/modulation)
 opcodes

@@ -2,7 +2,7 @@
 ---
 # Pitch (type)
 
-Pitch opcodes are part of the [Performance parameters](/opcodes/sfz_/)(/categories/performance_parameters)
+Pitch opcodes are part of the [Performance parameters](/categories/performance_parameters)
 category of opcodes:
 
 Pitch parameters influence the pitch of the region played
@@ -19,7 +19,7 @@ Pitch parameters influence the pitch of the region played
 
 [pitch_veltrack](/opcodes/pitch_veltrack)
 
-[pitch](/opcodes/) TODO
+[pitch](/opcodes/pitch) TODO
 
 Another sub-category of Pitch opcodes are Bend opcodes:
 
@@ -41,7 +41,7 @@ Another sub-category of Pitch opcodes are Bend opcodes:
 
 TODO
 
-[bend_smoothup](/opcodes/)
+[bend_smoothup](/opcodes/bend_smoothup)
 
-[bend_smoothdown](/opcodes/)
+[bend_smoothdown](/opcodes/bend_smoothdown)
 

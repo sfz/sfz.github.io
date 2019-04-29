@@ -15,7 +15,7 @@ var01_mod=mult
 var02_mod=add
 ```
 
-Here is how multiplication could be used, together with [varNN_cutoff](varNN_cutoff)
+Here is how multiplication could be used, together with [varNN_target](varNN_target)
 and [varNN_onccX](varNN_onccX) to control velocity tracking on a filter cutoff:
 
 ```

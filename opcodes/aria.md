@@ -16,15 +16,15 @@
 
 [global_amplitude](/opcodes/global_amplitude)
 
-[amplitude_onccX](/opcodes/amplitude_onccX)
+[amplitude_onccN](/opcodes/amplitude_onccN)
 
-[amplitude_smoothccX](/opcodes/amplitude_smoothccX)
+[amplitude_smoothccN](/opcodes/amplitude_smoothccN)
 
-[amplitude_curveccX](/opcodes/amplitude_curveccX)
+[amplitude_curveccN](/opcodes/amplitude_curveccN)
 
-[volume_onccX](/opcodes/volume_onccX)
+[volume_onccN](/opcodes/volume_onccN)
 
-[egXX_shape](/opcodes/egXX_shape)
+[egN_shapeX](/opcodes/egN_shapeX)
 
 [ampeg_attack_shape](/opcodes/ampeg_attack_shape)
 
@@ -36,29 +36,29 @@
 
 [ampeg_release_zero](/opcodes/ampeg_release_zero)
 
-[sw_label](/opcodes/sw_label)
+[sw_label](/opcodes/sw_default_label)
 
-[sw_lolast](/opcodes/sw_lolast)
+[sw_lolast](/opcodes/sw_lo_hilast)
 
-[sw_hilast](/opcodes/sw_hilast)
+[sw_hilast](/opcodes/sw_lo_hilast)
 
-[sw_default](/opcodes/sw_default)
+[sw_default](/opcodes/sw_default_label)
 
 [curve_index](/opcodes/curve_index)
 
-[set_hdccX](/opcodes/set_hdccX)
+[set_hdccN](/opcodes/set_hdccN)
 
-[lohdccX](/opcodes/lohdccX)
+[lohdccN](/opcodes/lo_hihdccN)
 
-[hihdccX](/opcodes/hihdccX)
+[hihdccN](/opcodes/lo_hihdccN)
 
-[varXX_target](/opcodes/varXX_target)
+[varNN_target](/opcodes/varNN_target)
 
-[varXX_mod](/opcodes/varXX_mod)
+[varNN_mod](/opcodes/varNN_mod)
 
-[varXX_onccX](/opcodes/varXX_onccX)
+[varNN_onccX](/opcodes/varNN_onccX)
 
-[varXX_curveccX](/opcodes/varXX_curveccX)
+[varNN_curveccX](/opcodes/varNN_curveccX)
 
 [lfoN_wave2](/opcodes/lfoN_wave2)
 

@@ -9,7 +9,7 @@ sustain (as when false/off/0). Default is true.
 In other words, under default behavior, the decay slope is fixed, and the lower
 the sustain level of the envelope, the less time the decay stage will actually
 take. Setting this to false will make the decay always happen during the entire
-time period specified by [ampeg_decay](ampeg_decay),
+time period specified by [ampeg_decay]((eg_type)_decay),
 regardless of the current `ampeg_sustain` level.
 
 ##### Examples

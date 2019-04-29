@@ -15,4 +15,4 @@ amplitude_oncc50=35
 
 This is a very convenient way to set up a volume control which goes from silence
 to full volume. Smoothness can be controlled with [amplitude_smoothccN](amplitude_smoothccN)
-and curve shape with [amplitude_curveccX](amplitude_curveccX).
+and curve shape with [amplitude_curveccN](amplitude_curveccN).

@@ -72,20 +72,20 @@
 | [amp_random](amp_random)                      |                                                        |                                                           |   ✓   |      X       |
 | [rt_decay](rt_decay)                          |                                                        |                                                           |   ✓   |      ✓       |
 | [gain_ccN](gain_ccN)                          |                                                        |                                                           |   ✓   |      X       |
-| [xfin_lokey](xfin_lokey)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfin_hikey](xfin_hikey)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_lokey](xfout_lokey)                    |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_hikey](xfout_hikey)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_lokey](xfin_lo_hikey)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hikey](xfin_lo_hikey)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_lokey](xfout_lo_hikey)                 |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hikey](xfout_lo_hikey)                 |                                                        |                                                           |   ✓   |      ✓       |
 | [xf_keycurve](xf_keycurve)                    |                                                        |                                                           |   ✓   |      ✓       |
-| [xfin_lovel](xfin_lovel)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfin_hivel](xfin_hivel)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_lovel](xfout_lovel)                    |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_hivel](xfout_hivel)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_lovel](xfin_lo_hivel)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hivel](xfin_lo_hivel)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_lovel](xfout_lo_hivel)                 |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hivel](xfout_lo_hivel)                 |                                                        |                                                           |   ✓   |      ✓       |
 | [xf_velcurve](xf_velcurve)                    |                                                        |                                                           |   ✓   |      ✓       |
-| [xfin_loccN](xfin_loccN)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfin_hiccN](xfin_hiccN)                      |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_loccN](xfout_loccN)                    |                                                        |                                                           |   ✓   |      ✓       |
-| [xfout_hiccN](xfout_hiccN)                    |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_loccN](xfin_lo_hiccN)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfin_hiccN](xfin_lo_hiccN)                   |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_loccN](xfout_lo_hiccN)                 |                                                        |                                                           |   ✓   |      ✓       |
+| [xfout_hiccN](xfout_lo_hiccN)                 |                                                        |                                                           |   ✓   |      ✓       |
 | [xf_cccurve](xf_cccurve)                      |                                                        |                                                           |   ✓   |      ✓       |
 |                                         | ***[Instrument settings](/categories/instrument_settings)*** | ***[Voice Lifecycle](/types/voice_lifecycle)***
 | [output](output)                              |                                                        |                                                           |   X   |      X       |
@@ -156,7 +156,7 @@
 | [pitchlfo_freqccN](/types/lfo#sfz-1-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqchanaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqpolyaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   X   |      X       |
-|  ***Filters***                         | ***[Performance parameters](/categories/performance_parameters)*** | ***[Filters](/types/filters)***
+|  ***Filters***                         | ***[Performance parameters](/categories/performance_parameters)*** | ***[Filters](/types/filter)***
 | [fil_type / filtype](fil_type)                                  |                                      |                                                           | [Partial](fil_type#players-support) | [Partial](fil_type#players-support) |
 | [cutoff](cutoff)                                                |                                      |                                                           |   ✓   |      ✓       |
 | [cutoff_ccN](cutoff_ccN)                                        |                                      |                                                           |   ✓   |      ✓       |
