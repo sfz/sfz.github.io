@@ -12,8 +12,8 @@ var01_oncc11=1
 var02_oncc100=0.5
 ```
 
-Here is how two different CCs could be used, together with [varNN_target](varNN_target)
-and [varNN_mod](varNN_mod) to control velocity tracking on a filter cutoff:
+Here is how two different CCs could be used, together with [varNN_target](varNN_target) 
+(in this case, var01_cutoff as 01 is the variable number and cutoff is the target) and [varNN_mod](varNN_mod) to control velocity tracking on a filter cutoff:
 
 ```
 //Lowpass filter
