@@ -18,7 +18,7 @@ toc:
           url: /directives/
 
         - title: Types & Categories
-          url: /categories/
+          url: /opcodes/categories
 
     - title: Software
       type: dropdown

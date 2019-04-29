@@ -15,9 +15,9 @@ following special directives, which should not be used under other headers:
 
 note_offset TODO
 
-#### ARIA Extensions
+[label_ccN](/opcodes/label_ccN)
 
-[label_ccN](/opcodes/label_ccN) TODO: possibly ARIA extension, check
+#### ARIA Extensions
 
 [sustain_cc](/opcodes/sustain_cc)
 

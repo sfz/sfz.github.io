@@ -2,7 +2,7 @@
 ---
 # Amplifier type
 
-Amplifier opcodes are part of the [Performance parameters](/categories/performance_parameters)
+Amplifier opcodes are part of the [Performance parameters](/opcodes/categories#performance-parameters)
 category of opcodes:
 
 Amplifier opcodes influence the amplitude (volume), pan (width, position)

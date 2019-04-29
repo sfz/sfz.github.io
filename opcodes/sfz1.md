@@ -4,9 +4,9 @@
 
 | Opcode                                        | Category                                               | Type                                                      | Aria  | LinuxSampler |
 | :---                                          | :---                                                   | :---                                                      | :---: |    :---:     |
-| ***Sample Definition***                       | ***[Sound source](/categories/sound_source)***         | ***[Sample Playback](/types/sample_playback)***
+| ***Sample Definition***                       | ***[Sound source](/opcodes/categories#sound-source)*** | ***[Sample Playback](/types/sample_playback)***
 | [sample](sample)                              |                                                        |                                                           |   ✓   |      ✓       |
-| ***Input Controls***                          | ***[Region Logic](/categories/region_logic)***         | ***[MIDI Conditions](/types/midi_conditions)***
+| ***Input Controls***                          | ***[Region Logic](/opcodes/categories#region-logic)*** | ***[MIDI Conditions](/types/midi_conditions)***
 | [lochan](lo_hichan)                           |                                                        |                                                           |   ✓   |      ✓       |
 | [hichan](lo_hichan)                           |                                                        |                                                           |   ✓   |      ✓       |
 | [loccN](lo_hiccN)                             |                                                        |                                                           |   ✓   |      ✓       |
@@ -41,12 +41,12 @@
 | [trigger](trigger)                            |                                                        |                                                           |   ✓   |      ✓       |
 | [on_loccN](on_lo_hiccN)                       |                                                        |                                                           |   ✓   |      ✓       |
 | [on_hiccN](on_lo_hiccN)                       |                                                        |                                                           |   ✓   |      ✓       |
-|                                         | ***[Instrument settings](/categories/instrument_settings)*** | ***[Voice Lifecycle](/types/voice_lifecycle)***
+|                                 | ***[Instrument settings](/opcodes/categories#instrument-settings)*** | ***[Voice Lifecycle](/types/voice_lifecycle)***
 | [group](group)                                |                                                        |                                                           |   ✓   |      ✓       |
 | [off_by](off_by)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [off_mode](off_mode)                          |                                                        |                                                           |   ✓   |      ✓       |
 | ***Performance Parameters***
-| ***Sample Player***                           | ***[Sound source](/categories/sound_source)***         | ***[Sample Playback](/types/sample_playback)***
+| ***Sample Player***                           | ***[Sound source](/opcodes/categories#sound-source)*** | ***[Sample Playback](/types/sample_playback)***
 | [delay](delay)                                |                                                        |                                                           |   ✓   |      ✓       |
 | [delay_random](delay_random)                  |                                                        |                                                           |   ✓   |      ✓       |
 | [delay_ccN](delay)                            |                                                        |                                                           |   ✓   |      ✓       |
@@ -60,7 +60,7 @@
 | [loopend / loop_end](loop_end)                |                                                        |                                                           |   ✓   |      ✓       |
 | [sync_beats](sync_beats)                      |                                                        |                                                           |   ✓   |      X       |
 | [sync_offset](sync_offset)                    |                                                        |                                                           |   ✓   |      X       |
-| ***Amplifier***                   | ***[Performance parameters](/categories/performance_parameters)*** | ***[ Amplifier](/types/amplifier)***
+| ***Amplifier***           | ***[Performance parameters](/opcodes/categories#performance-parameters)*** | ***[Amplifier](/types/amplifier)***
 | [volume](volume)                              |                                                        |                                                           |   ✓   |      ✓       |
 | [pan](pan)                                    |                                                        |                                                           |   ✓   |      ✓       |
 | [width](width)                                |                                                        |                                                           |   ✓   |      X       |
@@ -87,9 +87,9 @@
 | [xfout_loccN](xfout_lo_hiccN)                 |                                                        |                                                           |   ✓   |      ✓       |
 | [xfout_hiccN](xfout_lo_hiccN)                 |                                                        |                                                           |   ✓   |      ✓       |
 | [xf_cccurve](xf_cccurve)                      |                                                        |                                                           |   ✓   |      ✓       |
-|                                         | ***[Instrument settings](/categories/instrument_settings)*** | ***[Voice Lifecycle](/types/voice_lifecycle)***
+|                                 | ***[Instrument settings](/opcodes/categories#instrument-settings)*** | ***[Voice Lifecycle](/types/voice_lifecycle)***
 | [output](output)                              |                                                        |                                                           |   X   |      X       |
-|  ***Amplifier EG***                           | ***[Modulation](/categories/modulation)***             | ***[Envelope Generators](/types/envelope_generators)***
+|  ***Amplifier EG***                               | ***[Modulation](/opcodes/categories#modulation)*** | ***[Envelope Generators](/types/envelope_generators)***
 | [ampeg_delay](/types/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
 | [ampeg_delay_oncc](/types/envelope_generators/sfz-1-egs)   |                                      |                                                           |   ✓   |      ✓       |
 | [ampeg_start](/types/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
@@ -109,7 +109,7 @@
 | [ampeg_vel2decay](/types/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      ✓       |
 | [ampeg_vel2sustain](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
 | [ampeg_vel2release](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
-| ***Amplifier LFO***                                            | ***[Modulation](/categories/modulation)*** | ***[LFO](/types/lfo)***
+| ***Amplifier LFO***                          | ***[Modulation](/opcodes/categories#modulation)*** | ***[LFO](/types/lfo)***
 | [amplfo_delay](/types/lfo#sfz-1-lfos-lfos)                 |                                      |                                                           |   ✓   |      ✓       |
 | [amplfo_fade](/types/lfo#sfz-1-lfos-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
 | [amplfo_freq](/types/lfo#sfz-1-lfos-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
@@ -120,7 +120,7 @@
 | [amplfo_freqccN](/types/lfo#sfz-1-lfos-lfos)               |                                      |                                                           |   ✓   |      ✓       |
 | [amplfo_freqchanaft](/types/lfo#sfz-1-lfos-lfos)           |                                      |                                                           |   ✓   |      ✓       |
 | [amplfo_freqpolyaft](/types/lfo#sfz-1-lfos-lfos)           |                                      |                                                           |   X   |      X       |
-|  ***Pitch***                           | ***[Performance parameters](/categories/performance_parameters)*** | ***[Pitch](/types/pitch)***
+|  ***Pitch***              | ***[Performance parameters](/opcodes/categories#performance-parameters)*** | ***[Pitch](/types/pitch)***
 | [transpose](transpose)                        |                                                        |                                                           |   ✓   |      ✓       |
 | [tune](tune)                                  |                                                        |                                                           |   ✓   |      ✓       |
 | [pitch_keycenter](pitch_keycenter)            |                                                        |                                                           |   ✓   |      ✓       |
@@ -130,7 +130,7 @@
 | [bend_up / bendup](bend_up)                   |                                                        |                                                           |   ✓   |      X       |
 | [bend_down / benddown](bend_down)             |                                                        |                                                           |   ✓   |      X       |
 | [bend_step / bendstep](bend_step)             |                                                        |                                                           |   ✓   |      X       |
-|  ***Pitch EG***                                                | ***[Modulation](/categories/modulation)*** | ***[Envelope Generators](/types/envelope_generators)***
+|  ***Pitch EG***                                   | ***[Modulation](/opcodes/categories#modulation)*** | ***[Envelope Generators](/types/envelope_generators)***
 | [pitcheg_delay](/types/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
 | [pitcheg_start](/types/envelope_generators/sfz-1-egs)      |                                      |                                                           |   ✓   |      ✓       |
 | [pitcheg_attack](/types/envelope_generators/sfz-1-egs)     |                                      |                                                           |   ✓   |      ✓       |
@@ -145,7 +145,7 @@
 | [pitcheg_vel2decay](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
 | [pitcheg_vel2release](/types/envelope_generators/sfz-1-egs)|                                      |                                                           |   ✓   |      ✓       |
 | [pitcheg_vel2depth](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      X       |
-|  ***Pitch LFO***                                               | ***[Modulation](/categories/modulation)*** | ***[LFO](/types/lfo)***
+|  ***Pitch LFO***                             | ***[Modulation](/opcodes/categories#modulation)*** | ***[LFO](/types/lfo)***
 | [pitchlfo_delay](/types/lfo#sfz-1-lfos-lfos)               |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_fade](/types/lfo#sfz-1-lfos)                     |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freq](/types/lfo#sfz-1-lfos)                     |                                      |                                                           |   ✓   |      ✓       |
@@ -156,7 +156,7 @@
 | [pitchlfo_freqccN](/types/lfo#sfz-1-lfos)                  |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqchanaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   ✓   |      ✓       |
 | [pitchlfo_freqpolyaft](/types/lfo#sfz-1-lfos)              |                                      |                                                           |   X   |      X       |
-|  ***Filters***                         | ***[Performance parameters](/categories/performance_parameters)*** | ***[Filters](/types/filter)***
+|  ***Filters***            | ***[Performance parameters](/opcodes/categories#performance-parameters)*** | ***[Filters](/types/filter)***
 | [fil_type / filtype](fil_type)                                  |                                      |                                                           | [Partial](fil_type#players-support) | [Partial](fil_type#players-support) |
 | [cutoff](cutoff)                                                |                                      |                                                           |   ✓   |      ✓       |
 | [cutoff_ccN](cutoff_ccN)                                        |                                      |                                                           |   ✓   |      ✓       |
@@ -167,7 +167,7 @@
 | [fil_keycenter](fil_keycenter)                                  |                                      |                                                           |   ✓   |      ✓       |
 | [fil_veltrack](fil_veltrack)                                    |                                      |                                                           |   ✓   |      ✓       |
 | [fil_random](fil_random)                                        |                                      |                                                           |   ✓   |      X       |
-|  ***Filter EG***                                               | ***[Modulation](/categories/modulation)*** | ***[Envelope Generators](/types/envelope_generators)***
+|  ***Filter EG***                                  | ***[Modulation](/opcodes/categories#modulation)*** | ***[Envelope Generators](/types/envelope_generators)***
 | [fileg_delay](/types/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
 | [fileg_start](/types/envelope_generators/sfz-1-egs)        |                                      |                                                           |   ✓   |      ✓       |
 | [fileg_attack](/types/envelope_generators/sfz-1-egs)       |                                      |                                                           |   ✓   |      ✓       |
@@ -183,7 +183,7 @@
 | [fileg_vel2sustain](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
 | [fileg_vel2release](/types/envelope_generators/sfz-1-egs)  |                                      |                                                           |   ✓   |      ✓       |
 | [fileg_vel2depth](/types/envelope_generators/sfz-1-egs)    |                                      |                                                           |   ✓   |      X       |
-|  ***Filter LFO***                                              | ***[Modulation](/categories/modulation)*** | ***[LFO](/types/lfo)***
+|  ***Filter LFO***                            | ***[Modulation](/opcodes/categories#modulation)*** | ***[LFO](/types/lfo)***
 | [fillfo_delay](/types/lfo#sfz-1-lfos)                      |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_fade](/types/lfo#sfz-1-lfos)                       |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_freq](/types/lfo#sfz-1-lfos)                       |                                      |                                                           |   ✓   |      ✓       |
@@ -194,7 +194,7 @@
 | [fillfo_freqccN](/types/lfo#sfz-1-lfos)                    |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_freqchanaft](/types/lfo#sfz-1-lfos)                |                                      |                                                           |   ✓   |      ✓       |
 | [fillfo_freqpolyaft](/types/lfo#sfz-1-lfos)                |                                      |                                                           |   X   |      X       |
-|  ***Per-Voice EQ***                    | ***[Performance parameters](/categories/performance_parameters)*** | ***[EQ](/types/eq)***
+|  ***Per-Voice EQ***       | ***[Performance parameters](/opcodes/categories#performance-parameters)*** | ***[EQ](/types/eq)***
 | [eq1_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |
 | [eq2_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |
 | [eq3_freq](eqN_freq)                                            |                                      |                                                           |   ✓   |      ✓       |

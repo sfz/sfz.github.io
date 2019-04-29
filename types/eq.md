@@ -2,7 +2,7 @@
 ---
 # EQ type
 
-EQ opcodes are part of the [Performance parameters](/categories/performance_parameters)
+EQ opcodes are part of the [Performance parameters](/opcodes/categories#performance-parameters)
 category of opcodes:
 
 EQs are simple frequency sound shaping tools independent from the filters.

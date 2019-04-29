@@ -2,7 +2,7 @@
 ---
 # Trigger Opcodes
 
-Triggers are part of the [Region Logic](/categories/region_logic)
+Triggers are part of the [Region Logic](/opcodes/categories#region-logic)
 category of opcodes:
 
 [trigger](/opcodes/trigger)

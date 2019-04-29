@@ -2,7 +2,7 @@
 ---
 # Filter type
 
-Filter opcodes are part of the [Performance parameters](/categories/performance_parameters)
+Filter opcodes are part of the [Performance parameters](/opcodes/categories#performance-parameters)
 category of opcodes:
 
 Filter opcodes influence the timbre of the layer played. Two filters can be used

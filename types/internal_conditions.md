@@ -2,7 +2,7 @@
 ---
 # Internal Conditions Opcodes
 
-Internal Conditions are part of the [Region Logic](/categories/region_logic)
+Internal Conditions are part of the [Region Logic](/opcodes/categories#region-logic)
 category of opcodes:
 
 ### SFZ v1

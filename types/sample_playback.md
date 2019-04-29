@@ -43,10 +43,10 @@ It could be samples or oscillators.
 
 [waveguide](/opcodes/waveguide)
 
-TODO
-
-[direction](/opcodes/direction)
-
 [loop_count](/opcodes/loop_count)
 
 [loop_type](/opcodes/loop_type)
+
+TODO
+
+[direction](/opcodes/direction)

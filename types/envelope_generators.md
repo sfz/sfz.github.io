@@ -2,7 +2,7 @@
 ---
 # Envelope Generators
 
-Envelope Generator opcodes are part of the [Modulation](/categories/modulation)
+Envelope Generator opcodes are part of the [Modulation](/opcodes/categories#modulation)
 category of opcodes:
 
 #### SFZ 1 EGs

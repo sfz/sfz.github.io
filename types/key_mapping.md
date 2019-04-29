@@ -2,7 +2,7 @@
 ---
 # Key Mapping Opcodes
 
-Key Mapping opcodes are part of the [Region Logic](/categories/region_logic)
+Key Mapping opcodes are part of the [Region Logic](/opcodes/categories#region-logic)
 category of opcodes:
 
 [lokey](/opcodes/lo_hikey)

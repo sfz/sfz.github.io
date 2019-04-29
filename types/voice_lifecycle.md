@@ -2,7 +2,7 @@
 ---
 # Voice Lifecycle
 
-voice Lifecycle opcodes are part of the [Instruments settings](/categories/instrument_settings)
+voice Lifecycle opcodes are part of the [Instruments settings](/opcodes/categories#instrument_settings)
 category of opcodes:
 
 [group](/opcodes/group)

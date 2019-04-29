@@ -2,7 +2,7 @@
 ---
 # LFO
 
-LFO (Low Frequency Oscillator) opcodes are part of the [Modulation](/categories/modulation)
+LFO (Low Frequency Oscillator) opcodes are part of the [Modulation](/opcodes/categories#modulation)
 category of opcodes. They are used to create effects such as pitch vibrato
 (when modulating pitch), tremolo (when modulating volume) and filter wobble
 (when modulating filter cutoff)
