@@ -17,14 +17,12 @@ category of opcodes:
 
 [polyphony](/opcodes/polyphony)
 
+[note_polyphony](/opcodes/note_polyphony)
+
+[note_selfmask](/opcodes/note_selfmask)
+
 [rt_dead](/opcodes/rt_dead)
 
 #### ARIA Extensions
 
 [polyphony_group](/opcodes/polyphony_group)
-
-TODO
-
-[note_polyphony](/opcodes/note_polyphony)
-
-[note_selfmask](/opcodes/note_selfmask)

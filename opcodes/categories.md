@@ -29,9 +29,9 @@ Other Instruments settings opcodes are of the
 | [polyphony](/opcodes/polyphony)            | SFZ v1  |
 | [rt_dead](/opcodes/rt_dead)                | SFZ v2  |
 | [output](/opcodes/output)                  | SFZ v2  |
+| [note_polyphony](/opcodes/note_polyphony)  | SFZ v2  |
+| [note_selfmask](/opcodes/note_selfmask)    | SFZ v2  |
 | [polyphony_group](/opcodes/polyphony_group)|  ARIA   |
-| [note_polyphony](/opcodes/note_polyphony)  |  TODO   |
-| [note_selfmask](/opcodes/note_selfmask)    |  TODO   |
 
 ## Modulation
 
