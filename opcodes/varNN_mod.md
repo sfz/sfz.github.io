@@ -16,7 +16,7 @@ var02_mod=add
 ```
 
 Here is how multiplication could be used, together with [varNN_target](varNN_target)
-and [varNN_onccX](varNN_onccX) to control velocity tracking on a filter cutoff:
+(in this case, var01_cutoff as 01 is the variable number and cutoff is the target) and [varNN_onccX](varNN_onccX) to control velocity tracking on a filter cutoff:
 
 ```
 //Lowpass filter
