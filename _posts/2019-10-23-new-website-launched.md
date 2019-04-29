@@ -10,8 +10,6 @@ We're proud to announce a new website!
 * Responsive design making the website available to mobile devices.
 * Utilizes [Bootstrap][] for easy skinning.
 * Built on [Jekyll][].
-* Allows for comments on news posts using
-  [Disqus](https://disqus.com): let us know what you think!
 * Most content is authored in [Markdown][] format.
 
 [Bootstrap]: http://getbootstrap.com/
