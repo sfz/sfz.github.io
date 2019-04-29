@@ -19,7 +19,7 @@ Pitch parameters influence the pitch of the region played
 
 [pitch_veltrack](/opcodes/pitch_veltrack)
 
-[pitch](/opcodes/pitch) TODO
+[pitch](/opcodes/pitch)
 
 Another sub-category of Pitch opcodes are Bend opcodes:
 
@@ -39,9 +39,6 @@ Another sub-category of Pitch opcodes are Bend opcodes:
 
 [bend_smooth](/opcodes/bend_smooth)
 
-TODO
-
 [bend_smoothup](/opcodes/bend_smoothup)
 
 [bend_smoothdown](/opcodes/bend_smoothdown)
-

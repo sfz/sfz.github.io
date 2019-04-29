@@ -25,6 +25,6 @@ category of opcodes:
 
 TODO
 
-[note_polyphony](/opcodes/)
+[note_polyphony](/opcodes/note_polyphony)
 
-[note_selfmask](/opcodes/)
+[note_selfmask](/opcodes/note_selfmask)

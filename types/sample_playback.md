@@ -45,8 +45,8 @@ It could be samples or oscillators.
 
 TODO
 
-[direction](/opcodes/)
+[direction](/opcodes/direction)
 
-[loop_count](/opcodes/)
+[loop_count](/opcodes/loop_count)
 
-[loop_type](/opcodes/)
+[loop_type](/opcodes/loop_type)
