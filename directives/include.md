@@ -24,7 +24,7 @@ especially convenient in conjunction with the <[master](/headers/master)> header
 ##### Examples
 
 ```
-#include "header.sfzh"
+#include "header.sfz"
 #include "note_map.sfz"
 #include "legato/dynfade_legato_first_map.sfz"
 ```
