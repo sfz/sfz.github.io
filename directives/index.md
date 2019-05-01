@@ -2,5 +2,7 @@
 ---
 # Directives
 
-- \#[include](/directives/include) ARIA Extension
-- \#[define](/directives/define) SFZ v2
+| Name                            | ARIA  | LinuxSampler |
+| ---                             | :---: |    :---:     |
+| #[define](/directives/define)   |   ✓   |      ✓       |
+| #[include](/directives/include) |   ✓   |      ✓       |

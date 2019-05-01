@@ -24,9 +24,9 @@ especially convenient in conjunction with the <[master](/headers/master)> header
 ##### Examples
 
 ```
-include "header.sfzh"
-include "note_map.sfz"
-include "legato/dynfade_legato_first_map.sfz"
+#include "header.sfzh"
+#include "note_map.sfz"
+#include "legato/dynfade_legato_first_map.sfz"
 ```
 
 Here's an example of how #include and master can be used together:
