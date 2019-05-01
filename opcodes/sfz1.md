@@ -238,16 +238,16 @@
 
 | Opcode                                                     | Aria  | LinuxSampler |
 | ---                                                        | :---: |    :---:     |
-| [fil_type / filtype](fil_type)                             |   ✓   |      ✓       |
 | [cutoff](cutoff)                                           |   ✓   |      ✓       |
 | [cutoff_ccN](cutoff_ccN)                                   |   ✓   |      ✓       |
 | [cutoff_chanaft](cutoff_chanaft)                           |   ✓   |      ✓       |
-| [cutoff_polyaft](cutoff_polyaft)                           |   ✓   |      X       |
-| [resonance](resonance)                                     |   ✓   |      ✓       |
+| [cutoff_polyaft](cutoff_polyaft)                           |   X   |      X       |
 | [fil_keytrack](fil_keytrack)                               |   ✓   |      ✓       |
 | [fil_keycenter](fil_keycenter)                             |   ✓   |      ✓       |
-| [fil_veltrack](fil_veltrack)                               |   ✓   |      ✓       |
 | [fil_random](fil_random)                                   |   ✓   |      X       |
+| [fil_type / filtype](fil_type)                             |   ✓   |      ✓       |
+| [fil_veltrack](fil_veltrack)                               |   ✓   |      ✓       |
+| [resonance](resonance)                                     |   ✓   |      ✓       |
 
 <br>
 

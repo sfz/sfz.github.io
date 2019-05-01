@@ -8,7 +8,6 @@ Icons are provided by [Font Awesome][fa].
 
 [jekyll]: http://jekyllrb.com/
 [node]: http://nodejs.org/
-[grunt]: http://gruntjs.com/
 [bootstrap]: http://getbootstrap.com/
 [fa]: http://fontawesome.io/
 [sass]: https://sass-lang.com/

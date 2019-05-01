@@ -7,8 +7,6 @@ to those already added by [SFZ 2](/opcodes/sfz2),
 and [XML instrument banks](/extensions/aria/xml_instrument_bank) as a way of
 organizing multiple SFZ instruments and configuring graphical user interfaces.
 
-[curve_index](/opcodes/curve_index)
-
 ## [Instrument settings](/opcodes/categories#instrument-settings)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -51,7 +49,7 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 
 <br>
 
-## [Performance parameters](/opcodes/categories#performance-parameters): [Amplifier](/types/amplifier)
+## [Performance parameters](/opcodes/categories#performance-parameters): Amplifier
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
@@ -88,6 +86,14 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [lfoN_ratio/lfoN_ratio2](/opcodes/lfoN_ratio)              |    ✓    |      X       |
 | [lfoN_scale/lfoN_scale2](/opcodes/lfoN_scale)              |    ✓    |      X       |
 | [lfoN_wave2](/opcodes/lfoN_wave2)                          |    ✓    |      X       |
+
+<br>
+
+## [Curves](/headers/curve)
+
+| Opcode                                                     |  Aria   | LinuxSampler |
+| ---                                                        |  :---:  |    :---:     |
+| [curve_index](/opcodes/curve_index)                        |    ✓    |      X       |
 
 <br>
 

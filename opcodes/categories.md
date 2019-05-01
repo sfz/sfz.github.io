@@ -21,10 +21,10 @@ Modulation opcodes comprise of all the LFO and EG controls
 
 Performance Parameters are all sound modifiers including:
 
-- [Pitch](/types/pitch)
-- [Amplifier](/types/amplifier)
-- [Filter](/types/filter)
-- [EQ](/types/eq)
+- ***Pitch***
+- ***Amplifier***
+- ***Filter***
+- ***EQ***
 
 Pitch parameters influence the pitch of the region played
 
@@ -43,16 +43,16 @@ Most Performance parameters are targets for the Modulation opcodes
 
 Region Logic opcodes define the conditions under which a voice plays or stops:
 
-- [Key Mapping](/types/key_mapping)
-- [MIDI Conditions](/types/midi_conditions)
-- [Internal Conditions](/types/internal_conditions)
-- [Triggers](/types/triggers)
+- ***Key Mapping***
+- ***MIDI Conditions***
+- ***Internal Conditions***
+- ***Triggers***
 
 ## Sound Source
 
 Sound Source defines the nature of the voice generated.
 It could be samples or oscillators
 
-- Sample Playback
+- ***Sample Playback***
 
 Sample Playback opcodes defines the parameters of the sound generation.

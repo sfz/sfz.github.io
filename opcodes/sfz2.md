@@ -122,3 +122,10 @@ TODO
 | [resonance2_onccN](/opcodes/resonance2)                    |    ✓    |      X       |
 | [fil2_type](/opcodes/fil2_type)|[Partial](fil2_type#players-support) | [Partial](fil2_type#players-support)|
 
+<br>
+
+## [Curves](/headers/curve)
+
+| Opcode                                                     |  Aria   | LinuxSampler |
+| ---                                                        |  :---:  |    :---:     |
+| [vN](/headers/curve)                                       |    ✓    |      ✓       |
