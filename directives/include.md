@@ -8,23 +8,26 @@ in effect, pasted into the SFZ file at the point of the #include. This means tha
 the file structure needs to be respected - after all #includes are processed,
 <[control](/headers/control)> header needs to be before the regions in the file,
 <[curve](/headers/curve)> opcodes need to be at the bottom etc. This can be
-nested - #included files can contain more #includes of their own, though of course recursion must be avoided!
+nested - #included files can contain more #includes of their own,
+though of course recursion must be avoided!
 
-*Either a filename or a path can be used. If the #included files are in another
+Either a filename or a path can be used. If the #included files are in another
 folder, the SFZ is interpreted as if it was in the main SFZ file's path, not the
 path where the #included files are. The #included files can either have the
 extension sfz or sfzh, which is functionally no different from sfz, just used
-for clarity when #including a header.*
+for clarity when #including a header.
 
 This is useful for creating large complex files, and also for simplifying the
 management of files which repeat similar regions with different opcodes. This is
 especially convenient in conjunction with the <[master](/headers/master)> header.
 
-Examples:
+##### Examples
 
-    include "header.sfzh"
-    include "note_map.sfz"
-    include "legato/dynfade_legato_first_map.sfz"
+```
+include "header.sfzh"
+include "note_map.sfz"
+include "legato/dynfade_legato_first_map.sfz"
+```
 
 Here's an example of how #include and master can be used together:
 
