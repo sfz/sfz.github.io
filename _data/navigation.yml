@@ -11,11 +11,14 @@ toc:
         - title: SFZ v2 Opcodes
           url: /opcodes/sfz2
 
+        - title: Directives
+          url: /directives/
+
         - title: ARIA Extensions
           url: /opcodes/aria
 
-        - title: Directives
-          url: /directives/
+        - title: LinuxSampler Extensions
+          url: /opcodes/linuxsampler
 
         - title: Types & Categories
           url: /opcodes/categories

@@ -85,19 +85,17 @@
 
 ## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
 
-TODO
-
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
+| TODO                                                       |         |              |
 
 <br>
 
 ## [Modulation](/opcodes/categories#modulation): [LFO](/types/lfo)
 
-TODO
-
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
+| TODO                                                       |         |              |
 
 <br>
 
