@@ -14,4 +14,4 @@ amp_keytrack=3
 
 | Type  | Default | Range        |
 | ---   | ---     | ---          |
-| float | 0 dB    | -12 to 96 dB |
+| float | 0 dB    | -96 to 12 dB |

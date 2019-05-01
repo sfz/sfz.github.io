@@ -1,4 +1,6 @@
-SFZ Video Tutorials
+# SFZ Programming Video Tutorials
+
+Here are a couple of videos to help you get started with SFZ
 
 - [SFZ Tutorial Part 1](https://youtu.be/bTFs524KrGc): Hello World! by [David Viens](https://www.youtube.com/channel/UCpTtSrRlp5wdTR3ngzs731w)
 - [SFZ Tutorial Part 2](https://youtu.be/iWIRegt32o0): Generators, transpose and ADSR by [David Viens](https://www.youtube.com/channel/UCpTtSrRlp5wdTR3ngzs731w)

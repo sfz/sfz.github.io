@@ -9,7 +9,7 @@ This is the main reference point for anyone who wants to create virtual musical
 instruments using the SFZ format. Currently the SFZ 2 opcodes and ARIA extensions
 documented though some require more detail, and SFZ 2 opcodes not supported by
 ARIA still need to be added. There's enough information to make complex SFZ
-insturments already, but we'll continue to add more.
+instruments already, but we'll continue to add more.
 
 To make use of the SFZ format requires three things:
 

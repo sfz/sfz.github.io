@@ -1,9 +1,25 @@
 # TODO
 
-### Opcode errata
+### Missing opcode versions
 
-- amp_keytrack: legacy values -96 to 12 dB, opcode page values -12 to 96.
-- gain_ccN -> gain_onccN?
+Sample Playback:
+
+- direction
+
+Instrument settings:
+
+- note_offset (SFZ2, missing description)
+
+Pitch:
+
+- pitch
+
+Amplifier:
+
+- pan_keycenter
+- pan_keytrack
+- pan_veltrack
+- position_onccN
 
 ### Missing SFZ2 from LS page:
 
@@ -49,36 +65,18 @@ Filters
 - resonance2_smoothccN
 - resonance2_stepccN
 
-- LS opcode extensions
-
-### Missing opcode versions
-
-Sample Playback:
-
-- direction
-
-Instrument settings:
-
-- note_offset (SFZ2, missing description)
-
-Pitch:
-
-- pitch
-
-Amplifier:
-
-- pan_keycenter
-- pan_keytrack
-- pan_veltrack
-- position_onccN
+LS opcode extensions
 
 ### Other tasks
 
 - Add SFZ2 LFOs and EGs.
-- Add more syntax highlight and links to other opcodes.
-- Add tooltips on opcode links with brief opcode description.
-- Add relative descriptions to various *_onccX.
-- Remove category and type pages, too redundant and difficult to maintain.
-- Replace Google CSE with internal search.
+- Check for missing modulation tables in opcode pages.
+- Check for missing datatype and range information tables in opcode pages.
+- Complete envelope_generators and lfo type pages.
+- Handle SFZ2 opcode name aliases.
+- Add specific, non redundant informations to various *_onccX.
 - Add linkto version / category / type in opcode pages.
-- Check modulation tables in opcode pages.
+- Add more syntax highlight and links to external opcode pages.
+- Replace Google CSE with internal search.
+- Create a .yml opcode database and handle it from code to automate pages generation.
+- Add tooltips on opcode links with brief opcode description (from db?).

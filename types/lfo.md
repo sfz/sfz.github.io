@@ -74,16 +74,6 @@ Much like the Flex EG, these newer LFO can target almost any tone-defining param
 
 [lfoN_count](/opcodes/lfoN_count)
 
-#### ARIA extensions
-
-[lfoN_wave2](/opcodes/lfoN_wave2)
-
-[lfoN_offset / lfoN_offset2](/opcodes/lfoN_offset)
-
-[lfoN_ratio / lfoN_ratio2](/opcodes/lfoN_ratio)
-
-[lfoN_scale / lfoN_scale2](/opcodes/lfoN_scale)
-
 #### Assignable LFO Destinations
 
 These destinations are added as a suffix to 'lfoN_'. For example,
