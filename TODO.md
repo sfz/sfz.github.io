@@ -24,7 +24,7 @@ Amplifier:
 ### Missing SFZ2 from LS page:
 
 - loading and wave oscillator category opcodes.
-- delay_samples 
+- delay_samples
 - delay_samples_onccN
 
 Amplifier: not listed in the book, but recognized by Dimension LE:
@@ -32,11 +32,11 @@ Amplifier: not listed in the book, but recognized by Dimension LE:
 - volume_smoothccN
 - volume_stepccN
 - volume_curveccN
-- pan_onccN	Yes
+- pan_onccN
 - pan_smoothccN
 - pan_stepccN
 - pan_curveccN
-- width_smoothccN 
+- width_smoothccN
 - width_stepccN
 - width_curveccN
 
