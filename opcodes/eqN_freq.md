@@ -13,7 +13,7 @@ eq1_freq=80
 eq2_freq=1000
 eq3_freq=4500
 
-eq1_freq_oncc1=80
+eq2_freq_oncc30=2500
 ```
 
 | Type  | Default       | Range         |

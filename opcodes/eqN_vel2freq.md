@@ -10,4 +10,6 @@ Frequency change of the equalizer band with MIDI velocity, in Hertz.
 eq1_vel2freq=1000
 ```
 
-Range is -30000 to 30000.
+| Type  | Default | Range              |
+| ---   | ---     | ---                |
+| float | 0       | -30000 to 30000 Hz |
