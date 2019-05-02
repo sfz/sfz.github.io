@@ -38,20 +38,20 @@ toc:
         - title: Basic / Template
           url: /tutorials/basic_sfz_file
 
-        - title: Cymbal Muting
-          url: /tutorials/cymbal_muting
-
         - title: Drum Basics
           url: /tutorials/drum_basics
 
-        - title: Legato
-          url: /tutorials/legato
-
         - title: Sustained Note Basics
-          url: /tutorials/sustained_note_basics
+          url: /tutorials/sustained_note_basics	  
 
         - title: Vibrato
           url: /tutorials/vibrato
+		  
+        - title: Legato
+          url: /tutorials/legato
+		  		 
+        - title: Cymbal Muting
+          url: /tutorials/cymbal_muting
 
         - title: SFZ 1 Pitch LFO
           url: /tutorials/lfo_sfz1
