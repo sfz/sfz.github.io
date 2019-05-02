@@ -27,7 +27,7 @@ arranged for performance. The goal behind the SFZ format is to provide a free,
 simple, minimalistic and expandable format to arrange, distribute and use audio
 samples with the highest possible quality and the highest possible performance
 flexibility. Soundware, software and hardware developers can create, use and
-distribute the SFZ format files for free, for either free or commercial applications. 
+distribute the SFZ format files for free, for either free or commercial applications.
 
 - Here's a [basic SFZ file](/tutorials/basic_sfz_file) you can copy to start your own
 - Here is the [list of SFZ headers](/headers/)
@@ -35,16 +35,6 @@ distribute the SFZ format files for free, for either free or commercial applicat
 - You can browse the many SFZ 2 opcodes [starting here](/opcodes/sfz2).
 - A few opcodes have been added to [ARIA / Sforzando](/opcodes/aria)
     for more flexibility
-
-### SFZ Programming Video Tutorials
-
-Here are a couple of videos to help you get started with SFZ
-
-- [SFZ Tutorial Part 1](https://youtu.be/bTFs524KrGc):
-  Hello World! by David Viens
-
-- [SFZ Tutorial Part 2](https://youtu.be/iWIRegt32o0):
-  Generators, transpose and ADSR by David Viens
 
 ### Making Instruments
 
@@ -70,12 +60,6 @@ Some more advanced topics
 - [Cymbal muting](/tutorials/cymbal_muting) - using `group`, `off_by`, `off_mode`
   and `polyphony` to make hi-hat and cymbal notes mute previous notes
   in a musically useful way.
-
-### Other Online Resources
-
-- [The SFZ forum](https://www.plogue.com/plgfrms/viewforum.php?f=14) on Plogue.com
-- [The old rgc:audio SFZ file format page](/legacy), online for posterity.
-- [Peter L. Jones' SFZ page and drum mappings](http://www.drealm.info/sfz/).
 
 # Latest News
 
