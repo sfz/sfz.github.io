@@ -80,3 +80,4 @@ LS opcode extensions
 - Replace Google CSE with internal search.
 - Create a .yml opcode database and handle it from code to automate pages generation.
 - Add tooltips on opcode links with brief opcode description (from db?).
+- Improve tables bottom margin and cells borders.
