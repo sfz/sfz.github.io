@@ -24,8 +24,12 @@ delaying regions to emulate more distant microphone positions.
 | ---   | ---     | ---        |
 | float | 0       | 0 to 100 s |
 
-| Modulation Sources |     |             |
-| ---                | --- | ---         |
-| Envelope N         |  X  |             |
-| LFO N              |  X  |             |
-| MIDI CC            |  ✓  | delay_onccN |
+| Modulation Sources
+|             ---
+| Envelope N | X |
+| LFO N      | X |
+| MIDI CC    | ✓ | delay_onccN
+
+<br>
+
+`delay_onccN` uses same type, range and default values.

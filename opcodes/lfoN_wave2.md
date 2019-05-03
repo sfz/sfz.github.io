@@ -10,7 +10,7 @@ normally can use. [lfoN_ratio2](lfoN_ratio) is important for giving the
 two waves different frequencies, and [lfoN_scale2](lfoN_scale) scale
 [lfoN_offset2](lfoN_offset) can optionally be used as well.
 
-Example
+##### Example
 
 ```
 lfo01_wave2=1

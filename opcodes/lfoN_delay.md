@@ -14,6 +14,6 @@ Can be combined with [lfoN_fade](lfoN_fade) in some cases.
 
 | Modulation Sources
 |           ---
-| Envelope | X | egN_freq_lfoX
+| Envelope | ✓ | egN_freq_lfoX
 | LFO      | X |
 | MIDI CC  | ✓ | lfoN_delay_onccX

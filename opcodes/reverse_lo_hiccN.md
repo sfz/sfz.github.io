@@ -7,7 +7,7 @@ Not implemented in ARIA, but an alternative is to use two regions, one with
 direction=reverse then switch region with [loccN / hiccN](lo_hiccN).
 May have been implemented in some Cakewalk products.
 
-# Example
+##### Example
 
 ```
 reverse_locc1=64

@@ -34,6 +34,6 @@ four dynamic layers:
 <region>lovel=96 sample=kick_vl4.wav
 ```
 
-| Type  | Default | Range  |
-| ---   | ---     | ---    |
-| float |         | 0 to 1 |
+| Type  | Default                                           | Range  |
+| ---   | ---                                               | ---    |
+| float | Standard curve (see [amp_veltrack](amp_veltrack)) | 0 to 1 |

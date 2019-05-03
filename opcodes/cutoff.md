@@ -17,8 +17,8 @@ cutoff=4333
 | ---     | ---             | ---                 |
 | float   | filter disabled | 0 to SampleRate / 2 |
 
-|     Modulation Sources      |
-|           ---               |
-| Envelope | ✓ | fileg_depth  |
-| LFO      | ✓ | fillfo_depth |
-| MIDI CC  | ✓ | cutoff_ccN   |
+| Modulation Sources
+|           ---
+| Envelope | ✓ | fileg_depth
+| LFO      | ✓ | fillfo_depth
+| MIDI CC  | ✓ | cutoff_ccN

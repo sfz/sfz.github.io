@@ -14,4 +14,6 @@ bend_stepup=200 // glissando in whole tones
 bend_stepup=1200 //leap an entire octave at a time
 ```
 
-Range is 1 to 1200, default is 1.
+| Type    | Default | Range     |
+| ---     | ---     | ---       |
+| integer | 1       | 1 to 1200 |

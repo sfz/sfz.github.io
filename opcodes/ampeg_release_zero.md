@@ -12,7 +12,7 @@ stage will actually take. Setting this to false will make the release always
 happen during the entire time period specified by [ampeg_release]((eg_type)_release),
 regardless of the current `ampeg_sustain` level.
 
-Examples
+##### Examples
 
 ```
 ampeg_release_zero=false
