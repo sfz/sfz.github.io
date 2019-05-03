@@ -31,6 +31,4 @@ value for the lowest band, and a positive value for the two higher bands.
 | LFO      | ✓ |
 | MIDI CC  | ✓ | eqN_gain_onccX
 
-<br>
-
 `eqN_gain_onccX` uses same type, range and default values.

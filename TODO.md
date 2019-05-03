@@ -69,7 +69,6 @@ LS opcode extensions
 
 ### Other tasks
 
-- Add SFZ2 LFOs and EGs.
 - Check for missing modulation tables in opcode pages.
 - Check for missing datatype and range information tables in opcode pages.
 - Complete envelope_generators and lfo type pages.
@@ -80,4 +79,3 @@ LS opcode extensions
 - Replace Google CSE with internal search.
 - Create a .yml opcode database and handle it from code to automate pages generation.
 - Add tooltips on opcode links with brief opcode description (from db?).
-- Improve tables bottom margin and cells borders.

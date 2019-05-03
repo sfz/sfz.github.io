@@ -30,6 +30,4 @@ delaying regions to emulate more distant microphone positions.
 | LFO N      | X |
 | MIDI CC    | ✓ | delay_onccN
 
-<br>
-
 `delay_onccN` uses same type, range and default values.

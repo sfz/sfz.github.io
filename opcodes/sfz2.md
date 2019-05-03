@@ -16,8 +16,6 @@
 | [reverse_loccN / reverse_hiccN](/opcodes/reverse_lo_hiccN) |    X    |      X       |
 | [waveguide](/opcodes/waveguide)                            |    X    |      X       |
 
-<br>
-
 ## [Instrument settings](/opcodes/categories#instrument-settings)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -29,8 +27,6 @@
 | [label_ccN](/opcodes/label_ccN)                            |    ✓    |      X       |
 | [set_ccN](/opcodes/set_ccN)                                |    ✓    |      ✓       |
 
-<br>
-
 ## [Instrument settings](/opcodes/categories#instrument-settings): Voice Lifecycle
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -39,8 +35,6 @@
 | [note_polyphony](/opcodes/note_polyphony)                  |    ✓    |      X       |
 | [note_selfmask](/opcodes/note_selfmask)                    |    ✓    |      X       |
 | [rt_dead](/opcodes/rt_dead)                                |    ✓    |      X       |
-
-<br>
 
 ## [Region Logic](/opcodes/categories#region-logic): MIDI Conditions
 
@@ -51,16 +45,12 @@
 | [loprog](/opcodes/lo_hiprog)                               |    ✓    |      X       |
 | [hiprog](/opcodes/lo_hiprog)                               |    ✓    |      X       |
 
-<br>
-
 ## [Region Logic](/opcodes/categories#region-logic): Internal Conditions
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
 | [lotimer](/opcodes/lo_hitimer)                             |    X    |      X       |
 | [hitimer](/opcodes/lo_hitimer)                             |    X    |      X       |
-
-<br>
 
 ## [Region Logic](/opcodes/categories#region-logic): Triggers
 
@@ -71,8 +61,6 @@
 | [stop_loccN](/opcodes/stop_lo_hiccN)                       |    ✓    |      X       |
 | [stop_hiccN](/opcodes/stop_lo_hiccN)                       |    ✓    |      X       |
 
-<br>
-
 ## [Performance parameters](/opcodes/categories#performance-parameters): Amplifier
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -81,23 +69,17 @@
 | [phase](/opcodes/phase)                                    |    ✓    |      X       |
 | [width_onccN](/opcodes/width)                              |    ✓    |      X       |
 
-<br>
-
 ## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
 | TODO                                                       |         |              |
 
-<br>
-
 ## [Modulation](/opcodes/categories#modulation): [LFO](/types/lfo)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
 | TODO                                                       |         |              |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Pitch
 
@@ -106,8 +88,6 @@
 | [bend_smooth](/opcodes/bend_smooth)                        |    ✓    |      X       |
 | [bend_stepup](/opcodes/bend_stepup)                        |    ✓    |      X       |
 | [bend_stepdown](/opcodes/bend_stepdown)                    |    ✓    |      X       |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Filters
 
@@ -119,8 +99,6 @@
 | [resonance2](/opcodes/resonance2)                          |    ✓    |      X       |
 | [resonance2_onccN](/opcodes/resonance2)                    |    ✓    |      X       |
 | [fil2_type](/opcodes/fil2_type)|[Partial](fil2_type#players-support) | [Partial](fil2_type#players-support)|
-
-<br>
 
 ## [Curves](/headers/curve)
 

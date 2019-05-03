@@ -21,8 +21,6 @@
 | [sync_beats](sync_beats)                                   |   ✓   |      X       |
 | [sync_offset](sync_offset)                                 |   ✓   |      X       |
 
-<br>
-
 ## [Instrument settings](/opcodes/categories#instrument-settings): Voice Lifecycle
 
 | Opcode                                                     | Aria  | LinuxSampler |
@@ -31,8 +29,6 @@
 | [off_by](off_by)                                           |   ✓   |      ✓       |
 | [off_mode](off_mode)                                       |   ✓   |      ✓       |
 | [output](output)                                           |   X   |      X       |
-
-<br>
 
 ## [Region Logic](/opcodes/categories#region-logic): Key Mapping
 
@@ -43,8 +39,6 @@
 | [hikey](lo_hikey)                                          |   ✓   |      ✓       |
 | [lovel](lo_hivel)                                          |   ✓   |      ✓       |
 | [hivel](lo_hivel)                                          |   ✓   |      ✓       |
-
-<br>
 
 ## [Region Logic](/opcodes/categories#region-logic): MIDI Conditions
 
@@ -64,8 +58,6 @@
 | [sw_previous](sw_previous)                                 |   ✓   |      ✓       |
 | [sw_vel](sw_vel)                                           |   ✓   |      ✓       |
 
-<br>
-
 ## [Region Logic](/opcodes/categories#region-logic): Internal Conditions
 
 | Opcode                                                     | Aria  | LinuxSampler |
@@ -81,8 +73,6 @@
 | [seq_length](seq_length)                                   |   ✓   |      ✓       |
 | [seq_position](seq_position)                               |   ✓   |      ✓       |
 
-<br>
-
 ## [Region Logic](/opcodes/categories#region-logic): Triggers
 
 | Opcode                                                     | Aria  | LinuxSampler |
@@ -90,8 +80,6 @@
 | [trigger](trigger)                                         |   ✓   |      ✓       |
 | [on_loccN](on_lo_hiccN)                                    |   ✓   |      ✓       |
 | [on_hiccN](on_lo_hiccN)                                    |   ✓   |      ✓       |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Amplifier
 
@@ -123,8 +111,6 @@
 | [xfin_hivel](xfin_lo_hivel)                                |   ✓   |      ✓       |
 | [xfout_lovel](xfout_lo_hivel)                              |   ✓   |      ✓       |
 | [xfout_hivel](xfout_lo_hivel)                              |   ✓   |      ✓       |
-
-<br>
 
 ## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
 
@@ -179,8 +165,6 @@
 | [fileg_vel2release](/types/envelope_generators#sfz-1-egs)  |   ✓   |      ✓       |
 | [fileg_vel2depth](/types/envelope_generators#sfz-1-egs)    |   ✓   |      X       |
 
-<br>
-
 ## [Modulation](/opcodes/categories#modulation): [LFO](/types/lfo)
 
 | Opcode                                                     | Aria  | LinuxSampler |
@@ -216,8 +200,6 @@
 | [fillfo_freqchanaft](/types/lfo#sfz-1-lfos)                |   ✓   |      ✓       |
 | [fillfo_freqpolyaft](/types/lfo#sfz-1-lfos)                |   X   |      X       |
 
-<br>
-
 ## [Performance parameters](/opcodes/categories#performance-parameters): Pitch
 
 | Opcode                                                     | Aria  | LinuxSampler |
@@ -231,8 +213,6 @@
 | [pitch_veltrack](pitch_veltrack)                           |   ✓   |      ✓       |
 | [transpose](transpose)                                     |   ✓   |      ✓       |
 | [tune](tune)                                               |   ✓   |      ✓       |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Filters
 
@@ -248,8 +228,6 @@
 | [fil_type / filtype](fil_type)                             |   ✓   |      ✓       |
 | [fil_veltrack](fil_veltrack)                               |   ✓   |      ✓       |
 | [resonance](resonance)                                     |   ✓   |      ✓       |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): EQ
 
@@ -279,8 +257,6 @@
 | [eq1_vel2gain](eqN_vel2gain)                               |   ✓   |      ✓       |
 | [eq2_vel2gain](eqN_vel2gain)                               |   ✓   |      ✓       |
 | [eq3_vel2gain](eqN_vel2gain)                               |   ✓   |      ✓       |
-
-<br>
 
 ## Effects
 

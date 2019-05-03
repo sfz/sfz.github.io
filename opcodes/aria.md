@@ -21,8 +21,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [sw_note_offset](sw_note_offset)                           |    ✓    |      X       |
 | [sw_octave_offset](sw_octave_offset)                       |    ✓    |      X       |
 
-<br>
-
 ## [Instrument settings](/opcodes/categories#instrument-settings): Voice Lifecycle
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -32,8 +30,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [off_shape](/opcodes/off_shape)                            |    ✓    |      X       |
 | [off_time](/opcodes/off_time)                              |    ✓    |      X       |
 | [polyphony_group](/opcodes/polyphony_group)                |    ✓    |      X       |
-
-<br>
 
 ## [Region Logic](/opcodes/categories#region-logic): MIDI Conditions
 
@@ -49,8 +45,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [varNN_mod](/opcodes/varNN_mod)                            |    ✓    |      X       |
 | [varNN_onccX](/opcodes/varNN_onccX)                        |    ✓    |      X       |
 | [varNN_target](/opcodes/varNN_target)                      |    ✓    |      X       |
-
-<br>
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Amplifier
 
@@ -69,8 +63,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [group_volume](group_volume)                               |    ✓    |      X       |
 | [volume_onccN](/opcodes/volume_onccN)                      |    ✓    |      X       |
 
-<br>
-
 ## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -82,8 +74,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [ampeg_release_zero](/opcodes/ampeg_release_zero)          |    ✓    |      X       |
 | [egN_shapeX](/opcodes/egN_shapeX)                          |    ✓    |      X       |
 
-<br>
-
 ## [Modulation](/opcodes/categories#modulation): [LFO](/types/lfo)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
@@ -93,15 +83,11 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [lfoN_scale/lfoN_scale2](/opcodes/lfoN_scale)              |    ✓    |      X       |
 | [lfoN_wave2](/opcodes/lfoN_wave2)                          |    ✓    |      X       |
 
-<br>
-
 ## [Curves](/headers/curve)
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
 | [curve_index](/opcodes/curve_index)                        |    ✓    |      X       |
-
-<br>
 
 ## Effects
 
@@ -109,7 +95,5 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | ---                                                        | :---: |    :---:     |
 | [param_offset](/opcodes/param_offset)                      |   ✓   |      X       |
 | [vendor_specific](/opcodes/vendor_specific)                |   ✓   |      X       |
-
-<br>
 
 Source: [ARIA Engine](https://www.plogue.com/plgfrms/viewtopic.php?f=14&t=4389&sid=1499dd5d481dc9c02a51c57da3b11364)

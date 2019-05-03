@@ -28,8 +28,6 @@ eq2_freq_oncc30=2500
 | LFO      | ✓ |
 | MIDI CC  | ✓ | eqN_freq_onccX
 
-<br>
-
 `eqN_freq_onccX` uses the following values:
 
 | Type  | Default | Range              |

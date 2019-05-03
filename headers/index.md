@@ -27,6 +27,4 @@ shaping envelopes, parameter response etc.
 | <[master](/headers/master)>   |  ARIA   |   ✓   |      ✓       |
 | <[midi](/headers/midi)>       |  ARIA   |   ✓   |      X       |
 
-<br>
-
 See also [ARIA Extensions](/opcodes/aria).

@@ -14,8 +14,6 @@ files. Some of them are:
 | [Zampler](https://www.zampler.de/)                      |   X   |    ✓    |    ✓    |
 | [BassMIDI VSTi](http://falcosoft.hu/softwares.html)     |   X   |    X    |    ✓    |
 
-<br>
-
 ##### Commercial software
 
 | Name                                                                           | Linux | MacOS X | Windows |
@@ -23,8 +21,6 @@ files. Some of them are:
 | [Renoise (Redux)](https://www.renoise.com/)                                    |   ✓   |    ✓    |    ✓    |
 | [UVI Falcon](https://www.uvi.net/)                                             |   X   |    ✓    |    ✓    |
 | [Wusik Station V9, Wusik 9009, Wusik One, Wusik EVE V5](https://www.wusik.com/)|   X   |    ✓    |    ✓    |
-
-<br>
 
 ##### Available for OEM use
 
