@@ -11,8 +11,15 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 
 | Opcode                                                     |  Aria   | LinuxSampler |
 | ---                                                        |  :---:  |    :---:     |
+| [#include](/directives/include)                            |    ✓    |      ✓       |
 | [hint_*](/opcodes/hint_)                                   |    ✓    |      X       |
 | [set_hdccN](/opcodes/set_hdccN)                            |    ✓    |      X       |
+| [sostenuto_lo](/opcodes/sostenuto_lo)                      |    ✓    |      X       |
+| [sostenuto_cc](/opcodes/sostenuto_cc)                      |    ✓    |      X       |
+| [sustain_lo](/opcodes/sustain_lo)                          |    ✓    |      X       |
+| [sustain_cc](/opcodes/sustain_cc)                          |    ✓    |      X       |
+| [sw_note_offset](sw_note_offset)                           |    ✓    |      X       |
+| [sw_octave_offset](sw_octave_offset)                       |    ✓    |      X       |
 
 <br>
 
@@ -34,10 +41,6 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | ---                                                        |  :---:  |    :---:     |
 | [lohdccN](/opcodes/lo_hihdccN)                             |    ✓    |      X       |
 | [hihdccN](/opcodes/lo_hihdccN)                             |    ✓    |      X       |
-| [sustain_cc](/opcodes/sustain_cc)                          |    ✓    |      X       |
-| [sostenuto_cc](/opcodes/sostenuto_cc)                      |    ✓    |      X       |
-| [sustain_lo](/opcodes/sustain_lo)                          |    ✓    |      X       |
-| [sostenuto_lo](/opcodes/sostenuto_lo)                      |    ✓    |      X       |
 | [sw_default](/opcodes/sw_default_label)                    |    ✓    |      X       |
 | [sw_label](/opcodes/sw_default_label)                      |    ✓    |      X       |
 | [sw_lolast](/opcodes/sw_lo_hilast)                         |    ✓    |      X       |
@@ -61,6 +64,9 @@ organizing multiple SFZ instruments and configuring graphical user interfaces.
 | [master_amplitude](/opcodes/master_amplitude)              |    ✓    |      X       |
 | [group_amplitude](/opcodes/group_amplitude)                |    ✓    |      X       |
 | [pan_law](/opcodes/pan_law)                                |    ✓    |      X       |
+| [global_volume](global_volume)                             |    ✓    |      X       |
+| [master_volume](master_volume)                             |    ✓    |      X       |
+| [group_volume](group_volume)                               |    ✓    |      X       |
 | [volume_onccN](/opcodes/volume_onccN)                      |    ✓    |      X       |
 
 <br>

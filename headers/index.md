@@ -20,15 +20,13 @@ shaping envelopes, parameter response etc.
 | :---                          |  :---:  | :---: |    :---:     |
 | <[region](/headers/region)>   | SFZ v1  |   ✓   |      ✓       |
 | <[group](/headers/group)>     | SFZ v1  |   ✓   |      ✓       |
-| <[global](/headers/global)>   | SFZ v2  |   ✓   |      ✓       |
 | <[control](/headers/control)> | SFZ v2  |   ✓   |      ✓       |
+| <[global](/headers/global)>   | SFZ v2  |   ✓   |      ✓       |
 | <[curve](/headers/curve)>     | SFZ v2  |   ✓   |      ✓       |
 | <[effect](/headers/effect)>   | SFZ v2  |   ✓   |      X       |
-| <[master](/headers/master)>   | ARIA    |   ✓   |      ✓       |     
+| <[master](/headers/master)>   |  ARIA   |   ✓   |      ✓       |
+| <[midi](/headers/midi)>       |  ARIA   |   ✓   |      X       |
 
-Also, though they are not SFZ headers, there are two other important
-organizational elements of SFZ.
+<br>
 
-\#[include](/directives/include)
-
-[ARIA XML instrument bank](/extensions/aria/xml_instrument_bank)
+See also [ARIA Extensions](/opcodes/aria).

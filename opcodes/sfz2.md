@@ -24,7 +24,7 @@
 | ---                                                        |  :---:  |    :---:     |
 | [#define](/directives/define)                              |    ✓    |      ✓       |
 | [default_path](/opcodes/default_path)                      |    ✓    |      ✓       |
-| note_offset                                                |    ✓    |      ✓       |
+| [note_offset](note_offset)                                 |    ✓    |      ✓       |
 | [octave_offset](/opcodes/octave_offset)                    |    ✓    |      ✓       |
 | [label_ccN](/opcodes/label_ccN)                            |    ✓    |      X       |
 | [set_ccN](/opcodes/set_ccN)                                |    ✓    |      ✓       |
