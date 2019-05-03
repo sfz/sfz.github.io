@@ -29,7 +29,7 @@ files. Some of them are:
 ##### No longer available
 
 - Cakewalk sfz
-- Alchemy (Camel Audio was acquired by Apple, no longer supporting SFZ.)
+- Alchemy (Camel Audio was acquired by Apple, and the current incarnation of Alchemy no longer supports SFZ.)
 
 Sforzando currently offers the most complete SFZ standard support, including
 [ARIA extensions](/opcodes/aria), but SFZ files which only use the
