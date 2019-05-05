@@ -1,7 +1,6 @@
 ---
+title: xfout_lovel / xfout_hivel
 ---
-# xfout_lovel / xfout_hivel
-
 Fade out control, based on velocity.
 
 xfout_lokey and xfout_hikey define the fade-out velocity range for the region.

@@ -1,7 +1,6 @@
 ---
+title: (eg type)_start
 ---
-# (eg type)_start
-
 Envelope start level, in percentage.
 
 ##### Examples

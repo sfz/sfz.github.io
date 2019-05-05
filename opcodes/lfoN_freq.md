@@ -1,7 +1,6 @@
 ---
+title: lfoN_freq
 ---
-# lfoN_freq
-
 The base frequency of LFO number N, in Hertz. Can be modulated by MIDI CC,
 and the modulation can be smoothed so that rapid controller changes are applied
 with some "inertia".

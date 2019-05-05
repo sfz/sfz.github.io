@@ -1,7 +1,6 @@
 ---
+title: gain_onccN
 ---
-# gain_onccN
-
 Gain applied on MIDI control N, in decibels.
 
 ##### Examples

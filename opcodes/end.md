@@ -1,7 +1,6 @@
 ---
+title: end
 ---
-# end
-
 The endpoint of the sample, in sample units.
 
 The player will reproduce the whole sample if end is not specified - in other

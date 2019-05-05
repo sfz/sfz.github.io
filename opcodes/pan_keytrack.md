@@ -1,7 +1,6 @@
 ---
+title: pan_keytrack
 ---
-# pan_keytrack
-
 The amount by which the panning of a note is shifted with each key.
 Positive values mean higher notes are panned more to the right, negative means
 higher notes are panned more to the left.

@@ -1,7 +1,6 @@
 ---
+title: on_loccN / on_hiccN
 ---
-# on_loccN / on_hiccN
-
 Sample trigger on MIDI continuous control N. If a MIDI control message with a
 value between `on_loccN` and `on_hiccN` is received, the region will play.
 This does not involve playing any MIDI notes, making it an unusual way to

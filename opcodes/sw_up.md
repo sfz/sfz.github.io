@@ -1,7 +1,6 @@
 ---
+title: sw_up
 ---
-# sw_up
-
 Enables the region to play if the key equal to `sw_up` value is not depressed.
 
 Key has to be in the range specified by `sw_lokey` and `sw_hikey`.

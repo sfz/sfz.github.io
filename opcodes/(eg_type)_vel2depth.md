@@ -1,7 +1,6 @@
 ---
+title: (eg type)_vel2release
 ---
-# (eg type)_vel2release
-
 Velocity effect on EG depth, in cents for pitch or filter cutoff.
 
 ##### Examples

@@ -1,7 +1,6 @@
 ---
+title: loop_mode
 ---
-# loop_mode
-
 If loop_mode is not specified, each sample will play according to its predefined
 loop mode according to the loop metadata in the audio file. That is, the player
 will play the sample looped using the first defined loop, if available. If no

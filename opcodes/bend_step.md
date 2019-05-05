@@ -1,7 +1,6 @@
 ---
+title: bend_step
 ---
-# bend_step
-
 Pitch bend step, in cents.
 
 ##### Examples

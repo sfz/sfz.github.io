@@ -1,7 +1,6 @@
 ---
+title: lochanaft / hichanaft
 ---
-# lochanaft / hichanaft
-
 Defines the range of last Channel Aftertouch message required for the region to play.
 
 ##### Examples

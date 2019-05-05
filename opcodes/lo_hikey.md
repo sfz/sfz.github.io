@@ -1,7 +1,6 @@
 ---
+title: lokey / hikey
 ---
-# lokey / hikey
-
 `lokey` and `hikey` determine the low and high boundaries of a certain
 [region](/headers/region). They are used to set the range of notes which are
 used to play the region. When a region only covers one note, it is generally

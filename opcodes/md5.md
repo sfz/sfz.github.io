@@ -1,7 +1,6 @@
 ---
+title: md5
 ---
-# md5
-
 The MD5 hash for an encoded sample. It will be a 128-bit key in hex.
 
 ##### Example

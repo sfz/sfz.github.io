@@ -1,7 +1,6 @@
 ---
+title: (eg type)_decay
 ---
-# (eg type)_decay
-
 EG decay time, in seconds.
 
 ##### Examples

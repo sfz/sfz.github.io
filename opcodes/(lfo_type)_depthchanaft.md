@@ -1,7 +1,6 @@
 ---
+title: (lfo type)_depthchanaft
 ---
-# (lfo type)_depthchanaft
-
 LFO depth when channel aftertouch MIDI messages are received.
 In decibels for amplitude, in cents for pitch and filter cutoff.
 

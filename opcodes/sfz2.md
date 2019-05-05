@@ -1,7 +1,6 @@
 ---
+title: SFZ v2 Opcodes
 ---
-# SFZ v2 Opcodes
-
 ## [Sound source](/opcodes/categories#sound-source): Sample Playback
 
 | Opcode                                                     |  Aria   | LinuxSampler |

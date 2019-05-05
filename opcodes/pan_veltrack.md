@@ -1,7 +1,6 @@
 ---
+title: pan_veltrack
 ---
-# pan_veltrack
-
 The effect of note velocity on panning. With positive values, higher-velocity
 notes will be panned more to the right, with negative values more to the left.
 

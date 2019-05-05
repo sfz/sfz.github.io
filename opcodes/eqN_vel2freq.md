@@ -1,7 +1,6 @@
 ---
+title: eqN_vel2freq
 ---
-# eqN_vel2freq
-
 Frequency change of the equalizer band with MIDI velocity, in Hertz.
 
 ##### Examples

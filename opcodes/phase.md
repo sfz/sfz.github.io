@@ -1,7 +1,6 @@
 ---
+title: phase
 ---
-# phase
-
 If invert is set, the region is played with inverted phase.
 
 ##### Example

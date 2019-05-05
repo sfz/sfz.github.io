@@ -1,7 +1,6 @@
 ---
+title: bend_down
 ---
-# bend_down
-
 Pitch bend range when Bend Wheel or Joystick is moved down, in cents. If 
 `bend_up` is set to a positive value, then moving the pitch wheel down will
 cause the pitch to move up.

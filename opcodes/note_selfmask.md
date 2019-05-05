@@ -1,7 +1,6 @@
 ---
+title: note_selfmask
 ---
-# note_selfmask
-
 Controls note-stealing behavior for a single pitch, when using [note_polyphony](note_polyphony).
 Allowed values are on and off, default is on.
 

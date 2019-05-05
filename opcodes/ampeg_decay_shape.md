@@ -1,7 +1,6 @@
 ---
+title: ampeg_decay_shape
 ---
-# ampeg_decay_shape
-
 Specifies the curvature of decay stage of the amplifier envelope.
 
 0 is linear, positive values are slower curves (that means the envelope will

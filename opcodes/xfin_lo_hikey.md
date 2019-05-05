@@ -1,7 +1,6 @@
 ---
+title: xfin_lokey / xfin_hikey
 ---
-# xfin_lokey / xfin_hikey
-
 Fade in control based on MIDI note (keyboard position).
 
 xfin_lokey and xfin_hikey define the fade-in keyboard zone for the region.

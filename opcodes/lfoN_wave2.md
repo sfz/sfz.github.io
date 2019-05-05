@@ -1,7 +1,6 @@
 ---
+title: lfoN_wave2
 ---
-# lfoN_wave2
-
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs. Up to 8 waveforms can be used in
 one LFO. This opcode is used to select the waveform type used for the second

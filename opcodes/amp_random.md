@@ -1,7 +1,6 @@
 ---
+title: amp_random
 ---
-# amp_random
-
 Random volume for the region, in decibels.
 
 ##### Examples

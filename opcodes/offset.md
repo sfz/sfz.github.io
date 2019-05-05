@@ -1,7 +1,6 @@
 ---
+title: offset
 ---
-# offset
-
 The offset used to play the sample, in sample units.
 
 The player will reproduce samples starting with the very first sample in the file,

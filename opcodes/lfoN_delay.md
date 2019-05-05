@@ -1,7 +1,6 @@
 ---
+title: lfoN_delay
 ---
-# lfoN_delay
-
 Onset delay for LFO number N, in seconds.
 Can be modulated by MIDI CC. Default is 0.
 

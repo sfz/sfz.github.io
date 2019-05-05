@@ -1,7 +1,6 @@
 ---
+title: rt_decay
 ---
-# rt_decay
-
 Applies only to regions that triggered through [trigger](trigger)=release.
 The volume decrease (in db) per seconds after the note has been attacked.
 

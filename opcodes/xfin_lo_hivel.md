@@ -1,7 +1,6 @@
 ---
+title: xfin_lovel / xfin_hivel
 ---
-# xfin_lovel / xfin_hivel
-
 Fade in control based on velocity.
 
 xfin_lovel and xfin_hivel define the fade-in velocity range for the region.

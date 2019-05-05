@@ -1,7 +1,6 @@
 ---
+title: lorand / hirand
 ---
-# lorand / hirand
-
 Random values. The player will generate a new random number on every note-on event,
 in the range 0 to 1. The region will play if the random number is equal to or
 higher than `lorand`, and lower than `hirand`.

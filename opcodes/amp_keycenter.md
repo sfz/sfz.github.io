@@ -1,7 +1,6 @@
 ---
+title: amp_keycenter
 ---
-# amp_keycenter
-
 Center key for amplifier keyboard tracking. In this key, the amplifier keyboard
 tracking will have no effect.
 

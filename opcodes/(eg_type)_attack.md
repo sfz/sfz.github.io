@@ -1,7 +1,6 @@
 ---
+title: (eg type)_attack
 ---
-# (eg type)_attack
-
 EG attack time, in seconds.
 
 ##### Examples

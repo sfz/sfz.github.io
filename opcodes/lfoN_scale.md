@@ -1,7 +1,6 @@
 ---
+title: lfoN_scale
 ---
-# lfoN_scale
-
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
 Up to 8 waveforms can be used in one LFO.

@@ -1,7 +1,6 @@
 ---
+title: fil_keytrack
 ---
-# fil_keytrack
-
 Filter keyboard tracking (change on cutoff for each key) in cents. A value of 100 means 100 cents per half-step.
 
 ##### Examples

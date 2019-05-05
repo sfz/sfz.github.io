@@ -1,7 +1,6 @@
 ---
+title: hint_*
 ---
-# hint_*
-
 ARIA supports specific opcodes in <[control](/headers/control)>
 which start with "hint".
 These should be ignored by any other SFZ parser. its a "hint" to the engine.

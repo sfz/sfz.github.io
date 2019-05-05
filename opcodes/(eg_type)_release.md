@@ -1,7 +1,6 @@
 ---
+title: (eg type)_release
 ---
-# (eg type)_release
-
 EG release time (after note release), in seconds.
 
 ##### Examples

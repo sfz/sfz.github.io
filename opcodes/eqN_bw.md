@@ -1,7 +1,6 @@
 ---
+title: eqN_bw
 ---
-# eqN_bw
-
 Bandwidth of the equalizer band, in octaves.
 
 In SFZ v2 `eqN_bw_onccX` is an alias for the SFZ v1 `eqN_bwccX`.

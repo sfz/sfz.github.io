@@ -1,7 +1,6 @@
 ---
+title: Categories
 ---
-# Categories
-
 ## Instruments Settings
 
 Instruments Settings are opcodes used under the <[control](/headers/control)>

@@ -1,7 +1,6 @@
 ---
+title: eqN_freq
 ---
-# eqN_freq
-
 Frequency of the equalizer band, in Hertz.
 
 In SFZ v2 `eqN_freq_onccX` is an alias for the SFZ v1 `eqN_freqccX`.

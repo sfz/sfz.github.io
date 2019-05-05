@@ -1,7 +1,6 @@
 ---
+title: offset_random
 ---
-# offset_random
-
 Random offset added to the region offset, in sample units. In many cases, will
 need to be used with a small [ampeg_attack]((eg_type)_attack) value to avoid clicks
 caused by the region playing starting with a point in the sample file where the

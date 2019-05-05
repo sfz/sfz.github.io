@@ -1,7 +1,6 @@
 ---
+title: param_offset
 ---
-# param_offset
-
 Adds a number to the parameter numbers of built-in or vendor-specific effects.
 Multiples of 100 seem most convenient, because with param_offset=300 that would
 put the first parameter on 300, second on 301, third on 302 and so on, but other

@@ -1,7 +1,6 @@
 ---
+title: sw_down
 ---
-# sw_down
-
 Enables the region to play if the key equal to sw_down value is depressed.
 Key has to be in the range specified by `sw_lokey` and `sw_hikey`.
 

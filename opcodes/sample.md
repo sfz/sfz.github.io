@@ -1,7 +1,6 @@
 ---
+title: sample
 ---
-# sample
-
 Possibly the most important opcode, this is the one that tells the sampler which
 sample file to actually play. This should include a relative file path from the
 folder where the SFZ file is.

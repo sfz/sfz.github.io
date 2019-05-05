@@ -1,7 +1,6 @@
 ---
+title: xfout_loccN / xfout_hiccN
 ---
-# xfout_loccN / xfout_hiccN
-
 Fade out control based on MIDI CC.
 
 xfout_loccN and xfout_hiccN set the range of values in the MIDI continuous

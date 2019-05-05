@@ -1,7 +1,6 @@
 ---
+title: rt_dead
 ---
-# rt_dead
-
 Controls whether a release sample should play if its sustain sample has ended,
 or not. Allowed values are on and off, default is off - so by default, release
 samples do not play if their sustain samples have expired.

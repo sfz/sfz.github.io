@@ -1,7 +1,6 @@
 ---
+title: cutoff_polyaft
 ---
-# cutoff_polyaft
-
 The variation in the cutoff frequency when
 MIDI polyphonic aftertouch messages are received, in cents.
 

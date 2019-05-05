@@ -1,7 +1,6 @@
 ---
+title: cutoff_chanaft
 ---
-# cutoff_chanaft
-
 The variation in the cutoff frequency when
 MIDI channel aftertouch messages are received, in cents.
 

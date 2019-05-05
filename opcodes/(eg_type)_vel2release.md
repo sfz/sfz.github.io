@@ -1,7 +1,6 @@
 ---
+title: (eg type)_vel2release
 ---
-# (eg type)_vel2release
-
 Velocity effect on EG release time, in seconds.
 
 ##### Examples

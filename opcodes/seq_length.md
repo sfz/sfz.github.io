@@ -1,7 +1,6 @@
 ---
+title: seq_length
 ---
-# seq_length
-
 Sequence length, used together with [seq_position](/opcodes/seq_position)
 to use samples as round robins. The player will keep an internal counter
 creating a consecutive note-on sequence for each region, starting at 1 and

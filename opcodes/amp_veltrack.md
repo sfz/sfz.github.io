@@ -1,7 +1,6 @@
 ---
+title: amp_veltrack
 ---
-# amp_veltrack
-
 Amplifier velocity tracking, represents how much the amplitude changes with
 incoming note velocity.
 

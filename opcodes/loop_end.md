@@ -1,7 +1,6 @@
 ---
+title: loop_end
 ---
-# loop_end
-
 The loop end point, in samples.
 
 If loop_end is not specified and the sample has a loop defined, the SFZ player

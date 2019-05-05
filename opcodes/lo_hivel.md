@@ -1,7 +1,6 @@
 ---
+title: lovel / hivel
 ---
-# lovel / hivel
-
 If a note with velocity value equal to or higher than `lovel` AND equal to or lower
 than `hivel` is played, the region will play. The range is 0 to 127. Default is
 `lovel`=0 and `hivel`=127 - this means the region plays across the entire

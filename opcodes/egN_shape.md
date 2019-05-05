@@ -1,7 +1,6 @@
 ---
+title: egN_shape
 ---
-# egN_shape
-
 Envelope shape. 0 is linear. Positive values are convex or "slow".
 Negative values are concave or "fast". Upon approaching -10 or 10,
 increased values make little difference, as at that point its practically

@@ -1,7 +1,6 @@
 ---
+title: delay
 ---
-# delay
-
 Region `delay` time, in seconds. If a `delay` value is specified, the region
 playback will be postponed for the specified time. If the region receives a
 note-off message before `delay` time, the region won't play.

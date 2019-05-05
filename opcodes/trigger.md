@@ -1,7 +1,6 @@
 ---
+title: trigger
 ---
-# trigger
-
 Sets the trigger which will be used for the sample to play. Values can be:
 
 - ***attack*** : (default): Region will play on note-on.

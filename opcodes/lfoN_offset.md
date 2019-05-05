@@ -1,7 +1,6 @@
 ---
+title: lfoN_offset
 ---
-# lfoN_offset
-
 Offset for LFO number N, can also be used with sub waveforms with lfoN_offset2,
 lfoN_offset3 etc.
 

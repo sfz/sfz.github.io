@@ -1,7 +1,6 @@
 ---
+title: lopolyaft / hipolyaft
 ---
-# lopolyaft / hipolyaft
-
 Defines the range of last Polyphonic Aftertouch message required for the region
 to play. The incoming note information in the Polyphonic Aftertouch message is
 not relevant.

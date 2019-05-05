@@ -1,7 +1,6 @@
 ---
+title: sw_previous
 ---
-# sw_previous
-
 Previous note value. The region will play if last note-on message was equal to
 sw_previous value.
 
