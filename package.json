@@ -31,12 +31,16 @@
 		"autoprefixer": "^8.2.0",
 		"bootstrap": "^4.0.0",
 		"clean-css-cli": "^4.1.11",
-		"jquery": "^3.3.1",
+		"jquery": "^3.4.1",
 		"node-sass": "^4.8.3",
 		"npm-run-all": "^4.1.2",
 		"popper.js": "^1.14.1",
-		"postcss-cli": "^5.0.0",
+		"globby": "^9.0.0",
+		"postcss-cli": "^6.1.2",
 		"sass": "^1.14.3",
 		"uglify-js": "^3.3.16"
+	},
+	"devDependencies": {
+		"postcss-loader": "^3.0.0"
 	}
 }
