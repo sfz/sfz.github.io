@@ -5,9 +5,12 @@
 Sets the trigger which will be used for the sample to play. Values can be:
 
 - ***attack*** : (default): Region will play on note-on.
-- ***release***: Region will play on note-off. The velocity used to play the
+- ***release***: Region will play on note-off or sustain pedal off. The velocity
+                used to play the note-off sample is the velocity value of the
+				corresponding (previous) note-on message.
+- ***release_key***: Region will play on note-off. The velocity used to play the
                 note-off sample is the velocity value of the corresponding
-                (previous) note-on message.
+                (previous) note-on message. Ignores sustain pedal.
 - ***first***: Region will play on note-on, but if there's no other note going on
                 (staccato, or first note in a legato phrase).
 - ***legato***: Region will play on note-on, but only if there's a note going on
