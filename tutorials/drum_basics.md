@@ -1,7 +1,6 @@
 ---
+title: Drum basics
 ---
-# Drum basics
-
 SFZ has a lot of opcodes. No instrument uses all of them, though, and even highly
 complicated instruments with thousands of samples will usually only use a dozen
 or two different opcodes.

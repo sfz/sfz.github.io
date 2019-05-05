@@ -1,7 +1,6 @@
 ---
+title: ‹curve›
 ---
-# ‹curve›
-
 A header for defining curves for MIDI CC controls. One curve header is used to
 define each curve. The values for various points along the curve can then be set,
 from v000 to v127. The default is v000=0 and v127=1. Any points along the curve

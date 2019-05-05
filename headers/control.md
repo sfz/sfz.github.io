@@ -1,7 +1,6 @@
 ---
+title: ‹control›
 ---
-# ‹control›
-
 SFZ 2 header which should come before <[global](global)> in the file,
 and can contain the following special directives,
 which should not be used under other headers:

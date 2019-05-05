@@ -1,7 +1,6 @@
 ---
+title: SFZ Creation Tools
 ---
-# SFZ Creation Tools
-
 Although SFZ files can be created with any text editor, and some users have also
 created SFZ with spreadsheets, there are some dedicated tools which can make
 mapping large amounts of samples easier. As SFZ instruments can quickly grow to

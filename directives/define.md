@@ -1,7 +1,6 @@
 ---
+title: #define
 ---
-# #define
-
 \#define creates a variable and gives it a value. Variable names start with
 the $ character. This opcode is used under the <[control](/headers/control)> header,
 and the defined variables can then be used anywhere else in the file.

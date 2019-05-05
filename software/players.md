@@ -1,7 +1,6 @@
 ---
+title: SFZ Players
 ---
-# SFZ Players
-
 There are several SFZ players, which are used to play samples as defined in SFZ
 files. Some of them are:
 

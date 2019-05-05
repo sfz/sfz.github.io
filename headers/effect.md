@@ -1,7 +1,6 @@
 ---
+title: ‹effect›
 ---
-# ‹effect›
-
 SFZ header for effects controls. This will vary across SFZ players, but in the
 PC version of ARIA, the MDA effects are bundled. That means that under the
 effect header, any of these effect types can be set.

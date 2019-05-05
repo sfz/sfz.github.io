@@ -1,7 +1,6 @@
 ---
+title: Extended MIDI CCs
 ---
-# Extended MIDI CCs
-
 In the MIDI specification, MIDI continous controls can have numbers from 1 to 127.
 
 SFZ 2 and ARIA add some special CCs numbered 128 and above.
