@@ -69,7 +69,6 @@ LS opcode extensions
 
 ### Other tasks
 
-- Add release_key to trigger opcode description, and explain the difference between release and release_key.
 - Check for missing modulation tables in opcode pages.
 - Check for missing datatype and range information tables in opcode pages.
 - Complete envelope_generators and lfo type pages.
