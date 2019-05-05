@@ -1,7 +1,6 @@
 ---
+title: (lfo type)_freqpolyaft
 ---
-# (lfo type)_freqpolyaft
-
 LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz.
 Can be negative, and according to the SFZ spec the allowed range is -200 to 200,
 which could be used to push LFO frequencies into audio frequency range,

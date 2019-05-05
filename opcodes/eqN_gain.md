@@ -1,7 +1,6 @@
 ---
+title: eqN_gain
 ---
-# eqN_gain
-
 Gain of the equalizer band, in decibels.
 
 In SFZ v2 `eqN_gain_onccX` is an alias for the SFZ v1 `eqN_gainccX`.

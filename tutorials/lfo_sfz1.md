@@ -1,7 +1,6 @@
 ---
+title: SFZ 1 Pitch LFO Example
 ---
-# SFZ 1 Pitch LFO Example
-
 Just copy the following in your preferred text editor (we suggest [Notepad++](https://notepad-plus-plus.org/)).
 Add to your own SFZ to spice up your instruments
 

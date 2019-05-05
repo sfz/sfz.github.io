@@ -1,7 +1,6 @@
 ---
+title: (lfo type)_freq
 ---
-# (lfo type)_freq
-
 LFO frequency, in hertz.
 
 ##### Examples

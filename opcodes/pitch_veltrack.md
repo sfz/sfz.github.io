@@ -1,7 +1,6 @@
 ---
+title: pitch_veltrack
 ---
-# pitch_veltrack
-
 Pitch velocity tracking, represents how much the pitch changes with incoming
 note velocity, in cents.
 

@@ -1,7 +1,6 @@
 ---
+title: effect2
 ---
-# effect2
-
 Level of effect1 send, in percentage (chorus in Cakewalk sfz).
 
 ##### Example

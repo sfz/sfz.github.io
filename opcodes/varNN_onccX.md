@@ -1,7 +1,6 @@
 ---
+title: varNN_onccX
 ---
-# varNN_onccX
-
 The amount by which MIDI CC X modulates variable NN. The modulation is either
 by mutliplication or addition, depending on [varNN_mod](varNN_mod) settings.
 

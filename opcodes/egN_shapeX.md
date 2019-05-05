@@ -1,7 +1,6 @@
 ---
+title: egN_shapeX
 ---
-# egN_shapeX
-
 Curve shape before the specified envelope point in envelope N. Default is 0.
 0 is linear, positive values are slower and negative values faster.
 Past 10 or -10, there's little difference - at that point, the envelope is

@@ -1,7 +1,6 @@
 ---
+title: Vibrato
 ---
-# Vibrato
-
 This page is very much a work in progress. For now, here is the vibrato-relevant
 section of the opcodes from Karoryfer Samples Meatbass, which is a decent
 starting point for creating vibrato in bowed strings, vocals, and synthesizers.

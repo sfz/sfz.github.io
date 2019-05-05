@@ -1,7 +1,6 @@
 ---
+title: off_mode
 ---
-# off_mode
-
 Region off mode. This opcode will determinate how a region is turned off by an
 [off_by](/opcodes/off_by) opcode. There are two choices:
 

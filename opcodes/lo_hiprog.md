@@ -1,7 +1,6 @@
 ---
+title: loprog / hiprog
 ---
-# loprog / hiprog
-
 The region plays when the MIDI program number is between loprog and hiprog.
 MIDI program numbers in the General MIDI spec ranged from 0 to 127 but were
 often displayed externally as 1 to 128. This uses the 0 to 127 range.

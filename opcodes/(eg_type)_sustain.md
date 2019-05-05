@@ -1,7 +1,6 @@
 ---
+title: (eg type)_sustain
 ---
-# (eg type)_sustain
-
 EG sustain level, in percentage.
 
 ##### Examples

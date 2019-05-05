@@ -1,7 +1,6 @@
 ---
+title: xf_keycurve
 ---
-# xf_keycurve
-
 Keyboard crossfade curve for the region, with two possible values:
 
 - ***gain***: Linear gain crossfade. This setting is best when crossfading

@@ -1,7 +1,6 @@
 ---
+title: (lfo type)_delay
 ---
-# (lfo type)_delay
-
 The time before the LFO starts oscillating, in seconds.
 
 ##### Examples

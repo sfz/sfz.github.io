@@ -1,7 +1,6 @@
 ---
+title: fil_keycenter
 ---
-# fil_keycenter
-
 Center key for filter keyboard tracking. In this key, the filter keyboard
 tracking will have no effect.
 

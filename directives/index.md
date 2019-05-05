@@ -1,7 +1,6 @@
 ---
+title: Directives
 ---
-# Directives
-
 | Name                            | ARIA  | LinuxSampler |
 | ---                             | :---: |    :---:     |
 | #[define](/directives/define)   |   ✓   |      ✓       |

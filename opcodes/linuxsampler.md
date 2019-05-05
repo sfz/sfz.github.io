@@ -1,7 +1,6 @@
 ---
+title: LinuxSampler Extensions Opcodes
 ---
-# LinuxSampler Extensions Opcodes
-
 ## Real-Time Instrument Script
 
 | Opcode                                                      |  Aria   | LinuxSampler |

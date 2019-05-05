@@ -1,7 +1,6 @@
 ---
+title: position
 ---
-# position
-
 Only operational for stereo samples, `position` defines the position in the stereo
 field of a stereo signal, after channel mixing as defined in the [width](width)
 opcode.

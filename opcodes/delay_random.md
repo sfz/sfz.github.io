@@ -1,7 +1,6 @@
 ---
+title: delay_random
 ---
-# delay_random
-
 Region random delay time, in seconds.
 
 If the region receives a note-off message before delay time,

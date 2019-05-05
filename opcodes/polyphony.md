@@ -1,7 +1,6 @@
 ---
+title: polyphony
 ---
-# polyphony
-
 Polyphony voice limit for a group.
 
 ##### Examples

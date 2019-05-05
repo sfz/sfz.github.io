@@ -1,7 +1,6 @@
 ---
+title: amplitude_curveccN
 ---
-# amplitude_curveccN
-
 Specifies the curve number to be used when modulating the amplitude of the region
 with MIDI CC X with [amplitude_onccN](amplitude_onccN).
 

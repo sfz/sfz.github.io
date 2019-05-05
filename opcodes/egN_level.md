@@ -1,7 +1,6 @@
 ---
+title: egN_level
 ---
-# egN_level
-
 Sets the envelope level at a specific point in envelope number N.
 Generally ranges from -1 to 1, default is 0.
 

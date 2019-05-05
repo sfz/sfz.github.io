@@ -1,7 +1,6 @@
 ---
+title: sw_vel
 ---
-# sw_vel
-
 This opcode allows overriding the velocity for the region with the velocity of
 the previous note. Values can be:
 

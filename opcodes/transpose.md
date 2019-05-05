@@ -1,7 +1,6 @@
 ---
+title: transpose
 ---
-# transpose
-
 The transposition value for this region which will be applied to the sample.
 
 ##### Examples

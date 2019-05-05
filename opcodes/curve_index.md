@@ -1,7 +1,6 @@
 ---
+title: curve_index
 ---
-# curve_index
-
 The number of the defined curve under a <[curve](/headers/curve)> header.
 Should be a positive integer.
 

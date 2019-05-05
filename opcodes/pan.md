@@ -1,7 +1,6 @@
 ---
+title: pan
 ---
-# pan
-
 The panoramic position for the region.
 
 If a mono sample is used, pan value defines the position in the stereo image

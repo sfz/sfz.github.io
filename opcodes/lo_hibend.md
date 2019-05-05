@@ -1,7 +1,6 @@
 ---
+title: lobend / hibend
 ---
-# lobend / hibend
-
 Defines the range of the last Pitch Bend message required for the region to play.
 
 ##### Examples

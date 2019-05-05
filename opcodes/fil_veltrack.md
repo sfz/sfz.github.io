@@ -1,7 +1,6 @@
 ---
+title: fil_veltrack
 ---
-# fil_veltrack
-
 Filter velocity tracking - the amount by which the cutoff changes
 with incoming note velocity. Measured in cents.
 

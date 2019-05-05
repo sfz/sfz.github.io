@@ -1,7 +1,6 @@
 ---
+title: note_polyphony
 ---
-# note_polyphony
-
 Polyphony limit for playing the same note repeatedly.
 
 ##### Example

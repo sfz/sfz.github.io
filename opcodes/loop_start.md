@@ -1,7 +1,6 @@
 ---
+title: loop_start
 ---
-# loop_start
-
 The loop start point, in samples.
 
 If loop_start is not specified and the sample has a loop defined, the SFZ player

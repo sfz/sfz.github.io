@@ -1,7 +1,6 @@
 ---
+title: sync_offset
 ---
-# sync_offset
-
 Region playing synchronization to host position offset.
 
 When [sync_beats](sync_beats) is specified and after input controls instruct

@@ -1,7 +1,6 @@
 ---
+title: amp_velcurve_N
 ---
-# amp_velcurve_N
-
 User-defined amplifier velocity curve. This opcode range allows defining a
 specific curve for the amplifier velocity. The value of the opcode indicates the
 normalized amplitude (0 to 1) for the specified velocity. N can be from 0 to 127.

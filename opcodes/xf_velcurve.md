@@ -1,7 +1,6 @@
 ---
+title: xf_velcurve
 ---
-# xf_velcurve
-
 Velocity crossfade curve for the region. Values can be:
 
 - ***gain***: Linear gain crossfade. This setting is best when crossfading

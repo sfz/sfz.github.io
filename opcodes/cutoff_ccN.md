@@ -1,7 +1,6 @@
 ---
+title: cutoff_ccN
 ---
-# cutoff_ccN
-
 The variation in the cutoff frequency
 when MIDI continuous controller N is received, in cents.
 

@@ -1,7 +1,6 @@
 ---
+title: xfin_loccN / xfin_hiccN
 ---
-# xfin_loccN / xfin_hiccN
-
 Fade in control based on MIDI CC.
 
 xfin_loccN and xfin_hiccN set the range of values in the MIDI continuous

@@ -1,7 +1,6 @@
 ---
+title: (eg type)_delay
 ---
-# (eg type)_delay
-
 EG delay time, in seconds. This is the time elapsed from note on to the start of
 the Attack stage. If both envelope delay and the general [delay](delay)
 or [delay_random](delay_random) are used in the same region, the envelope delays

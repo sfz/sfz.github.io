@@ -1,7 +1,6 @@
 ---
+title: egN_curve
 ---
-# egN_curve
-
 Instructs the player to use a curve shape defined under a curve header for the
 specified envelope segment.
 

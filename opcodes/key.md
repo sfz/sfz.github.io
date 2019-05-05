@@ -1,7 +1,6 @@
 ---
+title: key
 ---
-# key
-
 `key` is equivalent to using `lokey`, `hikey` and `pitch_keycenter` and setting
 them all to the same note value. Because of this, it is a very useful and
 convenient opcode for instruments which do not need to spread a sample across

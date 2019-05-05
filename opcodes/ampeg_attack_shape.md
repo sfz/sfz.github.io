@@ -1,7 +1,6 @@
 ---
+title: ampeg_attack_shape
 ---
-# ampeg_attack_shape
-
 Specifies the curvature of attack stage of the amplifier envelope.
 
 0 is linear. Positive values are slower curves (that means the envelope will

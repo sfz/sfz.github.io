@@ -1,7 +1,6 @@
 ---
+title: seq_position
 ---
-# seq_position
-
 Sequence position. The region will play if the internal sequence counter is
 equal to `seq_position`.
 

@@ -1,7 +1,6 @@
 ---
+title: xfout_lokey / xfout_hikey
 ---
-# xfout_lokey / xfout_hikey
-
 Fade out control based on MIDI note number (keyboard position).
 
 xfout_lokey and xfout_hikey define the fade-out keyboard zone for the region.

@@ -1,7 +1,6 @@
 ---
+title: group
 ---
-# group
-
 Exclusive group number for this region.
 
 ##### Examples

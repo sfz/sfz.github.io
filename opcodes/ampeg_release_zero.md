@@ -1,7 +1,6 @@
 ---
+title: ampeg_release_zero
 ---
-# ampeg_release_zero
-
 Specifies how release time is calculated. When true/on/1, indicates release time
 is the time it would take to get from 0dBs to -oo, NOT the time to get from
 the current sustain to zero (as when false/off/0). Default is true.

@@ -1,7 +1,6 @@
 ---
+title: label_ccN
 ---
-# label_ccN
-
 Under the <[control](/headers/control)> header,
 used to create a label for the MIDI CC.
 Some DAWs will display those labels as paramter names, and Sforzando will also

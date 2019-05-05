@@ -1,7 +1,6 @@
 ---
+title: eqN_vel2gain
 ---
-# eqN_vel2gain
-
 Gain change of the equalizer band with MIDI velocity, in decibels.
 
 ##### Examples

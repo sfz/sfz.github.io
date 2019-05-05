@@ -1,7 +1,6 @@
 ---
+title: script
 ---
-# script
-
 This is an extension to the SFZ file format which is currently only available
 with LinuxSampler v2.0.0.svn37 or higher. It allows to load real-time instrument
 scripts for SFZ instruments. Find out more about [Instrument Scripts](http://doc.linuxsampler.org/Instrument_Scripts).

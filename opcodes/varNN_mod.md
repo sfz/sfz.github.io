@@ -1,7 +1,6 @@
 ---
+title: varNN_mod
 ---
-# varNN_mod
-
 Specifies the method used to calculate variable number NN from MIDI CCs.
 Mult is multiplication, with 1 being full scale - 0 at a CC value of 0,
 and 1 at CC value of 127 - this is how the [amplitude](amplitude) opcode works.

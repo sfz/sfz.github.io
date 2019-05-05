@@ -1,7 +1,6 @@
 ---
+title: (eg type)_hold
 ---
-# (eg type)_hold
-
 EG hold time, in seconds. During the hold stage,
 EG output will remain at its maximum value.
 

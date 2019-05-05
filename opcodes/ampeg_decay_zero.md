@@ -1,7 +1,6 @@
 ---
+title: ampeg_decay_zero
 ---
-# ampeg_decay_zero
-
 Specifies how decay time is calculated. When true/on/1, indicates decay time
 is the time it would take to get from 0dBs to -oo, NOT the time to reach current
 sustain (as when false/off/0). Default is true.

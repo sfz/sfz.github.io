@@ -1,7 +1,6 @@
 ---
+title: pitch_keytrack
 ---
-# pitch_keytrack
-
 Within the region, this value defines how much the pitch changes with every note.
 Default value is 100, which means pitch will change one hundred cents
 (one semitone) per played note.

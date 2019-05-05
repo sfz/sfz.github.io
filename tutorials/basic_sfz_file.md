@@ -1,7 +1,6 @@
 ---
+title: Basic SFZ file
 ---
-# Basic SFZ file
-
 Just copy the following in your preferred text editor (we suggest Notepad++),
 fill in the blanks and save as an SFZ:
 

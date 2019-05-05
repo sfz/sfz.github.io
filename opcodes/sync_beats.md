@@ -1,7 +1,6 @@
 ---
+title: sync_beats
 ---
-# sync_beats
-
 Region playing synchronization to host position.
 
 When sync_beats is specified and after input controls instruct the region to play,

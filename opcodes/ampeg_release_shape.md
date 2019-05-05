@@ -1,7 +1,6 @@
 ---
+title: ampeg_release_shape
 ---
-# ampeg_release_shape
-
 specifies the curvature of release stage of the amplifier envelope.
 
 0 is linear, positive values are slower curves (that means the envelope will

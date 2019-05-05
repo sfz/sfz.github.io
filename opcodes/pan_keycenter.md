@@ -1,7 +1,6 @@
 ---
+title: pan_keycenter
 ---
-# pan_keycenter
-
 Center key for pan keyboard tracking.
 In this key, pan_keytrack will have no effect.
 

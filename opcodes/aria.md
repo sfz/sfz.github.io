@@ -1,7 +1,6 @@
 ---
+title: ARIA Extensions Opcodes (SFZ 3 hopefuls)
 ---
-# ARIA Extensions Opcodes (SFZ 3 hopefuls)
-
 ARIA also adds some [extended MIDI CCs](/extensions/aria/midi_cc) in addition
 to those already added by [SFZ 2](/opcodes/sfz2),
 and [XML instrument banks](/extensions/aria/xml_instrument_bank) as a way of

@@ -1,7 +1,6 @@
 ---
+title: fil_type
 ---
-# fil_type
-
 Allows you to choose which type of filter you use. if not specified
 (ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ)
 defaults to lpf_2p.

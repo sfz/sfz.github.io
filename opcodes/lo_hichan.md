@@ -1,7 +1,6 @@
 ---
+title: lochan / hichan
 ---
-# lochan / hichan
-
 If incoming notes have a MIDI channel between `lochan` and `hichan`, the region
 will play. `lochan` and `hichan` will almost always be used together.
 

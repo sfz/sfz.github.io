@@ -1,7 +1,6 @@
 ---
+title: varNN_target
 ---
-# varNN_target
-
 Specifies the target for variable NN to modulate. The list of possible modulation
 targets is basically the same standard list as for LFOs or envelopes,
 though variables can't modulate other modulators, so it's not currently possible

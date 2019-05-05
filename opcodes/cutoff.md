@@ -1,7 +1,6 @@
 ---
+title: cutoff
 ---
-# cutoff
-
 Sets the cutoff frequency (Hz) of the [filters](/opcodes/categories#performance-parameters).
 Note that while this is specified in Hertz,
 filter LFO depths in the SFZ 1 spec are in cents.

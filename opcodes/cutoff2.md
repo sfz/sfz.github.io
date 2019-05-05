@@ -1,7 +1,6 @@
 ---
+title: cutoff2
 ---
-# cutoff2
-
 Same as [cutoff](cutoff), but used to specify the cutoff for the second filter.
 When used, there are two filters applied to the region in series.
 

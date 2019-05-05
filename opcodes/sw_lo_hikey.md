@@ -1,7 +1,6 @@
 ---
+title: sw_lokey / sw_hikey
 ---
-# sw_lokey / sw_hikey
-
 Defines the range of the keyboard to be used as trigger selectors for the
 [sw_last](/opcodes/sw_last) opcode. Basically, this tells the SFZ player
 where the keyswitches are. As such, it's normally going to be the same for the

@@ -1,7 +1,6 @@
 ---
+title: sostenuto_lo
 ---
-# sostenuto_lo
-
 This ARIA extension used under the <[control](/headers/control)> header sets the
 minimum point at which the sostenuto pedal (MIDI CC 66) is considered "down".
 Default is 1, meaning the sustain pedal is down as long as the CC value is

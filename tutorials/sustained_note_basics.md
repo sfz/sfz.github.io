@@ -1,7 +1,6 @@
 ---
+title: Sustained note basics
 ---
-# Sustained note basics
-
 We've covered the basic opcodes required to map simple drum instruments on
 [another page](/tutorials/drum_basics), and here we are going to apply that
 knowledge to pitched instruments, plus add more opcodes. Let's say we want to

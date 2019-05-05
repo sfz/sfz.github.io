@@ -1,7 +1,6 @@
 ---
+title: volume
 ---
-# volume
-
 The volume for the region, in decibels.
 
 ##### Examples

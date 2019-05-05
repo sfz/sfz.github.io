@@ -1,7 +1,6 @@
 ---
+title: sw_last
 ---
-# sw_last
-
 Enables the region to play if the last key pressed in the range specified by
 `sw_lokey` and `sw_hikey` is equal to the `sw_last` value.
 

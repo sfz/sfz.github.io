@@ -1,7 +1,6 @@
 ---
+title: lfoN_wave
 ---
-# lfoN_wave
-
 LFO waveform selection. Default is 1 (sine). In ARIA, the waves are:
 
 -1. deprecated, should not be used, but is random

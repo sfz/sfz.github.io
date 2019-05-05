@@ -1,7 +1,6 @@
 ---
+title: amplitude
 ---
-# amplitude
-
 Amplitude for the specified region in percentage of full amplitude.
 Range is 0 to 100. Default is 100 - 100% amplitude meaning no volume change is
 applied to the sample when played. Can be modulated with MIDI CC.

@@ -1,7 +1,6 @@
 ---
+title: resonance
 ---
-# resonance
-
 The filter cutoff resonance value, in decibels.
 
 ##### Example

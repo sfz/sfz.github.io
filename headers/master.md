@@ -1,7 +1,6 @@
 ---
+title: ‹master›
 ---
-# ‹master›
-
 An intermediate level in the header hierarchy, between global and group.
 Example:
 

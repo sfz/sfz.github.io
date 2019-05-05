@@ -1,7 +1,6 @@
 ---
+title: xfcccurve
 ---
-# xfcccurve
-
 MIDI controllers crossfade curve for the region. Values can be:
 
 - ***gain***: Linear gain crossfade. This setting is best when crossfading

@@ -1,7 +1,6 @@
 ---
+title: (lfo type)_depth
 ---
-# (lfo type)_depth
-
 LFO depth.
 
 ##### Examples
