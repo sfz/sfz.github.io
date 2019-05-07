@@ -22,6 +22,6 @@ print $fh <<EOF
 ---
 title: "$title"
 date: $date
-comments: true
+comments: false
 ---
 EOF
