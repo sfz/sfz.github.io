@@ -2,3 +2,11 @@
 {% for script in page.scripts %}
 <script src="/assets/js/{{ script }}.js"></script>
 {% endfor %}
+<script type="text/javascript" src="/assets/js/prettify/prettify.min.js"></script>
+<script type="text/javascript" src="/assets/js/prettify/lang-sfz.js"></script>
+<script>
+$(document).ready(function(){
+$('pre').addClass('prettyprint lang-sfz');
+prettyPrint();
+});
+</script>
