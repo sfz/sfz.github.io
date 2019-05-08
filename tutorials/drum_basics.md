@@ -5,11 +5,11 @@ SFZ has a lot of opcodes. No instrument uses all of them, though, and even highl
 complicated instruments with thousands of samples will usually only use a dozen
 or two different opcodes.
 
-*In this guide, we'll talk about the opcodes needed to make a simple drum kit.
+In this guide, we'll talk about the opcodes needed to make a simple drum kit.
 If you have some drum samples, a text editor and an SFZ player, this should be
 all the knowledge you need to make a working SFZ mapping for those samples.
 Most of them will apply to most other instrument types as well. Later, we'll
-apply this knowledge to instruments such as piano, guitar, violin and flute.*
+apply this knowledge to instruments such as piano, guitar, violin and flute.
 
 A very simple instrument to make would be an electronic drum kit with one sample
 for each sound. A functional mapping for an entire sampled drum machine using

@@ -27,7 +27,7 @@ default_path= // relative path of your samples
   cutoff_onccX=     // variation in cents
   resonance=        // value in db
   resonance_onccX=  // variation in db
-  
+
   trigger=attack    // or release or first or legato
   loop_mode=no_loop // or loop_continuous or one_shot or loop_sustain
 
