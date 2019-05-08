@@ -20,3 +20,4 @@ Some available tools are:
 | [SFZ opcode highlighting for Notepad++](https://musescore.org/en/node/99411)      |   X   |    X    |    ✓    |
 | [Another XML for Notepad++](http://www.drealm.info/sfz/sfz-udl.xml)               |   X   |    X    |    ✓    |
 | [SFZ opcode highlighting for Geany](https://github.com/redtide/geany-filetype-sfz)|   ✓   |    ✓    |    ✓    |
+| [SFZ opcode highlighting for VisualStudio](https://github.com/jokela/vscode-sfz)  |   X   |    X    |    ✓    |
