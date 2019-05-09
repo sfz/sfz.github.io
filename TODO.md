@@ -74,8 +74,8 @@ LS opcode extensions
 - Complete envelope_generators and lfo type pages.
 - Handle SFZ2 opcode name aliases.
 - Add specific, non redundant informations to various *_onccX.
-- Add linkto version / category / type in opcode pages.
-- Add more syntax highlight and links to external opcode pages.
-- Replace Google CSE with internal search.
-- Create a .yml opcode database and handle it from code to automate pages generation.
-- Add tooltips on opcode links with brief opcode description (from db?).
+- Add links to version / category / type table in opcode pages.
+- Add missing links to external opcode pages and tooltips with brief opcode
+    descriptions when hover over links, this could be done by using
+    a .yml opcode database.
+- Improve syntax highlighting
