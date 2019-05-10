@@ -21,3 +21,9 @@ Some available tools are:
 | [Another XML for Notepad++](http://www.drealm.info/sfz/sfz-udl.xml)               |   X   |    X    |    ✓    |
 | [SFZ opcode highlighting for Geany](https://github.com/redtide/geany-filetype-sfz)|   ✓   |    ✓    |    ✓    |
 | [SFZ opcode highlighting for VSCode](https://github.com/jokela/vscode-sfz)        |   ✓   |    ✓    |    ✓    |
+| [EXS2SFZ](https://www.bjoernbojahr.de/exs2sfz.html)                               |   X   |    X    |    ✓    |
+| [Bjoerns Sample Mapper](https://www.bjoernbojahr.de/bjoerns-sample-mapper.html)   |   X   |    X    |    ✓    |
+
+Some Windows only software can be used under other Unix based operating systems
+using [Wine](https://www.winehq.org/) / [CrossOver](https://www.codeweavers.com/)
+or in a virtual machine software like [VirtualBox](https://www.virtualbox.org/).
