@@ -11,18 +11,20 @@ then add controls etc. using a text editor.
 
 Some available tools are:
 
-| Name                                                                              | Linux | MacOS X | Windows |
-| ---                                                                               | :---: |  :---:  |  :---:  |
-| [sfZed](http://audio.clockbeat.com/sfZed.html)                                    |   X   |    X    |    ✓    |
-| [Folder-to-SFZ converter](http://vis.versilstudios.net/sfzconverter.html)         |   ✓   |    ✓    |    ✓    |
-| [SFZ Designer](http://mildon.me/sfzdesigner)                                      |   X   |    X    |    ✓    |
-| [Polyphone](https://www.polyphone-soundfonts.com/en/)                             |   ✓   |    ✓    |    ✓    |
-| [SFZ opcode highlighting for Notepad++](https://musescore.org/en/node/99411)      |   X   |    X    |    ✓    |
-| [Another XML for Notepad++](http://www.drealm.info/sfz/sfz-udl.xml)               |   X   |    X    |    ✓    |
-| [SFZ opcode highlighting for Geany](https://github.com/redtide/geany-filetype-sfz)|   ✓   |    ✓    |    ✓    |
-| [SFZ opcode highlighting for VSCode](https://github.com/jokela/vscode-sfz)        |   ✓   |    ✓    |    ✓    |
-| [EXS2SFZ](https://www.bjoernbojahr.de/exs2sfz.html)                               |   X   |    X    |    ✓    |
-| [Bjoerns Sample Mapper](https://www.bjoernbojahr.de/bjoerns-sample-mapper.html)   |   X   |    X    |    ✓    |
+| Name                                                                                              | Linux | MacOS X | Windows |
+| ---                                                                                               | :---: |  :---:  |  :---:  |
+| [sfZed](http://audio.clockbeat.com/sfZed.html)                                                    |   X   |    X    |    ✓    |
+| [Folder-to-SFZ converter](http://vis.versilstudios.net/sfzconverter.html)                         |   ✓   |    ✓    |    ✓    |
+| [SFZ Designer](http://mildon.me/sfzdesigner)                                                      |   X   |    X    |    ✓    |
+| [Polyphone](https://www.polyphone-soundfonts.com/en/)                                             |   ✓   |    ✓    |    ✓    |
+| [SFZ opcode highlighting for Notepad++](https://musescore.org/en/node/99411)                      |   X   |    X    |    ✓    |
+| [Another XML for Notepad++](http://www.drealm.info/sfz/sfz-udl.xml)                               |   X   |    X    |    ✓    |
+| [SFZ opcode highlighting for Geany](https://github.com/redtide/geany-filetype-sfz)                |   ✓   |    ✓    |    ✓    |
+| [SFZ opcode highlighting for VSCode](https://github.com/jokela/vscode-sfz)                        |   ✓   |    ✓    |    ✓    |
+| [SFZ Tools for UltraEdit](https://noisesculpture.com/sfz-tools/)                                  |   ✓   |    ✓    |    ✓    |
+| [EXS2SFZ](https://www.bjoernbojahr.de/exs2sfz.html)                                               |   X   |    X    |    ✓    |
+| [Bjoerns Sample Mapper](https://www.bjoernbojahr.de/bjoerns-sample-mapper.html)                   |   X   |    X    |    ✓    |
+| [EXS24 to SFZ converter (Python 3)](https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py) |   ✓   |    ✓    |    ✓    |
 
 Some Windows only software can be used under other Unix based operating systems
 using [Wine](https://www.winehq.org/) / [CrossOver](https://www.codeweavers.com/)
