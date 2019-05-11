@@ -26,6 +26,13 @@ Some available tools are:
 | [Bjoerns Sample Mapper](https://www.bjoernbojahr.de/bjoerns-sample-mapper.html)                   |   X   |    X    |    ✓    |
 | [EXS24 to SFZ converter (Python 3)](https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py) |   ✓   |    ✓    |    ✓    |
 
+Other tools with minimal/unknown SFZ support:
+
+| Name                                                                                              | Linux | MacOS X | Windows |
+| ---                                                                                               | :---: |  :---:  |  :---:  |
+| [TX16Wx Software Sampler](https://www.tx16wx.com/)                                                |   X   |    ✓    |    ✓    |
+| [TAL-Sampler](https://tal-software.com/products/tal-sampler)                                      |   X   |    ✓    |    ✓    |
+
 Some Windows only software can be used under other Unix based operating systems
 using [Wine](https://www.winehq.org/) / [CrossOver](https://www.codeweavers.com/)
 or in a virtual machine software like [VirtualBox](https://www.virtualbox.org/).
