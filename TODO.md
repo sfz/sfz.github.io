@@ -79,3 +79,5 @@ LS opcode extensions
     descriptions when hover over links, this could be done by using
     a .yml opcode database.
 - Improve syntax highlighting
+- Add custom scripts/styles include in head.html and scripts.html
+- Load dynamically aside follow and quick links from _data directory
