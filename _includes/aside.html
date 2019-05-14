@@ -1,44 +1,21 @@
+{% for card in site.data.aside.cards %}
 <div class="card border-dark mb-4">
 	<div class="card-header text-light">
-		<i class="fas fa-eye" aria-hidden="true"></i>
-		Follow us
+		<i class="{{ card.icon_category }} fa-{{ card.icon_type }}"
+			aria-hidden="true"></i>
+		{{ card.title }}
 	</div>
 	<div class="card-body">
 		<ul class="nav nav-pills flex-column">
-			<li class="nav-item"><a class="nav-link" href="https://github.com/sfzformat/" title="GitHub Organization">
-				<i class="fab fa-github fa-fw" aria-hidden="true"></i> GitHub Organization</a>
+{% for item in card.links %}
+			<li class="nav-item"><a class="nav-link" href="{{ item.url }}"
+				title="{{ item.title }}">
+				<i class="{{ item.icon_category }} fa-{{ item.icon_type }} fa-fw"
+				aria-hidden="true"></i>
+				{{ item.title }}</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14" title="Plogue Forum">
-				<i class="fas fa-users fa-fw" aria-hidden="true"></i> Plogue Forum</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="https://discord.gg/t7nrZ6d" title="Discord Chat">
-				<i class="fab fa-discord fa-fw" aria-hidden="true"></i> Discord Chat</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="/atom.xml" title="News Atom Feed">
-				<i class="fas fa-rss fa-fw" aria-hidden="true"></i> News Atom Feed</a>
-			</li>
+{% endfor %}
 		</ul>
 	</div>
 </div>
-<div class="card border-dark mb-4">
-	<div class="card-header text-light">
-		<i class="fas fa-link" aria-hidden="true"></i>
-		Quick Links
-	</div>
-	<div class="card-body">
-		<ul class="nav nav-pills flex-column">
-			<li class="nav-item"><a class="nav-link" href="/legacy" title="Old rgc:audio SFZ page">
-				<i class="fas fa-book fa-fw" aria-hidden="true"></i> Old rgc:audio SFZ page</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="http://www.drealm.info/sfz/" title="Peter L. Jones' SFZ page">
-				<i class="fas fa-book fa-fw" aria-hidden="true"></i> Peter L. Jones' SFZ page</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="https://github.com/sfzinstruments/" title="Free SFZ Instruments">
-				<i class="fa fa-download fa-fw" aria-hidden="true"></i> Free SFZ Instruments</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861" title="KVR Forum SFZ post">
-				<i class="fas fa-users fa-fw" aria-hidden="true"></i> KVR Forum SFZ post</a>
-			</li>
-		</ul>
-	</div>
-</div>
+{% endfor %}
