@@ -14,10 +14,11 @@ sw_previous=60
 ```
 
 Note that unlike [sw_last](/opcodes/sw_last), the note specified by
-`sw_previous` doesn't need to fall in the `sw_lokey` / `sw_hikey` range.
+`sw_previous` doesn't need to fall
+in the [sw_lokey](sw_lo_hikey) / [sw_hikey](sw_lo_hikey) range.
 This is useful for true sampled legato - example needed.
 
-| Type    | Default | Range     | 
+| Type    | Default | Range     |
 | ---     | ---     | ---       |
 | integer | none    | 0 to 127  |
 |         |         | C-1 to G9 |

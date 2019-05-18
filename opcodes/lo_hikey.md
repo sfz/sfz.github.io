@@ -4,9 +4,9 @@ title: lokey / hikey
 `lokey` and `hikey` determine the low and high boundaries of a certain
 [region](/headers/region). They are used to set the range of notes which are
 used to play the region. When a region only covers one note, it is generally
-more convenient to use `key` instead of `hikey` and `lokey`. When `hikey` and
-`lokey` are used, they will usually need to be used together with
-[pitch_keycenter](/opcodes/pitch_keycenter).
+more convenient to use [key](key) instead of `hikey` and `lokey`. When `hikey`
+and `lokey` are used, they will usually need to be used together with
+[pitch_keycenter](pitch_keycenter).
 
 ##### Examples
 
@@ -14,7 +14,7 @@ more convenient to use `key` instead of `hikey` and `lokey`. When `hikey` and
 <region> sample=*sine lokey=c5 hikey=c6
 ```
 
-As with the `key` opcode, the values can also be MIDI note numbers:
+As with the [key](key) opcode, the values can also be MIDI note numbers:
 
 ```
 <region> sample=*sine lokey=72 hikey=84
@@ -28,7 +28,7 @@ When an instrument is sampled every minor third, this kind of usage will be comm
 <region> sample=eb5.wav lokey=74 hikey=76 pitch_keycenter=75
 ```
 
-| Type    | Default   | Range     | 
+| Type    | Default   | Range     |
 | ---     | ---       | ---       |
 | integer | lokey=0   | 0 to 127  |
 |         | hikey=127 | C-1 to G9 |

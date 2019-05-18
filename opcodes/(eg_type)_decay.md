@@ -21,3 +21,9 @@ This should normally not be shorter than the corresponding envelope's release ti
 | Envelope | X |
 | LFO      | X |
 | MIDI CC  | ✓ | (eg type)_decay_onccN
+
+`(eg type)_decay_onccN` uses the following values:
+
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0       | -100 to 100 s |

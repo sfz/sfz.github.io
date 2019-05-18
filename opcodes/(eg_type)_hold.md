@@ -20,3 +20,9 @@ fileg_hold=0.1
 | Envelope | ✓ |
 | LFO      | X |
 | MIDI CC  | ✓ | (eg type)_hold_onccN
+
+`(eg type)_hold_onccN` uses the following values:
+
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0       | -100 to 100 s |

@@ -23,3 +23,9 @@ These are very frequently used, especially with amplifier envelopes.
 | Envelope | X |
 | LFO      | X |
 | MIDI CC  | ✓ | (eg type)_attack_onccN
+
+`(eg type)_attack_onccN` uses the following values:
+
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0       | -100 to 100 s |

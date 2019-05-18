@@ -25,3 +25,9 @@ sound. Also, `ampeg_release` is used when [off_mode](off_mode) is set to normal.
 | Envelope | X |
 | LFO      | X |
 | MIDI CC  | ✓ | (eg type)_release_onccN
+
+`(eg type)_release_onccN` uses the following values:
+
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0       | -100 to 100 s |

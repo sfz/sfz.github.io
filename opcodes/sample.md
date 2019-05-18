@@ -17,12 +17,14 @@ Getting the sample to play back at the correct pitch is not automatic, and
 generally can't be done with the sample opcode alone, even if the file name
 includes pitch information. Assuming that the tune or transpose opcodes are not
 used to change the pitch, the sample will play unchanged in pitch when a note
-equal to the `pitch_keycenter` opcode value is played. If `pitch_keycenter` is not
-defined for the region, sample will play unchanged on note 60 (middle C). If
-`pitch_keytrack` is set to 0, the sample will also play unchanged in pitch,
-regardless of how `pitch_keycenter` is set. If the key opcode is used to define
-the range of the sample (instead of `lokey`, `hikey` and `pitch_keycenter`) the
-sample will also be unchanged in pitch.
+equal to the [pitch_keycenter](pitch_keycenter) opcode value is played.
+If [pitch_keycenter](pitch_keycenter) is not defined for the region, sample will
+play unchanged on note 60 (middle C). If [pitch_keytrack](pitch_keytrack)
+is set to 0, the sample will also play unchanged in pitch,
+regardless of how [pitch_keycenter](pitch_keycenter) is set.
+If the key opcode is used to define the range of the sample (instead of [lokey](lo_hikey),
+[hikey](lo_hikey) and [pitch_keycenter](pitch_keycenter)) the sample will also
+be unchanged in pitch.
 
 ##### Examples
 
@@ -43,3 +45,7 @@ For cases where we don't want to actually play a sample but want a region to
 exist and be played (for example, to mute other sounds when using
 [group](/opcodes/sfz1/group) and [off_by](/opcodes/sfz1/off_by),
 there's even sample=*silence
+
+| Type   | Default | Range |
+| ---    | ---     | ---   |
+| string | N/A     | N/A   |

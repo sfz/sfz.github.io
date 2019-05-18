@@ -27,4 +27,4 @@ is generally set to either 0 or 100.
 
 | Type  | Default | Range         |
 | ---   | ---     | ---           |
-| float | 0.0     | -100 to 100 % |
+| float | 100     | -100 to 100 % |

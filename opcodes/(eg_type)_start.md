@@ -13,7 +13,7 @@ fileg_start=100
 Setting this to 100 should have the same effect as setting the attack time to 0,
 and adding the attack time to the hold time.
 Note that in some cases (when the sample starts playing from a point which is
-not near zero), setting this to a non-zero value for ampeg_start may result in
+not near zero), setting this to a non-zero value for `ampeg_start` may result in
 sample playback starting with an audible click.
 
 | Type  | Default | Range      |
@@ -25,3 +25,9 @@ sample playback starting with an audible click.
 | Envelope | ✓ |
 | LFO      | X |
 | MIDI CC  | ✓ | (eg type)_start_onccN
+
+`(eg type)_start_onccN` uses the following values:
+
+| Type  | Default | Range         |
+| ---   | ---     | ---           |
+| float | 0       | -100 to 100 % |

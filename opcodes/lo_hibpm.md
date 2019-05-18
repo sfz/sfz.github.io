@@ -2,7 +2,7 @@
 title: lobpm / hibpm
 ---
 Host tempo value. The region will play if the host tempo is equal to or higher
-than lobpm, and lower than hibpm.
+than `lobpm`, and lower than `hibpm`.
 
 ##### Examples
 

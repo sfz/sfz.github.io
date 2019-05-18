@@ -19,5 +19,5 @@ lochan=2 hichan=2
 
 | Type    | Default   | Range     |
 | ---     | ---       | ---       |
-| integer | lochan=1  | 0 to 16   |
+| integer | lochan=1  | 1 to 16   |
 |         | hichan=16 |           |
