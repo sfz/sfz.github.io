@@ -21,9 +21,13 @@
 				<a class="nav-link dropdown-toggle" href="#" id="{{ item_id }}" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false"> {{ item.title }}</a>
 				<div class="dropdown-menu" aria-labelledby="{{ item_id }}">
-					{% for pag in item.pages %}
-						<a class="dropdown-item" href="{{ pag.url }}">{{ pag.title }}</a>
-					{% endfor %}
+		{% for pag in item.pages %}
+			{% if pag.title == nil %}
+					<div class="dropdown-divider"></div>
+			{% else %}
+					<a class="dropdown-item" href="{{ pag.url }}">{{ pag.title }}</a>
+			{% endif %}
+		{% endfor %}
 				</div>
 	{% endif %}
 			</li>
