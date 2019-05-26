@@ -20,17 +20,17 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+  - Rakefile
   - README.md
-  - setup
-  - site.conf
+  - setup.sh
   - TODO.md
   - yarn.lock
+  - yarn-error.log
   - assets/css/style.css
-
-url: "https://sfzformat.github.io"
 
 plugins:
   - jekyll-sitemap
 
 organization_name: SFZ Format
-# disqus_shortname: 
+
+url: "https://sfzformat.github.io"
