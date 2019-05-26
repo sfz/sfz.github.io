@@ -12,7 +12,6 @@ defaults:
       layout: "post"
 
 exclude:
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
