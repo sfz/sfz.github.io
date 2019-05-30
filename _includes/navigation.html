@@ -11,7 +11,7 @@
 
 	<div class="collapse navbar-collapse" id="navbarContent">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-{% for item in site.data.navigation.toc %}
+{% for item in site.data.navigation %}
 	{% if item.type == "normal" %}
 			<li class="nav-item">
 				<a class="nav-link" href="{{ item.url }}"> {{ item.title }}</a>

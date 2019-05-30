@@ -1,67 +1,84 @@
-toc:
-    - title: Syntax
-      type: dropdown
-      pages:
-        - title: Headers
-          url: /headers/
+- title: Syntax
+  type: dropdown
+  pages:
+    - title: Headers
+      url: /headers/
 
-        - title: SFZ v1 Opcodes
-          url: /opcodes/sfz1
+    -
 
-        - title: SFZ v2 Opcodes
-          url: /opcodes/sfz2
+    - title: Directives
+      url: /directives/
 
-        - title: Directives
-          url: /directives/
+    -
 
-        - title: ARIA Extensions
-          url: /opcodes/aria
+    - title: SFZ v1 Opcodes
+      url: /opcodes/sfz1
 
-        - title: LinuxSampler Extensions
-          url: /opcodes/linuxsampler
+    - title: SFZ v2 Opcodes
+      url: /opcodes/sfz2
 
-        - title: Types & Categories
-          url: /opcodes/categories
+    - title: ARIA Extensions
+      url: /opcodes/aria
 
-    - title: Software
-      type: dropdown
-      pages:
-        - title: Players
-          url: /software/players
+    - title: LinuxSampler Extensions
+      url: /opcodes/linuxsampler
 
-        - title: Editors
-          url: /software/tools
+    -
 
-    - title: Tutorials
-      type: dropdown
-      pages:
-        - title: Basic / Template
-          url: /tutorials/basic_sfz_file
+    - title: Types & Categories
+      url: /opcodes/categories
 
-        - title: Drum Basics
-          url: /tutorials/drum_basics
+- title: Software
+  type: dropdown
+  pages:
+    - title: Players
+      url: /software/players
 
-        - title: Sustained Note Basics
-          url: /tutorials/sustained_note_basics	  
+    - title: Editors
+      url: /software/tools
 
-        - title: Vibrato
-          url: /tutorials/vibrato
+- title: Tutorials
+  type: dropdown
+  pages:
+    - title: Basic / Template
+      url: /tutorials/basic_sfz_file
 
-        - title: Legato
-          url: /tutorials/legato
+    - title: Sustained Note Basics
+      url: /tutorials/sustained_note_basics
 
-        - title: Cymbal Muting
-          url: /tutorials/cymbal_muting
+    - title: Vibrato
+      url: /tutorials/vibrato
 
-        - title: SFZ 1 Pitch LFO
-          url: /tutorials/lfo_sfz1
+    - title: Legato
+      url: /tutorials/legato
 
-        - title: SFZ 2 Pitch LFO
-          url: /tutorials/lfo_sfz2
+    -
 
-        - title: Video Tutorials
-          url: /tutorials/videos
+    - title: Drum Basics
+      url: /tutorials/drum_basics
 
-#   - title: Downloads
-#     type: normal
-#     url: /downloads/
+    - title: Cymbal Muting
+      url: /tutorials/cymbal_muting
+
+    -
+
+    - title: SFZ 1 Pitch LFO
+      url: /tutorials/lfo_sfz1
+
+    - title: SFZ 2 Pitch LFO
+      url: /tutorials/lfo_sfz2
+
+    -
+
+    - title: Video Tutorials
+      url: /tutorials/videos
+
+- title: Docs
+  type: dropdown
+  pages:
+    - title: Website Development Reference
+      url: /docs/website-development-reference
+
+#- title: Downloads
+#  type: normal
+#  url: /downloads/
