@@ -1,20 +1,7 @@
 ---
 title: LinuxSampler Extensions Opcodes
 ---
-## Real-Time Instrument Script
 
-| Opcode                                                      |  Aria   | LinuxSampler |
-| ---                                                         |  :---:  |    :---:     |
-| [script](/opcodes/script)                                   |    X    |      ✓       |
+{% include sfz-tables-linuxsampler.html %}
 
-## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
-
-| Opcode                                                     |  Aria   | LinuxSampler |
-| ---                                                        |  :---:  |    :---:     |
-| TODO                                                       |         |              |
-
-## [Modulation](/opcodes/categories#modulation): [LFO](/types/lfo)
-
-| Opcode                                                     |  Aria   | LinuxSampler |
-| ---                                                        |  :---:  |    :---:     |
-| TODO                                                       |         |              |
+Source: [LinuxSampler SFZ Page](http://linuxsampler.org/sfz/)
