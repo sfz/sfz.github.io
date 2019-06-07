@@ -1,4 +1,4 @@
-# Source code for the [SFZ Format](https://sfzformat.github.io/) website.
+# Source code for the [SFZ Format](https://sfzformat.github.io/) website
 
 [![Travis Build Status](https://travis-ci.com/sfzformat/sfzformat.github.io.svg?branch=source)](https://travis-ci.com/sfzformat/sfzformat.github.io)
 
@@ -27,6 +27,6 @@ or manually:
     $ gem install bundler
     $ yarn --no-bin-links
     $ yarn dist
-    $ bundle exec jekyll serve -w
+    $ bundle exec jekyll serve --watch --host 0.0.0.0
 
 The local website should be available at <http://localhost:4000/>
