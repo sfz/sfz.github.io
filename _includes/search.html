@@ -1,11 +1,25 @@
+{%-for language in site.data.i18n.locales-%}
+	{%-if language[0] == page.lang-%}
+		{%-assign current_locale_dir = language[1]-%}
+		{%-break-%}
+	{%-endif-%}
+{%-endfor-%}
+{%-assign default_locale = site.data.i18n.config.default-%}
+{%-if page.lang == default_locale-%}
+    {%-assign page_path_prefix = "/"-%}
+{%-else-%}
+    {%-assign page_path_prefix = '/' | append: page.lang | append: '/'-%}
+{%-endif-%}
+{%-assign t = current_locale_dir.translation-%}
+
 <div class="row my-4 justify-content-center">
 	<div class="col-md-7">
-		<p class="text-center">Search this website:</p>
-		<form class="form-search" role="search" action="/search/" method="get">
+		<p class="text-center">{{ t.search_website }}</p>
+		<form class="form-search" role="search" action="{{ page_path_prefix }}search/">
 			<div class="input-group input-group-lg">
 				<input type="text" id="search-box" class="form-control searchbox" name="query">
 				<div class="input-group-append">
-					<button class="btn btn-primary" type="submit" value="search">Search</button>
+					<button class="btn btn-primary" type="submit" value="search">{{ t.search }}</button>
 				</div>
 			</div>
 		</form>
