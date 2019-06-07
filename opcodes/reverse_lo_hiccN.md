@@ -1,4 +1,5 @@
 ---
+lang: en
 title: reverse_loccN / reverse_hiccN
 ---
 If MIDI CC X is between reverse_loccN and reverse_hiccN, the region plays reversed.

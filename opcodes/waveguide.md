@@ -1,4 +1,5 @@
 ---
+lang: en
 title: waveguide
 ---
 Enables waveguide synthesis for the region. Not properly documented,

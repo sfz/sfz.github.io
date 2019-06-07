@@ -1,5 +1,6 @@
 ---
 title: Directives
+lang: en
 ---
 | Name                            | ARIA  | LinuxSampler |
 | ---                             | :---: |    :---:     |

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_default / sw_label
 ---
 Just copy the following in your preferred text editor (we suggest [Notepad++](https://notepad-plus-plus.org/)),

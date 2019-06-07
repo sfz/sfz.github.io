@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amp_veltrack
 ---
 Amplifier velocity tracking, represents how much the amplitude changes with

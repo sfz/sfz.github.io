@@ -1,4 +1,5 @@
 ---
+lang: en
 title: varNN_curveccX
 ---
 Specifies the <[curve](/headers/curve)> number which

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_fade
 ---
 Fade-in time for LFO number N, in seconds. Can be modulated by MIDI CC.

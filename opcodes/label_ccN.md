@@ -1,4 +1,5 @@
 ---
+lang: en
 title: label_ccN
 ---
 Under the <[control](/headers/control)> header,

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: polyphony
 ---
 Polyphony voice limit for a group.

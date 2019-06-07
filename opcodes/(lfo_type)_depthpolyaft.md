@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_depthpolyaft
 ---
 LFO depth when polyphonic aftertouch MIDI messages are received.

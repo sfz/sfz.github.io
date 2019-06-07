@@ -1,4 +1,5 @@
 ---
+lang: en
 title: end
 ---
 The endpoint of the sample, in sample units.

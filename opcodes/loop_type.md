@@ -1,4 +1,5 @@
 ---
+lang: en
 title: loop_type
 ---
 Defines the looping mode. Default is forward. Allowed values are foward,

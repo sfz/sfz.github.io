@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_vel2hold
 ---
 Velocity effect on EG hold time, in seconds.

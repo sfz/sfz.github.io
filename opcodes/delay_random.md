@@ -1,4 +1,5 @@
 ---
+lang: en
 title: delay_random
 ---
 Region random delay time, in seconds.

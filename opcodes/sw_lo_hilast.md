@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_lolast / sw_hilast
 ---
 Like [sw_last](sw_last), but allowing a region to be triggered across a range

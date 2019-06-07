@@ -1,4 +1,5 @@
 ---
+lang: en
 title: fil2_type
 ---
 Same as [fil_type](fil_type), but used to specify the type for the second filter.

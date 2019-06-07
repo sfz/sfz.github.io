@@ -1,5 +1,6 @@
 ---
 title: Envelope Generators
+lang: en
 ---
 Envelope Generator opcodes are part of the [Modulation](/opcodes/categories#modulation)
 category of opcodes:

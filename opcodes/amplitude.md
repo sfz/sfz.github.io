@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amplitude
 ---
 Amplitude for the specified region in percentage of full amplitude.

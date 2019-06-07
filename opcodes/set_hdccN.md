@@ -1,4 +1,5 @@
 ---
+lang: en
 title: set_hdccN
 ---
 Sets a default initial value for MIDI CC number X using a floating point value,

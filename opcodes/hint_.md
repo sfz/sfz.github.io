@@ -1,4 +1,5 @@
 ---
+lang: en
 title: hint_*
 ---
 ARIA supports specific opcodes in <[control](/headers/control)>

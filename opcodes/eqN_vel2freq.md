@@ -1,4 +1,5 @@
 ---
+lang: en
 title: eqN_vel2freq
 ---
 Frequency change of the equalizer band with MIDI velocity, in Hertz.

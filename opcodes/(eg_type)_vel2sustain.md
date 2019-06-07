@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_vel2sustain
 ---
 Velocity effect on EG sustain level, in percentage.

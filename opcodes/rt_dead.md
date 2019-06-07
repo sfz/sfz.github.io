@@ -1,4 +1,5 @@
 ---
+lang: en
 title: rt_dead
 ---
 Controls whether a release sample should play if its sustain sample has ended,

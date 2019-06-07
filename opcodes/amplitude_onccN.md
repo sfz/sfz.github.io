@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amplitude_onccN
 ---
 Amplitude for the specified region in percentage of full amplitude, modulated by

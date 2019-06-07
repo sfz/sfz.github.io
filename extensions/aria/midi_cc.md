@@ -1,5 +1,6 @@
 ---
 title: Extended MIDI CCs
+lang: en
 ---
 In the MIDI specification, MIDI continous controls can have numbers from 1 to 127.
 

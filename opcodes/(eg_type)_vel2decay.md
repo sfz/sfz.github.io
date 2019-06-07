@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_vel2decay
 ---
 Velocity effect on pitch EG decay time, in seconds.

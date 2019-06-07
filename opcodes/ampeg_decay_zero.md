@@ -1,4 +1,5 @@
 ---
+lang: en
 title: ampeg_decay_zero
 ---
 Specifies how decay time is calculated. When true/on/1, indicates decay time

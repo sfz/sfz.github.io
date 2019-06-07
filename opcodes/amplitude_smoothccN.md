@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amplitude_smoothccN
 ---
 Smoothness of the modulation of the region's amplitude with MIDI CC X.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_freqchanaft
 ---
 LFO frequency change when channel aftertouch MIDI messages are received, in Hertz.

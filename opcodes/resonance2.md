@@ -1,4 +1,5 @@
 ---
+lang: en
 title: resonance2
 ---
 Same as [resonance](resonance), but used to specify the resonance for the second

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: cutoff
 ---
 Sets the cutoff frequency (Hz) of the [filters](/opcodes/categories#performance-parameters).

@@ -1,5 +1,6 @@
 ---
 title: Cymbal muting
+lang: en
 ---
 A lot of the information in this article deals with implementing sampled hi-hats
 and cymbals in general, and although the code examples are in SFZ, the principles

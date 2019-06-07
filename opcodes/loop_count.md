@@ -1,4 +1,5 @@
 ---
+lang: en
 title: loop_count
 ---
 The number of times a loop will repeat. This is in addition to the time the

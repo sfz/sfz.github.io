@@ -1,4 +1,5 @@
 ---
+lang: en
 title: ampeg_decay_shape
 ---
 Specifies the curvature of decay stage of the amplifier envelope.

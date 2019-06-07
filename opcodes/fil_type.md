@@ -1,4 +1,5 @@
 ---
+lang: en
 title: fil_type
 ---
 Allows you to choose which type of filter you use. if not specified

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: bend_smooth
 ---
 Pitch bend smoothness - adds "inertia" to pitch bends, so fast movements of the

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: position
 ---
 Only operational for stereo samples, `position` defines the position in the stereo

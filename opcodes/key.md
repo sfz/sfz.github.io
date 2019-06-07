@@ -1,4 +1,5 @@
 ---
+lang: en
 title: key
 ---
 `key` is equivalent to using [lokey](lo_hikey), [hikey](lo_hikey) and

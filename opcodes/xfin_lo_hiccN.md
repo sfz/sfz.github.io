@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xfin_loccN / xfin_hiccN
 ---
 Fade in control based on MIDI CC.

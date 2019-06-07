@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_last
 ---
 Enables the region to play if the last key pressed in the range specified by

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: ampeg_release_shape
 ---
 specifies the curvature of release stage of the amplifier envelope.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xf_velcurve
 ---
 Velocity crossfade curve for the region. Values can be:

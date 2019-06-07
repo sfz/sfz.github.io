@@ -1,5 +1,6 @@
 ---
 title: SFZ Headers
+lang: en
 ---
 SFZ files are subdivided into sections by headers. The region header is the most
 essential, and is the basic unit from which instruments are constructed. A group
@@ -15,6 +16,6 @@ special opcodes for setting up MIDI CC controls. The curve headers, when used,
 are normally found at the end of the file, and define the curves used for
 shaping envelopes, parameter response etc.
 
-{% include sfz-tables-headers.html %}
+{% include sfz/headers-table-generator.html %}
 
 See also [ARIA Extensions](/opcodes/aria).

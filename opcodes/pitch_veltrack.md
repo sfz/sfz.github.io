@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pitch_veltrack
 ---
 Pitch velocity tracking, represents how much the pitch changes with incoming

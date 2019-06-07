@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_freq_stepccX
 ---
 Sets the number of steps with which the frequency of LFO number N is modulated

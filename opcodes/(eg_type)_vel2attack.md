@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_vel2attack
 ---
 Velocity effect on EG attack time, in seconds.

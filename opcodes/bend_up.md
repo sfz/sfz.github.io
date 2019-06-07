@@ -1,4 +1,5 @@
 ---
+lang: en
 title: bend_up
 ---
 Pitch bend range when Bend Wheel or Joystick is moved up, in cents.

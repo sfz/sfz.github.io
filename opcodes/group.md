@@ -1,4 +1,5 @@
 ---
+lang: en
 title: group
 ---
 Exclusive group number for this region.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: param_offset
 ---
 Adds a number to the parameter numbers of built-in or vendor-specific effects.

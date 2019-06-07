@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_shapeX
 ---
 Curve shape before the specified envelope point in envelope N. Default is 0.

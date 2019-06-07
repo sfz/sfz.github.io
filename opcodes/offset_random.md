@@ -1,4 +1,5 @@
 ---
+lang: en
 title: offset_random
 ---
 Random offset added to the region offset, in sample units.

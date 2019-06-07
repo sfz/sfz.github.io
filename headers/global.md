@@ -1,5 +1,6 @@
 ---
 title: ‹global›
+lang: en
 ---
 The global header allows entering parameters which are common for all regions in
 the SFZ file. If the same opcode defined in global is also defined in group or

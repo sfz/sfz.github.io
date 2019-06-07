@@ -1,5 +1,6 @@
 ---
 title: ‹curve›
+lang: en
 ---
 A header for defining curves for MIDI CC controls. One curve header is used to
 define each curve. The values for various points along the curve can then be set,

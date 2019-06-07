@@ -1,4 +1,5 @@
 ---
+lang: en
 title: off_by
 ---
 Region off group. When a new region with a group number equal to `off_by` plays,

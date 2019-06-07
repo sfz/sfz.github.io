@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_freq_smoothccX
 ---
 Sets the smoothness with which LFO number N is modulated by MIDI CC X.

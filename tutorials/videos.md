@@ -1,5 +1,6 @@
 ---
 title: SFZ Programming Video Tutorials
+lang: en
 ---
 Here are a couple of videos to help you get started with SFZ
 

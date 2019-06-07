@@ -1,4 +1,5 @@
 ---
+lang: en
 title: resonance
 ---
 The filter cutoff resonance value, in decibels.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pitch_keycenter
 ---
 Root key for the [sample](sample).

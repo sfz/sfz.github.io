@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_level
 ---
 Sets the envelope level at a specific point in envelope number N.

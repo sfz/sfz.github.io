@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lochan / hichan
 ---
 If incoming notes have a MIDI channel between `lochan` and `hichan`, the region

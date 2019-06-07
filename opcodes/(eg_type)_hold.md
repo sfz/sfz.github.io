@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_hold
 ---
 EG hold time, in seconds. During the hold stage,

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: note_selfmask
 ---
 Controls note-stealing behavior for a single pitch, when using [note_polyphony](note_polyphony).

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: ampeg_release_zero
 ---
 Specifies how release time is calculated. When true/on/1, indicates release time

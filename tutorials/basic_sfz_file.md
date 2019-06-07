@@ -1,5 +1,6 @@
 ---
 title: Basic SFZ file
+lang: en
 ---
 Just copy the following in your preferred text editor (we suggest Notepad++),
 fill in the blanks and save as an SFZ:

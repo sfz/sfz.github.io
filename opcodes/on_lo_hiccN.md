@@ -1,4 +1,5 @@
 ---
+lang: en
 title: on_loccN / on_hiccN
 ---
 Sample trigger on MIDI continuous control N. If a MIDI control message with a

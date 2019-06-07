@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_decay
 ---
 EG decay time, in seconds.

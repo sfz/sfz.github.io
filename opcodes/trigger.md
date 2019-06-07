@@ -1,4 +1,5 @@
 ---
+lang: en
 title: trigger
 ---
 Sets the trigger which will be used for the sample to play. Values can be:

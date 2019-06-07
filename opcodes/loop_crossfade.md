@@ -1,4 +1,5 @@
 ---
+lang: en
 title: loop_crossfade
 ---
 Mentioned in a list of opcodes which apply to sound sources, but unknown whether

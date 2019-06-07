@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_shape
 ---
 Envelope shape. 0 is linear. Positive values are convex or "slow".

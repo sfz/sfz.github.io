@@ -1,4 +1,5 @@
 ---
+lang: en
 title: master_volume
 ---
 ARIA extension, like [volume](volume), but affecting everything when set

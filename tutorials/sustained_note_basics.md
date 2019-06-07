@@ -1,5 +1,6 @@
 ---
 title: Sustained note basics
+lang: en
 ---
 We've covered the basic opcodes required to map simple drum instruments on
 [another page](/tutorials/drum_basics), and here we are going to apply that

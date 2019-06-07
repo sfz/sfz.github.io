@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_time
 ---
 The time duration from an envelope point to another, in seconds.

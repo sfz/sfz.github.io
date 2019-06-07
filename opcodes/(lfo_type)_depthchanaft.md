@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_depthchanaft
 ---
 LFO depth when channel aftertouch MIDI messages are received.

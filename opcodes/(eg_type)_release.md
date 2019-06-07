@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_release
 ---
 EG release time (after note release), in seconds.

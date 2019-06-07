@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sync_offset
 ---
 Region playing synchronization to host position offset.

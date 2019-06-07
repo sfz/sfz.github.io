@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_freq
 ---
 The base frequency of LFO number N, in Hertz. Can be modulated by MIDI CC,

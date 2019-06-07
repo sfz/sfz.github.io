@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_fade
 ---
 LFO fade-in effect time, in seconds.

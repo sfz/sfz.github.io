@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amp_random
 ---
 Random volume for the region, in decibels.

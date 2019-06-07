@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lohdccN / hihdccN
 ---
 Like [loccN / hiccN](lo_hiccN) but with floating point MIDI CCs.

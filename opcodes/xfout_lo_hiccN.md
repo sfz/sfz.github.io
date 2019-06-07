@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xfout_loccN / xfout_hiccN
 ---
 Fade out control based on MIDI CC.

@@ -1,5 +1,6 @@
 ---
 title: #define
+lang: en
 ---
 \#define creates a variable and gives it a value. Variable names start with
 the $ character. This opcode is used under the <[control](/headers/control)> header,

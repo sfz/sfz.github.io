@@ -1,4 +1,5 @@
 ---
+lang: en
 title: global_volume
 ---
 ARIA extension, like [volume](volume), but affecting everything when set

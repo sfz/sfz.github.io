@@ -1,4 +1,5 @@
 ---
+lang: en
 title: octave_offset
 ---
 This opcode tells SFZ to shift all incoming MIDI data by the specified octave -

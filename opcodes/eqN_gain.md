@@ -1,4 +1,5 @@
 ---
+lang: en
 title: eqN_gain
 ---
 Gain of the equalizer band, in decibels.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_wave2
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.

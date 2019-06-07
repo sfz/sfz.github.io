@@ -1,4 +1,5 @@
 ---
+lang: en
 title: direction
 ---
 The direction in which the sample is to be played. Can be forward (default) or

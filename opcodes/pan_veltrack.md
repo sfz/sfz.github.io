@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pan_veltrack
 ---
 The effect of note velocity on panning. With positive values, higher-velocity

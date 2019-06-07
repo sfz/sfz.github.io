@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lorand / hirand
 ---
 Random values. The player will generate a new random number on every note-on event,

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xfin_lovel / xfin_hivel
 ---
 Fade in control based on velocity.

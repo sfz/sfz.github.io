@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_lokey / sw_hikey
 ---
 Defines the range of the keyboard to be used as trigger selectors for the

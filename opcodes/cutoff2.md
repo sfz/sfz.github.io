@@ -1,4 +1,5 @@
 ---
+lang: en
 title: cutoff2
 ---
 Same as [cutoff](cutoff), but used to specify the cutoff for the second filter.

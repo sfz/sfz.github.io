@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_points
 ---
 Sets the number of points in envelope number N. The level of the envelope

@@ -1,5 +1,6 @@
 ---
 title: Vibrato
+lang: en
 ---
 This page is very much a work in progress. For now, here is the vibrato-relevant
 section of the opcodes from Karoryfer Samples Meatbass, which is a decent

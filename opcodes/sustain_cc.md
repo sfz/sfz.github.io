@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sustain_cc
 ---
 ARIA extension used under the <[control](/headers/control)> header to reassign

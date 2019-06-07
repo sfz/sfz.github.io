@@ -1,5 +1,6 @@
 ---
 title: ‹group›
+lang: en
 ---
 The group header is different than the [group](/opcodes/group) opcode, and
 it's important to avoid confusing the two. ARIA adds the [polyphony_group](/opcodes/polyphony_group)

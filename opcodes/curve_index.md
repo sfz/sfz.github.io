@@ -1,4 +1,5 @@
 ---
+lang: en
 title: curve_index
 ---
 The number of the defined curve under a <[curve](/headers/curve)> header.

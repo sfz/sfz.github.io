@@ -1,4 +1,5 @@
 ---
+lang: en
 title: width
 ---
 Only operational for stereo samples, width defines the amount of channel mixing

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pan
 ---
 The panoramic position for the region.

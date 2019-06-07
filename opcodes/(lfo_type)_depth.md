@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_depth
 ---
 LFO depth.

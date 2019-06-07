@@ -1,4 +1,5 @@
 ---
+lang: en
 title: off_mode
 ---
 Region off mode. This opcode will determinate how a region is turned off by an

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_wave
 ---
 LFO waveform selection. Default is 1 (sine). In ARIA, the waves are:

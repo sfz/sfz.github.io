@@ -1,0 +1,194 @@
+# ------------------------------------------------------------------------------
+# Operating Systems Enabled List
+# ------------------------------------------------------------------------------
+os:
+- name: "Linux"
+- name: "macOS X"
+- name: "Windows"
+# ------------------------------------------------------------------------------
+# Players
+# ------------------------------------------------------------------------------
+players:
+- name: "LinuxSampler"
+  license: "Opensource"
+  url: "https://www.linuxsampler.org/"
+  documented: true
+  visible: true
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "SFZero"
+  license: "Opensource"
+  url: "http://stevefolta.github.io/SFZero/"
+  os:
+  - name: "macOS X"
+
+- name: "Zerberus"
+  license: "Opensource"
+  url : "https://musescore.org/en/handbook/developers-handbook/references/zerberus-musescore-sfz-synthesizer"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "BassMIDI VSTi"
+  license: "Freeware"
+  url: "http://falcosoft.hu/softwares.html"
+  os:
+  - name: "Windows"
+
+- name: "Sforzando"
+  license: "Freeware"
+  url: "https://plogue.com/products/sforzando.html"
+  documented: true
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "TAL-Sampler"
+  license: "Freeware"
+  url: "https://tal-software.com/products/tal-sampler"
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "TX16Wx Software Sampler"
+  license: "Freeware"
+  url: "https://www.tx16wx.com/"
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "Zampler"
+  license: "Freeware"
+  url: "https://www.zampler.de/"
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "ARIA"
+  license: "OEM"
+  url: "http://ariaengine.com/"
+  documented: true
+  visible: true
+  os:
+  - name: "iOS"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "Extreme Sample Converter"
+  license: "Commercial"
+  url: "https://www.extranslator.com/"
+  os:
+  - name: "Windows"
+
+- name: "Renoise (Redux)"
+  license: "Commercial"
+  url: "https://www.renoise.com/"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "UVI Falcon"
+  license: "Commercial"
+  url: "https://www.uvi.net/"
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "Wusik Station V9, Wusik 9009, Wusik One, Wusik EVE V5"
+  license: "Commercial"
+  url: "https://www.wusik.com/"
+  os:
+  - name: "macOS X"
+  - name: "Windows"
+# ------------------------------------------------------------------------------
+# Tools
+# ------------------------------------------------------------------------------
+tools:
+- name: "sfZed"
+  license: "Freeware"
+  url: "http://audio.clockbeat.com/sfZed.html"
+  os:
+  - name: "Windows"
+
+- name: "Folder-to-SFZ converter"
+  license: "Freeware"
+  url: "http://vis.versilstudios.net/sfzconverter.html"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "SFZ Designer"
+  license: "Freeware"
+  url: "http://mildon.me/sfzdesigner"
+  os:
+  - name: "Windows"
+
+- name: "Polyphone"
+  license: "Opensource"
+  url: "https://www.polyphone-soundfonts.com/en/"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "SFZ syntax highlighting for Notepad++"
+  license: "Opensource"
+  url: "https://musescore.org/en/node/99411"
+  os:
+  - name: "Windows"
+
+- name: "Another XML for Notepad++"
+  license: "Opensource"
+  url: "http://www.drealm.info/sfz/sfz-udl.xml"
+  os:
+  - name: "Windows"
+
+- name: "SFZ syntax highlighting for Geany"
+  license: "Opensource"
+  url: "https://github.com/redtide/geany-filelicense-sfz"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "SFZ syntax highlighting for VSCode"
+  license: "Opensource"
+  url: "https://github.com/jokela/vscode-sfz"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "SFZ Tools for UltraEdit"
+  license: "Opensource"
+  url: "https://noisesculpture.com/sfz-tools/"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
+- name: "EXS2SFZ"
+  license: "Freeware"
+  url: "https://www.bjoernbojahr.de/exs2sfz.html"
+  os:
+  - name: "Windows"
+
+- name: "Bjoerns Sample Mapper"
+  license: "Freeware"
+  url: "https://www.bjoernbojahr.de/bjoerns-sample-mapper.html"
+  os:
+  - name: "Windows"
+
+- name: "EXS24 to SFZ converter (Python 3)"
+  license: "Opensource"
+  url: "https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"

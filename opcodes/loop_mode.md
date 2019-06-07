@@ -1,4 +1,5 @@
 ---
+lang: en
 title: loop_mode
 ---
 If `loop_mode` is not specified, each sample will play according to its predefined

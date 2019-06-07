@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pan_keytrack
 ---
 The amount by which the panning of a note is shifted with each key.

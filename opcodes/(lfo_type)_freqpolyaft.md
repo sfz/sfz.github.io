@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_freqpolyaft
 ---
 LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz.

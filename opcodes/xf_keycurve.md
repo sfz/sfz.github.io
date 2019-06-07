@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xf_keycurve
 ---
 Keyboard crossfade curve for the region, with two possible values:

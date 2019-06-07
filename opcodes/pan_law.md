@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pan_law
 ---
 Sets the pan law to be used. Allowed values are balance and mma. In earlier

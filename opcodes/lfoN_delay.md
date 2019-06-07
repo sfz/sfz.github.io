@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_delay
 ---
 Onset delay for LFO number N, in seconds.

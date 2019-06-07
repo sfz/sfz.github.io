@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_down
 ---
 Enables the region to play if the key equal to sw_down value is depressed.

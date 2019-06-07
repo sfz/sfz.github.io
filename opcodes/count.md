@@ -1,4 +1,5 @@
 ---
+lang: en
 title: count
 ---
 The number of times the sample will be played.

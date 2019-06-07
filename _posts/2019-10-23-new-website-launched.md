@@ -1,4 +1,5 @@
 ---
+lang: en
 title: "New Website Launched"
 date: 2019-04-23
 date_fmt: "%F"

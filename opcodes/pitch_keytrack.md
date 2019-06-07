@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pitch_keytrack
 ---
 Within the region, this value defines how much the pitch changes with every note.

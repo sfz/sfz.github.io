@@ -1,5 +1,6 @@
 ---
-title: SFZ v2 Opcodes
+lang: en
+title: "SFZ v2 Opcodes"
+sfz_version: "SFZ v2"
 ---
-
-{% include sfz-tables-v2.html %}
+{% include sfz/tables-v2.html %}

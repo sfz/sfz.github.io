@@ -1,4 +1,5 @@
 ---
+lang: en
 title: loprog / hiprog
 ---
 The region plays when the MIDI program number is between loprog and hiprog.

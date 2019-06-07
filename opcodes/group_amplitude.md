@@ -1,4 +1,5 @@
 ---
+lang: en
 title: group_amplitude
 ---
 ARIA extension, like [amplitude](amplitude), but affecting everything when set

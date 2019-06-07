@@ -1,5 +1,6 @@
 ---
 title: SFZ 2 Pitch LFO Example
+lang: en
 ---
 Just copy the following in your preferred text editor (we suggest [Notepad++](https://notepad-plus-plus.org/)).
 Add to your own SFZ to spice up your instruments:

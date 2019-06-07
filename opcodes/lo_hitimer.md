@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lotimer/hitimer
 ---
 Region plays if timer is between lotimer and hitimer.

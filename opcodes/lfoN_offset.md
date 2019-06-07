@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_offset
 ---
 Offset for LFO number N, can also be used with sub waveforms with lfoN_offset2,

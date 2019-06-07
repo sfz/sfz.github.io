@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_ratio
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sync_beats
 ---
 Region playing synchronization to host position.

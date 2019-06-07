@@ -1,4 +1,5 @@
 ---
+lang: en
 title: eqN_bw
 ---
 Bandwidth of the equalizer band, in octaves.

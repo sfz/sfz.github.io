@@ -1,4 +1,5 @@
 ---
+lang: en
 title: varNN_mod
 ---
 Specifies the method used to calculate variable number NN from MIDI CCs.

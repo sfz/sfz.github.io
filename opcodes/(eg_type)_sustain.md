@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_sustain
 ---
 EG sustain level, in percentage.

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: off_time
 ---
 When [off_mode](off_mode) is set to time, this specifies the fadeout time for

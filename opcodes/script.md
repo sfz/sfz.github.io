@@ -1,4 +1,5 @@
 ---
+lang: en
 title: script
 ---
 This is an extension to the SFZ file format which is currently only available

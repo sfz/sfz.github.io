@@ -1,4 +1,5 @@
 ---
+lang: en
 title: egN_loop
 ---
 Envelopes can be looped. Not sure exactly how this works and will need to test

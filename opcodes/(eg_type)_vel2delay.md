@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_vel2delay
 ---
 Velocity effect on EG delay time, in seconds.

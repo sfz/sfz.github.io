@@ -1,5 +1,6 @@
 ---
 title: #include
+lang: en
 ---
 A special directive, #include allows using SFZ files as building blocks for
 creating larger, more complex SFZ files. The file to which #include points is,

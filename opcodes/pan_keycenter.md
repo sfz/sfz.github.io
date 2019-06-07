@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pan_keycenter
 ---
 Center key for pan keyboard tracking.

@@ -1,0 +1,39 @@
+{% assign apps_os = site.data.sfz.software.os %}
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>License</th>
+{%-if page.show_documented-%}
+			<th>Documented</th>
+{%-endif-%}
+{%-for os in apps_os-%}
+			<th style="text-align:center">{{ os.name }}</th>
+{%-endfor-%}
+		</tr>
+	</thead>
+	<tbody>
+{%-for app in site.data.sfz.software.[page.topic]-%}
+	<tr>
+		<td><a href="{{ app.url }}">{{ app.name }}</a></td>
+		<td>{{ app.license }}</td>
+		{%-if page.show_documented-%}
+			{%-if app.documented-%}
+				{%-assign documented = "✓"-%}
+			{%-else-%}
+				{%-assign documented = "X"-%}
+			{%-endif-%}
+		<td style="text-align:center">{{ documented }}</td>
+		{%-endif-%}
+	{%-for os in apps_os-%}
+		{%-if app.os contains os-%}
+			{%-assign os_supported = "✓"-%}
+		{%-else-%}
+			{%-assign os_supported = "X"-%}
+		{%-endif-%}
+		<td style="text-align:center">{{ os_supported }}</td>
+	{%-endfor-%}
+	</tr>
+{%-endfor-%}
+	</tbody>
+</table>

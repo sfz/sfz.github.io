@@ -1,4 +1,5 @@
 ---
+lang: en
 title: bend_stepup
 ---
 Pitch bend step, in cents, applied to upwards bends only. If this is set to the

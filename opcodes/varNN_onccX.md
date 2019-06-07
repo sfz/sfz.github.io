@@ -1,4 +1,5 @@
 ---
+lang: en
 title: varNN_onccX
 ---
 The amount by which MIDI CC X modulates variable NN. The modulation is either

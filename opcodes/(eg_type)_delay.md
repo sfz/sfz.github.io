@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_delay
 ---
 EG delay time, in seconds. This is the time elapsed from note on to the start of

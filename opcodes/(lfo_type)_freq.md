@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_freq
 ---
 LFO frequency, in hertz.

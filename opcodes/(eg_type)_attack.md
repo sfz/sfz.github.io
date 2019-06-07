@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (eg type)_attack
 ---
 EG attack time, in seconds.

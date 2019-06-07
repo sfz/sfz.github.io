@@ -1,4 +1,5 @@
 ---
+lang: en
 title: xfout_lovel / xfout_hivel
 ---
 Fade out control, based on velocity.

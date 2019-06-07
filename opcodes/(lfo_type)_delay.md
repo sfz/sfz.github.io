@@ -1,4 +1,5 @@
 ---
+lang: en
 title: (lfo type)_delay
 ---
 The time before the LFO starts oscillating, in seconds.

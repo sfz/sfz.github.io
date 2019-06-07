@@ -1,4 +1,5 @@
 ---
+lang: en
 title: note_polyphony
 ---
 Polyphony limit for playing the same note repeatedly.

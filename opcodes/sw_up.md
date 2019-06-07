@@ -1,4 +1,5 @@
 ---
+lang: en
 title: sw_up
 ---
 Enables the region to play if the key equal to `sw_up` value is not depressed.

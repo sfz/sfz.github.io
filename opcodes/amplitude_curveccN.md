@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amplitude_curveccN
 ---
 Specifies the curve number to be used when modulating the amplitude of the region

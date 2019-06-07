@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amp_keycenter
 ---
 Center key for amplifier keyboard tracking. In this key, the amplifier keyboard

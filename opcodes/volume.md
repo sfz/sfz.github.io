@@ -1,4 +1,5 @@
 ---
+lang: en
 title: volume
 ---
 The volume for the region, in decibels.

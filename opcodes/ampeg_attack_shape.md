@@ -1,4 +1,5 @@
 ---
+lang: en
 title: ampeg_attack_shape
 ---
 Specifies the curvature of attack stage of the amplifier envelope.

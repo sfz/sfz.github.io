@@ -1,4 +1,5 @@
 ---
+lang: en
 title: bend_down
 ---
 Pitch bend range when Bend Wheel or Joystick is moved down, in cents.

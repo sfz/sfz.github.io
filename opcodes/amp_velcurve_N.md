@@ -1,4 +1,5 @@
 ---
+lang: en
 title: amp_velcurve_N
 ---
 User-defined amplifier velocity curve. This opcode range allows defining a

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: tune
 ---
 The fine tuning for the sample, in cents.

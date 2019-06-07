@@ -1,4 +1,5 @@
 ---
+lang: en
 title: stop_beats
 ---
 Intended to be a counterpart to delay_beats but apparently not actually

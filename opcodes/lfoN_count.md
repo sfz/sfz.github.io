@@ -1,4 +1,5 @@
 ---
+lang: en
 title: lfoN_count
 ---
 Number of LFO repetitions for LFO N before the LFO stops.

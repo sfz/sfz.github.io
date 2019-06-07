@@ -1,4 +1,5 @@
 ---
+lang: en
 title: md5
 ---
 The MD5 hash for an encoded sample. It will be a 128-bit key in hex.

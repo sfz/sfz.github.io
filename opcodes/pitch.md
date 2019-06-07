@@ -1,4 +1,5 @@
 ---
+lang: en
 title: pitch
 ---
 Pitch change in cents. Apparently equivalent to tune.

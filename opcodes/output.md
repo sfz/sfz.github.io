@@ -1,4 +1,5 @@
 ---
+lang: en
 title: output
 ---
 The stereo output number for this region.
