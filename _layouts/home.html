@@ -4,6 +4,7 @@
 {% include head.html %}
 	</head>
 	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
 		<a href="#content" class="sr-only">Skip to content</a>
 		<div class="container">
 {% include header.html %}
@@ -15,12 +16,23 @@
 				</div>
 				<div class="col-md-3">
 					<aside>
-{% include aside.html %}
+{% include cards.html %}
 					</aside>
 				</div>
 			</div>
 {% include footer.html %}
 		</div>
 {% include scripts.html %}
+{% if site.disqus_shortname %}
+		<script type="text/javascript">
+			var disqus_shortname = "{{ site.disqus_shortname }}";
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+		</script>
+{% endif %}
 	</body>
 </html>

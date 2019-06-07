@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+lang: en
 date_fmt: "%B %d, %Y"
 ---
 ### Welcome to SFZFormat.com!

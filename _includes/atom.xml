@@ -1,0 +1,24 @@
+{%-assign default_locale = site.data.i18n.config.default-%}
+{%-if page.lang == default_locale-%}
+	{%-assign page_path_prefix = "/"-%}
+{%-else-%}
+	{%-assign page_path_prefix = '/' | append: page.lang | append: '/'-%}
+{%-endif-%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ site.data.i18n.locales[page.lang].translation.news }}</title>
+	<link href="{{ site.url }}{{ page_path_prefix }}atom.xml" rel="self"/>
+	<link href="{{ site.url }}{{ page_path_prefix }}"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>{{ site.url }}</id>
+{%-assign posts=site.posts | where:"lang", page.lang-%}
+{% for post in posts limit:20 %}
+	<entry>
+		<title>{{ post.title }}</title>
+		<link href="{{ site.url }}{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>{{ post.id }}</id>
+		<content type="html">{{ post.content | xml_escape }}</content>
+	</entry>
+{% endfor %}
+</feed>

@@ -93,9 +93,9 @@ this file recognize the following variable structure:
 - pages: Submenus container. An empty item, using just a hyphen,
          creates a menu separator.
 
-### `aside.yml`
+### `cards.yml`
 
-Used by the `_layouts/aside.html` layout to build the [cards][] at the right
+Used by the `_layouts/cards.html` layout to build the [cards][] at the right
 side of the pages. It's very similar to the navigation one with few differences:
 
 - title: The card header title

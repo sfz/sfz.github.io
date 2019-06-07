@@ -1,0 +1,118 @@
+---
+layout: default
+---
+{{ content }}
+<style>
+td.center {
+	text-align: center;
+}
+</style>
+{%-assign opcode_info = site.data.opcodes[page.title]-%}
+{%-if opcode_info.min == nil-%}
+    {%-assign opcode_info_range = "N/A"-%}
+{%-else-%}
+    {%-assign opcode_info_range = opcode_info.min | append: " to " | append: opcode_info.max | append: " " | append: opcode_info.unit-%}
+{%-endif-%}
+<table>
+	<thead>
+		<tr>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ opcode_info.type }}</td>
+			<td>{{ opcode_info.default }}</td>
+			<td>{{ opcode_info_range }}</td>
+		</tr>
+	</tbody>
+</table>
+
+{%-if opcode_info.modulation != nil-%}
+	{%-assign envelope = opcode_info.modulation.envelope-%}
+	{%-assign lfo      = opcode_info.modulation.lfo-%}
+	{%-assign midi_cc  = opcode_info.modulation.midi_cc-%}
+	{%-if envelope != nil-%}
+		{%-assign env_flag = "✓"-%}
+	{%-else-%}
+		{%-assign env_flag = "X"-%}
+	{%-endif-%}
+	{%-if lfo != nil-%}
+		{%-assign lfo_flag = "✓"-%}
+	{%-else-%}
+		{%-assign lfo_flag = "X"-%}
+	{%-endif-%}
+	{%-if midi_cc != nil-%}
+		{%-assign midi_flag = "✓"-%}
+	{%-else-%}
+		{%-assign midi_flag = "X"-%}
+	{%-endif-%}
+<table>
+	<thead>
+		<tr>
+			<th>Modulation Sources</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Envelope</td>
+			<td class="center">{{ env_flag }}</td>
+			<td>{{ envelope.name }}</td>
+		</tr>
+		<tr>
+			<td>LFO</td>
+			<td class="center">{{ lfo_flag }}</td>
+			<td>{{ lfo.name }}</td>
+		</tr>
+		<tr>
+			<td>MIDI CC</td>
+			<td class="center">{{ midi_flag }}</td>
+			<td>{{ midi_cc.name }}</td>
+		</tr>
+	</tbody>
+</table>
+{%-endif-%}
+
+{%-if midi_cc != nil-%}
+<p><code class="highlighter">`{{midi_cc.name}}`</code> uses the following values:</p>
+    {%-assign midi_cc_range = midi_cc.min | append: " to " | append: midi_cc.max | append: " " | append: midi_cc.unit-%}
+<table>
+	<thead>
+		<tr>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ midi_cc.type }}</td>
+			<td>{{ midi_cc.default }}</td>
+			<td>{{ midi_cc_range }}</td>
+		</tr>
+	</tbody>
+</table>
+{%-endif-%}
+
+<h3>Players Support</h3>
+
+<table>
+	<thead>
+		<tr>
+{%-for player in opcode_info.supported_by-%}
+			<th>{{ player.name }}</th>
+{%-endfor-%}
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+{%-for player in opcode_info.supported_by-%}
+			<td class="center">{{ player.status }}</td>
+{%-endfor-%}
+		</tr>
+	</tbody>
+</table>
