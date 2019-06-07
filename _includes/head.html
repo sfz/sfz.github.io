@@ -1,32 +1,28 @@
-<meta charset="utf-8">
-<title>
-{% if page.title %}
-	{{ page.title | escape }} - {{ site.organization_name }}
-{% else %}
-	{{ site.organization_name }}
-{% endif %}
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="{{ site.organization_name }}">
+		<meta charset="utf-8">
 
-<link href="/atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+		<title>
+		{%-if page.title-%}
+			{{ page.title | escape }} - {{ site.organization.name }}
+		{%-else-%}
+			{{ site.organization.name }}
+		{%-endif-%}
+		</title>
 
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/ico/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/ico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
-<link rel="manifest" href="/assets/ico/site.webmanifest">
-<link rel="mask-icon" href="/assets/ico/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/ico/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/assets/ico/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+		{% if site.authors.content %}<meta name="author" content="{{ site.authors.content }}">{% endif %}
+		{% if site.authors.web %}<meta name="web-author" content="{{ site.authors.web }}">{% endif %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% if site.google.analytics_code %}{%-include google-analytics.html-%}{% endif %}
+		<!-- Atom Feeds -->
+		<link href="/atom.xml" rel="alternate" title="News" type="application/atom+xml" />
 
-<link href="/assets/css/style.min.css" rel="stylesheet" media="screen">
-{% for stylesheet in page.stylesheets %}
-<link href="/assets/css/{{ stylesheet }}.css" rel="stylesheet">
-{% endfor %}
-<link rel="stylesheet" type="text/css" href="/assets/css/prettify.css">
-
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+		{% include favicons.html %}
+		<!-- Stylesheets -->
+		<link href="/assets/css/style.min.css" rel="stylesheet" media="screen">
+		{%-for stylesheet in page.stylesheets-%}
+		<link href="/assets/css/{{ stylesheet }}.css" rel="stylesheet">
+		{% endfor %}
+		{% include custom-styles.html %}
+		<!-- Font Awesome Icons -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>

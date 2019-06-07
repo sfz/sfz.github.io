@@ -1,9 +1,10 @@
 $blue: #337ab7;
-$navbar-dark-color:       rgba(#fff, .65);
-$navbar-dark-hover-color: rgba(#fff, .90);
+$navbar-dark-color: rgba(#fff, .75);
+$navbar-dark-hover-color: #fff;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "syntax-highlight";
+@import "google-cse";
 
 /* Styles applied site-wide. */
 
@@ -38,33 +39,21 @@ th {
 tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
-#searchresults {
-	.cse .gsc-control-cse,
-	.gsc-control-cse {
-		padding: 0;
-	}
-	.gcsc-branding,
-	.gsc-result-info,
-	.gsc-table-result,
-	.gsc-thumbnail-inside,
-	.gsc-url-top,
-	.gs-spelling,
-	.gs-promotion table {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.gsc-adBlock {
-		padding: 0;
-	}
-	.gsc-cursor {
-		font-size: 14px;
-	}
-	.gsc-cursor-page {
-		margin-left: -1px;
-		padding: 4px 10px;
-		border: 1px solid #ddd;
-	}
-	.gsc-results .gsc-cursor-box {
-		margin-top: 2em;
-	}
+#scrollButton {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 50%;
+}
+#scrollButton:hover {
+	background-color: rgba(255, 255, 255, 0.8);
 }

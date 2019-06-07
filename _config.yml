@@ -12,6 +12,10 @@ defaults:
       layout: "post"
 
 exclude:
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -22,14 +26,28 @@ exclude:
   - Rakefile
   - README.md
   - setup.sh
+  - assets/css/style.css
   - TODO.md
   - yarn.lock
   - yarn-error.log
-  - assets/css/style.css
 
 plugins:
   - jekyll-sitemap
 
-organization_name: SFZ Format
-
 url: "https://sfzformat.github.io"
+
+spdx_license_id: "MPL-2.0"
+
+organization:
+  name: "SFZ Format"
+  url: "https://sfzformat.github.io"
+
+authors:
+  content: "Karoryfer Samples and SFZ Format Team"
+  web: "RedTide and SFZ Format Team"
+
+google:
+  analytics_code: UA-138937603-1
+  cse_code:
+
+disqus_shortname:
