@@ -6,6 +6,8 @@ date_fmt: "%B %d, %Y"
 ---
 ### Welcome to SFZFormat.com!
 
+<div markdown="1" class="jumbotron p-4 mb-3">
+
 This is the main reference point for anyone who wants to create virtual musical
 instruments using the SFZ format. Currently the SFZ 2 opcodes and ARIA extensions
 documented though some require more detail, and SFZ 2 opcodes not supported by
@@ -36,8 +38,11 @@ distribute the SFZ format files for free, for either free or commercial applicat
 - You can browse the many SFZ 2 opcodes [starting here](/opcodes/sfz2).
 - A few opcodes have been added to [ARIA / Sforzando](/opcodes/aria)
     for more flexibility
+</div>
 
 ### Making Instruments
+
+<div markdown="1" class="jumbotron p-4 mb-3">
 
 Text guides on how to make a simple instrument, covering the essential opcodes
 
@@ -61,6 +66,7 @@ Some more advanced topics
 - [Cymbal muting](/tutorials/cymbal_muting) - using `group`, `off_by`, `off_mode`
   and `polyphony` to make hi-hat and cymbal notes mute previous notes
   in a musically useful way.
+</div>
 
 # Latest News
 
