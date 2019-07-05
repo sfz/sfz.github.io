@@ -121,3 +121,267 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 ```
+
+## Adjusting the envelope shapes
+
+The above fixed envelope shapes are good for medium tempos and energy levels,
+but for slow tempos the flat envelope shapes actually work quite well, and
+more energetic tracks might sound better with even sharper envelope peaks. It
+would be nice to adjust the envelope curve shapes with MIDI CC, but it is not
+currently possible to do this. It's possible to work around this by crossfading
+sharp-envelope and flat-envelope regions, or use locc/hicc to select between
+several pre-baked envelope shapes. Here's an example of the latter method.
+
+```
+
+<group>key=26 loop_mode=one_shot
+
+<region>hicc100=42
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+<region>hicc100=42
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=-1.4
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+
+<region>locc100=87
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=-3.5
+<region>locc100=87
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+```
+
+## Adding ornaments
+
+So far, we have a stir with adjustable duration and shape which peaks
+halfway through. More complex patterns can have more than one peak, 
+though. A simple way to emulate that is to use a differnet MIDI note
+to trigger short ornaments which will add a brief extra sound to the
+stir, thus emulating a momentary acceleration of the brush. We can use
+one of the higher stir speeds for this.
+
+```
+<group>key=27 loop_mode=one_shot sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.2 ampeg_decaycc1=0.2
+
+<region>hicc100=42
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+
+<region>hicc100=42
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+
+<region>hicc100=42
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+```
+
+## Accents
+
+We can also create accents, which are similar to the typical stir but peak much
+more quickly and use faster speeds. In pracitce, they can be used either as
+short, aggressive stirs, or added on top of basic stirs to create more complex
+patterns. The difference in the SFZ here is that the attack curve shape can be applied to
+the attack portion as well, and there is no hold stage in the envelope.
+
+```
+
+<group>key=28 loop_mode=one_shot
+
+<region>hicc100=42
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+<region>hicc100=42
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+
+<region>locc100=87
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+<region>locc100=87
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+```
+
+## Muting
+
+As all the above sounds have loop_mode set to one_shot, triggering a note causes
+the sound to play until the volume envelope drops to zero. If ending a stir
+earlier than that is required, we can put all the sounds in polyphony groups and
+make the groups self-muting. Note that, as usual, separate groups are needed for
+layers which are to play simultaneously, and if there are multiple microphone
+positions then those would need separate groups as well. In the below example we
+also have stirs mute accents, and vice versa, although the ornaments are left
+out of the mute groups and can be layered on top of other sounds without muting them.
+
+An additional mute key produces no sound, using silence instead of a sample,
+but is in the same mute groups, therefore muting any stir or accent currently playing.
+
+```
+
+<global>loop_mode=one_shot off_mode=normal
+ampeg_release=0.1 ampeg_release_cc1=0.2
+
+<group>key=26
+
+<region>hicc100=42
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+group=1 off_by=1
+<region>hicc100=42
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+group=2 off_by=2
+
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=-1.4
+group=1 off_by=1
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+group=2 off_by=2
+
+<region>locc100=87
+sample=snare_stir_speed_1.wav
+ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=-3.5
+group=1 off_by=1
+<region>locc100=87
+sample=snare_stir_speed_3.wav
+ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+group=2 off_by=2
+
+<group>key=27 sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.2 ampeg_decaycc1=0.2
+
+<region>hicc100=42
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+
+<region>hicc100=42
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+
+<region>hicc100=42
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+
+<group>key=28
+
+<region>hicc100=42
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+group=1 off_by=1
+<region>hicc100=42
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
+group=2 off_by=2
+
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+group=1 off_by=1
+<region>locc100=43 hicc100=86
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
+group=2 off_by=2
+
+<region>locc100=87
+sample=snare_stir_speed_2.wav
+ampeg_attack=0.05 ampeg_decay=0.1 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.4
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+group=1 off_by=1
+<region>locc100=87
+sample=snare_stir_speed_4.wav
+ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
+ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
+group=2 off_by=2
+
+
+<group>key=29 sample=*silence
+
+<region>group=1 off_by=1
+<region>group=2 off_by=2
+```
+
+It is, of course, possible to apply round robins and dynamic layers to this,
+just like any other drum sound. That is left as an exercise to the reader.
+
+## Alternative approach
+
+The above approach was developed to be playable from an electronic drum kit
+controller. For keyboard controllers or sequencing, another approach is possible,
+which requires holding down a note for the duration of the stir, and using MIDI CC
+to crossfade between the layers to modulate the current speed. With samples that
+are looped, the note can even be held down for several measures or for an entire
+track.
+
+```
+<group>key=26 loop_mode=continuous ampeg_release=0.25
+<region>sample=snare_stir_speed_1.wav xfin_locc1=0 xfin_hicc1=31 xfout_locc1=32 xfout_hicc1=63
+<region>sample=snare_stir_speed_2.wav xfin_locc1=32 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=95
+<region>sample=snare_stir_speed_3.wav xfin_locc1=64 xfin_hicc1=95 xfout_locc1=96 xfout_hicc1=127
+<region>sample=snare_stir_speed_4.wav xfin_locc1=96 xfin_hicc1=127
+```
+
+In practice, this approach has proven more difficult to use, with it being easy
+to sound obviously unrealistic by moving the MIDI CC parameter too quickly or
+staying at high values for too long. With care, however, it can produce realistic
+results, and it is extremely flexible.
