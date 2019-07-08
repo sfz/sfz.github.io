@@ -3,13 +3,15 @@ title: Brush stirs
 lang: en
 ---
 Not all drum sounds are hits which can be used in the usual way described in our [drum basics](/tutorials/drum_basics)
-article. One major exception is brush techniques which involve scraping the
-brush across a drum head, often in a circle. As these change in intensity
-while the sound's being produced, and the duration of the scrapes needs to
-fit the tempo and rhythm of the song, sampling them requires a different
-approach to the usual drum hits. The two common approaches are to completely
-ignore this technique and not sample it at all, and to record loops to fit
-various tempos.
+article. One major exception are brush techniques which involve scraping the
+brush across a drum head, often in a circle. If you are not sure what this
+looks or sounds like, [this video is a good guide](https://www.youtube.com/watch?v=R982CdhRF9E).
+These techniques are called swirls or stirs, and for the purpose of this article
+we'll call them stirs. As the sound changes in intensity, and the duration
+of the scrapes needs to fit the tempo and rhythm of the song, sampling them
+requires a different approach to the usual drum hits. The two common approaches
+are to completely ignore this technique and not sample it at all, and to record
+loops to fit various tempos.
 
 This article describes another approach. The key principle here
 is that stirs are a noisy, nonlinear sound with a lot of randomness, which
@@ -24,10 +26,11 @@ a musical stir.
 For the purposes of this example, let's assume the source stirs are recorded
 at four speeds, with 1 being the slowest and 4 being the fastest. Speed 1 is
 slow enough that a full circle around the head of the drum is completed in
-approximately 4 seconds (enough to fill a measure at 60 bpm). Speed 4 is
-several circles per second, to match the speed at which the brush would be
-moving during the peak of an aggressive stir. Making the sound steady at
-this speed is a challenge.
+more than 4 seconds. That's enough to fill a measure at 60 bpm and still have
+some sound left, so the user can start the next stir before the previous one
+ends, and thus achieve a continuous sound. Speed 4 is several circles per
+second, to match the speed at which the brush would be moving during the peak
+of an aggressive stir. Making the sound steady at this speed is a challenge.
 
 As for how long the recordings need to be, speed 1 needs to be long enough
 for the longest stir we want to be able to make. However, if tuning controls
@@ -91,7 +94,8 @@ layer steadier. This can be done very easily by shortening the attack
 and adding a hold time to the envelope, ensuring that they still add up
 to the same amount of time that the faster layer's delay and attack,
 so the peak will remain aligned at all values of the modulation
-parameter. The attack stage should generally be shorter than the hold.
+parameter. The attack stage should generally be shorter than the hold
+stage.
 
 ```
 <region>key=26 loop_mode=one_shot
@@ -244,15 +248,18 @@ ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 
 As all the above sounds have loop_mode set to one_shot, triggering a note causes
 the sound to play until the volume envelope drops to zero. If ending a stir
-earlier than that is required, we can put all the sounds in polyphony groups and
-make the groups self-muting. Note that, as usual, separate groups are needed for
+earlier than that is required, we can use polyphony groups. The [group](/opcodes/group) and [off_by](/opcodes/off_by)
+opcodes are the key ones here. We can use them to make stirs self-mute, so that
+triggering a new stir will mute any previously playing stirs, as well as add a key
+which produces no sound, using silence instead of a sample, but is in the same mute
+groups, therefore muting any stir or accent currently playing. This key can be used
+to stop stirs early.
+
+Note that, as usual, separate groups are needed for
 layers which are to play simultaneously, and if there are multiple microphone
 positions then those would need separate groups as well. In the below example we
 also have stirs mute accents, and vice versa, although the ornaments are left
 out of the mute groups and can be layered on top of other sounds without muting them.
-
-An additional mute key produces no sound, using silence instead of a sample,
-but is in the same mute groups, therefore muting any stir or accent currently playing.
 
 ```
 
@@ -367,11 +374,14 @@ just like any other drum sound. That is left as an exercise to the reader.
 ## Alternative approach
 
 The above approach was developed to be playable from an electronic drum kit
-controller. For keyboard controllers or sequencing, another approach is possible,
-which requires holding down a note for the duration of the stir, and using MIDI CC
-to crossfade between the layers to modulate the current speed. With samples that
-are looped, the note can even be held down for several measures or for an entire
-track.
+controller. For keyboard controllers or sequencing, another approach is possible
+where instead of using a MIDI note to trigger a new stir every time the drummer
+would complete a circle, we hold down a long note for as long as we want to produce
+stirs (so, possibly for several measures, or even the entire duration of a song).
+We then use MIDI CC to crossfade between the layers to modulate the speed of the
+stir in order to create realism and rhythmic interest. In order to be able to do
+this, the samples will have to be looped, but as stated at the beginning, looping
+or crossfading noisy samples is very easy as there are no phase issues.
 
 ```
 <group>key=26 loop_mode=continuous ampeg_release=0.25
@@ -385,3 +395,14 @@ In practice, this approach has proven more difficult to use, with it being easy
 to sound obviously unrealistic by moving the MIDI CC parameter too quickly or
 staying at high values for too long. With care, however, it can produce realistic
 results, and it is extremely flexible.
+
+## Further possibilities
+
+The brush flutter technique can be treated similarly to the base layer of the stirs.
+There is no need to layer faster and slower flutters. In theory, this approach
+could also be extended to other noisy, highly nonlinear sounds which can vary
+in duration - perhaps shakers. The main challenge there would be to record shakers
+shaking smoothly for an extended duration.
+
+It is also certainly possible to further improve the above model with more realism
+and playablity.
