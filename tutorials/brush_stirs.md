@@ -44,8 +44,8 @@ the purposes of this example they can be half the length of speed 1.
 
 We can make a very simple stir using speed 1 by playing the sample with
 [loop_mode](/opcodes/loop_mode) set to one_shot, like we normally would set it for a
-drum hit, and using a volume envelope to fade this sample in over a time, and
-then fade it out.
+drum hit, and using a simple [volume envelope](/types/envelope_generators#sfz-1-egs)
+to fade this sample in over a time, and then fade it out.
 
 ```
 <region>key=26 loop_mode=one_shot
@@ -134,7 +134,8 @@ more energetic tracks might sound better with even sharper envelope peaks. It
 would be nice to adjust the envelope curve shapes with MIDI CC, but it is not
 currently possible to do this. It's possible to work around this by crossfading
 sharp-envelope and flat-envelope regions, or use locc/hicc to select between
-several pre-baked envelope shapes. Here's an example of the latter method.
+several pre-baked [envelope shapes](/opcodes/ampeg_attack_shape). Here's an
+example of the latter method.
 
 ```
 
@@ -251,15 +252,17 @@ the sound to play until the volume envelope drops to zero. If ending a stir
 earlier than that is required, we can use polyphony groups. The [group](/opcodes/group) and [off_by](/opcodes/off_by)
 opcodes are the key ones here. We can use them to make stirs self-mute, so that
 triggering a new stir will mute any previously playing stirs, as well as add a key
-which produces no sound, using silence instead of a sample, but is in the same mute
-groups, therefore muting any stir or accent currently playing. This key can be used
-to stop stirs early.
+which produces no sound, using [silence instead of a sample](/opcodes/sample), but
+is in the same mute groups, so triggering this key will mute any stir or accent
+currently playing. This key can be used to stop stirs early.
 
 Note that, as usual, separate groups are needed for
 layers which are to play simultaneously, and if there are multiple microphone
 positions then those would need separate groups as well. In the below example we
 also have stirs mute accents, and vice versa, although the ornaments are left
 out of the mute groups and can be layered on top of other sounds without muting them.
+For a more sophisticated use of mute groups with other pieces of the drum kit,
+please see [cymbal muting](/tutorials/cymbal_muting).
 
 ```
 
@@ -368,7 +371,7 @@ group=2 off_by=2
 <region>group=2 off_by=2
 ```
 
-It is, of course, possible to apply round robins and dynamic layers to this,
+It is, of course, possible to apply [round robins](/opcodes/seq_position) and [dynamic layers](/opcodes/lo_hivel) to this,
 just like any other drum sound. That is left as an exercise to the reader.
 
 ## Alternative approach
@@ -378,10 +381,12 @@ controller. For keyboard controllers or sequencing, another approach is possible
 where instead of using a MIDI note to trigger a new stir every time the drummer
 would complete a circle, we hold down a long note for as long as we want to produce
 stirs (so, possibly for several measures, or even the entire duration of a song).
-We then use MIDI CC to crossfade between the layers to modulate the speed of the
-stir in order to create realism and rhythmic interest. In order to be able to do
-this, the samples will have to be looped, but as stated at the beginning, looping
-or crossfading noisy samples is very easy as there are no phase issues.
+We then [use MIDI CC to crossfade between the layers](/opcodes/xfin_lo_hiccN) to
+modulate the speed of the stir in order to create realism and rhythmic interest.
+In order to be able to do this, the samples will have to be looped, but as stated
+at the beginning, looping or crossfading noisy samples is very easy as there are
+no phase issues. We also set the [loop_mode](/opcodes/loop_mode) opcode to continuous
+instead of the one_shot setting used in the earlier approach.
 
 ```
 <group>key=26 loop_mode=continuous ampeg_release=0.25
