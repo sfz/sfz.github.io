@@ -14,7 +14,7 @@ as well, up to a maximum of the full [ampeg_decay]((eg_type)_decay) value at
 
 Setting this to false will make the decay always happen during the entire
 time period specified by `ampeg_decay`, regardless of the current
-`ampeg_sustainv level.
+`ampeg_sustain` level.
 
 ##### Examples
 
