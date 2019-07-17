@@ -13,7 +13,7 @@ curve_index=12
 ```
 
 There are default built-in curves in ARIA. If no curve is specified for
-a modulation, curve 0 is used. The built-in ARIA curves are:
+a modulation, curve 0 (linear) is used. The built-in ARIA curves are:
 
 0. linear, from 0 to 1
 1. bipolar, from -1 to 1 (useful for things such as tuning and panning,
