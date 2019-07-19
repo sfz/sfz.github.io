@@ -18,22 +18,20 @@ The additions in SFZ 2 are:
 - unipolar random: 135
 - bipolar random: 136
 - alternate: 137
-- coarse tune (TODO: not sure, this needs testing): 138
-- fine tune (TODO: not sure, this needs testing): 139
 
 Note gate is an on/off - it's 0 when no MIDI notes are pressed, and 1 when
-at least one note is currently pressed.
-
-Unipolar random is from 0 to 1.
-
+at least one note is currently pressed. Unipolar random is from 0 to 1.
 Bipolar random is from -1 to 1. Alternate changes between 0 and 1 every time
 a note on message is received.
 
-ARIA adds more:
+Anything above 137 is not specified in the SFZ 2 standard and strictly
+engine-dependent. ARIA adds more:
 
 - keydelta: 140
 - keydelta absolute: 141
 - host tempo (bpm): 142
+
+In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
 | SFZ Level: SFZ 2                 |
 | -------------------------------- |
