@@ -22,6 +22,9 @@ print $fh <<EOF
 ---
 title: "$title"
 date: $date
+date_fmt: "%F"
 comments: false
+categories: news
+lang: en
 ---
 EOF
