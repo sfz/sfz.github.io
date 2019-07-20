@@ -1,6 +1,6 @@
 ---
 lang: en
-title: xfcccurve
+title: xf_cccurve
 ---
 MIDI controllers crossfade curve for the region. Values can be:
 
