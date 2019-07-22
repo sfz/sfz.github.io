@@ -56,7 +56,7 @@ ampeg_attack=1.0 ampeg_decay=1.0 ampeg_sustain=0
 The resulting volume envelope will look something like this. The illustrations are
 not precise, only general shapes.
 
-![alt text](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir1.jpg "Simple stir envelope")
+![Simple stir envelope](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir1.jpg)
 
 This is a good start, and we can add expression and realism by layering a
 faster speed on top of it near the stir's peak, with half the duration
@@ -72,7 +72,7 @@ sample=snare_stir_speed_3.wav
 ampeg_delay=0.5 ampeg_attack=0.5 ampeg_decay=0.5 ampeg_sustain=0
 ```
 
-![alt text](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir2.jpg "Two layers' stir envelopes")
+![Two layer stir envelopes](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir2.jpg)
 
 ## Modulating stir duration
 
@@ -115,7 +115,7 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
 ```
 
-![alt text](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir3.jpg "Stir envelopes using hold in base layer")
+![Stir envelopes using hold in base layer](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir3.jpg)
 
 Also, the peak should be sharper and more accented than it is
 with linear envelopes. Changing the envelope curves accomplishes this,
@@ -134,7 +134,7 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 ```
-![alt text](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir4.jpg "Stir envelopes with curves")
+![Stir envelopes with curves](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir4.jpg)
 
 ## Adjusting the envelope shapes
 
