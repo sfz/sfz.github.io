@@ -66,6 +66,9 @@ Some more advanced topics
 - [Cymbal muting](/tutorials/cymbal_muting) - using `group`, `off_by`, `off_mode`
   and `polyphony` to make hi-hat and cymbal notes mute previous notes
   in a musically useful way.
+	
+- [Brush stirs](/tutorials/brush_stirs) - two different approaches to brushed
+	drum techniques which produce a continuous sound rather than a hit.
 </div>
 
 # Latest News
