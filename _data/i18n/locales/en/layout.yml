@@ -56,6 +56,9 @@ navigation:
 
     - title: "Cymbal Muting"
       url: "/tutorials/cymbal_muting"
+      
+    - title: "Brush Stirs"
+      url: "/tutorials/brush_stirs"
     -
 
     - title: "SFZ 1 Pitch LFO"
