@@ -55,6 +55,14 @@ players:
   - name: "macOS X"
   - name: "Windows"
 
+- name: "Bliss Sampler"
+  license: "Commercial"
+  url: "https://www.discodsp.com/bliss/"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
 - name: "TAL-Sampler"
   license: "Commercial"
   url: "https://tal-software.com/products/tal-sampler"
