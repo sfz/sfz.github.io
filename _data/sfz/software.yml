@@ -9,6 +9,14 @@ os:
 # Players
 # ------------------------------------------------------------------------------
 players:
+- name: "Carla"
+  license: "Opensource"
+  url: "https://kx.studio/Applications:Carla"
+  os:
+  - name: "Linux"
+  - name: "macOS X"
+  - name: "Windows"
+
 - name: "LinuxSampler"
   license: "Opensource"
   url: "https://www.linuxsampler.org/"
@@ -48,13 +56,13 @@ players:
   - name: "Windows"
 
 - name: "TAL-Sampler"
-  license: "Freeware"
+  license: "Commercial"
   url: "https://tal-software.com/products/tal-sampler"
   os:
   - name: "macOS X"
   - name: "Windows"
 
-- name: "TX16Wx Software Sampler"
+- name: "TX16Wx Sampler"
   license: "Freeware"
   url: "https://www.tx16wx.com/"
   os:
