@@ -329,13 +329,9 @@ categories:
 
     - name: "amplitude_onccN"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "amplitude_smoothccN"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "global_amplitude"
       version: "ARIA"
@@ -395,178 +391,32 @@ categories:
       max: 100
       unit: "seconds"
 
-    - name: "fileg_delay_onccN"
-      page: "(eg_type)_delay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_start_onccN"
-      page: "(eg_type)_start"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_attack_onccN"
-      page: "(eg_type)_attack"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_hold_onccN"
-      page: "(eg_type)_hold"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_decay_onccN"
-      page: "(eg_type)_decay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_sustain_onccN"
-      page: "(eg_type)_sustain"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_release_onccN"
-      page: "(eg_type)_release"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fileg_depth_onccN"
-      page: "(eg_type)_depth"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_delay_onccN"
-      page: "(eg_type)_delay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_start_onccN"
-      page: "(eg_type)_start"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_attack_onccN"
-      page: "(eg_type)_attack"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_hold_onccN"
-      page: "(eg_type)_hold"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_decay_onccN"
-      page: "(eg_type)_decay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_sustain_onccN"
-      page: "(eg_type)_sustain"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_release_onccN"
-      page: "(eg_type)_release"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitcheg_depth_onccN"
-      page: "(eg_type)_depth"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
   - name: "LFO"
     url: "/types/lfo"
     opcodes:
     - name: "lfoN_offset"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_offset2"
       page: "lfoN_offset"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_ratio"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_ratio2"
       page: "lfoN_ratio"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_scale"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_scale2"
       page: "lfoN_scale"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
 
     - name: "lfoN_wave2"
       version: "ARIA"
-      supported_by:
-      - name: "ARIA"
-
-    - name: "amplfo_delay_onccN"
-      page: "(lfo_type)_delay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "amplfo_fade_onccN"
-      page: "(lfo_type)_fade"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fillfo_delay_onccN"
-      page: "(lfo_type)_delay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "fillfo_fade_onccN"
-      page: "(lfo_type)_fade"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitchlfo_delay_onccN"
-      page: "(lfo_type)_delay"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
-
-    - name: "pitchlfo_fade_onccN"
-      page: "(lfo_type)_fade"
-      version: "LinuxSampler"
-      supported_by:
-      - name: "LinuxSampler"
 
 - name: "Curves"
   opcodes:
