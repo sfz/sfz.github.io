@@ -94,12 +94,15 @@ categories:
         unit: "sample units"
 
     - name: "loop_mode"
-      alias: "loopmode"
+      alias:
+      - name: "loopmode"
+        version: "SFZ v2"
       short_description: "The endpoint of the sample"
       version: "SFZ v1"
       value:
         type_name: "string"
-        default: "no_loop for samples without a loop defined\loop_continuous for samples with defined loop(s)"
+# TODO: Handle conditional expression?
+        default: "no_loop for samples without a loop defined, loop_continuous for samples with defined loop(s)"
         options:
         - name: "no_loop"
           description: "no looping will be performed. Sample will play straight from start to end, or until note off, whatever reaches first."
@@ -111,7 +114,9 @@ categories:
           description: "the player will play the loop while the note is held, by keeping it depressed or by using the sustain pedal (CC64). The rest of the sample will play after note release."
 
     - name: "loop_start"
-      alias: "loopstart"
+      alias:
+      - name: "loopstart"
+        version: "SFZ v2"
       short_description: "The loop start point"
       version: "SFZ v1"
       value:
@@ -121,7 +126,9 @@ categories:
         max: 4294967296
 
     - name: "loop_end"
-      alias: "loopend"
+      alias:
+      - name: "loopend"
+        version: "SFZ v2"
       short_description: "The loop end point"
       version: "SFZ v1"
       value:
@@ -227,7 +234,6 @@ categories:
     opcodes:
     - name: "group"
       version: "SFZ v1"
-# TODO: The alias is not guaranteed to work on different players too.
       alias:
       - name: "polyphony_group"
         version: "ARIA"
@@ -384,7 +390,9 @@ categories:
           name: "attack_ccN"
 
     - name: "attack_ccN"
-      alias: "attack_onccN"
+      alias:
+      - name: "attack_onccN"
+        version: "SFZ v2"
       type_name: "float"
       default: 0
       min: -100
