@@ -9,16 +9,16 @@ references and rules for maintainance.
 
 ## GitHub and Travis-CI
 
-The webpage is hosted on [GitHub][] using [Git SCM][]
+The webpage is hosted on [GitHub] using [Git SCM]
 as content management, using 2 git repositories: source and master.
-The source repository is used for the website source files written in [Markdown][]
-format and [Liquid] language, which are used by [Jekyll][],
+The source repository is used for the website source files written in [Markdown]
+format and [Liquid] language, which are used by [Jekyll],
 a static pages website generator created and used by GitHub for hosting
 project websites.
 The master repository is used to store the generated files that are built
 externally by Travis Continuous Integration service.
 [Travis-CI] was choosed instead GitHub Pages to enable the use of Jekyll custom
-plugins required for our purposes, following their [GitHub Pages Deployment][]
+plugins required for our purposes, following their [GitHub Pages Deployment]
 documentation.
 
 [Git SCM]: https://git-scm.com/
@@ -31,11 +31,11 @@ documentation.
 
 ## Rules
 
-- Start any .md file with a 2 triple-dashed lines [front matter][],
+- Start any .md file with a 2 triple-dashed lines [front matter],
   otherwise Jekyll will copy the original md file into the resulting `_site`
   directory.
   Opcode files should include a `layout: opcode` variable to specify the required
-  layout to build the resulting html page.
+  layout to build the resulting html page (see the example below).
 
 - Using block code three back ticks even with a single line, inline code is used
   for opcode keywords highlights.
@@ -50,9 +50,9 @@ documentation.
 
 [front matter]: https://jekyllrb.com/docs/front-matter/
 
-### Content
+## Content
 
-#### Opcode File Example
+### Opcode File Example
 
 <?prettify?>
 <pre class="prettyprint">
@@ -72,20 +72,36 @@ opcode_name=value2
 ```
 </pre>
 
-## Configurations
+## YAML Configuration Files
 
-Other than the main [_config.yml][] file in the root of the source repo,
-there are some others configuration files in the `_data` directory, used in
-different contexts, some using the support of the `_layouts` files to keep
-content data and UI layout code separated, building page structures like tables
-from a common place.
+The main [_config.yml] configuration file is placed in the root of the source repo.
+It is used by Jekyll to store its configuration options, but it can also be used
+for user custom options as well.
+Other configuration files are placed in the `_data` directory, used for other
+website contexts, like translation strings, navigation menu, aside blocks,
+and other Sfz related data files.
 
 [_config.yml]: https://jekyllrb.com/docs/configuration/
 
-### `navigation.yml`
+### Translation files
 
-Used by the `_layouts/navigation.html` layout to build the navigation menu,
-this file recognize the following variable structure:
+The `/_data/i18n/` directory contains all YAML files used for website
+language translation:
+
+- `config.yml`: At the moment it contains only the default language.
+- `locales` directory: contains locale language related strings.
+
+Currently each language translation directory contains 2 files:
+
+- `layout.yml`: contains both the navigation menu links and the aside card blocks
+	strings
+- `translation.yml`: contains all the language related translation strings used
+	by default in the website pages.
+
+#### `layout.yml` navigation and cards section
+
+The `navigation` section is used by the `_includes/navigation.html` layout page
+to build the navigation menu. It recognizes the following variable structure:
 
 - title: The menu title
 - type:  The menu type, can be normal for simple links or dropdown for submenus,
@@ -94,10 +110,10 @@ this file recognize the following variable structure:
 - pages: Submenus container. An empty item, using just a hyphen,
          creates a menu separator.
 
-### `cards.yml`
-
-Used by the `_layouts/cards.html` layout to build the [cards][] at the right
-side of the pages. It's very similar to the navigation one with few differences:
+The `cards` section is used by the `_includes/cards.html` layout page to build
+the aside [card] blocks on the right side of most of the website pages to place
+various internal and external links.
+It's very similar to the navigation one with few differences:
 
 - title: The card header title
 - icon_type: A Font Awesome icon type name, e.g. "github"
@@ -106,67 +122,49 @@ side of the pages. It's very similar to the navigation one with few differences:
   - fab: brand icon
 - links: The contained card links.
 
-[cards]: https://getbootstrap.com/docs/4.0/components/card/
+[card]: https://getbootstrap.com/docs/4.0/components/card/
 
-### `headers.yml`
+### Sfz related YAML files
 
-Used by `_includes/sfz-tables-headers.html` to build `/opcodes/headers.md`
-description tables:
+The `/_data/sfz/` directory contains all YAML files used for Sfz related data.
+
+#### `syntax.yml`
+
+The `headers` section is used by the `_includes/sfz/headers-table-generator.html`
+to build `/opcodes/headers.md` description tables:
 
 - name: The header name
-- version: The SFZ version, can be on of:
+- version: The SFZ version, can be one of:
   - SFZ v1
   - SFZ v2
   - ARIA
   - LinuxSampler
-- supported_by: List of players supporting the related header. Value is the name
-  of the player, value represents a status.
 
-### `opcodes.yml`
+The `opcodes` section is used by different files as database information for all
+known opcodes, including extension ones.
 
-The file is accessible from the `site.data.opcodes` variable, which is accessed
-mainly by the `_layouts/opcode.html` layout to build each opcode related page.
+The data is accessible from the `site.data.sfz.syntax.opcodes` and
+ `site.data.sfz.syntax.headers` Liquid variables.
 
-The file is subdivided by opcode name data variables, each including data
-to describe the opcode structure.
+There are various possible variables, which most are not mandatory, so if some
+opcode doesn't includes a feature, it can be omitted, resulting in Liquid code as
+`variable-name == nil`.
 
-There are various possible values, which most are not mandatory, so if some opcode
-doesn't include a feature it can be omitted, resulting in code as
-`variable == nil`.
 Currently possible values are:
 
-- version: SFZ version or extension (1, 2, aria and linuxsampler).
-
-- type: Valid values are header and directive, opcode is implicit.
-        Directives should not include any '#' and headers not including
-        '<' or '>' in names.
+- version: SFZ version or extension (same as for headers).
 
 - value:
-  - type:    Value type (string, integer, float etc.), `mandatory` for opcodes.
-  - default: An optional default value.
-  - min:     An optional range minimum value.
-  - max:     An optional range maximum value.
-  - unit:    Value unit (seconds, decibels, cents etc.).<br><br>
+  - type_name: Value type (string, integer, float etc.), `mandatory` for opcodes.
+  - default:   An optional default value.
+  - min:       An optional range minimum value.
+  - max:       An optional range maximum value.
+  - unit:      Value unit (seconds, decibels, cents etc.).<br><br>
 
 - page: The page name where the opcode will be documented.
         It's the filename without the .md extension.
-
-If omitted, the opcode name will be used instead.
-
-- category:
-  - name: Opcode category name. E.g.: instrument-settings.
-  - type: Opcode category type. E.g.: voice-lifecycle.
-
-Both `name` and `type` are lowercase separated by a hyphen, translated in pages
-as e.g. "Instruments Settings" or "Voice Lifecycle".
-
-- supported_by:
-  - name:   Player name (ARIA, LinuxSampler) that supports the current opcode.
-  - status: Some displayed status symbol (✓ or Partial).
-
-If name or status is omitted is same as `status: X` and
-`site.data.opcodes.<opcode-name>.supported_by.{name|status} == nil` in Liquid.
+        If omitted, the opcode name will be used instead.
 
 - modulation:
   - midi_cc:
-    - same as above; type, default etc. and name: the ccN related opcode event name.
+    - name: the ccN related opcode event name.
