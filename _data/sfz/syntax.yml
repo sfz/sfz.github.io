@@ -1,25 +1,318 @@
 # ------------------------------------------------------------------------------
-# Opcode Categories
+# Headers
+# ------------------------------------------------------------------------------
+headers:
+- name: "region"
+  version: "SFZ v1"
+
+- name: "group"
+  version: "SFZ v1"
+
+- name: "control"
+  version: "SFZ v2"
+
+- name: "global"
+  version: "SFZ v2"
+
+- name: "curve"
+  version: "SFZ v2"
+
+- name: "effect"
+  version: "SFZ v2"
+
+- name: "master"
+  version: "ARIA"
+
+- name: "midi"
+  version: "ARIA"
+# ------------------------------------------------------------------------------
+# Opcodes
 # ------------------------------------------------------------------------------
 categories:
 - name: "Real-Time Instrument Script"
   url: "http://doc.linuxsampler.org/Instrument_Scripts/"
+  opcodes:
+  - name: "script"
+    version: "LinuxSampler"
 
 - name: "Sound Source"
   url: "/opcodes/categories#sound-source"
   types:
   - name: "Sample Playback"
+    opcodes:
+    - name: "count"
+      short_description: "The number of times the sample will be played"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+
+    - name: "delay_ccN"
+      alias: "delay_onccN"
+      short_description: "Region delay time after MIDI continuous controller N messages are received"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+
+    - name: "delay"
+      short_description: "Region delay time"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+          name: "delay_ccN"
+
+    - name: "delay_random"
+      short_description: "Region random delay time"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+
+    - name: "end"
+      short_description: "The endpoint of the sample, in sample units."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
+    - name: "loop_mode"
+      alias: "loopmode"
+      short_description: "The endpoint of the sample"
+      version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "no_loop for samples without a loop defined\loop_continuous for samples with defined loop(s)"
+        options:
+        - name: "no_loop"
+          description: "no looping will be performed. Sample will play straight from start to end, or until note off, whatever reaches first."
+        - name: "one_shot"
+          description: "sample will play from start to end, ignoring note off. This is commonly used for drums. This mode is engaged automatically if the count opcode is defined."
+        - name: "loop_continuous"
+          description: "once the player reaches sample loop point, the loop will play until note expiration."
+        - name: "loop_sustain"
+          description: "the player will play the loop while the note is held, by keeping it depressed or by using the sustain pedal (CC64). The rest of the sample will play after note release."
+
+    - name: "loop_start"
+      alias: "loopstart"
+      short_description: "The loop start point"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+
+    - name: "loop_end"
+      alias: "loopend"
+      short_description: "The loop end point"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+
+    - name: "offset"
+      short_description: "The offset used to play the sample, in sample units."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
+    - name: "offset_random"
+      short_description: "Random offset added to the region offset, in sample units."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
+    - name: "offset_ccN"
+      alias: "offset_onccN"
+      short_description: "The offset used to play the sample according to last position of MIDI continuous controller N, in sample units."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
+    - name: "sample"
+      short_description: "Defines which sample file the region will play"
+      version: "SFZ v1"
+      value:
+        type_name: "string"
+
+    - name: "sync_beats"
+      short_description: "Region playing synchronization to host position."
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 32
+        unit: "beats"
+
+    - name: "sync_offset"
+      short_description: "Region playing synchronization to host position offset."
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 32
+        unit: "beats"
 
 - name: "Instrument Settings"
   url: "/opcodes/categories#instrument-settings"
+  opcodes:
+  - name: "#define"
+    version: "SFZ v2"
+    type_name: "directive"
+
+  - name: "#include"
+    version: "ARIA"
+    type_name: "directive"
+
+  - name: "hint_"
+    version: "ARIA"
+
+  - name: "set_hdccN"
+    version: "ARIA"
+
+  - name: "sostenuto_lo"
+    version: "ARIA"
+
+  - name: "sostenuto_cc"
+    version: "ARIA"
+
+  - name: "sustain_lo"
+    version: "ARIA"
+
+  - name: "sustain_cc"
+    version: "ARIA"
+
+  - name: "sw_note_offset"
+    version: "ARIA"
+
+  - name: "sw_octave_offset"
+    version: "ARIA"
+
   types:
   - name: "Voice Lifecycle"
+    opcodes:
+    - name: "group"
+      version: "SFZ v1"
+# TODO: The alias is not guaranteed to work on different players too.
+      alias:
+      - name: "polyphony_group"
+        version: "ARIA"
+
+    - name: "off_by"
+      version: "SFZ v1"
+      short_description: "Region off group."
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+
+    - name: "off_mode"
+      version: "SFZ v1"
+      short_description: "Region off mode."
+      value:
+        type_name: "string"
+        default: "fast"
+        options:
+        - name: "fast"
+          description: "The voice will be turned off immediately. Release settings will not have any effect."
+        - name: "normal"
+          description: "The region will be set into release stage. All envelope generators will enter in release stage, and region will expire when the amplifier envelope generator expired."
+
+    - name: "output"
+      version: "SFZ v1"
+      short_description: "The stereo output number for this region."
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1024
+
+    - name: "off_curve"
+      version: "ARIA"
+
+    - name: "off_shape"
+      version: "ARIA"
+
+    - name: "off_time"
+      version: "ARIA"
 
 - name: "Region Logic"
   url: "/opcodes/categories#region-logic"
   types:
   - name: "Key Mapping"
   - name: "MIDI Conditions"
+    opcodes:
+    - name: "lohdccN"
+      version: "ARIA"
+      page: "lo_hihdccN"
+
+    - name: "hihdccN"
+      version: "ARIA"
+      page: "lo_hihdccN"
+
+    - name: "sw_default"
+      version: "ARIA"
+      page: "sw_default_label"
+
+    - name: "sw_label"
+      version: "ARIA"
+      page: "sw_default_label"
+
+    - name: "sw_lolast"
+      version: "ARIA"
+      page: "sw_lo_hilast"
+
+    - name: "sw_hilast"
+      version: "ARIA"
+      page: "sw_lo_hilast"
+
+    - name: "varNN_curveccX"
+      version: "ARIA"
+
+    - name: "varNN_mod"
+      version: "ARIA"
+
+    - name: "varNN_onccX"
+      version: "ARIA"
+
+    - name: "varNN_target"
+      version: "ARIA"
+
   - name: "Internal Conditions"
   - name: "Triggers"
 
@@ -27,6 +320,47 @@ categories:
   url: "/opcodes/categories#performance-parameters"
   types:
   - name: "Amplifier"
+    opcodes:
+    - name: "amplitude"
+      version: "ARIA"
+
+    - name: "amplitude_curveccN"
+      version: "ARIA"
+
+    - name: "amplitude_onccN"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "amplitude_smoothccN"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "global_amplitude"
+      version: "ARIA"
+
+    - name: "master_amplitude"
+      version: "ARIA"
+
+    - name: "group_amplitude"
+      version: "ARIA"
+
+    - name: "pan_law"
+      version: "ARIA"
+
+    - name: "global_volume"
+      version: "ARIA"
+
+    - name: "master_volume"
+      version: "ARIA"
+
+    - name: "group_volume"
+      version: "ARIA"
+
+    - name: "volume_onccN"
+      version: "ARIA"
+
   - name: "EQ"
   - name: "Filter"
   - name: "Pitch"
@@ -36,743 +370,213 @@ categories:
   types:
   - name: "Envelope Generators"
     url: "/types/envelope_generators"
-  - name: "LFO"
-    url: "/types/lfo"
-# ------------------------------------------------------------------------------
-# Headers
-# ------------------------------------------------------------------------------
-headers:
-- name: "region"
-  version: "SFZ v1"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
+    targets:
+    - name: "ampeg"
+    - name: "fileg"
+    - name: "pitcheg"
+    opcodes:
+    - name: "attack"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+          name: "attack_ccN"
 
-- name: "group"
-  version: "SFZ v1"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "control"
-  version: "SFZ v2"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "global"
-  version: "SFZ v2"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "curve"
-  version: "SFZ v2"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "effect"
-  version: "SFZ v2"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "master"
-  version: "ARIA"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "midi"
-  version: "ARIA"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-opcodes:
-# ------------------------------------------------------------------------------
-# Directives
-# ------------------------------------------------------------------------------
-- name: "#define"
-  version: "SFZ v2"
-  type_name: "directive"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "#include"
-  version: "ARIA"
-  type_name: "directive"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-# ------------------------------------------------------------------------------
-# SFZ v1
-# ------------------------------------------------------------------------------
-- name: "sample"
-  version: "SFZ v1"
-  value:
-    type_name: "string"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "(eg_type)_attack"
-  version: "SFZ v1"
-  value:
-    type_name: "float"
-    default: 0
-    min: 0
-    max: 100
-    unit: "seconds"
-  modulation:
-    midi_cc:
-      name: "(eg_type)_attack_onccN"
+    - name: "attack_ccN"
+      alias: "attack_onccN"
       type_name: "float"
       default: 0
       min: -100
       max: 100
       unit: "seconds"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-# ------------------------------------------------------------------------------
-# ARIA Extensions
-# ------------------------------------------------------------------------------
-- name: "hint_"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "set_hdccN"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sostenuto_lo"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sostenuto_cc"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sustain_lo"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sustain_cc"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_note_offset"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_octave_offset"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "off_curve"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-    type_name: "Voice Lifecycle"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "off_mode"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-    type_name: "Voice Lifecycle"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "off_shape"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-    type_name: "Voice Lifecycle"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "off_time"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-    type_name: "Voice Lifecycle"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "polyphony_group"
-  version: "ARIA"
-  category:
-    name: "Instrument Settings"
-    type_name: "Voice Lifecycle"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lohdccN"
-  version: "ARIA"
-  page: "lo_hihdccN"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "hihdccN"
-  version: "ARIA"
-  page: "lo_hihdccN"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_default"
-  version: "ARIA"
-  page: "sw_default_label"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_label"
-  version: "ARIA"
-  page: "sw_default_label"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_lolast"
-  version: "ARIA"
-  page: "sw_lo_hilast"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "sw_hilast"
-  version: "ARIA"
-  page: "sw_lo_hilast"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "varNN_curveccX"
-  version: "ARIA"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "varNN_mod"
-  version: "ARIA"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "varNN_onccX"
-  version: "ARIA"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "varNN_target"
-  version: "ARIA"
-  category:
-    name: "Region Logic"
-    type_name: "MIDI Conditions"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "amplitude"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "✓"
-
-- name: "amplitude_curveccN"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "amplitude_onccN"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "amplitude_smoothccN"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "global_amplitude"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "master_amplitude"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "group_amplitude"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "pan_law"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "global_volume"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "master_volume"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "group_volume"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "volume_onccN"
-  version: "ARIA"
-  category:
-    name: "Performance Parameters"
-    type_name: "Amplifier"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_offset"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_offset2"
-  page: "lfoN_offset"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_ratio"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_ratio2"
-  page: "lfoN_ratio"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_scale"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_scale2"
-  page: "lfoN_scale"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "lfoN_wave2"
-  version: "ARIA"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "curve_index"
-  version: "ARIA"
-  category:
-    name: "Curves"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "param_offset"
-  version: "ARIA"
-  category:
-    name: "Effects"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-
-- name: "vendor_specific"
-  version: "ARIA"
-  category:
-    name: "Effects"
-  supported_by:
-    ARIA: "✓"
-    LinuxSampler: "X"
-# ------------------------------------------------------------------------------
-# LinuxSampler Extensions
-# ------------------------------------------------------------------------------
-- name: "script"
-  version: "LinuxSampler"
-  category:
-    name: "Real-Time Instrument Script"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_delay_onccN"
-  page: "(eg_type)_delay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_start_onccN"
-  page: "(eg_type)_start"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_attack_onccN"
-  page: "(eg_type)_attack"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_hold_onccN"
-  page: "(eg_type)_hold"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_decay_onccN"
-  page: "(eg_type)_decay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_sustain_onccN"
-  page: "(eg_type)_sustain"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_release_onccN"
-  page: "(eg_type)_release"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fileg_depth_onccN"
-  page: "(eg_type)_depth"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_delay_onccN"
-  page: "(eg_type)_delay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_start_onccN"
-  page: "(eg_type)_start"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_attack_onccN"
-  page: "(eg_type)_attack"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_hold_onccN"
-  page: "(eg_type)_hold"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_decay_onccN"
-  page: "(eg_type)_decay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_sustain_onccN"
-  page: "(eg_type)_sustain"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_release_onccN"
-  page: "(eg_type)_release"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitcheg_depth_onccN"
-  page: "(eg_type)_depth"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "Envelope Generators"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "amplfo_delay_onccN"
-  page: "(lfo_type)_delay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "amplfo_fade_onccN"
-  page: "(lfo_type)_fade"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fillfo_delay_onccN"
-  page: "(lfo_type)_delay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "fillfo_fade_onccN"
-  page: "(lfo_type)_fade"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitchlfo_delay_onccN"
-  page: "(lfo_type)_delay"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
-
-- name: "pitchlfo_fade_onccN"
-  page: "(lfo_type)_fade"
-  version: "LinuxSampler"
-  category:
-    name: "Modulation"
-    type_name: "LFO"
-  supported_by:
-    ARIA: "X"
-    LinuxSampler: "✓"
+
+    - name: "fileg_delay_onccN"
+      page: "(eg_type)_delay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_start_onccN"
+      page: "(eg_type)_start"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_attack_onccN"
+      page: "(eg_type)_attack"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_hold_onccN"
+      page: "(eg_type)_hold"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_decay_onccN"
+      page: "(eg_type)_decay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_sustain_onccN"
+      page: "(eg_type)_sustain"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_release_onccN"
+      page: "(eg_type)_release"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fileg_depth_onccN"
+      page: "(eg_type)_depth"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_delay_onccN"
+      page: "(eg_type)_delay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_start_onccN"
+      page: "(eg_type)_start"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_attack_onccN"
+      page: "(eg_type)_attack"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_hold_onccN"
+      page: "(eg_type)_hold"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_decay_onccN"
+      page: "(eg_type)_decay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_sustain_onccN"
+      page: "(eg_type)_sustain"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_release_onccN"
+      page: "(eg_type)_release"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitcheg_depth_onccN"
+      page: "(eg_type)_depth"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+  - name: "LFO"
+    url: "/types/lfo"
+    opcodes:
+    - name: "lfoN_offset"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_offset2"
+      page: "lfoN_offset"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_ratio"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_ratio2"
+      page: "lfoN_ratio"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_scale"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_scale2"
+      page: "lfoN_scale"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "lfoN_wave2"
+      version: "ARIA"
+      supported_by:
+      - name: "ARIA"
+
+    - name: "amplfo_delay_onccN"
+      page: "(lfo_type)_delay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "amplfo_fade_onccN"
+      page: "(lfo_type)_fade"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fillfo_delay_onccN"
+      page: "(lfo_type)_delay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "fillfo_fade_onccN"
+      page: "(lfo_type)_fade"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitchlfo_delay_onccN"
+      page: "(lfo_type)_delay"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+    - name: "pitchlfo_fade_onccN"
+      page: "(lfo_type)_fade"
+      version: "LinuxSampler"
+      supported_by:
+      - name: "LinuxSampler"
+
+- name: "Curves"
+  opcodes:
+    - name: "curve_index"
+      version: "ARIA"
+
+- name: "Effects"
+  opcodes:
+  - name: "param_offset"
+    version: "ARIA"
+
+  - name: "vendor_specific"
+    version: "ARIA"

@@ -1,0 +1,38 @@
+license: "Opensource"
+url: "https://www.linuxsampler.org/"
+documented: true
+visible: true
+
+os:
+- name: "Linux"
+- name: "macOS X"
+- name: "Windows"
+
+headers:
+- name: "control"
+- name: "global"
+- name: "master"
+- name: "group"
+- name: "region"
+- name: "curve"
+
+opcodes:
+- name: "script"
+- name: "delay"
+- name: "delay_ccN"
+- name: "delay_random"
+- name: "end"
+- name: "loop_mode"
+  support: "Partial"
+- name: "loop_start"
+- name: "loop_end"
+- name: "offset"
+- name: "sample"
+- name: "#define"
+- name: "#include"
+- name: "group"
+- name: "off_by"
+- name: "off_mode"
+- name: "amplitude"
+- name: "amplitude_curveccN"
+
