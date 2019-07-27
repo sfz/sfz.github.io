@@ -497,7 +497,7 @@ categories:
 - name: "Curves"
   opcodes:
   - name: "curve_index"
-      version: "ARIA"
+    version: "ARIA"
 
 - name: "Effects"
   opcodes:
