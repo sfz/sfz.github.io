@@ -3,15 +3,19 @@
 # ------------------------------------------------------------------------------
 headers:
 - name: "region"
+  short_description: "The basic component of an instrument. An instrument is defined by one or more regions."
   version: "SFZ v1"
 
 - name: "group"
+  short_description: "Multiple regions can be arranged in a group. Groups allow entering common parameters for multiple regions."
   version: "SFZ v1"
 
 - name: "control"
+  short_description: ""
   version: "SFZ v2"
 
 - name: "global"
+  short_description: "Allows entering parameters which are common for all regions."
   version: "SFZ v2"
 
 - name: "curve"
@@ -19,12 +23,15 @@ headers:
   version: "SFZ v2"
 
 - name: "effect"
+  short_description: "SFZ header for effects controls."
   version: "SFZ v2"
 
 - name: "master"
+  short_description: "An intermediate level in the header hierarchy, between global and group."
   version: "ARIA"
 
 - name: "midi"
+  short_description: "ARIA extension, was added for MIDI pre-processor effects."
   version: "ARIA"
 # ------------------------------------------------------------------------------
 # Opcodes
@@ -32,14 +39,17 @@ headers:
 categories:
 - name: "Real-Time Instrument Script"
   url: "http://doc.linuxsampler.org/Instrument_Scripts/"
+  short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   opcodes:
   - name: "script"
     version: "LinuxSampler"
 
 - name: "Sound Source"
   url: "/opcodes/categories#sound-source"
+  short_description: "Defines the nature of the voice generated. It could be samples or oscillators"
   types:
   - name: "Sample Playback"
+    short_description: "Sample Playback opcodes defines the parameters of the sound generation."
     opcodes:
     - name: "count"
       short_description: "The number of times the sample will be played"
@@ -197,6 +207,7 @@ categories:
 
 - name: "Instrument Settings"
   url: "/opcodes/categories#instrument-settings"
+  short_description: "Opcodes used under the <control> header."
   opcodes:
   - name: "#define"
     version: "SFZ v2"
@@ -286,6 +297,7 @@ categories:
 
 - name: "Region Logic"
   url: "/opcodes/categories#region-logic"
+  short_description: "Region Logic opcodes define the conditions under which a voice plays or stops."
   types:
   - name: "Key Mapping"
     opcodes:
@@ -604,6 +616,7 @@ categories:
 
 - name: "Performance Parameters"
   url: "/opcodes/categories#performance-parameters"
+  short_description: "Performance Parameters are all sound modifiers."
   types:
   - name: "Amplifier"
     opcodes:
@@ -649,6 +662,7 @@ categories:
 
 - name: "Modulation"
   url: "/opcodes/categories#modulation"
+  short_description: ""
   types:
   - name: "Envelope Generators"
     url: "/types/envelope_generators"
@@ -682,6 +696,7 @@ categories:
 
   - name: "LFO"
     url: "/types/lfo"
+    short_description: "Low Frequency Oscillator."
     opcodes:
     - name: "lfoN_offset"
       version: "ARIA"
