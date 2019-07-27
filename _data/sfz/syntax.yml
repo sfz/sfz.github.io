@@ -1054,7 +1054,7 @@ categories:
         midi_cc:
           name: "attack_ccN"
 
-    - name: "attack_ccN"
+    - name: "attackccN"
       alias:
       - name: "attack_onccN"
         version: "SFZ v2"
@@ -1065,10 +1065,106 @@ categories:
         max: 100
         unit: "seconds"
 
+    - name: "decay"
+      version: "SFZ v1"
+
+    - name: "decayccN"
+      version: "SFZ v1"
+
+    - name: "delay"
+      version: "SFZ v1"
+
+    - name: "delayccN"
+      version: "SFZ v1"
+
+    - name: "hold"
+      version: "SFZ v1"
+
+    - name: "holdccN"
+      version: "SFZ v1"
+
+    - name: "start"
+      version: "SFZ v1"
+
+    - name: "release"
+      version: "SFZ v1"
+
+    - name: "releaseccN"
+      version: "SFZ v1"
+
+    - name: "startccN"
+      version: "SFZ v1"
+
+    - name: "sustain"
+      version: "SFZ v1"
+
+    - name: "sustainccN"
+      version: "SFZ v1"
+
+    - name: "start"
+      version: "SFZ v1"
+
+    - name: "startccN"
+      version: "SFZ v1"
+
+    - name: "vel2attack"
+      version: "SFZ v1"
+
+    - name: "vel2attack"
+      version: "SFZ v1"
+
+    - name: "vel2decay"
+      version: "SFZ v1"
+
+    - name: "vel2delay"
+      version: "SFZ v1"
+
+    - name: "vel2release"
+      version: "SFZ v1"
+
+    - name: "vel2sustain"
+      version: "SFZ v1"
+
   - name: "LFO"
     url: "/types/lfo"
     short_description: "Low Frequency Oscillator."
+    targets:
+    - name: "amplfo"
+    - name: "fillfo"
+    - name: "pitchlfo"
     opcodes:
+    - name: "delay"
+      version: "SFZ v1"
+
+    - name: "depth"
+      version: "SFZ v1"
+
+    - name: "depthccN"
+      version: "SFZ v1"
+
+    - name: "depthchanaft"
+      version: "SFZ v1"
+
+    - name: "depthpolyaft"
+      version: "SFZ v1"
+
+    - name: "fade"
+      version: "SFZ v1"
+
+    - name: "freq"
+      version: "SFZ v1"
+
+    - name: "freqccN"
+      version: "SFZ v1"
+
+    - name: "freqchanaft"
+      version: "SFZ v1"
+
+    - name: "freqpolyaft"
+      version: "SFZ v1"
+
+# TODO: Separate versions
+
     - name: "lfoN_offset"
       version: "ARIA"
 
