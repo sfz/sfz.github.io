@@ -39,7 +39,6 @@ headers:
 categories:
 - name: "Real-Time Instrument Script"
   url: "http://doc.linuxsampler.org/Instrument_Scripts/"
-  short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   opcodes:
   - name: "script"
     version: "LinuxSampler"
@@ -205,6 +204,48 @@ categories:
         max: 32
         unit: "beats"
 
+    - name: "delay_beats"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "stop_beats"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "direction"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "loop_count"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "loop_crossfade"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "loop_type"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "md5"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "reverse_hiccN"
+      short_description: ""
+      version: "SFZ v2"
+      page: "reverse_lo_hiccN"
+
+    - name: "reverse_loccN"
+      short_description: ""
+      version: "SFZ v2"
+      page: "reverse_lo_hiccN"
+
+    - name: "waveguide"
+      short_description: ""
+      version: "SFZ v2"
+
 - name: "Instrument Settings"
   url: "/opcodes/categories#instrument-settings"
   short_description: "Opcodes used under the <control> header."
@@ -212,6 +253,26 @@ categories:
   - name: "#define"
     version: "SFZ v2"
     type_name: "directive"
+
+  - name: "default_path"
+    short_description: ""
+    version: "SFZ v2"
+
+  - name: "note_offset"
+    short_description: ""
+    version: "SFZ v2"
+
+  - name: "octave_offset"
+    short_description: ""
+    version: "SFZ v2"
+
+  - name: "label_ccN"
+    short_description: ""
+    version: "SFZ v2"
+
+  - name: "set_ccN"
+    short_description: ""
+    version: "SFZ v2"
 
   - name: "#include"
     version: "ARIA"
@@ -285,6 +346,22 @@ categories:
         default: 0
         min: 0
         max: 1024
+
+    - name: "polyphony"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "note_polyphony"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "note_selfmask"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "rt_dead"
+      version: "SFZ v2"
+      short_description: ""
 
     - name: "off_curve"
       version: "ARIA"
@@ -465,6 +542,22 @@ categories:
         - name: "previous"
           description: "Region uses the velocity of the previous note."
 
+    - name: "sustain_sw"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "sostenuto_sw"
+      short_description: ""
+      version: "SFZ v2"
+
+    - name: "loprog"
+      page: "lo_hiprog"
+      version: "SFZ v2"
+
+    - name: "hiprog"
+      page: "lo_hiprog"
+      version: "SFZ v2"
+
     - name: "lohdccN"
       version: "ARIA"
       page: "lo_hihdccN"
@@ -575,6 +668,14 @@ categories:
         min: 1
         max: 100
 
+    - name: "lotimer"
+      page: "lo_hitimer"
+      version: "SFZ v2"
+
+    - name: "hitimer"
+      page: "lo_hitimer"
+      version: "SFZ v2"
+
   - name: "Triggers"
     opcodes:
     - name: "trigger"
@@ -614,12 +715,115 @@ categories:
         min: 0
         max: 127
 
+    - name: "start_loccN"
+      page: "start_lo_hiccN"
+      version: "SFZ v2"
+
+    - name: "start_hiccN"
+      page: "start_lo_hiccN"
+      version: "SFZ v2"
+
+    - name: "stop_loccN"
+      page: "stop_lo_hiccN"
+      version: "SFZ v2"
+
+    - name: "stop_hiccN"
+      page: "sstop_lo_hiccN"
+      version: "SFZ v2"
+
 - name: "Performance Parameters"
   url: "/opcodes/categories#performance-parameters"
   short_description: "Performance Parameters are all sound modifiers."
   types:
   - name: "Amplifier"
     opcodes:
+    - name: "pan"
+      version: "SFZ v1"
+
+    - name: "position"
+      version: "SFZ v1"
+
+    - name: "volume"
+      version: "SFZ v1"
+
+    - name: "width"
+      version: "SFZ v1"
+
+    - name: "amp_keycenter"
+      version: "SFZ v1"
+
+    - name: "amp_keytrack"
+      version: "SFZ v1"
+
+    - name: "amp_veltrack"
+      version: "SFZ v1"
+
+    - name: "amp_velcurve_N"
+      version: "SFZ v1"
+
+    - name: "amp_random"
+      version: "SFZ v1"
+
+    - name: "gain_ccN"
+      version: "SFZ v1"
+
+    - name: "rt_decay"
+      version: "SFZ v1"
+
+    - name: "xf_cccurve"
+      version: "SFZ v1"
+
+    - name: "xf_keycurve"
+      version: "SFZ v1"
+
+    - name: "xf_velcurve"
+      version: "SFZ v1"
+
+    - name: "xfin_loccN"
+      version: "SFZ v1"
+
+    - name: "xfin_hiccN"
+      version: "SFZ v1"
+
+    - name: "xfout_loccN"
+      version: "SFZ v1"
+
+    - name: "xfout_hiccN"
+      version: "SFZ v1"
+
+    - name: "xfin_lokey"
+      version: "SFZ v1"
+
+    - name: "xfin_hikey"
+      version: "SFZ v1"
+
+    - name: "xfout_lokey"
+      version: "SFZ v1"
+
+    - name: "xfout_hikey"
+      version: "SFZ v1"
+
+    - name: "xfin_lovel"
+      version: "SFZ v1"
+
+    - name: "xfin_hivel"
+      version: "SFZ v1"
+
+    - name: "xfout_lovel"
+      version: "SFZ v1"
+
+    - name: "xfout_hivel"
+      version: "SFZ v1"
+
+    - name: "volume_onccN"
+      version: "SFZ v2"
+
+    - name: "phase"
+      version: "SFZ v2"
+
+    - name: "width_onccN"
+      version: "SFZ v2"
+
     - name: "amplitude"
       version: "ARIA"
 
@@ -657,12 +861,179 @@ categories:
       version: "ARIA"
 
   - name: "EQ"
+    opcodes:
+    - name: "eq1_freq"
+      version: "SFZ v1"
+
+    - name: "eq2_freq"
+      version: "SFZ v1"
+
+    - name: "eq3_freq"
+      version: "SFZ v1"
+
+    - name: "eq1_freqccN"
+      version: "SFZ v1"
+
+    - name: "eq2_freqccN"
+      version: "SFZ v1"
+
+    - name: "eq3_freqccN"
+      version: "SFZ v1"
+
+    - name: "eq1_vel2freq"
+      version: "SFZ v1"
+
+    - name: "eq2_vel2freq"
+      version: "SFZ v1"
+
+    - name: "eq3_vel2freq"
+      version: "SFZ v1"
+
+    - name: "eq1_bw"
+      version: "SFZ v1"
+
+    - name: "eq2_bw"
+      version: "SFZ v1"
+
+    - name: "eq3_bw"
+      version: "SFZ v1"
+
+    - name: "eq1_bwccN"
+      version: "SFZ v1"
+
+    - name: "eq2_bwccN"
+      version: "SFZ v1"
+
+    - name: "eq3_bwccN"
+      version: "SFZ v1"
+
+    - name: "eq1_gain"
+      version: "SFZ v1"
+
+    - name: "eq2_gain"
+      version: "SFZ v1"
+
+    - name: "eq3_gain"
+      version: "SFZ v1"
+
+    - name: "eq1_gainccN"
+      version: "SFZ v1"
+
+    - name: "eq2_gainccN"
+      version: "SFZ v1"
+
+    - name: "eq3_gainccN"
+      version: "SFZ v1"
+
+    - name: "eq1_vel2gain"
+      version: "SFZ v1"
+
+    - name: "eq2_vel2gain"
+      version: "SFZ v1"
+
+    - name: "eq3_vel2gain"
+      version: "SFZ v1"
+
   - name: "Filter"
+    opcodes:
+    - name: "cutoff"
+      version: "SFZ v1"
+
+    - name: "cutoff_ccN"
+      version: "SFZ v1"
+
+    - name: "cutoff_chanaft"
+      version: "SFZ v1"
+
+    - name: "cutoff_polyaft"
+      version: "SFZ v1"
+
+    - name: "fil_keytrack"
+      version: "SFZ v1"
+
+    - name: "fil_keycenter"
+      version: "SFZ v1"
+
+    - name: "fil_random"
+      version: "SFZ v1"
+
+    - name: "fil_type"
+      version: "SFZ v1"
+
+    - name: "fil_veltrack"
+      version: "SFZ v1"
+
+    - name: "resonance"
+      version: "SFZ v1"
+
+    - name: "cutoff2"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "cutoff2_onccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance_onccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance2"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance2_onccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "fil2_type"
+      version: "SFZ v2"
+      short_description: ""
+
   - name: "Pitch"
+    opcodes:
+    - name: "bend_up"
+      version: "SFZ v1"
+
+    - name: "bend_down"
+      version: "SFZ v1"
+
+    - name: "bend_step"
+      version: "SFZ v1"
+
+    - name: "pitch_keycenter"
+      version: "SFZ v1"
+
+    - name: "pitch_keytrack"
+      version: "SFZ v1"
+
+    - name: "pitch_random"
+      version: "SFZ v1"
+
+    - name: "pitch_veltrack"
+      version: "SFZ v1"
+
+    - name: "transpose"
+      version: "SFZ v1"
+
+    - name: "tune"
+      version: "SFZ v1"
+
+    - name: "bend_smooth"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "bend_stepup"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "bend_stepdown"
+      version: "SFZ v2"
+      short_description: ""
 
 - name: "Modulation"
   url: "/opcodes/categories#modulation"
-  short_description: ""
+  short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   types:
   - name: "Envelope Generators"
     url: "/types/envelope_generators"
