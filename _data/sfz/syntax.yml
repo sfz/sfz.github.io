@@ -351,6 +351,107 @@ categories:
         min: 1
         max: 16
 
+    - name: "loccN"
+      version: "SFZ v1"
+      page: "lo_hiccN"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hiccN"
+      version: "SFZ v1"
+      page: "lo_hiccN"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
+    - name: "lobend"
+      version: "SFZ v1"
+      page: "lo_hibend"
+      value:
+        type_name: "integer"
+        default: -8192
+        min: -8192
+        max: 8192
+
+    - name: "hibend"
+      version: "SFZ v1"
+      page: "lo_hibend"
+      value:
+        type_name: "integer"
+        default: 8192
+        min: -8192
+        max: 8192
+
+    - name: "sw_lokey"
+      version: "SFZ v1"
+      page: "sw_lo_hikey"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "sw_hikey"
+      version: "SFZ v1"
+      page: "sw_lo_hikey"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
+    - name: "sw_last"
+      short_description: "Enables the region to play if the last key pressed in the range specified by sw_lokey and sw_hikey is equal to the sw_last value."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "sw_down"
+      short_description: "Enables the region to play if the key equal to sw_down value is depressed. Key has to be in the range specified by sw_lokey and sw_hikey."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "sw_up"
+      short_description: "Enables the region to play if the key equal to sw_up value is not depressed."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "sw_previous"
+      short_description: "Previous note value. The region will play if last note-on message was equal to sw_previous value."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
+
+    - name: "sw_vel"
+      short_description: "Allows overriding the velocity for the region with the velocity of the previous note."
+      version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "current"
+        options:
+        - name: "current"
+          description: "Region uses the velocity of current note."
+        - name: "previous"
+          description: "Region uses the velocity of the previous note."
+
     - name: "lohdccN"
       version: "ARIA"
       page: "lo_hihdccN"
@@ -388,7 +489,117 @@ categories:
       version: "ARIA"
 
   - name: "Internal Conditions"
+    opcodes:
+    - name: "lobpm"
+      page: "lo_hibpm"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 500
+
+    - name: "hibpm"
+      page: "lo_hibpm"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 500
+        min: 0
+        max: 500
+
+    - name: "lopolyaft"
+      page: "lo_hipolyaft"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hipolyaft"
+      page: "lo_hipolyaft"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
+    - name: "lorand"
+      page: "lo_hirand"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 1
+
+    - name: "hirand"
+      page: "lo_hirand"
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 1
+        min: 0
+        max: 1
+
+    - name: "seq_length"
+      version: "SFZ v1"
+      short_description: "Sequence length, used together with seq_position to use samples as round robins."
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 100
+
+    - name: "seq_position"
+      version: "SFZ v1"
+      short_description: "Sequence position. The region will play if the internal sequence counter is equal to seq_position."
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 100
+
   - name: "Triggers"
+    opcodes:
+    - name: "trigger"
+      short_description: "Sets the trigger which will be used for the sample to play."
+      version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "attack"
+        options:
+        - name: "attack"
+          description: "Region will play on note-on."
+        - name: "release"
+          description: "Region will play on note-off or sustain pedal off. The velocity used to play the note-off sample is the velocity value of the corresponding (previous) note-on message."
+# TODO: Is this SFZ v1 or ...?
+        - name: "release_key"
+          description: "Region will play on note-off. The velocity used to play the note-off sample is the velocity value of the corresponding (previous) note-on message. Ignores sustain pedal."
+        - name: "first"
+          description: "Region will play on note-on, but if there’s no other note going on (staccato, or first note in a legato phrase)."
+        - name: "legato"
+          description: "Region will play on note-on, but only if there’s a note going on (notes after first note in a legato phrase)."
+
+    - name: "on_loccN"
+      page: "on_lo_hiccN"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: -1 # TODO: Specify in documentation page that this means unassigned
+        min: 0
+        max: 127
+
+    - name: "on_hiccN"
+      page: "on_lo_hiccN"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: -1
+        min: 0
+        max: 127
 
 - name: "Performance Parameters"
   url: "/opcodes/categories#performance-parameters"
