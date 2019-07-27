@@ -1125,6 +1125,229 @@ categories:
     - name: "vel2sustain"
       version: "SFZ v1"
 
+# TODO: ampeg only?
+
+    - name: "attack_shape"
+      version: "ARIA"
+
+    - name: "decay_shape"
+      version: "ARIA"
+
+    - name: "decay_zero"
+      version: "ARIA"
+
+    - name: "release_shape"
+      version: "ARIA"
+
+    - name: "release_zero"
+      version: "ARIA"
+
+# TODO: Separate versions
+
+    - name: "egN_points" # ???
+      version: "SFZ v2"
+
+    - name: "egN_shape" # ???
+      version: "SFZ v2"
+
+    - name: "egN_timeX"
+      version: "SFZ v2"
+
+    - name: "egN_timeX_onccY"
+      version: "SFZ v2"
+
+    - name: "egN_levelX"
+      version: "SFZ v2"
+
+    - name: "egN_levelX_onccY"
+      version: "SFZ v2"
+
+    - name: "egN_shapeX"
+      version: "SFZ v2"
+
+    - name: "egN_curveX"
+      version: "SFZ v2"
+
+    - name: "egN_sustain"
+      version: "SFZ v2"
+
+    - name: "egN_loop"
+      version: "SFZ v2"
+
+    - name: "egN_loop_count"
+      version: "SFZ v2"
+
+    - name: "egN_volume"
+      version: "SFZ v2"
+
+    - name: "egN_amplitude"
+      version: "SFZ v2"
+
+    - name: "egN_pan"
+      version: "SFZ v2"
+
+    - name: "egN_width"
+      version: "SFZ v2"
+
+    - name: "egN_pan_curve"
+      version: "SFZ v2"
+
+    - name: "egN_pan_curveccX"
+      version: "SFZ v2"
+
+    - name: "egN_volume_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_amplitude_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_pan_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_width_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_freq_lfoX"
+      version: "SFZ v2"
+
+    - name: "egN_depth_lfoX"
+      version: "SFZ v2"
+
+    - name: "egN_depthadd_lfoX"
+      version: "SFZ v2"
+
+    - name: "egN_pitch"
+      version: "SFZ v2"
+
+    - name: "egN_pitch_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_cutoff"
+      version: "SFZ v2"
+
+    - name: "egN_cutoff2"
+      version: "SFZ v2"
+
+    - name: "egN_resonance"
+      version: "SFZ v2"
+
+    - name: "egN_resonance2"
+      version: "SFZ v2"
+
+    - name: "egN_cutoff_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_cutoff2_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_resonance_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_resonance2_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq1freq"
+      version: "SFZ v2"
+
+    - name: "egN_eq2freq"
+      version: "SFZ v2"
+
+    - name: "egN_eq3freq"
+      version: "SFZ v2"
+
+    - name: "egN_eq1bw"
+      version: "SFZ v2"
+
+    - name: "egN_eq2bw"
+      version: "SFZ v2"
+
+    - name: "egN_eq3bw"
+      version: "SFZ v2"
+
+    - name: "egN_eq1gain"
+      version: "SFZ v2"
+
+    - name: "egN_eq2gain"
+      version: "SFZ v2"
+
+    - name: "egN_eq3gain"
+      version: "SFZ v2"
+
+    - name: "egN_eq1freq_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq2freq_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq3freq_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq1bw_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq2bw_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq3bw_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq1gain_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq2gain_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_eq3gain_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_decim"
+      version: "SFZ v2"
+
+    - name: "egN_bitred"
+      version: "SFZ v2"
+
+    - name: "egN_rectify"
+      version: "SFZ v2"
+
+    - name: "egN_ringmod"
+      version: "SFZ v2"
+
+    - name: "egN_noiselevel"
+      version: "SFZ v2"
+
+    - name: "egN_noisestep"
+      version: "SFZ v2"
+
+    - name: "egN_noisetone"
+      version: "SFZ v2"
+
+    - name: "egN_driveshape"
+      version: "SFZ v2"
+
+    - name: "egN_decim_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_bitred_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_rectify_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_ringmod_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_noiselevel_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_noisestep_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_noisetone_onccX"
+      version: "SFZ v2"
+
+    - name: "egN_driveshape_onccX"
+      version: "SFZ v2"
+
   - name: "LFO"
     url: "/types/lfo"
     short_description: "Low Frequency Oscillator."
@@ -1164,6 +1387,351 @@ categories:
       version: "SFZ v1"
 
 # TODO: Separate versions
+
+    - name: "lfoN_freq"
+      version: "SFZ v2"
+
+    - name: "lfoN_freq_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_freq_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_freq_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_delay"
+      version: "SFZ v2"
+
+    - name: "lfoN_delay_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_fade"
+      version: "SFZ v2"
+
+    - name: "lfoN_fade_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_phase"
+      version: "SFZ v2"
+
+    - name: "lfoN_phase_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_count"
+      version: "SFZ v2"
+
+    - name: "lfoN_wave"
+      version: "SFZ v2"
+
+    - name: "lfoN_steps"
+      version: "SFZ v2"
+
+    - name: "lfoN_stepX"
+      version: "SFZ v2"
+
+    - name: "lfoN_smooth"
+      version: "SFZ v2"
+
+    - name: "lfoN_smooth_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_volume"
+      version: "SFZ v2"
+
+    - name: "lfoN_amplitude"
+      version: "SFZ v2"
+
+    - name: "lfoN_pan"
+      version: "SFZ v2"
+
+    - name: "lfoN_width"
+      version: "SFZ v2"
+
+    - name: "lfoN_volume_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_amplitude_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pan_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_width_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_volume_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_amplitude_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pan_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_width_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_volume_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_amplitude_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pan_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_width_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_freq_lfoX"
+      version: "SFZ v2"
+
+    - name: "lfoN_depth_lfoX"
+      version: "SFZ v2"
+
+    - name: "lfoN_depthadd_lfoX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pitch"
+      version: "SFZ v2"
+
+    - name: "lfoN_pitch_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pitch_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_pitch_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff2"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance2"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff2_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance2_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff2_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance2_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_cutoff2_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_resonance2_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1freq"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2freq"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3freq"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1bw"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2bw"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3bw"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1gain"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2gain"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3gain"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1freq_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2freq_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3freq_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1bw_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2bw_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3bw_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1gain_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2gain_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3gain_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1freq_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2freq_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3freq_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1bw_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2bw_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3bw_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1gain_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2gain_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3gain_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1freq_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2freq_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3freq_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1bw_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2bw_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3bw_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq1gain_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq2gain_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_eq3gain_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_decim"
+      version: "SFZ v2"
+
+    - name: "lfoN_bitred"
+      version: "SFZ v2"
+
+    - name: "lfoN_noiselevel"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisestep"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisetone"
+      version: "SFZ v2"
+
+    - name: "lfoN_drive"
+      version: "SFZ v2"
+
+    - name: "lfoN_decim_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_bitred_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noiselevel_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisestep_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisetone_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_drive_onccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_decim_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_bitred_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noiselevel_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisestep_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisetone_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_drive_smoothccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_decim_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_bitred_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noiselevel_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisestep_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_noisetone_stepccX"
+      version: "SFZ v2"
+
+    - name: "lfoN_drive_stepccX"
+      version: "SFZ v2"
 
     - name: "lfoN_offset"
       version: "ARIA"
