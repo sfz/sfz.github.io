@@ -233,10 +233,16 @@ categories:
   - name: "Voice Lifecycle"
     opcodes:
     - name: "group"
+      short_description: "Exclusive group number for this region."
       version: "SFZ v1"
       alias:
       - name: "polyphony_group"
         version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
 
     - name: "off_by"
       version: "SFZ v1"
@@ -281,8 +287,70 @@ categories:
   url: "/opcodes/categories#region-logic"
   types:
   - name: "Key Mapping"
+    opcodes:
+    - name: "key"
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
+
+    - name: "lokey"
+      version: "SFZ v1"
+      page: "lo_hikey"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hikey"
+      version: "SFZ v1"
+      page: "lo_hikey"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
+    - name: "lovel"
+      version: "SFZ v1"
+      page: "lo_hivel"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hivel"
+      version: "SFZ v1"
+      page: "lo_hivel"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
   - name: "MIDI Conditions"
     opcodes:
+    - name: "lochan"
+      version: "SFZ v1"
+      page: "lo_hichan"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 16
+
+    - name: "hichan"
+      version: "SFZ v1"
+      page: "lo_hichan"
+      value:
+        type_name: "integer"
+        default: 16
+        min: 1
+        max: 16
+
     - name: "lohdccN"
       version: "ARIA"
       page: "lo_hihdccN"
@@ -428,7 +496,7 @@ categories:
 
 - name: "Curves"
   opcodes:
-    - name: "curve_index"
+  - name: "curve_index"
       version: "ARIA"
 
 - name: "Effects"
