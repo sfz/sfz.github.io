@@ -22,6 +22,6 @@ Sets the trigger which will be used for the sample to play. Values can be:
 trigger=release
 ```
 
-| Type | Default | Range                          | 
+| Type | Default | Range                          |
 | ---  | ---     | ---                            |
-| text | attack  | attack, release, first, legato |
+| text | attack  | attack, release, release_key, first, legato |
