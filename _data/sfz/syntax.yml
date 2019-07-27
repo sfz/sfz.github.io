@@ -15,6 +15,7 @@ headers:
   version: "SFZ v2"
 
 - name: "curve"
+  short_description: "A header for defining curves for MIDI CC controls."
   version: "SFZ v2"
 
 - name: "effect"
@@ -709,13 +710,15 @@ categories:
 - name: "Curves"
   opcodes:
   - name: "curve_index"
-    short_description: "The number of the defined curve under a <curve> header."
+    page: "/headers/curve"
     version: "SFZ v2"
     value:
       type_name: "integer"
       min: 0
+# TODO: max: ?
 
   - name: "vN"
+    page: "/headers/curve"
     version: "SFZ v2"
     index:
       type_name: "integer"
