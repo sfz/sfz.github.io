@@ -672,11 +672,12 @@ categories:
       alias:
       - name: "attack_onccN"
         version: "SFZ v2"
-      type_name: "float"
-      default: 0
-      min: -100
-      max: 100
-      unit: "seconds"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
   - name: "LFO"
     url: "/types/lfo"
@@ -708,10 +709,45 @@ categories:
 - name: "Curves"
   opcodes:
   - name: "curve_index"
-    version: "ARIA"
+    short_description: "The number of the defined curve under a <curve> header."
+    version: "SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+
+  - name: "vN"
+    version: "SFZ v2"
+    index:
+      type_name: "integer"
+      min: 0
+      max: 127
+    value:
+      type_name: "float"
+      min: 0
+      max: 1
 
 - name: "Effects"
   opcodes:
+  - name: "effect1"
+    short_description: "Level of effect1 send, in percentage (reverb in Cakewalk sfz)."
+    version: "SFZ v1"
+    value:
+      type_name: "integer"
+      default: 0
+      min: 0
+      max: 100
+      unit: "percentage"
+
+  - name: "effect2"
+    short_description: "Level of effect1 send, in percentage (chorus in Cakewalk sfz)."
+    version: "SFZ v1"
+    value:
+      type_name: "integer"
+      default: 0
+      min: 0
+      max: 100
+      unit: "percentage"
+
   - name: "param_offset"
     version: "ARIA"
 
