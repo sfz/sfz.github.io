@@ -80,8 +80,8 @@ categories:
         max: 100
         unit: "seconds"
       modulation:
-        midi_cc:
-          name: "delay_ccN"
+      - midi_cc: true
+        name: "delay_ccN"
 
     - name: "delay_random"
       short_description: "Region random delay time"
@@ -641,15 +641,26 @@ categories:
       page: "sw_lo_hilast"
 
     - name: "varNN_curveccX"
+      short_description: "Specifies the <curve> number which MIDI CC X uses to modulate variable NN."
       version: "ARIA"
 
     - name: "varNN_mod"
+      short_description: "Specifies the method used to calculate variable number NN from MIDI CCs."
       version: "ARIA"
+      value:
+        type_name: "string"
+        options:
+        - name: "mult"
+# TODO:   description: ""
+        - name: "add"
+# TODO:   description: ""
 
     - name: "varNN_onccX"
+      short_description: "Specifies the method used to calculate variable number NN from MIDI CCs."
       version: "ARIA"
 
     - name: "varNN_target"
+      short_description: "The amount by which MIDI CC X modulates variable NN. The modulation is either by multiplication or addition, depending on varNN_mod settings."
       version: "ARIA"
 
   - name: "Internal Conditions"
@@ -758,15 +769,21 @@ categories:
     - name: "on_loccN"
       page: "on_lo_hiccN"
       version: "SFZ v1"
+      alias:
+      - name: "start_loccN"
+        version: "SFZ v2"
       value:
         type_name: "integer"
-        default: -1 # TODO: Specify in documentation page that this means unassigned
-        min: 0
+        default: -1 # TODO: 1. Specify in documentation page that this means unassigned
+        min: 0      #       2. Group the opcodes with aliases and same values to avoid redundancy?
         max: 127
 
     - name: "on_hiccN"
       page: "on_lo_hiccN"
       version: "SFZ v1"
+      alias:
+      - name: "start_hiccN"
+        version: "SFZ v2"
       value:
         type_name: "integer"
         default: -1
@@ -776,10 +793,20 @@ categories:
     - name: "start_loccN"
       page: "start_lo_hiccN"
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+# TODO: default: -1 on v2 as well?
+        min: 0
+        max: 127
 
     - name: "start_hiccN"
       page: "start_lo_hiccN"
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+#       default: -1
+        min: 0
+        max: 127
 
     - name: "stop_loccN"
       page: "stop_lo_hiccN"
@@ -796,81 +823,171 @@ categories:
   - name: "Amplifier"
     opcodes:
     - name: "pan"
+      short_description: "The panoramic position for the region."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "percentage"
 
     - name: "position"
+      short_description: "Only operational for stereo samples, position defines the position in the stereo field of a stereo signal, after channel mixing as defined in the width opcode."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "percentage"
 
     - name: "volume"
+      short_description: "The volume for the region, in decibels."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 6
+        unit: "decibels"
+      modulation:
+      - midi_cc: true
+        name: "volume_onccN"
 
     - name: "width"
+      short_description: "Only operational for stereo samples, width defines the amount of channel mixing applied to play the sample."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 6
+        unit: "decibels"
+      modulation:
+      - midi_cc: true
+        name: "width_onccN"
 
     - name: "amp_keycenter"
+      short_description: "Center key for amplifier keyboard tracking. In this key, the amplifier keyboard tracking will have no effect."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 60
+        min: 0
+        max: 127
 
     - name: "amp_keytrack"
+      short_description: "Amplifier keyboard tracking (change in amplitude per key) in dB."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -96
+        max: 12
+        unit: "decibels"
 
     - name: "amp_veltrack"
+      short_description: "Amplifier velocity tracking, represents how much the amplitude changes with incoming note velocity."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 100
+        min: -100
+        max: 100
+        unit: "percentage"
 
     - name: "amp_velcurve_N"
+      short_description: "User-defined amplifier velocity curve."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+# TODO: default: standard curve as value?
+        min: 0
+        max: 1
 
     - name: "amp_random"
+      short_description: "Random volume for the region, in decibels."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 24
+        unit: "decibels"
 
     - name: "gain_ccN"
+      short_description: "Gain applied on MIDI control N, in decibels."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 48
+        unit: "decibels"
 
     - name: "rt_decay"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xf_cccurve"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xf_keycurve"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xf_velcurve"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_loccN"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_hiccN"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_loccN"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_hiccN"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_lokey"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_hikey"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_lokey"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_hikey"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_lovel"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfin_hivel"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_lovel"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "xfout_hivel"
+      short_description: ""
       version: "SFZ v1"
 
     - name: "volume_onccN"
@@ -1123,14 +1240,6 @@ categories:
     - name: "bend_step"
       version: "SFZ v1"
 
-    - name: "bend_stepup"
-      version: "SFZ v1"
-      short_description: ""
-
-    - name: "bend_stepdown"
-      version: "SFZ v1"
-      short_description: ""
-
     - name: "pitch_keycenter"
       version: "SFZ v1"
 
@@ -1148,6 +1257,14 @@ categories:
 
     - name: "tune"
       version: "SFZ v1"
+
+    - name: "bend_stepup"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "bend_stepdown"
+      version: "SFZ v2"
+      short_description: ""
 
     - name: "pitch_onccN"
       version: "SFZ v2"
@@ -1181,8 +1298,8 @@ categories:
         max: 100
         unit: "seconds"
       modulation:
-        midi_cc:
-          name: "attack_ccN"
+      - midi_cc: true
+        name: "attackccN"
 
     - name: "attackccN"
       alias:
