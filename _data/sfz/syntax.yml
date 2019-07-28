@@ -351,9 +351,11 @@ categories:
       max: 127
 
   - name: "sw_note_offset"
+    short_description: "Follows the same logic as SFZ 2.0’s note_offset but for key switches."
     version: "ARIA"
 
   - name: "sw_octave_offset"
+    short_description: "Follows the same logic as SFZ 2.0’s octave_offset but for key switches."
     version: "ARIA"
 
   types:
@@ -403,7 +405,7 @@ categories:
 
     - name: "polyphony"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Polyphony voice limit for a group."
 
     - name: "note_polyphony"
       version: "SFZ v2"
@@ -651,9 +653,9 @@ categories:
         type_name: "string"
         options:
         - name: "mult"
-# TODO:   description: ""
+          description: "Multiplication, with 1 being full scale, 0 at a CC value of 0, and 1 at CC value of 127. This is how the amplitude opcode works."
         - name: "add"
-# TODO:   description: ""
+          description: "Addition, how volume, cutoff and all other modulation destinations work by default when modulated."
 
     - name: "varNN_onccX"
       short_description: "Specifies the method used to calculate variable number NN from MIDI CCs."
@@ -902,7 +904,6 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "float"
-# TODO: default: standard curve as value?
         min: 0
         max: 1
 
@@ -927,20 +928,52 @@ categories:
         unit: "decibels"
 
     - name: "rt_decay"
-      short_description: ""
+      short_description: "Applies only to regions that triggered through trigger=release. The volume decrease (in db) per seconds after the note has been attacked."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 200
+        unit: "decibels"
+
+# TODO: Single 'Crossfade' page with common description?
 
     - name: "xf_cccurve"
-      short_description: ""
+      short_description: "MIDI controllers crossfade curve for the region."
       version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "power"
+        options:
+        - name: "gain"
+          description: "Linear gain crossfade. This setting is best when crossfading phase-aligned material. Linear gain crossfades keep constant amplitude during the crossfade, preventing clipping."
+        - name: "power"
+          description: "Equal-power RMS crossfade. This setting works better to mix very different material, as a constant power level is kept during the crossfade."
 
     - name: "xf_keycurve"
-      short_description: ""
+      short_description: "Keyboard crossfade curve for the region."
       version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "power"
+        options:
+        - name: "gain"
+          description: "Linear gain crossfade. This setting is best when crossfading phase-aligned material. Linear gain crossfades keep constant amplitude during the crossfade, preventing clipping."
+        - name: "power"
+          description: "Equal-power RMS crossfade. This setting works better to mix very different material, as a constant power level is kept during the crossfade."
 
     - name: "xf_velcurve"
-      short_description: ""
+      short_description: "Velocity crossfade curve for the region."
       version: "SFZ v1"
+      value:
+        type_name: "string"
+        default: "power"
+        options:
+        - name: "gain"
+          description: "Linear gain crossfade. This setting is best when crossfading phase-aligned material. Linear gain crossfades keep constant amplitude during the crossfade, preventing clipping."
+        - name: "power"
+          description: "Equal-power RMS crossfade. This setting works better to mix very different material, as a constant power level is kept during the crossfade."
 
     - name: "xfin_loccN"
       short_description: ""
