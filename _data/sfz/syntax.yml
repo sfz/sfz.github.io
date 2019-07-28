@@ -212,38 +212,51 @@ categories:
       short_description: ""
       version: "SFZ v2"
 
-    - name: "direction"
-      short_description: ""
+    - name: "direction" # TODO: Source?
+      short_description: "The direction in which the sample is to be played."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        default: "forward"
+      options:
+      - name: "forward"
+      - name: "reverse"
 
-    - name: "loop_count"
-      short_description: ""
+    - name: "loop_count" # TODO: Source?
+      short_description: "The number of times a loop will repeat."
       version: "SFZ v2"
 
     - name: "loop_crossfade"
       short_description: ""
       version: "SFZ v2"
+      value:
+        unit: "seconds"
 
-    - name: "loop_type"
-      short_description: ""
+    - name: "loop_type" # TODO: Source?
+      short_description: "Defines the looping mode."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        default: "forward"
+      options:
+      - name: "forward"
+      - name: "backward"
+      - name: "alternate"
 
     - name: "md5"
-      short_description: ""
+      short_description: "The MD5 hash for an encoded sample. It will be a 128-bit key in hex."
       version: "SFZ v2"
 
     - name: "reverse_hiccN"
-      short_description: ""
       version: "SFZ v2"
       page: "reverse_lo_hiccN"
 
     - name: "reverse_loccN"
-      short_description: ""
       version: "SFZ v2"
       page: "reverse_lo_hiccN"
 
     - name: "waveguide"
-      short_description: ""
+      short_description: "Enables waveguide synthesis for the region."
       version: "SFZ v2"
 
 - name: "Instrument Settings"
@@ -252,49 +265,90 @@ categories:
   opcodes:
   - name: "#define"
     version: "SFZ v2"
+    short_description: "Creates a variable and gives it a value."
     type_name: "directive"
 
   - name: "default_path"
-    short_description: ""
+    short_description: "Relative path for samples."
     version: "SFZ v2"
+    value:
+      type_name: "string"
 
   - name: "note_offset"
     short_description: ""
     version: "SFZ v2"
+    value:
+      type_name: "integer"
 
   - name: "octave_offset"
-    short_description: ""
+    short_description: "Shifts all incoming MIDI data by the specified octave."
     version: "SFZ v2"
+    value:
+      type_name: "integer"
 
-  - name: "label_ccN"
-    short_description: ""
+  - name: "label_ccN" # TODO: Source?
+    short_description: "Create a label for the MIDI CC."
     version: "SFZ v2"
+    value:
+      type_name: "string"
 
   - name: "set_ccN"
-    short_description: ""
+    short_description: "Sets a default initial value for MIDI CC number X, when the instrument is initially loaded."
     version: "SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+      max: 127
 
   - name: "#include"
     version: "ARIA"
+    short_description: "Allows using SFZ files as building blocks for creating larger, more complex SFZ files."
     type_name: "directive"
 
   - name: "hint_"
     version: "ARIA"
 
   - name: "set_hdccN"
+    short_description: "Sets a default initial value for MIDI CC number X, when the instrument is initially loaded."
     version: "ARIA"
+    value:
+      type_name: "float"
 
   - name: "sostenuto_lo"
+    short_description: "Sets the minimum point at which the sostenuto pedal (MIDI CC 66) is considered 'down'."
     version: "ARIA"
+    value:
+      type_name: "integer"
+      default: 1
+      min: 0
+      max: 127
 
   - name: "sostenuto_cc"
+    short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
     version: "ARIA"
+    value:
+      type_name: "integer"
+      default: 66
+      min: 0
+      max: 127
 
   - name: "sustain_lo"
+    short_description: "Sets the minimum point at which the sustain pedal (MIDI CC 64) is considered 'down'."
     version: "ARIA"
+    value:
+      type_name: "integer"
+      default: 1
+      min: 0
+      max: 127
 
   - name: "sustain_cc"
+    short_description: "Reassigns the sustain pedal CC to a non-standard value."
     version: "ARIA"
+    value:
+      type_name: "integer"
+      default: 64
+      min: 0
+      max: 127
 
   - name: "sw_note_offset"
     version: "ARIA"
@@ -542,12 +596,16 @@ categories:
         - name: "previous"
           description: "Region uses the velocity of the previous note."
 
+# TODO: references to ARIA opcodes
+
     - name: "sustain_sw"
-      short_description: ""
+      short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
       version: "SFZ v2"
 
+# TODO: references to ARIA opcodes
+
     - name: "sostenuto_sw"
-      short_description: ""
+      short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
       version: "SFZ v2"
 
     - name: "loprog"
@@ -966,6 +1024,18 @@ categories:
     - name: "resonance"
       version: "SFZ v1"
 
+    - name: "cutoff_curveccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "cutoff_smoothccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "cutoff_stepccN"
+      version: "SFZ v2"
+      short_description: ""
+
     - name: "cutoff2"
       version: "SFZ v2"
       short_description: ""
@@ -974,7 +1044,47 @@ categories:
       version: "SFZ v2"
       short_description: ""
 
+    - name: "cutoff2_curveccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "cutoff2_smoothccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "cutoff2_stepccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "fil2_keycenter"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "fil2_keytrack"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "fil2_type"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "fil2_veltrack"
+      version: "SFZ v2"
+      short_description: ""
+
     - name: "resonance_onccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance_curveccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance_smoothccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance_stepccN"
       version: "SFZ v2"
       short_description: ""
 
@@ -986,7 +1096,15 @@ categories:
       version: "SFZ v2"
       short_description: ""
 
-    - name: "fil2_type"
+    - name: "resonance2_curveccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance2_smoothccN"
+      version: "SFZ v2"
+      short_description: ""
+
+    - name: "resonance2_stepccN"
       version: "SFZ v2"
       short_description: ""
 
@@ -998,8 +1116,20 @@ categories:
     - name: "bend_down"
       version: "SFZ v1"
 
+    - name: "bend_smooth"
+      version: "SFZ v1"
+      short_description: ""
+
     - name: "bend_step"
       version: "SFZ v1"
+
+    - name: "bend_stepup"
+      version: "SFZ v1"
+      short_description: ""
+
+    - name: "bend_stepdown"
+      version: "SFZ v1"
+      short_description: ""
 
     - name: "pitch_keycenter"
       version: "SFZ v1"
@@ -1019,17 +1149,17 @@ categories:
     - name: "tune"
       version: "SFZ v1"
 
-    - name: "bend_smooth"
+    - name: "pitch_onccN"
       version: "SFZ v2"
-      short_description: ""
 
-    - name: "bend_stepup"
+    - name: "pitch_curveccN"
       version: "SFZ v2"
-      short_description: ""
 
-    - name: "bend_stepdown"
+#   - name: "pitch_smoothccN"
+#     version: "SFZ v2"
+
+    - name: "pitch_stepccN"
       version: "SFZ v2"
-      short_description: ""
 
 - name: "Modulation"
   url: "/opcodes/categories#modulation"
@@ -1144,10 +1274,10 @@ categories:
 
 # TODO: Separate versions
 
-    - name: "egN_points" # ???
+    - name: "egN_points" # TODO: Source?
       version: "SFZ v2"
 
-    - name: "egN_shape" # ???
+    - name: "egN_shape" # TODO: Source?
       version: "SFZ v2"
 
     - name: "egN_timeX"
