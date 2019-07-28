@@ -2,11 +2,13 @@
 title: #define
 lang: en
 ---
-\#define creates a variable and gives it a value. Variable names start with
-the $ character. This opcode is used under the <[control](/headers/control)> header,
+Creates a variable and gives it a value.
+
+Variable names start with the $ character.
+This opcode is used under the <[control](/headers/control)> header,
 and the defined variables can then be used anywhere else in the file.
 
-Example:
+##### Example
 
 ```
 #define $KICKKEY 36
@@ -29,4 +31,4 @@ The defined variables can then be used like this:
 This can be used to make an instrument easier to configure - for example, to
 change key maps, MIDI CC assignments, pitch bend ranges etc. which can then be
 used repeatedly in the SFZ file, but can be easily changed just by editing their
-\#define value in one place.
+`#define` value in one place.

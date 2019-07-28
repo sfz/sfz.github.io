@@ -1,6 +1,6 @@
 ---
 lang: en
-title: egN_time
+title: egN_timeX
 ---
 The time duration from an envelope point to another, in seconds.
 Can also be modulated with MIDI CC.
