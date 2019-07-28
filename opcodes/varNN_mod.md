@@ -3,10 +3,12 @@ lang: en
 title: varNN_mod
 ---
 Specifies the method used to calculate variable number NN from MIDI CCs.
-Mult is multiplication, with 1 being full scale - 0 at a CC value of 0,
-and 1 at CC value of 127 - this is how the [amplitude](amplitude) opcode works.
-Add is addition - how [volume](volume), [cutoff](cutoff) and all other
-modulation destinations work by default when modulated.
+
+- ***mult***: multiplication, with 1 being full scale - 0 at a CC value of 0,
+              and 1 at CC value of 127.
+              This is how the [amplitude](amplitude) opcode works.
+- ***add***: addition, how [volume](volume), [cutoff](cutoff) and all other
+             modulation destinations work by default when modulated.
 
 ##### Example
 

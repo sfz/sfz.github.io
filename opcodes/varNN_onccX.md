@@ -3,7 +3,7 @@ lang: en
 title: varNN_onccX
 ---
 The amount by which MIDI CC X modulates variable NN. The modulation is either
-by mutliplication or addition, depending on [varNN_mod](varNN_mod) settings.
+by multiplication or addition, depending on [varNN_mod](varNN_mod) settings.
 
 ##### Example
 
@@ -13,7 +13,8 @@ var02_oncc100=0.5
 ```
 
 Here is how two different CCs could be used, together with [varNN_target](varNN_target) 
-(in this case, var01_cutoff as 01 is the variable number and cutoff is the target) and [varNN_mod](varNN_mod) to control velocity tracking on a filter cutoff:
+(in this case, var01_cutoff as 01 is the variable number and cutoff is the target)
+and [varNN_mod](varNN_mod) to control velocity tracking on a filter cutoff:
 
 ```
 //Lowpass filter
