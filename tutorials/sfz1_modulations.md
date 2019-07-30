@@ -120,3 +120,6 @@ fileg_vel2attack=-0.4
 fileg_vel2decay=-0.8
 fileg_vel2depth=4000
 ```
+
+If something is not described above, then modulating it is not possible under the
+SFZ1 specification, and will require using SFZ2 or possibly some extension opcodes.
