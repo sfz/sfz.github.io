@@ -38,6 +38,9 @@ url: "https://sfzformat.github.io"
 
 spdx_license_id: "MPL-2.0"
 
+locale:
+  default: "en"
+
 organization:
   name: "SFZ Format"
   url: "https://sfzformat.github.io"

@@ -1,4 +1,4 @@
-{%-assign default_locale = site.data.i18n.config.default-%}
+{%-assign default_locale = site.locale.default-%}
 {%-if page.lang == default_locale-%}
 	{%-assign page_path_prefix = "/"-%}
 {%-else-%}
@@ -6,7 +6,7 @@
 {%-endif-%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ site.data.i18n.locales[page.lang].translation.news }}</title>
+	<title>{{ site.data.locale[page.lang].translation.news }}</title>
 	<link href="{{ site.url }}{{ page_path_prefix }}atom.xml" rel="self"/>
 	<link href="{{ site.url }}{{ page_path_prefix }}"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>

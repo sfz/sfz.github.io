@@ -1,4 +1,4 @@
-{%-for language in site.data.i18n.locales-%}
+{%-for language in site.data.locale-%}
 	{%-if language[0] == page.lang-%}
 		{%-assign current_locale_dir = language[1]-%}
 		{%-break-%}

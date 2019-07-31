@@ -1,10 +1,10 @@
-{%-for language in site.data.i18n.locales-%}
+{%-for language in site.data.locale-%}
 	{%-if language[0] == page.lang-%}
 		{%-assign current_locale_dir = language[1]-%}
 		{%-break-%}
 	{%-endif-%}
 {%-endfor-%}
-{%-assign default_locale = site.data.i18n.config.default-%}
+{%-assign default_locale = site.locale.default-%}
 {%-if page.lang == default_locale-%}
 	{%-assign page_path_prefix = "/"-%}
 {%-else-%}

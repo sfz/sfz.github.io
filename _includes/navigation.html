@@ -1,11 +1,11 @@
 {%-assign locale_count = 0-%}
-{%-for language in site.data.i18n.locales-%}
+{%-for language in site.data.locale-%}
 	{%-if language[0] == page.lang-%}
 		{%-assign current_locale_dir = language[1]-%}
 	{%-endif-%}
 	{%-assign locale_count = forloop.length-%}
 {%-endfor-%}
-{%-assign default_locale = site.data.i18n.config.default-%}
+{%-assign default_locale = site.locale.default-%}
 {%-if page.lang == default_locale-%}
 	{%-assign page_path_prefix = "/"-%}
 {%-else-%}
@@ -31,7 +31,7 @@
 								<img border="0" src="/assets/flags/{{ page.lang }}.png" width="16" height="11">
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarMenuLang">
-	{% for language in site.data.i18n.locales %}
+	{% for language in site.data.locale %}
 		{% if language[0] == default_locale %}
 			{% assign path_prefix = "/" %}
 		{% else %}
