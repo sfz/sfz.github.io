@@ -111,8 +111,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "string"
-# TODO: Handle conditional expression?
-        default: "no_loop for samples without a loop defined, loop_continuous for samples with defined loop(s)"
+        default: "<b>no_loop</b> for samples without a loop defined,<br><b>loop_continuous</b> for samples with defined loop(s)."
         options:
         - name: "no_loop"
           description: "no looping will be performed. Sample will play straight from start to end, or until note off, whatever reaches first."
