@@ -60,6 +60,12 @@ navigation:
     - title: "Brush Stirs"
       url: "/tutorials/brush_stirs"
     -
+    
+    - title: "SFZ 1 Modulations"
+      url: "/tutorials/sfz1_modulations"
+      
+    - title: "SFZ 2 Modulations"
+      url: "/tutorials/sfz2_modulations"
 
     - title: "SFZ 1 Pitch LFO"
       url: "/tutorials/lfo_sfz1"
