@@ -1423,209 +1423,242 @@ categories:
 
 # TODO: Separate versions
 
-    - name: "egN_points" # TODO: Source?
-      version: "SFZ v2"
-
-    - name: "egN_shape" # TODO: Source?
-      version: "SFZ v2"
-
-    - name: "egN_timeX"
-      version: "SFZ v2"
-
-    - name: "egN_timeX_onccY"
-      version: "SFZ v2"
-
-    - name: "egN_levelX"
-      version: "SFZ v2"
-
-    - name: "egN_levelX_onccY"
-      version: "SFZ v2"
-
-    - name: "egN_shapeX"
-      version: "SFZ v2"
-
-    - name: "egN_curveX"
-      version: "SFZ v2"
-
-    - name: "egN_sustain"
-      version: "SFZ v2"
-
-    - name: "egN_loop"
-      version: "SFZ v2"
-
-    - name: "egN_loop_count"
-      version: "SFZ v2"
-
-    - name: "egN_volume"
-      version: "SFZ v2"
-
-    - name: "egN_amplitude"
-      version: "SFZ v2"
-
-    - name: "egN_pan"
-      version: "SFZ v2"
-
-    - name: "egN_width"
-      version: "SFZ v2"
-
-    - name: "egN_pan_curve"
-      version: "SFZ v2"
-
-    - name: "egN_pan_curveccX"
-      version: "SFZ v2"
-
-    - name: "egN_volume_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_amplitude_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_pan_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_width_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_freq_lfoX"
-      version: "SFZ v2"
-
-    - name: "egN_depth_lfoX"
-      version: "SFZ v2"
-
-    - name: "egN_depthadd_lfoX"
-      version: "SFZ v2"
-
-    - name: "egN_pitch"
-      version: "SFZ v2"
-
-    - name: "egN_pitch_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_cutoff"
-      version: "SFZ v2"
-
-    - name: "egN_cutoff2"
-      version: "SFZ v2"
-
-    - name: "egN_resonance"
-      version: "SFZ v2"
-
-    - name: "egN_resonance2"
-      version: "SFZ v2"
-
-    - name: "egN_cutoff_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_cutoff2_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_resonance_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_resonance2_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq1freq"
-      version: "SFZ v2"
-
-    - name: "egN_eq2freq"
-      version: "SFZ v2"
-
-    - name: "egN_eq3freq"
-      version: "SFZ v2"
-
-    - name: "egN_eq1bw"
-      version: "SFZ v2"
-
-    - name: "egN_eq2bw"
-      version: "SFZ v2"
-
-    - name: "egN_eq3bw"
-      version: "SFZ v2"
-
-    - name: "egN_eq1gain"
-      version: "SFZ v2"
-
-    - name: "egN_eq2gain"
-      version: "SFZ v2"
-
-    - name: "egN_eq3gain"
-      version: "SFZ v2"
-
-    - name: "egN_eq1freq_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq2freq_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq3freq_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq1bw_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq2bw_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq3bw_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq1gain_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq2gain_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_eq3gain_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_decim"
-      version: "SFZ v2"
-
-    - name: "egN_bitred"
-      version: "SFZ v2"
-
-    - name: "egN_rectify"
-      version: "SFZ v2"
-
-    - name: "egN_ringmod"
-      version: "SFZ v2"
-
-    - name: "egN_noiselevel"
-      version: "SFZ v2"
-
-    - name: "egN_noisestep"
-      version: "SFZ v2"
-
-    - name: "egN_noisetone"
-      version: "SFZ v2"
-
-    - name: "egN_driveshape"
-      version: "SFZ v2"
-
-    - name: "egN_decim_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_bitred_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_rectify_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_ringmod_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_noiselevel_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_noisestep_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_noisetone_onccX"
-      version: "SFZ v2"
-
-    - name: "egN_driveshape_onccX"
-      version: "SFZ v2"
+    - name: "egN"
+      short_description: "Numbered envelope"
+      version: "SFZ v2"
+      parameters:
+      - name: "points" # TODO: Source?
+        version: "SFZ v2"
+
+      - name: "shape" # TODO: Source?
+        version: "SFZ v2"
+
+      - name: "timeX"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "timeX_onccY"
+          version: "SFZ v2"
+
+      - name: "levelX"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "levelX_onccY"
+          version: "SFZ v2"
+
+      - name: "shapeX"
+        version: "SFZ v2"
+
+      - name: "curveX"
+        version: "SFZ v2"
+
+      - name: "sustain"
+        version: "SFZ v2"
+
+      - name: "loop"
+        version: "SFZ v2"
+
+      - name: "loop_count"
+        version: "SFZ v2"
+
+      - name: "volume"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "volume_onccX"
+          version: "SFZ v2"
+
+      - name: "amplitude"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "amplitude_onccX"
+          version: "SFZ v2"
+
+      - name: "pan"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "pan_onccX"
+          version: "SFZ v2"
+
+      - name: "width"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "width_onccX"
+          version: "SFZ v2"
+
+      - name: "pan_curve"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "pan_curveccX"
+          version: "SFZ v2"
+
+      - name: "freq_lfoX"
+        version: "SFZ v2"
+
+      - name: "depth_lfoX"
+        version: "SFZ v2"
+
+      - name: "depthadd_lfoX"
+        version: "SFZ v2"
+
+      - name: "pitch"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "pitch_onccX"
+          version: "SFZ v2"
+
+      - name: "cutoff"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "cutoff_onccX"
+          version: "SFZ v2"
+
+      - name: "cutoff2"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+         name: "cutoff2_onccX"
+          version: "SFZ v2"
+
+      - name: "resonance"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "resonance_onccX"
+          version: "SFZ v2"
+
+      - name: "resonance2"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "resonance2_onccX"
+          version: "SFZ v2"
+
+      - name: "eq1freq"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq1freq_onccX"
+          version: "SFZ v2"
+
+      - name: "eq2freq"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq2freq_onccX"
+          version: "SFZ v2"
+
+      - name: "eq3freq"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq3freq_onccX"
+          version: "SFZ v2"
+
+      - name: "eq1bw"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq1bw_onccX"
+          version: "SFZ v2"
+
+      - name: "eq2bw"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq2bw_onccX"
+          version: "SFZ v2"
+
+      - name: "eq3bw"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq3bw_onccX"
+          version: "SFZ v2"
+
+      - name: "eq1gain"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq1gain_onccX"
+          version: "SFZ v2"
+
+      - name: "eq2gain"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq2gain_onccX"
+          version: "SFZ v2"
+
+      - name: "eq3gain"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "eq3gain_onccX"
+          version: "SFZ v2"
+
+      - name: "decim"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "decim_onccX"
+          version: "SFZ v2"
+
+      - name: "bitred"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "bitred_onccX"
+          version: "SFZ v2"
+
+      - name: "rectify"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "rectify_onccX"
+          version: "SFZ v2"
+
+      - name: "ringmod"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "ringmod_onccX"
+          version: "SFZ v2"
+
+      - name: "noiselevel"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "noiselevel_onccX"
+          version: "SFZ v2"
+
+      - name: "noisestep"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "noisestep_onccX"
+          version: "SFZ v2"
+
+      - name: "noisetone"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "noisetone_onccX"
+          version: "SFZ v2"
+
+      - name: "driveshape"
+        version: "SFZ v2"
+        modulation:
+        - midi_cc: true
+          name: "driveshape_onccX"
+          version: "SFZ v2"
 
   - name: "LFO"
     url: "/types/lfo"
