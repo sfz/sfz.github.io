@@ -10,8 +10,8 @@ pitch envelope.
 ## Basic MIDI CC modulation
 
 A few opcodes can be modulated simply by MIDI CC, with the modulation adding
-to what the opcode would normally do. These are: [offset](opcodes_offset) and 
-[delay](opcodes/delay).
+to what the opcode would normally do. These are: [offset](/opcodes/offset) and 
+[delay](/opcodes/delay).
 
 For example, this would have a sample offset of 500 when the modulating CC is
 at 0, and a sample offset of 1000 when the modulating CC is at max:
@@ -72,7 +72,7 @@ pitch and [filter cutoff](/opcodes/cutoff). Volume and cutoff can be modulated b
 (pitch can't in SFZ1 - the tune_ccN modulation is an ARIA extension). All three
 can also have randomization applied and be modulated by MIDI note number and
 velocity. The nomenclature for volume is a little confusing, with [gain_ccN](/opcodes/gain_ccN) using
-"gain" in the name, while the others are called [amp_random](/opcodes/amp_ranodom),
+"gain" in the name, while the others are called [amp_random](/opcodes/amp_random),
 [amp_keytrack](/opcodes/amp_keytrack) and [amp_veltrack](/opcodes/amp_veltrack).
 
 ```
