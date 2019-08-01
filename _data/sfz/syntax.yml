@@ -1524,7 +1524,7 @@ categories:
         version: "SFZ v2"
         modulation:
         - midi_cc: true
-         name: "cutoff2_onccX"
+          name: "cutoff2_onccX"
           version: "SFZ v2"
 
       - name: "resonance"
