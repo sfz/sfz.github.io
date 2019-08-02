@@ -201,15 +201,15 @@ SFZ2 envelopes are numbered and can have an arbitrary number of points, with
 the level at each point and its modulation set separately. The opcodes used
 to create these envelopes are:
 
-- [egN_curve](/opcodes/egN_curve)
-- [egN_level](/opcodes/egN_level)
-- [egN_level_onccX](/opcodes/egN_level)
-- [egN_loop](/opcodes/egN_loop)
 - [egN_points](/opcodes/egN_points)
+- [egN_levelX](/opcodes/egN_levelX)
+- [egN_levelX_onccY](/opcodes/egN_leveXl)
+- [egN_timeX](/opcodes/egN_timeX)
+- [egN_timeX_onccY](/opcodes/egN_timeX)
 - [egN_shapeX](/opcodes/egN_shapeX)
+- [egN_curveX](/opcodes/egN_curveX)
 - [egN_sustain](/opcodes/egN_sustain)
-- [egN_time](/opcodes/egN_time)
-- [egN_time_onccX](/opcodes/egN_time)
+- [egN_loop](/opcodes/egN_loop)
 
 ## Envelope targets
 
