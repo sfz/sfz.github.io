@@ -51,8 +51,8 @@ set accordingly.
 - [egN_points](/opcodes/egN_points)
 - [egN_shapeX](/opcodes/egN_shapeX)
 - [egN_sustain](/opcodes/egN_sustain)
-- [egN_time](/opcodes/egN_time)
-- [egN_time_onccX](/opcodes/egN_time)
+- [egN_timeX](/opcodes/egN_timeX)
+- [egN_timeX_onccY](/opcodes/egN_timeX)
 
 #### Flex EGs destinations
 
