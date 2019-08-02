@@ -44,9 +44,9 @@ These are 6-points Delay-Attack-Hold-Decay-Sustain-Release.
 Flexible EG can have as many points as needed. level and time for each point is
 set accordingly.
 
-- [egN_curve](/opcodes/egN_curve)
-- [egN_level](/opcodes/egN_level)
-- [egN_level_onccX](/opcodes/egN_level)
+- [egN_curveX](/opcodes/egN_curveX)
+- [egN_levelX](/opcodes/egN_levelX)
+- [egN_levelX_onccY](/opcodes/egN_levelX)
 - [egN_loop](/opcodes/egN_loop)
 - [egN_points](/opcodes/egN_points)
 - [egN_shapeX](/opcodes/egN_shapeX)
