@@ -21,7 +21,7 @@ This would work well enough to make a sound when a MIDI note corresponding to
 one of the sampled pitches is played. However, playing notes inbetween
 the D and E, or E and F#, would mean no sound. We can "stretch" one of the
 neighboring notes to cover that D# and that F using the
-[lokey, hikey](/opcodes/lo_hikey) and 
+[lokey, hikey](/opcodes/lokey) and 
 [pitch_keycenter](/opcodes/pitch_keycenter) opcodes instead of key.
 If a sample does not need to cover multiple notes, it can still use key. Whether
 to use the D or E sample to cover the D# in our example is a judgment call -
@@ -55,8 +55,8 @@ note velocity to choose which sample is played - however, while this makes
 perfect sense for drum hits or piano notes, with instruments such as flute or
 violin, it's possible for the player to vary the dynamic level while a note is
 being sustained. This can be simulated with the
-[xfin_loccN/xfin_hiccN](/opcodes/xfin_lo_hiccN) and
-[xfout_loccN/xfout_hiccN](/opcodes/xfout_lo_hiccN) opcodes. Using only the
+[xfin_loccN/xfin_hiccN](/opcodes/xfin_loccN) and
+[xfout_loccN/xfout_hiccN](/opcodes/xfout_loccN) opcodes. Using only the
 D4 and E4 samples as an example, and controlling the dynamics with CC1 (mod wheel).
 The [amp_veltrack](/opcodes/amp_veltrack) opcode is set to 0,
 so that velocity does not affect volume.
@@ -82,7 +82,7 @@ example regular sustains and fluttertongue sustains, we need a way to switch
 between them. Each could be its own independent and complete SFZ file, and we
 could just load the desired file into the player, but for convenience,
 especially in live performance, it's good to load both at once and have a way of
-switching between them. One way is [loccN/hiccN](/opcodes/lo_hiccN)
+switching between them. One way is [loccN/hiccN](/opcodes/loccN)
 where which sample is triggered for a particular note depends on the value of
 a MIDI CC - let's use MIDI CC 11.
 Notice that the fluttertongue samples in this example have fewer dynamic layers
@@ -112,7 +112,7 @@ for different notes within the same articulation.
 
 Another, probably more common, way is to use keyswitches. If we define the
 keyswitch range as the C and C# below our lowest D using
-[sw_lokey/sw_hikey](/opcodes/sw_lo_hikey), we can then use
+[sw_lokey/sw_hikey](/opcodes/sw_lokey), we can then use
 [sw_last](/opcodes/sw_last) to select articulations.
 
 ```
@@ -136,7 +136,7 @@ keyswitch range as the C and C# below our lowest D using
 
 There are other possibilities - for example, since velocity is not needed to
 control dynamics, we could use that to select articulations using
-[lovel/hivel](/opcodes/lo_hivel), for example. However, it' is quite common,
+[lovel/hivel](/opcodes/lovel), for example. However, it' is quite common,
 especially with string instruments, to use a MIDI CC to control the dynamics of
 sustained articulations, and velocity to control the dynamics of short
 articulations such as staccato. In those cases, the short articulations could

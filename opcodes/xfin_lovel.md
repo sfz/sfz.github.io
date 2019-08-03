@@ -18,7 +18,7 @@ xfin_lovel=0 xfin_hivel=31
 
 This is useful for having velocity-based dynamic layers which are gradually
 crossfaded based on velocity, instead of having hard
-[lovel / hivel](lo_hivel) cutoffs between the layers.
+[lovel / hivel](lovel) cutoffs between the layers.
 
 | Type    | Default      | Range    |
 | ---     | ---          | ---      |

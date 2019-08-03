@@ -3,7 +3,7 @@ lang: en
 title: sw_down
 ---
 Enables the region to play if the key equal to sw_down value is depressed.
-Key has to be in the range specified by [sw_lokey](sw_lo_hikey) and [sw_hikey](sw_lo_hikey).
+Key has to be in the range specified by [sw_lokey](sw_lokey) and [sw_hikey](sw_lokey).
 
 `sw_down` can be entered in either MIDI note numbers (0 to 127) or in MIDI note
 names (C-1 to G9)

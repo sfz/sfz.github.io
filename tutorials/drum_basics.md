@@ -74,7 +74,7 @@ kick_vl4.wav
 ```
 
 To trigger the quiet sample at low MIDI note velocities, we'd use the
-[lovel and hivel](/opcodes/lo_hivel) opcodes like this:
+[lovel and hivel](/opcodes/lovel) opcodes like this:
 
 ```
 <region>key=36 lovel=0 hivel=31 sample=kick_vl1.wav
@@ -166,7 +166,7 @@ in every group. Those two opcodes could be moved to the global level if all we
 wanted was a kick drum, but as we're going to have other instruments with other
 keys and possibly different numbers of round robins, we kept them at the group
 level. The other way to use round robins is randomized, using the
-[lorand and hirand](/opcodes/lo_hirand) opcodes. This will make the sample
+[lorand and hirand](/opcodes/lorand) opcodes. This will make the sample
 player generate a random number, then play the region whose lorand to hirand
 range includes that random number. Whether robins should be used in this random
 way or the above sequential way, the answer is "it depends". It seems that more

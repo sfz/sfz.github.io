@@ -54,7 +54,7 @@ eq2_vel2gain=12
 eq2_vel2freq=500
 ```
 
-The [xfin](/opcodes/xfin_lo_hiccN)/[xfout](/opcodes/xfout_lo_hiccN) CCs are also a
+The [xfin](/opcodes/xfin_loccN)/[xfout](/opcodes/xfout_loccN) CCs are also a
 way to fade sounds in and out using MIDI CC. An example of one note with two
 dynamic layers being crossfaded:
 

@@ -3,7 +3,7 @@ lang: en
 title: sw_last
 ---
 Enables the region to play if the last key pressed in the range specified by
-[sw_lokey](sw_lo_hikey) and [sw_hikey](sw_lo_hikey)
+[sw_lokey](sw_lokey) and [sw_hikey](sw_lokey)
 is equal to the `sw_last` value.
 
 `sw_last` can be entered in either MIDI note numbers (0 to 127) or in MIDI note

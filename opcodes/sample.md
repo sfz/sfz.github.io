@@ -23,8 +23,8 @@ If [pitch_keycenter](pitch_keycenter) is not defined for the region, sample will
 play unchanged on note 60 (middle C). If [pitch_keytrack](pitch_keytrack)
 is set to 0, the sample will also play unchanged in pitch,
 regardless of how [pitch_keycenter](pitch_keycenter) is set.
-If the key opcode is used to define the range of the sample (instead of [lokey](lo_hikey),
-[hikey](lo_hikey) and [pitch_keycenter](pitch_keycenter)) the sample will also
+If the key opcode is used to define the range of the sample (instead of [lokey](lokey),
+[hikey](lokey) and [pitch_keycenter](pitch_keycenter)) the sample will also
 be unchanged in pitch.
 
 ##### Examples

@@ -381,7 +381,7 @@ group=2 off_by=2
 <region>group=2 off_by=2
 ```
 
-It is, of course, possible to apply [round robins](/opcodes/seq_position) and [dynamic layers](/opcodes/lo_hivel) to this,
+It is, of course, possible to apply [round robins](/opcodes/seq_position) and [dynamic layers](/opcodes/lovel) to this,
 just like any other drum sound. That is left as an exercise to the reader.
 
 ## Alternative approach
@@ -391,7 +391,7 @@ controller. For keyboard controllers or sequencing, another approach is possible
 where instead of using a MIDI note to trigger a new stir every time the drummer
 would complete a circle, we hold down a long note for as long as we want to produce
 stirs (so, possibly for several measures, or even the entire duration of a song).
-We then [use MIDI CC to crossfade between the layers](/opcodes/xfin_lo_hiccN) to
+We then [use MIDI CC to crossfade between the layers](/opcodes/xfin_loccN) to
 modulate the speed of the stir in order to create realism and rhythmic interest.
 In order to be able to do this, the samples will have to be looped, but as stated
 at the beginning, looping or crossfading noisy samples is very easy as there are

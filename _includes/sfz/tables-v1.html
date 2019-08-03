@@ -31,23 +31,23 @@
 | Opcode                                                     | Aria  | LinuxSampler |
 | ---                                                        | :---: |    :---:     |
 | [key](key)                                                 |   ✓   |      ✓       |
-| [lokey](lo_hikey)                                          |   ✓   |      ✓       |
-| [hikey](lo_hikey)                                          |   ✓   |      ✓       |
-| [lovel](lo_hivel)                                          |   ✓   |      ✓       |
-| [hivel](lo_hivel)                                          |   ✓   |      ✓       |
+| [lokey](lokey)                                             |   ✓   |      ✓       |
+| [hikey](hikey)                                             |   ✓   |      ✓       |
+| [lovel](lovel)                                             |   ✓   |      ✓       |
+| [hivel](hivel)                                             |   ✓   |      ✓       |
 
 ## [Region Logic](/opcodes/categories#region-logic): MIDI Conditions
 
 | Opcode                                                     | Aria  | LinuxSampler |
 | ---                                                        | :---: |    :---:     |
-| [lochan](lo_hichan)                                        |   ✓   |      ✓       |
-| [hichan](lo_hichan)                                        |   ✓   |      ✓       |
-| [loccN](lo_hiccN)                                          |   ✓   |      ✓       |
-| [hiccN](lo_hiccN)                                          |   ✓   |      ✓       |
-| [lobend](lo_hibend)                                        |   ✓   |      ✓       |
-| [hibend](lo_hibend)                                        |   ✓   |      ✓       |
-| [sw_lokey](sw_lo_hikey)                                    |   ✓   |      ✓       |
-| [sw_hikey](sw_lo_hikey)                                    |   ✓   |      ✓       |
+| [lochan](lochan)                                           |   ✓   |      ✓       |
+| [hichan](hichan)                                           |   ✓   |      ✓       |
+| [loccN](loccN)                                             |   ✓   |      ✓       |
+| [hiccN](hiccN)                                             |   ✓   |      ✓       |
+| [lobend](lobend)                                           |   ✓   |      ✓       |
+| [hibend](hibend)                                           |   ✓   |      ✓       |
+| [sw_lokey](sw_lokey)                                       |   ✓   |      ✓       |
+| [sw_hikey](sw_hikey)                                       |   ✓   |      ✓       |
 | [sw_last](sw_last)                                         |   ✓   |      ✓       |
 | [sw_down](sw_down)                                         |   ✓   |      ✓       |
 | [sw_up](sw_up)                                             |   ✓   |      ✓       |
@@ -58,14 +58,14 @@
 
 | Opcode                                                     | Aria  | LinuxSampler |
 | ---                                                        | :---: |    :---:     |
-| [lobpm](lo_hibpm)                                          |   ✓   |      X       |
-| [hibpm](lo_hibpm)                                          |   ✓   |      X       |
-| [lochanaft](lo_hichanaft)                                  |   ✓   |      ✓       |
-| [hichanaft](lo_hichanaft)                                  |   ✓   |      ✓       |
-| [lopolyaft](lo_hipolyaft)                                  |   X   |      X       |
-| [hipolyaft](lo_hipolyaft)                                  |   X   |      X       |
-| [lorand](lo_hirand)                                        |   ✓   |      ✓       |
-| [hirand](lo_hirand)                                        |   ✓   |      ✓       |
+| [lobpm](lobpm)                                             |   ✓   |      X       |
+| [hibpm](hibpm)                                             |   ✓   |      X       |
+| [lochanaft](lochanaft)                                     |   ✓   |      ✓       |
+| [hichanaft](hichanaft)                                     |   ✓   |      ✓       |
+| [lopolyaft](lopolyaft)                                     |   X   |      X       |
+| [hipolyaft](hipolyaft)                                     |   X   |      X       |
+| [lorand](lorand)                                           |   ✓   |      ✓       |
+| [hirand](hirand)                                           |   ✓   |      ✓       |
 | [seq_length](seq_length)                                   |   ✓   |      ✓       |
 | [seq_position](seq_position)                               |   ✓   |      ✓       |
 
@@ -74,8 +74,8 @@
 | Opcode                                                     | Aria  | LinuxSampler |
 | ---                                                        | :---: |    :---:     |
 | [trigger](trigger)                                         |   ✓   |      ✓       |
-| [on_loccN](on_lo_hiccN)                                    |   ✓   |      ✓       |
-| [on_hiccN](on_lo_hiccN)                                    |   ✓   |      ✓       |
+| [on_loccN](on_loccN)                                       |   ✓   |      ✓       |
+| [on_hiccN](on_hiccN)                                       |   ✓   |      ✓       |
 
 ## [Performance parameters](/opcodes/categories#performance-parameters): Amplifier
 
@@ -95,18 +95,18 @@
 | [xf_cccurve](xf_cccurve)                                   |   ✓   |      ✓       |
 | [xf_keycurve](xf_keycurve)                                 |   ✓   |      ✓       |
 | [xf_velcurve](xf_velcurve)                                 |   ✓   |      ✓       |
-| [xfin_loccN](xfin_lo_hiccN)                                |   ✓   |      ✓       |
-| [xfin_hiccN](xfin_lo_hiccN)                                |   ✓   |      ✓       |
-| [xfout_loccN](xfout_lo_hiccN)                              |   ✓   |      ✓       |
-| [xfout_hiccN](xfout_lo_hiccN)                              |   ✓   |      ✓       |
-| [xfin_lokey](xfin_lo_hikey)                                |   ✓   |      ✓       |
-| [xfin_hikey](xfin_lo_hikey)                                |   ✓   |      ✓       |
-| [xfout_lokey](xfout_lo_hikey)                              |   ✓   |      ✓       |
-| [xfout_hikey](xfout_lo_hikey)                              |   ✓   |      ✓       |
-| [xfin_lovel](xfin_lo_hivel)                                |   ✓   |      ✓       |
-| [xfin_hivel](xfin_lo_hivel)                                |   ✓   |      ✓       |
-| [xfout_lovel](xfout_lo_hivel)                              |   ✓   |      ✓       |
-| [xfout_hivel](xfout_lo_hivel)                              |   ✓   |      ✓       |
+| [xfin_loccN](xfin_loccN)                                   |   ✓   |      ✓       |
+| [xfin_hiccN](xfin_hiccN)                                   |   ✓   |      ✓       |
+| [xfout_loccN](xfout_loccN)                                 |   ✓   |      ✓       |
+| [xfout_hiccN](xfout_hiccN)                                 |   ✓   |      ✓       |
+| [xfin_lokey](xfin_lokey)                                   |   ✓   |      ✓       |
+| [xfin_hikey](xfin_hikey)                                   |   ✓   |      ✓       |
+| [xfout_lokey](xfout_lokey)                                 |   ✓   |      ✓       |
+| [xfout_hikey](xfout_hikey)                                 |   ✓   |      ✓       |
+| [xfin_lovel](xfin_lovel)                                   |   ✓   |      ✓       |
+| [xfin_hivel](xfin_hivel)                                   |   ✓   |      ✓       |
+| [xfout_lovel](xfout_lovel)                                 |   ✓   |      ✓       |
+| [xfout_hivel](xfout_hivel)                                 |   ✓   |      ✓       |
 
 ## [Modulation](/opcodes/categories#modulation): [Envelope Generators](/types/envelope_generators)
 

@@ -29,10 +29,10 @@ round robins, would look like this:
 <region>seq_position=3 sample=snare_rr3.wav
 ```
 
-An alternative to this is using [lorand / hirand](/opcodes/lo_hirand) for
+An alternative to this is using [lorand / hirand](/opcodes/lorand) for
 random, instead of sequential, round robins. If there are enough samples
 available, both methods can also be combined - the combination is described
-on the [lorand / hirand](/opcodes/lo_hirand) page.
+on the [lorand / hirand](/opcodes/lorand) page.
 
 | Type    | Default | Range    |
 | ---     | ---     | ---      |

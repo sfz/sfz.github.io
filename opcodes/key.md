@@ -2,7 +2,7 @@
 lang: en
 title: key
 ---
-`key` is equivalent to using [lokey](lo_hikey), [hikey](lo_hikey) and
+`key` is equivalent to using [lokey](lokey), [hikey](lokey) and
 [pitch_keycenter](pitch_keycenter) and setting them all to the same note value.
 Because of this, it is a very useful and convenient opcode for instruments which
 do not need to spread a sample across multiple notes.
