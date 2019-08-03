@@ -107,7 +107,7 @@ categories:
       alias:
       - name: "loopmode"
         version: "SFZ v2"
-      short_description: "The endpoint of the sample"
+      short_description: "Allows playing samples with loops defined in the unlooped mode."
       version: "SFZ v1"
       value:
         type_name: "string"
