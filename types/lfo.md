@@ -41,18 +41,18 @@ Much like the Flex EG, these newer LFO can target almost any tone-defining param
 
 [Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo_sfz1)
 
-- [lfoN_wave](/opcodes/lfoN_wave)
-- [lfoN_freq](/opcodes/lfoN_freq)
-- [lfoN_freq_onccX](/opcodes/lfoN_freq)
-- [lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
-- [lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
-- [lfoN_delay](/opcodes/lfoN_delay)
-- [lfoN_delay_onccX](/opcodes/lfoN_delay)
-- [lfoN_fade](/opcodes/lfoN_fade)
-- [lfoN_fade_onccX](/opcodes/lfoN_fade)
-- [lfoN_phase](/opcodes/lfoN_phase)
-- [lfoN_phase_onccX](/opcodes/lfoN_phase)
-- [lfoN_count](/opcodes/lfoN_count)
+- [lfoN_wave](/opcodes/lfoN/wave)
+- [lfoN_freq](/opcodes/lfoN/freq)
+- [lfoN_freq_onccX](/opcodes/lfoN/freq)
+- [lfoN_freq_smoothccX](/opcodes/lfoN/freq_smoothccX)
+- [lfoN_freq_stepccX](/opcodes/lfoN/freq_stepccX)
+- [lfoN_delay](/opcodes/lfoN/delay)
+- [lfoN_delay_onccX](/opcodes/lfoN/delay)
+- [lfoN_fade](/opcodes/lfoN/fade)
+- [lfoN_fade_onccX](/opcodes/lfoN/fade)
+- [lfoN_phase](/opcodes/lfoN/phase)
+- [lfoN_phase_onccX](/opcodes/lfoN/phase)
+- [lfoN_count](/opcodes/lfoN/count)
 
 #### Assignable LFO Destinations
 

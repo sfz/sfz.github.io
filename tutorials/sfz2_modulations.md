@@ -26,18 +26,18 @@ not sure, needs testing.
 For each LFO, an LFO number must be specified - lfo01, lfo02 etc. Each
 LFO has the following parameters:
 
-- [lfoN_wave](/opcodes/lfoN_wave)
-- [lfoN_freq](/opcodes/lfoN_freq)
-- [lfoN_freq_onccX](/opcodes/lfoN_freq)
-- [lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
-- [lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
-- [lfoN_delay](/opcodes/lfoN_delay)
-- [lfoN_delay_onccX](/opcodes/lfoN_delay)
-- [lfoN_fade](/opcodes/lfoN_fade)
-- [lfoN_fade_onccX](/opcodes/lfoN_fade)
-- [lfoN_phase](/opcodes/lfoN_phase)
-- [lfoN_phase_onccX](/opcodes/lfoN_phase)
-- [lfoN_count](/opcodes/lfoN_count)
+- [lfoN_wave](/opcodes/lfoN/wave)
+- [lfoN_freq](/opcodes/lfoN/freq)
+- [lfoN_freq_onccX](/opcodes/lfoN/freq)
+- [lfoN_freq_smoothccX](/opcodes/lfoN/freq_smoothccX)
+- [lfoN_freq_stepccX](/opcodes/lfoN/freq_stepccX)
+- [lfoN_delay](/opcodes/lfoN/delay)
+- [lfoN_delay_onccX](/opcodes/lfoN/delay)
+- [lfoN_fade](/opcodes/lfoN/fade)
+- [lfoN_fade_onccX](/opcodes/lfoN/fade)
+- [lfoN_phase](/opcodes/lfoN/phase)
+- [lfoN_phase_onccX](/opcodes/lfoN/phase)
+- [lfoN_count](/opcodes/lfoN/count)
 
 Click on each link for a detailed description. Similarly to SFZ1 LFOs,
 there's a frequency, a delay and a fade-in time. In addition, the
@@ -201,15 +201,15 @@ SFZ2 envelopes are numbered and can have an arbitrary number of points, with
 the level at each point and its modulation set separately. The opcodes used
 to create these envelopes are:
 
-- [egN_points](/opcodes/egN_points)
-- [egN_levelX](/opcodes/egN_levelX)
-- [egN_levelX_onccY](/opcodes/egN_leveXl)
-- [egN_timeX](/opcodes/egN_timeX)
-- [egN_timeX_onccY](/opcodes/egN_timeX)
-- [egN_shapeX](/opcodes/egN_shapeX)
-- [egN_curveX](/opcodes/egN_curveX)
-- [egN_sustain](/opcodes/egN_sustain)
-- [egN_loop](/opcodes/egN_loop)
+- [egN_points](/opcodes/egN/points)
+- [egN_levelX](/opcodes/egN/levelX)
+- [egN_levelX_onccY](/opcodes/egN/leveXl)
+- [egN_timeX](/opcodes/egN/timeX)
+- [egN_timeX_onccY](/opcodes/egN/timeX)
+- [egN_shapeX](/opcodes/egN/shapeX)
+- [egN_curveX](/opcodes/egN/curveX)
+- [egN_sustain](/opcodes/egN/sustain)
+- [egN_loop](/opcodes/egN/loop)
 
 ## Envelope targets
 
