@@ -3,20 +3,29 @@
 		<tr>
 			<th>Header</th>
 			<th style="text-align:center">Version</th>
-{%-for player in site.data.sfz.players-%}
-			<th style="text-align:center">{{ player.name }}</th>
+{%-for player_hash in site.data.sfz.players-%}
+	{%-assign player = player_hash[0]-%}
+			<th style="text-align:center">{{ player }}</th>
 {%-endfor-%}
 		</tr>
 	</thead>
 	<tbody>
 {%-for header in site.data.sfz.syntax.headers-%}
 		<tr>
-			<td>&lt;<a href="/headers/{{ header.name }}">{{ header.name }}</a>&gt;</td>
+			<td>&lt;<a href="{{ '/headers/' | append: header.name | relative_url }}">{{ header.name }}</a>&gt;</td>
 			<td style="text-align:center">{{ header.version }}</td>
-	{%-for player in site.data.sfz.players-%}
-		{%-assign player_support = header.supported_by[player.name]-%}
-		{%-if player_support == nil-%}
-			{%-assign player_support = "X"-%}
+	{%-for player_hash in site.data.sfz.players-%}
+		{%-assign player = player_hash[1]-%}
+		{%-assign found = false-%}
+		{%-assign player_support = 'X'-%}
+		{%-for header-supported in player.headers-%}
+			{%-if header-supported.name == header.name-%}
+				{%-assign found = true-%}
+				{%-break-%}
+			{%-endif-%}
+		{%-endfor-%}
+		{%-if found-%}
+			{%-assign player_support = '✓'-%}
 		{%-endif-%}
 			<td style="text-align:center">{{ player_support }}</td>
 	{%-endfor-%}
