@@ -4,21 +4,23 @@ title: lfoN_wave
 ---
 LFO waveform selection. Default is 1 (sine). In ARIA, the waves are:
 
--1. deprecated, should not be used, but is random
-0. triangle
-1. sine
-2. 75% pulse
-3. square (50% pulse)
-4. 25% pulse
-5. 12.5% pulse
-6. saw going up
-7. saw going down
-8. used in Chipsounds
-9. used in Chipsounds
-10. future user LFO
-11. future user LFO
-12. random sample & hold, generating a random value between -1 and 1 twice per period
-13. stepped LFO
+<ol start="-1">
+<li>deprecated, should not be used, but is random</li>
+<li>triangle</li>
+<li>sine</li>
+<li>75% pulse</li>
+<li>square (50% pulse)</li>
+<li>25% pulse</li>
+<li>12:5% pulse</li>
+<li>saw going up</li>
+<li>saw going down</li>
+<li>used in Chipsounds</li>
+<li>used in Chipsounds</li>
+<li>future user LFO</li>
+<li>future user LFO</li>
+<li>random sample & hold, generating a random value between -1 and 1 twice per period</li>
+<li>stepped LFO</li>
+</ol>
 
 The waveforms supported in the other player engines need to be tested.
 
