@@ -203,7 +203,7 @@ to create these envelopes are:
 
 - [egN_points](/opcodes/egN/points)
 - [egN_levelX](/opcodes/egN/levelX)
-- [egN_levelX_onccY](/opcodes/egN/leveXl)
+- [egN_levelX_onccY](/opcodes/egN/levelX)
 - [egN_timeX](/opcodes/egN/timeX)
 - [egN_timeX_onccY](/opcodes/egN/timeX)
 - [egN_shapeX](/opcodes/egN/shapeX)
