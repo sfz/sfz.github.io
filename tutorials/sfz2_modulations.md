@@ -336,6 +336,6 @@ pitcheg_depth_oncc111=-20
 ```
 
 This is what's possible under the SFZ2 specification. There are some additional modulations
-available as [ARIA extensions](/opcodes/aria), with [amplitude_onccN](/opcodes/amplitude_onccN)
+available as [ARIA extensions](/opcodes/aria), with [amplitude_onccN](/opcodes/amplitude)
 being a very useful one. There's also tune_onccN which needs to be documented after checking
 whether it's SFZ2 or ARIA.

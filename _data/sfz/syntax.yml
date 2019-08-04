@@ -1027,11 +1027,23 @@ categories:
       version: "SFZ v2"
 
     - name: "amplitude"
+      short_description: "Amplitude for the specified region in percentage of full amplitude."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 100
+        min: 0
+        max: 100
+        unit: "percentage"
       modulation:
         midi_cc:
         - name: "amplitude_onccN"
           version: "ARIA"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 100
+            unit: "percentage"
         - name: "amplitude_curveccN"
           version: "ARIA"
         - name: "amplitude_smoothccN"
