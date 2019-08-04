@@ -851,8 +851,20 @@ categories:
         unit: "decibels"
       modulation:
         midi_cc:
-        - name: "volume_onccN"
-          version: "SFZ v2"
+        - name: "gain_ccN"
+          version: "SFZ v1"
+          alias:
+          - name: "volume_onccN"
+            version: "ARIA"
+          value:
+            type_name: "float"
+            default: 0
+            min: -144
+            max: 48
+            unit: "decibels"
+        - name: "volume_curveccN"
+        - name: "volume_smoothccN"
+        - name: "volume_stepccN"
 
     - name: "width"
       short_description: "Only operational for stereo samples, width defines the amount of channel mixing applied to play the sample."
@@ -913,16 +925,6 @@ categories:
         default: 0
         min: 0
         max: 24
-        unit: "decibels"
-
-    - name: "gain_ccN"
-      short_description: "Gain applied on MIDI control N, in decibels."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -144
-        max: 48
         unit: "decibels"
 
     - name: "rt_decay"
@@ -1026,15 +1028,14 @@ categories:
 
     - name: "amplitude"
       version: "ARIA"
-
-    - name: "amplitude_curveccN"
-      version: "ARIA"
-
-    - name: "amplitude_onccN"
-      version: "ARIA"
-
-    - name: "amplitude_smoothccN"
-      version: "ARIA"
+      modulation:
+        midi_cc:
+        - name: "amplitude_onccN"
+          version: "ARIA"
+        - name: "amplitude_curveccN"
+          version: "ARIA"
+        - name: "amplitude_smoothccN"
+          version: "ARIA"
 
     - name: "global_amplitude"
       version: "ARIA"
@@ -1057,28 +1058,28 @@ categories:
     - name: "group_volume"
       version: "ARIA"
 
-    - name: "volume_onccN"
-      version: "ARIA"
-
   - name: "EQ"
     opcodes:
     - name: "eq1_freq"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq1_freqccN"
+          version: "SFZ v1"
 
     - name: "eq2_freq"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq2_freqccN"
+          version: "SFZ v1"
 
     - name: "eq3_freq"
       version: "SFZ v1"
-
-    - name: "eq1_freqccN"
-      version: "SFZ v1"
-
-    - name: "eq2_freqccN"
-      version: "SFZ v1"
-
-    - name: "eq3_freqccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq3_freqccN"
+          version: "SFZ v1"
 
     - name: "eq1_vel2freq"
       version: "SFZ v1"
@@ -1091,39 +1092,45 @@ categories:
 
     - name: "eq1_bw"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq1_bwccN"
+          version: "SFZ v1"
 
     - name: "eq2_bw"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq2_bwccN"
+          version: "SFZ v1"
 
     - name: "eq3_bw"
       version: "SFZ v1"
-
-    - name: "eq1_bwccN"
-      version: "SFZ v1"
-
-    - name: "eq2_bwccN"
-      version: "SFZ v1"
-
-    - name: "eq3_bwccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq3_bwccN"
+          version: "SFZ v1"
 
     - name: "eq1_gain"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq1_gainccN"
+          version: "SFZ v1"
 
     - name: "eq2_gain"
       version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq2_gainccN"
+          version: "SFZ v1"
 
     - name: "eq3_gain"
       version: "SFZ v1"
-
-    - name: "eq1_gainccN"
-      version: "SFZ v1"
-
-    - name: "eq2_gainccN"
-      version: "SFZ v1"
-
-    - name: "eq3_gainccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "eq3_gainccN"
+          version: "SFZ v1"
 
     - name: "eq1_vel2gain"
       version: "SFZ v1"
@@ -1138,9 +1145,16 @@ categories:
     opcodes:
     - name: "cutoff"
       version: "SFZ v1"
-
-    - name: "cutoff_ccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "cutoff_ccN"
+          version: "SFZ v1"
+        - name: "cutoff_curveccN"
+          version: "SFZ v2"
+        - name: "cutoff_smoothccN"
+          version: "SFZ v2"
+        - name: "cutoff_stepccN"
+          version: "SFZ v2"
 
     - name: "cutoff_chanaft"
       version: "SFZ v1"
@@ -1165,38 +1179,30 @@ categories:
 
     - name: "resonance"
       version: "SFZ v1"
-
-    - name: "cutoff_curveccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "cutoff_smoothccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "cutoff_stepccN"
-      version: "SFZ v2"
-      short_description: ""
+      modulation:
+        midi_cc:
+        - name: "resonance_onccN"
+          version: "SFZ v2"
+        - name: "resonance_curveccN"
+          version: "SFZ v2"
+        - name: "resonance_smoothccN"
+          version: "SFZ v2"
+        - name: "resonance_stepccN"
+          version: "SFZ v2"
 
     - name: "cutoff2"
       version: "SFZ v2"
       short_description: ""
-
-    - name: "cutoff2_onccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "cutoff2_curveccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "cutoff2_smoothccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "cutoff2_stepccN"
-      version: "SFZ v2"
-      short_description: ""
+      modulation:
+        midi_cc:
+        - name: "cutoff2_onccN"
+          version: "SFZ v2"
+        - name: "cutoff2_curveccN"
+          version: "SFZ v2"
+        - name: "cutoff2_smoothccN"
+          version: "SFZ v2"
+        - name: "cutoff2_stepccN"
+          version: "SFZ v2"
 
     - name: "fil2_keycenter"
       version: "SFZ v2"
@@ -1214,41 +1220,19 @@ categories:
       version: "SFZ v2"
       short_description: ""
 
-    - name: "resonance_onccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance_curveccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance_smoothccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance_stepccN"
-      version: "SFZ v2"
-      short_description: ""
-
     - name: "resonance2"
       version: "SFZ v2"
       short_description: ""
-
-    - name: "resonance2_onccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance2_curveccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance2_smoothccN"
-      version: "SFZ v2"
-      short_description: ""
-
-    - name: "resonance2_stepccN"
-      version: "SFZ v2"
-      short_description: ""
+      modulation:
+        midi_cc:
+        - name: "resonance2_onccN"
+          version: "SFZ v2"
+        - name: "resonance2_curveccN"
+          version: "SFZ v2"
+        - name: "resonance2_smoothccN"
+          version: "SFZ v2"
+        - name: "resonance2_stepccN"
+          version: "SFZ v2"
 
   - name: "Pitch"
     opcodes:
@@ -1291,15 +1275,12 @@ categories:
       version: "SFZ v2"
       short_description: ""
 
+    # TODO:
     - name: "pitch_onccN"
       version: "SFZ v2"
-
     - name: "pitch_curveccN"
       version: "SFZ v2"
-
-#   - name: "pitch_smoothccN"
-#     version: "SFZ v2"
-
+    - name: "pitch_smoothccN"
     - name: "pitch_stepccN"
       version: "SFZ v2"
 
@@ -1337,45 +1318,45 @@ categories:
 
     - name: "decay"
       version: "SFZ v1"
-
-    - name: "decayccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "decayccN"
+          version: "SFZ v1"
 
     - name: "delay"
       version: "SFZ v1"
-
-    - name: "delayccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "delayccN"
+          version: "SFZ v1"
 
     - name: "hold"
       version: "SFZ v1"
-
-    - name: "holdccN"
-      version: "SFZ v1"
-
-    - name: "start"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "holdccN"
+          version: "SFZ v1"
 
     - name: "release"
       version: "SFZ v1"
-
-    - name: "releaseccN"
-      version: "SFZ v1"
-
-    - name: "startccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "releaseccN"
+          version: "SFZ v1"
 
     - name: "sustain"
       version: "SFZ v1"
-
-    - name: "sustainccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "sustainccN"
+          version: "SFZ v1"
 
     - name: "start"
       version: "SFZ v1"
-
-    - name: "startccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "startccN"
+          version: "SFZ v1"
 
     - name: "vel2attack"
       version: "SFZ v1"
@@ -1664,9 +1645,10 @@ categories:
 
     - name: "depth"
       version: "SFZ v1"
-
-    - name: "depthccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "depthccN"
+          version: "SFZ v1"
 
     - name: "depthchanaft"
       version: "SFZ v1"
@@ -1679,9 +1661,10 @@ categories:
 
     - name: "freq"
       version: "SFZ v1"
-
-    - name: "freqccN"
-      version: "SFZ v1"
+      modulation:
+        midi_cc:
+        - name: "freqccN"
+          version: "SFZ v1"
 
     - name: "freqchanaft"
       version: "SFZ v1"
@@ -1693,33 +1676,35 @@ categories:
 
     - name: "lfoN_freq"
       version: "SFZ v2"
-
-    - name: "lfoN_freq_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_freq_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_freq_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_freq_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_freq_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_freq_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_delay"
       version: "SFZ v2"
-
-    - name: "lfoN_delay_onccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_delay_onccX"
+          version: "SFZ v2"
 
     - name: "lfoN_fade"
       version: "SFZ v2"
-
-    - name: "lfoN_fade_onccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_fade_onccX"
+          version: "SFZ v2"
 
     - name: "lfoN_phase"
       version: "SFZ v2"
-
-    - name: "lfoN_phase_onccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_phase_onccX"
+          version: "SFZ v2"
 
     - name: "lfoN_count"
       version: "SFZ v2"
@@ -1735,57 +1720,54 @@ categories:
 
     - name: "lfoN_smooth"
       version: "SFZ v2"
-
-    - name: "lfoN_smooth_onccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_smooth_onccX"
+          version: "SFZ v2"
 
     - name: "lfoN_volume"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_volume_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_volume_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_volume_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_amplitude"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_amplitude_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_amplitude_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_amplitude_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_pan"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_pan_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_pan_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_pan_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_width"
       version: "SFZ v2"
-
-    - name: "lfoN_volume_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_amplitude_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_pan_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_width_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_volume_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_amplitude_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_pan_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_width_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_volume_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_amplitude_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_pan_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_width_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_width_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_width_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_width_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_freq_lfoX"
       version: "SFZ v2"
@@ -1798,243 +1780,223 @@ categories:
 
     - name: "lfoN_pitch"
       version: "SFZ v2"
-
-    - name: "lfoN_pitch_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_pitch_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_pitch_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_pitch_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_pitch_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_pitch_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_cutoff"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_cutoff_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_cutoff_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_cutoff_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_cutoff2"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_cutoff2_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_cutoff2_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_cutoff2_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_resonance"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_resonance_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_resonance_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_resonance_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_resonance2"
       version: "SFZ v2"
-
-    - name: "lfoN_cutoff_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_cutoff2_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance2_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_cutoff_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_cutoff2_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance2_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_cutoff_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_cutoff2_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_resonance2_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_resonance2_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_resonance2_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_resonance2_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq1freq"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq1freq_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1freq_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1freq_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq2freq"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq2freq_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2freq_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2freq_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq3freq"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq3freq_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3freq_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3freq_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq1bw"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq1bw_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1bw_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1bw_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq2bw"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq2bw_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2bw_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2bw_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq3bw"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq3bw_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3bw_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3bw_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq1gain"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq1gain_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1gain_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq1gain_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq2gain"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq2gain_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2gain_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq2gain_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_eq3gain"
       version: "SFZ v2"
-
-    - name: "lfoN_eq1freq_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2freq_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3freq_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1bw_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2bw_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3bw_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1gain_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2gain_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3gain_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1freq_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2freq_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3freq_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1bw_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2bw_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3bw_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1gain_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2gain_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3gain_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1freq_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2freq_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3freq_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1bw_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2bw_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3bw_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq1gain_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq2gain_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_eq3gain_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_eq3gain_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3gain_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_eq3gain_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_decim"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_decim_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_decim_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_decim_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_bitred"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_bitred_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_bitred_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_bitred_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_noiselevel"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_noiselevel_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_noiselevel_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_noiselevel_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_noisestep"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_noisestep_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_noisestep_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_noisestep_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_noisetone"
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_noisetone_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_noisetone_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_noisetone_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_drive"
       version: "SFZ v2"
-
-    - name: "lfoN_decim_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_bitred_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noiselevel_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisestep_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisetone_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_drive_onccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_decim_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_bitred_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noiselevel_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisestep_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisetone_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_drive_smoothccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_decim_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_bitred_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noiselevel_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisestep_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_noisetone_stepccX"
-      version: "SFZ v2"
-
-    - name: "lfoN_drive_stepccX"
-      version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_drive_onccX"
+          version: "SFZ v2"
+        - name: "lfoN_drive_smoothccX"
+          version: "SFZ v2"
+        - name: "lfoN_drive_stepccX"
+          version: "SFZ v2"
 
     - name: "lfoN_offset"
       version: "ARIA"
