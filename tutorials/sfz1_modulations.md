@@ -71,7 +71,7 @@ More sophisticated modulations are possible with volume,
 pitch and [filter cutoff](/opcodes/cutoff). Volume and cutoff can be modulated by MIDI CC directly
 (pitch can't in SFZ1 - the tune_ccN modulation is an ARIA extension). All three
 can also have randomization applied and be modulated by MIDI note number and
-velocity. The nomenclature for volume is a little confusing, with [gain_ccN](/opcodes/gain_ccN) using
+velocity. The nomenclature for volume is a little confusing, with [gain_ccN](/opcodes/volume) using
 "gain" in the name, while the others are called [amp_random](/opcodes/amp_random),
 [amp_keytrack](/opcodes/amp_keytrack) and [amp_veltrack](/opcodes/amp_veltrack).
 
