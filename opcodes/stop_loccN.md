@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: stop_loccN / stop_hiccN
 ---

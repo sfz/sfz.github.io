@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: (eg type)_vel2sustain
 ---

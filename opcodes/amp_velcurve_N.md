@@ -1,10 +1,11 @@
 ---
+layout: sfz/opcode
 lang: en
 title: amp_velcurve_N
 ---
-User-defined amplifier velocity curve. This opcode range allows defining a
-specific curve for the amplifier velocity. The value of the opcode indicates the
-normalized amplitude (0 to 1) for the specified velocity. N can be from 0 to 127.
+This opcode range allows defining a specific curve for the amplifier velocity.
+The value of the opcode indicates the normalized amplitude (0 to 1)
+for the specified velocity. N can be from 0 to 127.
 
 The player will interpolate lineraly between specified opcodes for unspecified ones:
 
@@ -33,7 +34,3 @@ four dynamic layers:
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav
 <region>lovel=96 sample=kick_vl4.wav
 ```
-
-| Type  | Default                                           | Range  |
-| ---   | ---                                               | ---    |
-| float | Standard curve (see [amp_veltrack](amp_veltrack)) | 0 to 1 |

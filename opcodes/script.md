@@ -1,17 +1,18 @@
 ---
+layout: sfz/opcode
 lang: en
 title: script
 ---
 This is an extension to the SFZ file format which is currently only available
-with LinuxSampler v2.0.0.svn37 or higher. It allows to load real-time instrument
-scripts for SFZ instruments. Find out more about [Instrument Scripts](http://doc.linuxsampler.org/Instrument_Scripts).
+with LinuxSampler v2.0.0.svn37 or higher.
+Find out more about [Instrument Scripts](http://doc.linuxsampler.org/Instrument_Scripts).
 
 The mandatory path parameter defines the file system path to the real-time
 instrument script file that shall be loaded and executed, which may either be an
 absolute path or a relative path. A relative path is always interpreted relative
 to the SFZ file's location.
 
-May only be used in <[global](/headers/global)> section. 
+May only be used in <[global](/headers/global)> section.
 
 ##### Example
 

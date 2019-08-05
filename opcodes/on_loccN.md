@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: on_loccN / on_hiccN
 ---

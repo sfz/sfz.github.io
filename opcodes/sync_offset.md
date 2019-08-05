@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: sync_offset
 ---

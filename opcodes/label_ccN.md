@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: label_ccN
 ---

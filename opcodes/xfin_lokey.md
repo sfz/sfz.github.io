@@ -1,4 +1,5 @@
 ---
+layout: sfz/opcode
 lang: en
 title: xfin_lokey / xfin_hikey
 ---
