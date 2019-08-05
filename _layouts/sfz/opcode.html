@@ -1,0 +1,80 @@
+---
+layout: default
+---
+{%-assign opcode_name = page.name | replace: ".md", ''-%}
+{%-for category in site.data.sfz.syntax.categories-%}
+	{%-for opcode in category.opcodes-%}
+		{%-if opcode.name == opcode_name-%}
+			{%-assign opcode_info = opcode-%}
+			{%break%}
+		{%-endif-%}
+	{%-endfor-%}
+	{%-for category_type in category.types-%}
+		{%-for opcode in category_type.opcodes-%}
+			{%-if opcode.name == opcode_name-%}
+				{%-assign opcode_info = opcode-%}
+				{%break%}
+			{%-endif-%}
+		{%-endfor-%}
+	{%-endfor-%}
+{%-endfor-%}
+{%-if opcode_info.value.min == nil-%}
+		{%-assign opcode_info_range = "N/A"-%}
+{%-else-%}
+		{%-assign opcode_info_range = opcode_info.value.min | append: " to " |
+			append: opcode_info.value.max-%}
+{%-endif-%}
+{%-if opcode_info.value.default == nil-%}
+		{%-assign opcode_info_default = "N/A"-%}
+{%-else-%}
+		{%-assign opcode_info_default = opcode_info.value.default-%}
+{%-endif-%}
+
+<p>{{ opcode_info.short_description }}</p>
+
+{{ content }}
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Version</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ opcode_info.name }}</td>
+			<td>{{ opcode_info.version }}</td>
+			<td>{{ opcode_info.value.type_name }}</td>
+			<td>{{ opcode_info_default }}</td>
+			<td>{{ opcode_info_range }}</td>
+		</tr>
+	</tbody>
+</table>
+
+{%-if opcode_info.modulation-%}
+	<h2>Modulation Sources</h2>
+	{%-if opcode_info.modulation.envelope-%}
+		{%-assign has_envelope = '✓'-%}
+	{%-else-%}
+		{%-assign has_envelope = 'X'-%}
+	{%-endif-%}
+	{%-if opcode_info.modulation.lfo-%}
+		{%-assign has_lfo = '✓'-%}
+	{%-else-%}
+		{%-assign has_lfo = 'X'-%}
+	{%-endif-%}
+	<ul>
+		<li>Envelope: {{ has_envelope }}</li>
+		<li>LFO: {{ has_lfo }}</li>
+		<li>MIDI CC:</li>
+		<ul>
+	{%-for midi_cc in opcode_info.modulation.midi_cc-%}
+			<li>{{ midi_cc.name }}</li>
+	{%-endfor-%}
+		</ul>
+	</ul>
+{%-endif-%}
