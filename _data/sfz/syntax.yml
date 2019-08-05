@@ -42,6 +42,9 @@ categories:
   opcodes:
   - name: "script"
     version: "LinuxSampler"
+    short_description: "Allows to load real-time instrument scripts for SFZ instruments."
+    value:
+      type_name: "string"
 
 - name: "Sound Source"
   url: "/opcodes/categories#sound-source"
@@ -51,7 +54,7 @@ categories:
     short_description: "Sample Playback opcodes defines the parameters of the sound generation."
     opcodes:
     - name: "count"
-      short_description: "The number of times the sample will be played"
+      short_description: "The number of times the sample will be played."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -60,7 +63,7 @@ categories:
         max: 4294967296
 
     - name: "delay"
-      short_description: "Region delay time"
+      short_description: "Region delay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -914,6 +917,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "float"
+        default: "Standard curve (see <a href='/opcodes/amp_veltrack'>amp_veltrack</a>)"
         min: 0
         max: 1
 
@@ -1036,6 +1040,8 @@ categories:
         max: 100
         unit: "percentage"
       modulation:
+        envelope: true
+        lfo: true
         midi_cc:
         - name: "amplitude_onccN"
           version: "ARIA"
@@ -1306,7 +1312,7 @@ categories:
     - name: "ampeg"
     - name: "fileg"
     - name: "pitcheg"
-    opcodes:
+    parameters:
     - name: "attack"
       version: "SFZ v1"
       value:
@@ -1651,7 +1657,7 @@ categories:
     - name: "amplfo"
     - name: "fillfo"
     - name: "pitchlfo"
-    opcodes:
+    parameters:
     - name: "delay"
       version: "SFZ v1"
 
