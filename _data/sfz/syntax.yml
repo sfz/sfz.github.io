@@ -853,10 +853,14 @@ categories:
         max: 6
         unit: "decibels"
       modulation:
+        envelope: true
+        lfo: true
         midi_cc:
         - name: "gain_ccN"
           version: "SFZ v1"
           alias:
+          - name: "gain_onccN"
+            version: "SFZ v2"
           - name: "volume_onccN"
             version: "ARIA"
           value:
@@ -866,9 +870,11 @@ categories:
             max: 48
             unit: "decibels"
         - name: "volume_curveccN"
+          version: "ARIA"
         - name: "volume_smoothccN"
+          version: "ARIA"
         - name: "volume_stepccN"
-
+          version: "ARIA"
     - name: "width"
       short_description: "Only operational for stereo samples, width defines the amount of channel mixing applied to play the sample."
       version: "SFZ v1"
@@ -1256,16 +1262,37 @@ categories:
     opcodes:
     - name: "bend_up"
       version: "SFZ v1"
+      short_description: "Pitch bend range when Bend Wheel or Joystick is moved up, in cents."
+      value:
+        type_name: "integer"
+        default: 200
+        min: -9600
+        max: 9600
+        unit: "cents"
 
     - name: "bend_down"
       version: "SFZ v1"
+      short_description: "Pitch bend range when Bend Wheel or Joystick is moved down, in cents."
+      value:
+        type_name: "integer"
+        default: -200
+        min: -9600
+        max: 9600
+        unit: "cents"
 
     - name: "bend_smooth"
-      version: "SFZ v1"
-      short_description: ""
+      version: "ARIA"
+      short_description: "Pitch bend smoothness. Adds “inertia” to pitch bends, so fast movements of the pitch bend wheel will have a delayed effect on the pitch change."
 
     - name: "bend_step"
       version: "SFZ v1"
+      short_description: "Pitch bend step, in cents."
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 1200
+        unit: "cents"
 
     - name: "pitch_keycenter"
       version: "SFZ v1"
@@ -1287,11 +1314,23 @@ categories:
 
     - name: "bend_stepup"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Pitch bend step, in cents, applied to upwards bends only."
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 1200
+        unit: "cents"
 
     - name: "bend_stepdown"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Pitch bend step, in cents, for downward pitch bends."
+      value:
+        type_name: "integer"
+        default: 1
+        min: 1
+        max: 1200
+        unit: "cents"
 
     # TODO:
     - name: "pitch_onccN"

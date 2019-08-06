@@ -73,7 +73,15 @@ layout: default
 		<li>MIDI CC:</li>
 		<ul>
 	{%-for midi_cc in opcode_info.modulation.midi_cc-%}
-			<li>{{ midi_cc.name }}</li>
+		{%-assign midi_cc_name = midi_cc.name |
+			append: " (" | append: midi_cc.version	| append: ')'-%}
+<li>
+		{%-for alias in midi_cc.alias-%}
+			{%-assign midi_cc_name = midi_cc_name | append: ", alias " | append: alias.name |
+				append: " (" | append: alias.version | append: ')'-%}
+		{%-endfor-%}
+	{{ midi_cc_name }}
+</li>
 	{%-endfor-%}
 		</ul>
 	</ul>

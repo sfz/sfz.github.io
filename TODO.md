@@ -8,10 +8,12 @@ Sample Playback:
 
 Instrument settings:
 
-- note_offset (SFZ2, missing description)
+- note_offset (Missing values)
+- octave_offset (Missing values)
 
 Pitch:
 
+- bend_smooth (Missing values)
 - pitch
 
 Amplifier:
@@ -20,6 +22,7 @@ Amplifier:
 - pan_keytrack
 - pan_veltrack
 - position_onccN
+- volume (Real range, MIDI CC values)
 
 ### Missing SFZ2 from LS page:
 
