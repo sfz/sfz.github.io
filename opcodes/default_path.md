@@ -3,10 +3,10 @@ layout: sfz/opcode
 lang: en
 title: default_path
 ---
-Relative path for samples. Used under the <[control](/headers/control)> header.
+Used under the <[control](/headers/control)> header.
 
-Example:
+##### Example
 
 ```
-default_path=..\Samples
+default_path=../Samples
 ```

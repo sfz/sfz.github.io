@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: end
 ---
-The endpoint of the sample, in sample units.
-
 The player will reproduce the whole sample if `end` is not specified - in other
 words, in most cases, this does not need to be set.
 
@@ -19,7 +17,3 @@ and [off_by](off_by) opcodes (though with ARIA extensions,
 end=133000
 end=4432425
 ```
-
-| Type    | Default | Range           |
-| ---     | ---     | ---             |
-| integer | 0       | 0 to 4294967296 |

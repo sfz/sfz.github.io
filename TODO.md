@@ -11,6 +11,11 @@ Instrument settings:
 - note_offset (Missing values)
 - octave_offset (Missing values)
 
+- Filter
+
+- cutoff (ensure about modulations and possibly merge them all)
+- fil2_type (options and default value)
+
 Pitch:
 
 - bend_smooth (Missing values)
@@ -72,14 +77,11 @@ LS opcode extensions
 
 ### Other tasks
 
-- Check for missing modulation tables in opcode pages.
-- Check for missing datatype and range information tables in opcode pages.
+- Add value type unit table (default and/or range) in opcode pages.
+- Check for missing opcode datatype, range information and modulations.
 - Complete envelope_generators and lfo type pages.
-- Handle SFZ2 opcode name aliases.
-- Add specific, non redundant informations to various *_onccX.
 - Add links to version / category / type table in opcode pages.
 - Add missing links to external opcode pages and tooltips with brief opcode
     descriptions when hover over links, this could be done by using
     a .yml opcode database.
 - Improve syntax highlighting
-- Add custom scripts/styles include in head.html and scripts.html

@@ -19,10 +19,19 @@ layout: default
 	{%-endfor-%}
 {%-endfor-%}
 {%-if opcode_info.value.min == nil-%}
+	{%-if opcode_info.value.options-%}
+		{%-for option in opcode_info.value.options-%}
+			{%-assign opcode_info_range = opcode_info_range | append: option.name-%}
+				{%-if forloop.last == false-%}
+					{%-assign opcode_info_range = opcode_info_range | append: ", "-%}
+				{%-endif-%}
+		{%-endfor-%}
+	{%-else-%}
 		{%-assign opcode_info_range = "N/A"-%}
+	{%-endif-%}
 {%-else-%}
-		{%-assign opcode_info_range = opcode_info.value.min | append: " to " |
-			append: opcode_info.value.max-%}
+	{%-assign opcode_info_range = opcode_info.value.min | append: " to " |
+		append: opcode_info.value.max-%}
 {%-endif-%}
 {%-if opcode_info.value.default == nil-%}
 		{%-assign opcode_info_default = "N/A"-%}

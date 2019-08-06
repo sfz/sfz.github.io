@@ -9,8 +9,7 @@ will play the sample looped using the first defined loop, if available. If no
 loops are defined (which is usually the case with most files), the wave will
 play unlooped.
 
-The `loop_mode` opcode allows playing samples with loops defined
-in the unlooped mode. The possible values are:
+The possible values are:
 
 - ***no_loop***: no looping will be performed. Sample will play straight from start
                 to end, or until note off, whatever reaches first.
@@ -31,14 +30,3 @@ loop_mode=no_loop
 
 loop_mode=loop_continuous
 ```
-
-| Type | Default                                                 | Range |
-| ---  | ---                                                     | ---   |
-| text | ***no_loop*** for samples without a loop defined        | N/A   |
-|      | ***loop_continuous*** for samples with defined loop(s). |       |
-
-| Modulation Sources |     |
-| :---               | --- |
-| Envelope           |  X  |
-| LFO                |  X  |
-| MIDI CC            |  X  |

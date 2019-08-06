@@ -86,7 +86,7 @@ categories:
             unit: "seconds"
 
     - name: "delay_random"
-      short_description: "Region random delay time"
+      short_description: "Region random delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -221,9 +221,9 @@ categories:
       value:
         type_name: "string"
         default: "forward"
-      options:
-      - name: "forward"
-      - name: "reverse"
+        options:
+        - name: "forward"
+        - name: "reverse"
 
     - name: "loop_count" # TODO: Source?
       short_description: "The number of times a loop will repeat."
@@ -875,6 +875,7 @@ categories:
           version: "ARIA"
         - name: "volume_stepccN"
           version: "ARIA"
+
     - name: "width"
       short_description: "Only operational for stereo samples, width defines the amount of channel mixing applied to play the sample."
       version: "SFZ v1"
@@ -1188,18 +1189,53 @@ categories:
 
     - name: "fil_keytrack"
       version: "SFZ v1"
+      short_description: "Filter keyboard tracking (change on cutoff for each key) in cents."
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1200
 
     - name: "fil_keycenter"
       version: "SFZ v1"
+      short_description: "Center key for filter keyboard tracking."
+      value:
+        type_name: "integer"
+        default: 60
+        min: 0
+        max: 127
 
     - name: "fil_random"
+      short_description: "Random value added to the filter cutoff for the region, in cents."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 9600
 
     - name: "fil_type"
       version: "SFZ v1"
+      short_description: "Filter type."
+      value:
+        type_name: "string"
+        default: "lpf_2p"
+        options:
+        - name: "lpf_1p"
+        - name: "hpf_1p"
+        - name: "lpf_2p"
+        - name: "hpf_2p"
+        - name: "bpf_2p"
+        - name: "brf_2p"
 
     - name: "fil_veltrack"
       version: "SFZ v1"
+      short_description: "Filter velocity tracking, the amount by which the cutoff changes with incoming note velocity, in cents."
+      value:
+        type_name: "integer"
+        default: 0
+        min: -9600
+        max: 9600
 
     - name: "resonance"
       version: "SFZ v1"
@@ -1238,7 +1274,10 @@ categories:
 
     - name: "fil2_type"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Same as <a href='/opcodes/fil_type'>fil_type</a>, but used to specify the type for the second filter."
+      value:
+        type_name: "string"
+# TODO: options
 
     - name: "fil2_veltrack"
       version: "SFZ v2"
@@ -2109,7 +2148,7 @@ categories:
       unit: "percentage"
 
   - name: "effect2"
-    short_description: "Level of effect1 send, in percentage (chorus in Cakewalk sfz)."
+    short_description: "Level of effect2 send, in percentage (chorus in Cakewalk sfz)."
     version: "SFZ v1"
     value:
       type_name: "integer"

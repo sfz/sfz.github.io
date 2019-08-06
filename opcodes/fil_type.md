@@ -4,8 +4,7 @@ lang: en
 title: fil_type
 ---
 Allows you to choose which type of filter you use. if not specified
-(ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ)
-defaults to lpf_2p.
+(ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ).
 
 Filter types in the SFZ1 spec are:
 
@@ -25,7 +24,3 @@ fil_type=hpf_1p
 
 Passive tone controls in guitars are one-pole low pass filters.
 Typical subtractive synthesizer filters are two-pole filters.
-
-| Type | Default | Range
-| ---  | ---     | ---
-| text | lpf_2p  | lpf_1p, hpf_1p, lpf_2p, hpf_2p, bpf_2p, brf_2p
