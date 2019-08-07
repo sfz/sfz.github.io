@@ -1085,86 +1085,98 @@ categories:
 
   - name: "EQ"
     opcodes:
-    - name: "eq1_freq"
+    - name: "eqN_bw"
+      short_description: "Bandwidth of the equalizer band, in octaves."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 1
+        min: 0.001
+        max: 4
+        unit: "octaves"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
-        - name: "eq1_freqccN"
+        - name: "eqN_bwccX"
           version: "SFZ v1"
+          alias:
+          - name: "eqN_bw_onccX"
+            version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -4
+            max: 4
+            unit: "octaves"
 
-    - name: "eq2_freq"
+    - name: "eqN_freq"
+      short_description: "Frequency of the equalizer band, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: "eq1_freq=50<br>eq1_freq=500<br>eq1_freq=5000"
+        min: 0
+        max: 30000
+        unit: "Hz"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
-        - name: "eq2_freqccN"
+        - name: "eqN_freqccX"
           version: "SFZ v1"
+          alias:
+          - name: "eqN_freq_onccX"
+            version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -30000
+            max: 30000
+            unit: "Hz"
+        velocity:
+        - name: "eqN_vel2freq"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -30000
+            max: 30000
+            unit: "Hz"
 
-    - name: "eq3_freq"
+    - name: "eqN_gain"
+      short_description: "Gain of the equalizer band, in decibels."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -96
+        max: 24
+        unit: "dB"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
-        - name: "eq3_freqccN"
+        - name: "eqN_gainccX"
           version: "SFZ v1"
-
-    - name: "eq1_vel2freq"
-      version: "SFZ v1"
-
-    - name: "eq2_vel2freq"
-      version: "SFZ v1"
-
-    - name: "eq3_vel2freq"
-      version: "SFZ v1"
-
-    - name: "eq1_bw"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq1_bwccN"
+          alias:
+          - name: "eqN_gain_onccX"
+            version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -96
+            max: 24
+            unit: "dB"
+        velocity:
+        - name: "eqN_vel2gain"
           version: "SFZ v1"
-
-    - name: "eq2_bw"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq2_bwccN"
-          version: "SFZ v1"
-
-    - name: "eq3_bw"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq3_bwccN"
-          version: "SFZ v1"
-
-    - name: "eq1_gain"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq1_gainccN"
-          version: "SFZ v1"
-
-    - name: "eq2_gain"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq2_gainccN"
-          version: "SFZ v1"
-
-    - name: "eq3_gain"
-      version: "SFZ v1"
-      modulation:
-        midi_cc:
-        - name: "eq3_gainccN"
-          version: "SFZ v1"
-
-    - name: "eq1_vel2gain"
-      version: "SFZ v1"
-
-    - name: "eq2_vel2gain"
-      version: "SFZ v1"
-
-    - name: "eq3_vel2gain"
-      version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -96
+            max: 24
+            unit: "dB"
 
   - name: "Filter"
     opcodes:
@@ -1213,7 +1225,7 @@ categories:
         default: "filter disabled"
         min: 0
         max: "SampleRate / 2"
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "cutoff_chanaft"
       version: "SFZ v1"
@@ -2679,7 +2691,7 @@ categories:
         default: 0
         min: 0
         max: 20
-        unit: "hertz"
+        unit: "Hz"
       modulation:
         midi_cc:
         - name: "amplfo_freqccN"
@@ -2689,7 +2701,7 @@ categories:
             default: 0
             min: -200
             max: 200
-            unit: "hertz"
+            unit: "Hz"
 
     - name: "amplfo_freqchanaft"
       short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
@@ -2699,7 +2711,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "amplfo_freqpolyaft"
       short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
@@ -2709,7 +2721,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "fillfo_delay"
       short_description: "The time before the LFO starts oscillating, in seconds."
@@ -2782,7 +2794,7 @@ categories:
         default: 0
         min: 0
         max: 20
-        unit: "hertz"
+        unit: "Hz"
       modulation:
         midi_cc:
         - name: "fillfo_freqccN"
@@ -2792,7 +2804,7 @@ categories:
             default: 0
             min: -200
             max: 200
-            unit: "hertz"
+            unit: "Hz"
 
     - name: "fillfo_freqchanaft"
       short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
@@ -2802,7 +2814,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "fillfo_freqpolyaft"
       short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
@@ -2812,7 +2824,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "pitchlfo_delay"
       short_description: "The time before the LFO starts oscillating, in seconds."
@@ -2885,7 +2897,7 @@ categories:
         default: 0
         min: 0
         max: 20
-        unit: "hertz"
+        unit: "Hz"
       modulation:
         midi_cc:
         - name: "pitchlfo_freqccN"
@@ -2895,7 +2907,7 @@ categories:
             default: 0
             min: -200
             max: 200
-            unit: "hertz"
+            unit: "Hz"
 
     - name: "pitchlfo_freqchanaft"
       short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
@@ -2905,7 +2917,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "pitchlfo_freqpolyaft"
       short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
@@ -2915,7 +2927,7 @@ categories:
         default: 0
         min: -200
         max: 200
-        unit: "hertz"
+        unit: "Hz"
 
     - name: "lfoN_freq"
       version: "SFZ v2"

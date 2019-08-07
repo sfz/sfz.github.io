@@ -1,0 +1,31 @@
+---
+layout: no_title
+lang: en
+title: "eqN_vel2"
+---
+## eqN_vel2freq
+
+Frequency change of the equalizer band with MIDI velocity, in Hertz.
+
+##### Examples
+
+```
+eq1_vel2freq=1000
+```
+
+## eqN_vel2gain
+
+Gain change of the equalizer band with MIDI velocity, in decibels.
+
+##### Examples
+
+```
+eq1_vel2gain=-6
+eq2_vel2gain=9
+```
+
+##### Notes
+
+When emulating timbral changes when there are not enough dynamic levels sampled,
+this will often be a negative value for the lowest band, and a positive value
+for the two higher bands.
