@@ -851,7 +851,7 @@ categories:
         default: 0
         min: -144
         max: 6
-        unit: "decibels"
+        unit: "dB"
       modulation:
         envelope: "✓"
         lfo: "✓"
@@ -868,7 +868,7 @@ categories:
             default: 0
             min: -144
             max: 48
-            unit: "decibels"
+            unit: "dB"
         - name: "volume_curveccN"
           version: "ARIA"
         - name: "volume_smoothccN"
@@ -884,7 +884,7 @@ categories:
         default: 0
         min: -144
         max: 6
-        unit: "decibels"
+        unit: "dB"
       modulation:
         midi_cc:
         - name: "width_onccN"
@@ -900,14 +900,14 @@ categories:
         max: 127
 
     - name: "amp_keytrack"
-      short_description: "Amplifier keyboard tracking (change in amplitude per key) in dB."
+      short_description: "Amplifier keyboard tracking (change in amplitude per key) in decibels."
       version: "SFZ v1"
       value:
         type_name: "float"
         default: 0
         min: -96
         max: 12
-        unit: "decibels"
+        unit: "dB"
 
     - name: "amp_veltrack"
       short_description: "Amplifier velocity tracking, represents how much the amplitude changes with incoming note velocity."
@@ -936,17 +936,17 @@ categories:
         default: 0
         min: 0
         max: 24
-        unit: "decibels"
+        unit: "dB"
 
     - name: "rt_decay"
-      short_description: "Applies only to regions that triggered through trigger=release. The volume decrease (in db) per seconds after the note has been attacked."
+      short_description: "Applies only to regions that triggered through trigger=release. The volume decrease (in decibels) per seconds after the note has been attacked."
       version: "SFZ v1"
       value:
         type_name: "float"
         default: 0
         min: 0
         max: 200
-        unit: "decibels"
+        unit: "dB"
 
 # TODO: Single 'Crossfade' page with common description?
 
@@ -2609,100 +2609,313 @@ categories:
     short_description: "Low Frequency Oscillator."
     opcodes:
     - name: "amplfo_delay"
+      short_description: "The time before the LFO starts oscillating, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "amplfo_depth"
+      short_description: "LFO depth."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -10
+        max: 10
+        unit: "dB"
       modulation:
         midi_cc:
         - name: "amplfo_depthccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -10
+            max: 10
+            unit: "dB"
+          alias:
+          - name: "amplfo_depth_onccN"
+            version: "SFZ v2"
 
     - name: "amplfo_depthchanaft"
+      short_description: "LFO depth when channel aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -10
+        max: 10
+        unit: "dB"
 
     - name: "amplfo_depthpolyaft"
+      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -10
+        max: 10
+        unit: "dB"
 
     - name: "amplfo_fade"
+      short_description: "LFO fade-in effect time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "amplfo_freq"
+      short_description: "LFO frequency, in hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 20
+        unit: "hertz"
       modulation:
         midi_cc:
         - name: "amplfo_freqccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "hertz"
 
     - name: "amplfo_freqchanaft"
+      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "amplfo_freqpolyaft"
+      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "fillfo_delay"
+      short_description: "The time before the LFO starts oscillating, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "fillfo_depth"
+      short_description: "LFO depth."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
       modulation:
         midi_cc:
         - name: "fillfo_depthccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
+          alias:
+          - name: "fillfo_depth_onccN"
+            version: "SFZ v2"
 
     - name: "fillfo_depthchanaft"
+      short_description: "LFO depth when channel aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
 
     - name: "fillfo_depthpolyaft"
+      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
 
     - name: "fillfo_fade"
+      short_description: "LFO fade-in effect time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "fillfo_freq"
+      short_description: "LFO frequency, in hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 20
+        unit: "hertz"
       modulation:
         midi_cc:
         - name: "fillfo_freqccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "hertz"
 
     - name: "fillfo_freqchanaft"
+      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "fillfo_freqpolyaft"
+      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "pitchlfo_delay"
+      short_description: "The time before the LFO starts oscillating, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "pitchlfo_depth"
+      short_description: "LFO depth."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
       modulation:
         midi_cc:
         - name: "pitchlfo_depthccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
+          alias:
+          - name: "pitchlfo_depth_onccN"
+            version: "SFZ v2"
 
     - name: "pitchlfo_depthchanaft"
+      short_description: "LFO depth when channel aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
 
     - name: "pitchlfo_depthpolyaft"
+      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1200
+        max: 1200
+        unit: "cents"
 
     - name: "pitchlfo_fade"
+      short_description: "LFO fade-in effect time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
 
     - name: "pitchlfo_freq"
+      short_description: "LFO frequency, in hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 20
+        unit: "hertz"
       modulation:
         midi_cc:
         - name: "pitchlfo_freqccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "hertz"
 
     - name: "pitchlfo_freqchanaft"
+      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "pitchlfo_freqpolyaft"
+      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -200
+        max: 200
+        unit: "hertz"
 
     - name: "lfoN_freq"
       version: "SFZ v2"

@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (lfo type)_depth
 ---
-LFO depth.
-
 ##### Examples
 
 ```
@@ -22,16 +20,3 @@ value (for example: typical guitar vibrato which only bends the pitch upwards,
 or saxophone vibrato which only bends the pitch down), an offset to the center
 pitch value will need to be added using the appropriate opcode such as tune.
 In SFZ2 LFOs add the ability to set the starting phase, making this much easier.
-
-| Type  | Default | Range
-| ---   | ---     | ---
-| float | 0       | -10 to 10 dB (amplifier)
-|       |         | -1200 to 1200 cents (pitch and filter)
-
-| Modulation Sources
-|           ---
-| Envelope | X |
-| LFO      | X |
-| MIDI CC  | ✓ | (lfo type)_depth_onccX
-
-`(lfo type)_depth_onccX` uses same type, range and default values.

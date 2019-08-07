@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (lfo type)_freqchanaft
 ---
-LFO frequency change when channel aftertouch MIDI messages are received, in Hertz.
-
 Can be negative, and according to the SFZ spec the allowed range is -200 to 200,
 which could be used to push LFO frequencies into audio frequency range,
 allowing AM, FM and filter growl. Perhaps that was a typo and it should be
@@ -16,7 +14,3 @@ allowing AM, FM and filter growl. Perhaps that was a typo and it should be
 fillfo_freqchanaft=10
 fillfo_freqchanaft=-20
 ```
-
-| Type  | Default | Range          |
-| ---   | ---     | ---            |
-| float | 0       | -200 to 200 Hz |
