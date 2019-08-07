@@ -47,7 +47,7 @@ categories:
       type_name: "string"
 
 - name: "Sound Source"
-  url: "/opcodes/categories#sound-source"
+  url: "/misc/categories#sound-source"
   short_description: "Defines the nature of the voice generated. It could be samples or oscillators"
   types:
   - name: "Sample Playback"
@@ -182,7 +182,7 @@ categories:
         unit: "sample units"
 
     - name: "sample"
-      short_description: "Defines which sample file the region will play"
+      short_description: "Defines which sample file the region will play."
       version: "SFZ v1"
       value:
         type_name: "string"
@@ -263,7 +263,7 @@ categories:
       version: "SFZ v2"
 
 - name: "Instrument Settings"
-  url: "/opcodes/categories#instrument-settings"
+  url: "/misc/categories#instrument-settings"
   short_description: "Opcodes used under the <control> header."
   opcodes:
   - name: "#define"
@@ -432,7 +432,7 @@ categories:
       version: "ARIA"
 
 - name: "Region Logic"
-  url: "/opcodes/categories#region-logic"
+  url: "/misc/categories#region-logic"
   short_description: "Region Logic opcodes define the conditions under which a voice plays or stops."
   types:
   - name: "Key Mapping"
@@ -818,7 +818,7 @@ categories:
       linked: "stop_loccN"
 
 - name: "Performance Parameters"
-  url: "/opcodes/categories#performance-parameters"
+  url: "/misc/categories#performance-parameters"
   short_description: "Performance Parameters are all sound modifiers."
   types:
   - name: "Amplifier"
@@ -1170,7 +1170,7 @@ categories:
     opcodes:
     - name: "cutoff"
       version: "SFZ v1"
-      short_description: "Sets the cutoff frequency (Hz) of the <a href='/opcodes/categories#performance-parameters'>filters</a>."
+      short_description: "Sets the cutoff frequency (Hz) of the <a href='/misc/categories#performance-parameters'>filters</a>."
       modulation:
         envelope: "fileg_depth"
         lfo: "fillfo_depth"
@@ -1415,7 +1415,7 @@ categories:
       version: "SFZ v2"
 
 - name: "Modulation"
-  url: "/opcodes/categories#modulation"
+  url: "/misc/categories#modulation"
   short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   types:
   - name: "Envelope Generators"

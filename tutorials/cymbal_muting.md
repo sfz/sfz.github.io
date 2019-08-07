@@ -28,7 +28,7 @@ regions in the same <[group](/headers/group)> and use [off_by](/opcodes/off_by)
 to make that group mute itself - that
 will mean any hi-hat hit will mute any currently playing hi-hat hit.
 Setting [off_mode](/opcodes/off_mode) to normal and using [ampeg_release](/opcodes/(eg_type)_release)
-or [off_time](/opcodes/aria/off_time) to set the time it takes for
+or [off_time](/opcodes/off_time) to set the time it takes for
 the previous sample to fade out also helps this sound a bit more natural.
 
 ```

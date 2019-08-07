@@ -13,4 +13,4 @@ which should not be used under other headers:
 - [label_ccN](/opcodes/label_ccN)
 - [set_ccN](/opcodes/set_ccN)
 
-See also [ARIA Extensions](/opcodes/aria#instrument-settings).
+See also [ARIA Extensions](/extensions/aria/#instrument-settings).

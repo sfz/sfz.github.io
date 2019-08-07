@@ -11,20 +11,20 @@ navigation:
     -
 
     - title: "SFZ v1 Opcodes"
-      url: "/opcodes/sfz1"
+      url: "/misc/sfz1"
 
     - title: "SFZ v2 Opcodes"
-      url: "/opcodes/sfz2"
+      url: "/misc/sfz2"
 
     - title: "ARIA Extensions"
-      url: "/opcodes/aria"
+      url: "/extensions/aria/"
 
     - title: "LinuxSampler Extensions"
-      url: "/opcodes/linuxsampler"
+      url: "/extensions/linuxsampler/"
     -
 
     - title: "Types & Categories"
-      url: "/opcodes/categories"
+      url: "/misc/categories"
 
 - title: "Software"
   type: "dropdown"

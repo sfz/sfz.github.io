@@ -48,9 +48,5 @@ sample=*silence
 
 For cases where we don't want to actually play a sample but want a region to
 exist and be played (for example, to mute other sounds when using
-[group](/opcodes/sfz1/group) and [off_by](/opcodes/sfz1/off_by), the silence
+[group](/opcodes/group) and [off_by](/opcodes/off_by), the silence
 value can be very convenient.
-
-| Type   | Default | Range |
-| ---    | ---     | ---   |
-| string | N/A     | N/A   |
