@@ -853,8 +853,8 @@ categories:
         max: 6
         unit: "decibels"
       modulation:
-        envelope: true
-        lfo: true
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "gain_ccN"
           version: "SFZ v1"
@@ -1047,8 +1047,8 @@ categories:
         max: 100
         unit: "percentage"
       modulation:
-        envelope: true
-        lfo: true
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "amplitude_onccN"
           version: "ARIA"
@@ -1170,16 +1170,50 @@ categories:
     opcodes:
     - name: "cutoff"
       version: "SFZ v1"
+      short_description: "Sets the cutoff frequency (Hz) of the <a href='/opcodes/categories#performance-parameters'>filters</a>."
       modulation:
+        envelope: "fileg_depth"
+        lfo: "fillfo_depth"
         midi_cc:
         - name: "cutoff_ccN"
           version: "SFZ v1"
+          alias:
+          - name: "cutoff_onccN"
+            version: "SFZ v2"
+          value:
+            type_name: "integer"
+            default: 0
+            min: -9600
+            max: 9600
+            unit: "cents"
+        - name: "cutoff_chanaft"
+          version: "SFZ v1"
+          value:
+            type_name: "integer"
+            default: 0
+            min: -9600
+            max: 9600
+            unit: "cents"
+        - name: "cutoff_polyaft"
+          version: "SFZ v1"
+          value:
+            type_name: "integer"
+            default: 0
+            min: -9600
+            max: 9600
+            unit: "cents"
         - name: "cutoff_curveccN"
           version: "SFZ v2"
         - name: "cutoff_smoothccN"
           version: "SFZ v2"
         - name: "cutoff_stepccN"
           version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: "filter disabled"
+        min: 0
+        max: "SampleRate / 2"
+        unit: "hertz"
 
     - name: "cutoff_chanaft"
       version: "SFZ v1"

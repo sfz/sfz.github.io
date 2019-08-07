@@ -61,24 +61,42 @@ layout: default
 			<td>{{ opcode_info_default }}</td>
 			<td>{{ opcode_info_range }}</td>
 		</tr>
+{%-for midi_cc in opcode_info.modulation.midi_cc-%}
+	{%-if midi_cc.default != nil-%}
+		{%-assign midi_cc_default = midi_cc.default-%}
+	{%-else-%}
+		{%-assign midi_cc_default = "N/A"-%}
+	{%-endif-%}
+	{%-if midi_cc.value.min != nil-%}
+		{%-assign midi_cc_range = midi_cc.value.min | append: " to " |
+			append: midi_cc.value.max-%}
+	{%-else-%}
+		{%-assign midi_cc_range = "N/A"-%}
+	{%-endif-%}
+		<tr>
+			<td>{{ midi_cc.name }}</td>
+			<td>{{ midi_cc.version }}</td>
+			<td>{{ midi_cc.value.type_name }}</td>
+			<td>{{ midi_cc_default }}</td>
+			<td>{{ midi_cc_range }}</td>
+		</tr>
+{%-endfor-%}
 	</tbody>
 </table>
 
 {%-if opcode_info.modulation-%}
 	<h2>Modulation Sources</h2>
-	{%-if opcode_info.modulation.envelope-%}
-		{%-assign has_envelope = '✓'-%}
-	{%-else-%}
-		{%-assign has_envelope = 'X'-%}
+	{%-assign envelope = opcode_info.modulation.envelope-%}
+	{%-assign lfo = opcode_info.modulation.lfo-%}
+	{%-if envelope == nil-%}
+		{%-assign envelope = 'X'-%}
 	{%-endif-%}
-	{%-if opcode_info.modulation.lfo-%}
-		{%-assign has_lfo = '✓'-%}
-	{%-else-%}
-		{%-assign has_lfo = 'X'-%}
+	{%-if lfo == nil-%}
+		{%-assign lfo = 'X'-%}
 	{%-endif-%}
 	<ul>
-		<li>Envelope: {{ has_envelope }}</li>
-		<li>LFO: {{ has_lfo }}</li>
+		<li>Envelope: {{ envelope }}</li>
+		<li>LFO: {{ lfo }}</li>
 		<li>MIDI CC:</li>
 		<ul>
 	{%-for midi_cc in opcode_info.modulation.midi_cc-%}
