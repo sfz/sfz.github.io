@@ -39,7 +39,7 @@ The samples will play as long as a note is held, but when the note is released,
 they will end suddenly, which is probably not realistic for a flute sound, or
 indeed most other instruments. We'll need to apply a volume envelope with a
 release time set, which can be applied to all regions.
-The [ampeg_release](/opcodes/(eg_type)_release) opcode accomplishes this.
+The [ampeg_release](/opcodes/ampeg_release) opcode accomplishes this.
 
 ```
 <global>ampeg_release=0.3

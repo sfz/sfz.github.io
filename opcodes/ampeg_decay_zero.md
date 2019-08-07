@@ -11,7 +11,7 @@ sustain (as when 0). Default is 1. 1 and 0 must be used at least in Sforzando
 In other words, under default behavior, the decay slope is fixed, and the higher
 the sustain level of the envelope, the less time the decay stage will actually
 take. Changing ampeg_sustain will change the actual duration of the decay stage
-as well, up to a maximum of the full [ampeg_decay]((eg_type)_decay) value at
+as well, up to a maximum of the full [ampeg_decay](ampeg_decay) value at
 `ampeg_sustain` equal to 0.
 
 Setting this to false will make the decay always happen during the entire

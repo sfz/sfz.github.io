@@ -33,5 +33,5 @@ This opcode is useful for controlling sound buildup, limiting resource use,
 and for emulating the behavior of vintage keyboards with limited polyphony.
 It's also possible to use [note_polyphony](note_polyphony) instead when there is
 only one pitch in a group, or use both in combination. An alternative for
-controlling sound buildup is using [ampeg_release]((eg_type)_release) with
+controlling sound buildup is using [ampeg_release](ampeg_release) with
 [off_mode](off_mode) set to normal.

@@ -32,8 +32,8 @@ offset_cc100=1000
 
 ## Modulating default values
 
-The three EQ bands' [frequency](/opcodes/eqN/freq), [bandwidth](/opcodes/eqN/bw) and
-[gain](/opcodes/eqN/gain) work similarly, but also add velocity tracking. The EQ
+The three EQ bands' [frequency](/opcodes/eqN_freq), [bandwidth](/opcodes/eqN_bw) and
+[gain](/opcodes/eqN_gain) work similarly, but also add velocity tracking. The EQ
 bandwidth and center frequency also have non-zero defaults,
 for example eq2_freq is 500 if not specified. So, this would modulate the center
 frequency of the second EQ band between 500 and 1500 if eq2_freq is left at default:
@@ -44,7 +44,7 @@ eq2_freqcc110=1000
 
 ## Velocity tracking, keytracking and randomization
 
-EQ [frequency](/opcodes/eqN/vel2freq) and [gain](/opcodes/eqN/vel2gain) (but not
+EQ [frequency](/opcodes/eqN_vel2freq) and [gain](/opcodes/eqN_vel2gain) (but not
 bandwidth) can additionally be modulated by velocity. For example, if we want to
 make a sound brighter when the velocity is higher, we might use something like this:
 

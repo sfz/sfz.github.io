@@ -24,16 +24,16 @@ in as a plugin.
 
 [Here's a very simple example of a pitch LFO integration](/tutorials/lfo_sfz1)
 
-- [(lfo type)_delay](/opcodes/(lfo_type)_delay)
-- [(lfo type)_fade](/opcodes/(lfo_type)_fade)
-- [(lfo type)_freq](/opcodes/(lfo_type)_freq)
-- [(lfo type)_freqccX](/opcodes/(lfo_type)_freq)
-- [(lfo type)_depth](/opcodes/(lfo_type)_depth)
-- [(lfo type)_depthccX](/opcodes/(lfo_type)_depth)
-- [(lfo type)_depthchanaft](/opcodes/(lfo_type)_depthchanaft)
-- [(lfo type)_depthpolyaft](/opcodes/(lfo_type)_depthpolyaft)
-- [(lfo type)_freqchanaft](/opcodes/(lfo_type)_freqchanaft)
-- [(lfo type)_freqpolyaft](/opcodes/(lfo_type)_freqpolyaft)
+- [(lfo type)_delay](/opcodes/amplfo_delay)
+- [(lfo type)_fade](/opcodes/amplfo_fade)
+- [(lfo type)_freq](/opcodes/amplfo_freq)
+- [(lfo type)_freqccX](/opcodes/amplfo_freq)
+- [(lfo type)_depth](/opcodes/amplfo_depth)
+- [(lfo type)_depthccX](/opcodes/amplfo_depth)
+- [(lfo type)_depthchanaft](/opcodes/amplfo_depthchanaft)
+- [(lfo type)_depthpolyaft](/opcodes/amplfo_depthpolyaft)
+- [(lfo type)_freqchanaft](/opcodes/amplfo_freqchanaft)
+- [(lfo type)_freqpolyaft](/opcodes/amplfo_freqpolyaft)
 
 #### Assignable LFOs (SFZ 2)
 
@@ -41,18 +41,18 @@ Much like the Flex EG, these newer LFO can target almost any tone-defining param
 
 [Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo_sfz1)
 
-- [lfoN_wave](/opcodes/lfoN/wave)
-- [lfoN_freq](/opcodes/lfoN/freq)
-- [lfoN_freq_onccX](/opcodes/lfoN/freq)
-- [lfoN_freq_smoothccX](/opcodes/lfoN/freq_smoothccX)
-- [lfoN_freq_stepccX](/opcodes/lfoN/freq_stepccX)
-- [lfoN_delay](/opcodes/lfoN/delay)
-- [lfoN_delay_onccX](/opcodes/lfoN/delay)
-- [lfoN_fade](/opcodes/lfoN/fade)
-- [lfoN_fade_onccX](/opcodes/lfoN/fade)
-- [lfoN_phase](/opcodes/lfoN/phase)
-- [lfoN_phase_onccX](/opcodes/lfoN/phase)
-- [lfoN_count](/opcodes/lfoN/count)
+- [lfoN_wave](/opcodes/lfoN_wave)
+- [lfoN_freq](/opcodes/lfoN_freq)
+- [lfoN_freq_onccX](/opcodes/lfoN_freq)
+- [lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
+- [lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
+- [lfoN_delay](/opcodes/lfoN_delay)
+- [lfoN_delay_onccX](/opcodes/lfoN_delay)
+- [lfoN_fade](/opcodes/lfoN_fade)
+- [lfoN_fade_onccX](/opcodes/lfoN_fade)
+- [lfoN_phase](/opcodes/lfoN_phase)
+- [lfoN_phase_onccX](/opcodes/lfoN_phase)
+- [lfoN_count](/opcodes/lfoN_count)
 
 #### Assignable LFO Destinations
 
