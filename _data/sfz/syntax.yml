@@ -831,7 +831,7 @@ categories:
         default: 0
         min: -100
         max: 100
-        unit: "percentage"
+        unit: "%"
 
     - name: "position"
       short_description: "Only operational for stereo samples, position defines the position in the stereo field of a stereo signal, after channel mixing as defined in the width opcode."
@@ -841,7 +841,7 @@ categories:
         default: 0
         min: -100
         max: 100
-        unit: "percentage"
+        unit: "%"
 
     - name: "volume"
       short_description: "The volume for the region, in decibels."
@@ -917,7 +917,7 @@ categories:
         default: 100
         min: -100
         max: 100
-        unit: "percentage"
+        unit: "%"
 
     - name: "amp_velcurve_N"
       short_description: "User-defined amplifier velocity curve."
@@ -1045,7 +1045,7 @@ categories:
         default: 100
         min: 0
         max: 100
-        unit: "percentage"
+        unit: "%"
       modulation:
         envelope: "✓"
         lfo: "✓"
@@ -1056,7 +1056,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 100
-            unit: "percentage"
+            unit: "%"
         - name: "amplitude_curveccN"
           version: "ARIA"
         - name: "amplitude_smoothccN"
@@ -1422,6 +1422,7 @@ categories:
     url: "/types/envelope_generators"
     opcodes:
     - name: "ampeg_attack"
+      short_description: "EG attack time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1442,39 +1443,120 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        velocity:
+        - name: "ampeg_vel2attack"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_decay"
+      short_description: "EG decay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
       modulation:
         midi_cc:
         - name: "ampeg_decayccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
           alias:
           - name: "ampeg_decay_onccN"
             version: "SFZ v2"
+        velocity:
+        - name: "ampeg_vel2decay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_delay"
+      short_description: "EG delay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
       modulation:
+        envelope: "✓"
         midi_cc:
-        - name: "delayccN"
+        - name: "ampeg_delayccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
           alias:
           - name: "ampeg_delay_onccN"
             version: "SFZ v2"
+        velocity:
+        - name: "ampeg_vel2delay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_hold"
       version: "SFZ v1"
+      short_description: "EG hold time, in seconds."
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
       modulation:
+        envelope: "✓"
         midi_cc:
-        - name: "holdccN"
+        - name: "ampeg_holdccN"
           version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
           alias:
           - name: "ampeg_hold_onccN"
             version: "SFZ v2"
+        velocity:
+        - name: "ampeg_vel2delay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_release"
+      short_description: "EG release time (after note release), in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
       modulation:
         midi_cc:
         - name: "ampeg_releaseccN"
@@ -1482,9 +1564,31 @@ categories:
           alias:
           - name: "ampeg_release_onccN"
             version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "ampeg_vel2release"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_sustain"
+      short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 100
+        min: 0
+        max: 100
+        unit: "%"
       modulation:
         midi_cc:
         - name: "ampeg_sustainccN"
@@ -1492,141 +1596,780 @@ categories:
           alias:
           - name: "ampeg_sustain_onccN"
             version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "ampeg_vel2sustain"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "%"
 
     - name: "ampeg_start"
+      short_description: "Envelope start level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "%"
       modulation:
+        envelope: "✓"
         midi_cc:
         - name: "ampeg_startccN"
           version: "SFZ v1"
           alias:
           - name: "ampeg_start_onccN"
             version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "ampeg_vel2attack"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "ampeg_vel2delay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "ampeg_vel2decay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "ampeg_vel2hold"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "ampeg_vel2release"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "ampeg_vel2sustain"
       version: "SFZ v1"
-
-# TODO: ampeg only?
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
 
     - name: "ampeg_attack_shape"
+      short_description: "Specifies the curvature of attack stage of the envelope."
       version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
 
     - name: "ampeg_decay_shape"
       version: "ARIA"
+      short_description: "Specifies the curvature of decay stage of the envelope."
+      value:
+        type_name: "float"
+        default: 0
 
     - name: "ampeg_decay_zero"
+      short_description: "Specifies how decay time is calculated."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
 
     - name: "ampeg_release_shape"
+      short_description: "Specifies the curvature of release stage of the envelope."
       version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
 
     - name: "ampeg_release_zero"
+      short_description: "Specifies how release time is calculated."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
+
+    - name: "fileg_attack_shape"
+      short_description: "Specifies the curvature of attack stage of the envelope."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "fileg_decay_shape"
+      version: "ARIA"
+      short_description: "Specifies the curvature of decay stage of the envelope."
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "fileg_decay_zero"
+      short_description: "Specifies how decay time is calculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
+
+    - name: "fileg_release_shape"
+      short_description: "Specifies the curvature of release stage of the envelope."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "fileg_release_zero"
+      short_description: "Specifies how release time is calculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
+
+    - name: "pitcheg_attack_shape"
+      short_description: "Specifies the curvature of attack stage of the envelope."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "pitcheg_decay_shape"
+      version: "ARIA"
+      short_description: "Specifies the curvature of decay stage of the envelope."
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "pitcheg_decay_zero"
+      short_description: "Specifies how decay time is calculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
+
+    - name: "pitcheg_release_shape"
+      short_description: "Specifies the curvature of release stage of the envelope."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+
+    - name: "pitcheg_release_zero"
+      short_description: "Specifies how release time is calculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+        min: 0
+        max: 1
 
     - name: "fileg_attack"
+      short_description: "EG attack time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "fileg_attack_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "fileg_vel2attack"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_decay"
+      short_description: "EG decay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "fileg_decay_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "ampeg_vel2attack"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_delay"
+      short_description: "EG delay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "fileg_delay_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "fileg_vel2delay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_depth"
+      short_description: "Envelope depth."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -12000
+        max: 12000
+        unit: "cents"
+      modulation:
+        midi_cc:
+        - name: "fileg_depth_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1
+            max: 1
+        velocity:
+        - name: "fileg_vel2depth"
+          version: "SFZ v1"
+          value:
+            type_name: "integer"
+            default: 0
+            min: -12000
+            max: 12000
+            unit: "cents"
 
     - name: "fileg_hold"
+      short_description: "EG hold time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "fileg_hold_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "fileg_vel2hold"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_release"
+      short_description: "EG release time (after note release), in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "fileg_release_onccN"
+          version: "ARIA"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "fileg_vel2release"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_start"
+      short_description: "Envelope start level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "%"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "fileg_start_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "fileg_sustain"
+      short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "%"
+      modulation:
+        midi_cc:
+        - name: "fileg_sustain_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "fileg_vel2sustain"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "%"
 
     - name: "fileg_vel2attack"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "fileg_vel2decay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "fileg_vel2delay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "fileg_vel2depth"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -12000
+        max: 12000
+        unit: "cents"
 
     - name: "fileg_vel2hold"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "fileg_vel2release"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "fileg_vel2sustain"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
 
     - name: "pitcheg_attack"
+      short_description: "EG attack time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "pitcheg_attack_onccN"
+          version: "SFZ v2"
+        velocity:
+        - name: "pitcheg_vel2attack"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_decay"
+      short_description: "EG decay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "pitcheg_decay_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "pitcheg_vel2decay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_delay"
+      short_description: "EG delay time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "pitcheg_delay_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "pitcheg_vel2delay"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_depth"
+      short_description: "Envelope depth."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -12000
+        max: 12000
+        unit: "cents"
+      modulation:
+        midi_cc:
+        - name: "pitcheg_depth_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1
+            max: 1
+        velocity:
+        - name: "pitcheg_vel2depth"
+          version: "SFZ v1"
+          value:
+            type_name: "integer"
+            default: 0
+            min: -12000
+            max: 12000
+            unit: "cents"
 
     - name: "pitcheg_hold"
+      short_description: "EG hold time, in seconds."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "pitcheg_hold_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+        velocity:
+        - name: "pitcheg_vel2hold"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_release"
       version: "SFZ v1"
+      short_description: "EG release time (after note release), in seconds."
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+      modulation:
+        midi_cc:
+        - name: "pitcheg_release_onccN"
+          version: "ARIA"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "pitcheg_vel2release"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_start"
+      short_description: "Envelope start level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "%"
+      modulation:
+        envelope: "✓"
+        midi_cc:
+        - name: "pitcheg_start_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
 
     - name: "pitcheg_sustain"
+      short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "%"
+      modulation:
+        midi_cc:
+        - name: "pitcheg_sustain_onccN"
+          version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "seconds"
+        velocity:
+        - name: "pitcheg_vel2sustain"
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -100
+            max: 100
+            unit: "%"
 
     - name: "pitcheg_vel2attack"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "pitcheg_vel2decay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "pitcheg_vel2delay"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "pitcheg_vel2depth"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -12000
+        max: 12000
+        unit: "cents"
 
     - name: "pitcheg_vel2hold"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "pitcheg_vel2release"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "seconds"
 
     - name: "pitcheg_vel2sustain"
       version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
 
     - name: "egN_points" # TODO: Source?
       version: "SFZ v2"
@@ -2336,7 +3079,7 @@ categories:
       default: 0
       min: 0
       max: 100
-      unit: "percentage"
+      unit: "%"
 
   - name: "effect2"
     short_description: "Level of effect2 send, in percentage (chorus in Cakewalk sfz)."
@@ -2346,7 +3089,7 @@ categories:
       default: 0
       min: 0
       max: 100
-      unit: "percentage"
+      unit: "%"
 
   - name: "param_offset"
     version: "ARIA"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: no_title
 ---
 {%-assign opcode_name = page.name | replace: ".md", ''-%}
 {%-for category in site.data.sfz.syntax.categories-%}
@@ -39,6 +39,8 @@ layout: default
 		{%-assign opcode_info_default = opcode_info.value.default-%}
 {%-endif-%}
 
+<h1>{{ opcode_name }}</h1>
+
 <p>{{ opcode_info.short_description }}</p>
 
 {{ content }}
@@ -62,8 +64,8 @@ layout: default
 			<td>{{ opcode_info_range }}</td>
 		</tr>
 {%-for midi_cc in opcode_info.modulation.midi_cc-%}
-	{%-if midi_cc.default != nil-%}
-		{%-assign midi_cc_default = midi_cc.default-%}
+	{%-if midi_cc.value.default != nil-%}
+		{%-assign midi_cc_default = midi_cc.value.default-%}
 	{%-else-%}
 		{%-assign midi_cc_default = "N/A"-%}
 	{%-endif-%}
@@ -81,7 +83,27 @@ layout: default
 			<td>{{ midi_cc_range }}</td>
 		</tr>
 {%-endfor-%}
-	</tbody>
+{%-for velocity in opcode_info.modulation.velocity-%}
+	{%-if velocity.value.default != nil-%}
+		{%-assign velocity_default = velocity.value.default-%}
+	{%-else-%}
+		{%-assign velocity_default = "N/A"-%}
+	{%-endif-%}
+	{%-if velocity.value.min != nil-%}
+		{%-assign velocity_range = velocity.value.min | append: " to " |
+			append: velocity.value.max-%}
+	{%-else-%}
+		{%-assign velocity_range = "N/A"-%}
+	{%-endif-%}
+	<tr>
+		<td>{{ velocity.name }}</td>
+		<td>{{ velocity.version }}</td>
+		<td>{{ velocity.value.type_name }}</td>
+		<td>{{ velocity_default }}</td>
+		<td>{{ velocity_range }}</td>
+	</tr>
+{%-endfor-%}
+		</tbody>
 </table>
 
 {%-if opcode_info.modulation-%}
@@ -111,5 +133,21 @@ layout: default
 </li>
 	{%-endfor-%}
 		</ul>
+	{%-if opcode_info.modulation.velocity != nil-%}
+		<li>Velocity:</li>
+		<ul>
+			{%-for velocity in opcode_info.modulation.velocity-%}
+				{%-assign velocity_name = velocity.name |
+					append: " (" | append: velocity.version	| append: ')'-%}
+		<li>
+				{%-for alias in velocity.alias-%}
+					{%-assign velocity_name = velocity_name | append: ", alias " |
+						append: alias.name | append: " (" | append: alias.version | append: ')'-%}
+				{%-endfor-%}
+			{{ velocity_name }}
+		</li>
+			{%-endfor-%}
+		</ul>
+	{%-endif-%}
 	</ul>
 {%-endif-%}

@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (eg type)_start
 ---
-Envelope start level, in percentage.
-
 ##### Examples
 
 ```
@@ -17,19 +15,3 @@ and adding the attack time to the hold time.
 Note that in some cases (when the sample starts playing from a point which is
 not near zero), setting this to a non-zero value for `ampeg_start` may result in
 sample playback starting with an audible click.
-
-| Type  | Default | Range      |
-| ---   | ---     | ---        |
-| float | 0       | 0 to 100 % |
-
-| Modulation Sources
-|           ---
-| Envelope | ✓ |
-| LFO      | X |
-| MIDI CC  | ✓ | (eg type)_start_onccN
-
-`(eg type)_start_onccN` uses the following values:
-
-| Type  | Default | Range         |
-| ---   | ---     | ---           |
-| float | 0       | -100 to 100 % |

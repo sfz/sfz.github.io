@@ -3,8 +3,7 @@ layout: sfz/opcode
 lang: en
 title: (eg type)_hold
 ---
-EG hold time, in seconds. During the hold stage,
-EG output will remain at its maximum value.
+During the hold stage, EG output will remain at its maximum value.
 
 ##### Examples
 
@@ -12,19 +11,3 @@ EG output will remain at its maximum value.
 ampeg_hold=1.5
 fileg_hold=0.1
 ```
-
-| Type  | Default | Range      |
-| ---   | ---     | ---        |
-| float | 0       | 0 to 100 s |
-
-| Modulation Sources
-|           ---
-| Envelope | ✓ |
-| LFO      | X |
-| MIDI CC  | ✓ | (eg type)_hold_onccN
-
-`(eg type)_hold_onccN` uses the following values:
-
-| Type  | Default | Range         |
-| ---   | ---     | ---           |
-| float | 0       | -100 to 100 s |

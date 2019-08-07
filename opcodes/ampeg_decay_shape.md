@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: ampeg_decay_shape
 ---
-Specifies the curvature of decay stage of the amplifier envelope.
-
 0 is linear, positive values are slower curves (that means the envelope will
 initially not decay out much, and most of the decay will happen towards the end
 of the decay period) and negative values faster (quick initial decay with quiet

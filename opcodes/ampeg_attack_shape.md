@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: ampeg_attack_shape
 ---
-Specifies the curvature of attack stage of the amplifier envelope.
-
 0 is linear. Positive values are slower curves (that means the envelope will
 initially not fade in much, and most of the fade in will happen towards the end
 of the attack period) and negative values faster (quick initial fade in with the

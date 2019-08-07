@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (eg type)_release
 ---
-EG release time (after note release), in seconds.
-
 ##### Examples
 
 ```
@@ -17,19 +15,3 @@ cutting off unrealistically quickly when a note ends (unless the instrument uses
 [loop_mode](loop_mode) set to one_shot, in which case the entire sample will
 always play) even if amplifier envelopes are not used otherwise to shape the
 sound. Also, `ampeg_release` is used when [off_mode](off_mode) is set to normal.
-
-| Type  | Default | Range      |
-| ---   | ---     | ---        |
-| float | 0       | 0 to 100 s |
-
-| Modulation Sources
-|           ---
-| Envelope | X |
-| LFO      | X |
-| MIDI CC  | ✓ | (eg type)_release_onccN
-
-`(eg type)_release_onccN` uses the following values:
-
-| Type  | Default | Range         |
-| ---   | ---     | ---           |
-| float | 0       | -100 to 100 s |

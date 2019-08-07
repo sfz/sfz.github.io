@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (eg type)_decay
 ---
-EG decay time, in seconds.
-
 ##### Examples
 
 ```
@@ -13,19 +11,3 @@ fileg_decay=0.5
 ```
 
 This should normally not be shorter than the corresponding envelope's release time.
-
-| Type  | Default | Range      |
-| ---   | ---     | ---        |
-| float | 0       | 0 to 100 s |
-
-| Modulation Sources
-|           ---
-| Envelope | X |
-| LFO      | X |
-| MIDI CC  | ✓ | (eg type)_decay_onccN
-
-`(eg type)_decay_onccN` uses the following values:
-
-| Type  | Default | Range         |
-| ---   | ---     | ---           |
-| float | 0       | -100 to 100 s |
