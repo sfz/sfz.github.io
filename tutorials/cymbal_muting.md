@@ -24,7 +24,7 @@ MIDI CC 4 - the common hi-hat pedal assignment in electronic drum kits.
 The above hi-hat has no muting implemented, so playing
 a closed hit after an open one would result in the open hit unrealistically
 continuing to ring. The simplest way to take care of that is to put all the
-regions in the same <[group](/headers/group)> and use [off_by](/opcodes/off_by)
+regions in the same ‹[group](/headers/group)› and use [off_by](/opcodes/off_by)
 to make that group mute itself - that
 will mean any hi-hat hit will mute any currently playing hi-hat hit.
 Setting [off_mode](/opcodes/off_mode) to normal and using [ampeg_release](/opcodes/ampeg_release)
@@ -57,7 +57,7 @@ setting of [sample](/opcodes/sample) ARIA extension, or an actual file of
 a short silence. Note that the silence samples also have to have off_by settings
 the same as the hi-hat samples in their mute group. Also, since group 1 doesn't
 mute anything, we don't need to add any silence regions to that group.
-Note that the [group](/opcodes/group) opcode used here and the <[group](/headers/group)>
+Note that the [group](/opcodes/group) opcode used here and the ‹[group](/headers/group)›
 header are completely separate concepts - "group" for the remainder of this
 article refers to the opcode, not the header, though group headers are also used
 in the code examples.
@@ -328,7 +328,7 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 
 That is as complex as it gets, though there are a few minor points to be aware of.
 Many drum kits with round robins will set [seq_length](/opcodes/seq_length)
-at the <[global](/headers/global)> level, and in those cases, the silence regions
+at the ‹[global](/headers/global)› level, and in those cases, the silence regions
 would only trigger for the first hit in the round robin sequence, unless they
 have seq_length set to 1 to override the global setting. Also, the ‹[master](/headers/master)›
 header level and #[include](/opcodes/include) statement are useful ARIA

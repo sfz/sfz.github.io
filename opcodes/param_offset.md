@@ -20,7 +20,7 @@ param_offset=412
 ```
 
 This is how this can actually be used with Sforzando's built in
-MDA Limiter <[effect](/headers/effect)>:
+MDA Limiter ‹[effect](/headers/effect)›:
 
 ```
 <control>

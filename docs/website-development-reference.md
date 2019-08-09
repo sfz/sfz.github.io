@@ -34,8 +34,8 @@ documentation.
 - Start any .md file with a 2 triple-dashed lines [front matter],
   otherwise Jekyll will copy the original md file into the resulting `_site`
   directory.
-  Opcode files should include a `layout: opcode` variable to specify the required
-  layout to build the resulting html page (see the example below).
+  Opcode files should include a `layout: sfz/opcode` variable to specify the
+  required layout to build the resulting html page (see the example below).
 
 - Using block code three back ticks even with a single line, inline code is used
   for opcode keywords highlights.
@@ -47,6 +47,9 @@ documentation.
 
 - Using a naming convention for numbered opcodes starting with N following with
   X Y Z, e.g.: `egN_timeX_onccY`
+
+- Don't use '<' and '>' in md files to avoid the parser to generate wrong html
+  code, use '‹' and '›' instead.
 
 [front matter]: https://jekyllrb.com/docs/front-matter/
 

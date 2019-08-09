@@ -12,7 +12,7 @@ instrument script file that shall be loaded and executed, which may either be an
 absolute path or a relative path. A relative path is always interpreted relative
 to the SFZ file's location.
 
-May only be used in <[global](/headers/global)> section.
+May only be used in ‹[global](/headers/global)› section.
 
 ##### Example
 

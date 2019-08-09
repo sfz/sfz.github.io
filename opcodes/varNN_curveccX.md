@@ -3,9 +3,6 @@ layout: sfz/opcode
 lang: en
 title: varNN_curveccX
 ---
-Specifies the <[curve](/headers/curve)> number which
-MIDI CC X uses to modulate variable NN.
-
 ##### Example
 
 ```

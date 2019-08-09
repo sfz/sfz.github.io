@@ -40,7 +40,7 @@ play the entire sample from start to end, ignoring note off.
 ```
 
 There's no need to set the one_shot for each region, though. We can simplify
-our life by using the <[global](/headers/global)> header like this:
+our life by using the ‹[global](/headers/global)› header like this:
 
 ```
 <global>loop_mode=one_shot
@@ -99,7 +99,7 @@ sample=kick_vl4.wav
 ```
 This can, again, be simplified. The defalut value for lovel is 0, and for hivel
 it's 127, so we don't need to specify setting them to those numbers. Also, we
-can use a <[group](/headers/group)> header to make the key opcode the same
+can use a ‹[group](/headers/group)› header to make the key opcode the same
 across all four regions:
 
 ```

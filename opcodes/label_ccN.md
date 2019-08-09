@@ -3,7 +3,7 @@ layout: sfz/opcode
 lang: en
 title: label_ccN
 ---
-Under the <[control](/headers/control)> header,
+Under the ‹[control](/headers/control)› header,
 used to create a label for the MIDI CC.
 Some DAWs will display those labels as paramter names, and Sforzando will also
 use them in the Control tab if no GUI is defined.
