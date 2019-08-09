@@ -1,8 +1,11 @@
 # TODO
 
 ### dbinfogen branch ###
+
 - Remove redundant MIDI CC modulations from list that is already in the opcode
   info table and keep track of aliases. (cutoff opcode page)
+
+- Complete player's opcode compatibility pages and related files.
 
 ### Missing opcode versions
 

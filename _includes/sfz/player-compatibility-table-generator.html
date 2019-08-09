@@ -1,0 +1,53 @@
+
+<h2>Supported Operating Systems</h2>
+<ul>
+{%-assign player = page.name | replace: ".md", ''-%}
+{%-for os in site.data.sfz.players[player].os-%}
+	<li>{{ os.name }}</li>
+{%-endfor-%}
+</ul>
+
+<h2>Supported Headers</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Support</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for header in site.data.sfz.players[player].headers-%}
+	{%-if header.support-%}
+		{%-assign header_support = header.support-%}
+	{%-else-%}
+		{%-assign header_support = "✓"-%}
+	{%-endif-%}
+		<tr>
+			<td>{{ header.name }}</td>
+			<td>{{ header_support }}</td>
+		</tr>
+{%-endfor-%}
+	</tbody>
+</table>
+<h2>Supported Opcodes</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Opcode</th>
+			<th>Support</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for opcode in site.data.sfz.players[player].opcodes-%}
+	{%-if opcode.support-%}
+		{%-assign opcode_support = opcode.support-%}
+	{%-else-%}
+		{%-assign opcode_support = "✓"-%}
+	{%-endif-%}
+		<tr>
+			<td>{{ opcode.name }}</td>
+			<td>{{ opcode_support }}</td>
+		</tr>
+{%-endfor-%}
+	</tbody>
+</table>

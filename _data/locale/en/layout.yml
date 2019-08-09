@@ -25,7 +25,13 @@ navigation:
   pages:
     - title: "Players"
       url: "/software/players"
+    -
+    - title: "ARIA"
+      url: "/software/players/aria"
 
+    - title: "LinuxSampler"
+      url: "/software/players/linuxsampler"
+    -
     - title: "Editors"
       url: "/software/tools"
 

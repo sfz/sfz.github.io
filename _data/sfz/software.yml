@@ -19,7 +19,7 @@ players:
 
 - name: "LinuxSampler"
   license: "Opensource"
-  url: "https://www.linuxsampler.org/"
+  url: "/software/players/linuxsampler"
   documented: true
   visible: true
   os:
@@ -71,7 +71,7 @@ players:
 
 - name: "ARIA"
   license: "OEM"
-  url: "http://ariaengine.com/"
+  url: "/software/players/aria"
   documented: true
   visible: true
   os:

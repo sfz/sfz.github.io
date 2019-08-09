@@ -4,8 +4,7 @@
 			<th>Header</th>
 			<th style="text-align:center">Version</th>
 {%-for player_hash in site.data.sfz.players-%}
-	{%-assign player = player_hash[0]-%}
-			<th style="text-align:center">{{ player }}</th>
+			<th style="text-align:center">{{ player_hash[1].name }}</th>
 {%-endfor-%}
 		</tr>
 	</thead>
