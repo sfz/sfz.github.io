@@ -12,8 +12,8 @@ Region off mode. This opcode will determinate how a region is turned off by an
                 generators will enter in release stage, and region will expire
                 when the amplifier envelope generator expired.
 
-ARIA also adds off_mode=time which can be used to specify a time independent of
-the sample release time using [off_time](/opcodes/off_time),
+ARIA also adds `off_mode`=time which can be used to specify a time independent
+of the sample release time using [off_time](/opcodes/off_time),
 and also [off_shape](/opcodes/off_shape) and [off_curve](/opcodes/off_curve)
 to control the curve of the fadeout.
 
@@ -33,7 +33,3 @@ muting behavior sound a little more natural. With longer release times,
 `off_mode`=normal is also a way to manage buildup in instruments which have a very
 long sustain and can have the sound of several notes build up - for example,
 hammered dulcimers or ride cymbals.
-
-| Type | Default | Range        |
-| ---  | ---     | ---          |
-| text | fast    | fast, normal |

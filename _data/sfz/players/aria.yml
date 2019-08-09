@@ -24,6 +24,8 @@ opcodes:
 - name: "delay"
 - name: "delay_ccN"
 - name: "delay_random"
+- name: "direction"
+  support: "Partial"
 - name: "end"
 - name: "loop_mode"
 - name: "loop_start"
@@ -83,4 +85,6 @@ opcodes:
 - name: "curve_index"
 - name: "param_offset"
 - name: "vendor_specific"
+- name: "fil2_type"
+  support: "Partial"
 

@@ -365,6 +365,34 @@ categories:
     short_description: "Follows the same logic as SFZ 2.0’s octave_offset but for key switches."
     version: "ARIA"
 
+  - name: "global_label"
+    short_description: "An ARIA extension which sets what is displayed in the default info tab of Sforzando."
+    version: "ARIA"
+    value:
+      type_name: "string"
+      default: "null"
+
+  - name: "master_label"
+    short_description: "An ARIA extension which sets what is displayed in the default info tab of Sforzando."
+    version: "ARIA"
+    value:
+      type_name: "string"
+      default: "null"
+
+  - name: "group_label"
+    short_description: "An ARIA extension which sets what is displayed in the default info tab of Sforzando."
+    version: "ARIA"
+    value:
+      type_name: "string"
+      default: "null"
+
+  - name: "region_label"
+    short_description: "An ARIA extension which sets what is displayed in the default info tab of Sforzando."
+    version: "ARIA"
+    value:
+      type_name: "string"
+      default: "null"
+
   types:
   - name: "Voice Lifecycle"
     opcodes:
@@ -381,8 +409,8 @@ categories:
         max: 4294967296
 
     - name: "off_by"
-      version: "SFZ v1"
       short_description: "Region off group."
+      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 0
@@ -390,8 +418,8 @@ categories:
         max: 4294967296
 
     - name: "off_mode"
-      version: "SFZ v1"
       short_description: "Region off mode."
+      version: "SFZ v1"
       value:
         type_name: "string"
         default: "fast"
@@ -400,10 +428,12 @@ categories:
           description: "The voice will be turned off immediately. Release settings will not have any effect."
         - name: "normal"
           description: "The region will be set into release stage. All envelope generators will enter in release stage, and region will expire when the amplifier envelope generator expired."
+# TODO: - name: "time"
+#         description: "Used to specify a time independent of the sample release time using off_time. (ARIA)"
 
     - name: "output"
-      version: "SFZ v1"
       short_description: "The stereo output number for this region."
+      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 0
@@ -411,29 +441,41 @@ categories:
         max: 1024
 
     - name: "polyphony"
-      version: "SFZ v2"
       short_description: "Polyphony voice limit for a group."
+      version: "SFZ v2"
 
     - name: "note_polyphony"
-      version: "SFZ v2"
       short_description: ""
+      version: "SFZ v2"
 
     - name: "note_selfmask"
-      version: "SFZ v2"
       short_description: ""
+      version: "SFZ v2"
 
     - name: "rt_dead"
-      version: "SFZ v2"
       short_description: ""
+      version: "SFZ v2"
 
     - name: "off_curve"
+      short_description: ""
       version: "ARIA"
 
     - name: "off_shape"
+      short_description: ""
       version: "ARIA"
 
     - name: "off_time"
+      short_description: ""
       version: "ARIA"
+
+    - name: "polyphony_group"
+      short_description: "An alias for <a href='/opcodes/group'>group</a> to reduce the confusion between the group opcode and the ‹<a href='/headers/group'>group</a>› header."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
 
 - name: "Region Logic"
   url: "/misc/categories#region-logic"
@@ -644,7 +686,7 @@ categories:
       linked: "sw_lolast"
 
     - name: "varNN_curveccX"
-      short_description: "Specifies the <a href='/headers/curve'>‹curve›</a> number which MIDI CC X uses to modulate variable NN."
+      short_description: "Specifies the ‹<a href='/headers/curve'>curve</a>› number which MIDI CC X uses to modulate variable NN."
       version: "ARIA"
 
     - name: "varNN_mod"
@@ -1400,6 +1442,23 @@ categories:
 
     - name: "tune"
       version: "SFZ v1"
+      short_description: "The fine tuning for the sample, in cents."
+      value:
+        type_name: "integer"
+        default: 0
+        min: -100
+        max: 100
+        unit: "cents"
+      modulation:
+        midi_cc:
+        - name: "pitch_onccN"
+          version: "SFZ v2"
+        - name: "pitch_curveccN"
+          version: "SFZ v2"
+        - name: "pitch_smoothccN"
+          version: "Cakewalk"
+        - name: "pitch_stepccN"
+          version: "SFZ v2"
 
     - name: "bend_stepup"
       version: "SFZ v2"
@@ -1420,15 +1479,6 @@ categories:
         min: 1
         max: 1200
         unit: "cents"
-
-    # TODO:
-    - name: "pitch_onccN"
-      version: "SFZ v2"
-    - name: "pitch_curveccN"
-      version: "SFZ v2"
-    - name: "pitch_smoothccN"
-    - name: "pitch_stepccN"
-      version: "SFZ v2"
 
 - name: "Modulation"
   url: "/misc/categories#modulation"

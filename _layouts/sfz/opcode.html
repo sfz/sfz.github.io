@@ -10,7 +10,7 @@ layout: default
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
-	{% if found == false-%}
+
 		{%-for category_type in category.types-%}
 			{%-for opcode in category_type.opcodes-%}
 				{%-if opcode.name == opcode_name-%}
@@ -19,7 +19,7 @@ layout: default
 				{%-endif-%}
 			{%-endfor-%}
 		{%-endfor-%}
-	{%-endif-%}
+
 {%-endfor-%}
 {%-if opcode_info.value.min == nil-%}
 	{%-if opcode_info.value.options-%}
