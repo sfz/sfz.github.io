@@ -330,8 +330,8 @@ That is as complex as it gets, though there are a few minor points to be aware o
 Many drum kits with round robins will set [seq_length](/opcodes/seq_length)
 at the <[global](/headers/global)> level, and in those cases, the silence regions
 would only trigger for the first hit in the round robin sequence, unless they
-have seq_length set to 1 to override the global setting. Also, the <[master](/headers/master)>
-header level and #[include](/directives/include) statement are useful ARIA
+have seq_length set to 1 to override the global setting. Also, the ‹[master](/headers/master)›
+header level and #[include](/opcodes/include) statement are useful ARIA
 extensions for keeping deeply sampled hi-hat mappings organized.
 
 ## Cymbals other than hi-hats

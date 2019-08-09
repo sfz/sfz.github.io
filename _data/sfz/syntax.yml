@@ -266,10 +266,12 @@ categories:
   url: "/misc/categories#instrument-settings"
   short_description: "Opcodes used under the <control> header."
   opcodes:
-  - name: "#define"
+  - name: "define"
     version: "SFZ v2"
     short_description: "Creates a variable and gives it a value."
-    type_name: "directive"
+    macro: true
+    value:
+      type_name: "string"
 
   - name: "default_path"
     short_description: "Relative path for samples."
@@ -303,10 +305,12 @@ categories:
       min: 0
       max: 127
 
-  - name: "#include"
-    version: "ARIA"
+  - name: "include"
     short_description: "Allows using SFZ files as building blocks for creating larger, more complex SFZ files."
-    type_name: "directive"
+    version: "ARIA"
+    macro: true
+    value:
+      type_name: "string"
 
   - name: "hint_"
     version: "ARIA"
@@ -595,13 +599,13 @@ categories:
         - name: "previous"
           description: "Region uses the velocity of the previous note."
 
-# TODO: references to ARIA opcodes
+    # TODO: references to ARIA opcodes
 
     - name: "sustain_sw"
       short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
       version: "SFZ v2"
 
-# TODO: references to ARIA opcodes
+    # TODO: references to ARIA opcodes
 
     - name: "sostenuto_sw"
       short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
@@ -640,7 +644,7 @@ categories:
       linked: "sw_lolast"
 
     - name: "varNN_curveccX"
-      short_description: "Specifies the <curve> number which MIDI CC X uses to modulate variable NN."
+      short_description: "Specifies the <a href='/headers/curve'>‹curve›</a> number which MIDI CC X uses to modulate variable NN."
       version: "ARIA"
 
     - name: "varNN_mod"
@@ -770,7 +774,7 @@ categories:
           description: "Region will play on note-on."
         - name: "release"
           description: "Region will play on note-off or sustain pedal off. The velocity used to play the note-off sample is the velocity value of the corresponding (previous) note-on message."
-# TODO: Is this SFZ v1 or ...?
+        # TODO: Is this SFZ v1 or ...?
         - name: "release_key"
           description: "Region will play on note-off. The velocity used to play the note-off sample is the velocity value of the corresponding (previous) note-on message. Ignores sustain pedal."
         - name: "first"
@@ -948,7 +952,7 @@ categories:
         max: 200
         unit: "dB"
 
-# TODO: Single 'Crossfade' page with common description?
+    # TODO: Single 'Crossfade' page with common description?
 
     - name: "xf_cccurve"
       short_description: "MIDI controllers crossfade curve for the region."
@@ -1323,7 +1327,7 @@ categories:
       short_description: "Same as <a href='/opcodes/fil_type'>fil_type</a>, but used to specify the type for the second filter."
       value:
         type_name: "string"
-# TODO: options
+    # TODO: options
 
     - name: "fil2_veltrack"
       version: "SFZ v2"
@@ -3281,7 +3285,7 @@ categories:
     value:
       type_name: "integer"
       min: 0
-# TODO: max: ?
+    # TODO: max: ?
 
   - name: "vN"
     version: "SFZ v2"

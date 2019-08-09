@@ -1,5 +1,5 @@
 ---
-layout: no_title
+layout: default
 ---
 {%-assign opcode_name = page.name | replace: ".md", ''-%}
 {%-for category in site.data.sfz.syntax.categories-%}
@@ -38,8 +38,6 @@ layout: no_title
 {%-else-%}
 		{%-assign opcode_info_default = opcode_info.value.default-%}
 {%-endif-%}
-
-<h1>{{ opcode_name }}</h1>
 
 <p>{{ opcode_info.short_description }}</p>
 

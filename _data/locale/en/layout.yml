@@ -5,11 +5,6 @@ navigation:
     - title: "Headers"
       url: "/headers/"
     -
-
-    - title: "Directives"
-      url: "/directives/"
-    -
-
     - title: "SFZ v1 Opcodes"
       url: "/misc/sfz1"
 
@@ -22,7 +17,6 @@ navigation:
     - title: "LinuxSampler Extensions"
       url: "/extensions/linuxsampler/"
     -
-
     - title: "Types & Categories"
       url: "/misc/categories"
 
@@ -50,20 +44,18 @@ navigation:
     - title: "Legato"
       url: "/tutorials/legato"
     -
-
     - title: "Drum Basics"
       url: "/tutorials/drum_basics"
 
     - title: "Cymbal Muting"
       url: "/tutorials/cymbal_muting"
-      
+
     - title: "Brush Stirs"
       url: "/tutorials/brush_stirs"
     -
-    
     - title: "SFZ 1 Modulations"
       url: "/tutorials/sfz1_modulations"
-      
+
     - title: "SFZ 2 Modulations"
       url: "/tutorials/sfz2_modulations"
 
@@ -73,7 +65,6 @@ navigation:
     - title: "SFZ 2 Pitch LFO"
       url: "/tutorials/lfo_sfz2"
     -
-
     - title: "Video Tutorials"
       url: "/tutorials/videos"
 

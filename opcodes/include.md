@@ -1,13 +1,14 @@
 ---
-title: #include
-lang: en
+layout: "sfz/opcode"
+title: "#include"
+lang: "en"
 ---
 A special directive, #include allows using SFZ files as building blocks for
 creating larger, more complex SFZ files. The file to which #include points is,
 in effect, pasted into the SFZ file at the point of the #include. This means that
 the file structure needs to be respected - after all #includes are processed,
-<[control](/headers/control)> header needs to be before the regions in the file,
-<[curve](/headers/curve)> opcodes need to be at the bottom etc. This can be
+‹[control](/headers/control)› header needs to be before the regions in the file,
+‹[curve](/headers/curve)› opcodes need to be at the bottom etc. This can be
 nested - #included files can contain more #includes of their own,
 though of course recursion must be avoided!
 
@@ -19,7 +20,7 @@ for clarity when #including a header.
 
 This is useful for creating large complex files, and also for simplifying the
 management of files which repeat similar regions with different opcodes. This is
-especially convenient in conjunction with the <[master](/headers/master)> header.
+especially convenient in conjunction with the ‹[master](/headers/master)› header.
 
 ##### Examples
 

@@ -1,0 +1,109 @@
+{%-for category in site.data.sfz.syntax.categories-%}
+	{%-assign opcode_count = 0-%}
+	{%-for opcode in category.opcodes-%}
+		{%-if opcode.version == page.sfz_version-%}
+			{%-assign opcode_count = opcode_count | plus: 1-%}
+		{%-endif-%}
+	{%-endfor-%}
+	{%-comment-%}
+<p>{{category.name}} has {{opcode_count}} items</p>
+	{%-endcomment-%}
+	{%-if opcode_count > 0-%}
+		{%-if category.url != nil-%}
+			{%-assign category_url = "<a href='" | append: category.url |
+				append: "'>" | append: category.name  | append: "</a>"-%}
+		{%else%}
+			{%-assign category_url = category.name-%}
+		{%-endif-%}
+<h2>{{ category_url }}</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Opcode</th>
+			<th>Description</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
+		</tr>
+	</thead>
+	<tbody>
+		{%-for opcode in category.opcodes-%}
+			{%-if opcode.version == page.sfz_version-%}
+				{%-if opcode.url == nil-%}
+					{%-assign opcode_name = opcode.name | replace: '#', ''-%}
+					{%-assign opcode_url = '<a href="/opcodes/' | append: opcode_name |
+						append: '">' | append: opcode.name | append: '</a>'-%}
+				{%-else-%}
+					{%-assign opcode_url = '<a href="' | append opcode.url |
+						append: '">' | append: opcode.name | append: '</a>'-%}
+				{%-endif-%}
+		<tr>
+			<td>{{ opcode_url }}</td>
+			<td>{{ opcode.short_description }}</td>
+			<td>{{ opcode.value.type_name }}</td>
+			<td>{{ opcode.value.default }}</td>
+			<td>{{ opcode.value.min }} to {{ opcode.value.max }}</td>
+		</tr>
+			{%-endif-%}
+	 {%-endfor-%}
+	</tbody>
+</table>
+	{%-endif-%}
+	{%-for category_type in category.types-%}
+		{%-assign opcode_count = 0-%}
+		{%-for opcode in category_type.opcodes-%}
+			{%-if opcode.version == page.sfz_version-%}
+				{%-assign opcode_count = opcode_count | plus: 1-%}
+			{%-endif-%}
+		{%-endfor-%}
+	{%-comment-%}
+<p>{{category_type.name}} has {{opcode_count}} items</p>
+	{%-endcomment-%}
+		{%-if opcode_count > 0-%}
+			{%-if category.url != nil-%}
+				{%-assign category_url = "<a href='" | append: category.url |
+					append: "'>" | append: category.name  | append: "</a>"-%}
+			{%else%}
+				{%-assign category_url = category.name-%}
+			{%-endif-%}
+			{%-if category_type.url != nil-%}
+				{%-assign category_type_url = "<a href='" | append: category_type.url |
+					append: "'>" | append: category_type.name  | append: "</a>"-%}
+			{%else%}
+				{%-assign category_type_url = category_type.name-%}
+			{%-endif-%}
+<h2>{{ category_url }}: {{ category_type_url }}</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Opcode</th>
+			<th>Description</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
+		</tr>
+	</thead>
+	<tbody>
+			{%-for opcode in category_type.opcodes-%}
+				{%-if opcode.version == page.sfz_version-%}
+					{%-if opcode.url == nil-%}
+						{%-assign opcode_url = '<a href="/opcodes/' | append: opcode.name |
+							append: '">' | append: opcode.name | append: '</a>'-%}
+					{%-else-%}
+						{%-assign opcode_url = '<a href="' | append opcode.url |
+							append: '">' | append: opcode.name | append: '</a>'-%}
+					{%-endif-%}
+		<tr>
+			<td>{{ opcode_url }}</td>
+			<td>{{ opcode.short_description }}</td>
+			<td>{{ opcode.value.type_name }}</td>
+			<td>{{ opcode.value.default }}</td>
+			<td>{{ opcode.value.min }} to {{ opcode.value.max }}</td>
+		</tr>
+				{%-endif-%}
+			{%-endfor-%}
+	</tbody>
+</table>
+		{%-endif-%}
+	{%-endfor-%}
+{%-endfor-%}
