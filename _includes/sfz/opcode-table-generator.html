@@ -5,9 +5,7 @@
 			{%-assign opcode_count = opcode_count | plus: 1-%}
 		{%-endif-%}
 	{%-endfor-%}
-	{%-comment-%}
-<p>{{category.name}} has {{opcode_count}} items</p>
-	{%-endcomment-%}
+{%-comment-%}<p>Debug: {{category.name}} has {{opcode_count}} items</p>{%-endcomment-%}
 	{%-if opcode_count > 0-%}
 		{%-if category.url != nil-%}
 			{%-assign category_url = "<a href='" | append: category.url |
@@ -29,6 +27,7 @@
 	<tbody>
 		{%-for opcode in category.opcodes-%}
 			{%-if opcode.version == page.sfz_version-%}
+{%-comment-%} Opcode name and url link {%-endcomment-%}
 				{%-if opcode.url == nil-%}
 					{%-assign opcode_name = opcode.name | replace: '#', ''-%}
 					{%-assign opcode_url = '<a href="/opcodes/' | append: opcode_name |
@@ -37,12 +36,35 @@
 					{%-assign opcode_url = '<a href="' | append opcode.url |
 						append: '">' | append: opcode.name | append: '</a>'-%}
 				{%-endif-%}
-		<tr>
+{%-comment-%} Opcode value range {%-endcomment-%}
+				{%-if opcode.value.min == nil-%}
+					{%-if opcode.value.options-%}
+						{%-for option in opcode.value.options-%}
+							{%-assign opcode_value_range = opcode_value_range | append: option.name-%}
+								{%-if forloop.last == false-%}
+									{%-assign opcode_value_range = opcode_value_range | append: ", "-%}
+								{%-endif-%}
+						{%-endfor-%}
+					{%-else-%}
+						{%-assign opcode_value_range = "N/A"-%}
+					{%-endif-%}
+				{%-else-%}
+					{%-assign opcode_value_range = opcode.value.min | append: " to " |
+						append: opcode.value.max | append: ' ' | append: opcode.value.unit-%}
+				{%-endif-%}
+{%-comment-%} Opcode default value {%-endcomment-%}
+				{%-if opcode.value.default == nil-%}
+					{%-assign opcode_value_default = "N/A"-%}
+				{%-else-%}
+					{%-assign opcode_value_default = opcode.value.default |
+						append: ' ' | append: opcode.value.unit-%}
+				{%-endif-%}
+<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode.value.type_name }}</td>
-			<td>{{ opcode.value.default }}</td>
-			<td>{{ opcode.value.min }} to {{ opcode.value.max }}</td>
+			<td>{{ opcode_value_default }}</td>
+			<td>{{ opcode_value_range }}</td>
 		</tr>
 			{%-endif-%}
 	 {%-endfor-%}
@@ -56,9 +78,7 @@
 				{%-assign opcode_count = opcode_count | plus: 1-%}
 			{%-endif-%}
 		{%-endfor-%}
-	{%-comment-%}
-<p>{{category_type.name}} has {{opcode_count}} items</p>
-	{%-endcomment-%}
+{%-comment-%}<p>Debug: {{category.name}} has {{opcode_count}} items</p>{%-endcomment-%}
 		{%-if opcode_count > 0-%}
 			{%-if category.url != nil-%}
 				{%-assign category_url = "<a href='" | append: category.url |
@@ -86,6 +106,7 @@
 	<tbody>
 			{%-for opcode in category_type.opcodes-%}
 				{%-if opcode.version == page.sfz_version-%}
+{%-comment-%} Opcode name and url link {%-endcomment-%}
 					{%-if opcode.url == nil-%}
 						{%-assign opcode_url = '<a href="/opcodes/' | append: opcode.name |
 							append: '">' | append: opcode.name | append: '</a>'-%}
@@ -93,12 +114,36 @@
 						{%-assign opcode_url = '<a href="' | append opcode.url |
 							append: '">' | append: opcode.name | append: '</a>'-%}
 					{%-endif-%}
-		<tr>
+{%-comment-%} Opcode value range {%-endcomment-%}
+					{%-assign opcode_value_range = ""-%}
+					{%-if opcode.value.min == nil-%}
+						{%-if opcode.value.options-%}
+							{%-for option in opcode.value.options-%}
+								{%-assign opcode_value_range = opcode_value_range | append: option.name-%}
+									{%-if forloop.last == false-%}
+										{%-assign opcode_value_range = opcode_value_range | append: ", "-%}
+									{%-endif-%}
+							{%-endfor-%}
+						{%-else-%}
+							{%-assign opcode_value_range = "N/A"-%}
+						{%-endif-%}
+					{%-else-%}
+						{%-assign opcode_value_range = opcode.value.min | append: " to " |
+							append: opcode.value.max | append: ' ' | append: opcode.value.unit-%}
+					{%-endif-%}
+{%-comment-%} Opcode default value {%-endcomment-%}
+					{%-if opcode.value.default == nil-%}
+						{%-assign opcode_value_default = "N/A"-%}
+					{%-else-%}
+						{%-assign opcode_value_default = opcode.value.default |
+							append: ' ' | append: opcode.value.unit-%}
+					{%-endif-%}
+<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode.value.type_name }}</td>
-			<td>{{ opcode.value.default }}</td>
-			<td>{{ opcode.value.min }} to {{ opcode.value.max }}</td>
+			<td>{{ opcode_value_default }}</td>
+			<td>{{ opcode_value_range }}</td>
 		</tr>
 				{%-endif-%}
 			{%-endfor-%}

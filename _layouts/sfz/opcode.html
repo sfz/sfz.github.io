@@ -5,18 +5,21 @@ layout: default
 {%-for category in site.data.sfz.syntax.categories-%}
 	{%-for opcode in category.opcodes-%}
 		{%-if opcode.name == opcode_name-%}
+			{%-assign found = true-%}
 			{%-assign opcode_info = opcode-%}
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
-	{%-for category_type in category.types-%}
-		{%-for opcode in category_type.opcodes-%}
-			{%-if opcode.name == opcode_name-%}
-				{%-assign opcode_info = opcode-%}
-				{%break%}
-			{%-endif-%}
+	{% if found == false-%}
+		{%-for category_type in category.types-%}
+			{%-for opcode in category_type.opcodes-%}
+				{%-if opcode.name == opcode_name-%}
+					{%-assign opcode_info = opcode-%}
+					{%break%}
+				{%-endif-%}
+			{%-endfor-%}
 		{%-endfor-%}
-	{%-endfor-%}
+	{%-endif-%}
 {%-endfor-%}
 {%-if opcode_info.value.min == nil-%}
 	{%-if opcode_info.value.options-%}
