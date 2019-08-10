@@ -483,7 +483,7 @@ categories:
         type_name: "integer"
 
     - name: "note_selfmask"
-      short_description: "Controls note-stealing behavior for a single pitch, when using <a href='/opcodes/note_polyphony>note_polyphony</a>."
+      short_description: "Controls note-stealing behavior for a single pitch, when using <a href='/opcodes/note_polyphony'>note_polyphony</a>."
       version: "ARIA"
       value:
         type_name: "string"
