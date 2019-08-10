@@ -17,7 +17,7 @@ In addition, SFZ2 envelopes can have an arbitrary number of points.
 
 ## Additional MIDI CC modulation
 
-SFZ2 adds one more paramter which can be modulated with MIDI CC - [stereo width](/opcodes/width_onccX).
+SFZ2 adds one more paramter which can be modulated with MIDI CC - [stereo width](/opcodes/width_onccN).
 Also need to document pan_onccX and find out whether it's SFZ1 or SFZ2 - currently
 not sure, needs testing.
 

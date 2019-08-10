@@ -2959,76 +2959,28 @@ categories:
         - name: "egN_resonance2_onccX"
           version: "SFZ v2"
 
-    - name: "egN_eq1freq"
+    - name: "egN_eqXfreq"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "egN_eq1freq_onccX"
+        - name: "egN_eqXfreq_onccY"
           version: "SFZ v2"
 
-    - name: "egN_eq2freq"
+    - name: "egN_eqXbw"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "egN_eq2freq_onccX"
+        - name: "egN_eqXbw_onccY"
           version: "SFZ v2"
 
-    - name: "egN_eq3freq"
+    - name: "egN_eqXgain"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "egN_eq3freq_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq1bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq1bw_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq2bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq2bw_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq3bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq3bw_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq1gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq1gain_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq2gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq2gain_onccX"
-          version: "SFZ v2"
-
-    - name: "egN_eq3gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "egN_eq3gain_onccX"
+        - name: "egN_eqXgain_onccY"
           version: "SFZ v2"
 
     - name: "egN_decim"
@@ -3615,112 +3567,40 @@ categories:
         - name: "lfoN_resonance2_stepccX"
           version: "SFZ v2"
 
-    - name: "lfoN_eq1freq"
+    - name: "lfoN_eqXfreq"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_eq1freq_onccX"
+        - name: "lfoN_eqXfreq_onccY"
           version: "SFZ v2"
-        - name: "lfoN_eq1freq_smoothccX"
+        - name: "lfoN_eqXfreq_smoothccY"
           version: "SFZ v2"
-        - name: "lfoN_eq1freq_stepccX"
+        - name: "lfoN_eqXfreq_stepccY"
           version: "SFZ v2"
 
-    - name: "lfoN_eq2freq"
+    - name: "lfoN_eqXbw"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_eq2freq_onccX"
+        - name: "lfoN_eqXbw_onccY"
           version: "SFZ v2"
-        - name: "lfoN_eq2freq_smoothccX"
+        - name: "lfoN_eqXbw_smoothccY"
           version: "SFZ v2"
-        - name: "lfoN_eq2freq_stepccX"
+        - name: "lfoN_eqXbw_stepccY"
           version: "SFZ v2"
 
-    - name: "lfoN_eq3freq"
+    - name: "lfoN_eqXgain"
       short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_eq3freq_onccX"
+        - name: "lfoN_eqXgain_onccY"
           version: "SFZ v2"
-        - name: "lfoN_eq3freq_smoothccX"
+        - name: "lfoN_eqXgain_smoothccY"
           version: "SFZ v2"
-        - name: "lfoN_eq3freq_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq1bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq1bw_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq1bw_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq1bw_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq2bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq2bw_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq2bw_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq2bw_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq3bw"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq3bw_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq3bw_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq3bw_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq1gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq1gain_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq1gain_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq1gain_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq2gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq2gain_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq2gain_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq2gain_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_eq3gain"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_eq3gain_onccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq3gain_smoothccX"
-          version: "SFZ v2"
-        - name: "lfoN_eq3gain_stepccX"
+        - name: "lfoN_eqXgain_stepccY"
           version: "SFZ v2"
 
     - name: "lfoN_decim"

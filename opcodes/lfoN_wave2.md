@@ -7,7 +7,7 @@ It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs. Up to 8 waveforms can be used in
 one LFO.
 [lfoN_ratio2](lfoN_ratio) is important for giving the two waves different
-frequencies, and [lfoN_scale2](lfoN_scale) scale [lfoN_offset2](lfoN_offset)
+frequencies, and [lfoN_scale2](lfoN_scale) scale [lfoN_offsetX](lfoN_offsetX)
 can optionally be used as well.
 
 ##### Example

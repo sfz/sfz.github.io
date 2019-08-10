@@ -16,17 +16,19 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - assets/css/style.css
+  - 404.txt
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - new_post
+  - new_post.pl
   - node_modules
   - package.json
   - package-lock.json
   - Rakefile
   - README.md
   - setup.sh
-  - assets/css/style.css
   - TODO.md
   - yarn.lock
   - yarn-error.log

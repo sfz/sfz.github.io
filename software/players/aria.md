@@ -17,7 +17,7 @@ Source: [ARIA Engine]
 [ARIA Engine]: http://ariaengine.com/
 [32bits and 64bits architectures on OS X, Windows and iOS]: http://ariaengine.com/overview/system-compatibility/
 [Garritan Corp]: http://www.garritan.com/
-[MakeMusic, Inc]: http://www.makemusic.com/Company/Default.aspx
+[MakeMusic, Inc]: https://www.makemusic.com/
 [Plogue Art et Technologie Inc]: http://www.plogue.com/
 [Scala]: http://www.huygens-fokker.org/scala/
 [SFZ 1.0]: http://www.cakewalk.com/DevXchange/sfz.asp
