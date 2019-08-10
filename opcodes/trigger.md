@@ -3,12 +3,12 @@ layout: sfz/opcode
 lang: en
 title: trigger
 ---
-Sets the trigger which will be used for the sample to play. Values can be:
+Values can be:
 
-- ***attack*** : (default): Region will play on note-on.
+- ***attack*** : (Default): Region will play on note-on.
 - ***release***: Region will play on note-off or sustain pedal off. The velocity
                 used to play the note-off sample is the velocity value of the
-				corresponding (previous) note-on message.
+                corresponding (previous) note-on message.
 - ***release_key***: Region will play on note-off. The velocity used to play the
                 note-off sample is the velocity value of the corresponding
                 (previous) note-on message. Ignores sustain pedal.
@@ -22,7 +22,3 @@ Sets the trigger which will be used for the sample to play. Values can be:
 ```
 trigger=release
 ```
-
-| Type | Default | Range                          |
-| ---  | ---     | ---                            |
-| text | attack  | attack, release, release_key, first, legato |

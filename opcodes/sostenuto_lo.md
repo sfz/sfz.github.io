@@ -3,8 +3,7 @@ layout: sfz/opcode
 lang: en
 title: sostenuto_lo
 ---
-This ARIA extension used under the ‹[control](/headers/control)› header sets the
-minimum point at which the sostenuto pedal (MIDI CC 66) is considered "down".
+Used under the ‹[control](/headers/control)› header.
 Default is 1, meaning the sustain pedal is down as long as the CC value is
 anything above 0. To make the pedal only act as "down" past the halfway point,
 set this to 64 - then the pedal is considered "up" from CC value 0 to 63, and

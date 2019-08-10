@@ -316,9 +316,9 @@ categories:
     value:
       type_name: "integer"
 
-  - name: "label_ccN" # TODO: Source?
-    short_description: "Create a label for the MIDI CC."
-    version: "SFZ v2"
+  - name: "label_ccN"
+    short_description: "Creates a label for the MIDI CC."
+    version: "ARIA"
     value:
       type_name: "string"
 
@@ -342,7 +342,7 @@ categories:
     version: "ARIA"
 
   - name: "set_hdccN"
-    short_description: "Like set_ccN but with floating point MIDI CCs"
+    short_description: "Like <a href='/opcodes/set_ccN'>set_ccN</a> but with floating point MIDI CCs."
     version: "ARIA"
     value:
       type_name: "float"
@@ -473,30 +473,52 @@ categories:
     - name: "polyphony"
       short_description: "Polyphony voice limit for a group."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
 
     - name: "note_polyphony"
-      short_description: ""
-      version: "SFZ v2"
+      short_description: "Polyphony limit for playing the same note repeatedly."
+      version: "ARIA"
+      value:
+        type_name: "integer"
 
     - name: "note_selfmask"
-      short_description: ""
-      version: "SFZ v2"
+      short_description: "Controls note-stealing behavior for a single pitch, when using <a href='/opcodes/note_polyphony>note_polyphony</a>."
+      version: "ARIA"
+      value:
+        type_name: "string"
+        default: "on"
+        options:
+        - name: "on"
+        - name: "off"
 
     - name: "rt_dead"
-      short_description: ""
+      short_description: "Controls whether a release sample should play if its sustain sample has ended, or not."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        default: "off"
+        options:
+        - name: "on"
+        - name: "off"
 
     - name: "off_curve"
-      short_description: ""
+      short_description: "When <a href='/opcodes/off_mode'>off_mode</a> is set to time, this specifies the ‹<a href='/headers/curve'>curve</a>>› number for regions being muted by voice-stealing."
       version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "off_shape"
-      short_description: ""
+      short_description: "When <a href='/opcodes/off_mode'>off_mode</a> is set to time, this specifies the curvature of the fadeout curve for regions being muted by voice-stealing."
       version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "off_time"
-      short_description: ""
+      short_description: "When <a href='/opcodes/off_mode'>off_mode</a> is set to time, this specifies the fadeout time for regions being muted by voice-stealing."
       version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "polyphony_group"
       short_description: "An alias for <a href='/opcodes/group'>group</a> to reduce the confusion between the group opcode and the ‹<a href='/headers/group'>group</a>› header."
@@ -632,7 +654,7 @@ categories:
         max: 127
 
     - name: "sw_last"
-      short_description: "Enables the region to play if the last key pressed in the range specified by sw_lokey and sw_hikey is equal to the sw_last value."
+      short_description: "Enables the region to play if the last key pressed in the range specified by <a href='/opcodes/sw_lokey'>sw_lokey and sw_hikey</a> is equal to the <code>sw_last</code> value."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -641,7 +663,7 @@ categories:
         max: 127
 
     - name: "sw_down"
-      short_description: "Enables the region to play if the key equal to sw_down value is depressed. Key has to be in the range specified by sw_lokey and sw_hikey."
+      short_description: "Enables the region to play if the key equal to <code>sw_down</code> value is depressed. Key has to be in the range specified by <a href='/opcodes/sw_lokey'>sw_lokey and sw_hikey</a>."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -650,7 +672,7 @@ categories:
         max: 127
 
     - name: "sw_up"
-      short_description: "Enables the region to play if the key equal to sw_up value is not depressed."
+      short_description: "Enables the region to play if the key equal to <code>sw_up</code> value is not depressed."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -659,7 +681,7 @@ categories:
         max: 127
 
     - name: "sw_previous"
-      short_description: "Previous note value. The region will play if last note-on message was equal to sw_previous value."
+      short_description: "Previous note value. The region will play if last note-on message was equal to <code>sw_previous</code> value."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -678,17 +700,23 @@ categories:
         - name: "previous"
           description: "Region uses the velocity of the previous note."
 
-    # TODO: references to ARIA opcodes
-
     - name: "sustain_sw"
-      short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
+      short_description: "Turns the sustain switch on or off."
       version: "SFZ v2"
-
-    # TODO: references to ARIA opcodes
+      value:
+        type_name: "string"
+        options:
+        - name: "on"
+        - name: "off"
 
     - name: "sostenuto_sw"
-      short_description: "Instructs the engine to disregard sustain_cc and sustain_lo opcodes."
+      short_description: "Turns the sostenuto switch on or off."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        options:
+        - name: "on"
+        - name: "off"
 
     - name: "loprog"
       short_description: "The region plays when the MIDI program number is between <code>loprog</code> and <code>hiprog</code>."
@@ -867,7 +895,7 @@ categories:
         max: 1
 
     - name: "seq_length"
-      short_description: "Sequence length, used together with seq_position to use samples as round robins."
+      short_description: "Sequence length, used together with <a href='/opcodes/seq_position'>seq_position</a> to use samples as round robins."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -876,7 +904,7 @@ categories:
         max: 100
 
     - name: "seq_position"
-      short_description: "Sequence position. The region will play if the internal sequence counter is equal to seq_position."
+      short_description: "Sequence position. The region will play if the internal sequence counter is equal to <code>seq_position</code>."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -885,12 +913,16 @@ categories:
         max: 100
 
     - name: "lotimer"
-      short_description: "Region plays if timer is between <a href='/opcodes/lotimer'>lotimer</a> and <a href='/opcodes/hitimer'>hitimer</a>."
+      short_description: "Region plays if timer is between <code>lotimer</code> and <code>hitimer</code>."
       version: "SFZ v2"
+      value:
+        type_name: "float"
 
     - name: "hitimer"
-      short_description: "Region plays if timer is between <a href='/opcodes/lotimer'>lotimer</a> and <a href='/opcodes/hitimer'>hitimer</a>."
+      short_description: "Region plays if timer is between <code>lotimer</code> and <code>hitimer</code>."
       version: "SFZ v2"
+      value:
+        type_name: "float"
 
   - name: "Triggers"
     opcodes:
@@ -938,18 +970,40 @@ categories:
         max: 127
 
     - name: "start_loccN"
-      short_description: "Alias for <a href='/opcodes/'>on_loccN</a>."
+      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. An alias for <a href='/opcodes/on_loccN'>on_loccN</a>."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: "-1 (unassigned)"
+        min: 0
+        max: 127
 
     - name: "start_hiccN"
-      short_description: "Alias for <a href='/opcodes/'>on_hiccN</a>."
+      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. An alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: "-1 (unassigned)"
+        min: 0
+        max: 127
 
     - name: "stop_loccN"
+      short_description: "If a MIDI control message with a value between <code>stop_loccN</code> and <code>stop_hiccN</code> is received, the region will stop playing."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: "-1 (unassigned)"
+        min: 0
+        max: 127
 
     - name: "stop_hiccN"
+      short_description: "If a MIDI control message with a value between <code>stop_loccN</code> and <code>stop_hiccN</code> is received, the region will stop playing."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: "-1 (unassigned)"
+        min: 0
+        max: 127
 
 - name: "Performance Parameters"
   url: "/misc/categories#performance-parameters"
@@ -968,7 +1022,7 @@ categories:
         unit: "%"
 
     - name: "position"
-      short_description: "Only operational for stereo samples, position defines the position in the stereo field of a stereo signal, after channel mixing as defined in the width opcode."
+      short_description: "Only operational for stereo samples, <code>position</code> defines the position in the stereo field of a stereo signal, after channel mixing as defined in the <a href='/opcodes/width'>width</a> opcode."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1231,7 +1285,14 @@ categories:
         max: 127
 
     - name: "phase"
-      version: "SFZ v2"
+      short_description: "If invert is set, the region is played with inverted phase."
+      version: "ARIA"
+      value:
+        type_name: "string"
+        default: "normal"
+        options:
+        - name: "normal"
+        - name: "invert"
 
     - name: "amplitude"
       short_description: "Amplitude for the specified region in percentage of full amplitude."
@@ -1297,14 +1358,64 @@ categories:
         - name: "mma"
         - name: "balance"
 
-    - name: "global_volume"
+    - name: "pan_keycenter"
+      short_description: "Center key for pan keyboard tracking."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 60
+        min: 0
+        max: 127
+
+    - name: "pan_keytrack"
+      short_description: "The amount by which the panning of a note is shifted with each key."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
+
+    - name: "pan_veltrack"
+      short_description: "The effect of note velocity on panning."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
+
+    - name: "global_volume"
+      short_description: "ARIA extension, like <a href='/opcodes/volume'>volume</a>, but affecting everything when set under the ‹<a href='/headers/global'>global</a>› header."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 6
+        unit: "dB"
 
     - name: "master_volume"
+      short_description: "ARIA extension, like <a href='/opcodes/volume'>volume</a>, but affecting everything when set under the ‹<a href='/headers/master'>master</a>› header."
       version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 6
+        unit: "dB"
 
     - name: "group_volume"
+      short_description: "ARIA extension, like <a href='/opcodes/volume'>volume</a>, but affecting everything when set under the ‹<a href='/headers/group'>group</a>› header."
       version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -144
+        max: 6
+        unit: "dB"
 
   - name: "EQ"
     opcodes:
@@ -1537,23 +1648,45 @@ categories:
           version: "SFZ v2"
 
     - name: "fil2_keycenter"
+      short_description: "Same as <a href='/opcodes/fil_keycenter'>fil_keycenter</a>, but used to specify the type for the second filter."
       version: "SFZ v2"
-      short_description: ""
+      value:
+        type_name: "integer"
+        default: 60
+        min: 0
+        max: 127
 
     - name: "fil2_keytrack"
+      short_description: "Same as <a href='/opcodes/fil_keytrack'>fil_keytrack</a>, but used to specify the type for the second filter."
       version: "SFZ v2"
-      short_description: ""
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1200
 
     - name: "fil2_type"
-      version: "SFZ v2"
       short_description: "Same as <a href='/opcodes/fil_type'>fil_type</a>, but used to specify the type for the second filter."
+      version: "SFZ v2"
       value:
         type_name: "string"
-    # TODO: options
+        default: "lpf_2p"
+        options:
+        - name: "lpf_1p"
+        - name: "hpf_1p"
+        - name: "lpf_2p"
+        - name: "hpf_2p"
+        - name: "bpf_2p"
+        - name: "brf_2p"
 
     - name: "fil2_veltrack"
+      short_description: "Same as <a href='/opcodes/fil_veltrack'>fil_veltrack</a>, but used to specify the type for the second filter."
       version: "SFZ v2"
-      short_description: ""
+      value:
+        type_name: "integer"
+        default: 0
+        min: -9600
+        max: 9600
 
     - name: "resonance2"
       version: "SFZ v2"
@@ -1612,12 +1745,22 @@ categories:
         max: 1200
         unit: "cents"
 
+    - name: "pitch"
+      version: "SFZ v1"
+      short_description: "Pitch change in cents. Apparently equivalent to <a href='/opcodes/tune'>tune</a>."
+      value:
+        type_name: "integer"
+        default: 0
+        min: -100
+        max: 100
+        unit: "cents"
+
     - name: "pitch_keycenter"
       short_description: "Root key for the <a href='/opcodes/sample'>sample</a>."
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: "60 (C4)"
+        default: 60 # (C4)
         min: 0
         max: 127
 
@@ -3659,16 +3802,23 @@ categories:
         type_name: "float"
 
     - name: "lfoN_ratio"
-      short_description: ""
+      short_description: "Sets the ratio between the specified sub waveform and the main waveform."
       version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "lfoN_scale"
-      short_description: ""
+      short_description: "Sets the scaling between the specified sub waveform and the main waveform."
       version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "lfoN_wave2"
-      short_description: ""
+      short_description: "Select the waveform type used for the second waveform for LFO number N, with the same allowed values as <a href='/opcodes/lfoN_wave'>lfoN_wave</a> normally can use."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
 
 - name: "Curves"
   opcodes:
@@ -3715,9 +3865,13 @@ categories:
       unit: "%"
 
   - name: "param_offset"
-    short_description: ""
+    short_description: "Adds a number to the parameter numbers of built-in or vendor-specific effects."
     version: "ARIA"
+    value:
+      type_name: "integer"
 
   - name: "vendor_specific"
     short_description: "Defines vendor-specific effects, for example Garritan-specific stage depth effect in ARIA."
     version: "ARIA"
+    value:
+      type_name: "string"

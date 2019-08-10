@@ -3,8 +3,7 @@ layout: sfz/opcode
 lang: en
 title: pan_keycenter
 ---
-Center key for pan keyboard tracking.
-In this key, pan_keytrack will have no effect.
+In this key, [pan_keytrack](pan_keytrack) will have no effect.
 
 ##### Examples
 
@@ -12,5 +11,3 @@ In this key, pan_keytrack will have no effect.
 pan_keycenter=48
 amp_keycenter=65
 ```
-
-Default is 60.

@@ -3,7 +3,6 @@ layout: sfz/opcode
 lang: en
 title: param_offset
 ---
-Adds a number to the parameter numbers of built-in or vendor-specific effects.
 Multiples of 100 seem most convenient, because with param_offset=300 that would
 put the first parameter on 300, second on 301, third on 302 and so on, but other
 integer values can also be used. These then can be used like MIDI CC, but with

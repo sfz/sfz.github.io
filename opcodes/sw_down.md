@@ -3,9 +3,6 @@ layout: sfz/opcode
 lang: en
 title: sw_down
 ---
-Enables the region to play if the key equal to sw_down value is depressed.
-Key has to be in the range specified by [sw_lokey](sw_lokey) and [sw_hikey](sw_lokey).
-
 `sw_down` can be entered in either MIDI note numbers (0 to 127) or in MIDI note
 names (C-1 to G9)
 
@@ -22,8 +19,3 @@ affect notes until another keyswitch is pressed. `sw_down`, on the other hand, i
 makes `sw_down` a good choice for keyswitching articulations which are often used
 for only one note before going back to a "normal" articulation. For example,
 hammer-ons on a guitar could be a good use case for `sw_down`.
-
-| Type    | Default | Range     |
-| ---     | ---     | ---       |
-| integer |  0      | 0 to 127  |
-|         |         | C-1 to G9 |

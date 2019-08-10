@@ -3,10 +3,8 @@ layout: sfz/opcode
 lang: en
 title: seq_length
 ---
-Sequence length, used together with [seq_position](/opcodes/seq_position)
-to use samples as round robins. The player will keep an internal counter
-creating a consecutive note-on sequence for each region, starting at 1 and
-resetting at `seq_length`. Maximum allowed value is 100.
+The player will keep an internal counter creating a consecutive note-on sequence
+for each region, starting at 1 and resetting at `seq_length`.
 
 ##### Example
 
@@ -34,7 +32,3 @@ An alternative to this is using [lorand / hirand](/opcodes/lorand) for
 random, instead of sequential, round robins. If there are enough samples
 available, both methods can also be combined - the combination is described
 on the [lorand / hirand](/opcodes/lorand) page.
-
-| Type    | Default | Range    |
-| ---     | ---     | ---      |
-| integer | 1       | 1 to 100 |

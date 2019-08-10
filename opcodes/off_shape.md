@@ -3,9 +3,7 @@ layout: sfz/opcode
 lang: en
 title: off_shape
 ---
-When [off_mode](off_mode) is set to time, this specifies the curvature of
-the fadeout curve for regions being muted by voice-stealing.
-Also see [off_time](off_time) and [off_curve](off_curve).
+See also [off_time](off_time) and [off_curve](off_curve).
 
 0 is linear, positive values are slower curves
 (in the case of fading out a region, that means it will initially not fade out

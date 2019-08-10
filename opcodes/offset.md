@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: offset
 ---
-The offset used to play the sample, in sample units.
-
 The player will reproduce samples starting with the very first sample in the file,
 unless `offset` is specified. It will start playing the file at the `offset`
 sample in this case. Note that this if this causes the region to play from a point
@@ -31,7 +29,3 @@ offset=32425
 Uses include: having the player skip pre-attack pick noise in guitar samples;
 phase-aligning samples from various microphones; skipping the start of a
 saxophone sample in legato instruments.
-
-| Type    | Default | Range           |
-| ---     | ---     | ---             |
-| integer | 0       | 0 to 4294967296 |

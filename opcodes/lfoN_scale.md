@@ -6,8 +6,7 @@ title: lfoN_scale
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
 Up to 8 waveforms can be used in one LFO.
-This opcode is used to set the scaling between the specified sub waveform and
-the main waveform. `lfoN_scale2` will set the ratio for the second waveform etc.
+`lfoN_scale2` will set the ratio for the second waveform etc.
 Using `lfoN_scale` with no number after the scale is perhaps not needed very often,
 and scale will mostly be used on the sub waveforms, but it can also be set for
 the main waveform if needed.

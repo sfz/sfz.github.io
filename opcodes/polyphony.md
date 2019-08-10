@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: polyphony
 ---
-Polyphony voice limit for a group.
-
 ##### Examples
 
 ```

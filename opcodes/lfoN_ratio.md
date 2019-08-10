@@ -5,12 +5,12 @@ title: lfoN_ratio
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
-Up to 8 waveforms can be used in one LFO. This opcode is used to set the ratio
-between the specified sub waveform and the main waveform. lfoN_ratio2 will set
-the ratio for the second waveform etc. Using lfoN_ratio with no number after
-the ratio sets the ratio for the main waveform, which is perhaps not needed
-very often. Ratio will likely mostly be used on the sub waveforms, but it can
-also be set for the main waveform if needed.
+Up to 8 waveforms can be used in one LFO.
+lfoN_ratio2 will set the ratio for the second waveform etc.
+Using `lfoN_ratio` with no number after the ratio sets the ratio
+for the main waveform, which is perhaps not needed very often.
+Ratio will likely mostly be used on the sub waveforms,
+but it can also be set for the main waveform if needed.
 
 ##### Example
 

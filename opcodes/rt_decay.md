@@ -3,9 +3,6 @@ layout: sfz/opcode
 lang: en
 title: rt_decay
 ---
-Applies only to regions that triggered through [trigger](trigger)=release.
-The volume decrease (in db) per seconds after the note has been attacked.
-
 ##### Example
 
 ```
@@ -23,7 +20,3 @@ faster than lower ones, so the higher notes will need higher rt_decay values.
 Release samples for sounds which do not naturally decay, such as organs or
 guitar feedback, do not need their volume to decrease based on note duration,
 and can use the default value of 0.
-
-| Type  | Default | Range       |
-| ---   | ---     | ---         |
-| float | 0 dB    | 0 to 200 dB |

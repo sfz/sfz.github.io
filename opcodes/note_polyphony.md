@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: note_polyphony
 ---
-Polyphony limit for playing the same note repeatedly.
-
 ##### Example
 
 ```

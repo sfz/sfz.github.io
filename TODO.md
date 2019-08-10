@@ -7,34 +7,26 @@
 
 - Complete player's opcode compatibility pages and related files.
 
+- Link similar opcodes, show linked opcode page title instead of the one linked to.
+
+- Describe opcode's string option values from their descriptions in the db.
+
 ### Missing opcode versions
-
-Sample Playback:
-
-- direction
 
 Instrument settings:
 
-- note_offset (Missing values)
-- octave_offset (Missing values)
-
 - Filter
+	- cutoff: merge with cutoff2
+	- fil_type: merge with fil2_type
+	- resonance: merge with resonance2
 
-- cutoff (ensure about modulations and possibly merge them all)
-- fil2_type (options and default value)
+- Pitch:
+	- bend_smooth: Missing range
+	- pitch: ARIA alias for tune?
 
-Pitch:
-
-- bend_smooth (Missing values)
-- pitch
-
-Amplifier:
-
-- pan_keycenter
-- pan_keytrack
-- pan_veltrack
-- position_onccN
-- volume (Real range, MIDI CC values)
+- Amplifier:
+	- position_onccN
+	- volume: 'Real' range?
 
 ### Missing SFZ2 from LS page:
 

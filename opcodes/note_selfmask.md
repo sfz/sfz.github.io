@@ -3,9 +3,6 @@ layout: sfz/opcode
 lang: en
 title: note_selfmask
 ---
-Controls note-stealing behavior for a single pitch, when using [note_polyphony](note_polyphony).
-Allowed values are on and off, default is on.
-
 Default self-masking behavior is that higher-velocity notes turn off
 lower-velocity notes, but lower-velocity notes do not turn off
 higher-velocity notes. This is generally desirable when playing repeated
