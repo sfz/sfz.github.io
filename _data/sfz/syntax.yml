@@ -1746,7 +1746,7 @@ categories:
         unit: "cents"
 
     - name: "pitch"
-      version: "SFZ v1"
+      version: "ARIA"
       short_description: "Pitch change in cents. Apparently equivalent to <a href='/opcodes/tune'>tune</a>."
       value:
         type_name: "integer"
