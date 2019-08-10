@@ -3,25 +3,10 @@ layout: sfz/opcode
 lang: en
 title: varNN_target
 ---
-Specifies the target for variable NN to modulate. The list of possible modulation
-targets is basically the same standard list as for LFOs or envelopes,
-though variables can't modulate other modulators, so it's not currently possible
-to use a variable to modulate an LFO, or to modulate another variable.
-
-Available targets are:
-
-- pitch
-- cutoff
-- resonance
-- cutoff2
-- resonance2
-- eqNfreq
-- eqNbw
-- eqNgain
-- volume
-- amplitude
-- pan
-- width
+The list of possible modulation targets is basically the same standard list
+as for LFOs or envelopes, though variables can't modulate other modulators,
+so it's not currently possible to use a variable to modulate an LFO,
+or to modulate another variable.
 
 ##### Example
 

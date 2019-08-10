@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: xfin_loccN / xfin_hiccN
 ---
-Fade in control based on MIDI CC.
-
 `xfin_loccN` and `xfin_hiccN` set the range of values in the MIDI continuous
 controller N which will perform a fade-in in the region.
 
@@ -33,7 +31,3 @@ are not used for dynamic expressive performance but rather for setting a static
 mix (for example of microphone perspectives), it can make sense to use them
 alongside [loccN / hiccN](loccN) to keep the regions which would be at zero
 volume from being triggered and consuming resources.
-
-| Type    | Default | Range    |
-| ---     | ---     | ---      |
-| integer | 0       | 0 to 127 |

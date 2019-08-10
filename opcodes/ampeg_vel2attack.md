@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: (eg type)_vel2attack
 ---
-Velocity effect on EG attack time, in seconds.
-
 ##### Examples
 
 ```
@@ -30,7 +28,3 @@ ampeg_vel2decay=1
 ampeg_sustain=50
 ampeg_release=0.25
 ```
-
-| Type  | Default | Range         |
-| ---   | ---     | ---           |
-| float | 0       | -100 to 100 s |

@@ -4,8 +4,7 @@ lang: en
 title: lorand / hirand
 ---
 Random values. The player will generate a new random number on every note-on event,
-in the range 0 to 1. The region will play if the random number is equal to or
-higher than `lorand`, and lower than `hirand`.
+in the range 0 to 1.
 
 ##### Examples
 
@@ -52,8 +51,3 @@ look like this:
 There are other potential uses which have nothing to do with round robins, for
 example having key fingering noises on a clarinet trigger sometimes
 (but not always) when a note is played.
-
-| Type  | Default  | Range  |
-| ---   | ---      | ---    |
-| float | lorand=0 | 0 to 1 |
-|       | hirand=1 |        |

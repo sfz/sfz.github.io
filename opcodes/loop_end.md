@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: loop_end
 ---
-The loop end point, in samples.
-
 If `loop_end` is not specified and the sample has a loop defined, the SFZ player
 will use the end point of the first loop defined in the file. That means for
 files with one loop, `loop_end` does not usually need to be set, as it's generally
@@ -25,7 +23,3 @@ loop_end=4503
 
 loop_end=12445
 ```
-
-| Type    | Default | Range           |
-| ---     | ---     | ---             |
-| integer | 0       | 0 to 4294967296 |

@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: bend_smooth
 ---
-Default is 0.
-
 ##### Examples
 
 ```

@@ -106,10 +106,10 @@ categories:
         unit: "sample units"
 
     - name: "loop_mode"
+      short_description: "Allows playing samples with loops defined in the unlooped mode."
       alias:
       - name: "loopmode"
         version: "SFZ v2"
-      short_description: "Allows playing samples with loops defined in the unlooped mode."
       version: "SFZ v1"
       value:
         type_name: "string"
@@ -125,11 +125,11 @@ categories:
           description: "the player will play the loop while the note is held, by keeping it depressed or by using the sustain pedal (CC64). The rest of the sample will play after note release."
 
     - name: "loop_start"
+      short_description: "The loop start point, in samples."
+      version: "SFZ v1"
       alias:
       - name: "loopstart"
         version: "SFZ v2"
-      short_description: "The loop start point"
-      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 0
@@ -137,11 +137,11 @@ categories:
         max: 4294967296
 
     - name: "loop_end"
+      short_description: "The loop end point, in samples."
+      version: "SFZ v1"
       alias:
       - name: "loopend"
         version: "SFZ v2"
-      short_description: "The loop end point"
-      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 0
@@ -208,16 +208,22 @@ categories:
         unit: "beats"
 
     - name: "delay_beats"
-      short_description: ""
+      short_description: "Delays the start of the region until a certain amount of musical beats are passed."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        unit: "beats"
 
     - name: "stop_beats"
-      short_description: ""
+      short_description: "Stops a region after a certain amount of beats have played."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        unit: "beats"
 
-    - name: "direction" # TODO: Source?
+    - name: "direction"
       short_description: "The direction in which the sample is to be played."
-      version: "SFZ v2"
+      version: "ARIA"
       value:
         type_name: "string"
         default: "forward"
@@ -225,42 +231,61 @@ categories:
         - name: "forward"
         - name: "reverse"
 
-    - name: "loop_count" # TODO: Source?
+    - name: "loop_count"
       short_description: "The number of times a loop will repeat."
-      version: "SFZ v2"
+      version: "ARIA"
+      value:
+        type_name: "integer"
 
     - name: "loop_crossfade"
-      short_description: ""
+      short_description: "Loop cross fade, in seconds."
       version: "SFZ v2"
       value:
+        type_name: "float"
         unit: "seconds"
 
-    - name: "loop_type" # TODO: Source?
+    - name: "loop_type"
       short_description: "Defines the looping mode."
-      version: "SFZ v2"
+      version: "ARIA"
       value:
         type_name: "string"
         default: "forward"
-      options:
-      - name: "forward"
-      - name: "backward"
-      - name: "alternate"
+        options:
+        - name: "forward"
+        - name: "backward"
+        - name: "alternate"
 
     - name: "md5"
       short_description: "The MD5 hash for an encoded sample. It will be a 128-bit key in hex."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        default: "null"
 
     - name: "reverse_loccN"
-      short_description: "If MIDI CC X is between reverse_loccN and reverse_hiccN, the region plays reversed."
+      short_description: "If MIDI CC X is between <code>reverse_loccN</code> and <code>reverse_hiccN</code>, the region plays reversed."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
 
     - name: "reverse_hiccN"
+      short_description: "If MIDI CC X is between <code>reverse_loccN</code> and <code>reverse_hiccN</code>, the region plays reversed."
       version: "SFZ v2"
-      linked: "reverse_loccN"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
 
     - name: "waveguide"
       short_description: "Enables waveguide synthesis for the region."
       version: "SFZ v2"
+      value:
+        type_name: "string"
+        options:
+        - name: "on"
+        - name: "off"
 
 - name: "Instrument Settings"
   url: "/misc/categories#instrument-settings"
@@ -313,6 +338,7 @@ categories:
       type_name: "string"
 
   - name: "hint_"
+    short_description: "Its a 'hint' to the ARIA engine, others implementations don't have to follow."
     version: "ARIA"
 
   - name: "set_hdccN"
@@ -358,12 +384,16 @@ categories:
       max: 127
 
   - name: "sw_note_offset"
-    short_description: "Follows the same logic as SFZ 2.0’s note_offset but for key switches."
+    short_description: "Follows the same logic as SFZ 2.0’s <a href='/opcodes/note_offset'>note_offset</a> but for key switches."
     version: "ARIA"
+    value:
+      type_name: "integer"
 
   - name: "sw_octave_offset"
-    short_description: "Follows the same logic as SFZ 2.0’s octave_offset but for key switches."
+    short_description: "Follows the same logic as SFZ 2.0’s <a href='/opcodes/octave_offset'>octave_offset</a> but for key switches."
     version: "ARIA"
+    value:
+      type_name: "integer"
 
   - name: "global_label"
     short_description: "An ARIA extension which sets what is displayed in the default info tab of Sforzando."
@@ -484,6 +514,7 @@ categories:
   - name: "Key Mapping"
     opcodes:
     - name: "key"
+      short_description: "Equivalent to using <a href='/opcodes/lokey'>lokey</a>, <a href='/opcodes/hikey'>hikey</a> and <a href='/opcodes/pitch_keycenter'>pitch_keycenter</a> and setting them all to the same note value."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -491,6 +522,7 @@ categories:
         max: 127
 
     - name: "lokey"
+      short_description: "Determine the low boundary of a certain <a href='/headers/region'>region</a>."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -499,8 +531,8 @@ categories:
         max: 127
 
     - name: "hikey"
+      short_description: "Determine the high boundary of a certain <a href='/headers/region'>region</a>."
       version: "SFZ v1"
-      linked: "lokey"
       value:
         type_name: "integer"
         default: 127
@@ -508,6 +540,7 @@ categories:
         max: 127
 
     - name: "lovel"
+      short_description: "If a note with velocity value equal to or higher than <code>lovel</code> AND equal to or lower than <code>hivel</code> is played, the region will play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -516,8 +549,8 @@ categories:
         max: 127
 
     - name: "hivel"
+      short_description: "If a note with velocity value equal to or higher than <code>lovel</code> AND equal to or lower than <code>hivel</code> is played, the region will play."
       version: "SFZ v1"
-      linked: "lovel"
       value:
         type_name: "integer"
         default: 127
@@ -527,6 +560,7 @@ categories:
   - name: "MIDI Conditions"
     opcodes:
     - name: "lochan"
+      short_description: "If incoming notes have a MIDI channel between <code>lochan</code> and <code>hichan</code>, the region will play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -535,8 +569,8 @@ categories:
         max: 16
 
     - name: "hichan"
+      short_description: "If incoming notes have a MIDI channel between <code>lochan</code> and <code>hichan</code>, the region will play."
       version: "SFZ v1"
-      linked: "lochan"
       value:
         type_name: "integer"
         default: 16
@@ -544,6 +578,7 @@ categories:
         max: 16
 
     - name: "loccN"
+      short_description: "Defines the range of the last MIDI controller N required for the region to play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -552,8 +587,8 @@ categories:
         max: 127
 
     - name: "hiccN"
+      short_description: "Defines the range of the last MIDI controller N required for the region to play."
       version: "SFZ v1"
-      linked: "loccN"
       value:
         type_name: "integer"
         default: 127
@@ -561,6 +596,7 @@ categories:
         max: 127
 
     - name: "lobend"
+      short_description: "Defines the range of the last Pitch Bend message required for the region to play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -569,8 +605,8 @@ categories:
         max: 8192
 
     - name: "hibend"
+      short_description: "Defines the range of the last Pitch Bend message required for the region to play."
       version: "SFZ v1"
-      linked: "lobend"
       value:
         type_name: "integer"
         default: 8192
@@ -578,6 +614,7 @@ categories:
         max: 8192
 
     - name: "sw_lokey"
+      short_description: "Defines the range of the keyboard to be used as trigger selectors for the <a href='/opcodes/sw_last'>sw_last</a> opcode."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -586,8 +623,8 @@ categories:
         max: 127
 
     - name: "sw_hikey"
+      short_description: "Defines the range of the keyboard to be used as trigger selectors for the <a href='/opcodes/sw_last'>sw_last</a> opcode."
       version: "SFZ v1"
-      linked: "sw_lokey"
       value:
         type_name: "integer"
         default: 127
@@ -654,36 +691,64 @@ categories:
       version: "SFZ v2"
 
     - name: "loprog"
-      short_description: "The region plays when the MIDI program number is between loprog and hiprog."
+      short_description: "The region plays when the MIDI program number is between <code>loprog</code> and <code>hiprog</code>."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "hiprog"
+      short_description: "The region plays when the MIDI program number is between <code>loprog</code> and <code>hiprog</code>."
       version: "SFZ v2"
-      linked: "loprog"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "lohdccN"
-      short_description: "Like loccN / hiccN but with floating point MIDI CCs"
+      short_description: "Like <a href='/opcodes/loccN'>loccN</a> but with floating point MIDI CCs"
       version: "ARIA"
       value:
         type_name: "float"
 
     - name: "hihdccN"
+      short_description: "Like <a href='/opcodes/hiccN'>hiccN</a> but with floating point MIDI CCs"
       version: "ARIA"
-      linked: "lohdccN"
+      value:
+        type_name: "float"
 
     - name: "sw_default"
+      short_description: ""
       version: "ARIA"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
 
     - name: "sw_label"
+      short_description: ""
       version: "ARIA"
-      linked: "sw_default"
+      value:
+        type_name: "string"
 
     - name: "sw_lolast"
+      short_description: "Like <a href='/opcodes/sw_last'>sw_last</a>, but allowing a region to be triggered across a range of keyswitches."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
 
     - name: "sw_hilast"
+      short_description: "Like <a href='/opcodes/sw_last'>sw_last</a>, but allowing a region to be triggered across a range of keyswitches."
       version: "ARIA"
-      linked: "sw_lolast"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
 
     - name: "varNN_curveccX"
       short_description: "Specifies the ‹<a href='/headers/curve'>curve</a>› number which MIDI CC X uses to modulate variable NN."
@@ -703,31 +768,52 @@ categories:
     - name: "varNN_onccX"
       short_description: "Specifies the method used to calculate variable number NN from MIDI CCs."
       version: "ARIA"
+      value:
+        type_name: "float"
+        min: 0
+        max: 1
 
     - name: "varNN_target"
-      short_description: "The amount by which MIDI CC X modulates variable NN. The modulation is either by multiplication or addition, depending on varNN_mod settings."
+      short_description: "Specifies the target for variable NN to modulate."
       version: "ARIA"
+      value:
+        type_name: "string"
+        options:
+        - name: "amplitude"
+        - name: "cutoff"
+        - name: "cutoff2"
+        - name: "eqNbw"
+        - name: "eqNfreq"
+        - name: "eqNgain"
+        - name: "pan"
+        - name: "pitch"
+        - name: "resonance"
+        - name: "resonance2"
+        - name: "volume"
+        - name: "width"
 
   - name: "Internal Conditions"
     opcodes:
     - name: "lobpm"
+      short_description: "Host tempo value."
       version: "SFZ v1"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 0
         min: 0
         max: 500
 
     - name: "hibpm"
+      short_description: "Host tempo value."
       version: "SFZ v1"
-      linked: "lobpm"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 500
         min: 0
         max: 500
 
     - name: "lochanaft"
+      short_description: "Defines the range of last Channel Aftertouch message required for the region to play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -736,8 +822,8 @@ categories:
         max: 127
 
     - name: "hichanaft"
+      short_description: "Defines the range of last Channel Aftertouch message required for the region to play."
       version: "SFZ v1"
-      linked: "lochanaft"
       value:
         type_name: "integer"
         default: 127
@@ -745,6 +831,7 @@ categories:
         max: 127
 
     - name: "lopolyaft"
+      short_description: "Defines the range of last Polyphonic Aftertouch message required for the region to play."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -753,8 +840,8 @@ categories:
         max: 127
 
     - name: "hipolyaft"
+      short_description: "Defines the range of last Polyphonic Aftertouch message required for the region to play."
       version: "SFZ v1"
-      linked: "lopolyaft"
       value:
         type_name: "integer"
         default: 127
@@ -762,6 +849,7 @@ categories:
         max: 127
 
     - name: "lorand"
+      short_description: "The region will play if the random number is equal to or higher than <code>lorand</code>, and lower than <code>hirand</code>."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -770,8 +858,8 @@ categories:
         max: 1
 
     - name: "hirand"
+      short_description: "The region will play if the random number is equal to or higher than <code>lorand</code>, and lower than <code>hirand</code>."
       version: "SFZ v1"
-      linked: "lorand"
       value:
         type_name: "float"
         default: 1
@@ -779,8 +867,8 @@ categories:
         max: 1
 
     - name: "seq_length"
-      version: "SFZ v1"
       short_description: "Sequence length, used together with seq_position to use samples as round robins."
+      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 1
@@ -788,8 +876,8 @@ categories:
         max: 100
 
     - name: "seq_position"
-      version: "SFZ v1"
       short_description: "Sequence position. The region will play if the internal sequence counter is equal to seq_position."
+      version: "SFZ v1"
       value:
         type_name: "integer"
         default: 1
@@ -797,11 +885,12 @@ categories:
         max: 100
 
     - name: "lotimer"
+      short_description: "Region plays if timer is between <a href='/opcodes/lotimer'>lotimer</a> and <a href='/opcodes/hitimer'>hitimer</a>."
       version: "SFZ v2"
 
     - name: "hitimer"
+      short_description: "Region plays if timer is between <a href='/opcodes/lotimer'>lotimer</a> and <a href='/opcodes/hitimer'>hitimer</a>."
       version: "SFZ v2"
-      linked: "lotimer"
 
   - name: "Triggers"
     opcodes:
@@ -825,43 +914,42 @@ categories:
           description: "Region will play on note-on, but only if there’s a note going on (notes after first note in a legato phrase)."
 
     - name: "on_loccN"
+      short_description: "If a MIDI control message with a value between <code>on_loccN</code> and <code>on_hiccN</code> is received, the region will play."
       version: "SFZ v1"
-      short_description: "Sample trigger on MIDI continuous control N."
       alias:
       - name: "start_loccN"
         version: "SFZ v2"
       value:
         type_name: "integer"
-        default: -1 # TODO: 1. Specify in documentation page that this means unassigned
-        min: 0      #       2. Group the opcodes with aliases and same values to avoid redundancy?
+        default: "-1 (unassigned)"
+        min: 0
         max: 127
 
     - name: "on_hiccN"
+      short_description: "If a MIDI control message with a value between <code>on_loccN</code> and <code>on_hiccN</code> is received, the region will play."
       version: "SFZ v1"
-      linked: "on_loccN"
       alias:
       - name: "start_hiccN"
         version: "SFZ v2"
       value:
         type_name: "integer"
-        default: -1
+        default: "-1 (unassigned)"
         min: 0
         max: 127
 
     - name: "start_loccN"
+      short_description: "Alias for <a href='/opcodes/'>on_loccN</a>."
       version: "SFZ v2"
-      short_description: "Alias for on_loccN / on_hiccN."
 
     - name: "start_hiccN"
+      short_description: "Alias for <a href='/opcodes/'>on_hiccN</a>."
       version: "SFZ v2"
-      linked: "start_loccN"
 
     - name: "stop_loccN"
       version: "SFZ v2"
 
     - name: "stop_hiccN"
       version: "SFZ v2"
-      linked: "stop_loccN"
 
 - name: "Performance Parameters"
   url: "/misc/categories#performance-parameters"
@@ -928,13 +1016,15 @@ categories:
       value:
         type_name: "float"
         default: 0
-        min: -144
-        max: 6
-        unit: "dB"
+        min: -100
+        max: 100
+        unit: "%"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "width_onccN"
-          version: "SFZ v2"
+          version: "Cakewalk"
 
     - name: "amp_keycenter"
       short_description: "Center key for amplifier keyboard tracking. In this key, the amplifier keyboard tracking will have no effect."
@@ -1035,50 +1125,110 @@ categories:
     - name: "xfin_loccN"
       short_description: "Fade in control based on MIDI CC."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfin_hiccN"
+      short_description: "Fade in control based on MIDI CC."
       version: "SFZ v1"
-      linked: "xfin_loccN"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfout_loccN"
       short_description: "Fade out control based on MIDI CC."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfout_hiccN"
+      short_description: "Fade out control based on MIDI CC."
       version: "SFZ v1"
-      linked: "xfout_loccN"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfin_lokey"
       short_description: "Fade in control based on MIDI note (keyboard position)."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfin_hikey"
+      short_description: "Fade in control based on MIDI note (keyboard position)."
       version: "SFZ v1"
-      linked: "xfin_lokey"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfout_lokey"
       short_description: "Fade out control based on MIDI note number (keyboard position)."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "xfout_hikey"
+      short_description: "Fade out control based on MIDI note number (keyboard position)."
       version: "SFZ v1"
-      linked: "xfout_lokey"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "xfin_lovel"
       short_description: "Fade in control based on velocity."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfin_hivel"
+      short_description: "Fade in control based on velocity."
       version: "SFZ v1"
-      linked: "xfin_lovel"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
 
     - name: "xfout_lovel"
       short_description: "Fade out control, based on velocity."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "xfout_hivel"
+      short_description: "Fade out control, based on velocity."
       version: "SFZ v1"
-      linked: "xfout_lovel"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "phase"
       version: "SFZ v2"
@@ -1109,16 +1259,43 @@ categories:
           version: "ARIA"
 
     - name: "global_amplitude"
+      short_description: "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>, but affecting everything when set under the ‹<a href='/headers/global'>global</a>› header."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 100
+        min: 0
+        max: 100
+        unit: "%"
 
     - name: "master_amplitude"
+      short_description: "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>, but affecting everything when set under the ‹<a href='/headers/master'>master</a>› header."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 100
+        min: 0
+        max: 100
+        unit: "%"
 
     - name: "group_amplitude"
+      short_description: "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>, but affecting everything when set under the ‹<a href='/headers/group'>group</a>› header."
       version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 100
+        min: 0
+        max: 100
+        unit: "%"
 
     - name: "pan_law"
+      short_description: "Sets the pan law to be used."
       version: "ARIA"
+      value:
+        type_name: "string"
+        options:
+        - name: "mma"
+        - name: "balance"
 
     - name: "global_volume"
       version: "ARIA"
@@ -1273,12 +1450,6 @@ categories:
         max: "SampleRate / 2"
         unit: "Hz"
 
-    - name: "cutoff_chanaft"
-      version: "SFZ v1"
-
-    - name: "cutoff_polyaft"
-      version: "SFZ v1"
-
     - name: "fil_keytrack"
       version: "SFZ v1"
       short_description: "Filter keyboard tracking (change on cutoff for each key) in cents."
@@ -1330,7 +1501,14 @@ categories:
         max: 9600
 
     - name: "resonance"
+      short_description: "The filter cutoff resonance value, in decibels."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 40
+        unit: "dB"
       modulation:
         midi_cc:
         - name: "resonance_onccN"
@@ -1344,8 +1522,10 @@ categories:
 
     - name: "cutoff2"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Same as <a href='/opcodes/cutoff'>cutoff</a>, but used to specify the cutoff for the second filter."
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "cutoff2_onccN"
           version: "SFZ v2"
@@ -1377,8 +1557,12 @@ categories:
 
     - name: "resonance2"
       version: "SFZ v2"
-      short_description: ""
+      short_description: "Same as <a href='/opcodes/resonance'>resonance</a>, but used to specify the resonance for the second filter."
+      value:
+        type_name: "float"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "resonance2_onccN"
           version: "SFZ v2"
@@ -1412,8 +1596,11 @@ categories:
         unit: "cents"
 
     - name: "bend_smooth"
-      version: "ARIA"
       short_description: "Pitch bend smoothness. Adds “inertia” to pitch bends, so fast movements of the pitch bend wheel will have a delayed effect on the pitch change."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
 
     - name: "bend_step"
       version: "SFZ v1"
@@ -1426,19 +1613,51 @@ categories:
         unit: "cents"
 
     - name: "pitch_keycenter"
+      short_description: "Root key for the <a href='/opcodes/sample'>sample</a>."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: "60 (C4)"
+        min: 0
+        max: 127
 
     - name: "pitch_keytrack"
+      short_description: "Within the region, this value defines how much the pitch changes with every note."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 100
+        min: -1200
+        max: 1200
 
     - name: "pitch_random"
+      short_description: "Random tuning for the region, in cents."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 9600
+        unit: "cents"
 
     - name: "pitch_veltrack"
+      short_description: "Pitch velocity tracking, represents how much the pitch changes with incoming note velocity, in cents."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -9600
+        max: 9600
+        unit: "cents"
 
     - name: "transpose"
+      short_description: "The transposition value for this region which will be applied to the sample."
       version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -127
+        max: 127
 
     - name: "tune"
       version: "SFZ v1"
@@ -1703,6 +1922,7 @@ categories:
             unit: "seconds"
 
     - name: "ampeg_vel2attack"
+      short_description: "Velocity effect on EG attack time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1712,6 +1932,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2delay"
+      short_description: "Velocity effect on EG delay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1721,6 +1942,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2decay"
+      short_description: "Velocity effect on pitch EG decay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1730,6 +1952,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2hold"
+      short_description: "Velocity effect on EG hold time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1739,6 +1962,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2release"
+      short_description: "Velocity effect on EG release time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1748,6 +1972,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2sustain"
+      short_description: "Velocity effect on EG sustain level, in percentage."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2096,6 +2321,7 @@ categories:
             unit: "%"
 
     - name: "fileg_vel2attack"
+      short_description: "Velocity effect on EG attack time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2105,6 +2331,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2decay"
+      short_description: "Velocity effect on filter EG decay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2114,6 +2341,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2delay"
+      short_description: "Velocity effect on filter EG delay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2123,6 +2351,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2depth"
+      short_description: "Velocity effect on EG depth, in cents for pitch or filter cutoff."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2132,6 +2361,7 @@ categories:
         unit: "cents"
 
     - name: "fileg_vel2hold"
+      short_description: "Velocity effect on EG hold time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2141,6 +2371,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2release"
+      short_description: "Velocity effect on EG release time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2150,6 +2381,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2sustain"
+      short_description: "Velocity effect on EG sustain level, in percentage."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2375,6 +2607,7 @@ categories:
             unit: "%"
 
     - name: "pitcheg_vel2attack"
+      short_description: "Velocity effect on EG attack time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2384,6 +2617,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2decay"
+      short_description: "Velocity effect on filter EG decay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2393,6 +2627,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2delay"
+      short_description: "Velocity effect on filter EG delay time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2402,6 +2637,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2depth"
+      short_description: "Velocity effect on EG depth, in cents for pitch or filter cutoff."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2411,6 +2647,7 @@ categories:
         unit: "cents"
 
     - name: "pitcheg_vel2hold"
+      short_description: "Velocity effect on EG hold time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2420,6 +2657,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2release"
+      short_description: "Velocity effect on EG release time, in seconds."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2429,6 +2667,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2sustain"
+      short_description: "Velocity effect on EG sustain level, in percentage."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2438,12 +2677,15 @@ categories:
         unit: "%"
 
     - name: "egN_points" # TODO: Source?
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_shape" # TODO: Source?
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_timeX"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2451,25 +2693,36 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_levelX"
+      short_description: "Sets the envelope level at a specific point in envelope number N."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 0
+        min: -1
+        max: 1
       modulation:
         midi_cc:
         - name: "egN_levelX_onccY"
           version: "SFZ v2"
 
     - name: "egN_shapeX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_curveX"
+      short_description: "Instructs the player to use a curve shape defined under a curve header for the specified envelope segment."
       version: "SFZ v2"
 
     - name: "egN_sustain"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_loop"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_loop_count"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_volume"
@@ -2480,6 +2733,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_amplitude"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2487,6 +2741,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_pan"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2494,6 +2749,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_width"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2501,6 +2757,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_pan_curve"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2508,15 +2765,19 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_freq_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_depth_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_depthadd_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "egN_pitch"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2524,6 +2785,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_cutoff"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2531,6 +2793,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_cutoff2"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2538,6 +2801,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_resonance"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2545,6 +2809,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_resonance2"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2552,6 +2817,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq1freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2559,6 +2825,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq2freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2566,6 +2833,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq3freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2573,6 +2841,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq1bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2580,6 +2849,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq2bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2587,6 +2857,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq3bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2594,6 +2865,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq1gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2601,6 +2873,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq2gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2608,6 +2881,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_eq3gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2615,6 +2889,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_decim"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2622,6 +2897,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_bitred"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2629,6 +2905,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_rectify"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2636,6 +2913,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_ringmod"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2643,6 +2921,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_noiselevel"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2650,6 +2929,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_noisestep"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2657,6 +2937,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_noisetone"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2664,6 +2945,7 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_driveshape"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -2984,8 +3266,13 @@ categories:
         unit: "Hz"
 
     - name: "lfoN_freq"
+      short_description: "The base frequency of LFO number N, in Hertz."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        unit: "Hz"
       modulation:
+        envelope: "egN_freq_lfoX"
         midi_cc:
         - name: "lfoN_freq_onccX"
           version: "SFZ v2"
@@ -2995,39 +3282,70 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_delay"
+      short_description: "Onset delay for LFO number N, in seconds."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 0
+        unit: "seconds"
       modulation:
+        envelope: "egN_freq_lfoX"
         midi_cc:
         - name: "lfoN_delay_onccX"
           version: "SFZ v2"
 
     - name: "lfoN_fade"
+      short_description: "Fade-in time for LFO number N, in seconds."
       version: "SFZ v2"
+      value:
+        type_name: "float"
       modulation:
         midi_cc:
         - name: "lfoN_fade_onccX"
           version: "SFZ v2"
+          value:
+            type_name: "float"
 
     - name: "lfoN_phase"
+      short_description: "Initial phase shift for LFO number N."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 1
       modulation:
         midi_cc:
         - name: "lfoN_phase_onccX"
           version: "SFZ v2"
 
     - name: "lfoN_count"
+      short_description: "Number of LFO repetitions for LFO N before the LFO stops."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
 
     - name: "lfoN_wave"
+      short_description: "LFO waveform selection."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
+        default: 1
+      modulation:
+        midi_cc:
+        - name: "lfoN_wave_onccX"
+          version: "ARIA"
 
     - name: "lfoN_steps"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "lfoN_stepX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "lfoN_smooth"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3035,6 +3353,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_volume"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3046,6 +3365,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_amplitude"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3057,6 +3377,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_pan"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3068,6 +3389,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_width"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3079,15 +3401,19 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_freq_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "lfoN_depth_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "lfoN_depthadd_lfoX"
+      short_description: ""
       version: "SFZ v2"
 
     - name: "lfoN_pitch"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3099,6 +3425,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_cutoff"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3110,6 +3437,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_cutoff2"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3121,6 +3449,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_resonance"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3132,6 +3461,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_resonance2"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3143,6 +3473,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq1freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3154,6 +3485,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq2freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3165,6 +3497,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq3freq"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3176,6 +3509,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq1bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3187,6 +3521,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq2bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3198,6 +3533,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq3bw"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3209,6 +3545,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq1gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3220,6 +3557,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq2gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3231,6 +3569,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_eq3gain"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3242,6 +3581,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_decim"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3253,6 +3593,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_bitred"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3264,6 +3605,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_noiselevel"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3275,6 +3617,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_noisestep"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3286,6 +3629,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_noisetone"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3297,6 +3641,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_drive"
+      short_description: ""
       version: "SFZ v2"
       modulation:
         midi_cc:
@@ -3307,30 +3652,28 @@ categories:
         - name: "lfoN_drive_stepccX"
           version: "SFZ v2"
 
-    - name: "lfoN_offset"
+    - name: "lfoN_offsetX"
+      short_description: "Offset for LFO number N, can also be used with sub waveforms with lfoN_offset2, lfoN_offset3 etc."
       version: "ARIA"
-
-    - name: "lfoN_offset2"
-      version: "ARIA"
+      value:
+        type_name: "float"
 
     - name: "lfoN_ratio"
-      version: "ARIA"
-
-    - name: "lfoN_ratio2"
+      short_description: ""
       version: "ARIA"
 
     - name: "lfoN_scale"
-      version: "ARIA"
-
-    - name: "lfoN_scale2"
+      short_description: ""
       version: "ARIA"
 
     - name: "lfoN_wave2"
+      short_description: ""
       version: "ARIA"
 
 - name: "Curves"
   opcodes:
   - name: "curve_index"
+    short_description: ""
     version: "SFZ v2"
     value:
       type_name: "integer"
@@ -3338,6 +3681,7 @@ categories:
     # TODO: max: ?
 
   - name: "vN"
+    short_description: ""
     version: "SFZ v2"
     index:
       type_name: "integer"
@@ -3371,7 +3715,9 @@ categories:
       unit: "%"
 
   - name: "param_offset"
+    short_description: ""
     version: "ARIA"
 
   - name: "vendor_specific"
+    short_description: "Defines vendor-specific effects, for example Garritan-specific stage depth effect in ARIA."
     version: "ARIA"

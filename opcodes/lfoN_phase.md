@@ -1,9 +1,8 @@
 ---
+layout: sfz/opcode
 lang: en
 title: lfoN_phase
 ---
-Initial phase shift for LFO number N. Range from 0 to 1, default is 0.
-
 ##### Example
 
 ```

@@ -2,6 +2,7 @@
 layout: default
 ---
 {%-assign opcode_name = page.name | replace: ".md", ''-%}
+{%-assign found = false-%}
 {%-for category in site.data.sfz.syntax.categories-%}
 	{%-for opcode in category.opcodes-%}
 		{%-if opcode.name == opcode_name-%}
@@ -10,7 +11,7 @@ layout: default
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
-
+	{%-if found == false-%}
 		{%-for category_type in category.types-%}
 			{%-for opcode in category_type.opcodes-%}
 				{%-if opcode.name == opcode_name-%}
@@ -19,15 +20,15 @@ layout: default
 				{%-endif-%}
 			{%-endfor-%}
 		{%-endfor-%}
-
+	{%-endif-%}
 {%-endfor-%}
 {%-if opcode_info.value.min == nil-%}
 	{%-if opcode_info.value.options-%}
 		{%-for option in opcode_info.value.options-%}
 			{%-assign opcode_info_range = opcode_info_range | append: option.name-%}
-				{%-if forloop.last == false-%}
-					{%-assign opcode_info_range = opcode_info_range | append: ", "-%}
-				{%-endif-%}
+			{%-if forloop.last == false-%}
+				{%-assign opcode_info_range = opcode_info_range | append: ", "-%}
+			{%-endif-%}
 		{%-endfor-%}
 	{%-else-%}
 		{%-assign opcode_info_range = "N/A"-%}

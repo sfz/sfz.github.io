@@ -1,13 +1,25 @@
 ---
+layout: sfz/opcode
 lang: en
 title: lfoN_wave
 ---
-LFO waveform selection. Default is 1 (sine). In ARIA, the waves are:
+<ol start="0">
+<li>triangle</li>
+<li>sine (Default)</li>
+<li>75% pulse</li>
+<li>square (50% pulse)</li>
+<li>25% pulse</li>
+<li>12:5% pulse</li>
+<li>saw going up</li>
+<li>saw going down</li>
+</ol>
+
+In [ARIA](/software/players/aria), the waves are:
 
 <ol start="-1">
 <li>deprecated, should not be used, but is random</li>
 <li>triangle</li>
-<li>sine</li>
+<li>sine (Default)</li>
 <li>75% pulse</li>
 <li>square (50% pulse)</li>
 <li>25% pulse</li>
@@ -43,9 +55,3 @@ lfo01_step02_oncc73=100 lfo01_step02_smoothcc73=100
 lfo01_step03_oncc73=100 lfo01_step03_smoothcc73=100
 lfo01_step04_oncc73=100 lfo01_step04_smoothcc73=100
 ```
-
-| Modulation Sources
-|           ---
-| Envelope | X |
-| LFO      | X |
-| MIDI CC  | ✓ | lfoN_wave_onccX

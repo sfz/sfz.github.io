@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: key
 ---
-`key` is equivalent to using [lokey](lokey), [hikey](lokey) and
-[pitch_keycenter](pitch_keycenter) and setting them all to the same note value.
 Because of this, it is a very useful and convenient opcode for instruments which
 do not need to spread a sample across multiple notes.
 That means most chromatically sampled instruments or drum kits.
@@ -27,14 +25,3 @@ Both are also equivalent to:
 ```
 lokey=72 hikey=72 pitch_keycenter=72
 ```
-
-| Type    | Default   | Range     |
-| ---     | ---       | ---       |
-| integer | lokey=0   | 0 to 127  |
-|         | hikey=127 | C-1 to G9 |
-
-| Modulation Sources |       |
-| :---               | :---: |
-| Envelope           |   X   |
-| LFO                |   X   |
-| MIDI CC            |   X   |

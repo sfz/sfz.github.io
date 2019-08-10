@@ -3,11 +3,6 @@ layout: sfz/opcode
 lang: en
 title: lovel / hivel
 ---
-If a note with velocity value equal to or higher than `lovel` AND equal to or lower
-than `hivel` is played, the region will play. The range is 0 to 127. Default is
-`lovel`=0 and `hivel`=127 - this means the region plays across the entire
-velocity range.
-
 This is obviously useful for instruments with dynamic layers controlled by velocity.
 Though dynamic layers can also be controlled by CC, especially for sustained
 instruments, `lovel` and `hivel` are the standard way of controlling dynamics for
@@ -44,8 +39,3 @@ with volume being full at velocity 63 and lower volume (but not zero) at 32.
 The kick_vl3 wav region will play at velocites 64 to 95, with full volume at
 velocity 95. Finally, the kick_vl4 layer plays at velocities 96 to 127, with no
 `amp_velcurve_N` set meaning it will have full volume at velocity 127.
-
-|    Type    |  Default  |     Range     |
-|    ---     |    ---    |      ---      |
-|   integer  | lovel=0   |   0 to 127    |
-|            | hivel=127 |               |

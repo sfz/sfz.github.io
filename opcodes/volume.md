@@ -22,9 +22,5 @@ and apply a 12 dB boost when CC1 is at maximum.
 `gain_ccN` is useful for creating volume controls, an alias for the ARIA extension
 `volume_onccN`.
 
-| Name     | Version | Type  | Default | Range         |
-| ---      |   ---   | ---   | ---     | ---           |
-| gain_ccN |  SFZ v1 | float | 0       | -144 to 48 dB |
-
 Also see the ARIA extension [amplitude_onccN](/opcodes/amplitude) for another way
 to do a simple volume control.

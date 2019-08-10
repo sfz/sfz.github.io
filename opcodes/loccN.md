@@ -3,7 +3,6 @@ layout: sfz/opcode
 lang: en
 title: loccN / hiccN
 ---
-Defines the range of the last MIDI controller N required for the region to play.
 N will normally be a number from 1 to 127.
 
 ##### Examples
@@ -35,8 +34,3 @@ if it's outside that range it does not play. For smooth fades controlled by CC
 instruments), other opcodes such as [xfin_loccN / xfin_hiccN](/opcodes/xfin_loccN)
 and [xfout_loccN / xfout_hiccN](/opcodes/xfout_loccN) should be used, or perhaps
 the [amplitude_onccN](/opcodes/amplitude) ARIA extension.
-
-| Type    | Default   | Range    |
-| ---     | ---       | ---      |
-| integer | loccN=0   | 0 to 127 |
-|         | hiccN=127 |          |

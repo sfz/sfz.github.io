@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: xfout_loccN / xfout_hiccN
 ---
-Fade out control based on MIDI CC.
-
 `xfout_loccN` and `xfout_hiccN` set the range of values in the MIDI continuous
 controller N which will perform a fade-out in the region.
 
@@ -18,7 +16,3 @@ and zero for values greater than or equal to `xfout_hiccN`.
 xfout_locc1=64
 xfout_hicc1=127
 ```
-
-| Type    | Default | Range    |
-| ---     | ---     | ---      |
-| integer | 0       | 0 to 127 |

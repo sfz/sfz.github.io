@@ -3,9 +3,7 @@ layout: sfz/opcode
 lang: en
 title: sw_lolast / sw_hilast
 ---
-Like [sw_last](sw_last), but allowing a region to be triggered across a range
-of keyswitches. `sw_lolast` specifies the bottom of the range,
-and `sw_hilast` the high.
+`sw_lolast` specifies the bottom of the range, and `sw_hilast` the high.
 
 ##### Example
 

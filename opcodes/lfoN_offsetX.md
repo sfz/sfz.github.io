@@ -1,15 +1,15 @@
 ---
+layout: sfz/opcode
 lang: en
-title: lfoN_offset
+title: lfoN_offsetX
 ---
-Offset for LFO number N, can also be used with sub waveforms with lfoN_offset2,
-lfoN_offset3 etc.
-
-##### Example
+##### Examples
 
 ```
 lfo01_offset=0.1
 lfo02_offset2=-0.3
+lfo03_offset2=0.25
+lfo03_offset3=0.419
 ```
 
 ```

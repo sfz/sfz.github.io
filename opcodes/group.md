@@ -3,8 +3,6 @@ layout: sfz/opcode
 lang: en
 title: group
 ---
-Exclusive group number for this region.
-
 ##### Examples
 
 ```
@@ -33,7 +31,3 @@ should cause another to stop but enforcing monophony is not the goal - for examp
 a crash cymbal doesn't need to be monophonic, as allowing the sound to build up
 is reasonably natural, but if we wanted to implement a cymbal choke, then the
 crash sounds would be in one group, the choke samples in another.
-
-| Type    | Default | Range           |
-| ---     | ---     | ---             |
-| integer | 0       | 0 to 4294967296 |

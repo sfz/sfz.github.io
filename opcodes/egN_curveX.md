@@ -2,9 +2,6 @@
 lang: en
 title: egN_curveX
 ---
-Instructs the player to use a curve shape defined under a curve header for the
-specified envelope segment.
-
 ##### Example
 
 ```
