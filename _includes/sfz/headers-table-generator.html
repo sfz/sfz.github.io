@@ -3,9 +3,6 @@
 		<tr>
 			<th scope="col">Header</th>
 			<th scope="col">Version</th>
-{%-for player_hash in site.data.sfz.players-%}
-			<th scope="col">{{ player_hash[1].name }}</th>
-{%-endfor-%}
 		</tr>
 	</thead>
 	<tbody>
@@ -13,21 +10,6 @@
 		<tr>
 			<td>&lt;<a href="{{ '/headers/' | append: header.name | relative_url }}">{{ header.name }}</a>&gt;</td>
 			<td style="text-align:center">{{ header.version }}</td>
-	{%-for player_hash in site.data.sfz.players-%}
-		{%-assign player = player_hash[1]-%}
-		{%-assign found = false-%}
-		{%-assign player_support = 'X'-%}
-		{%-for header-supported in player.headers-%}
-			{%-if header-supported.name == header.name-%}
-				{%-assign found = true-%}
-				{%-break-%}
-			{%-endif-%}
-		{%-endfor-%}
-		{%-if found-%}
-			{%-assign player_support = '✓'-%}
-		{%-endif-%}
-			<td style="text-align:center">{{ player_support }}</td>
-	{%-endfor-%}
 		</tr>
 {%-endfor-%}
 	</tbody>
