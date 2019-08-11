@@ -17,8 +17,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - assets/css/style.css
-  - 404.txt
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
