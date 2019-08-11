@@ -47,18 +47,19 @@ layout: default
 
 {{ content }}
 
-<table>
-	<thead>
+<table class="table table-sm table-hover table-striped table-responsive">
+	<thead class="thead-dark">
 		<tr>
-			<th>Name</th>
-			<th>Version</th>
-			<th>Type</th>
-			<th>Default</th>
-			<th>Range</th>
+			<th scope="col">Name</th>
+			<th scope="col">Version</th>
+			<th scope="col">Type</th>
+			<th scope="col">Default</th>
+			<th scope="col">Range</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
+			<th scope="row"></th>
 			<td>{{ opcode_info.name }}</td>
 			<td>{{ opcode_info.version }}</td>
 			<td>{{ opcode_info.value.type_name }}</td>
