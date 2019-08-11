@@ -1,10 +1,10 @@
-<table>
-	<thead>
+<table class="table table-sm table-hover table-striped table-responsive">
+	<thead class="thead-dark">
 		<tr>
-			<th>Header</th>
-			<th style="text-align:center">Version</th>
+			<th scope="col">Header</th>
+			<th scope="col">Version</th>
 {%-for player_hash in site.data.sfz.players-%}
-			<th style="text-align:center">{{ player_hash[1].name }}</th>
+			<th scope="col">{{ player_hash[1].name }}</th>
 {%-endfor-%}
 		</tr>
 	</thead>

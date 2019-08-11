@@ -1,14 +1,14 @@
 {% assign apps_os = site.data.sfz.software.os %}
-<table>
-	<thead>
+<table class="table table-sm table-hover table-striped table-responsive">
+	<thead class="thead-dark">
 		<tr>
-			<th>Name</th>
-			<th>License</th>
+			<th scope="col">Name</th>
+			<th scope="col">License</th>
 {%-if page.show_documented-%}
-			<th>Documented</th>
+			<th scope="col">Documented</th>
 {%-endif-%}
 {%-for os in apps_os-%}
-			<th style="text-align:center">{{ os.name }}</th>
+			<th scope="col" style="text-align:center">{{ os.name }}</th>
 {%-endfor-%}
 		</tr>
 	</thead>
