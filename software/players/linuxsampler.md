@@ -8,7 +8,6 @@ efficiency and very low latency, providing professional grade features,
 comparable to both hardware and commercial Windows/Mac software samplers and to
 introduce new features not yet available by any other sampler in the world.
 
-Source: [LinuxSampler project page](http://linuxsampler.org/about.html)
+Source: [LinuxSampler About](http://linuxsampler.org/about.html) page.
 
-{%-include sfz/player-compatibility-table-generator.html-%}
-
+See also the [SFZ support in LinuxSampler](http://linuxsampler.org/sfz/) page.

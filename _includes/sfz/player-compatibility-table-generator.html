@@ -12,19 +12,23 @@
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Header</th>
-			<th scope="col">Support</th>
+			<th scope="col" style="text-align:center">Version</th>
+			<th scope="col" style="text-align:center">Supported</th>
 		</tr>
 	</thead>
 	<tbody>
 {%-for header in site.data.sfz.players[player].headers-%}
+	{%-assign header_url = "<a href='/headers/" | append: header.name |
+		append: "'>" | append: header.name | append: "</a>"-%}
 	{%-if header.support-%}
 		{%-assign header_support = header.support-%}
 	{%-else-%}
 		{%-assign header_support = "✓"-%}
 	{%-endif-%}
 		<tr>
-			<td>{{ header.name }}</td>
-			<td>{{ header_support }}</td>
+			<td>{{ header_url }}</td>
+			<td style="text-align:center">{{ header.version }}</td>
+			<td style="text-align:center">{{ header_support }}</td>
 		</tr>
 {%-endfor-%}
 	</tbody>
@@ -34,19 +38,23 @@
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Opcode</th>
-			<th scope="col">Support</th>
+			<th scope="col" style="text-align:center">Version</th>
+			<th scope="col" style="text-align:center">Supported</th>
 		</tr>
 	</thead>
 	<tbody>
 {%-for opcode in site.data.sfz.players[player].opcodes-%}
+	{%-assign opcode_url = "<a href='/opcodes/" | append: opcode.name |
+		append: "'>" | append: opcode.name | append: "</a>"-%}
 	{%-if opcode.support-%}
 		{%-assign opcode_support = opcode.support-%}
 	{%-else-%}
 		{%-assign opcode_support = "✓"-%}
 	{%-endif-%}
 		<tr>
-			<td>{{ opcode.name }}</td>
-			<td>{{ opcode_support }}</td>
+			<td>{{ opcode_url }}</td>
+			<td style="text-align:center">{{ opcode.version }}</td>
+			<td style="text-align:center">{{ opcode_support }}</td>
 		</tr>
 {%-endfor-%}
 	</tbody>
