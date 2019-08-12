@@ -95,6 +95,17 @@ categories:
         max: 100
         unit: "seconds"
 
+    - name: "delay_samples"
+      short_description: "Region delay, in sample units."
+      version: "SFZ v2"
+      value:
+        type_name: "integer"
+        unit: "sample units"
+      modulation:
+        midi_cc:
+        - name: "delay_samples_onccN"
+          version: "SFZ v2"
+
     - name: "end"
       short_description: "The endpoint of the sample, in sample units."
       version: "SFZ v1"
