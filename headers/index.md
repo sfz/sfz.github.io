@@ -18,4 +18,4 @@ shaping envelopes, parameter response etc.
 
 {% include sfz/headers-table-generator.html %}
 
-See also [ARIA Extensions](/extensions/aria/).
+See also [SFZ1](/misc/sfz1), [SFZ2](/misc/sfz2) and [ARIA Extensions](/extensions/aria/).
