@@ -38,12 +38,12 @@ documentation.
   required layout to build the resulting html page, the page language code and
   the title of the page (see the example below).
 
-- Each opcode file must have an also an entry in the [syntax.yml] db file.
+- Each opcode file must have also an entry in the [syntax.yml] db file.
 
 - Using block code three back ticks even with a single line, inline code is used
   for opcode keywords highlights.
 
-- Using spaces instead of tabs for indentation in pages, mainly on _config.yml
+- Using spaces instead of tabs for indentation in pages, mostly on `_config.yml`
   to avoid issues / unwanted results.
 
 - Using 80 characters per line limit for a better reading.
