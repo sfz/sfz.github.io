@@ -35,7 +35,10 @@ documentation.
   otherwise Jekyll will copy the original md file into the resulting `_site`
   directory.
   Opcode files should include a `layout: sfz/opcode` variable to specify the
-  required layout to build the resulting html page (see the example below).
+  required layout to build the resulting html page, the page language code and
+  the title of the page (see the example below).
+
+- Each opcode file must have an also an entry in the [syntax.yml] db file.
 
 - Using block code three back ticks even with a single line, inline code is used
   for opcode keywords highlights.
@@ -52,6 +55,7 @@ documentation.
   code, use '‹' and '›' instead.
 
 [front matter]: https://jekyllrb.com/docs/front-matter/
+[syntax.yml]: #syntaxyml
 
 ## Content
 
@@ -60,10 +64,12 @@ documentation.
 <?prettify?>
 <pre class="prettyprint">
 ---
-layout: opcode
+layout: sfz/opcode
+lang: en
+title: opcode-name
 ---
 This is just an example for an opcode description to be written in some
-/opcodes/opcodename.md markdown file.
+/opcodes/opcode-name.md markdown file.
 This text is readable on any editor, with low or high resolutions.
 
 ##### Examples
@@ -82,19 +88,15 @@ It is used by Jekyll to store its configuration options, but it can also be used
 for user custom options as well.
 Other configuration files are placed in the `_data` directory, used for other
 website contexts, like translation strings, navigation menu, aside blocks,
-and other Sfz related data files.
+and other SFZ related data files.
 
 [_config.yml]: https://jekyllrb.com/docs/configuration/
 
 ### Translation files
 
-The `/_data/i18n/` directory contains all YAML files used for website
-language translation:
-
-- `config.yml`: At the moment it contains only the default language.
-- `locales` directory: contains locale language related strings.
-
-Currently each language translation directory contains 2 files:
+The `/_data/locale/` directory contains all files used for website
+language translation subdivided by language codes as subdirectories.
+Currently each language translation subdirectory contains 2 files:
 
 - `layout.yml`: contains both the navigation menu links and the aside card blocks
 	strings
@@ -127,21 +129,20 @@ It's very similar to the navigation one with few differences:
 
 [card]: https://getbootstrap.com/docs/4.0/components/card/
 
-### Sfz related YAML files
+### SFZ related YAML files
 
-The `/_data/sfz/` directory contains all YAML files used for Sfz related data.
+The `/_data/sfz/` directory contains all YAML files used for SFZ related data.
 
 #### `syntax.yml`
 
 The `headers` section is used by the `_includes/sfz/headers-table-generator.html`
-to build `/opcodes/headers.md` description tables:
+to build `/headers/index.md` description tables:
 
 - name: The header name
-- version: The SFZ version, can be one of:
+- version: The SFZ version, currently can be one of:
   - SFZ v1
   - SFZ v2
   - ARIA
-  - LinuxSampler
 
 The `opcodes` section is used by different files as database information for all
 known opcodes, including extension ones.
@@ -155,19 +156,30 @@ opcode doesn't includes a feature, it can be omitted, resulting in Liquid code a
 
 Currently possible values are:
 
+- name: the opcode name.
+
+- short_description: a brief opcode description used to describe all opcodes
+  included in the related SFZ version/extension page.
+
 - version: SFZ version or extension (same as for headers).
+
+- alias: if the opcode has some alias in other specification version.
 
 - value:
   - type_name: Value type (string, integer, float etc.), `mandatory` for opcodes.
   - default:   An optional default value.
   - min:       An optional range minimum value.
   - max:       An optional range maximum value.
-  - unit:      Value unit (seconds, decibels, cents etc.).<br><br>
-
-- page: The page name where the opcode will be documented.
-        It's the filename without the .md extension.
-        If omitted, the opcode name will be used instead.
+  - unit:      Value unit (seconds, decibels, cents etc.).
 
 - modulation:
+  - envelope: true (bool, without double quotes) if unspecified but present,
+              otherwise the name of modulation (string).
+
+  - lfo: same as for envelope.
+
   - midi_cc:
     - name: the ccN related opcode event name.
+    - version: the opcode modulation SFZ version
+
+For more details, check the file for additional variable options.
