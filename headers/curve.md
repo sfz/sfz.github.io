@@ -64,3 +64,12 @@ v000=0
 v063=1
 v127=0.1
 ```
+
+And how to use the default curve 1 to create a tuning control which
+goes down and up, with the pitch unmodulated when the control is in
+the middle.
+
+```
+pitch_oncc27=100
+pitch_curvecc27=1
+```
