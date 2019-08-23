@@ -22,7 +22,7 @@ Instrument settings:
 
 - Pitch:
 	- bend_smooth: Missing range
-	- pitch: ARIA alias for tune?
+	- pitch: check whether ARIA supports ccN and onccN for tune and how tune/pitch aliases work
 
 - Amplifier:
 	- position_onccN
