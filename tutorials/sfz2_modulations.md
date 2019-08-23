@@ -335,7 +335,16 @@ pitcheg_delay_oncc116=1 //Pitch envelope to drop the central pitch when sax vibr
 pitcheg_depth_oncc111=-20
 ```
 
+## SmoothccN and stepccN
+
+Most MIDI CC modulations, though not all, can have use [smoothccN](/misc/smoothccN) and [stepccN](/misc/stepccN).
+These work similarly to [bend_smooth](/opcodes/bend_smooth) and [bend_step](/opcodes/bend_step).
+
+SmoothccN adds "interia" to a modulation, so quickly changing the MIDI CC value has a slower effect
+on the modulation target than it would normally. StepccN causes the modulation to happen in a
+discrete number of steps. Setting the number of steps to 1 would make the modulation an
+all-or-nothing control.
+
 This is what's possible under the SFZ2 specification. There are some additional modulations
 available as [ARIA extensions](/extensions/aria/), with [amplitude_onccN](/opcodes/amplitude)
-being a very useful one. There's also tune_onccN which needs to be documented after checking
-whether it's SFZ2 or ARIA.
+being a very useful one.
