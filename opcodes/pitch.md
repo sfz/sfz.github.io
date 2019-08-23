@@ -10,9 +10,9 @@ Only negative values must be prefixed with sign.
 ##### Examples
 
 ```
-pitch=33
-pitch=-30
-pitch=94
+tune=33
+tune=-30
+tune=94
 ```
 
 Modulating pitch with MIDI CC to create a tune control is possible in SFZ2. If the
@@ -22,7 +22,7 @@ tuning range, so that when the control is at the midpoint, the region will play 
 its orignal, unmodulated pitch. For a range of 100 cents this would look like this:
 
 ```
-pitch=-100
+tune=-100
 pitch_oncc27=200
 ```
 
