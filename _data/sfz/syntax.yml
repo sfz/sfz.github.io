@@ -514,7 +514,7 @@ categories:
         - name: "off"
 
     - name: "off_curve"
-      short_description: "When <a href='/opcodes/off_mode'>off_mode</a> is set to time, this specifies the ‹<a href='/headers/curve'>curve</a>>› number for regions being muted by voice-stealing."
+      short_description: "When <a href='/opcodes/off_mode'>off_mode</a> is set to time, this specifies the ‹<a href='/headers/curve'>curve</a>› number for regions being muted by voice-stealing."
       version: "ARIA"
       value:
         type_name: "float"
