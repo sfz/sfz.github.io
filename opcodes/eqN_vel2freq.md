@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: sfz/opcode
 lang: en
 ---
 ##### Examples

@@ -1,7 +1,6 @@
 ---
 layout: sfz/opcode
 lang: en
-title: (eg type)_delay
 ---
 This is the time elapsed from note on to the start of
 the Attack stage.

@@ -1,7 +1,6 @@
 ---
 layout: sfz/opcode
 lang: en
-title: (eg type)_decay
 ---
 ##### Examples
 

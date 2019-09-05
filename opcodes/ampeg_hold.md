@@ -1,7 +1,6 @@
 ---
 layout: sfz/opcode
 lang: en
-title: (eg type)_hold
 ---
 During the hold stage, EG output will remain at its maximum value.
 

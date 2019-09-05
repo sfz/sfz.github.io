@@ -1,7 +1,6 @@
 ---
 layout: sfz/opcode
 lang: en
-title: (lfo type)_freq
 ---
 ##### Examples
 

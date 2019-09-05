@@ -1,7 +1,6 @@
 ---
 layout: sfz/opcode
 lang: en
-title: (lfo type)_depthchanaft
 ---
 In decibels for amplitude, in cents for pitch and filter cutoff.
 
