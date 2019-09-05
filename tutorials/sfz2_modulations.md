@@ -337,7 +337,7 @@ pitcheg_depth_oncc111=-20
 
 ## SmoothccN and stepccN
 
-Most MIDI CC modulations, though not all, can have use [smoothccN](/misc/smoothccN) and [stepccN](/misc/stepccN).
+Most MIDI CC modulations, though not all, can have use [smoothccN](/modulations/smoothccN) and [stepccN](/modulations/stepccN).
 These work similarly to [bend_smooth](/opcodes/bend_smooth) and [bend_step](/opcodes/bend_step).
 
 SmoothccN adds "interia" to a modulation, so quickly changing the MIDI CC value has a slower effect
