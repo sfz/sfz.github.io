@@ -15,7 +15,12 @@
 			<div class="row mt-4" id="content">
 				<div class="col-md-9">
 					<article>
+{%-if page.title-%}
 						<h1>{{ page.title }}</h1>
+{%-else-%}
+	{%-assign page_title = page.name | replace: ".md", ''-%}
+						<h1>{{ page_title }}</h1>
+{%-endif-%}
 {{ content }}
 					</article>
 				</div>

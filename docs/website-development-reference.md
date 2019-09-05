@@ -34,9 +34,13 @@ documentation.
 - Start any .md file with a 2 triple-dashed lines [front matter],
   otherwise Jekyll will copy the original md file into the resulting `_site`
   directory.
-  Opcode files should include a `layout: sfz/opcode` variable to specify the
-  required layout to build the resulting html page, the page language code and
-  the title of the page (see the example below).
+
+  Opcode files should include:
+  - a `layout: sfz/opcode` variable to specify the
+    required layout to build the resulting html page
+  - the page language code
+  - optionally, the title of the page if different than the page name
+    (see the example below).
 
 - Each opcode file must have also an entry in the [syntax.yml] db file.
 
@@ -66,10 +70,10 @@ documentation.
 ---
 layout: sfz/opcode
 lang: en
-title: opcode-name
+title: custom title for opcode_name
 ---
 This is just an example for an opcode description to be written in some
-/opcodes/opcode-name.md markdown file.
+/opcodes/opcode_name.md markdown file.
 This text is readable on any editor, with low or high resolutions.
 
 ##### Examples

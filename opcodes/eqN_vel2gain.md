@@ -1,1 +1,1 @@
-./../misc/eqN_vel2.md
+eqN_vel2freq.md
