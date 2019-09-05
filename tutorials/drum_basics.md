@@ -252,4 +252,4 @@ three round robins, plus a few comments, the resulting SFZ would look like this:
 
 This is almost all the information needed to map basic drum kits in SFZ. Almost,
 because well-sampled hi-hats will have many different articulations, and that
-creates some additional considerations, which we will describe on another page.
+creates some additional considerations, which we will describe on [another page](/tutorials/cymbal_muting).
