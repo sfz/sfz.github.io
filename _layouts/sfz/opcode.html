@@ -55,6 +55,7 @@ layout: default
 			<th scope="col">Type</th>
 			<th scope="col">Default</th>
 			<th scope="col">Range</th>
+			<th scope="col">Unit</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -64,6 +65,7 @@ layout: default
 			<td>{{ opcode_info.value.type_name }}</td>
 			<td>{{ opcode_info_default }}</td>
 			<td>{{ opcode_info_range }}</td>
+			<td>{{ opcode_info.value.unit }}</td>
 		</tr>
 {%-for midi_cc in opcode_info.modulation.midi_cc-%}
 	{%-if midi_cc.value.default != nil-%}
@@ -83,6 +85,7 @@ layout: default
 			<td>{{ midi_cc.value.type_name }}</td>
 			<td>{{ midi_cc_default }}</td>
 			<td>{{ midi_cc_range }}</td>
+			<td>{{ midi_cc.value.unit }}</td>
 		</tr>
 {%-endfor-%}
 {%-for velocity in opcode_info.modulation.velocity-%}
@@ -103,6 +106,7 @@ layout: default
 		<td>{{ velocity.value.type_name }}</td>
 		<td>{{ velocity_default }}</td>
 		<td>{{ velocity_range }}</td>
+		<td>{{ velocity.value.unit }}</td>
 	</tr>
 {%-endfor-%}
 		</tbody>
