@@ -25,8 +25,6 @@
     /* string content */
   .str {
   color: #800;
-    -webkit-text-decoration-line: line-through; /* Safari */
-    text-decoration-line: line-through;
   }
   .kwd { color: #008 }  /* a keyword */
   .com { color: #444 }  /* a comment */
