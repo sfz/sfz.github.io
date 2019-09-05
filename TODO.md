@@ -7,8 +7,6 @@
 
 - Complete player's opcode compatibility pages and related files.
 
-- Link similar opcodes, show linked opcode page title instead of the one linked to.
-
 - Describe opcode's string option values from their descriptions in the db.
 
 ### Missing opcode versions
@@ -76,7 +74,6 @@ LS opcode extensions
 
 ### Other tasks
 
-- Add value type unit table (default and/or range) in opcode pages.
 - Check for missing opcode datatype, range information and modulations.
 - Complete envelope_generators and lfo type pages.
 - Add links to version / category / type table in opcode pages.

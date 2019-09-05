@@ -8,6 +8,7 @@ layout: default
 		{%-if opcode.name == opcode_name-%}
 			{%-assign found = true-%}
 			{%-assign opcode_info = opcode-%}
+			{%-assign category_info = category-%}
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
@@ -16,6 +17,8 @@ layout: default
 			{%-for opcode in category_type.opcodes-%}
 				{%-if opcode.name == opcode_name-%}
 					{%-assign opcode_info = opcode-%}
+					{%-assign category_info = category-%}
+					{%-assign category_type_info = category_type-%}
 					{%break%}
 				{%-endif-%}
 			{%-endfor-%}
@@ -55,7 +58,9 @@ layout: default
 			<th scope="col">Type</th>
 			<th scope="col">Default</th>
 			<th scope="col">Range</th>
+{%-if opcode_info.value.unit != nil-%}
 			<th scope="col">Unit</th>
+{%-endif-%}
 		</tr>
 	</thead>
 	<tbody>
@@ -65,7 +70,9 @@ layout: default
 			<td>{{ opcode_info.value.type_name }}</td>
 			<td>{{ opcode_info_default }}</td>
 			<td>{{ opcode_info_range }}</td>
+{%-if opcode_info.value.unit != nil-%}
 			<td>{{ opcode_info.value.unit }}</td>
+{%-endif-%}
 		</tr>
 {%-for midi_cc in opcode_info.modulation.midi_cc-%}
 	{%-if midi_cc.value.default != nil-%}
@@ -85,7 +92,9 @@ layout: default
 			<td>{{ midi_cc.value.type_name }}</td>
 			<td>{{ midi_cc_default }}</td>
 			<td>{{ midi_cc_range }}</td>
+	{%-if midi_cc.value.unit != nil-%}
 			<td>{{ midi_cc.value.unit }}</td>
+	{%-endif-%}
 		</tr>
 {%-endfor-%}
 {%-for velocity in opcode_info.modulation.velocity-%}
@@ -106,7 +115,9 @@ layout: default
 		<td>{{ velocity.value.type_name }}</td>
 		<td>{{ velocity_default }}</td>
 		<td>{{ velocity_range }}</td>
+	{%-if velocity.value.unit != nil-%}
 		<td>{{ velocity.value.unit }}</td>
+	{%-endif-%}
 	</tr>
 {%-endfor-%}
 		</tbody>
@@ -157,3 +168,23 @@ layout: default
 	{%-endif-%}
 	</ul>
 {%-endif-%}
+
+{%-if category_info.url != nil-%}
+	{%-assign category_url = "<a href='" | append: category_info.url |
+		append: "'>" | append: category_info.name  | append: "</a>"-%}
+{%else%}
+	{%-assign category_url = category_info.name-%}
+{%-endif-%}
+
+{%-if category_type_info.url != nil-%}
+	{%-assign category_type_url = "<a href='" | append: category_type_info.url |
+		append: "'>" | append: category_type_info.name  | append: "</a>"-%}
+{%else%}
+	{%-assign category_type_url = category_type_info.name-%}
+{%-endif-%}
+
+{%-if category_type_url != nil-%}
+	{%-assign category_url = category_url | append: ", " | append: category_type_url-%}
+{%-endif-%}
+
+<p>Category: {{ category_url }}</p>
