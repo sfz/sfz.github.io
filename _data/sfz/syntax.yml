@@ -470,7 +470,8 @@ categories:
         - name: "normal"
           description: "The region will be set into release stage. All envelope generators will enter in release stage, and region will expire when the amplifier envelope generator expired."
 # TODO: - name: "time"
-#         description: "Used to specify a time independent of the sample release time using off_time. (ARIA)"
+#         description: "Used to specify a time independent of the sample release time using off_time."
+#         version: "ARIA"
 
     - name: "output"
       short_description: "The stereo output number for this region."
@@ -981,7 +982,7 @@ categories:
         max: 127
 
     - name: "start_loccN"
-      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. An alias for <a href='/opcodes/on_loccN'>on_loccN</a>."
+      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. Alias for <a href='/opcodes/on_loccN'>on_loccN</a>."
       version: "SFZ v2"
       value:
         type_name: "integer"
@@ -990,7 +991,7 @@ categories:
         max: 127
 
     - name: "start_hiccN"
-      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. An alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>."
+      short_description: "If a MIDI control message with a value between <code>start_loccN</code> and <code>start_hiccN</code> is received, the region will play. Alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>."
       version: "SFZ v2"
       value:
         type_name: "integer"
@@ -1489,6 +1490,16 @@ categories:
             max: 30000
             unit: "Hz"
 
+    - name: "eqN_vel2freq"
+      version: "SFZ v1"
+      short_description: "Frequency change of the equalizer band with MIDI velocity, in Hertz."
+      value:
+        type_name: "float"
+        default: 0
+        min: -30000
+        max: 30000
+        unit: "Hz"
+
     - name: "eqN_gain"
       short_description: "Gain of the equalizer band, in decibels."
       version: "SFZ v1"
@@ -1522,6 +1533,16 @@ categories:
             min: -96
             max: 24
             unit: "dB"
+
+    - name: "eqN_vel2gain"
+      short_description: "Gain change of the equalizer band with MIDI velocity, in decibels."
+      version: "SFZ v1"
+      value:
+        type_name: "float"
+        default: 0
+        min: -96
+        max: 24
+        unit: "dB"
 
   - name: "Filter"
     opcodes:
