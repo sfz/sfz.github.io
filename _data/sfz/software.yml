@@ -9,9 +9,10 @@ os:
 # Players
 # ------------------------------------------------------------------------------
 players:
-- name: "Carla"
+- name: "Carla (SFZero)"
   license: "Opensource"
   url: "https://kx.studio/Applications:Carla"
+  documented: true
   os:
   - name: "Linux"
   - name: "macOS X"
@@ -21,7 +22,6 @@ players:
   license: "Opensource"
   url: "/software/players/linuxsampler"
   documented: true
-  visible: true
   os:
   - name: "Linux"
   - name: "macOS X"
@@ -29,9 +29,12 @@ players:
 
 - name: "SFZero"
   license: "Opensource"
-  url: "http://stevefolta.github.io/SFZero/"
+  url: "/software/players/sfzero"
+  documented: true
   os:
+  - name: "Linux"
   - name: "macOS X"
+  - name: "Windows"
 
 - name: "MuseScore (Zerberus)"
   license: "Opensource"

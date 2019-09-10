@@ -25,13 +25,7 @@ navigation:
   pages:
     - title: "Players"
       url: "/software/players"
-    -
-    - title: "ARIA / Sforzando"
-      url: "/software/players/aria"
 
-    - title: "LinuxSampler"
-      url: "/software/players/linuxsampler"
-    -
     - title: "Editors"
       url: "/software/tools"
 
