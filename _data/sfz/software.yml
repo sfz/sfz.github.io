@@ -36,9 +36,10 @@ players:
   - name: "macOS X"
   - name: "Windows"
 
-- name: "MuseScore (Zerberus)"
+- name: "Zerberus (MuseScore SFZ Synthetizer)"
   license: "Opensource"
-  url : "https://musescore.org/en/handbook/developers-handbook/references/zerberus-musescore-sfz-synthesizer"
+  url : "/software/players/zerberus"
+  documented: true
   os:
   - name: "Linux"
   - name: "macOS X"
