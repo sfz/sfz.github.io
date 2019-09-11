@@ -1,7 +1,8 @@
 ---
-title: SFZ Creation Tools
-topic: tools
-lang: en
+title: "SFZ Creation Tools"
+app_categories: ['Editors', 'Syntax Highlighting', 'Converters']
+lang: "en"
+show_category_titles: true
 ---
 Although SFZ files can be created with any text editor, and some users have also
 created SFZ with spreadsheets, there are some dedicated tools which can make
@@ -10,8 +11,6 @@ thousands of samples, efficiency in creating the mappings becomes important.
 One way of creating SFZ files is to use one of these tools to create the initial
 maps with keys, dynamic layers, round robins etc. defined,
 then add controls etc. using a text editor.
-
-Some available tools are:
 
 {% include sfz/software-table-generator.html %}
 

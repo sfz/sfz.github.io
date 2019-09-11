@@ -1,10 +1,18 @@
-{% assign apps_os = site.data.sfz.software.os %}
+{%-assign apps_os         = site.data.sfz.software.os-%}
+{%-assign apps_categories = site.data.sfz.software.categories-%}
+
+{%-for page_category in page.app_categories-%}
+	{%-for category in apps_categories-%}
+		{%-if page_category == category.name -%}
+			{%-if page.show_category_titles-%}
+<h2>{{ page_category }}</h2>
+			{%-endif-%}
 <table class="table table-sm table-hover table-striped table-responsive">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Name</th>
 			<th scope="col">License</th>
-{%-if page.show_documented-%}
+{%-if page.show_documented_column-%}
 			<th scope="col">Documented</th>
 {%-endif-%}
 {%-for os in apps_os-%}
@@ -13,11 +21,11 @@
 		</tr>
 	</thead>
 	<tbody>
-{%-for app in site.data.sfz.software.[page.topic]-%}
+{%-for app in category.applications-%}
 	<tr>
 		<td><a href="{{ app.url }}">{{ app.name }}</a></td>
 		<td>{{ app.license }}</td>
-		{%-if page.show_documented-%}
+		{%-if page.show_documented_column-%}
 			{%-if app.documented-%}
 				{%-assign documented = "✓"-%}
 			{%-else-%}
@@ -37,3 +45,7 @@
 {%-endfor-%}
 	</tbody>
 </table>
+
+		{%-endif-%}
+	{%-endfor-%}
+{%-endfor-%}
