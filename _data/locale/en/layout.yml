@@ -17,6 +17,9 @@ navigation:
     - title: "LinuxSampler Extensions"
       url: "/extensions/linuxsampler/"
     -
+    - title: "Extended MIDI CCs"
+      url: "/extensions/midi_ccs"
+    -
     - title: "Types & Categories"
       url: "/misc/categories"
 

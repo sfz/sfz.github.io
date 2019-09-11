@@ -1,10 +1,10 @@
 ---
-title: Extended MIDI CCs
-lang: en
+title: "Extended MIDI CCs"
+lang: "en"
 ---
-In the MIDI specification, MIDI continous controls can have numbers from 1 to 127.
+In the MIDI specification, [MIDI Control Change Messages] can have numbers from 0 to 127.
 
-SFZ 2 and ARIA add some special CCs numbered 128 and above.
+[SFZ 2] and [ARIA] add some special CCs numbered 128 and above.
 
 The additions in SFZ 2 are:
 
@@ -33,10 +33,6 @@ engine-dependent. ARIA adds more:
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
-| SFZ Level: SFZ 2                 |
-| -------------------------------- |
-| Engines supporting this opcode:  |
-| ARIA                           ✓ |
-| LinuxSampler                   X |
-| Opcode Type: Region Logic        |
-| Category: MIDI Conditions        |
+[MIDI Control Change Messages]: https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
+[SFZ 2]: /misc/sfz2
+[ARIA]: /extensions/aria
