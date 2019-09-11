@@ -16,7 +16,7 @@ amp_velcurve_1=0.2 amp_velcurve_3=0.3
 
 If amp_velcurve_127 is not specified, the player will assign it the value of 1.
 
-##### Examples
+## Examples
 
 ```
 // linear, compressed dynamic range
@@ -34,3 +34,8 @@ four dynamic layers:
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav
 <region>lovel=96 sample=kick_vl4.wav
 ```
+
+## External Links
+
+- [Online curve generator](http://audio.artribut.de/var/sfz_amp_velcurve_gen.html)
+- [Online curve generator v2 (supports negative values)](http://audio.artribut.de/var/sfz_amp_velcurve_gen2.html)
