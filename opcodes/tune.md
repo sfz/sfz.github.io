@@ -1,18 +1,17 @@
 ---
-layout: sfz/opcode
-lang: en
-title: tune
+layout: "sfz/opcode"
+lang: "en"
 ---
-Range in the SFZ1 spec is ±1 semitone, from -100 to 100, though at least in ARIA,
-it seems a broader range is supported, at least -2400 to 2400 cents.
+Range of `tune` in the SFZ1 spec is ±1 semitone, from -100 to 100, though at least
+in ARIA, it seems a broader range is supported, at least -2400 to 2400 cents.
 
-##### Examples
+To modulate tuning, see [pitch](pitch).
+
+## Examples
 
 ```
 tune=33
-
 tune=-30
-
 tune=94
 ```
 

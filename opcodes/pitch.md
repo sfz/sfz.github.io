@@ -1,13 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pitch
+layout: "sfz/opcode"
+lang: "en"
 ---
-Range of tune in the SFZ1 spec is ±1 semitone, from -100 to 100, though at least
+Range of `tune` in the SFZ1 spec is ±1 semitone, from -100 to 100, though at least
 in ARIA, it seems a broader range is supported, at least -2400 to 2400 cents.
-Only negative values must be prefixed with sign.
 
-##### Examples
+## Examples
 
 ```
 tune=33
@@ -33,3 +31,5 @@ and set the pitch control to the tuning range.
 pitch_oncc27=100
 pitch_curvecc27=1
 ```
+
+In ARIA, `tune_*ccN` can also be used as an alias for `pitch_*ccN` (see below).

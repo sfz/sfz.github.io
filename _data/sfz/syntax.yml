@@ -1779,13 +1779,35 @@ categories:
 
     - name: "pitch"
       version: "ARIA"
-      short_description: "Pitch change in cents. Apparently equivalent to <a href='/opcodes/tune'>tune</a>."
+      short_description: "Pitch change in cents. ARIA alias for <a href='/opcodes/tune'>tune</a>."
       value:
         type_name: "integer"
         default: 0
         min: -100
         max: 100
         unit: "cents"
+      modulation:
+        midi_cc:
+        - name: "pitch_onccN"
+          version: "SFZ v2"
+          alias:
+          - name: "tune_onccN"
+            version: "ARIA"
+        - name: "pitch_curveccN"
+          version: "SFZ v2"
+          alias:
+          - name: "tune_curveccN"
+            version: "ARIA"
+        - name: "pitch_smoothccN"
+          version: "SFZ v2"
+          alias:
+          - name: "tune_smoothccN"
+            version: "ARIA"
+        - name: "pitch_stepccN"
+          version: "SFZ v2"
+          alias:
+          - name: "tune_stepccN"
+            version: "ARIA"
 
     - name: "pitch_keycenter"
       short_description: "Root key for the <a href='/opcodes/sample'>sample</a>."
@@ -1843,16 +1865,6 @@ categories:
         min: -100
         max: 100
         unit: "cents"
-      modulation:
-        midi_cc:
-        - name: "pitch_onccN"
-          version: "SFZ v2"
-        - name: "pitch_curveccN"
-          version: "SFZ v2"
-        - name: "pitch_smoothccN"
-          version: "Cakewalk"
-        - name: "pitch_stepccN"
-          version: "SFZ v2"
 
     - name: "bend_stepup"
       version: "SFZ v2"
