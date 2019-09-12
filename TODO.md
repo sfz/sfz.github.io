@@ -1,17 +1,13 @@
-# TODO
-
-### dbinfogen branch ###
-
+---
+title: TODO
+---
+- Fix the table generator to load data recursively (modulation opcodes) and
+  delete duplicated data.
 - Remove redundant MIDI CC modulations from list that is already in the opcode
-  info table and keep track of aliases. (cutoff opcode page)
+  info table and keep track of aliases (opcode layout).
+  (E.g.: see [cutoff](/opcodes/cutoff) opcode page)
 
-- Complete player's opcode compatibility pages and related files.
-
-- Describe opcode's string option values from their descriptions in the db.
-
-### Missing opcode versions
-
-Instrument settings:
+## Instrument settings:
 
 - Filter
 	- cutoff: merge with cutoff2
@@ -26,58 +22,20 @@ Instrument settings:
 	- position_onccN
 	- volume: 'Real' range?
 
-### Missing SFZ2 from LS page:
-
-- loading and wave oscillator category opcodes.
-- delay_samples
-- delay_samples_onccN
-
-Amplifier: not listed in the book, but recognized by Dimension LE:
-
-- volume_smoothccN
-- volume_stepccN
-- volume_curveccN
-- pan_onccN
-- pan_smoothccN
-- pan_stepccN
-- pan_curveccN
-- width_smoothccN
-- width_stepccN
-- width_curveccN
-
-Pitch
-
-- pitch_onccN
-- pitch_curveccN
-- pitch_stepccN
-- pitch_smoothccN
-
-Filters
-
-- cutoff_curveccN
-- cutoff_smoothccN
-- cutoff_stepccN
-- cutoff2_curveccN
-- cutoff2_smoothccN
-- cutoff2_stepccN
-- fil2_keytrack
-- fil2_keycenter
-- fil2_veltrack
-- resonance_curveccN
-- resonance_smoothccN
-- resonance_stepccN
-- resonance2_curveccN
-- resonance2_smoothccN
-- resonance2_stepccN
-
-LS opcode extensions
-
-### Other tasks
+## Other tasks
 
 - Check for missing opcode datatype, range information and modulations.
-- Complete envelope_generators and lfo type pages.
-- Add links to version / category / type table in opcode pages.
-- Add missing links to external opcode pages and tooltips with brief opcode
-    descriptions when hover over links, this could be done by using
-    a .yml opcode database.
-- Improve syntax highlighting
+- Complete _envelope_generators_ and _lfo_ type pages.
+- Improve SFZ syntax highlighting in [prettify.js]:
+  - LFO opcodes
+  - EG opcodes
+  - #define variables
+  - option values (no_loop, one_shot etc),
+  - predefined sample names (*silence)
+  - remove number colors from strings, only for numeric values
+- Add missing links to external opcode pages and use tooltips with brief opcode
+  descriptions from the syntax.yml opcode db when hover over links.
+- Add loading and wave oscillator SFZ2 category opcodes.
+
+[prettify.js]: /assets/js/prettify/lang-sfz.js
+
