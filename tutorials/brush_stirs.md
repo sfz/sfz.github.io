@@ -90,7 +90,7 @@ ampeg_attackcc1=0.4 ampeg_decaycc1=0.4
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ```
 
 ## Making the shape more realistic
@@ -112,7 +112,7 @@ ampeg_attackcc1=0.05 ampeg_holdcc1=0.35 ampeg_decaycc1=0.4
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ```
 
 ![Stir envelopes using hold in base layer](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir3.jpg)
@@ -131,7 +131,7 @@ ampeg_attack_shape=0.0 ampeg_decay_shape=-1.4
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 ```
 ![Stir envelopes with curves](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir4.jpg)
@@ -159,7 +159,7 @@ ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 <region>hicc100=42
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 
 <region>locc100=43 hicc100=86
@@ -170,7 +170,7 @@ ampeg_attack_shape=0.0 ampeg_decay_shape=-1.4
 <region>locc100=43 hicc100=86
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 
 <region>locc100=87
@@ -181,7 +181,7 @@ ampeg_attack_shape=0.0 ampeg_decay_shape=-3.5
 <region>locc100=87
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 ```
 
@@ -229,7 +229,7 @@ ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 <region>hicc100=42
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 
 <region>locc100=43 hicc100=86
@@ -240,7 +240,7 @@ ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 <region>locc100=43 hicc100=86
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 
 <region>locc100=87
@@ -251,7 +251,7 @@ ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 <region>locc100=87
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 ```
 
@@ -277,7 +277,7 @@ please see [cymbal muting](/tutorials/cymbal_muting).
 ```
 
 <global>loop_mode=one_shot off_mode=normal
-ampeg_release=0.1 ampeg_release_cc1=0.2
+ampeg_release=0.1 ampeg_releasecc1=0.2
 
 <group>key=26
 
@@ -290,7 +290,7 @@ group=1 off_by=1
 <region>hicc100=42
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 group=2 off_by=2
 
@@ -303,7 +303,7 @@ group=1 off_by=1
 <region>locc100=43 hicc100=86
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 group=2 off_by=2
 
@@ -316,7 +316,7 @@ group=1 off_by=1
 <region>locc100=87
 sample=snare_stir_speed_3.wav
 ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decay1=0.25
+ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 group=2 off_by=2
 
@@ -344,7 +344,7 @@ group=1 off_by=1
 <region>hicc100=42
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=0.0 ampeg_decay_shape=0.0
 group=2 off_by=2
 
@@ -357,7 +357,7 @@ group=1 off_by=1
 <region>locc100=43 hicc100=86
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 group=2 off_by=2
 
@@ -370,7 +370,7 @@ group=1 off_by=1
 <region>locc100=87
 sample=snare_stir_speed_4.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
-ampeg_attackcc1=0.05 ampeg_decay1=0.2
+ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 group=2 off_by=2
 
