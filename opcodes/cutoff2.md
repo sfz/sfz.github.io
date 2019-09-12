@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: cutoff2
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "cutoff2"
 ---
 When used, there are two filters applied to the region in series.
 

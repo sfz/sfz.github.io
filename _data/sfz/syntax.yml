@@ -63,7 +63,7 @@ categories:
         max: 4294967296
 
     - name: "delay"
-      short_description: "Region delay time, in seconds."
+      short_description: "Region delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -85,6 +85,32 @@ categories:
             max: 100
             unit: "seconds"
 
+    - name: "delay_ccN"
+      version: "SFZ v1"
+      short_description:
+        "Region delay time after MIDI continuous controller N messages are
+        received. If the region receives a note-off message before
+        delay time, the region won't play."
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+
+    - name: "delay_onccN"
+      version: "SFZ v2"
+      short_description:
+        "Region delay time after MIDI continuous controller N messages are
+        received. If the region receives a note-off message before
+        delay time, the region won't play. Alias for delay_ccN."
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 100
+        unit: "seconds"
+
     - name: "delay_random"
       short_description: "Region random delay time."
       version: "SFZ v1"
@@ -96,7 +122,9 @@ categories:
         unit: "seconds"
 
     - name: "delay_samples"
-      short_description: "Region delay, in sample units."
+      short_description:
+        "Allows the region playback to be postponed for the specified time,
+        measured in samples (and therefore dependent on curreny sample rate)."
       version: "SFZ v2"
       value:
         type_name: "integer"
@@ -107,7 +135,7 @@ categories:
           version: "SFZ v2"
 
     - name: "end"
-      short_description: "The endpoint of the sample, in sample units."
+      short_description: "The endpoint of the sample."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -160,7 +188,7 @@ categories:
         max: 4294967296
 
     - name: "offset"
-      short_description: "The offset used to play the sample, in sample units."
+      short_description: "The offset used to play the sample."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -182,8 +210,32 @@ categories:
             max: 4294967296
             unit: "sample units"
 
+    - name: "offset_ccN"
+      version: "SFZ v1"
+      short_description:
+        "The offset used to play the sample according to last position of MIDI
+        continuous controller N."
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
+    - name: "offset_onccN"
+      version: "SFZ v2"
+      short_description:
+        "The offset used to play the sample according to last position of MIDI
+        continuous controller N. Alias for <code>offset_ccN</code>."
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 4294967296
+        unit: "sample units"
+
     - name: "offset_random"
-      short_description: "Random offset added to the region offset, in sample units."
+      short_description: "Random offset added to the region offset."
       version: "SFZ v1"
       value:
         type_name: "integer"
@@ -249,7 +301,7 @@ categories:
         type_name: "integer"
 
     - name: "loop_crossfade"
-      short_description: "Loop cross fade, in seconds."
+      short_description: "Loop cross fade."
       version: "SFZ v2"
       value:
         type_name: "float"
@@ -1032,9 +1084,22 @@ categories:
         min: -100
         max: 100
         unit: "%"
+      modulation:
+        midi_cc:
+        - name: "pan_onccN"
+          version: "Cakewalk"
+        - name: "pan_curveccN"
+          version: "Cakewalk"
+        - name: "pan_smoothccN"
+          version: "Cakewalk"
+        - name: "pan_stepccN"
+          version: "Cakewalk"
 
     - name: "position"
-      short_description: "Only operational for stereo samples, <code>position</code> defines the position in the stereo field of a stereo signal, after channel mixing as defined in the <a href='/opcodes/width'>width</a> opcode."
+      short_description:
+        "Only operational for stereo samples, <code>position</code> defines
+        the position in the stereo field of a stereo signal,
+        after channel mixing as defined in the <a href='/opcodes/width'>width</a> opcode."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1076,6 +1141,10 @@ categories:
         - name: "volume_stepccN"
           version: "ARIA"
 
+    - name: "gain_ccN"
+      short_description: "Gain applied on MIDI control N, in decibels."
+      version: "SFZ v1"
+
     - name: "width"
       short_description: "Only operational for stereo samples, width defines the amount of channel mixing applied to play the sample."
       version: "SFZ v1"
@@ -1090,6 +1159,12 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "width_onccN"
+          version: "Cakewalk"
+        - name: "width_curveccN"
+          version: "Cakewalk"
+        - name: "width_smoothccN"
+          version: "Cakewalk"
+        - name: "width_stepccN"
           version: "Cakewalk"
 
     - name: "amp_keycenter"
@@ -1548,22 +1623,39 @@ categories:
     opcodes:
     - name: "cutoff"
       version: "SFZ v1"
-      short_description: "Sets the cutoff frequency (Hz) of the <a href='/misc/categories#performance-parameters'>filters</a>."
+      short_description:
+        "Sets the cutoff frequency (Hz) of the
+        <a href='/misc/categories#performance-parameters'>filters</a>."
+      value:
+        type_name: "float"
+        default: "filter disabled"
+        min: 0
+        max: "SampleRate / 2"
+        unit: "Hz"
       modulation:
         envelope: "fileg_depth"
         lfo: "fillfo_depth"
         midi_cc:
         - name: "cutoff_ccN"
           version: "SFZ v1"
-          alias:
-          - name: "cutoff_onccN"
-            version: "SFZ v2"
+          short_description:
+            "The variation in the cutoff frequency when
+            MIDI continuous controller N is received."
           value:
             type_name: "integer"
             default: 0
             min: -9600
             max: 9600
             unit: "cents"
+          alias:
+          - name: "cutoff_onccN"
+            version: "SFZ v2"
+        - name: "cutoff_curveccN"
+          version: "SFZ v2"
+        - name: "cutoff_smoothccN"
+          version: "SFZ v2"
+        - name: "cutoff_stepccN"
+          version: "SFZ v2"
         - name: "cutoff_chanaft"
           version: "SFZ v1"
           value:
@@ -1580,18 +1672,6 @@ categories:
             min: -9600
             max: 9600
             unit: "cents"
-        - name: "cutoff_curveccN"
-          version: "SFZ v2"
-        - name: "cutoff_smoothccN"
-          version: "SFZ v2"
-        - name: "cutoff_stepccN"
-          version: "SFZ v2"
-      value:
-        type_name: "float"
-        default: "filter disabled"
-        min: 0
-        max: "SampleRate / 2"
-        unit: "Hz"
 
     - name: "fil_keytrack"
       version: "SFZ v1"
@@ -1894,7 +1974,7 @@ categories:
     url: "/types/envelope_generators"
     opcodes:
     - name: "ampeg_attack"
-      short_description: "EG attack time, in seconds."
+      short_description: "EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1926,7 +2006,7 @@ categories:
             unit: "seconds"
 
     - name: "ampeg_decay"
-      short_description: "EG decay time, in seconds."
+      short_description: "EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1957,7 +2037,7 @@ categories:
             unit: "seconds"
 
     - name: "ampeg_delay"
-      short_description: "EG delay time, in seconds."
+      short_description: "EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1990,7 +2070,7 @@ categories:
 
     - name: "ampeg_hold"
       version: "SFZ v1"
-      short_description: "EG hold time, in seconds."
+      short_description: "EG hold time."
       value:
         type_name: "float"
         default: 0
@@ -2021,7 +2101,7 @@ categories:
             unit: "seconds"
 
     - name: "ampeg_release"
-      short_description: "EG release time (after note release), in seconds."
+      short_description: "EG release time (after note release)."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2109,7 +2189,7 @@ categories:
             unit: "seconds"
 
     - name: "ampeg_vel2attack"
-      short_description: "Velocity effect on EG attack time, in seconds."
+      short_description: "Velocity effect on EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2119,7 +2199,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2delay"
-      short_description: "Velocity effect on EG delay time, in seconds."
+      short_description: "Velocity effect on EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2129,7 +2209,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2decay"
-      short_description: "Velocity effect on pitch EG decay time, in seconds."
+      short_description: "Velocity effect on pitch EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2139,7 +2219,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2hold"
-      short_description: "Velocity effect on EG hold time, in seconds."
+      short_description: "Velocity effect on EG hold time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2149,7 +2229,7 @@ categories:
         unit: "seconds"
 
     - name: "ampeg_vel2release"
-      short_description: "Velocity effect on EG release time, in seconds."
+      short_description: "Velocity effect on EG release time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2286,7 +2366,7 @@ categories:
         max: 1
 
     - name: "fileg_attack"
-      short_description: "EG attack time, in seconds."
+      short_description: "EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2315,7 +2395,7 @@ categories:
             unit: "seconds"
 
     - name: "fileg_decay"
-      short_description: "EG decay time, in seconds."
+      short_description: "EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2343,7 +2423,7 @@ categories:
             unit: "seconds"
 
     - name: "fileg_delay"
-      short_description: "EG delay time, in seconds."
+      short_description: "EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2400,7 +2480,7 @@ categories:
             unit: "cents"
 
     - name: "fileg_hold"
-      short_description: "EG hold time, in seconds."
+      short_description: "EG hold time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2429,7 +2509,7 @@ categories:
             unit: "seconds"
 
     - name: "fileg_release"
-      short_description: "EG release time (after note release), in seconds."
+      short_description: "EG release time (after note release)."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2508,7 +2588,7 @@ categories:
             unit: "%"
 
     - name: "fileg_vel2attack"
-      short_description: "Velocity effect on EG attack time, in seconds."
+      short_description: "Velocity effect on EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2518,7 +2598,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2decay"
-      short_description: "Velocity effect on filter EG decay time, in seconds."
+      short_description: "Velocity effect on filter EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2528,7 +2608,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2delay"
-      short_description: "Velocity effect on filter EG delay time, in seconds."
+      short_description: "Velocity effect on filter EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2548,7 +2628,7 @@ categories:
         unit: "cents"
 
     - name: "fileg_vel2hold"
-      short_description: "Velocity effect on EG hold time, in seconds."
+      short_description: "Velocity effect on EG hold time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2558,7 +2638,7 @@ categories:
         unit: "seconds"
 
     - name: "fileg_vel2release"
-      short_description: "Velocity effect on EG release time, in seconds."
+      short_description: "Velocity effect on EG release time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2578,7 +2658,7 @@ categories:
         unit: "%"
 
     - name: "pitcheg_attack"
-      short_description: "EG attack time, in seconds."
+      short_description: "EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2601,7 +2681,7 @@ categories:
             unit: "seconds"
 
     - name: "pitcheg_decay"
-      short_description: "EG decay time, in seconds."
+      short_description: "EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2629,7 +2709,7 @@ categories:
             unit: "seconds"
 
     - name: "pitcheg_delay"
-      short_description: "EG delay time, in seconds."
+      short_description: "EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2686,7 +2766,7 @@ categories:
             unit: "cents"
 
     - name: "pitcheg_hold"
-      short_description: "EG hold time, in seconds."
+      short_description: "EG hold time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2716,7 +2796,7 @@ categories:
 
     - name: "pitcheg_release"
       version: "SFZ v1"
-      short_description: "EG release time (after note release), in seconds."
+      short_description: "EG release time (after note release)."
       value:
         type_name: "float"
         default: 0
@@ -2794,7 +2874,7 @@ categories:
             unit: "%"
 
     - name: "pitcheg_vel2attack"
-      short_description: "Velocity effect on EG attack time, in seconds."
+      short_description: "Velocity effect on EG attack time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2804,7 +2884,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2decay"
-      short_description: "Velocity effect on filter EG decay time, in seconds."
+      short_description: "Velocity effect on filter EG decay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2814,7 +2894,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2delay"
-      short_description: "Velocity effect on filter EG delay time, in seconds."
+      short_description: "Velocity effect on filter EG delay time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2834,7 +2914,7 @@ categories:
         unit: "cents"
 
     - name: "pitcheg_vel2hold"
-      short_description: "Velocity effect on EG hold time, in seconds."
+      short_description: "Velocity effect on EG hold time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -2844,7 +2924,7 @@ categories:
         unit: "seconds"
 
     - name: "pitcheg_vel2release"
-      short_description: "Velocity effect on EG release time, in seconds."
+      short_description: "Velocity effect on EG release time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3096,7 +3176,7 @@ categories:
     short_description: "Low Frequency Oscillator."
     opcodes:
     - name: "amplfo_delay"
-      short_description: "The time before the LFO starts oscillating, in seconds."
+      short_description: "The time before the LFO starts oscillating."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3149,7 +3229,7 @@ categories:
         unit: "dB"
 
     - name: "amplfo_fade"
-      short_description: "LFO fade-in effect time, in seconds."
+      short_description: "LFO fade-in effect time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3199,7 +3279,7 @@ categories:
         unit: "Hz"
 
     - name: "fillfo_delay"
-      short_description: "The time before the LFO starts oscillating, in seconds."
+      short_description: "The time before the LFO starts oscillating."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3252,7 +3332,7 @@ categories:
         unit: "cents"
 
     - name: "fillfo_fade"
-      short_description: "LFO fade-in effect time, in seconds."
+      short_description: "LFO fade-in effect time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3302,7 +3382,7 @@ categories:
         unit: "Hz"
 
     - name: "pitchlfo_delay"
-      short_description: "The time before the LFO starts oscillating, in seconds."
+      short_description: "The time before the LFO starts oscillating."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3355,7 +3435,7 @@ categories:
         unit: "cents"
 
     - name: "pitchlfo_fade"
-      short_description: "LFO fade-in effect time, in seconds."
+      short_description: "LFO fade-in effect time."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -3421,7 +3501,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_delay"
-      short_description: "Onset delay for LFO number N, in seconds."
+      short_description: "Onset delay for LFO number N."
       version: "SFZ v2"
       value:
         type_name: "float"
@@ -3434,7 +3514,7 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_fade"
-      short_description: "Fade-in time for LFO number N, in seconds."
+      short_description: "Fade-in time for LFO number N."
       version: "SFZ v2"
       value:
         type_name: "float"

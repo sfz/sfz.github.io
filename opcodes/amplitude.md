@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amplitude
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amplitude"
 ---
 100% amplitude meaning no volume change is applied to the sample when played.
 Can be modulated with MIDI CC.

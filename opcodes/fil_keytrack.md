@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: fil_keytrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "fil_keytrack"
 ---
 A value of 100 means 100 cents per half-step.
 
-##### Examples
+## Examples
 
 ```
 fil_keytrack=100

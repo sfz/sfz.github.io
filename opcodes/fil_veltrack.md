@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: fil_veltrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "fil_veltrack"
 ---
-##### Examples
+## Examples
 
 ```
 fil_veltrack=0

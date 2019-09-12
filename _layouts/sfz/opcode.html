@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
-{%-assign opcode_name = page.name | replace: ".md", ''-%}
+{%-comment-%}
+	Get the opcode info based from the opcode name, which can be specified in
+	frontmatter with the variable `opcode_name`, otherwise from the filename.
+	If the file is a symlink, the filename option is OK only for opcode aliases,
+	so the opcode alias info can be used instead, otherwise for related ccN opcodes
+	we need to use the original opcode info, so this is not an option.
+{%-endcomment-%}
+{%-if page.opcode_name-%}
+	{%-assign opcode_name = page.opcode_name-%}
+{%-else-%}
+	{%-assign opcode_name = page.name | replace: ".md", ''-%}
+{%-endif-%}
 {%-assign found = false-%}
 {%-for category in site.data.sfz.syntax.categories-%}
 	{%-for opcode in category.opcodes-%}

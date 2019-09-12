@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: resonance
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "resonance"
 ---
-##### Example
+## Example
 
 ```
 resonance=4
