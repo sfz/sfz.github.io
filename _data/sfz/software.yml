@@ -52,6 +52,12 @@ categories:
     os:
     - name: "Windows"
 
+  - name: "Grace"
+    license: "Freeware"
+    url: "http://www.onesmallclue.com/plugin/grace/"
+    os:
+    - name: "Windows"
+
   - name: "Sforzando"
     license: "Freeware"
     url: "https://plogue.com/products/sforzando.html"
