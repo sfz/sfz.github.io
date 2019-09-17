@@ -18,7 +18,7 @@ To make use of the SFZ format requires three things:
 
 - Samples
 - [SFZ player](/software/players)
-- SFZ file
+- [SFZ file](/tutorials/basic_sfz_file)
 
 which tells the player how to use the samples. The SFZ file itself can be created
 using any text editor, though for more complex cases with hundreds or thousands
