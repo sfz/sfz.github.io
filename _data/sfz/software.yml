@@ -167,7 +167,15 @@ categories:
 
   - name: "SFZ syntax highlighting for Geany"
     license: "Opensource"
-    url: "https://github.com/redtide/geany-filetype-sfz"
+    url: "https://github.com/sfztools/syntax-highlighting-geany"
+    os:
+    - name: "Linux"
+    - name: "macOS X"
+    - name: "Windows"
+
+  - name: "SFZ syntax highlighting for Sublime Text"
+    license: "Opensource"
+    url: "https://github.com/sfztools/syntax-highlighting-sublime-text"
     os:
     - name: "Linux"
     - name: "macOS X"
