@@ -57,8 +57,8 @@ Text guides on how to make a simple instrument, covering the essential opcodes
 
 Some more advanced topics
 
-- [Vibrato](/tutorials/vibrato) - currently describes basic bowed string vibrato,
-  will be expanded later to include other instruments and also filter wobble.
+- [Vibrato](/tutorials/vibrato) - typical string vibrato, humanized vibrato,
+  asymmetrical vibrato, and even filter wobble.
 
 - [Legato](/tutorials/legato) - currently simple glides, will be expanded later
   to include true sampled legato.
