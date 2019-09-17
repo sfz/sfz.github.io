@@ -1,9 +1,11 @@
 ---
-title: Basic SFZ file
-lang: en
+title: "Basic SFZ file"
+lang: "en"
 ---
-Just copy the following in your preferred text editor (we suggest Notepad++),
-fill in the blanks and save as an SFZ:
+Just copy the following in your preferred text editor.
+We recommend [Sublime Text] and [VSCode], available for various operating
+systems and [Notepad++], available only for Windows.
+Fill in the blanks and save as an SFZ:
 
 ```
 //------------------------------------------------------------------------------
@@ -41,3 +43,7 @@ default_path= // relative path of your samples
 <region> sample= key=
 <region> sample= key=
 ```
+
+[Notepad++]: https://notepad-plus-plus.org/
+[Sublime Text]: https://www.sublimetext.com/
+[VSCode]: https://code.visualstudio.com/
