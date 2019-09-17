@@ -22,7 +22,7 @@ in as a plugin.
 - fillfo (filter)
 - pitchlfo (pitch)
 
-[Here's a very simple example of a pitch LFO integration](/tutorials/lfo_sfz1)
+[Here's a very simple example of a pitch LFO integration](/tutorials/lfo)
 
 - [(lfo type)_delay](/opcodes/amplfo_delay)
 - [(lfo type)_fade](/opcodes/amplfo_fade)
@@ -39,7 +39,7 @@ in as a plugin.
 
 Much like the Flex EG, these newer LFO can target almost any tone-defining parameter:
 
-[Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo_sfz1)
+[Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo)
 
 - [lfoN_wave](/opcodes/lfoN_wave)
 - [lfoN_freq](/opcodes/lfoN_freq)

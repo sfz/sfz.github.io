@@ -62,11 +62,8 @@ navigation:
     - title: "SFZ 2 Modulations"
       url: "/tutorials/sfz2_modulations"
 
-    - title: "SFZ 1 Pitch LFO"
-      url: "/tutorials/lfo_sfz1"
-
-    - title: "SFZ 2 Pitch LFO"
-      url: "/tutorials/lfo_sfz2"
+    - title: "Pitch LFO Examples"
+      url: "/tutorials/lfo"
     -
     - title: "Video Tutorials"
       url: "/tutorials/videos"
