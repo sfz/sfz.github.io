@@ -5,7 +5,7 @@ lang: en
 Emulating vibrato for solo instruments or voices with LFOs is not difficult. The challenges
 are understanding the key aspects of vibrato on the real instrument, and keeping the number of
 parameters from growing too large to be easy to use. The examples here use SFZ 2 spec [numbered
-LFOs](/types/lfo.html), rather than the ]dedicated pitch, volume and filter LFOs](/opcodes/amplfo_depth)
+LFOs](/types/lfo.html), rather than the [dedicated pitch, volume and filter LFOs](/opcodes/amplfo_depth)
 and envelopes of SFZ 1. A lot of this can be done under the SFZ 1 specification as well, but
 there are some limitations.
 
