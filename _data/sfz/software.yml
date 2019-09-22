@@ -233,3 +233,9 @@ categories:
     - name: "Linux"
     - name: "macOS X"
     - name: "Windows"
+
+  - name: "Extreme Sample Converter"
+    license: "Commercial"
+    url: "https://extranslator.com/index.php?page=exsc"
+    os:
+    - name: "Windows"
