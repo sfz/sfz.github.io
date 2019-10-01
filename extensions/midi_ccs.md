@@ -33,6 +33,6 @@ engine-dependent. ARIA adds more:
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
+[ARIA]: /extensions/aria
 [MIDI Control Change Messages]: https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
 [SFZ 2]: /misc/sfz2
-[ARIA]: /extensions/aria

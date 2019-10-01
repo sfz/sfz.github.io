@@ -8,11 +8,11 @@ lang: en
 ---
 We're proud to announce a new website!
 
-- Built on [Jekyll][].
-- Most content is authored in [Markdown][] format.
-- Utilizes [Bootstrap][] and [SASS][] for easy skinning and responsive design,
+- Built on [Jekyll].
+- Most content is authored in [Markdown] format.
+- Utilizes [Bootstrap] and [SASS] for easy skinning and responsive design,
   making the website available to mobile devices.
-- Utilizes [FontAwesome][] and [Favicon Generator][] for content and website icons.
+- Utilizes [FontAwesome] and [Favicon Generator] for content and website icons.
 
 [Bootstrap]: http://getbootstrap.com/
 [Favicon Generator]: https://realfavicongenerator.net/
