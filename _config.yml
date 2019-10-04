@@ -36,14 +36,14 @@ plugins:
 
 url: "https://sfzformat.github.io"
 
-spdx_license_id: "MPL-2.0"
-
-locale:
-  default: "en"
-
 organization:
   name: "SFZ Format"
   url: "https://sfzformat.github.io"
+
+repository_name: "source"
+
+locale:
+  default: "en"
 
 authors:
   content: "Karoryfer Samples and SFZ Format Team"
@@ -53,4 +53,5 @@ google:
   analytics_code: UA-138937603-1
   cse_code:
 
+spdx_license_id:
 disqus_shortname:
