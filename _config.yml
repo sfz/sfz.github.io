@@ -40,7 +40,9 @@ organization:
   name: "SFZ Format"
   url: "https://sfzformat.github.io"
 
-repository_name: "source"
+repository:
+  name: "source"
+  url: "https://github.com/sfzformat/sfzformat.github.io"
 
 locale:
   default: "en"
