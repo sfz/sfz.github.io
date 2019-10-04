@@ -3622,26 +3622,14 @@ categories:
     - name: "lfoN_freq_lfoX"
       short_description: ""
       version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_freq_lfoX_onccY"
-# TODO:   version: "?"
 
     - name: "lfoN_depth_lfoX"
       short_description: ""
       version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_depth_lfoX_onccY"
-# TODO:   version: "?"
 
     - name: "lfoN_depthadd_lfoX"
       short_description: ""
       version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_depthadd_lfoX_onccY"
-# TODO:   version: "?"
 
     - name: "lfoN_pitch"
       short_description: ""
