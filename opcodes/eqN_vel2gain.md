@@ -1,1 +1,1 @@
-eqN_vel2freq.md
+eqN_gain.md

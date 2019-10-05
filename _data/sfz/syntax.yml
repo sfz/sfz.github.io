@@ -2975,26 +2975,24 @@ categories:
           alias:
           - name: "amplfo_depth_onccN"
             version: "SFZ v2"
-
-    - name: "amplfo_depthchanaft"
-      short_description: "LFO depth when channel aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -10
-        max: 10
-        unit: "dB"
-
-    - name: "amplfo_depthpolyaft"
-      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -10
-        max: 10
-        unit: "dB"
+        - name: "amplfo_depthchanaft"
+          short_description: "LFO depth when channel aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -10
+            max: 10
+            unit: "dB"
+        - name: "amplfo_depthpolyaft"
+          short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -10
+            max: 10
+            unit: "dB"
 
     - name: "amplfo_fade"
       short_description: "LFO fade-in effect time."
@@ -3025,26 +3023,24 @@ categories:
             min: -200
             max: 200
             unit: "Hz"
-
-    - name: "amplfo_freqchanaft"
-      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
-
-    - name: "amplfo_freqpolyaft"
-      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
+        - name: "amplfo_freqchanaft"
+          short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
+        - name: "amplfo_freqpolyaft"
+          short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
 
     - name: "fillfo_delay"
       short_description: "The time before the LFO starts oscillating."
@@ -3078,26 +3074,24 @@ categories:
           alias:
           - name: "fillfo_depth_onccN"
             version: "SFZ v2"
-
-    - name: "fillfo_depthchanaft"
-      short_description: "LFO depth when channel aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -1200
-        max: 1200
-        unit: "cents"
-
-    - name: "fillfo_depthpolyaft"
-      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -1200
-        max: 1200
-        unit: "cents"
+        - name: "fillfo_depthchanaft"
+          short_description: "LFO depth when channel aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
+        - name: "fillfo_depthpolyaft"
+          short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
 
     - name: "fillfo_fade"
       short_description: "LFO fade-in effect time."
@@ -3128,26 +3122,24 @@ categories:
             min: -200
             max: 200
             unit: "Hz"
-
-    - name: "fillfo_freqchanaft"
-      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
-
-    - name: "fillfo_freqpolyaft"
-      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
+        - name: "fillfo_freqchanaft"
+          short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
+        - name: "fillfo_freqpolyaft"
+          short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
 
     - name: "pitchlfo_delay"
       short_description: "The time before the LFO starts oscillating."
@@ -3181,26 +3173,24 @@ categories:
           alias:
           - name: "pitchlfo_depth_onccN"
             version: "SFZ v2"
-
-    - name: "pitchlfo_depthchanaft"
-      short_description: "LFO depth when channel aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -1200
-        max: 1200
-        unit: "cents"
-
-    - name: "pitchlfo_depthpolyaft"
-      short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -1200
-        max: 1200
-        unit: "cents"
+        - name: "pitchlfo_depthchanaft"
+          short_description: "LFO depth when channel aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
+        - name: "pitchlfo_depthpolyaft"
+          short_description: "LFO depth when polyphonic aftertouch MIDI messages are received."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -1200
+            max: 1200
+            unit: "cents"
 
     - name: "pitchlfo_fade"
       short_description: "LFO fade-in effect time."
@@ -3231,26 +3221,24 @@ categories:
             min: -200
             max: 200
             unit: "Hz"
-
-    - name: "pitchlfo_freqchanaft"
-      short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
-
-    - name: "pitchlfo_freqpolyaft"
-      short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
-      version: "SFZ v1"
-      value:
-        type_name: "float"
-        default: 0
-        min: -200
-        max: 200
-        unit: "Hz"
+        - name: "pitchlfo_freqchanaft"
+          short_description: "LFO frequency change when channel aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
+        - name: "pitchlfo_freqpolyaft"
+          short_description: "LFO frequency change when polyphonic aftertouch MIDI messages are received, in Hertz."
+          version: "SFZ v1"
+          value:
+            type_name: "float"
+            default: 0
+            min: -200
+            max: 200
+            unit: "Hz"
 
     - name: "lfoN_freq"
       short_description: "The base frequency of LFO number N, in Hertz."

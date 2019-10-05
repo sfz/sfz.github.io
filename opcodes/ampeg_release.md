@@ -1,7 +1,7 @@
 ---
 layout: "sfz/opcode"
 lang: "en"
-opcode_name: ""
+opcode_name: "ampeg_release"
 ---
 ## Examples
 
