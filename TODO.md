@@ -1,12 +1,12 @@
 ---
-title: TODO
+title: "TODO"
 ---
-- Fix the table generator to load data recursively (modulation opcodes) and
-  delete duplicated data.
-  - Generate opcode list in [Prettify SFZ definition script].
+- Generate opcode list in [Prettify SFZ definition script].
 - Remove redundant MIDI CC modulations from list that is already in the opcode
   info table and keep track of aliases (opcode layout).
   (E.g.: see [cutoff] opcode page)
+- Merge eqN_vel2freq and eqN_vel2gain with related opcodes, delete both and
+  make links. Same for varNN_*ccX, ampeg_vel2*, amplfo_depth* and amplfo_freq*.
 
 ## Instrument settings:
 
