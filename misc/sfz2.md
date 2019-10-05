@@ -1,5 +1,5 @@
 ---
-lang: en
+lang: "en"
 title: "SFZ v2 Opcodes"
 sfz_version: "SFZ v2"
 ---
