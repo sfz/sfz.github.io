@@ -65,24 +65,51 @@ documentation.
 
 ### Opcode File Example
 
+In case the opcode doesn't have any modulation and it has some associated
+opcode like on_loccN / on_hiccN, then using `title` is the right choice.
+Otherwise use `opcode_name`, so a modulation documentation file (a symlink to the
+opcode it modulates in source code) will use the correct references.
+
 <?prettify?>
 <pre class="prettyprint">
 ---
-layout: sfz/opcode
-lang: en
-title: custom title for opcode_name
+layout: "sfz/opcode"
+lang: "en"
+title: "lovel / hivel"
 ---
-This is just an example for an opcode description to be written in some
-/opcodes/opcode_name.md markdown file.
+(Here the auto-generated brief text description from syntax.yml db...)
+
+This is just an example for an opcode extended description to be written in some
+/opcodes/lovel.md markdown file.
 This text is readable on any editor, with low or high resolutions.
 
-##### Examples
+## Examples
 
 ```
-opcode_name=value1
-
-opcode_name=value2
+lovel=value1
+hivel=value2
 ```
+
+(Here the auto-generated description table from syntax.yml db...)
+</pre>
+
+<?prettify?>
+<pre class="prettyprint">
+---
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "volume"
+---
+...
+
+## Examples
+
+```
+...
+```
+
+(auto-generated table ->) Modulations: volume_onccN ...
+
 </pre>
 
 ## YAML Configuration Files
