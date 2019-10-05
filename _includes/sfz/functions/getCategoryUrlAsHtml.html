@@ -1,0 +1,8 @@
+{%-if include.const_category.url-%}
+	{%-assign category_url_result = "<a href='" | append: include.const_category.url |
+		append: "'>" | append: include.const_category.name | append: "</a>"-%}
+{%else%}
+	{%-assign category_url_result = include.const_category.name-%}
+{%-endif-%}
+{{ category_url_result }}
+{%-comment-%} No new line after result {%-endcomment-%}

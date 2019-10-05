@@ -45,6 +45,7 @@
 	<tbody>
 {%-for opcode in site.data.sfz.players[player].opcodes-%}
 	{%-assign opcode_url = "<a href='/opcodes/" | append: opcode.name |
+		replace: '#', '' | replace: '*', '' |
 		append: "'>" | append: opcode.name | append: "</a>"-%}
 	{%-if opcode.support-%}
 		{%-assign opcode_support = opcode.support-%}

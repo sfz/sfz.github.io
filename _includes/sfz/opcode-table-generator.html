@@ -2,21 +2,13 @@
 pages describing the parameters they modulate.</p>
 
 {%-for category in site.data.sfz.syntax.categories-%}
-	{%-assign opcode_count = 0-%}
-	{%-for opcode in category.opcodes-%}
-		{%-if opcode.version == page.sfz_version-%}
-			{%-assign opcode_count = opcode_count | plus: 1-%}
-		{%-endif-%}
-	{%-endfor-%}
-{%-comment-%}<p>Debug: {{category.name}} has {{opcode_count}} items</p>{%-endcomment-%}
-	{%-if opcode_count > 0-%}
-		{%-if category.url != nil-%}
-			{%-assign category_url = "<a href='" | append: category.url |
-				append: "'>" | append: category.name  | append: "</a>"-%}
-		{%else%}
-			{%-assign category_url = category.name-%}
-		{%-endif-%}
-<h2>{{ category_url }}</h2>
+	{%-assign category_opcode_array = category.opcodes |
+		where: "version", page.sfz_version-%}
+	{%-capture category_url-%}
+		{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category-%}
+	{%-endcapture-%}
+	{%-if category_opcode_array.size > 0-%}
+<h2>{{category_url}}</h2>
 <table class="table table-sm table-hover table-striped table-responsive">
 	<thead class="thead-dark">
 		<tr>
@@ -28,73 +20,74 @@ pages describing the parameters they modulate.</p>
 		</tr>
 	</thead>
 	<tbody>
-		{%-for opcode in category.opcodes-%}
-			{%-if opcode.version == page.sfz_version-%}
-{%-comment-%} Opcode name and url link {%-endcomment-%}
-				{%-if opcode.url == nil-%}
-					{%-assign opcode_name = opcode.name | replace: '#', ''-%}
-					{%-assign opcode_url = '<a href="/opcodes/' | append: opcode_name |
-						append: '">' | append: opcode.name | append: '</a>'-%}
-				{%-else-%}
-					{%-assign opcode_url = '<a href="' | append opcode.url |
-						append: '">' | append: opcode.name | append: '</a>'-%}
-				{%-endif-%}
-{%-comment-%} Opcode value range {%-endcomment-%}
-				{%-if opcode.value.min == nil-%}
-					{%-if opcode.value.options-%}
-						{%-for option in opcode.value.options-%}
-							{%-assign opcode_value_range = opcode_value_range | append: option.name-%}
-								{%-if forloop.last == false-%}
-									{%-assign opcode_value_range = opcode_value_range | append: ", "-%}
-								{%-endif-%}
-						{%-endfor-%}
-					{%-else-%}
-						{%-assign opcode_value_range = "N/A"-%}
-					{%-endif-%}
-				{%-else-%}
-					{%-assign opcode_value_range = opcode.value.min | append: " to " |
-						append: opcode.value.max | append: ' ' | append: opcode.value.unit-%}
-				{%-endif-%}
-{%-comment-%} Opcode default value {%-endcomment-%}
-				{%-if opcode.value.default == nil-%}
-					{%-assign opcode_value_default = "N/A"-%}
-				{%-else-%}
-					{%-assign opcode_value_default = opcode.value.default |
-						append: ' ' | append: opcode.value.unit-%}
-				{%-endif-%}
-<tr>
+		{%-for opcode in category_opcode_array-%}
+			{%-capture opcode_url-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
+			{%-endcapture-%}
+			{%-capture opcode_value_default-%}
+				{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=opcode-%}
+			{%-endcapture-%}
+			{%-capture opcode_value_range-%}
+				{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
+			{%-endcapture-%}
+		<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode.value.type_name }}</td>
 			<td>{{ opcode_value_default }}</td>
 			<td>{{ opcode_value_range }}</td>
 		</tr>
-			{%-endif-%}
-	 {%-endfor-%}
+			{%-for mid_cc in opcode.modulation.midi_cc-%}
+				{%-if mid_cc.version == page.sfz_version-%}
+					{%-capture mid_cc_url-%}
+						{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=mid_cc-%}
+					{%-endcapture-%}
+					{%-capture mid_cc_value_default-%}
+						{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=mid_cc-%}
+					{%-endcapture-%}
+					{%-capture mid_cc_value_range-%}
+						{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=mid_cc-%}
+					{%-endcapture-%}
+		<tr>
+			<td>{{ mid_cc_url }}</td>
+			<td>{{ mid_cc.short_description }}</td>
+			<td>{{ mid_cc.value.type_name }}</td>
+			<td>{{ mid_cc_value_default }}</td>
+			<td>{{ mid_cc_value_range }}</td>
+		</tr>
+				{%-endif-%}
+			{%-endfor-%}
+			{%-for vel_cc in opcode.modulation.velocity-%}
+				{%-if vel_cc.version == page.sfz_version-%}
+					{%-capture vel_cc_url-%}
+						{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=vel_cc-%}
+					{%-endcapture-%}
+					{%-capture vel_cc_value_default-%}
+						{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=vel_cc-%}
+					{%-endcapture-%}
+					{%-capture vel_cc_value_range-%}
+						{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=vel_cc-%}
+					{%-endcapture-%}
+		<tr>
+			<td>{{ vel_cc_url }}</td>
+			<td>{{ vel_cc.short_description }}</td>
+			<td>{{ vel_cc.value.type_name }}</td>
+			<td>{{ vel_cc_value_default }}</td>
+			<td>{{ vel_cc_value_range }}</td>
+		</tr>
+				{%-endif-%}
+			{%-endfor-%}
+		{%-endfor-%}
 	</tbody>
 </table>
 	{%-endif-%}
 	{%-for category_type in category.types-%}
-		{%-assign opcode_count = 0-%}
-		{%-for opcode in category_type.opcodes-%}
-			{%-if opcode.version == page.sfz_version-%}
-				{%-assign opcode_count = opcode_count | plus: 1-%}
-			{%-endif-%}
-		{%-endfor-%}
-{%-comment-%}<p>Debug: {{category.name}} has {{opcode_count}} items</p>{%-endcomment-%}
-		{%-if opcode_count > 0-%}
-			{%-if category.url != nil-%}
-				{%-assign category_url = "<a href='" | append: category.url |
-					append: "'>" | append: category.name  | append: "</a>"-%}
-			{%else%}
-				{%-assign category_url = category.name-%}
-			{%-endif-%}
-			{%-if category_type.url != nil-%}
-				{%-assign category_type_url = "<a href='" | append: category_type.url |
-					append: "'>" | append: category_type.name  | append: "</a>"-%}
-			{%else%}
-				{%-assign category_type_url = category_type.name-%}
-			{%-endif-%}
+		{%-assign category_type_opcode_array = category_type.opcodes |
+			where: "version", page.sfz_version-%}
+		{%-if category_type_opcode_array.size > 0-%}
+			{%-capture category_type_url-%}
+				{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category_type-%}
+			{%-endcapture-%}
 <h2>{{ category_url }}: {{ category_type_url }}</h2>
 <table class="table table-sm table-hover table-striped table-responsive">
 	<thead class="thead-dark">
@@ -107,48 +100,63 @@ pages describing the parameters they modulate.</p>
 		</tr>
 	</thead>
 	<tbody>
-			{%-for opcode in category_type.opcodes-%}
-				{%-if opcode.version == page.sfz_version-%}
-{%-comment-%} Opcode name and url link {%-endcomment-%}
-					{%-if opcode.url == nil-%}
-						{%-assign opcode_url = '<a href="/opcodes/' | append: opcode.name |
-							append: '">' | append: opcode.name | append: '</a>'-%}
-					{%-else-%}
-						{%-assign opcode_url = '<a href="' | append opcode.url |
-							append: '">' | append: opcode.name | append: '</a>'-%}
-					{%-endif-%}
-{%-comment-%} Opcode value range {%-endcomment-%}
-					{%-assign opcode_value_range = ""-%}
-					{%-if opcode.value.min == nil-%}
-						{%-if opcode.value.options-%}
-							{%-for option in opcode.value.options-%}
-								{%-assign opcode_value_range = opcode_value_range | append: option.name-%}
-									{%-if forloop.last == false-%}
-										{%-assign opcode_value_range = opcode_value_range | append: ", "-%}
-									{%-endif-%}
-							{%-endfor-%}
-						{%-else-%}
-							{%-assign opcode_value_range = "N/A"-%}
-						{%-endif-%}
-					{%-else-%}
-						{%-assign opcode_value_range = opcode.value.min | append: " to " |
-							append: opcode.value.max | append: ' ' | append: opcode.value.unit-%}
-					{%-endif-%}
-{%-comment-%} Opcode default value {%-endcomment-%}
-					{%-if opcode.value.default == nil-%}
-						{%-assign opcode_value_default = "N/A"-%}
-					{%-else-%}
-						{%-assign opcode_value_default = opcode.value.default |
-							append: ' ' | append: opcode.value.unit-%}
-					{%-endif-%}
-<tr>
+			{%-for opcode in category_type_opcode_array-%}
+				{%-capture opcode_url-%}
+					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
+				{%-endcapture-%}
+				{%-capture opcode_value_default-%}
+					{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=opcode-%}
+				{%-endcapture-%}
+				{%-capture opcode_value_range-%}
+					{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
+				{%-endcapture-%}
+		<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode.value.type_name }}</td>
 			<td>{{ opcode_value_default }}</td>
 			<td>{{ opcode_value_range }}</td>
 		</tr>
-				{%-endif-%}
+				{%-for mid_cc in opcode.modulation.midi_cc-%}
+					{%-if mid_cc.version == page.sfz_version-%}
+						{%-capture mid_cc_url-%}
+							{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=mid_cc-%}
+						{%-endcapture-%}
+						{%-capture mid_cc_value_default-%}
+							{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=mid_cc-%}
+						{%-endcapture-%}
+						{%-capture mid_cc_value_range-%}
+							{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=mid_cc-%}
+						{%-endcapture-%}
+		<tr>
+			<td>{{ mid_cc_url }}</td>
+			<td>{{ mid_cc.short_description }}</td>
+			<td>{{ mid_cc.value.type_name }}</td>
+			<td>{{ mid_cc_value_default }}</td>
+			<td>{{ mid_cc_value_range }}</td>
+		</tr>
+					{%-endif-%}
+				{%-endfor-%}
+				{%-for vel_cc in opcode.modulation.velocity-%}
+					{%-if vel_cc.version == page.sfz_version-%}
+						{%-capture vel_cc_url-%}
+							{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=vel_cc-%}
+						{%-endcapture-%}
+						{%-capture vel_cc_value_default-%}
+							{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=vel_cc-%}
+						{%-endcapture-%}
+						{%-capture vel_cc_value_range-%}
+							{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=vel_cc-%}
+						{%-endcapture-%}
+		<tr>
+			<td>{{ vel_cc_url }}</td>
+			<td>{{ vel_cc.short_description }}</td>
+			<td>{{ vel_cc.value.type_name }}</td>
+			<td>{{ vel_cc_value_default }}</td>
+			<td>{{ vel_cc_value_range }}</td>
+		</tr>
+					{%-endif-%}
+				{%-endfor-%}
 			{%-endfor-%}
 	</tbody>
 </table>

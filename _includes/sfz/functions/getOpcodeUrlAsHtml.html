@@ -1,0 +1,12 @@
+{%-assign opcode_url_result = ""-%}
+{%-if include.const_opcode.url == nil-%}
+	{%-assign opcode_name = include.const_opcode.name |
+		replace: '#', '' | replace: '*', ''-%}
+	{%-assign opcode_url_result = '<a href="/opcodes/' | append: opcode_name |
+		append: '">' | append: include.const_opcode.name | append: '</a>'-%}
+{%-else-%}
+	{%-assign opcode_url_result = '<a href="' | append const_opcode.url |
+		append: '">' | append: include.const_opcode.name | append: '</a>'-%}
+{%-endif-%}
+{{ opcode_url_result }}
+{%-comment-%} No new line after result {%-endcomment-%}

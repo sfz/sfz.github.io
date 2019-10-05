@@ -1,0 +1,19 @@
+{%-assign opcode_value_range_result = ""-%}
+{%-if include.const_opcode.value.min == nil-%}
+	{%-if include.const_opcode.value.options-%}
+		{%-for option in include.const_opcode.value.options-%}
+			{%-assign opcode_value_range_result = opcode_value_range_result | append: option.name-%}
+				{%-if forloop.last == false-%}
+					{%-assign opcode_value_range_result = opcode_value_range_result | append: ", "-%}
+				{%-endif-%}
+		{%-endfor-%}
+	{%-else-%}
+		{%-assign opcode_value_range_result = "N/A"-%}
+	{%-endif-%}
+{%-else-%}
+	{%-assign opcode_value_range_result = include.const_opcode.value.min | append: " to " |
+		append: include.const_opcode.value.max | append: ' ' |
+		append: include.const_opcode.value.unit-%}
+{%-endif-%}
+{{ opcode_value_range_result }}
+{%-comment-%} No new line after result {%-endcomment-%}
