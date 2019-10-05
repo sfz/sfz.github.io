@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: script
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "script"
 ---
 This is an extension to the SFZ file format which is currently only available
 with LinuxSampler v2.0.0.svn37 or higher.
@@ -14,7 +14,7 @@ to the SFZ file's location.
 
 May only be used in ‹[global](/headers/global)› section.
 
-##### Example
+## Example
 
 Loads the WAV file "some_sound.wav" and assigns it to the entire key range of the
 instrument, and loads the real-time instrument script file "my_nksp_script.txt"

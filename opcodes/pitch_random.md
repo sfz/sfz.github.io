@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pitch_random
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "pitch_random"
 ---
-##### Examples
+## Examples
 
 ```
 pitch_random=10

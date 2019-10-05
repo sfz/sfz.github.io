@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amp_veltrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amp_veltrack"
 ---
 Volume changes with incoming velocity in a concave shape according to the
 following expression:
@@ -12,7 +12,7 @@ The [amp_velcurve_N](amp_velcurve_N) opcodes allow overriding the default
 velocity curve, and are useful for making more complex curves than
 amp_veltrack allows.
 
-##### Examples
+## Examples
 
 ```
 amp_veltrack=0

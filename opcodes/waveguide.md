@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: waveguide
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "waveguide"
 ---
 Enables waveguide synthesis for the region. Not properly documented,
 but apparently supported in Dimension Pro, Rapture, and the Cakewalk sfz player

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: ampeg_decay_zero
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_decay_zero"
 ---
 When 1, indicates decay time is the time it would take to get from 0dBs to -oo,
 NOT the time to reach current sustain (as when 0).
@@ -18,7 +18,7 @@ Setting this to false will make the decay always happen during the entire
 time period specified by `ampeg_decay`, regardless of the current
 `ampeg_sustain` level.
 
-##### Examples
+## Examples
 
 ```
 ampeg_decay_zero=0

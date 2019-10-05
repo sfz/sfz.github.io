@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: bend_stepup
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "bend_stepup"
 ---
 If this is set to the same value as [bend_stepdown](bend_stepdown),
 the result is the same as using [bend_step](bend_step).
 
-##### Examples
+## Examples
 
 ```
 bend_stepup=100 // glissando in semitones

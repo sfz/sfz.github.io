@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: fil_random
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "fil_random"
 ---
-##### Examples
+## Examples
 
 ```
 fil_random=100

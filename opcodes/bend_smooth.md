@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: bend_smooth
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "bend_smooth"
 ---
-##### Examples
+## Examples
 
 ```
 bend_smooth=50

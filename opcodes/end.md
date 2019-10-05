@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: end
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "end"
 ---
 The player will reproduce the whole sample if `end` is not specified - in other
 words, in most cases, this does not need to be set.
@@ -11,7 +11,7 @@ be used to use a silent region to turn off other regions by using the [group](gr
 and [off_by](off_by) opcodes (though with ARIA extensions,
 [sample](sample)=*silence is an easy way to accomplish this also).
 
-##### Examples
+## Examples
 
 ```
 end=133000

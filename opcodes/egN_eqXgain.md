@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: egN_eqXgain
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_eqXgain"
 ---

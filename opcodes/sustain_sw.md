@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sustain_sw
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sustain_sw"
 ---
-##### Example
+## Example
 
 ```
 sustain_sw=off

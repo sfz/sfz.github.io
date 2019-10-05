@@ -1,8 +1,9 @@
 ---
-lang: en
-title: egN_levelX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_levelX"
 ---
-##### Examples
+## Examples
 
 ```
 eg01_level0=-1

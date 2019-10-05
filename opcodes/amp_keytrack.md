@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amp_keytrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amp_keytrack"
 ---
-##### Examples
+## Examples
 
 ```
 amp_keytrack=-1.4

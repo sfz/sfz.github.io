@@ -1,13 +1,13 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lokey / hikey
+layout: "sfz/opcode"
+lang: "en"
+title: "lokey / hikey"
 ---
 When a region only covers one note, it is generally more convenient to use
 [key](key) instead of `hikey` and `lokey`. When `hikey` and `lokey` are used,
 they will usually need to be used together with [pitch_keycenter](pitch_keycenter).
 
-##### Examples
+## Examples
 
 ```
 <region> sample=*sine lokey=c5 hikey=c6

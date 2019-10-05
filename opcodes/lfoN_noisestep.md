@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_noisestep
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_noisestep"
 ---

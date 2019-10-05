@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: ampeg_release_zero
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_release_zero"
 ---
 When true/on/1, indicates release time is the time it would take to get
 from 0dBs to -oo, NOT the time to get from the current sustain to zero
@@ -13,7 +13,7 @@ stage will actually take. Setting this to false will make the release always
 happen during the entire time period specified by [ampeg_release](ampeg_release),
 regardless of the current [ampeg_sustain](ampeg_sustain) level.
 
-##### Examples
+## Examples
 
 ```
 ampeg_release_zero=false

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: ampeg_release_shape
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_release_shape"
 ---
 0 is linear, positive values are slower curves (that means the envelope will
 initially not fade out much, and most of the fade will happen towards the end of
@@ -11,7 +11,7 @@ that point, the envelope is practically a horizontal line and a vertical line
 (if positive) or a vertical line followed by a horizontal line (if negative).
 Default is 0.
 
-##### Examples
+## Examples
 
 ```
 ampeg_release_shape=2.1

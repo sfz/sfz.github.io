@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amp_velcurve_N
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amp_velcurve_N"
 ---
 This opcode range allows defining a specific curve for the amplifier velocity.
 The value of the opcode indicates the normalized amplitude (0 to 1)

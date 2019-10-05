@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pitch_keytrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "pitch_keytrack"
 ---
 Default value is 100, which means pitch will change one hundred cents
 (one semitone) per played note.
@@ -9,7 +9,7 @@ Default value is 100, which means pitch will change one hundred cents
 Setting this value to zero means that all notes in the region will play the same
 pitch, particularly useful when mapping drum sounds.
 
-##### Examples
+## Examples
 
 ```
 pitch_keytrack=20

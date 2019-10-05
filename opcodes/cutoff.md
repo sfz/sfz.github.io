@@ -6,7 +6,7 @@ opcode_name: "cutoff"
 Note that while this is specified in Hertz,
 filter LFO depths in the SFZ 1 spec are in cents.
 
-##### Examples
+## Examples
 
 ```
 cutoff=343

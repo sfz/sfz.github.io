@@ -1,11 +1,12 @@
 ---
-lang: en
-title: egN_timeX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_timeX"
 ---
 The time duration from an envelope point to another, in seconds.
 Can also be modulated with MIDI CC.
 
-##### Examples
+## Examples
 
 ```
 eg01_time1=0.5

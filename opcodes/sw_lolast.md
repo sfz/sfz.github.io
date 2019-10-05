@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sw_lolast / sw_hilast
+layout: "sfz/opcode"
+lang: "en"
+title: "sw_lolast / sw_hilast"
 ---
 `sw_lolast` specifies the bottom of the range, and `sw_hilast` the high.
 
-##### Example
+## Example
 
 ```
 sw_lolast=24

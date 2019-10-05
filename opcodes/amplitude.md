@@ -6,7 +6,7 @@ opcode_name: "amplitude"
 100% amplitude meaning no volume change is applied to the sample when played.
 Can be modulated with MIDI CC.
 
-##### Examples
+## Examples
 
 ```
 amplitude=12

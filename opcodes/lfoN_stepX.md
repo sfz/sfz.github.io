@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_stepX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_stepX"
 ---

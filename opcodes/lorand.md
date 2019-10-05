@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lorand / hirand
+layout: "sfz/opcode"
+lang: "en"
+title: "lorand / hirand"
 ---
 Random values. The player will generate a new random number on every note-on event,
 in the range 0 to 1.
 
-##### Examples
+## Examples
 
 ```
 lorand=0.2 hirand=0.4

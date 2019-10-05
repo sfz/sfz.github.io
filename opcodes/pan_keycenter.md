@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pan_keycenter
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "pan_keycenter"
 ---
 In this key, [pan_keytrack](pan_keytrack) will have no effect.
 
-##### Examples
+## Examples
 
 ```
 pan_keycenter=48

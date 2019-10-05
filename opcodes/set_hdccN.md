@@ -1,14 +1,14 @@
 ---
-layout: sfz/opcode
-lang: en
-title: set_hdccN
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "set_hdccN"
 ---
 Sets a default initial value for MIDI CC number X using a floating point value,
 when the instrument is initially loaded.
 
 Used under the ‹[control](/headers/control)› header.
 
-##### Examples
+## Examples
 
 ```
 set_hdcc40=1.9483

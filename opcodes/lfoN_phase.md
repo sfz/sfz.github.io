@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_phase
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_phase"
 ---
-##### Example
+## Example
 
 ```
 lfo02_phase=0.5

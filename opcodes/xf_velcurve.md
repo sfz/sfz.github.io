@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: xf_velcurve
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "xf_velcurve"
 ---
 Values can be:
 

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: egN_shapeX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_shapeX"
 ---
 Curve shape before the specified envelope point in envelope N. Default is 0.
 0 is linear, positive values are slower and negative values faster.
@@ -11,7 +11,7 @@ vertical line followed by a horizontal line (if negative).
 
 Shapes values can also be applied to "regular" ampeg, pitch and cutoff envelopes.
 
-##### Examples
+## Examples
 
 ```
 eg01_shape1=5.2

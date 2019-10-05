@@ -1,13 +1,13 @@
 ---
-layout: sfz/opcode
-title: "#define"
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "#define"
 ---
 Variable names start with the $ character.
 This opcode is used under the ‹[control](/headers/control)› header,
 and the defined variables can then be used anywhere else in the file.
 
-##### Example
+## Example
 
 ```
 #define $KICKKEY 36

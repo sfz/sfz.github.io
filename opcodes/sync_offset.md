@@ -1,13 +1,13 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sync_offset
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sync_offset"
 ---
 When [sync_beats](sync_beats) is specified and after input controls instruct
 the region to play, the playback will be postponed until the next multiple of
 the specified value plus the `sync_offset` value is crossed.
 
-##### Example
+## Example
 
 ```
 sync_beats=4

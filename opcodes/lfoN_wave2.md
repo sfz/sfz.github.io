@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_wave2
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_wave2"
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs. Up to 8 waveforms can be used in
@@ -10,7 +10,7 @@ one LFO.
 frequencies, and [lfoN_scale2](lfoN_scale) scale [lfoN_offsetX](lfoN_offsetX)
 can optionally be used as well.
 
-##### Example
+## Example
 
 ```
 lfo01_wave2=1

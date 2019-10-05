@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_freq
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_freq"
 ---
 Can be modulated by MIDI CC, and the modulation can be smoothed
 so that rapid controller changes are applied with some "inertia".
 
-##### Examples
+## Examples
 
 ```
 lfo01_freq=2

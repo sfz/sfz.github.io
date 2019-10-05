@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: global_volume
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "global_volume"
 ---

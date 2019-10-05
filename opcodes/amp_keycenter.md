@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amp_keycenter
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amp_keycenter"
 ---
-##### Examples
+## Examples
 
 ```
 amp_keycenter=60

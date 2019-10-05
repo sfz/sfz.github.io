@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sample
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sample"
 ---
 Possibly the most important opcode, this is the one that tells the sampler which
 sample file to actually play. This should include a relative file path from the
@@ -28,7 +28,7 @@ If the key opcode is used to define the range of the sample (instead of [lokey](
 [hikey](lokey) and [pitch_keycenter](pitch_keycenter)) the sample will also
 be unchanged in pitch.
 
-##### Examples
+## Examples
 
 ```
 sample=A3.wav

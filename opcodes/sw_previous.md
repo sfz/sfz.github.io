@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sw_previous
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sw_previous"
 ---
 `sw_previous` can be entered in either MIDI note numbers (0 to 127) or
 in MIDI note names (C-1 to G9)
 
-##### Example
+## Example
 
 ```
 sw_previous=60

@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: group
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "group"
 ---
-##### Examples
+## Examples
 
 ```
 group=3

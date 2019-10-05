@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: off_mode
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "off_mode"
 ---
 Region off mode. This opcode will determinate how a region is turned off by an
 [off_by](/opcodes/off_by) opcode. There are two choices:
@@ -17,7 +17,7 @@ of the sample release time using [off_time](/opcodes/off_time),
 and also [off_shape](/opcodes/off_shape) and [off_curve](/opcodes/off_curve)
 to control the curve of the fadeout.
 
-##### Examples
+## Examples
 
 ```
 off_mode=fast

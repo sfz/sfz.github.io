@@ -1,8 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_sustain"
 ---
-##### Examples
+## Examples
 
 ```
 ampeg_sustain=40.34

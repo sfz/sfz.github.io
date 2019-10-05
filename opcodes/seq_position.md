@@ -1,14 +1,14 @@
 ---
-layout: sfz/opcode
-lang: en
-title: seq_position
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "seq_position"
 ---
 This is used together with [seq_length](/opcodes/seq_length) to use samples
 as round robins. The player will keep an internal counter creating a consecutive
 note-on sequence for each region, starting at 1 and resetting at seq_length.
 Maximum allowed value is 100.
 
-##### Example
+## Example
 
 ```
 seq_length=4 seq_position=2

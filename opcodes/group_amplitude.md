@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: group_amplitude
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "group_amplitude"
 ---
-##### Example
+## Example
 
 ```
 group_amplitude=60

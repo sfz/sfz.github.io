@@ -1,8 +1,8 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
 ---
-##### Examples
+## Examples
 
 ```
 eq1_vel2freq=1000

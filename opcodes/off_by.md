@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: off_by
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "off_by"
 ---
 When a new region with a group number equal to `off_by` plays,
 this region will be turned off.
 
-##### Examples
+## Examples
 
 ```
 off_by=3

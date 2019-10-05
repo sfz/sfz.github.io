@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_wave
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_wave"
 ---
 <ol start="0">
 <li>triangle</li>
@@ -36,7 +36,7 @@ In [ARIA](/software/players/aria), the waves are:
 
 The waveforms supported in the other player engines need to be tested.
 
-##### Examples
+## Examples
 
 ```
 lfo01_wave=6

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: xf_cccurve
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "xf_cccurve"
 ---
 Values can be:
 

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: offset_random
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "offset_random"
 ---
 In many cases, will need to be used with a small [ampeg_attack](ampeg_attack)
 value to avoid clicks caused by the region playing starting with a point
@@ -14,7 +14,7 @@ not a good idea to make the offset_random values so high that they would cause t
 offset to exceeed this buffer. In practice, that means keeping offset_random no
 higher than 20000 or so on most systems.
 
-##### Examples
+## Examples
 
 ```
 offset_random=300

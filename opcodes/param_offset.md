@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: param_offset
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "param_offset"
 ---
 Multiples of 100 seem most convenient, because with param_offset=300 that would
 put the first parameter on 300, second on 301, third on 302 and so on, but other
@@ -10,7 +10,7 @@ numbers above 127. In practice with the Sforzando SFZ player, it appears that
 values that result in all the effect parameters falling between 257 and 500 work
 best. Higher numbers work, but may not be accessible to DAWs for automation etc.
 
-##### Examples
+## Examples
 
 ```
 param_offset=300

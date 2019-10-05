@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: output
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "output"
 ---
 If the player doesn't feature multiple outputs (which most currently do not),
 this opcode is ignored.
 
-##### Examples
+## Examples
 
 ```
 output=0

@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_resonance
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_resonance"
 ---

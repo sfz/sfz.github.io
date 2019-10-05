@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: loccN / hiccN
+layout: "sfz/opcode"
+lang: "en"
+title: "loccN / hiccN"
 ---
 N will normally be a number from 1 to 127.
 
-##### Examples
+## Examples
 
 ```
 locc74=30 hicc74=100

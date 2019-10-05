@@ -1,8 +1,9 @@
 ---
-lang: en
-title: egN_curveX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_curveX"
 ---
-##### Example
+## Example
 
 ```
 eg01_curve1=10

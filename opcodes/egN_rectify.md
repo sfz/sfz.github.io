@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: egN_rectify
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_rectify"
 ---

@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: rt_dead
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "rt_dead"
 ---
 Allowed values are on and off, default is off, so by default, release
 samples do not play if their sustain samples have expired.
 
-##### Example
+## Example
 
 ```
 rt_dead=on

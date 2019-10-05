@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: master_amplitude
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "master_amplitude"
 ---
-##### Example
+## Example
 
 ```
 master_amplitude=60

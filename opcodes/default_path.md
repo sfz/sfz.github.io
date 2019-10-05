@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: default_path
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "default_path"
 ---
 Used under the ‹[control](/headers/control)› header.
 
-##### Example
+## Example
 
 ```
 default_path=../Samples

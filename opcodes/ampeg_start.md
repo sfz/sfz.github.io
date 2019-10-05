@@ -1,8 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_start"
 ---
-##### Examples
+## Examples
 
 ```
 ampeg_start=20

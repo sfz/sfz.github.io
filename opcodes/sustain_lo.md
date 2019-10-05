@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sustain_lo
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sustain_lo"
 ---
 This ARIA extension used under the ‹[control](/headers/control)› header sets the
 minimum point at which the sustain pedal (MIDI CC 64) is considered "down".
@@ -17,7 +17,7 @@ Please note that the direction of the MIDI CC values is normally from 0 at the
 top of the pedal to 127 when it is at the bottom, meaning that physically "down"
 on the pedal is up in terms of MIDI CC value.
 
-##### Examples
+## Examples
 
 ```
 sustain_lo=64

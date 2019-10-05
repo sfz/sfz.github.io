@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: eqN_bw
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "eqN_bw"
 ---
-##### Examples
+## Examples
 
 ```
 eq1_bw=1

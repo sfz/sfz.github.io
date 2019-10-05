@@ -1,6 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_delay"
 ---
 This is the time elapsed from note on to the start of
 the Attack stage.
@@ -9,7 +10,7 @@ If both envelope delay and the general [delay](delay) or [delay_random](delay_ra
 are used in the same region, the envelope delays start after [delay](delay) and
 [delay_random](delay_random) have both completed their duration.
 
-##### Examples
+## Examples
 
 ```
 fileg_delay=0.004

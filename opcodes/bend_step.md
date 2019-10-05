@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: bend_step
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "bend_step"
 ---
-##### Examples
+## Examples
 
 ```
 bend_step=100 // glissando in semitones

@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_scale
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_scale"
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
@@ -11,7 +11,7 @@ Using `lfoN_scale` with no number after the scale is perhaps not needed very oft
 and scale will mostly be used on the sub waveforms, but it can also be set for
 the main waveform if needed.
 
-##### Example
+## Example
 
 ```
 lfo01_scale2=0.5

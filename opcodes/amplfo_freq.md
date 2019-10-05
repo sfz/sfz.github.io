@@ -1,8 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amplfo_freq"
 ---
-##### Examples
+## Examples
 
 ```
 amplfo_freq=0.4

@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_offsetX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_offsetX"
 ---
-##### Examples
+## Examples
 
 ```
 lfo01_offset=0.1

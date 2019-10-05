@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: loop_mode
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "loop_mode"
 ---
 If `loop_mode` is not specified, each sample will play according to its predefined
 loop mode according to the loop metadata in the audio file. That is, the player
@@ -23,7 +23,7 @@ The possible values are:
                     it depressed or by using the sustain pedal (CC64).
                     The rest of the sample will play after note release.
 
-##### Examples
+## Examples
 
 ```
 loop_mode=no_loop

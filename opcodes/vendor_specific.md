@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: vendor_specific
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "vendor_specific"
 ---

@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_drive
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_drive"
 ---

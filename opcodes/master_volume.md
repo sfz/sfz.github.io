@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: master_volume
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "master_volume"
 ---

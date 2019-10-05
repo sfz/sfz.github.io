@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: eqN_gain
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "eqN_gain"
 ---
-##### Examples
+## Examples
 
 ```
 eq1_gain=-3

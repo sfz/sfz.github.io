@@ -1,10 +1,10 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
 ---
 In decibels for amplitude, in cents for pitch and filter cutoff.
 
-##### Examples
+## Examples
 
 ```
 amplfo_depthchanaft=1

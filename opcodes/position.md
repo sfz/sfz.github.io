@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: position
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "position"
 ---
 A value of zero means centered, negative values move the panoramic to the left,
 positive to the right.
 
-##### Examples
+## Examples
 
 ```
 // mix both channels and play the result at left

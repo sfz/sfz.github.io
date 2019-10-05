@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: loop_start
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "loop_start"
 ---
 If `loop_start` is not specified and the sample has a loop defined, the SFZ player
 will use the start point of the first loop defined in the file. That means for
@@ -16,7 +16,7 @@ to get anything other than the first defined loop to play.
 This opcode will not have any effect if [loop_mode](loop_mode) is set
 to ***no_loop***.
 
-##### Examples
+## Examples
 
 ```
 loop_start=4503

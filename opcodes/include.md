@@ -1,7 +1,7 @@
 ---
 layout: "sfz/opcode"
-title: "#include"
 lang: "en"
+opcode_name: "#include"
 ---
 A special directive, #include allows using SFZ files as building blocks for
 creating larger, more complex SFZ files. The file to which #include points is,
@@ -22,7 +22,7 @@ This is useful for creating large complex files, and also for simplifying the
 management of files which repeat similar regions with different opcodes. This is
 especially convenient in conjunction with the ‹[master](/headers/master)› header.
 
-##### Examples
+## Examples
 
 ```
 #include "header.sfz"

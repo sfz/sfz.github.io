@@ -1,11 +1,11 @@
 ---
-layout: sfz/opcode
-lang: en
-title: set_ccN
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "set_ccN"
 ---
 Used under the ‹[control](/headers/control)› header.
 
-##### Examples
+## Examples
 
 ```
 set_cc40=127

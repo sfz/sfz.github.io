@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: delay_beats
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "delay_beats"
 ---

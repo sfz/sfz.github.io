@@ -1,8 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amplfo_delay"
 ---
-##### Examples
+## Examples
 
 ```
 pitchlfo_delay=1

@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: seq_length
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "seq_length"
 ---
 The player will keep an internal counter creating a consecutive note-on sequence
 for each region, starting at 1 and resetting at `seq_length`.
 
-##### Example
+## Example
 
 ```
 seq_length=3

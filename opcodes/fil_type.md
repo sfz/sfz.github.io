@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: fil_type
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "fil_type"
 ---
 Allows you to choose which type of filter you use. if not specified
 (ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ).
@@ -15,7 +15,7 @@ Filter types in the SFZ1 spec are:
 - ***bpf_2p***: two-pole band pass filter (12dB/octave).
 - ***brf_2p***: two-pole band rejection filter (12dB/octave).
 
-##### Examples
+## Examples
 
 ```
 fil_type=lpf_2p

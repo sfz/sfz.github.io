@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: varNN_curveccX
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "varNN_curveccX"
 ---
-##### Example
+## Example
 
 ```
 var01_curvecc11=1

@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lfoN_pan
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "lfoN_pan"
 ---

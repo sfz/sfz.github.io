@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: xf_keycurve
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "xf_keycurve"
 ---
 Values can be:
 

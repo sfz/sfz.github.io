@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: trigger
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "trigger"
 ---
 Values can be:
 
@@ -17,7 +17,7 @@ Values can be:
 - ***legato***: Region will play on note-on, but only if there's a note going on
                 (notes after first note in a legato phrase).
 
-##### Example
+## Example
 
 ```
 trigger=release

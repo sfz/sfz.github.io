@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: transpose
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "transpose"
 ---
-##### Examples
+## Examples
 
 ```
 transpose=3

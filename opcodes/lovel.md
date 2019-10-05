@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: lovel / hivel
+layout: "sfz/opcode"
+lang: "en"
+title: "lovel / hivel"
 ---
 This is obviously useful for instruments with dynamic layers controlled by velocity.
 Though dynamic layers can also be controlled by CC, especially for sustained
@@ -16,7 +16,7 @@ that with default velocity tracking behavior and non-normalized samples (and
 there are many reasons why normalizing samples should be avoided), the quiet
 velocity layers will be too quiet.
 
-##### Example
+## Example
 
 ```
 lovel=64 hivel=95

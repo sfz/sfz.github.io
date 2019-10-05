@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: effect1
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "effect1"
 ---
-##### Example
+## Example
 
 ```
 effect1=100

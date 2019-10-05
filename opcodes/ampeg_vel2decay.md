@@ -1,8 +1,8 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
 ---
-##### Examples
+## Examples
 
 ```
 fileg_vel2decay=1.2

@@ -1,8 +1,8 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
 ---
-##### Examples
+## Examples
 
 ```
 pitcheg_vel2depth=1200

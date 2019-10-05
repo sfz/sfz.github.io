@@ -1,8 +1,8 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
 ---
-##### Examples
+## Examples
 
 ```
 ampeg_vel2release=1.2

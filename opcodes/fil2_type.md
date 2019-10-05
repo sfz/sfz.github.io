@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: fil2_type
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "fil2_type"
 ---
 When used, there are two filters applied to the region in series.
 

@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: rt_decay
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "rt_decay"
 ---
-##### Example
+## Example
 
 ```
 <region> sample=pianoA4.wav trigger=attack

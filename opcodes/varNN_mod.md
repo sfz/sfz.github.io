@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: varNN_mod
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "varNN_mod"
 ---
 Specifies the method used to calculate variable number NN from MIDI CCs.
 
@@ -11,7 +11,7 @@ Specifies the method used to calculate variable number NN from MIDI CCs.
 - ***add***: addition, how [volume](volume), [cutoff](cutoff) and all other
              modulation destinations work by default when modulated.
 
-##### Example
+## Example
 
 ```
 var01_mod=mult

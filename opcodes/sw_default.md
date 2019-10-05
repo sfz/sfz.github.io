@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sw_default / sw_label
+layout: "sfz/opcode"
+lang: "en"
+title: "sw_default / sw_label"
 ---
 Just copy the following in your preferred text editor (we suggest [Notepad++](https://notepad-plus-plus.org/)),
 save as an SFZ and try it in Sforzando / ARIA Player:

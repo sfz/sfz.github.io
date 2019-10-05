@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: xfin_loccN / xfin_hiccN
+layout: "sfz/opcode"
+lang: "en"
+title: "xfin_loccN / xfin_hiccN"
 ---
 `xfin_loccN` and `xfin_hiccN` set the range of values in the MIDI continuous
 controller N which will perform a fade-in in the region.
@@ -10,7 +10,7 @@ The volume of the region will be zero for values of the MIDI continuous
 controller N lower than or equal to `xfin_loccN`, and maximum (as defined by the
 volume opcode) for values greater than or equal to `xfin_hiccN`.
 
-##### Examples
+## Examples
 
 ```
 xfin_locc1=64

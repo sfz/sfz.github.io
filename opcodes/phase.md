@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: phase
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "phase"
 ---
-##### Example
+## Example
 
 ```
 phase=invert

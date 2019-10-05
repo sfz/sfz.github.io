@@ -1,14 +1,14 @@
 ---
-layout: sfz/opcode
-lang: en
-title: varNN_target
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "varNN_target"
 ---
 The list of possible modulation targets is basically the same standard list
 as for LFOs or envelopes, though variables can't modulate other modulators,
 so it's not currently possible to use a variable to modulate an LFO,
 or to modulate another variable.
 
-##### Example
+## Example
 
 ```
 var01_cutoff=4800

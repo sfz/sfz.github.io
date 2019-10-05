@@ -1,8 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "ampeg_decay"
 ---
-##### Examples
+## Examples
 
 ```
 ampeg_decay=1.5

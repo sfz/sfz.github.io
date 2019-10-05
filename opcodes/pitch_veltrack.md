@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pitch_veltrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "pitch_veltrack"
 ---
-##### Examples
+## Examples
 
 ```
 pitch_veltrack=0

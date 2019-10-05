@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: sostenuto_lo
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "sostenuto_lo"
 ---
 Used under the ‹[control](/headers/control)› header.
 Default is 1, meaning the sustain pedal is down as long as the CC value is
@@ -12,7 +12,7 @@ some other low number such as 10, is useful when the piano supports
 half-pedaling. Setting it to 64 is preferred by some users who want to use the
 sostenuto pedal as an on/off switch for instruments with no half-pedaling.
 
-##### Examples
+## Examples
 
 ```
 sostenuto_lo=64

@@ -1,11 +1,12 @@
 ---
-lang: en
-title: egN_loop
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_loop"
 ---
 Envelopes can be looped. Not sure exactly how this works and will need to test
 this, but `egN_loop`, `egN_loop_shape` and `egN_loop_count` are all supported.
 
-##### Example
+## Example
 
 ```
 eg01_loop=2

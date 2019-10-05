@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: bend_down
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "bend_down"
 ---
 If [bend_up](bend_up) is set to a positive value,
 then moving the pitch wheel down will cause the pitch to move up.
 
-##### Examples
+## Examples
 
 ```
 bend_down=1200

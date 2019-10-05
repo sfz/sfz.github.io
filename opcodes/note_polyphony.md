@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: note_polyphony
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "note_polyphony"
 ---
-##### Example
+## Example
 
 ```
 polyphony_limit=3

@@ -1,11 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
+layout: "sfz/opcode"
+lang: "en"
+title: "on_loccN / on_hiccN"
 ---
 Sample trigger on MIDI continuous control N.
 This does not involve playing any MIDI notes.
 
-##### Example
+## Example
 
 ```
 on_locc64=127 on_hicc64=127

@@ -5,7 +5,7 @@ opcode_name: "cutoff2"
 ---
 When used, there are two filters applied to the region in series.
 
-##### Example
+## Example
 
 ```
 cutoff2=1200

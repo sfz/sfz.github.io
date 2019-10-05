@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: amp_random
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "amp_random"
 ---
-##### Examples
+## Examples
 
 ```
 amp_random=10

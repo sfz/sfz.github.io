@@ -1,12 +1,12 @@
 ---
-layout: sfz/opcode
-lang: en
-title: pan_veltrack
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "pan_veltrack"
 ---
 With positive values, higher-velocity notes will be panned more to the right,
 with negative values more to the left.
 
-##### Examples
+## Examples
 
 ```
 pan_veltrack=100

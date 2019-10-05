@@ -1,5 +1,5 @@
 ---
-layout: sfz/opcode
-lang: en
-title: egN_noisestep
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "egN_noisestep"
 ---

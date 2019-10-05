@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: eqN_freq
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "eqN_freq"
 ---
-##### Examples
+## Examples
 
 ```
 eq1_freq=80

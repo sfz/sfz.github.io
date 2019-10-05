@@ -1,7 +1,7 @@
 ---
-layout: sfz/opcode
-lang: en
-title: off_shape
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "off_shape"
 ---
 See also [off_time](off_time) and [off_curve](off_curve).
 
@@ -13,7 +13,7 @@ more slowly). Past 10 or -10, there's little difference - at that point,
 the envelope is practically a horizontal line and a vertical line (if positive)
 or a vertical line followed by a horizontal line (if negative). Default is 0.
 
-##### Examples
+## Examples
 
 ```
 off_shape=2.1

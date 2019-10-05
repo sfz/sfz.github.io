@@ -1,9 +1,9 @@
 ---
-layout: sfz/opcode
-lang: en
-title: global_amplitude
+layout: "sfz/opcode"
+lang: "en"
+opcode_name: "global_amplitude"
 ---
-##### Example
+## Example
 
 ```
 global_amplitude=60
