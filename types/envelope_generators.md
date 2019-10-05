@@ -34,7 +34,6 @@ These are 6-points Delay-Attack-Hold-Decay-Sustain-Release.
 - [(eg type)_vel2attack](/opcodes/ampeg_vel2attack)
 - [(eg type)_vel2decay](/opcodes/ampeg_vel2decay)
 - [(eg type)_vel2delay](/opcodes/ampeg_vel2delay)
-- [(eg type)_vel2depth](/opcodes/ampeg_vel2depth)
 - [(eg type)_vel2hold](/opcodes/ampeg_vel2hold)
 - [(eg type)_vel2release](/opcodes/ampeg_vel2release)
 - [(eg type)_vel2sustain](/opcodes/ampeg_vel2sustain)

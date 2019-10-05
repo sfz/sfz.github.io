@@ -2269,7 +2269,7 @@ categories:
       modulation:
         midi_cc:
         - name: "fileg_attack_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2299,7 +2299,7 @@ categories:
       modulation:
         midi_cc:
         - name: "fileg_decay_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2329,7 +2329,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "fileg_delay_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2358,7 +2358,7 @@ categories:
       modulation:
         midi_cc:
         - name: "fileg_depth_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2388,7 +2388,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "fileg_hold_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2448,7 +2448,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "fileg_start_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2468,7 +2468,7 @@ categories:
       modulation:
         midi_cc:
         - name: "fileg_sustain_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2498,7 +2498,7 @@ categories:
       modulation:
         midi_cc:
         - name: "pitcheg_attack_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
         velocity:
         - name: "pitcheg_vel2attack"
           short_description: "Velocity effect on EG attack time."
@@ -2522,7 +2522,7 @@ categories:
       modulation:
         midi_cc:
         - name: "pitcheg_decay_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2552,7 +2552,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "pitcheg_delay_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2581,7 +2581,7 @@ categories:
       modulation:
         midi_cc:
         - name: "pitcheg_depth_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2611,7 +2611,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "pitcheg_hold_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2671,7 +2671,7 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "pitcheg_start_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
@@ -2691,7 +2691,7 @@ categories:
       modulation:
         midi_cc:
         - name: "pitcheg_sustain_onccN"
-          version: "SFZ v2"
+          version: "ARIA"
           value:
             type_name: "float"
             default: 0
