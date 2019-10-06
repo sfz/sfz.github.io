@@ -1,7 +1,9 @@
 {%-assign opcode_default_value_result = "N/A"-%}
 {%-if include.const_opcode.value.default-%}
-	{%-assign opcode_default_value_result = include.const_opcode.value.default |
-		append: ' ' | append: include.const_opcode.value.unit-%}
+	{%-assign opcode_default_value_result = include.const_opcode.value.default-%}
+{%-comment-%}
+		| append: ' ' | append: include.const_opcode.value.unit-%}
+{%-endcomment-%}
 {%-endif-%}
 {{ opcode_default_value_result }}
 {%-comment-%} No new line after result {%-endcomment-%}
