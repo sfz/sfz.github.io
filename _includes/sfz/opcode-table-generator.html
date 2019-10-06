@@ -9,7 +9,7 @@ pages describing the parameters they modulate.</p>
 	{%-endcapture-%}
 	{%-if category_opcode_array.size > 0-%}
 <h2>{{category_url}}</h2>
-<table class="table table-sm table-hover table-striped table-responsive">
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Opcode</th>
@@ -89,7 +89,7 @@ pages describing the parameters they modulate.</p>
 				{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category_type-%}
 			{%-endcapture-%}
 <h2>{{ category_url }}: {{ category_type_url }}</h2>
-<table class="table table-sm table-hover table-striped table-responsive">
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Opcode</th>
