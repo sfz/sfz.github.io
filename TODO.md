@@ -10,6 +10,7 @@ title: "TODO"
 	info table and keep track of aliases (opcode layout).
 	(E.g.: see [cutoff] opcode page)
 - Support for aliased opcodes, removing duplicated data.
+- Variables inheritance.
 
 ## Instrument settings:
 
