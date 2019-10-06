@@ -148,7 +148,6 @@ categories:
           "<b>no_loop</b> for samples without a loop defined,
           <br><b>loop_continuous</b> for samples with defined loop(s)."
         options:
-
         - name: "no_loop"
           description:
             "no looping will be performed.
@@ -1367,6 +1366,10 @@ categories:
     - name: "amp_velcurve_N"
       short_description: "User-defined amplifier velocity curve."
       version: "SFZ v1"
+      index:
+        type_name: "integer"
+        min: 0
+        max: 127
       value:
         type_name: "float"
         default:
@@ -1932,18 +1935,68 @@ categories:
         unit: "cents"
 
     - name: "fil_type"
-      version: "SFZ v1"
       short_description: "Filter type."
+      version: "SFZ v1"
       value:
         type_name: "string"
         default: "lpf_2p"
         options:
         - name: "lpf_1p"
+          description: "One-pole low pass filter (6dB/octave)."
         - name: "hpf_1p"
+          description: "One-pole high pass filter (6dB/octave)."
         - name: "lpf_2p"
+          description: "Two-pole low pass filter (12dB/octave)."
         - name: "hpf_2p"
+          description: "Two-pole high pass filter (12dB/octave)."
         - name: "bpf_2p"
+          description: "Two-pole band pass filter (12dB/octave)."
         - name: "brf_2p"
+          description: "Two-pole band rejection filter (12dB/octave)."
+
+# TODO: Uncomment once the options will be handled
+#       - name: "bpf_1p"
+#         description: "One-pole band pass filter (6dB/octave)."
+#         version: "SFZ v2"
+#       - name: "brf_1p"
+#         description: "One-pole band rejection filter (6dB/octave)."
+#         version: "SFZ v2"
+#       - name: "apf_1p"
+#         description: "One-pole all pass filter (6dB/octave)."
+#         version: "SFZ v2"
+#       - name: "lpf_2p_sv"
+#         description: "Two-pole low pass filter (12dB/octave) state variable."
+#         version: "SFZ v2"
+#       - name: "hpf_2p_sv"
+#         description: "Two-pole high pass filter (12dB/octave) state variable."
+#         version: "SFZ v2"
+#       - name: "bpf_2p_sv"
+#         description: "Two-pole band pass filter (12dB/octave) state variable."
+#         version: "SFZ v2"
+#       - name: "brf_2p_sv"
+#         description: "Two-pole band rejection filter (12dB/octave) state variable."
+#         version: "SFZ v2"
+#       - name: "pkf_2p"
+#         description: "Two-pole peak filter (12dB/octave)."
+#         version: "SFZ v2"
+#       - name: "lpf_4p"
+#         description: "Four-pole low pass filter (24dB/octave)."
+#         version: "SFZ v2"
+#       - name: "hpf_4p"
+#         description: "Four-pole high pass filter (24dB/octave)."
+#         version: "SFZ v2"
+#       - name: "lpf_6p"
+#         description: "Six-pole low pass filter (36dB/octave)."
+#         version: "SFZ v2"
+#       - name: "hpf_6p"
+#         description: "Six-pole high pass filter (36dB/octave)."
+#         version: "SFZ v2"
+#       - name: "comb"
+#         description: "Comb filter."
+#         version: "SFZ v2"
+#       - name: "pink"
+#         description: "Pink filter."
+#         version: "SFZ v2"
 
     - name: "fil_veltrack"
       version: "SFZ v1"
@@ -2085,11 +2138,45 @@ categories:
         default: "lpf_2p"
         options:
         - name: "lpf_1p"
+          description: "One-pole low pass filter (6dB/octave)."
         - name: "hpf_1p"
+          description: "One-pole high pass filter (6dB/octave)."
         - name: "lpf_2p"
+          description: "Two-pole low pass filter (12dB/octave)."
         - name: "hpf_2p"
+          description: "Two-pole high pass filter (12dB/octave)."
         - name: "bpf_2p"
+          description: "Two-pole band pass filter (12dB/octave)."
         - name: "brf_2p"
+          description: "Two-pole band rejection filter (12dB/octave)."
+        - name: "bpf_1p"
+          description: "One-pole band pass filter (6dB/octave)."
+        - name: "brf_1p"
+          description: "One-pole band rejection filter (6dB/octave)."
+        - name: "apf_1p"
+          description: "One-pole all pass filter (6dB/octave)."
+        - name: "lpf_2p_sv"
+          description: "Two-pole low pass filter (12dB/octave) state variable."
+        - name: "hpf_2p_sv"
+          description: "Two-pole high pass filter (12dB/octave) state variable."
+        - name: "bpf_2p_sv"
+          description: "Two-pole band pass filter (12dB/octave) state variable."
+        - name: "brf_2p_sv"
+          description: "Two-pole band rejection filter (12dB/octave) state variable."
+        - name: "pkf_2p"
+          description: "Two-pole peak filter (12dB/octave)."
+        - name: "lpf_4p"
+          description: "Four-pole low pass filter (24dB/octave)."
+        - name: "hpf_4p"
+          description: "Four-pole high pass filter (24dB/octave)."
+        - name: "lpf_6p"
+          description: "Six-pole low pass filter (36dB/octave)."
+        - name: "hpf_6p"
+          description: "Six-pole high pass filter (36dB/octave)."
+        - name: "comb"
+          description: "Comb filter."
+        - name: "pink"
+          description: "Pink filter."
 
     - name: "fil2_veltrack"
       short_description:
@@ -2150,6 +2237,108 @@ categories:
             min: 0
             max: 40
             unit: "dB"
+
+    - name: "noise_filter"
+      version: "SFZ v2"
+      short_description:
+        "Used in Cakewalk products, unknown."
+      value:
+        options:
+        - name: "on"
+        - name: "off"
+        - name: "lpf_1p"
+        - name: "hpf_1p"
+        - name: "bpf_1p"
+        - name: "brf_1p"
+        - name: "apf_1p"
+        - name: "lpf_2p"
+        - name: "hpf_2p"
+        - name: "bpf_2p"
+        - name: "brf_2p"
+        - name: "pkf_2p"
+        - name: "lpf_4p"
+        - name: "hpf_4p"
+        - name: "lpf_6p"
+        - name: "hpf_6p"
+        - name: "comb"
+        - name: "pink"
+
+    - name: "noise_stereo"
+      version: "SFZ v2"
+      short_description:
+        "Used in Cakewalk products, unknown."
+      value:
+        options:
+        - name: "on"
+        - name: "off"
+
+    - name: "noise_level"
+      version: "SFZ v2"
+      short_description:
+        "Used in Cakewalk products, unknown."
+      value:
+        type_name: "float"
+        min: -96
+        max: 24
+        unit: "dB"
+      modulation:
+        midi_cc:
+        - name: "noise_level_onccN"
+          version: "SFZ v2"
+          short_description:
+            "Used in Cakewalk products, unknown."
+          value:
+            type_name: "float"
+            min: -96
+            max: 24
+            unit: "dB"
+        - name: "noise_level_smoothccN"
+          version: "SFZ v2"
+          short_description:
+            "Used in Cakewalk products, unknown."
+          value:
+            type_name: "float"
+            min: -96
+            max: 24
+            unit: "dB"
+
+    - name: "noise_step"
+      version: "SFZ v2"
+      short_description:
+        "Used in Cakewalk products, unknown."
+      value:
+        type_name: "integer"
+        min: 0
+        max: 100
+      modulation:
+        midi_cc:
+        - name: "noise_step_onccN"
+          version: "SFZ v2"
+          short_description:
+            "Used in Cakewalk products, unknown."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 100
+
+    - name: "noise_tone"
+      version: "SFZ v2"
+      short_description:
+        "Used in Cakewalk products, unknown."
+      value:
+        type_name: "integer"
+        min: 0
+        max: 100
+      modulation:
+        midi_cc:
+        - name: "noise_tone_onccN"
+          version: "SFZ v2"
+          short_description:
+            "Used in Cakewalk products, unknown."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 100
 
   - name: "Pitch"
     opcodes:
@@ -3122,11 +3311,7 @@ categories:
             max: 100
             unit: "%"
 
-    - name: "egN_points" # TODO: Source?
-      short_description: ""
-      version: "SFZ v2"
-
-    - name: "egN_shape" # TODO: Source?
+    - name: "egN_points"
       short_description: ""
       version: "SFZ v2"
 
@@ -3299,67 +3484,91 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_decim"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_decim_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_bitred"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_bitred_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_rectify"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_rectify_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_ringmod"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_ringmod_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_noiselevel"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noiselevel_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_noisestep"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisestep_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_noisetone"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisetone_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "egN_driveshape"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_driveshape_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
   - name: "LFO"
@@ -3925,75 +4134,117 @@ categories:
           version: "SFZ v2"
 
     - name: "lfoN_decim"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_decim_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_decim_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_decim_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_bitred"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_bitred_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_bitred_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_bitred_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_noiselevel"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noiselevel_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noiselevel_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noiselevel_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_noisestep"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisestep_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noisestep_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noisestep_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_noisetone"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisetone_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noisetone_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_noisetone_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_drive"
-      short_description: ""
+      short_description:
+        "Used in Cakewalk products, unknown."
       version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_drive_onccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_drive_smoothccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
         - name: "lfoN_drive_stepccX"
+          short_description:
+            "Used in Cakewalk products, unknown."
           version: "SFZ v2"
 
     - name: "lfoN_offsetX"
