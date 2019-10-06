@@ -1134,13 +1134,6 @@ categories:
             The velocity used to play the note-off sample is the velocity value
             of the corresponding (previous) note-on message."
 
-        - name: "release_key"
-          description:
-            "Region will play on note-off. The velocity used to play
-            the note-off sample is the velocity value of the corresponding
-            (previous) note-on message. Ignores sustain pedal."
-          version: "ARIA"
-
         - name: "first"
           description:
             "Region will play on note-on, but if there’s no other note
@@ -1150,6 +1143,13 @@ categories:
           description:
             "Region will play on note-on, but only if there’s a note going on
             (notes after first note in a legato phrase)."
+
+        - name: "release_key"
+          description:
+            "Region will play on note-off. The velocity used to play
+            the note-off sample is the velocity value of the corresponding
+            (previous) note-on message. Ignores sustain pedal."
+          version: "SFZ v2"
 
     - name: "on_loccN"
       short_description:
