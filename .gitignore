@@ -5,6 +5,7 @@ _site
 .vendor
 .vscode
 .website*
+.geanyprj
 assets/css/*.map
 assets/css/style.css
 assets/js/*.map
