@@ -11,3 +11,6 @@ deploy:
   target_branch: master
   on:
     branch: source
+
+notifications:
+  irc: "ircs://chat.freenode.net:7070/#sfzformat-dev"
