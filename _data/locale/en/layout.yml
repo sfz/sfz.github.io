@@ -1,128 +1,134 @@
 navigation:
-- title: "Syntax"
+- label: "Syntax"
   type: "dropdown"
   pages:
-    - title: "Headers"
+    - label: "Headers"
       url: "/headers/"
     -
-    - title: "SFZ v1 Opcodes"
+    - label: "SFZ v1 Opcodes"
       url: "/misc/sfz1"
 
-    - title: "SFZ v2 Opcodes"
+    - label: "SFZ v2 Opcodes"
       url: "/misc/sfz2"
 
-    - title: "ARIA Extensions"
+    - label: "ARIA Extensions"
       url: "/extensions/aria/"
 
-    - title: "LinuxSampler Extensions"
+    - label: "LinuxSampler Extensions"
       url: "/extensions/linuxsampler/"
     -
-    - title: "Extended MIDI CCs"
+    - label: "Extended MIDI CCs"
       url: "/extensions/midi_ccs"
     -
-    - title: "Types & Categories"
+    - label: "Types & Categories"
       url: "/misc/categories"
 
-- title: "Software"
+- label: "Software"
   type: "dropdown"
   pages:
-    - title: "Players"
+    - label: "Players"
       url: "/software/players"
 
-    - title: "Tools"
+    - label: "Tools"
       url: "/software/tools"
 
-- title: "Tutorials"
+- label: "Tutorials"
   type: "dropdown"
   pages:
-    - title: "Basic / Template"
+    - label: "Basic / Template"
       url: "/tutorials/basic_sfz_file"
 
-    - title: "Sustained Note Basics"
+    - label: "Sustained Note Basics"
       url: "/tutorials/sustained_note_basics"
 
-    - title: "Vibrato"
+    - label: "Vibrato"
       url: "/tutorials/vibrato"
 
-    - title: "Legato"
+    - label: "Legato"
       url: "/tutorials/legato"
     -
-    - title: "Drum Basics"
+    - label: "Drum Basics"
       url: "/tutorials/drum_basics"
 
-    - title: "Cymbal Muting"
+    - label: "Cymbal Muting"
       url: "/tutorials/cymbal_muting"
 
-    - title: "Brush Stirs"
+    - label: "Brush Stirs"
       url: "/tutorials/brush_stirs"
     -
-    - title: "SFZ 1 Modulations"
+    - label: "SFZ 1 Modulations"
       url: "/tutorials/sfz1_modulations"
 
-    - title: "SFZ 2 Modulations"
+    - label: "SFZ 2 Modulations"
       url: "/tutorials/sfz2_modulations"
 
-    - title: "Pitch LFO Examples"
+    - label: "Pitch LFO Examples"
       url: "/tutorials/lfo"
     -
-    - title: "Video Tutorials"
+    - label: "Video Tutorials"
       url: "/tutorials/videos"
 
-- title: "Docs"
+- label: "Docs"
   type: "dropdown"
   pages:
-    - title: "Website Development Reference"
+    - label: "Website Development Reference"
       url: "/docs/website-development-reference"
 
 cards:
-- title: "Follow us"
+- label: "Follow us"
   icon_type: "eye"
   icon_category: "fas"
   links:
-    - title: "GitHub Organization"
+    - label: "GitHub Organization"
       url: "https://github.com/sfzformat/"
       icon_type: "github"
       icon_category: "fab"
 
-    - title: "Plogue Forum"
+    - label: "Plogue Forum"
       url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
       icon_type: "users"
       icon_category: "fas"
 
-    - title: "Discord Chat"
+    - label: "Discord Chat"
       url: "https://discord.gg/t7nrZ6d"
       icon_type: "discord"
       icon_category: "fab"
 
-    - title: "News Atom Feed"
+    - label: "IRC"
+      title: "Internet Relay Chat"
+      url: "https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#sfzformat"
+      icon_type: "hashtag"
+      icon_category: "fas"
+
+    - label: "News Atom Feed"
       url: "/atom.xml"
       icon_type: "rss"
       icon_category: "fas"
 
-- title: "Quick links"
+- label: "Quick links"
   icon_type: "link"
   icon_category: "fas"
   links:
-    - title: "Old rgc:audio SFZ page"
+    - label: "Old rgc:audio SFZ page"
       url: "/legacy"
       icon_type: "book"
       icon_category: "fas"
 
-    - title: "Peter L. Jones' SFZ page"
+    - label: "Peter L. Jones' SFZ page"
       url: "http://www.drealm.info/sfz/"
       icon_type: "book"
       icon_category: "fas"
 
-    - title: "Free SFZ Instruments"
+    - label: "Free SFZ Instruments"
       url: "https://github.com/sfzinstruments/"
       icon_type: "download"
       icon_category: "fas"
 
-    - title: "KVR Forum SFZ post"
+    - label: "KVR Forum SFZ post"
       url: "https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
       icon_type: "users"
       icon_category: "fas"
 
-#- title: "Downloads"
+#- label: "Downloads"
 #  type: "normal"
 #  url: "/downloads/"

@@ -53,20 +53,20 @@
 	{% if item.type == "normal" %}
 						<li class="nav-item">
 							<a class="nav-link"
-								href="{{ item.url | relative_url }}"> {{ item.title }}</a>
+								href="{{ item.url | relative_url }}"> {{ item.label }}</a>
 	{% else %}
-		{% assign item_id = 'navbar' | append: item.title %}
+		{% assign item_id = 'navbar' | append: item.label %}
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="{{ item_id }}"
 								data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false"> {{ item.title }}</a>
+							aria-haspopup="true" aria-expanded="false"> {{ item.label }}</a>
 							<div class="dropdown-menu" aria-labelledby="{{ item_id }}">
 		{% for subitem in item.pages %}
-			{% if subitem.title == nil %}
+			{% if subitem.label == nil %}
 								<div class="dropdown-divider"></div>
 			{% else %}
 								<a class="dropdown-item"
-									href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a>
+									href="{{ subitem.url | relative_url }}">{{ subitem.label }}</a>
 			{% endif %}
 		{% endfor %}
 							</div>
