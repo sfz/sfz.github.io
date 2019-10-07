@@ -5,23 +5,13 @@ $navbar-dark-hover-color: #fff;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "syntax-highlight";
 @import "google-cse";
-
-/* Styles applied site-wide. */
-
-.navbar, .card-header {
-	background-color: #222;
-}
-aside .card-body {
-	padding: 0.5rem;
-}
-aside .nav-link {
-	padding: 0.35rem 0.25rem;
-}
+/*
 pre {
 	padding: 0.5rem 0.75rem;
 	border: 2px solid rgba($black, .2);
 	border-radius: 0.50rem;
 }
+*/
 #scrollButton {
 	display: none;
 	position: fixed;
