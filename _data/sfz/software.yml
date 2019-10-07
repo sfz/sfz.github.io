@@ -234,6 +234,20 @@ categories:
     - name: "macOS X"
     - name: "Windows"
 
+  - name: "Awave Studio"
+    license: "Commercial"
+    url: "https://www.fmjsoft.com/awavestudio.html#main"
+    os:
+    - name: "macOS X"
+    - name: "Windows"
+
+  - name: "Chicken Systems Translator"
+    license: "Commercial"
+    url: "https://www.chickensys.com/products2/translator/index.html"
+    os:
+    - name: "macOS X"
+    - name: "Windows"
+
   - name: "Extreme Sample Converter"
     license: "Commercial"
     url: "https://extranslator.com/index.php?page=exsc"

@@ -15,5 +15,8 @@ then add controls etc. using a text editor.
 {% include sfz/software-table-generator.html %}
 
 Some Windows only software can be used under other Unix based operating systems
-using [Wine](https://www.winehq.org/) / [CrossOver](https://www.codeweavers.com/)
-or in a virtual machine software like [VirtualBox](https://www.virtualbox.org/).
+using [Wine] / [CrossOver] or in a virtual machine software like [VirtualBox].
+
+[Wine]: https://www.winehq.org/
+[CrossOver]: https://www.codeweavers.com/
+[VirtualBox]: https://www.virtualbox.org/
