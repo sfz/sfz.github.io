@@ -1,12 +1,16 @@
 cd $PWD
 
-if [ "$1" == "--help" ] ||  [ "$1" == "-h" ]; then
-	echo "Usage: setup [option]"
+set -e
+
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 	echo "Setup and run Jekyll"
+	echo ""
+	echo "Usage: ${0} [option]"
 	echo ""
 	echo "Options are not mandatory, only one at a time."
 	echo "-a, --assets      Build minimized css style and js script from sources."
 	echo "-i, --install     Install Bundler and node modules using Yarn."
+	echo ""
 	exit 0
 fi
 
