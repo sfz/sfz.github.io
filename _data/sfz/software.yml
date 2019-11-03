@@ -19,6 +19,16 @@ categories:
     - name: "macOS X"
     - name: "Windows"
 
+  - name: "HISE"
+    license: "Opensource"
+    url: "/software/players/hise"
+    documented: true
+    os:
+    - name: "iOS"
+    - name: "Linux"
+    - name: "macOS X"
+    - name: "Windows"
+
   - name: "LinuxSampler"
     license: "Opensource"
     url: "/software/players/linuxsampler"
