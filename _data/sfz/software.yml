@@ -28,6 +28,13 @@ categories:
     - name: "macOS X"
     - name: "Windows"
 
+  - name: "sfizz"
+    license: "Opensource"
+    url: "/software/players/sfizz"
+    documented: true
+    os:
+    - name: "Linux"
+
   - name: "SFZero"
     license: "Opensource"
     url: "/software/players/sfzero"
