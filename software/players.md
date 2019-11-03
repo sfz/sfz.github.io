@@ -1,8 +1,9 @@
 ---
 title: "SFZ Players"
-app_categories: "Players"
+app_categories: ['Players', 'Import from SFZ']
 lang: "en"
 show_documented_column: true
+show_category_titles: true
 ---
 There are several SFZ players, which are used to play samples as defined in SFZ
 files.
