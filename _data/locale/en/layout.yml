@@ -2,133 +2,132 @@ navigation:
 - label: "Syntax"
   type: "dropdown"
   pages:
-    - label: "Headers"
-      url: "/headers/"
-    -
-    - label: "SFZ v1 Opcodes"
-      url: "/misc/sfz1"
+  - label: "Headers"
+    url: "/headers/"
+  -
+  - label: "SFZ v1 Opcodes"
+    url: "/misc/sfz1"
 
-    - label: "SFZ v2 Opcodes"
-      url: "/misc/sfz2"
+  - label: "SFZ v2 Opcodes"
+    url: "/misc/sfz2"
 
-    - label: "ARIA Extensions"
-      url: "/extensions/aria/"
+  - label: "ARIA Extensions"
+    url: "/extensions/aria/"
 
-    - label: "LinuxSampler Extensions"
-      url: "/extensions/linuxsampler/"
-    -
-    - label: "Extended MIDI CCs"
-      url: "/extensions/midi_ccs"
-    -
-    - label: "Types & Categories"
-      url: "/misc/categories"
+  - label: "LinuxSampler Extensions"
+    url: "/extensions/linuxsampler/"
+  -
+  - label: "Extended MIDI CCs"
+    url: "/extensions/midi_ccs"
+  -
+  - label: "Types & Categories"
+    url: "/misc/categories"
 
 - label: "Software"
   type: "dropdown"
   pages:
-    - label: "Players"
-      url: "/software/players"
+  - label: "Players"
+    url: "/software/players"
 
-    - label: "Tools"
-      url: "/software/tools"
+  - label: "Tools"
+    url: "/software/tools"
 
 - label: "Tutorials"
   type: "dropdown"
   pages:
-    - label: "Basic / Template"
-      url: "/tutorials/basic_sfz_file"
+  - label: "Basic / Template"
+    url: "/tutorials/basic_sfz_file"
 
-    - label: "Sustained Note Basics"
-      url: "/tutorials/sustained_note_basics"
+  - label: "Sustained Note Basics"
+    url: "/tutorials/sustained_note_basics"
 
-    - label: "Vibrato"
-      url: "/tutorials/vibrato"
+  - label: "Vibrato"
+    url: "/tutorials/vibrato"
 
-    - label: "Legato"
-      url: "/tutorials/legato"
-    -
-    - label: "Drum Basics"
-      url: "/tutorials/drum_basics"
+  - label: "Legato"
+    url: "/tutorials/legato"
+  -
+  - label: "Drum Basics"
+    url: "/tutorials/drum_basics"
 
-    - label: "Cymbal Muting"
-      url: "/tutorials/cymbal_muting"
+  - label: "Cymbal Muting"
+    url: "/tutorials/cymbal_muting"
 
-    - label: "Brush Stirs"
-      url: "/tutorials/brush_stirs"
-    -
-    - label: "SFZ 1 Modulations"
-      url: "/tutorials/sfz1_modulations"
+  - label: "Brush Stirs"
+    url: "/tutorials/brush_stirs"
+  -
+  - label: "SFZ 1 Modulations"
+    url: "/tutorials/sfz1_modulations"
 
-    - label: "SFZ 2 Modulations"
-      url: "/tutorials/sfz2_modulations"
+  - label: "SFZ 2 Modulations"
+    url: "/tutorials/sfz2_modulations"
 
-    - label: "Pitch LFO Examples"
-      url: "/tutorials/lfo"
-    -
-    - label: "Video Tutorials"
-      url: "/tutorials/videos"
+  - label: "Pitch LFO Examples"
+    url: "/tutorials/lfo"
+  -
+  - label: "Video Tutorials"
+    url: "/tutorials/videos"
 
 - label: "Docs"
   type: "dropdown"
   pages:
-    - label: "Website Development Reference"
-      url: "/docs/website-development-reference"
+  - label: "Website Development Reference"
+    url: "/docs/website-development-reference"
+
+  - label: "Add players description and opcode support pages"
+    url: "/docs/adding-player-opcode-list"
 
 cards:
 - label: "Follow us"
   icon_type: "eye"
   icon_category: "fas"
   links:
-    - label: "GitHub Organization"
-      url: "https://github.com/sfzformat/"
-      icon_type: "github"
-      icon_category: "fab"
+  - label: "GitHub Organization"
+    url: "https://github.com/sfzformat/"
+    icon_type: "github"
+    icon_category: "fab"
 
-    - label: "Plogue Forum"
-      url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
-      icon_type: "users"
-      icon_category: "fas"
+  - label: "Plogue Forum"
+    url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
+    icon_type: "users"
+    icon_category: "fas"
 
-    - label: "Discord Chat"
-      url: "https://discord.gg/t7nrZ6d"
-      icon_type: "discord"
-      icon_category: "fab"
+  - label: "Discord Chat"
+    url: "https://discord.gg/t7nrZ6d"
+    icon_type: "discord"
+    icon_category: "fab"
 
-    - label: "IRC"
-      title: "Internet Relay Chat"
-      url: "https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#sfzformat"
-      icon_type: "hashtag"
-      icon_category: "fas"
+  - label: "IRC"
+    title: "Internet Relay Chat"
+    url: "https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#sfzformat"
+    icon_type: "hashtag"
+    icon_category: "fas"
 
-    - label: "News Atom Feed"
-      url: "/atom.xml"
-      icon_type: "rss"
-      icon_category: "fas"
+  - label: "News Atom Feed"
+    url: "/atom.xml"
+    icon_type: "rss"
+    icon_category: "fas"
 
 - label: "Quick links"
   icon_type: "link"
   icon_category: "fas"
   links:
-    - label: "Old rgc:audio SFZ page"
-      url: "/legacy"
-      icon_type: "book"
-      icon_category: "fas"
+  - label: "Old rgc:audio SFZ page"
+    url: "/legacy"
+    icon_type: "book"
+    icon_category: "fas"
 
-    - label: "Peter L. Jones' SFZ page"
-      url: "http://www.drealm.info/sfz/"
-      icon_type: "book"
-      icon_category: "fas"
+  - label: "Peter L. Jones' SFZ page"
+    url: "http://www.drealm.info/sfz/"
+    icon_type: "book"
+    icon_category: "fas"
 
-    - label: "Free SFZ Instruments"
-      url: "https://github.com/sfzinstruments/"
-      icon_type: "download"
-      icon_category: "fas"
+  - label: "Free SFZ Instruments"
+    url: "https://github.com/sfzinstruments/"
+    icon_type: "download"
+    icon_category: "fas"
 
-    - label: "KVR Forum SFZ post"
-      url: "https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
-      icon_type: "users"
-      icon_category: "fas"
-
-#- label: "Downloads"
-#  type: "normal"
-#  url: "/downloads/"
+  - label: "KVR Forum SFZ post"
+    url: "https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+    icon_type: "users"
+    icon_category: "fas"
