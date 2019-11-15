@@ -28,6 +28,13 @@ categories:
     - name: "macOS X"
     - name: "Windows"
 
+  - name: "liquidsfz"
+    license: "Opensource"
+    url: "https://github.com/swesterfeld/liquidsfz"
+    documented: true
+    os:
+    - name: "Linux"
+
   - name: "sfizz"
     license: "Opensource"
     url: "/software/players/sfizz"
