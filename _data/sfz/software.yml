@@ -30,7 +30,7 @@ categories:
 
   - name: "liquidsfz"
     license: "Opensource"
-    url: "https://github.com/swesterfeld/liquidsfz"
+    url: "/software/players/liquidsfz"
     documented: true
     os:
     - name: "Linux"
