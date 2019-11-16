@@ -1,6 +1,7 @@
 ---
 title: "New Tutorial"
 date: 2019-07-25
+author: DSmolken
 date_fmt: "%F"
 comments: false
 categories: news

@@ -1,6 +1,7 @@
 ---
 title: "New Website Launched"
 date: 2019-04-23
+author: RedTide
 date_fmt: "%F"
 comments: false
 categories: news

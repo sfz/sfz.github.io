@@ -8,7 +8,13 @@
 
 <table class="table table-striped">
 	<caption>{{ t.archive_caption }}</caption>
-	<thead><tr><th>{{ t.archive_header1 }}</th><th>{{ t.archive_header2 }}</th></tr></thead>
+	<thead>
+		<tr>
+			<th>{{ t.archive_header_post }}</th>
+			<th>{{ t.archive_header_date }}</th>
+			<th>{{ t.archive_header_author }}</th>
+		</tr>
+	</thead>
 	<tbody>
 {%-assign posts = site.posts | where:"lang", page.lang-%}
 {% for post in posts %}
@@ -16,6 +22,7 @@
 			<td><a href="{{ post.url }}">{{ post.title | escape }}</a></td>
 			<td><time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate{% if updated %}
 				data-updated="true"{% endif %}>{{ post.date | date: page.date_fmt }}</time></td>
+			<td>{{ post.author }}</td>
 		</tr>
 {% endfor %}
 	</tbody>

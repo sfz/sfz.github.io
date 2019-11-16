@@ -16,7 +16,9 @@
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
 <p>{{ t.posted_on }}<time datetime="{{ post.date | datetime | date_to_xmlschema }}"{%-if updated-%}
-				data-updated="true"{%-endif-%}>{{ post.date | date: page.date_fmt }}</time></p>
+	data-updated="true"{%-endif-%}>{{ post.date | date: page.date_fmt }}</time>
+	{% if post.author %}{{ t.posted_by }}{{ post.author }}{% endif %}
+</p>
 
 {{ post.content }}
 

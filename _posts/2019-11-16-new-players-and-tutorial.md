@@ -1,6 +1,7 @@
 ---
 title: "New players and tutorial"
 date: 2019-11-16
+author: RedTide
 date_fmt: "%F"
 comments: false
 categories: news

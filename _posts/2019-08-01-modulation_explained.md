@@ -1,6 +1,7 @@
 ---
 title: "Modulations Explained"
 date: 2019-08-01
+author: DSmolken
 date_fmt: "%F"
 comments: false
 categories: news

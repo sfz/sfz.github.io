@@ -1,6 +1,7 @@
 ---
 title: "SFZ page on Italian Wikipedia"
 date: 2019-09-16
+author: RedTide
 date_fmt: "%F"
 comments: false
 categories: news
