@@ -15,11 +15,13 @@ Icons are provided by [Font Awesome], favicons by [Favicon Generator].
 
 or manually:
 
-    $ gem update
-    $ gem install bundler
-    $ yarn --no-bin-links
-    $ yarn dist
-    $ bundle exec jekyll serve --watch --host 0.0.0.0
+```bash
+$ gem update
+$ gem install bundler
+$ yarn --no-bin-links
+$ yarn dist
+$ bundle exec jekyll serve --watch --host 0.0.0.0
+```
 
 The local website should be available at <http://localhost:4000/>
 
@@ -30,7 +32,7 @@ in the [_posts] directory, paying attention for a correct filename, date and
 [front-matter], or by running the following command:
 
 ```bash
-newpost.pl "New post title" <author_name>
+$ newpost.pl "New post title" author_name
 ```
 
 Requires [perl] and [perl-datetime] module.
