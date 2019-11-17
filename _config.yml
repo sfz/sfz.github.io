@@ -12,10 +12,6 @@ defaults:
     layout: "post"
 
 exclude:
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
 - assets/css/style.css
 - Gemfile
 - Gemfile.lock
