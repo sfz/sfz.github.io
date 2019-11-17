@@ -1,30 +1,32 @@
 #!/usr/bin/env perl
+
 use strict;
 use warnings;
 use autodie;
 use DateTime;
 
-if (@ARGV != 1) {
-    die qq{Usage: $0 "New Post Title".\n}
+if (@ARGV != 2) {
+  die qq{Usage: $0 "New Post Title" "Author".\n}
 }
+my $dir    = '_posts';
+my $title  = $ARGV[0];
+my $author = $ARGV[1];
+my $date   = DateTime->now()->ymd;
 
-# Get the kind of post to create from the script name.
-(my $what = $0) =~ s{^.*/new_(\w+)$}{$1};
-my $dir   = '_posts';
-my $title = $ARGV[0];
-
+# Only numbers, letters and hyphen allowed in a lowercase filename
 (my $name = $title) =~ tr/A-Z /a-z-/;
-my $date = DateTime->now()->ymd;
+$name =~ tr/\$#@~!&*()[];.,:?^ `\\\///d;
 
 open(my $fh, '>', "$dir/$date-$name.md");
 binmode($fh);
 print $fh <<EOF
 ---
-title: "$title"
-date: $date
-date_fmt: "%F"
-comments: false
+title:     "$title"
+author:    "$author"
+date_fmt:  "%F"
+date:       $date
 categories: news
-lang: en
+comments:   false
+lang:       en
 ---
 EOF
