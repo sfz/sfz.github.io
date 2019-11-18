@@ -3,8 +3,8 @@ title: "Pitch LFO Examples"
 lang: "en"
 ---
 Just copy the following in your preferred text editor.
-We recommend [Sublime Text] and [VSCode], available for various operating
-systems and [Notepad++], available only for Windows.
+We also have a section in the [tools page] listing some text editor's
+SFZ syntax highlighting add-ons.
 Add to your own SFZ to spice up your instruments:
 
 ```
@@ -37,6 +37,4 @@ Add to your own SFZ to spice up your instruments:
 <region> sample=*sine
 ```
 
-[Notepad++]: https://notepad-plus-plus.org/
-[Sublime Text]: https://www.sublimetext.com/
-[VSCode]: https://code.visualstudio.com/
+[tools page]: /software/tools
