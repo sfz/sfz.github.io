@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd $PWD
 
 set -e
