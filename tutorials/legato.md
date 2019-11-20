@@ -2,16 +2,41 @@
 title: Legato
 lang: en
 ---
-This page is very much a work in progress. For now, here is the legato-relevant
-section of the opcodes from Karoryfer Samples Meatbass, which is a decent
-starting point for creating fake legato and portamento. The portamento is
+This page is very much a work in progress. In the basic sustained instruments
+tutorial, we have the below example of a monophonic flute, which uses the
+[group]() and [off_by]() opcodes to allow only one be played at a time, and the [off_mode]()
+together with ampeg_release make the fadeout of the previous note a little
+smoother. This is a very basic starting point.
+
+```
+<global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
+
+group=1 off_by=1 off_mode=normal
+<group>lokey=50 hikey=51 pitch_keycenter=50 sw_last=48
+<region>sample=d4_p.wav xfin_locc1=0 xfin_hicc1=42 xfout_locc1=43 xfout_hicc1=85
+<region>sample=d4_mf.wav xfin_locc1=43 xfin_hicc1=85 xfout_locc1=86 xfout_hicc1=127
+<region>sample=d4_f.wav xfin_locc1=86 xfin_hicc1=127
+<group>lokey=52 hikey=53 pitch_keycenter=52 sw_last=48
+<region>sample=e4_p.wav xfin_locc1=0 xfin_hicc1=42 xfout_locc1=43 xfout_hicc1=85
+<region>sample=e4_mf.wav xfin_locc1=43 xfin_hicc1=85 xfout_locc1=86 xfout_hicc1=127
+<region>sample=e4_f.wav xfin_locc1=86 xfin_hicc1=127
+<group>lokey=50 hikey=51 pitch_keycenter=50 sw_last=49
+<region>sample=d4_ft_p.wav xfin_locc1=0 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=127
+<region>sample=d4_ft_f.wav xfin_locc1=64 xfin_hicc1=127
+<group>lokey=52 hikey=53 pitch_keycenter=52 sw_last=49
+<region>sample=e4_ft_p.wav xfin_locc1=0 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=127
+<region>sample=e4_ft_f.wav xfin_locc1=64 xfin_hicc1=127
+```
+
+As a more complex example, here are the relevant opcodes from Karoryfer Samples
+Meatbass, which has both legato and portamento. The portamento is
 very obviously fake for slow glides across long intervals, but as long as the
 interval is no more than a third or fourth, it can be convincing. Of course, the
 narrower the interval and the shorter the time, the easier it is to sound
-convincing. With the portamento time at zero, this is simple non-portamento legato.
+convincing. With the portamento time at zero, this is effectively the same as
+non-portamento legato in the above example.
 
-True sampled legato will
-be added later. In the below setup, MIDI CC109 controls the glide time.
+In the below setup, MIDI CC109 controls the glide time.
 Crossfade time between the samples is controlled by MIDI CC100 (note attack,
 longer for the legato regions) and CC104 (release time, which also sets the
 fadeout time of any note being muted). CC140 is the ARIA extension CC for pitch
@@ -70,3 +95,8 @@ ampeg_attack_oncc100=0.5
 sample=..\Samples\arco_looped\c4_sustain.wav
 key=48
 ```
+
+The next update will be the legato configuration from the Hadziha choir, which has
+no portamento but some improvements to the legato compared to the above.
+
+True sampled legato will be added at a later date.
