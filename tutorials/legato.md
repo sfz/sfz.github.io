@@ -55,7 +55,9 @@ Note that the samples are not all in the same group - the initial note regions a
 polyphony group 1, which is muted by group 2. The legato regions are in polyphony
 group 2, which mutes itself. Having everything in group 1 should also work, though.
 This was done this was to allow the use of additional syllable start samples, which
-would then be group 3 and also be muted by group 2.
+would then be group 3 and also be muted by group 2. As with hi-hat muting, if there
+are multiple mic positions in separate files, each mic position will need its own
+polyphony groups.
 
 ```
 <global>off_mode=time
@@ -174,6 +176,59 @@ pitch_keycenter=48
 
 ## True sampled legato
 
-True sampled legato will be added at a later date. It appears the [sw_down]() opcode
-is the key to having the correct transition sample play depending on the previous
-note.
+Here are examples from a simple flute test by MatFluor. The trigger=first regions
+work similarly as all the above examples, and the [sw_down]() opcode can be used
+to choose which sample plays for the legato regions. If the samples would include
+both the legato transition and the complete sustain of the following note, things
+would be very simple:
+
+```
+<group>
+// Legato transitions and the complete sustain of the next note both in the same sample
+trigger=legato
+group=2
+off_by=1
+ampeg_attack=0.05 ampeg_release=0.2
+off_mode=normal
+
+// Leg transitions up
+<region> sample=legatovib_g4_a4.wav key=A4 sw_down=G4
+<region> sample=legatovib_g4_c5.wav key=C5 sw_down=G4
+<region> sample=legatovib_a4_c5.wav key=C5 sw_down=A4
+// Leg transitions down
+<region> sample=legatovib_c5_a4.wav key=A4 sw_down=C5
+<region> sample=legatovib_c5_g4.wav key=G4 sw_down=C5
+```
+
+Recording the full sustain after every transition adds greatly to the recording
+time, diskspace and RAM use, however. It may be necessary in some cases, such as
+solo vocals, but in other cases it's possible to use transition samples which
+are short, then fade in the regular sustain sample.
+
+```
+<group>
+// Legato transitions in one sample, crossfaded into standard sustain in another sample
+trigger=legato
+group=2
+off_by=1
+ampeg_attack=0.05 ampeg_release=0.2
+off_mode=normal
+
+// Leg transitions up
+<region> sample=legatovib_g4_a4.wav key=A4 sw_down=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_g4_c5.wav key=C5 sw_down=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_a4_c5.wav key=C5 sw_down=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+// Leg transitions down
+<region> sample=legatovib_c5_a4.wav key=A4 sw_down=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_c5_g4.wav key=G4 sw_down=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_a4_g4.wav key=G4 sw_down=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=43000 ampeg_decay_shape=-1.4
+// Leg sustains
+<region> sample=sustainvib_c5.wav key=C5 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
+<region> sample=sustainvib_a4.wav key=A4 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
+<region> sample=sustainvib_g4.wav key=G4 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
+```
+
+Another consideration is that for instruments with a wide range, it may not be worthwhile
+to record every possible transition, and only record transitions of up to one octave, for
+example. Defaulting to simple crossfade is an option here. This is left as an exercise to
+the reader.
