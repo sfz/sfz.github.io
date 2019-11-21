@@ -41,8 +41,8 @@ title: "TODO"
 	descriptions from the syntax.yml opcode db when hover over links.
 - Add loading and wave oscillator SFZ2 category opcodes.
 
-[cutoff]:   /opcodes/cutoff
-[off_mode]: /opcodes/off_mode
-[trigger]:  /opcodes/trigger
-[sw_down]:  /opcodes/sw_down
+[cutoff]:   /opcodes/cutoff.md
+[off_mode]: /opcodes/off_mode.md
+[trigger]:  /opcodes/trigger.md
+[sw_down]:  /opcodes/sw_down.md
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
