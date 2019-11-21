@@ -19,8 +19,8 @@ To add that page the following steps are required:
 The YAML file syntax is quite trivial, just use the appropriate [SPDX License ID]
 as license value.
 
-[players page]:      {{site.repository.url}}/tree/{{site.repository.name}}/software/players.md
-[software/players]:  {{site.repository.url}}/tree/{{site.repository.name}}/software/players/
-[_data/sfz/players]: {{site.repository.url}}/tree/{{site.repository.name}}/_data/sfz/players/
+[players page]:      {{site.repository.url}}/tree/{{site.repository.branch}}/software/players.md
+[software/players]:  {{site.repository.url}}/tree/{{site.repository.branch}}/software/players/
+[_data/sfz/players]: {{site.repository.url}}/tree/{{site.repository.branch}}/_data/sfz/players/
 [SPDX License ID]:   https://spdx.org/licenses/
-[players data file]: {{site.repository.url}}/tree/{{site.repository.name}}/_data/sfz/software.yml
+[players data file]: {{site.repository.url}}/tree/{{site.repository.branch}}/_data/sfz/software.yml

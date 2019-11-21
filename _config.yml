@@ -37,7 +37,7 @@ organization:
   url: "https://sfzformat.github.io"
 
 repository:
-  name: "source"
+  branch: "source"
   url: "https://github.com/sfzformat/sfzformat.github.io"
 
 locale:
