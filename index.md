@@ -58,8 +58,8 @@ Some more advanced topics
 - [Vibrato] - typical string vibrato, humanized vibrato,
   asymmetrical vibrato, and even filter wobble.
 
-- [Legato] - currently simple glides, will be expanded later
-  to include true sampled legato.
+- [Legato] - simulated legato and portamento as well as
+  true sampled legato.
 
 - [Cymbal muting] - using `group`, `off_by`, `off_mode`
   and `polyphony` to make hi-hat and cymbal notes mute previous notes
