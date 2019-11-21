@@ -154,7 +154,8 @@ pitch_keycenter=48
 
 And the corresponding legato region with trigger set to legato, the eg06 glide
 envelope time control, and also an attack time, to let the note fade in
-more gradually, with this controlled by CC100 rather than 
+more gradually, with this controlled by CC100 rather than velocity, as the
+example above. This is another option.
 
 ```
 <group>
