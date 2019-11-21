@@ -44,4 +44,5 @@ title: "TODO"
 [cutoff]:   /opcodes/cutoff
 [off_mode]: /opcodes/off_mode
 [trigger]:  /opcodes/trigger
+[sw_down]:  /opcodes/sw_down
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
