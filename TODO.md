@@ -11,6 +11,7 @@ title: "TODO"
 	(E.g.: see [cutoff] opcode page)
 - Support for aliased opcodes, removing duplicated data.
 - Variables inheritance.
+- Update [sw_down] with new info.
 
 ## Instrument settings:
 
