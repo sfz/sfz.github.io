@@ -3,8 +3,8 @@ title: "Basic SFZ file"
 lang: "en"
 ---
 Just copy the following in your preferred text editor.
-We recommend [Sublime Text] and [VSCode], available for various operating
-systems and [Notepad++], available only for Windows.
+We also have a section in the [tools page] listing some text editor's
+SFZ syntax highlighting add-ons.
 Fill in the blanks and save as an SFZ:
 
 ```
@@ -44,6 +44,4 @@ default_path= // relative path of your samples
 <region> sample= key=
 ```
 
-[Notepad++]: https://notepad-plus-plus.org/
-[Sublime Text]: https://www.sublimetext.com/
-[VSCode]: https://code.visualstudio.com/
+[tools page]: /software/tools
