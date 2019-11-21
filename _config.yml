@@ -9,7 +9,11 @@ defaults:
     path: ""
     type: "posts"
   values:
-    layout: "post"
+    layout:     "post"
+    date_fmt:   "%F"
+    categories: "news"
+    lang:       "en"
+    comments:   false
 
 exclude:
 - assets/css/style.css

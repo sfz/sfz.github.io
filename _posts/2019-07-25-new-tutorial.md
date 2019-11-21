@@ -1,11 +1,6 @@
 ---
 title: "New Tutorial"
-date: 2019-07-25
-author: DSmolken
-date_fmt: "%F"
-comments: false
-categories: news
-lang: en
+author: "DSmolken"
 ---
 We've published a [new tutorial](/tutorials/brush_stirs) explaining how to use samples to
 model brushed drum techniques which produce a continuous sound
