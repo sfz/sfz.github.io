@@ -2,7 +2,6 @@
 title: Home
 layout: home
 lang: en
-date_fmt: "%B %d, %Y"
 ---
 ### Welcome to SFZFormat.com!
 
@@ -69,10 +68,6 @@ Some more advanced topics
 - [Brush stirs] - two different approaches to brushed
 	drum techniques which produce a continuous sound rather than a hit.
 </div>
-
-# Latest News
-
-{% include post.html %}
 
 [ARIA / Sforzando]:      /extensions/aria/
 [basic SFZ file]:        /tutorials/basic_sfz_file

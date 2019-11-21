@@ -50,11 +50,7 @@
 						</li>
 {% endif %}
 {% for item in current_locale_dir.layout.navigation %}
-	{% if item.type == "normal" %}
-						<li class="nav-item">
-							<a class="nav-link"
-								href="{{ item.url | relative_url }}"> {{ item.label }}</a>
-	{% else %}
+	{% if item.type == "dropdown" %}
 		{% assign item_id = 'navbar' | append: item.label %}
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="{{ item_id }}"
@@ -70,6 +66,10 @@
 			{% endif %}
 		{% endfor %}
 							</div>
+	{% else %}
+						<li class="nav-item">
+							<a class="nav-link"
+								href="{{ item.url | relative_url }}"> {{ item.label }}</a>
 	{% endif %}
 						</li>
 {% endfor %}
