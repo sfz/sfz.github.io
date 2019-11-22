@@ -2,6 +2,9 @@
 layout: "sfz/opcode"
 opcode_name: "md5"
 ---
+It may be used to verify the integrity of the sample file,
+or to locate renamed files by content.
+
 ## Example
 
 ```
