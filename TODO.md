@@ -39,7 +39,6 @@ title: "TODO"
 	- remove number colors from strings, use them only for numeric values
 - Add missing links to external opcode pages and use tooltips with brief opcode
 	descriptions from the syntax.yml opcode db when hover over links.
-- Add loading and wave oscillator SFZ2 category opcodes.
 
 [cutoff]:   /opcodes/cutoff.md
 [off_mode]: /opcodes/off_mode.md

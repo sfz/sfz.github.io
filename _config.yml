@@ -4,6 +4,7 @@ defaults:
     type: "pages"
   values:
     layout: "default"
+    lang:   "en"
 
 - scope:
     path: ""

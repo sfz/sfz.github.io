@@ -2239,10 +2239,10 @@ categories:
             unit: "dB"
 
     - name: "noise_filter"
-      version: "SFZ v2"
-      short_description:
-        "Used in Cakewalk products, unknown."
+      version: "Cakewalk SFZ v2"
+      short_description: ""
       value:
+        type_name: "string"
         options:
         - name: "on"
         - name: "off"
@@ -2264,18 +2264,17 @@ categories:
         - name: "pink"
 
     - name: "noise_stereo"
-      version: "SFZ v2"
-      short_description:
-        "Used in Cakewalk products, unknown."
+      version: "Cakewalk SFZ v2"
+      short_description: ""
       value:
+        type_name: "string"
         options:
         - name: "on"
         - name: "off"
 
     - name: "noise_level"
-      version: "SFZ v2"
-      short_description:
-        "Used in Cakewalk products, unknown."
+      version: "Cakewalk SFZ v2"
+      short_description: ""
       value:
         type_name: "float"
         min: -96
@@ -2284,18 +2283,16 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_level_onccN"
-          version: "SFZ v2"
-          short_description:
-            "Used in Cakewalk products, unknown."
+          version: "Cakewalk SFZ v2"
+          short_description: ""
           value:
             type_name: "float"
             min: -96
             max: 24
             unit: "dB"
         - name: "noise_level_smoothccN"
-          version: "SFZ v2"
-          short_description:
-            "Used in Cakewalk products, unknown."
+          version: "Cakewalk SFZ v2"
+          short_description: ""
           value:
             type_name: "float"
             min: -96
@@ -2303,9 +2300,8 @@ categories:
             unit: "dB"
 
     - name: "noise_step"
-      version: "SFZ v2"
-      short_description:
-        "Used in Cakewalk products, unknown."
+      version: "Cakewalk SFZ v2"
+      short_description: ""
       value:
         type_name: "integer"
         min: 0
@@ -2313,18 +2309,16 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_step_onccN"
-          version: "SFZ v2"
-          short_description:
-            "Used in Cakewalk products, unknown."
+          version: "Cakewalk SFZ v2"
+          short_description: ""
           value:
             type_name: "integer"
             min: 0
             max: 100
 
     - name: "noise_tone"
-      version: "SFZ v2"
-      short_description:
-        "Used in Cakewalk products, unknown."
+      version: "Cakewalk SFZ v2"
+      short_description: ""
       value:
         type_name: "integer"
         min: 0
@@ -2332,9 +2326,8 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_tone_onccN"
-          version: "SFZ v2"
-          short_description:
-            "Used in Cakewalk products, unknown."
+          version: "Cakewalk SFZ v2"
+          short_description: ""
           value:
             type_name: "integer"
             min: 0
@@ -3484,92 +3477,76 @@ categories:
           version: "SFZ v2"
 
     - name: "egN_decim"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_decim_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_bitred"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_bitred_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_rectify"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_rectify_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_ringmod"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_ringmod_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_noiselevel"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noiselevel_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_noisestep"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisestep_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_noisetone"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisetone_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "egN_driveshape"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_driveshape_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
   - name: "LFO"
     url: "/types/lfo"
@@ -4068,8 +4045,10 @@ categories:
         midi_cc:
         - name: "lfoN_cutoff2_onccX"
           version: "SFZ v2"
+
         - name: "lfoN_cutoff2_smoothccX"
           version: "SFZ v2"
+
         - name: "lfoN_cutoff2_stepccX"
           version: "SFZ v2"
 
@@ -4080,8 +4059,10 @@ categories:
         midi_cc:
         - name: "lfoN_resonance_onccX"
           version: "SFZ v2"
+
         - name: "lfoN_resonance_smoothccX"
           version: "SFZ v2"
+
         - name: "lfoN_resonance_stepccX"
           version: "SFZ v2"
 
@@ -4092,8 +4073,10 @@ categories:
         midi_cc:
         - name: "lfoN_resonance2_onccX"
           version: "SFZ v2"
+
         - name: "lfoN_resonance2_smoothccX"
           version: "SFZ v2"
+
         - name: "lfoN_resonance2_stepccX"
           version: "SFZ v2"
 
@@ -4104,8 +4087,10 @@ categories:
         midi_cc:
         - name: "lfoN_eqXfreq_onccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXfreq_smoothccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXfreq_stepccY"
           version: "SFZ v2"
 
@@ -4116,8 +4101,10 @@ categories:
         midi_cc:
         - name: "lfoN_eqXbw_onccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXbw_smoothccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXbw_stepccY"
           version: "SFZ v2"
 
@@ -4128,124 +4115,114 @@ categories:
         midi_cc:
         - name: "lfoN_eqXgain_onccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXgain_smoothccY"
           version: "SFZ v2"
+
         - name: "lfoN_eqXgain_stepccY"
           version: "SFZ v2"
 
     - name: "lfoN_decim"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_decim_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_decim_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_decim_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_bitred"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_bitred_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_bitred_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_bitred_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_noiselevel"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noiselevel_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noiselevel_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noiselevel_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_noisestep"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisestep_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noisestep_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noisestep_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_noisetone"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisetone_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noisetone_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_noisetone_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_drive"
-      short_description:
-        "Used in Cakewalk products, unknown."
-      version: "SFZ v2"
+      short_description: ""
+      version: "Cakewalk SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_drive_onccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_drive_smoothccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
+
         - name: "lfoN_drive_stepccX"
-          short_description:
-            "Used in Cakewalk products, unknown."
-          version: "SFZ v2"
+          short_description: ""
+          version: "Cakewalk SFZ v2"
 
     - name: "lfoN_offsetX"
       short_description:
@@ -4340,3 +4317,109 @@ categories:
     version: "ARIA"
     value:
       type_name: "string"
+
+- name: "Loading"
+  opcodes:
+  - name: "load_mode"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+      max: 1
+
+  - name: "load_start"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+
+  - name: "load_end"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+
+  - name: "sample_quality"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 1
+      max: 10
+
+  - name: "image"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "string"
+
+- name: "Wavetable Oscillator"
+  opcodes:
+  - name: "oscillator"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "string"
+      options:
+      - name: "on"
+      - name: "off"
+
+  - name: "oscillator_phase"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      unit: "degree"
+      min: 0
+      max: 360
+
+  - name: "oscillator_quality"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+      max: 3
+
+  - name: "oscillator_table_size"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+
+  - name: "oscillator_multi"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 1
+      max: 9
+
+  - name: "oscillator_mode"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+      max: 2
+
+  - name: "oscillator_detune"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    modulation:
+      midi_cc:
+      - name: "oscillator_detune_onccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"
+
+  - name: "oscillator_mod_depth"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    modulation:
+      midi_cc:
+      - name: "oscillator_mod_depth_onccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"
+
+      - name: "oscillator_mod_smoothccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"

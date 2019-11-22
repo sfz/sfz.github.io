@@ -11,6 +11,9 @@ navigation:
   - label: "SFZ v2 Opcodes"
     url: "/misc/sfz2"
 
+  - label: "SFZ v2 Opcodes (Cakewalk)"
+    url: "/misc/cakewalk"
+
   - label: "ARIA Extensions"
     url: "/extensions/aria/"
 
