@@ -21,12 +21,7 @@ open(my $fh, '>', "$dir/$date-$name.md");
 binmode($fh);
 print $fh <<EOF
 ---
-title:     "$title"
-author:    "$author"
-date_fmt:  "%F"
-date:       $date
-categories: news
-comments:   false
-lang:       en
+title: "$title"
+author: "$author"
 ---
 EOF

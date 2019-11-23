@@ -32,10 +32,11 @@ in the [_posts] directory, paying attention for a correct filename, date and
 [front-matter], or by running the following command:
 
 ```bash
-$ ./newpost.pl "New post title" author_name
+$ ./new_post.sh "New post title" author_name
 ```
 
-Requires [perl] and [perl-datetime] module.
+As alternative there is also a [perl] version of the command,
+which requires the [perl-datetime] module.
 
 [SFZ Format]: https://sfzformat.github.io/
 

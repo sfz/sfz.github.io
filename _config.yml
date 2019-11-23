@@ -1,10 +1,15 @@
+# Default front-matter variables: global, pages and posts
 defaults:
+- scope:
+    path: ""
+  values:
+    lang: "en"
+
 - scope:
     path: ""
     type: "pages"
   values:
     layout: "default"
-    lang:   "en"
 
 - scope:
     path: ""
@@ -13,7 +18,6 @@ defaults:
     layout:     "post"
     date_fmt:   "%F"
     categories: "news"
-    lang:       "en"
     comments:   false
 
 exclude:
@@ -22,6 +26,7 @@ exclude:
 - Gemfile.lock
 - LICENSE
 - new_post.pl
+- new_post.sh
 - node_modules
 - package.json
 - package-lock.json

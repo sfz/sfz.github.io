@@ -1,7 +1,6 @@
 ---
 title: Home
 layout: home
-lang: en
 ---
 ### Welcome to SFZFormat.com!
 
