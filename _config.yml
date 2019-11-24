@@ -40,7 +40,7 @@ exclude:
 plugins:
 - jekyll-sitemap
 
-url: "https://sfzformat.github.io"
+url: "https://sfzformat.com"
 
 organization:
   name: "SFZ Format"
