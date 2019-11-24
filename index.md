@@ -35,6 +35,7 @@ distribute the SFZ format files for free, for either free or commercial applicat
 - The [list of SFZ 1] can be found here.
 - You can browse the many SFZ 2 opcodes [starting here].
 - A few opcodes have been added to [ARIA / Sforzando] for more flexibility
+- Here the [SFZ test suite] published online on the [Cakewalk forum].
 </div>
 
 ### Making Instruments
@@ -82,3 +83,5 @@ Some more advanced topics
 [Sustained note basics]: /tutorials/sustained_note_basics
 [Legato]:                /tutorials/legato
 [Vibrato]:               /tutorials/vibrato
+[SFZ test suite]:        http://fisound.net/sfzFormatTestSuite_001.zip
+[Cakewalk forum]:        http://forum.cakewalk.com/Dimension-Pro-sfz-v2-test-suite-1-m645298.aspx
