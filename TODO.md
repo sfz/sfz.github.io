@@ -33,9 +33,9 @@ title: "TODO"
 - Check for missing opcode datatype, range information and modulations.
 - Complete _envelope_generators_ and _lfo_ type pages.
 - Improve SFZ syntax highlighting in [Prettify SFZ definition script]:
+	- opcode values: fix slash issue for POSIX paths (see FIXME in comment)
 	- \#define $variables
-	- opcode values, including predefined sample names (*silence)
-	- option values (no_loop, one_shot etc),
+	- option values validation? (no_loop, one_shot etc)
 
 - Add missing links to external opcode pages and use tooltips with brief opcode
 	descriptions from the syntax.yml opcode db when hover over links.
