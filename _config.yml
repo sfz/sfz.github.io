@@ -20,6 +20,9 @@ defaults:
     categories: "news"
     comments:   false
 
+include:
+- _mod
+
 exclude:
 - assets/css/style.css
 - Gemfile
