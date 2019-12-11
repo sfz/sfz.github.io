@@ -2757,6 +2757,15 @@ categories:
         default: 1
         min: 0
         max: 1
+        
+    - name: "ampeg_dynamic"
+      short_description: "Specifies when envelope durations are recalculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1
 
     - name: "ampeg_release_shape"
       short_description: "Specifies the curvature of release stage of the envelope."
@@ -2812,6 +2821,15 @@ categories:
         default: 1
         min: 0
         max: 1
+        
+    - name: "fileg_dynamic"
+      short_description: "Specifies when envelope durations are recalculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1
 
     - name: "pitcheg_attack_shape"
       short_description: "Specifies the curvature of attack stage of the envelope."
@@ -2851,6 +2869,15 @@ categories:
         default: 1
         min: 0
         max: 1
+        
+    - name: "pitcheg_dynamic"
+      short_description: "Specifies when envelope durations are recalculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1        
 
     - name: "fileg_attack"
       short_description: "EG attack time."
@@ -3549,6 +3576,15 @@ categories:
         - name: "egN_driveshape_onccX"
           short_description: ""
           version: "Cakewalk SFZ v2"
+          
+    - name: "eqN_dynamic"
+      short_description: "Specifies when EQ is recalculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1          
 
   - name: "LFO"
     url: "/types/lfo"
