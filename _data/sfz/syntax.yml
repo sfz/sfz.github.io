@@ -406,6 +406,11 @@ categories:
     short_description:
       "Its a 'hint' to the ARIA engine, others implementations don't have to follow."
     version: "ARIA"
+    
+  - name: "*_mod"
+    short_description:
+      "Determines whether a parameter is modulated by addition or multiplication."
+    version: "ARIA"    
 
   - name: "set_hdccN"
     short_description:
