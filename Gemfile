@@ -3,7 +3,7 @@ ruby RUBY_VERSION
 
 # We'll need rake to build our site in TravisCI
 gem "rake", "~> 12"
-gem "jekyll"
+gem "jekyll", '3.8.5'
 
 # Optional: Add any custom plugins here.
 # Some useful examples are listed below
