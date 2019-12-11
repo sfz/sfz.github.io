@@ -1827,14 +1827,14 @@ categories:
             max: 24
             unit: "dB"
             
-   - name: "eqN_dynamic"
-      short_description: "Specifies when EQ is recalculated."
-      version: "ARIA"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 1    
+    - name: "eqN_dynamic"
+       short_description: "Specifies when EQ is recalculated."
+       version: "ARIA"
+       value:
+         type_name: "integer"
+         default: 0
+         min: 0
+         max: 1    
 
   - name: "Filter"
     opcodes:
