@@ -5,6 +5,10 @@ rvm:
 
 install:
 - bundle install
+
+after_success:
+- cp ./.travis/_config.yml ./_site
+
 deploy:
   provider: pages
   skip_cleanup: true

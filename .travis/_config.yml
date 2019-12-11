@@ -1,0 +1,3 @@
+# Tell GH's Jekyll to include underscore prefixed files
+include:
+- _mod
