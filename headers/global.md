@@ -13,9 +13,9 @@ level, some at the group level, and others at the region level. The seq_length
 only contains three samples, seq_length is set to for that layer at the group
 header level.
 
-It is possible to have multiple global headers in one file. As with any other
-header, anything specified under a global header is active until another
-global header is encountered in the SFZ file.
+It is possible to have multiple global headers in one file, at least under
+ARIA. As with any other header, anything specified under a global header is
+active until another global header is encountered in the SFZ file.
 
 ```
 <global>loop_mode=one_shot seq_length=4
