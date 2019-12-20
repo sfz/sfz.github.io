@@ -26,3 +26,9 @@ When an instrument is sampled every minor third, this kind of usage will be comm
 <region> sample=c5.wav  lokey=71 hikey=73 pitch_keycenter=72
 <region> sample=eb5.wav lokey=74 hikey=76 pitch_keycenter=75
 ```
+
+## Disabling the note-on trigger
+
+If you want to have the region trigger on MIDI continuous controllers (CC), you
+have to disable the note range matching entirely by using -1 as the `hikey`
+value.
