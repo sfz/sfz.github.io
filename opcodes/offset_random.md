@@ -7,12 +7,16 @@ In many cases, will need to be used with a small [ampeg_attack](ampeg_attack)
 value to avoid clicks caused by the region playing starting with a point
 in the sample file where the value is non-zero.
 
-Also, when using a player with disk streaming, such as Sforzando/ARIA, which does
-not load entire samples to memory but instead preloads on only the start (usually
-about half a second, following the original Gigasampler method), it is generally
-not a good idea to make the offset_random values so high that they would cause the
-offset to exceeed this buffer. In practice, that means keeping offset_random no
-higher than 20000 or so on most systems.
+Also, when using a player with disk streaming, such as Sforzando/ARIA, which
+does not load entire samples to memory but instead preloads on only the start
+(usually about half a second, following the original Gigasampler method), it is
+generally not a good idea to make the offset_random values so high that they
+would cause the offset to exceeed this buffer. ARIA will try to accomodate
+potential delays by preloading more data but in practice, that means keeping
+offset_random no higher than 20000 or so on most systems.
+
+Like all SFZ `ZZZ_random` opcodes, it is computed when the region is triggered
+and does not change until it stops playing.
 
 ## Examples
 

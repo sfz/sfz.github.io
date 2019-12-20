@@ -3,6 +3,9 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "pitch_random"
 ---
+Like all SFZ `ZZZ_random` opcodes, it is computed when the region is triggered and does
+not change until it stops playing.
+
 ## Examples
 
 ```
