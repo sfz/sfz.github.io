@@ -21,14 +21,6 @@ externally by Travis Continuous Integration service.
 plugins required for our purposes, following their [GitHub Pages Deployment]
 documentation.
 
-[Git SCM]: https://git-scm.com/
-[GitHub]: https://github.com/sfzformat/sfzformat.github.io
-[GitHub Pages Deployment]: https://docs.travis-ci.com/user/deployment/pages/
-[Jekyll]: https://jekyllrb.com/
-[Liquid]: https://shopify.github.io/liquid/
-[Markdown]: https://daringfireball.net/projects/markdown/syntax
-[Travis-CI]: https://travis-ci.com
-
 ## Rules
 
 - Start any .md file with a 2 triple-dashed lines [front matter],
@@ -38,7 +30,7 @@ documentation.
   Opcode files should include:
   - a `layout: sfz/opcode` variable to specify the
     required layout to build the resulting html page
-  - the page language code
+  - the page language code if it's not English
   - optionally, the title of the page if different than the page name
     (see the example below).
 
@@ -57,9 +49,6 @@ documentation.
 
 - Don't use '<' and '>' in md files to avoid the parser to generate wrong html
   code, use '‹' and '›' instead.
-
-[front matter]: https://jekyllrb.com/docs/front-matter/
-[syntax.yml]: #syntaxyml
 
 ## Content
 
@@ -97,7 +86,6 @@ hivel=value2
 <pre class="prettyprint">
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "volume"
 ---
 ...
@@ -120,8 +108,6 @@ for user custom options as well.
 Other configuration files are placed in the `_data` directory, used for other
 website contexts, like translation strings, navigation menu, aside blocks,
 and other SFZ related data files.
-
-[_config.yml]: https://jekyllrb.com/docs/configuration/
 
 ### Translation files
 
@@ -158,8 +144,6 @@ It's very similar to the navigation one with few differences:
   - fab: brand icon
 - links: The contained card links.
 
-[card]: https://getbootstrap.com/docs/4.0/components/card/
-
 ### SFZ related YAML files
 
 The `/_data/sfz/` directory contains all YAML files used for SFZ related data.
@@ -170,10 +154,7 @@ The `headers` section is used by the `_includes/sfz/headers-table-generator.html
 to build `/headers/index.md` description tables:
 
 - name: The header name
-- version: The SFZ version, currently can be one of:
-  - SFZ v1
-  - SFZ v2
-  - ARIA
+- version: The SFZ version (see below)
 
 The `opcodes` section is used by different files as database information for all
 known opcodes, including extension ones.
@@ -192,7 +173,11 @@ Currently possible values are:
 - short_description: a brief opcode description used to describe all opcodes
   included in the related SFZ version/extension page.
 
-- version: SFZ version or extension (same as for headers).
+- version: SFZ version or extension, one of:
+  - SFZ v1
+  - SFZ v2
+  - ARIA
+  - Cakewalk
 
 - alias: if the opcode has some alias in other specification version.
 
@@ -214,3 +199,16 @@ Currently possible values are:
     - version: the opcode modulation SFZ version
 
 For more details, check the file for additional variable options.
+
+
+[Git SCM]:                 https://git-scm.com/
+[GitHub]:                  https://github.com/sfzformat/sfzformat.github.io
+[GitHub Pages Deployment]: https://docs.travis-ci.com/user/deployment/pages/
+[Jekyll]:                  https://jekyllrb.com/
+[Liquid]:                  https://shopify.github.io/liquid/
+[Markdown]:                https://daringfireball.net/projects/markdown/syntax
+[Travis-CI]:               https://travis-ci.com
+[front matter]:            https://jekyllrb.com/docs/front-matter/
+[syntax.yml]:              #syntaxyml
+[_config.yml]:             https://jekyllrb.com/docs/configuration/
+[card]:                    https://getbootstrap.com/docs/4.0/components/card/
