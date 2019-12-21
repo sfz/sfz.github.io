@@ -3,8 +3,7 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "default_path"
 ---
-Used under the ‹[control](/headers/control)› header. Changes the root path for
-samples.
+Used under the ‹[control](/headers/control)› header.
 
 ## Example
 
