@@ -13,4 +13,8 @@ which should not be used under other headers:
 - [label_ccN](/opcodes/label_ccN)
 - [set_ccN](/opcodes/set_ccN)
 
+Multiple <control> headers can be used in one file, and this can be very
+useful when specifying default_path. This path will then be used for
+all regions until another <control> header is encountered.
+
 See also [ARIA Extensions](/extensions/aria/#instrument-settings).

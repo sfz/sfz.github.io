@@ -2,7 +2,7 @@
 title: ‹global›
 lang: en
 ---
-The global header allows entering parameters which are common for all regions in
+The global header allows entering parameters which are common for many regions in
 the SFZ file. If the same opcode defined in global is also defined in group or
 region, the group or region setting is used. This means global can be used to
 set values which are common for most regions in the SFZ file, but if a few
@@ -10,8 +10,12 @@ regions need something different, they can override the global setting at a
 lower level. Here is a typical example with two opcodes set at the global header
 level, some at the group level, and others at the region level. The seq_length
 (number of round robins) is set to 4 in global, but as the fourth dynamic layer
-only contains three samples, seq_lenght is set to for that layer at the group
+only contains three samples, seq_length is set to for that layer at the group
 header level.
+
+It is possible to have multiple global headers in one file, at least under
+ARIA. As with any other header, anything specified under a global header is
+active until another global header is encountered in the SFZ file.
 
 ```
 <global>loop_mode=one_shot seq_length=4

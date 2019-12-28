@@ -12,6 +12,7 @@ title: "TODO"
 - Support for aliased opcodes, removing duplicated data.
 - Variables inheritance.
 - Update [sw_down] with new info.
+- Test and document fil_gain.
 
 ## Instrument settings:
 
