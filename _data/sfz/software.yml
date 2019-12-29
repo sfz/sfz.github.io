@@ -236,6 +236,14 @@ categories:
     os:
     - name: "Windows"
 
+  - name: "SFZ major mode for GNU Emacs"
+    license: "Opensource"
+    url: "https://github.com/sfztools/emacs-sfz-mode"
+    os:
+    - name: "Linux"
+    - name: "macOS X"
+    - name: "Windows"
+
 - name: "Converters"
   applications:
 
