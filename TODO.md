@@ -1,6 +1,7 @@
 ---
 title: "TODO"
 ---
+- Site search on generated HTML, not markdown source.
 - Specify opcode option value version.
 	(See [off_mode] `time` and [trigger] `release_key`)
 - Merge eqN_vel2freq, eqN_vel2gain, varNN_*ccX, ampeg_vel2*, amplfo_depth*
