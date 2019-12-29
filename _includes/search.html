@@ -31,9 +31,21 @@
 <script>
 window.store = {
 {%-for page in site.pages-%}
+	{%-if page.name == "atom.xml" or page.name == "404.md"-%}
+		{%-continue-%}
+	{%-endif-%}
+	{%-assign lines = page.content       | newline_to_br        | split: '<br />' |
+                    rstrip | lstrip    | strip_html           | strip_newlines  |
+                    jsonify            | replace: '\"\\n', '' |
+                    replace: '[', ''   | replace: ']', ''     | replace: '\"', '' |
+                    replace: '.,', '.' | replace: ',,', ','   | replace: '#', ''-%}
+	{%-assign page_title = page.title-%}
+	{%-if page.title == nil-%}
+		{%-assign page_title = page.name | replace: ".md", ''-%}
+	{%-endif-%}
 "{{ page.url | slugify }}": {
-	"title": "{{ page.title | xml_escape }}",{%-assign lines = page.content | newline_to_br | split: '<br />'-%}
-	"content": {{ lines.first  | strip_html | strip_newlines | jsonify }},
+	"title": "{{ page_title | xml_escape }}",
+	"content": {{ lines }},
 	"url": "{{ page.url | xml_escape }}"
 }
 {%-unless forloop.last-%},{%-endunless-%}
