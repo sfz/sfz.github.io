@@ -15,6 +15,10 @@ which should not be used under other headers:
 
 Multiple <control> headers can be used in one file, and this can be very
 useful when specifying default_path. This path will then be used for
-all regions until another <control> header is encountered.
+all regions until another <control> header is encountered. Whether settings
+other than default_path should also be reset by a new control header is not
+entirely clear. As implemented in ARIA, a new control header resets
+default_path only and not other control settings, and this does not seem
+unreasonable.
 
 See also [ARIA Extensions](/extensions/aria/#instrument-settings).
