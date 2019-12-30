@@ -4,6 +4,8 @@ lang: "en"
 opcode_name: "pitch_random"
 ---
 ## Examples
+Amount of random variation for pitch in cents. Computed when the note is
+triggered, remains the same for that region for as long as the region plays.
 
 ```
 pitch_random=10
