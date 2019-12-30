@@ -4,12 +4,12 @@ title: "TODO"
 ## Opcode documentation
 
 - Test and document fil_gain
+- Merge _curveccN_ info into one page
 - Merge eqN_vel2freq, eqN_vel2gain, varNN_*ccX, ampeg_vel2*, amplfo_depth*
 	and amplfo_freq* with related opcodes
 - Update [sw_down] with new info
 - Complete _envelope_generators_ and _lfo_ type pages
-- varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN and
-  lfoN_freq_lfoX_onccY
+- varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
 
 ### Instrument settings:
 
