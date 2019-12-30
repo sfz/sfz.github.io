@@ -10,7 +10,6 @@ title: "TODO"
 - Update [sw_down] with new info
 - Complete _envelope_generators_ and _lfo_ type pages
 - varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
-- Add clarification that _random_ suffix is calculated on note trigger
 - See if visual examples can be added to envelopes
 - Add screenshots to group_label/master_label/global_label and also to sw_label
 
