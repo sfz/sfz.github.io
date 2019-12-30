@@ -3,8 +3,19 @@ layout: "sfz/opcode"
 lang: "en"
 title: "sw_default / sw_label"
 ---
-Just copy the following in your preferred text editor (we suggest [Notepad++](https://notepad-plus-plus.org/)),
-save as an SFZ and try it in Sforzando / ARIA Player:
+
+Sw_default sets a default value for [sw_last](/opcodes/sw_last). In a guitar instrument
+which uses keyswitches to select articulations, this can be used to for example
+make the picked articulation active by default when the instrument is first loaded.
+Without sw_default, this instrument would be silent until a keyswitch is manually
+used to select an articulation.
+
+Sw_label causes ARIA/Sforzando to display the most recent selected keyswitch label
+appear on its interface. This apparently needs to be set for all regions for which
+that sw_last value is set, which can mean setting the label in multiple places in
+an sfz file.
+
+## Example
 
 ```
 // **********************************************************************
