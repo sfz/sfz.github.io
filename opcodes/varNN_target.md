@@ -3,10 +3,7 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "varNN_target"
 ---
-The list of possible modulation targets is basically the same standard list
-as for LFOs or envelopes, though variables can't modulate other modulators,
-so it's not currently possible to use a variable to modulate an LFO,
-or to modulate another variable.
+Specifies the target for modulation by variable NN.
 
 ## Example
 
@@ -30,3 +27,28 @@ var01_mod=mult
 var01_oncc131=1
 var01_oncc111=1
 ```
+
+## Available targets
+
+The list of possible modulation targets is basically the same standard list
+as for LFOs or envelopes, though variables can't modulate other modulators,
+so it's not currently possible to use a variable to modulate an LFO,
+or to modulate another variable.
+
+This list has not been verified by testing. It was created by cutting down the
+list of available targets for modulation by LFO. Decim and bitred might not
+actually be implemented.
+
+- pitch
+- decim
+- bitred
+- cutoff
+- resonance
+- cutoff2
+- resonance2
+- eqNfreq
+- eqNbw
+- eqNgain
+- volume
+- amplitude
+- pan
