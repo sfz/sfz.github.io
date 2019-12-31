@@ -16,8 +16,10 @@ Icons are provided by [Font Awesome], favicons by [Favicon Generator].
 or manually:
 
 ```bash
-$ gem update
-$ gem install bundler
+$ gem update --user-install
+$ gem install bundler --user-install
+$ bundle config set path '.bundle'
+$ bundle install
 $ yarn --no-bin-links
 $ yarn dist
 $ bundle exec jekyll serve --watch --host 0.0.0.0
@@ -32,23 +34,16 @@ in the [_posts] directory, paying attention for a correct filename, date and
 [front-matter], or by running the following command:
 
 ```bash
-$ ./new_post.sh "New post title" author_name
+$ ./new_post.sh "New post title" "<author_name>"
 ```
 
-As alternative there is also a [perl] version of the command,
-which requires the [perl-datetime] module.
-
-[SFZ Format]: https://sfzformat.github.io/
-
-[Bootstrap]: http://getbootstrap.com/
+[SFZ Format]:        https://sfzformat.github.io/
+[Bootstrap]:         http://getbootstrap.com/
 [Favicon Generator]: https://realfavicongenerator.net/
-[Font Awesome]: http://fontawesome.io/
-[Jekyll]: http://jekyllrb.com/
-[Markdown]: https://daringfireball.net/projects/markdown/
-[Node.js]: http://nodejs.org/
-[SASS]: https://sass-lang.com/
-
-[perl]: https://www.perl.org
-[perl-datetime]: https://metacpan.org/pod/DateTime
-[_posts]: https://github.com/sfzformat/sfzformat.github.io/tree/source/_posts/
-[front-matter]: https://jekyllrb.com/docs/front-matter/
+[Font Awesome]:      http://fontawesome.io/
+[front-matter]:      https://jekyllrb.com/docs/front-matter/
+[Jekyll]:            http://jekyllrb.com/
+[Markdown]:          https://daringfireball.net/projects/markdown/
+[Node.js]:           http://nodejs.org/
+[_posts]:            https://github.com/sfzformat/sfzformat.github.io/tree/source/_posts/
+[SASS]:              https://sass-lang.com/
