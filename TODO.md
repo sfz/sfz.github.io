@@ -30,6 +30,8 @@ title: "TODO"
 
 ## Website / db features
 
+- Fix/replace Yarn (with [gulp]?)
+- Anchor links in h2 titles
 - Site search on generated HTML, not markdown source
 - Specify opcode option value version
 	(See [off_mode] `time` and [trigger] `release_key`)
@@ -54,4 +56,5 @@ title: "TODO"
 [off_mode]: /opcodes/off_mode.md
 [trigger]:  /opcodes/trigger.md
 [sw_down]:  /opcodes/sw_down.md
+[gulp]:     https://gulpjs.com/
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js

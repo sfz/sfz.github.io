@@ -3,8 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 .sass-cache
-.geanyprj
-.website*
 assets/css/*.map
 assets/css/style.css
 assets/js/*.map
@@ -12,4 +10,6 @@ node_modules
 Gemfile.lock
 package-lock.json
 yarn.lock
+*.code-workspace
+*.geanyprj
 *.log
