@@ -60,7 +60,7 @@
 		<script type="text/javascript">
 			var disqus_shortname = "{{ site.disqus_shortname }}";
 			var disqus_identifier = "{{ page.id | escape }}";
-			var disqus_url = "{{ site.url }}{{ page.url }}";
+			var disqus_url = "{{ page.url | relative_url }}";
 			var e = document.createElement('div');
 			e.innerHTML = "{{ page.title | escape }}";
 			var disqus_title = e.childNodes[0].nodeValue;
