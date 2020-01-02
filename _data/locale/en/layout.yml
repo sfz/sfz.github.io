@@ -29,6 +29,9 @@ navigation:
 - label: "Software"
   type: "dropdown"
   pages:
+  - label: "Instruments"
+    url: "/software/instruments"
+
   - label: "Players"
     url: "/software/players"
 
