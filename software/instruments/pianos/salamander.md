@@ -1,4 +1,5 @@
 ---
+title:  "Salamander Piano"
 layout: "sfz/instrument"
 ---
 Sampled in minor thirds from the lowest A.

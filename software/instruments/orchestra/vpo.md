@@ -1,4 +1,5 @@
 ---
+title:  "VPO"
 layout: "sfz/instrument"
 ---
 Virtual Playing Orchestra now consists of 2 parts: wave files and scripts.

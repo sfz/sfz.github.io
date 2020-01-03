@@ -1,4 +1,5 @@
 ---
+title:  "SM Drums"
 layout: "sfz/instrument"
 ---
 Our aim is to provide an immaculately sampled collector drum kit in an easy to
