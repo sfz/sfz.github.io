@@ -83,6 +83,9 @@ navigation:
   - label: "Add players description and opcode support pages"
     url: "/docs/adding-player-opcode-list"
 
+  - label: "Add instruments"
+    url: "/docs/adding-instruments"
+
 - label: "News"
   url: "/news"
 
