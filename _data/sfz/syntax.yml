@@ -1,3 +1,4 @@
+format: 0
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -406,11 +407,11 @@ categories:
     short_description:
       "Its a 'hint' to the ARIA engine, others implementations don't have to follow."
     version: "ARIA"
-    
+
   - name: "*_mod"
     short_description:
       "Determines whether a parameter is modulated by addition or multiplication."
-    version: "ARIA"    
+    version: "ARIA"
 
   - name: "set_hdccN"
     short_description:
@@ -1831,7 +1832,7 @@ categories:
             min: -96
             max: 24
             unit: "dB"
-           
+
     - name: "eqN_dynamic"
       short_description: "Specifies when EQ is recalculated."
       version: "ARIA"
@@ -1839,7 +1840,7 @@ categories:
         type_name: "integer"
         default: 0
         min: 0
-        max: 1                
+        max: 1
 
   - name: "Filter"
     opcodes:
@@ -2771,7 +2772,7 @@ categories:
         default: 1
         min: 0
         max: 1
-        
+
     - name: "ampeg_dynamic"
       short_description: "Specifies when envelope durations are recalculated."
       version: "ARIA"
@@ -2835,7 +2836,7 @@ categories:
         default: 1
         min: 0
         max: 1
-        
+
     - name: "fileg_dynamic"
       short_description: "Specifies when envelope durations are recalculated."
       version: "ARIA"
@@ -2883,7 +2884,7 @@ categories:
         default: 1
         min: 0
         max: 1
-        
+
     - name: "pitcheg_dynamic"
       short_description: "Specifies when envelope durations are recalculated."
       version: "ARIA"
@@ -2891,7 +2892,7 @@ categories:
         type_name: "integer"
         default: 0
         min: 0
-        max: 1        
+        max: 1
 
     - name: "fileg_attack"
       short_description: "EG attack time."
@@ -3589,7 +3590,7 @@ categories:
         midi_cc:
         - name: "egN_driveshape_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"      
+          version: "Cakewalk SFZ v2"
 
   - name: "LFO"
     url: "/types/lfo"
