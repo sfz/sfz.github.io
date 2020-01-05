@@ -4,14 +4,16 @@ title: "TODO"
 ## Opcode documentation
 
 - Test and document fil_gain
+- Update [sw_down] with new info
+- Complete _envelope_generators_ and _lfo_ type pages
+- See if visual examples can be added to envelopes (see also PR #5)
+- Add screenshots to group_label/master_label/global_label and also to sw_label
+
+### Modulations
 - Merge _curveccN_ info into one page
 - Merge eqN_vel2freq, eqN_vel2gain, varNN_*ccX, ampeg_vel2*, amplfo_depth*
 	and amplfo_freq* with related opcodes
-- Update [sw_down] with new info
-- Complete _envelope_generators_ and _lfo_ type pages
 - varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
-- See if visual examples can be added to envelopes
-- Add screenshots to group_label/master_label/global_label and also to sw_label
 
 ### Instrument settings:
 

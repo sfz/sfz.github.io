@@ -20,6 +20,9 @@ navigation:
   - label: "LinuxSampler Extensions"
     url: "/extensions/linuxsampler/"
   -
+  - label: "Modulations"
+    url: "/modulations/"
+  -
   - label: "Extended MIDI CCs"
     url: "/extensions/midi_ccs"
   -
