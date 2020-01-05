@@ -2,12 +2,12 @@
 title: SFZ2 modulations
 lang: en
 ---
-The modulations available under SFZ2 are much more flexible than the fixed set
+The [modulations] available under SFZ2 are much more flexible than the fixed set
 [specified by SFZ1](/tutorials/sfz1_modulations). All SFZ1 modulations are still
 available under the SFZ2 spec, and will often be easier to use in cases such as
 envelopes where the standard AHDSR shape is all that's needed.
 
-The basic difference is that SFZ1 has three envelopes - one assigned to 
+The basic difference is that SFZ1 has three envelopes - one assigned to
 volume, one to pitch, and one to filter cutoff. There are also three LFOs,
 one for each of those modulation targets. SFZ2 can have an arbitraty number
 of envelopes and LFOs, with the ability to specify one or more modulation
@@ -84,7 +84,7 @@ The avaialble targets related to volume and stereo positioning are:
 - width
 - width_oncc
 - width_smoothcc
-- width_stepcc 
+- width_stepcc
 
 The targets for pitch modulation are:
 
@@ -260,7 +260,7 @@ Targets for EQ bands:
 
 Targets for modulating LFOs:
 
-- depth_lfo 
+- depth_lfo
 - depthadd_lfo
 - freq_lfo
 
@@ -299,7 +299,7 @@ direction).
 Shifting the phase of LFO01 will make the vibrato waveform start at the top. We also need
 to lower the pitch by the same amount as the vibrato depth. Using an envelope for this
 allows us to delay the onset of the vibrato (again, an important element of idiomatic
-saxophone vibrato) without a discontinuous jump in pitch. 
+saxophone vibrato) without a discontinuous jump in pitch.
 
 ```
 lfo01_pitch_oncc111=20 //Saxy vibrato LFO - goes down from the main pitch
@@ -340,7 +340,7 @@ pitcheg_depth_oncc111=-20
 Most MIDI CC modulations, though not all, can have use [smoothccN](/modulations/smoothccN) and [stepccN](/modulations/stepccN).
 These work similarly to [bend_smooth](/opcodes/bend_smooth) and [bend_step](/opcodes/bend_step).
 
-SmoothccN adds "interia" to a modulation, so quickly changing the MIDI CC value has a slower effect
+SmoothccN adds "inertia" to a modulation, so quickly changing the MIDI CC value has a slower effect
 on the modulation target than it would normally. StepccN causes the modulation to happen in a
 discrete number of steps. Setting the number of steps to 1 would make the modulation an
 all-or-nothing control.
@@ -348,3 +348,6 @@ all-or-nothing control.
 This is what's possible under the SFZ2 specification. There are some additional modulations
 available as [ARIA extensions](/extensions/aria/), with [amplitude_onccN](/opcodes/amplitude)
 being a very useful one.
+
+
+[modulations]: /modulations/index

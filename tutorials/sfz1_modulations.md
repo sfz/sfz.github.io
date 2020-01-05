@@ -2,7 +2,7 @@
 title: SFZ1 modulations
 lang: en
 ---
-The set of modulations available under the SFZ1 specification is fixed, and
+The set of [modulations] available under the SFZ1 specification is fixed, and
 there's a dedicated opcode for every possible modulation, including fairly
 esoteric ones such as using note velocity to modulate the hold stage of the
 pitch envelope.
@@ -10,7 +10,7 @@ pitch envelope.
 ## Basic MIDI CC modulation
 
 A few opcodes can be modulated simply by MIDI CC, with the modulation adding
-to what the opcode would normally do. These are: [offset](/opcodes/offset) and 
+to what the opcode would normally do. These are: [offset](/opcodes/offset) and
 [delay](/opcodes/delay).
 
 For example, this would have a sample offset of 500 when the modulating CC is
@@ -128,3 +128,6 @@ fileg_vel2depth=4000
 If something is not described above, then modulating it is not possible under the
 SFZ1 specification, and will require [using SFZ2](/tutorials/sfz2_modulations)
 or possibly some extension opcodes.
+
+
+[modulations]: /modulations/index
