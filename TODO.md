@@ -8,6 +8,7 @@ title: "TODO"
 - Complete _envelope_generators_ and _lfo_ type pages
 - Envelopes visual examples, see [PR #5]
 - Add screenshots to group_label/master_label/global_label and also to sw_label
+- Add a "see also" section on opcode pages footer
 
 ### Modulations
 
