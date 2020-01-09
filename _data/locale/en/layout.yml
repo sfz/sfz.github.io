@@ -83,6 +83,9 @@ navigation:
   - label: "Website Development Reference"
     url: "/docs/website-development-reference"
 
+  - label: "Jekyll setup on Windows"
+    url: "/docs/jekyll-windows-setup"
+
   - label: "Add players description and opcode support pages"
     url: "/docs/adding-player-opcode-list"
 
