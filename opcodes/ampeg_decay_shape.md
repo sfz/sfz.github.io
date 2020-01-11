@@ -19,11 +19,33 @@ ampeg_decay_shape=-3.8
 ```
 
 ## Graphical representations
-As aid to estimate what the values will do, here some examples.
-All curves were made at 120bpm with `ampeg_decay=1` and `ampeg_sustain=1`, note held for 2 seconds. Each vertical line represents 0.5 seconds.
 
-![ampeg_decay_shape=-8](/assets/img/ampeg_decay_shape/sine_neg8.jpg)
-![ampeg_decay_shape=-3.8](/assets/img/ampeg_decay_shape/sine_neg3p8.jpg)
-![ampeg_decay_shape=0](/assets/img/ampeg_decay_shape/sine_0.jpg)
-![ampeg_decay_shape=2.1](/assets/img/ampeg_decay_shape/sine_pos2p1.jpg)
-![ampeg_decay_shape=8](/assets/img/ampeg_attack_shape/sine_pos8.jpg)
+As aid to estimate what the values will do, here some examples.
+All curves were made at 120bpm with `ampeg_decay=1` and `ampeg_sustain=1`,
+note held for 2 seconds. Each vertical line represents 0.5 seconds.
+
+<a href="{{ '/assets/img/ampeg_decay_shape/sine_neg8.jpg' | relative_url }}"
+	data-toggle="lightbox" data-gallery="ampeg_decay_shape" data-title="ampeg_decay_shape=-8">
+	<img src="{{ '/assets/img/ampeg_decay_shape/sine_neg8.jpg' | relative_url }}"
+		class="img-fluid" alt="ampeg_decay_shape=-8" style="width:150px">
+</a>
+<a href="{{ '/assets/img/ampeg_decay_shape/sine_neg3p8.jpg' | relative_url }}"
+	data-toggle="lightbox" data-gallery="ampeg_decay_shape" data-title="ampeg_decay_shape=-3.8">
+	<img src="{{ '/assets/img/ampeg_decay_shape/sine_neg3p8.jpg' | relative_url }}"
+		class="img-fluid" alt="ampeg_decay_shape=-3.8" style="width:150px">
+</a>
+<a href="{{ '/assets/img/ampeg_decay_shape/sine_0.jpg' | relative_url }}"
+	data-toggle="lightbox" data-gallery="ampeg_decay_shape" data-title="ampeg_decay_shape=0">
+	<img src="{{ '/assets/img/ampeg_decay_shape/sine_0.jpg' | relative_url }}"
+		class="img-fluid" alt="ampeg_decay_shape=0" style="width:150px">
+</a>
+<a href="{{ '/assets/img/ampeg_decay_shape/sine_pos2p1.jpg' | relative_url }}"
+	data-toggle="lightbox" data-gallery="ampeg_decay_shape" data-title="ampeg_decay_shape=2.1">
+	<img src="{{ '/assets/img/ampeg_decay_shape/sine_pos2p1.jpg' | relative_url }}"
+		class="img-fluid" alt="ampeg_decay_shape=2.1" style="width:150px">
+</a>
+<a href="{{ '/assets/img/ampeg_decay_shape/sine_pos8.jpg' | relative_url }}"
+	data-toggle="lightbox" data-gallery="ampeg_decay_shape" data-title="ampeg_decay_shape=8">
+	<img src="{{ '/assets/img/ampeg_decay_shape/sine_pos8.jpg' | relative_url }}"
+		class="img-fluid" alt="ampeg_decay_shape=8" style="width:150px">
+</a>
