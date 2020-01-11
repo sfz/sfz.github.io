@@ -5,7 +5,7 @@ title: stepccN
 Sets the number of steps with which the modulation target is modulated by
 MIDI CC N. If this is not used, there are 127 modulation steps.
 
-##### Examples
+## Examples
 
 ```
 lfo01_freq_oncc70=5

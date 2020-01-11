@@ -16,8 +16,9 @@ to be applied to the various opcode targets.
 
 See also the related tutorials for [SFZ1] and [SFZ2].
 
-- [smoothcc](smoothccN)
-- [stepcc](stepccN)
+- [curveccN](curveccN)
+- [smoothccN](smoothccN)
+- [stepccN](stepccN)
 
 
 [cutoff_ccN]:          /opcodes/cutoff

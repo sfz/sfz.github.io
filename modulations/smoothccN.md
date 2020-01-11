@@ -6,7 +6,7 @@ Sets the smoothness with which the modulation target is modulated by MIDI CC N.
 Adds "inertia" to modulation, so fast movements of the controller will have
 a delayed, smoothed effect, similar to bend_smooth. Default is 0 (no smoothing).
 
-##### Examples
+## Examples
 
 ```
 lfo01_freq_oncc70=5
