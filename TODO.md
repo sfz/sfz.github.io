@@ -17,6 +17,7 @@ title: "TODO"
 	and amplfo_freq* with related opcodes
 - varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
 - Remove the temporary /modulations/moved directory when done
+- Add missing ARIA aliases (WIP)
 
 ### Instrument settings:
 
@@ -27,7 +28,6 @@ title: "TODO"
 
 - Pitch:
 	- bend_smooth: Missing range
-	- pitch: check whether ARIA supports ccN and onccN for tune and how tune/pitch aliases work
 
 - Amplifier:
 	- position_onccN
