@@ -1,0 +1,19 @@
+{%comment%}
+	Creates a lightbox gallery
+	const_images:  array of image names
+	const_titles:  array of alternative text for the images
+	const_gallery: the name of the gallery
+	const_path:    the common base directory of the images
+{%endcomment%}
+
+{% for image in include.const_images %}
+	{%-assign image_url = include.const_path | append: image-%}
+	{%-assign index = forloop.index | minus: 1-%}
+<a href="{{ image_url | relative_url }}"
+	data-toggle="lightbox" data-gallery="{{ include.const_gallery }}"
+	data-title="{{ include.const_titles[index] }}">
+	<img src="{{ image_url | relative_url }}"
+		class="img-fluid" alt="{{ include.const_titles[index] }}"
+		style="width:150px">
+</a>
+{% endfor %}
