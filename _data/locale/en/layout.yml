@@ -83,14 +83,17 @@ navigation:
   - label: "Website Development Reference"
     url: "/docs/website-development-reference"
 
-  - label: "Jekyll setup on Windows"
+  - label: "Jekyll Setup on Windows"
     url: "/docs/jekyll-windows-setup"
 
-  - label: "Add players description and opcode support pages"
+  - label: "Add Players Description and Opcode Support Pages"
     url: "/docs/adding-player-opcode-list"
 
-  - label: "Add instruments"
+  - label: "Add Instruments"
     url: "/docs/adding-instruments"
+
+  - label: "Add Multimedia Content"
+    url: "/docs/adding-multimedia-content"
 
 - label: "News"
   url: "/news"
