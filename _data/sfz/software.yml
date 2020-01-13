@@ -11,7 +11,7 @@ categories:
   applications:
 
   - name: "Carla (SFZero)"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://kx.studio/Applications:Carla"
     documented: true
     os:
@@ -19,31 +19,22 @@ categories:
     - name: "macOS X"
     - name: "Windows"
 
-  - name: "LinuxSampler"
-    license: "Opensource"
-    url: "/software/players/linuxsampler"
-    documented: true
-    os:
-    - name: "Linux"
-    - name: "macOS X"
-    - name: "Windows"
-
   - name: "liquidsfz"
-    license: "Opensource"
+    license: "FOSS"
     url: "/software/players/liquidsfz"
     documented: true
     os:
     - name: "Linux"
 
   - name: "sfizz"
-    license: "Opensource"
+    license: "FOSS"
     url: "/software/players/sfizz"
     documented: true
     os:
     - name: "Linux"
 
   - name: "SFZero"
-    license: "Opensource"
+    license: "FOSS"
     url: "/software/players/sfzero"
     documented: true
     os:
@@ -52,8 +43,17 @@ categories:
     - name: "Windows"
 
   - name: "Zerberus (MuseScore SFZ Synthetizer)"
-    license: "Opensource"
+    license: "FOSS"
     url : "/software/players/zerberus"
+    documented: true
+    os:
+    - name: "Linux"
+    - name: "macOS X"
+    - name: "Windows"
+
+  - name: "LinuxSampler"
+    license: "Custom"
+    url: "/software/players/linuxsampler"
     documented: true
     os:
     - name: "Linux"
@@ -143,7 +143,7 @@ categories:
   applications:
 
   - name: "HISE"
-    license: "Opensource"
+    license: "FOSS"
     url: "/software/players/hise"
     documented: true
     os:
@@ -164,7 +164,7 @@ categories:
   applications:
 
   - name: "Polyphone"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://www.polyphone-soundfonts.com/en/"
     os:
     - name: "Linux"
@@ -193,7 +193,7 @@ categories:
   applications:
 
   - name: "SFZ syntax highlighting for Geany"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-geany"
     os:
     - name: "Linux"
@@ -201,7 +201,7 @@ categories:
     - name: "Windows"
 
   - name: "SFZ syntax highlighting for Sublime Text"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-sublime-text"
     os:
     - name: "Linux"
@@ -209,7 +209,7 @@ categories:
     - name: "Windows"
 
   - name: "SFZ syntax highlighting for VSCode"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://github.com/jokela/vscode-sfz"
     os:
     - name: "Linux"
@@ -217,7 +217,7 @@ categories:
     - name: "Windows"
 
   - name: "SFZ Tools for UltraEdit"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://noisesculpture.com/sfz-tools/"
     os:
     - name: "Linux"
@@ -225,19 +225,19 @@ categories:
     - name: "Windows"
 
   - name: "SFZ syntax highlighting for Notepad++"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://musescore.org/en/node/99411"
     os:
     - name: "Windows"
 
   - name: "Another XML for Notepad++"
-    license: "Opensource"
+    license: "FOSS"
     url: "http://www.drealm.info/sfz/sfz-udl.xml"
     os:
     - name: "Windows"
 
   - name: "SFZ major mode for GNU Emacs"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://github.com/sfztools/emacs-sfz-mode"
     os:
     - name: "Linux"
@@ -248,7 +248,7 @@ categories:
   applications:
 
   - name: "EXS24 to SFZ converter (Python 3)"
-    license: "Opensource"
+    license: "FOSS"
     url: "https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py"
     os:
     - name: "Linux"

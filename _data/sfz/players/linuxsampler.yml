@@ -1,5 +1,5 @@
 name: "LinuxSampler"
-license: "Opensource"
+license: "Custom"
 url: "https://www.linuxsampler.org/"
 documented: true
 visible: true
