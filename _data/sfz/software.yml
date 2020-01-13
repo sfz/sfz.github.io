@@ -118,14 +118,6 @@ categories:
     os:
     - name: "Windows"
 
-  - name: "Renoise (Redux)"
-    license: "Commercial"
-    url: "https://www.renoise.com/"
-    os:
-    - name: "Linux"
-    - name: "macOS X"
-    - name: "Windows"
-
   - name: "TAL-Sampler"
     license: "Commercial"
     url: "https://tal-software.com/products/tal-sampler"
@@ -156,6 +148,14 @@ categories:
     documented: true
     os:
     - name: "iOS"
+    - name: "Linux"
+    - name: "macOS X"
+    - name: "Windows"
+
+  - name: "Renoise (Redux)"
+    license: "Commercial"
+    url: "https://www.renoise.com/"
+    os:
     - name: "Linux"
     - name: "macOS X"
     - name: "Windows"
