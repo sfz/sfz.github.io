@@ -3,7 +3,7 @@ title: "sfizz"
 lang: "en"
 ---
 [sfizz] is an opensource Linux SFZ library based on [libsndfile],
-working also as player with the included [JACK] client.
+working also as player with the included [JACK] client and as an LV2 plugin.
 
 [libsndfile]: http://mega-nerd.com/libsndfile/
 [JACK]: https://jackaudio.github.io/
