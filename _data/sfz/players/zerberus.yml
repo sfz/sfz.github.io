@@ -5,7 +5,7 @@ documented: true
 
 os:
 - name: "iOS"
-- name: "macOS X"
+- name: "macOS"
 - name: "Windows"
 
 headers:

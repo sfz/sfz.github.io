@@ -6,7 +6,7 @@ visible: true
 
 os:
 - name: "Linux"
-- name: "macOS X"
+- name: "macOS"
 - name: "Windows"
 
 headers:
