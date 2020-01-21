@@ -11,9 +11,16 @@ In most cases, there will be a sample opcode in every region of an SFZ file,
 though not always.
 
 If the sample file is not found, the player will ignore the whole region
-contents as there's nothing to paly. Long names and names with blank spaces and
+contents as there's nothing to play. Long names and names with blank spaces and
 other special characters (excepting the = character) are allowed in the sample
 definition.
+
+At the SFZ1 specification level, there is no information about what sample
+formats are specific. For SFZ2, however, the Cakewalk book specifies that WAV
+and AIFF formats of any sample rate (even 384k) are supported, in addition to
+Ogg Vorbis compressed samples. Support for FLAC files is not specified as
+mandatory here, though FLAC was supported by Cakewalk Session Drummer, and is
+supported by ARIA.
 
 Getting the sample to play back at the correct pitch is not automatic, and
 generally can't be done with the sample opcode alone, even if the file name
