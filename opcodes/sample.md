@@ -18,9 +18,9 @@ definition.
 At the SFZ1 specification level, there is no information about what sample
 formats are supported. For SFZ2, however, the Cakewalk book specifies the following
 sample types are supported:
-+WAV and AIFF formats of any sample rate (even 384k)
-+Ogg Vorbis compressed samples
-+FLAC support is not specified as mandatory, though FLAC was supported by Cakewalk
++ WAV and AIFF formats of any sample rate (even 384k)
++ Ogg Vorbis compressed samples
++ FLAC support is not specified as mandatory, though FLAC was supported by Cakewalk
 Session Drummer, and is supported by ARIA
 
 Getting the sample to play back at the correct pitch is not automatic, and
