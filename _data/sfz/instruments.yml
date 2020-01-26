@@ -291,6 +291,23 @@ categories:
       size: "169 MB"
       short_description: ""
 
+  - name:    "Wind Chime"
+    page:    "wind_chime"
+#   version: ""
+    author:  "Unreal Instruments"
+    license: "Public Domain"
+    url:     "https://unreal-instruments.wixsite.com/unreal-instruments/wind-chime"
+    download_size: "1006 MB"
+    short_description: "Wind Chime Percussion"
+    use_details_page: true
+    downloads:
+    - label: "Instrument"
+      url: "https://drive.google.com/open?id=1ZTifS6mozIfoMKYUydgDOUrFl700k6ed"
+      format: "flac"
+      samplerate: "96"
+      size: "1006 MB"
+      short_description: ""
+
 - name: "Pianos"
   page: "pianos"
   instruments:
