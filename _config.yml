@@ -28,7 +28,6 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - LICENSE
-- new_post.pl
 - new_post.sh
 - node_modules
 - package.json
