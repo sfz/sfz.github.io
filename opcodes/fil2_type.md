@@ -11,7 +11,9 @@ When used, there are two filters applied to the region in series.
 fil2_type=hpf_2p
 ```
 
-This could be used to have both a high-pass and a low-pass filter, like this:
+This could be used to have both a high-pass and a low-pass filter, like this. The first
+filter does not have fil_type set explicitly, so it defaults to lpf_2p, making it a
+lowpass filter. The second filter is set to be a highpass filter.
 
 ```
 cutoff=1200
