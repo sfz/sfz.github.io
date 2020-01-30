@@ -26,6 +26,10 @@ resonance2=3
 ## Players support
 
 Both ARIA and LinuxSampler supports all SFZ v1 filter types.
-The following table describes which SFZ v2 filter types they support:
+The following table describes which SFZ v2 and ARIA extension filter types they support.
+Lsh, hsh and peq are ARIA extensions, allowing filters to be used as low-shelf, high-shelf
+or up to two additional parametric EQ bands, in addition to the default three eqN bands.
+Filters of these three types use fil_gain or fil2_gain to set the gain of the shelf or
+band.
 
 {% include sfz/fil2_type_players_compatibility_table.html %}
