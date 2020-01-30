@@ -2020,6 +2020,23 @@ categories:
 #       - name: "pink"
 #         description: "Pink filter."
 #         version: "SFZ v2"
+#       - name: "lsh"
+#         description: "Low shelf."
+#         version: "SFZ v2"
+#       - name: "hsh"
+#         description: "High shelf."
+#         version: "SFZ v2"
+#       - name: "peq"
+#         description: "Parametric EQ."
+#         version: "SFZ v2"
+
+    - name: "fil_gain"
+      short_description: "Gain for lsh, hsh and peq filter types."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: "0"
+        unit: "dB"
 
     - name: "fil_veltrack"
       version: "SFZ v1"
