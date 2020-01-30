@@ -19,7 +19,9 @@ See [fil2_type](fil2_type) for additional filter types
 introduced by SFZ v2 in this opcode. In other words, under the SFZ1
 spec level, fil_type allows the values listed above. Under the SFZ2
 spec level, both fil_type and fil2_type allow values from the
-longer list documented under fil2_type.
+longer list documented under fil2_type. ARIA adds three more
+possible values for both fil_type and fil2_type, documented under
+fil2_type as well.
 
 ## Examples
 
