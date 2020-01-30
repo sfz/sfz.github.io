@@ -46,6 +46,7 @@ title: "TODO"
 	(E.g.: see [cutoff] opcode page)
 - Support for aliased opcodes, removing duplicated data
 - Variables inheritance
+- Add DragonFlyBSD, FreeBSD, NetBSD and Solaris as OSs in software section
 
 ### Other tasks
 

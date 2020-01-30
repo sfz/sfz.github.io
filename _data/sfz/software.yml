@@ -2,8 +2,12 @@
 # Operating Systems Enabled List
 # ------------------------------------------------------------------------------
 os:
+#- name: "DragonFlyBSD"
+#- name: "FreeBSD"
+#- name: "NetBSD"
 - name: "Linux"
 - name: "macOS"
+#- name: "Solaris"
 - name: "Windows"
 
 categories:
@@ -191,6 +195,18 @@ categories:
 
 - name: "Syntax Highlighting"
   applications:
+
+  - name: "CudaText Editor"
+    license: "FOSS"
+    url: "http://uvviewsoft.com/cudatext/"
+    os:
+    - name: "DragonFlyBSD"
+    - name: "FreeBSD"
+    - name: "NetBSD"
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Solaris"
+    - name: "Windows"
 
   - name: "SFZ syntax highlighting for Geany"
     license: "FOSS"
