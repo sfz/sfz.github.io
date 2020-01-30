@@ -16,7 +16,10 @@ Filter types in the SFZ1 spec are:
 - ***brf_2p***: two-pole band rejection filter (12dB/octave).
 
 See [fil2_type](fil2_type) for additional filter types
-introduced by SFZ v2 in this opcode.
+introduced by SFZ v2 in this opcode. In other words, under the SFZ1
+spec level, fil_type allows the values listed above. Under the SFZ2
+spec level, both fil_type and fil2_type allow values from the
+longer list documented under fil2_type.
 
 ## Examples
 
