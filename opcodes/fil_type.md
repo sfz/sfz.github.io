@@ -1,27 +1,17 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
-opcode_name: "fil_type"
+title: "fil_type / fil2_type"
 ---
-Allows you to choose which type of filter you use. if not specified
+Allows you to choose which type of filter you use if not specified
 (ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ).
 
-Filter types in the SFZ1 spec are:
+`fil_type` was created in SFZ v1, so under that specification level only the
+v1 filters listed below are supported.
 
-- ***lpf_1p***: one-pole low pass filter (6dB/octave).
-- ***hpf_1p***: one-pole high pass filter (6dB/octave).
-- ***lpf_2p***: two-pole low pass filter (12dB/octave).
-- ***hpf_2p***: two-pole high pass filter (12dB/octave).
-- ***bpf_2p***: two-pole band pass filter (12dB/octave).
-- ***brf_2p***: two-pole band rejection filter (12dB/octave).
+`fil2_type` was added later in SFZ v2 as a second filter to be used in series,
+so under the v2 specification level both opcodes include both v1 and v2 filters.
 
-See [fil2_type](fil2_type) for additional filter types
-introduced by SFZ v2 in this opcode. In other words, under the SFZ1
-spec level, fil_type allows the values listed above. Under the SFZ2
-spec level, both fil_type and fil2_type allow values from the
-longer list documented under fil2_type. ARIA adds three more
-possible values for both fil_type and fil2_type, documented under
-fil2_type as well.
+ARIA adds three more possible values for both opcodes.
 
 ## Examples
 
@@ -32,3 +22,32 @@ fil_type=hpf_1p
 
 Passive tone controls in guitars are one-pole low pass filters.
 Typical subtractive synthesizer filters are two-pole filters.
+
+```
+fil2_type=hpf_2p
+```
+
+This could be used to have both a high-pass and a low-pass filter, like this.
+The first filter does not have [fil_type](fil_type) set explicitly,
+so it defaults to lpf_2p, making it a lowpass filter.
+The second filter is set to be a highpass filter.
+
+```
+cutoff=1200
+resonance=6
+fil2_type=hpf_2p
+cutoff2=250
+resonance2=3
+```
+
+## Players support
+
+Both ARIA and LinuxSampler supports all SFZ v1 filter types.
+The following table describes which SFZ v2 and ARIA extension filter types they support.
+`lsh`, `hsh` and `peq` are ARIA extensions, allowing filters to be used as low-shelf,
+high-shelf or up to two additional parametric EQ bands,
+in addition to the default three eqN bands.
+Filters of these three types use [fil_gain](fil_gain) or fil2_gain
+to set the gain of the shelf or band.
+
+{% include sfz/fil_type_players_compatibility_table.html %}
