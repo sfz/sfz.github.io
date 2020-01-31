@@ -1,10 +1,9 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
-opcode_name: "fil_gain"
+title: "fil_gain / fil2_gain"
 ---
-Fil_gain and fil2_gain are used by the additional ARIA extension
-filter types lsh (low shelf), hsh (high shelf) and peq
+`fil_gain` and `fil2_gain` are used by the additional ARIA extension
+filter types `lsh` (low shelf), `hsh` (high shelf) and `peq`
 (parametric EQ). This allows the two filters to instead be used
 as additional EQ bands, on top of SFZ's regular three bands. It
 also allows shelving EQ.
