@@ -19,6 +19,8 @@ categories:
     url: "https://kx.studio/Applications:Carla"
     documented: true
     os:
+    - name: "DragonFlyBSD"
+    - name: "FreeBSD"
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
@@ -36,6 +38,8 @@ categories:
     documented: true
     os:
     - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
 
   - name: "SFZero"
     license: "FOSS"
