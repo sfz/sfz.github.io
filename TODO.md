@@ -3,16 +3,13 @@ title: "TODO"
 ---
 ## Opcode documentation
 
-- Test and document fil_gain
 - Update [sw_down] with new info
 - Complete _envelope_generators_ and _lfo_ type pages
-- Envelopes visual examples, see [PR #5]
 - Add screenshots to group_label/master_label/global_label and also to sw_label
 - Add a "see also" section on opcode pages footer
 
 ### Modulations
 
-- Merge _curveccN_ info into one page
 - Merge eqN_vel2freq, eqN_vel2gain, varNN_*ccX, ampeg_vel2*, amplfo_depth*
 	and amplfo_freq* with related opcodes
 - varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
@@ -23,7 +20,6 @@ title: "TODO"
 
 - Filter
 	- cutoff: merge with cutoff2
-	- fil_type: merge with fil2_type
 	- resonance: merge with resonance2
 
 - Pitch:
@@ -47,6 +43,7 @@ title: "TODO"
 - Support for aliased opcodes, removing duplicated data
 - Variables inheritance
 - Add DragonFlyBSD, FreeBSD, NetBSD and Solaris as OSs in software section
+- Use the same OSs info for both software section and player pages
 
 ### Other tasks
 
