@@ -27,10 +27,11 @@ Typical subtractive synthesizer filters are two-pole filters.
 fil2_type=hpf_2p
 ```
 
-This could be used to have both a high-pass and a low-pass filter, like this.
-The first filter does not have [fil_type](fil_type) set explicitly,
-so it defaults to lpf_2p, making it a lowpass filter.
-The second filter is set to be a highpass filter.
+The combination of fil and fil2 can be used to have, for
+example, both a high-pass and a low-pass filter, like this.
+In the below example, the first filter does not have a type
+set explicitly, so fil_type defaults to lpf_2p, making it
+a lowpass filter. The second filter is set to be a highpass filter.
 
 ```
 cutoff=1200
