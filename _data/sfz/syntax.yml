@@ -4377,6 +4377,13 @@ categories:
       max: 100
       unit: "%"
 
+  - name: "type"
+    short_description:
+      "A vendor-specific effect name. Varies across SFZ players"
+    version: "SFZ v2"
+    value:
+      type_name: "string"
+
   - name: "param_offset"
     short_description:
       "Adds a number to the parameter numbers of built-in
