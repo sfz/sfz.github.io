@@ -535,6 +535,9 @@ categories:
         default: 0
         min: 0
         max: 4294967296
+      alias:
+      - name: "offby"
+        version: "SFZ v2"
 
     - name: "off_mode"
       short_description: "Region off mode."
@@ -2077,6 +2080,8 @@ categories:
             min: 0
             max: 40
             unit: "dB"
+          alias:
+          - name: "resonance_ccN"
         - name: "resonance_curveccN"
           version: "SFZ v2"
           value:
@@ -2944,6 +2949,8 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+          alias:
+          - name: "fileg_attackccN"
         velocity:
         - name: "fileg_vel2attack"
           short_description: "Velocity effect on EG attack time."
@@ -2973,6 +2980,8 @@ categories:
             default: 0
             min: -100
             max: 100
+          alias:
+          - name: "fileg_decayccN"
         velocity:
         - name: "fileg_vel2decay"
           short_description: "Velocity effect on filter EG decay time."
@@ -3003,6 +3012,8 @@ categories:
             default: 0
             min: -100
             max: 100
+          alias:
+          - name: "fileg_delayccN"
         velocity:
         - name: "fileg_vel2delay"
           short_description: "Velocity effect on filter EG delay time."
@@ -3032,6 +3043,8 @@ categories:
             default: 0
             min: -1
             max: 1
+          alias:
+          - name: "fileg_depthccN"
         velocity:
         - name: "fileg_vel2depth"
           short_description:
@@ -3063,6 +3076,8 @@ categories:
             default: 0
             min: -100
             max: 100
+          alias:
+          - name: "fileg_holdccN"
         velocity:
         - name: "fileg_vel2hold"
           short_description: "Velocity effect on EG hold time."
@@ -3093,6 +3108,8 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+          alias:
+          - name: "fileg_releaseccN"
         velocity:
         - name: "fileg_vel2release"
           short_description: "Velocity effect on EG release time."
@@ -3124,6 +3141,8 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+          alias:
+          - name: "fileg_startccN"
 
     - name: "fileg_sustain"
       short_description: "EG sustain level, in percentage."
@@ -3144,6 +3163,8 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+          alias:
+          - name: "fileg_sustainccN"
         velocity:
         - name: "fileg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
@@ -4080,6 +4101,10 @@ categories:
     - name: "lfoN_freq_lfoX"
       short_description: ""
       version: "SFZ v2"
+      modulation:
+        midi_cc:
+        - name: "lfoN_freq_lfoX_onccX"
+          version: "SFZ v2"
 
     - name: "lfoN_depth_lfoX"
       short_description: ""
