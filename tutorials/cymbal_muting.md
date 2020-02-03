@@ -237,6 +237,66 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 <region> key=44
 ```
 
+## Edge cases
+
+The above can sound strange when a hard hi-hat hit is being muted by a much quieter one. If
+the hit doing the muting is both quiet and short, it can be practically inaudible, and the
+resulting sound seems to only be the open hit, suddenly fading out. This is especially risky
+if using amp_veltrack set to 100, which will make hits with very low velocity extremely quiet,
+or if the lowest dynamic layers of more closed hits and foot chiks are recorded very quietly.
+
+Lowering amp_veltrack for the lowest velocity layers is one potential way to reduce this
+problem, as is setting amp_velcurve_1 to some value around 0.2 to 0.5 (higher values if there
+are more dynamic layers).
+
+In real life, however, a hard open hi-hat hit would have reduced in volume before the start
+of the soft closed hit, as the pedal needs to be closed before a closed hit can be made.
+This would, of course, cause many edge clashes along the way, which we do not have a way
+to emulate. However, it is possible to use the pedal's MIDI CC to make the open sample quieter
+outside of the range where the open hi-hat sample would be triggered. This can be done by modulating
+the hi-hat's [amplitude](/opcodes/amplitude), and applying a [curve](/headers/curve) which will
+keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample
+was triggered.
+
+```
+<group>
+//Here are the hi-hat samples
+off_mode=normal
+ampeg_release=0.07
+
+<region>key=42 sample=hh_closed.wav group=4 off_by=5
+<region>key=44 sample=hh_chik.wav group=5
+<region>key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+<region>key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+<region>key=54 sample=hh_splash.wav group=1 off_by=1
+
+<curve>curve_index=21
+v000=0.13
+v037=0.8
+v077=1
+v127=1
+
+<curve>curve_index=22
+v000=0.1
+v037=0.7
+v077=1
+v127=1
+```
+
+Using smoothing on the amplitude modulation helps avoid sudden jumps, though playing an
+open hit, closing the hi-hat pedal most of the way and then reopening it will still
+result in obviously unrealistic volume fluctuations. So, this is not a perfect solution
+by any means.
+
+It's probably better to do this by using a volume envelope and using CC4 to modulate its
+decay time, with the sustain set to a low level. and the [ampeg_dynamic](/opcodes/ampeg_dynamic)
+opcode set to 1 so that moving the pedal will cause the decay time to be recalculated.
+However, that has not been tested yet, as the author's test kit was already using envelopes
+on the hi-hat to emulate drier cymbals.
+
+Also, applying this to splash samples, which involve the pedal starting closed and opening
+rapidly, is another problem which requires a solution.
+
 ## Multimic samples
 
 So far, each hi-hat articulation has only one sample, which will obviously not
@@ -492,6 +552,7 @@ set_cc101=100
 <global> loop_mode=one_shot
 seq_length=4
 ampeg_release=0.12
+amp_velcurve_1=0.4
 
 //Foot chiks
 
@@ -534,18 +595,22 @@ locc4=$ht_qo_lo hicc4=$ht_qo_hi
 #include "mappings/hihat_14/ht_qo_oh.sfz"
 
 <master> key=$htvartkey amplitude_cc100=100 group=15 off_by=14
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
 locc4=$ht_ho_lo hicc4=$ht_ho_hi
 #include "mappings/hihat_14/ht_ho_cl.sfz"
 
 <master> key=$htvartkey amplitude_cc101=100 group=25 off_by=24 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
 locc4=$ht_ho_lo hicc4=$ht_ho_hi
 #include "mappings/hihat_14/ht_ho_oh.sfz"
 
 <master> key=$htvartkey amplitude_cc100=100 group=16 off_by=15
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
 locc4=$ht_open_lo hicc4=$ht_open_hi
 #include "mappings/hihat_14/ht_open_cl.sfz"
 
 <master> key=$htvartkey amplitude_cc101=100 group=26 off_by=25 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
 locc4=$ht_open_lo hicc4=$ht_open_hi
 #include "mappings/hihat_14/ht_open_oh.sfz"
 
@@ -582,18 +647,22 @@ locc4=$ht_qo_lo hicc4=$ht_qo_hi
 #include "mappings/hihat_14/ht_qo_s_oh.sfz"
 
 <master> key=$htvarskey amplitude_cc100=100 group=15 off_by=14
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
 locc4=$ht_ho_lo hicc4=$ht_ho_hi
 #include "mappings/hihat_14/ht_ho_cl.sfz"
 
 <master> key=$htvarskey amplitude_cc101=100 group=25 off_by=24 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
 locc4=$ht_ho_lo hicc4=$ht_ho_hi
 #include "mappings/hihat_14/ht_ho_oh.sfz"
 
 <master> key=$htvarskey amplitude_cc100=100 group=16 off_by=15
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
 locc4=$ht_open_lo hicc4=$ht_open_hi
 #include "mappings/hihat_14/ht_open_cl.sfz"
 
 <master> key=$htvarskey amplitude_cc101=100 group=26 off_by=25 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
 locc4=$ht_open_lo hicc4=$ht_open_hi
 #include "mappings/hihat_14/ht_open_oh.sfz"
 
@@ -843,4 +912,16 @@ loop_mode=loop_continuous off_mode=fast
 ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 <region> key=$htchkkey
 <region> key=$htsplkey
+
+<curve>curve_index=21
+v000=0.13
+v037=0.8
+v077=1
+v127=1
+
+<curve>curve_index=22
+v000=0.1
+v037=0.7
+v077=1
+v127=1
 ```
