@@ -537,7 +537,6 @@ categories:
         max: 4294967296
       alias:
       - name: "offby"
-        version: "SFZ v2"
 
     - name: "off_mode"
       short_description: "Region off mode."
@@ -4103,8 +4102,7 @@ categories:
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_freq_lfoX_onccX"
-          version: "SFZ v2"
+        - name: "lfoN_freq_lfoX_onccY"
 
     - name: "lfoN_depth_lfoX"
       short_description: ""
