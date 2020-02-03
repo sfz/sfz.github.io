@@ -154,8 +154,11 @@ layout: default
 			append: " (" | append: midi_cc.version	| append: ')'-%}
 <li>
 		{%-for alias in midi_cc.alias-%}
-			{%-assign midi_cc_name = midi_cc_name | append: ", alias " | append: alias.name |
-				append: " (" | append: alias.version | append: ')'-%}
+			{%-assign midi_cc_name = midi_cc_name | append: ", alias " | append: alias.name-%}
+			{%-if alias.version-%}
+				{%-assign midi_cc_name = midi_cc_name | append: " (" |
+					append: alias.version | append: ')'-%}
+			{%-endif-%}
 		{%-endfor-%}
 	{{ midi_cc_name }}
 </li>
@@ -170,7 +173,11 @@ layout: default
 		<li>
 				{%-for alias in velocity.alias-%}
 					{%-assign velocity_name = velocity_name | append: ", alias " |
-						append: alias.name | append: " (" | append: alias.version | append: ')'-%}
+						append: alias.name-%}
+					{%-if alias.version-%}
+						{%-assign midi_cc_name = midi_cc_name | append: " (" |
+							append: alias.version | append: ')'-%}
+					{%-endif-%}
 				{%-endfor-%}
 			{{ velocity_name }}
 		</li>

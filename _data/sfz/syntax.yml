@@ -4103,6 +4103,7 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_freq_lfoX_onccY"
+          version: "ARIA"
 
     - name: "lfoN_depth_lfoX"
       short_description: ""
