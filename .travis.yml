@@ -21,7 +21,7 @@ deploy:
 notifications:
   irc:
     channels:
-    - "ircs://chat.freenode.net:7070/#sfzformat"
+    - "ircs://chat.freenode.net:7070/#sfzformat-dev"
 
     template:
     - "[%{repository_name}:%{branch}] Build #%{build_number}: %{message}"
