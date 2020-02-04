@@ -18,8 +18,8 @@ In [ARIA](/software/players/aria), the waves are:
 
 <ol start="-1">
 <li>deprecated, should not be used, but is random</li>
-<li>triangle</li>
-<li>sine (Default)</li>
+<li>triangle (default)</li>
+<li>sine</li>
 <li>75% pulse</li>
 <li>square (50% pulse)</li>
 <li>25% pulse</li>
