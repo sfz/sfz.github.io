@@ -1,0 +1,64 @@
+<p>Note that <a href="{{ '/modulations/' | relative_url }}">modulations</a>
+such as (on)ccN, and vel2* opcodes are included in the pages describing
+the parameters they modulate.</p>
+
+{%-for category in site.data.sfz.syntax.categories-%}
+	{%-if category.opcodes-%}
+		{%-assign opcodes = opcodes | concat: category.opcodes-%}
+	{%-endif-%}
+	{%-for category_type in category.types-%}
+		{%-assign opcodes = opcodes | concat: category_type.opcodes-%}
+	{%-endfor-%}
+{%-endfor-%}
+{%-assign opcodes = opcodes | sort: "name"-%}
+
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Opcode</th>
+			<th scope="col">Description</th>
+			<th scope="col">Version</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for opcode in opcodes-%}
+	{%-capture opcode_url-%}
+		{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
+	{%-endcapture-%}
+	{%-capture opcode_version-%}
+		{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=opcode.version-%}
+	{%-endcapture-%}
+		<tr>
+			<td>{{ opcode_url }}</td>
+			<td>{{ opcode.short_description }}</td>
+			<td>{{ opcode_version }}</td>
+		</tr>
+	{%-for midi_cc in opcode.modulation.midi_cc-%}
+		{%-capture midi_cc_url-%}
+			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
+		{%-endcapture-%}
+		{%-capture midi_cc_version-%}
+			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=midi_cc.version-%}
+		{%-endcapture-%}
+		<tr>
+			<td>{{ midi_cc_url }}</td>
+			<td>{{ midi_cc.short_description }}</td>
+			<td>{{ midi_cc_version }}</td>
+		</tr>
+	{%-endfor-%}
+	{%-for velocity_cc in opcode.modulation.velocity-%}
+		{%-capture velocity_cc_url-%}
+			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=velocity_cc-%}
+		{%-endcapture-%}
+		{%-capture velocity_cc_version-%}
+			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=velocity_cc.version-%}
+		{%-endcapture-%}
+		<tr>
+			<td>{{ velocity_cc_url }}</td>
+			<td>{{ velocity_cc.short_description }}</td>
+			<td>{{ velocity_cc_version }}</td>
+		</tr>
+	{%-endfor-%}
+{%-endfor-%}
+	</tbody>
+</table>

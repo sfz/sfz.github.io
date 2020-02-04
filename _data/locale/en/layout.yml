@@ -19,6 +19,9 @@ navigation:
 
   - label: "LinuxSampler Extensions"
     url: "/extensions/linuxsampler/"
+
+  - label: "All Opcodes"
+    url: "/misc/all_opcodes"
   -
   - label: "Modulations"
     url: "/modulations/"

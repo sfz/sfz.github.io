@@ -3,12 +3,12 @@ such as (on)ccN, and vel2* opcodes are included in the pages describing
 the parameters they modulate.</p>
 
 {%-for category in site.data.sfz.syntax.categories-%}
-	{%-assign category_opcode_array = category.opcodes |
+	{%-assign category_opcodes = category.opcodes |
 		where: "version", page.sfz_version-%}
 	{%-capture category_url-%}
 		{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category-%}
 	{%-endcapture-%}
-	{%-if category_opcode_array.size > 0-%}
+	{%-if category_opcodes.size > 0-%}
 <h2>{{category_url}}</h2>
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
@@ -21,7 +21,7 @@ the parameters they modulate.</p>
 		</tr>
 	</thead>
 	<tbody>
-		{%-for opcode in category_opcode_array-%}
+		{%-for opcode in category_opcodes-%}
 			{%-capture opcode_url-%}
 				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
 			{%-endcapture-%}
@@ -83,9 +83,9 @@ the parameters they modulate.</p>
 </table>
 	{%-endif-%}
 	{%-for category_type in category.types-%}
-		{%-assign category_type_opcode_array = category_type.opcodes |
+		{%-assign category_type_opcodes = category_type.opcodes |
 			where: "version", page.sfz_version-%}
-		{%-if category_type_opcode_array.size > 0-%}
+		{%-if category_type_opcodes.size > 0-%}
 			{%-capture category_type_url-%}
 				{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category_type-%}
 			{%-endcapture-%}
@@ -101,7 +101,7 @@ the parameters they modulate.</p>
 		</tr>
 	</thead>
 	<tbody>
-			{%-for opcode in category_type_opcode_array-%}
+			{%-for opcode in category_type_opcodes-%}
 				{%-capture opcode_url-%}
 					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
 				{%-endcapture-%}
