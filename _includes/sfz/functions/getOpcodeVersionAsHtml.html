@@ -3,6 +3,9 @@
 	{%-assign url = "/misc/sfz1"-%}
 {%-elsif include.const_version == "SFZ v2"-%}
 	{%-assign url = "/misc/sfz2"-%}
+{%-elsif include.const_version == "Cakewalk"-%}
+	{%-comment-%}FIXME{%-endcomment-%}
+	{%-assign opcode_version_result = "Cakewalk"-%}
 {%-elsif include.const_version == "Cakewalk SFZ v2"-%}
 	{%-assign url = "/misc/cakewalk"-%}
 {%-elsif include.const_version == "ARIA"-%}
@@ -13,5 +16,6 @@
 {%-if url-%}
 	{%-assign opcode_version_result = '<a href="' | append: url | append: '">' |
 		append: include.const_version | append: '</a>'-%}
+	{%-assign url = nil-%}
 {%-endif-%}
 {{ opcode_version_result }}
