@@ -5,7 +5,7 @@ opcode_name: "lfoN_wave"
 ---
 <ol start="0">
 <li>triangle</li>
-<li>sine (Default)</li>
+<li>sine</li>
 <li>75% pulse</li>
 <li>square (50% pulse)</li>
 <li>25% pulse</li>
@@ -18,7 +18,7 @@ In [ARIA](/software/players/aria), the waves are:
 
 <ol start="-1">
 <li>deprecated, should not be used, but is random</li>
-<li>triangle (default)</li>
+<li>triangle</li>
 <li>sine</li>
 <li>75% pulse</li>
 <li>square (50% pulse)</li>
@@ -33,6 +33,10 @@ In [ARIA](/software/players/aria), the waves are:
 <li>random sample & hold, generating a random value between -1 and 1 twice per period</li>
 <li>stepped LFO</li>
 </ol>
+
+Triangle is the default waveform in ARIA, though the SFZ1 LFOs in ARIA use the sine as
+the default waveform. The default waveforms in Cakewalk products or other SFZ players
+have not been tested.
 
 The waveforms supported in the other player engines need to be tested.
 
