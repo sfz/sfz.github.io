@@ -4027,7 +4027,6 @@ categories:
       version: "SFZ v2"
       value:
         type_name: "integer"
-        default: 0
       modulation:
         midi_cc:
         - name: "lfoN_wave_onccX"
