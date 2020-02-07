@@ -1,8 +1,18 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_wave"
 ---
+In [ARIA] it's possible for one LFO to use sub waveforms in addition to the main waveform.
+This can be used to create more complex LFOs.
+Up to 8 waveforms can be used in one LFO.
+The second waveform is set by `lfoN_wave2`, the third by `lfoN_wave3` etc.
+
+[lfoN_ratio2](lfoN_ratio) is important for giving each wave a different
+frequency, and [lfoN_scale2](lfoN_scale) scale [lfoN_offsetX](lfoN_offsetX)
+can optionally be used as well.
+
+In [SFZ v2], the waves are:
+
 <ol start="0">
 <li>triangle</li>
 <li>sine</li>
@@ -14,7 +24,7 @@ opcode_name: "lfoN_wave"
 <li>saw going down</li>
 </ol>
 
-In [ARIA](/software/players/aria), the waves are:
+In [ARIA], the waves are:
 
 <ol start="-1">
 <li>deprecated, should not be used, but is random</li>
@@ -45,9 +55,23 @@ The waveforms supported in the other player engines need to be tested.
 ```
 lfo01_wave=6
 lfo02_wave=3
+lfo01_wave2=1
+lfo03_wave2=12
 ```
 
-Wave 13 is a provision for ARIA to support SFZ 2.0's stepped LFO, equivalent to:
+```
+lfo01_wave=12 //S&H style LFO used here for randomization
+lfo01_pitch=10
+lfo01_freq=2
+lfo01_freq_oncc1=3
+
+lfo01_wave2=1 //Sine waveform for the secondary waveform
+lfo01_ratio2=4 //4 times faster
+lfo01_offset2=0 //No offset
+lfo01_scale2=0.3 //Shallower than the main wave
+```
+
+Wave 13 is a provision for ARIA to support SFZ 2.0's [stepped LFO], equivalent to:
 
 ```
 lfo01_steps=4
@@ -59,3 +83,7 @@ lfo01_step02_oncc73=100 lfo01_step02_smoothcc73=100
 lfo01_step03_oncc73=100 lfo01_step03_smoothcc73=100
 lfo01_step04_oncc73=100 lfo01_step04_smoothcc73=100
 ```
+
+[ARIA]:        /software/players/aria
+[SFZ v2]:      /misc/sfz2
+[stepped LFO]: /opcodes/lfoN_steps
