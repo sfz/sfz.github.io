@@ -343,6 +343,11 @@ Note that although there is a [width](/opcodes/width) opcodes for
 use with stereo samples, in this case the left channel and right are
 separate mono samples, so [pan](/opcodes/pan) is used to spread them
 in stereo - not width.
+
+As the samples here are quite long, [offset_random](/opcodes/offset_random)
+is applied globally to effecitvely randomize each voice's phase. With
+true single-cycle waveforms, the max offset would have to be set to
+match each voice's max sample length.
 ```
 <control>
 label_cc25=Unison
