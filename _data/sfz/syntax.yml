@@ -3977,6 +3977,13 @@ categories:
           version: "SFZ v2"
         - name: "lfoN_freq_stepccX"
           version: "SFZ v2"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_fade"
+      - "lfoN_offset"
+      - "lfoN_ratio"
+      - "lfoN_scale"
+      - "lfoN_wave"
 
     - name: "lfoN_delay"
       short_description: "Onset delay for LFO number N."
@@ -3990,6 +3997,13 @@ categories:
         midi_cc:
         - name: "lfoN_delay_onccX"
           version: "SFZ v2"
+      see_also:
+      - "lfoN_fade"
+      - "lfoN_freq"
+      - "lfoN_offset"
+      - "lfoN_ratio"
+      - "lfoN_scale"
+      - "lfoN_wave"
 
     - name: "lfoN_fade"
       short_description: "Fade-in time for LFO number N."
@@ -4002,6 +4016,13 @@ categories:
           version: "SFZ v2"
           value:
             type_name: "float"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_freq"
+      - "lfoN_offset"
+      - "lfoN_ratio"
+      - "lfoN_scale"
+      - "lfoN_wave"
 
     - name: "lfoN_phase"
       short_description: "Initial phase shift for LFO number N."
@@ -4031,6 +4052,13 @@ categories:
         midi_cc:
         - name: "lfoN_wave_onccX"
           version: "ARIA"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_fade"
+      - "lfoN_freq"
+      - "lfoN_offset"
+      - "lfoN_ratio"
+      - "lfoN_scale"
 
     - name: "lfoN_steps"
       short_description: ""
@@ -4329,6 +4357,13 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_fade"
+      - "lfoN_freq"
+      - "lfoN_ratio"
+      - "lfoN_scale"
+      - "lfoN_wave"
 
     - name: "lfoN_ratio"
       short_description:
@@ -4336,6 +4371,13 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_fade"
+      - "lfoN_freq"
+      - "lfoN_offset"
+      - "lfoN_scale"
+      - "lfoN_wave"
 
     - name: "lfoN_scale"
       short_description:
@@ -4343,6 +4385,13 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "lfoN_delay"
+      - "lfoN_fade"
+      - "lfoN_freq"
+      - "lfoN_offset"
+      - "lfoN_ratio"
+      - "lfoN_wave"
 
     - name: "lfoN_wave2"
       short_description:

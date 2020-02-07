@@ -20,6 +20,9 @@ layout: default
 			{%-assign found = true-%}
 			{%-assign opcode_info = opcode-%}
 			{%-assign category_info = category-%}
+			{%-if opcode.see_also != nil-%}
+				{%-assign see_also = opcode.see_also-%}
+			{%-endif-%}
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
@@ -30,6 +33,9 @@ layout: default
 					{%-assign opcode_info = opcode-%}
 					{%-assign category_info = category-%}
 					{%-assign category_type_info = category_type-%}
+					{%-if opcode.see_also != nil-%}
+						{%-assign see_also = opcode.see_also-%}
+					{%-endif-%}
 					{%break%}
 				{%-endif-%}
 			{%-endfor-%}
@@ -187,9 +193,20 @@ layout: default
 	</ul>
 {%-endif-%}
 
+{%-if see_also != nil-%}
+	{%-for opcode_ref in see_also-%}
+		{%-if see_also_list != nil-%}
+			{%-assign see_also_list = see_also_list | append: ", "-%}
+		{%-endif-%}
+		{%-assign see_also_list = see_also_list | append: "<a href='" |
+			append: opcode_ref | append: "'>" | append: opcode_ref | append: "</a>"-%}
+	{%-endfor-%}
+	<p>See also: {{ see_also_list }}</p>
+{%-endif-%}
+
 {%-if category_info.url != nil-%}
 	{%-assign category_url = "<a href='" | append: category_info.url |
-		append: "'>" | append: category_info.name  | append: "</a>"-%}
+		append: "'>" | append: category_info.name | append: "</a>"-%}
 {%else%}
 	{%-assign category_url = category_info.name-%}
 {%-endif-%}
