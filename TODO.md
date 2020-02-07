@@ -22,7 +22,6 @@ title: "TODO"
 - Filter:
 	- cutoff: merge with cutoff2
 	- resonance: merge with resonance2
-	- lfoN_stepX missing
 	- Document in a similar manner the following:
 ```
 lfoN_ratio -> lfoN_ratioX with X = 1 (or none, implicit) to 8 (1 main and 7 sub waveforms)
