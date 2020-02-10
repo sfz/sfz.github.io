@@ -1,10 +1,7 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "varNN_target"
 ---
-Specifies the target for modulation by variable NN.
-
 ## Example
 
 ```
@@ -38,17 +35,3 @@ or to modulate another variable.
 This list has not been verified by testing. It was created by cutting down the
 list of available targets for modulation by LFO. Decim and bitred might not
 actually be implemented.
-
-- pitch
-- decim
-- bitred
-- cutoff
-- resonance
-- cutoff2
-- resonance2
-- eqNfreq
-- eqNbw
-- eqNgain
-- volume
-- amplitude
-- pan

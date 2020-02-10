@@ -948,12 +948,6 @@ categories:
         min: 0
         max: 127
 
-    - name: "varNN_curveccX"
-      short_description:
-        "Specifies the ‹<a href='/headers/curve'>curve</a>› number
-        which MIDI CC X uses to modulate variable NN."
-      version: "ARIA"
-
     - name: "varNN_mod"
       short_description:
         "Specifies the method used to calculate variable number NN from MIDI CCs."
@@ -965,20 +959,25 @@ categories:
           description:
             "Multiplication, with 1 being full scale, 0 at a CC value of 0,
             and 1 at CC value of 127. This is how the amplitude opcode works."
-
         - name: "add"
           description:
             "Addition, how volume, cutoff and all other modulation destinations
             work by default when modulated."
-
-    - name: "varNN_onccX"
-      short_description:
-        "Specifies the method used to calculate variable number NN from MIDI CCs."
-      version: "ARIA"
-      value:
-        type_name: "float"
-        min: 0
-        max: 1
+      modulation:
+        midi_cc:
+        - name: "varNN_onccX"
+          short_description:
+            "Specifies the method used to calculate variable number NN from MIDI CCs."
+          version: "ARIA"
+          value:
+            type_name: "float"
+            min: 0
+            max: 1
+        - name: "varNN_curveccX"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC X uses to modulate variable NN."
+          version: "ARIA"
 
     - name: "varNN_target"
       short_description: "Specifies the target for variable NN to modulate."
@@ -987,8 +986,10 @@ categories:
         type_name: "string"
         options:
         - name: "amplitude"
+        - name: "bitred"
         - name: "cutoff"
         - name: "cutoff2"
+        - name: "decim"
         - name: "eqNbw"
         - name: "eqNfreq"
         - name: "eqNgain"

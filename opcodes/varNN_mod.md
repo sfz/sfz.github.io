@@ -1,10 +1,7 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "varNN_mod"
 ---
-Specifies the method used to calculate variable number NN from MIDI CCs.
-
 - ***mult***: multiplication, with 1 being full scale - 0 at a CC value of 0,
               and 1 at CC value of 127.
               This is how the [amplitude](amplitude) opcode works.
