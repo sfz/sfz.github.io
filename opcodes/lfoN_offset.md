@@ -1,6 +1,6 @@
 ---
 layout: "sfz/opcode"
-opcode_name: "lfoN_offsetX"
+opcode_name: "lfoN_offset"
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
