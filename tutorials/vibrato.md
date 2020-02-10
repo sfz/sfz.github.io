@@ -5,7 +5,7 @@ lang: en
 Emulating vibrato for solo instruments or voices with LFOs is not difficult. The challenges
 are understanding the key aspects of vibrato on the real instrument, and keeping the number of
 parameters from growing too large to be easy to use. The examples here use SFZ 2 spec [numbered
-LFOs](/types/lfo.html), rather than the [dedicated pitch, volume and filter LFOs](/opcodes/amplfo_depth)
+LFOs](/modulations/lfo.html), rather than the [dedicated pitch, volume and filter LFOs](/opcodes/amplfo_depth)
 and envelopes of SFZ 1. A lot of this can be done under the SFZ 1 specification as well, but
 there are some limitations.
 
@@ -129,7 +129,7 @@ pitch_oncc111=-20
 ```
 This will work fine, as long as we don't try to apply delay or fade to the LFO, which
 would result in the note starting out flat with no vibrato. To solve that problem, we
-can combine the LFO with a pitch [envelope](/types/envelope_generators.html). Here is an example with just delay:
+can combine the LFO with a pitch [envelope](/modulations/envelope_generators.html). Here is an example with just delay:
 ```
 lfo01_pitch_oncc111=20
 lfo01_freq=1.5
@@ -179,7 +179,7 @@ lfo02_volume=0 //This LFO also does tremolo
 lfo02_volume_oncc113=3
 ```
 There is one additional consideration with diaphragm vibrato - when
-the volume of the note drops down, the breath noise can become more prominent, especially on 
+the volume of the note drops down, the breath noise can become more prominent, especially on
 quiet notes or when using the subtone technique. If the volume of the breath noise can be
 modulated separately, the noise regions should not be affected by pitch vibrato, and be
 affected by the diaphragm vibrato in an opposite direction to the notes. So, if the above

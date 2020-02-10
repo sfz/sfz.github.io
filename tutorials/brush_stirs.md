@@ -15,7 +15,7 @@ loops to fit various tempos.
 
 This article describes another approach. The key principle here
 is that stirs are a noisy, nonlinear sound with a lot of randomness, which
-makes them very easy to crossfade or loop with no phase issues. Therefore, 
+makes them very easy to crossfade or loop with no phase issues. Therefore,
 instead of trying to record stirs performed in a realistic way, we propose
 recording long, unrealistically steady stirs with no perceptible rhythm or
 expression, and then using those samples as source material for building up
@@ -44,7 +44,7 @@ the purposes of this example they can be half the length of speed 1.
 
 We can make a very simple stir using speed 1 by playing the sample with
 [loop_mode](/opcodes/loop_mode) set to one_shot, like we normally would set it for a
-drum hit, and using a simple [volume envelope](/types/envelope_generators#sfz-1-egs)
+drum hit, and using a simple [volume envelope](/modulations/envelope_generators#sfz-1-egs)
 to fade this sample in over a time, and then fade it out.
 
 ```
@@ -188,7 +188,7 @@ ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 ## Adding ornaments
 
 So far, we have a stir with adjustable duration and shape which peaks
-halfway through. More complex patterns can have more than one peak, 
+halfway through. More complex patterns can have more than one peak,
 though. A simple way to emulate that is to use a differnet MIDI note
 to trigger short ornaments which will add a brief extra sound to the
 stir, thus emulating a momentary acceleration of the brush. We can use

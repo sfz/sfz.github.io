@@ -35,8 +35,8 @@ set_cc104=31
 ampeg_attack=0.002
 ampeg_sustain=0
 ampeg_release=0.002
-ampeg_attack_oncc100=0.5 
-ampeg_hold_oncc101=1 
+ampeg_attack_oncc100=0.5
+ampeg_hold_oncc101=1
 ampeg_decay_oncc102=5
 ampeg_sustain_oncc103=100
 ampeg_release_oncc104=2
@@ -53,7 +53,7 @@ envelopes modulating the volume of different oscillators, for
 example using a shorter envelope to turn a noise oscillator into
 a short transient.
 
-If more envelope stages are required, an [SFZ2 envelope](/types/envelope_generators) with an
+If more envelope stages are required, an [SFZ2 envelope](/modulations/envelope_generators) with an
 arbitrary amount of points can be used to modulate amplitude
 instead of the SFZ1 envelope above.
 
@@ -235,7 +235,7 @@ vibrato section.
 ## Vibrato
 
 Vibrato can affect pitch, volume (for tremolo) and filter cutoff
-(for wobble). Here is a typical setup using one [LFO](/types/lfo) to modulate
+(for wobble). Here is a typical setup using one [LFO](/modulations/lfo) to modulate
 all three.
 
 ```
@@ -522,8 +522,8 @@ offset_random=1000
 ampeg_attack=0.002
 ampeg_sustain=0
 ampeg_release=0.002
-ampeg_attack_oncc100=0.5 
-ampeg_hold_oncc101=1 
+ampeg_attack_oncc100=0.5
+ampeg_hold_oncc101=1
 ampeg_decay_oncc102=5
 ampeg_sustain_oncc103=100
 ampeg_release_oncc104=2

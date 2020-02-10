@@ -115,7 +115,7 @@ narrower the interval and the shorter the time, the easier it is to sound
 convincing. With the portamento time at zero, this is effectively the same as
 non-portamento legato in the above example.
 
-In the below setup, MIDI CC109 controls the glide time and an SFZ2 [envelope](/types/envelope_generators)
+In the below setup, MIDI CC109 controls the glide time and an SFZ2 [envelope](/modulations/envelope_generators)
 is used to make the pitch change happen. CC140 is the ARIA extension CC for pitch
 delta, and being the difference in pitch between the previous note and the
 current note, it sets the depth of the glide envelope.

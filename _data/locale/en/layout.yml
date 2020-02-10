@@ -25,6 +25,12 @@ navigation:
   -
   - label: "Modulations"
     url: "/modulations/"
+
+  - label: "Envelope Generators"
+    url: "/modulations/envelope_generators"
+
+  - label: "LFO"
+    url: "/modulations/lfo"
   -
   - label: "Extended MIDI CCs"
     url: "/extensions/midi_ccs"

@@ -84,8 +84,8 @@ amp_veltrack=80
 
 ## LFOs and envelopes
 
-Volume, filter and cutoff also each get an [LFO](/types/lfo#sfz-1-lfos) and an
-[envelope](/types/envelope_generators#sfz-1-egs). The LFO rate and
+Volume, filter and cutoff also each get an [LFO](/modulations/lfo#sfz-1-lfos) and an
+[envelope](/modulations/envelope_generators#sfz-1-egs). The LFO rate and
 depth can be modulated by MIDI CC. Each LFO also has a simple envelope with
 delay and fade, but modulating the duration of these is not allowed under the
 SFZ1 spec (though it is with SFZ2 LFOs). Here's a typical pitch vibrato LFO:

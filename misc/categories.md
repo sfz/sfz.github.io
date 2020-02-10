@@ -13,8 +13,8 @@ Other Instruments settings opcodes are of the ***Voice Lifecycle*** type.
 
 Modulation opcodes comprise of all the LFO and EG controls
 
-- [Envelope Generators](/types/envelope_generators)
-- [LFO](/types/lfo)
+- [Envelope Generators](/modulations/envelope_generators)
+- [LFO](/modulations/lfo)
 
 ## Performance Parameters
 

@@ -2563,7 +2563,7 @@ categories:
   short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   types:
   - name: "Envelope Generators"
-    url: "/types/envelope_generators"
+    url: "/modulations/envelope_generators"
     opcodes:
     - name: "ampeg_attack"
       short_description: "EG attack time."
@@ -3645,7 +3645,7 @@ categories:
           version: "Cakewalk SFZ v2"
 
   - name: "LFO"
-    url: "/types/lfo"
+    url: "/modulations/lfo"
     short_description: "Low Frequency Oscillator."
     opcodes:
     - name: "amplfo_delay"
