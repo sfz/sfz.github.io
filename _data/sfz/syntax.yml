@@ -4360,10 +4360,11 @@ categories:
           short_description: ""
           version: "Cakewalk SFZ v2"
 
-    - name: "lfoN_offsetX"
+    - name: "lfoN_offset"
       short_description:
-        "Offset for LFO number N,
-        can also be used with sub waveforms with lfoN_offset2, lfoN_offset3 etc."
+        "DC offset - Add to LFO output; not affected by scale."
+      alias:
+      - name: "lfoN_offsetX"
       version: "ARIA"
       value:
         type_name: "float"
@@ -4378,6 +4379,8 @@ categories:
     - name: "lfoN_ratio"
       short_description:
         "Sets the ratio between the specified sub waveform and the main waveform."
+      alias:
+      - name: "lfoN_ratioX"
       version: "ARIA"
       value:
         type_name: "float"
@@ -4392,6 +4395,8 @@ categories:
     - name: "lfoN_scale"
       short_description:
         "Sets the scaling between the specified sub waveform and the main waveform."
+      alias:
+      - name: "lfoN_scaleX"
       version: "ARIA"
       value:
         type_name: "float"

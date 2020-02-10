@@ -1,12 +1,11 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_ratio"
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
 This can be used to create more complex LFOs.
 Up to 8 waveforms can be used in one LFO.
-lfoN_ratio2 will set the ratio for the second waveform etc.
+The second waveform is set by `lfoN_ratio2`, the third by `lfoN_ratio3` etc.
 Using `lfoN_ratio` with no number after the ratio sets the ratio
 for the main waveform, which is perhaps not needed very often.
 Ratio will likely mostly be used on the sub waveforms,
