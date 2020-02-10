@@ -4060,6 +4060,16 @@ categories:
       - "lfoN_ratio"
       - "lfoN_scale"
 
+    - name: "lfoN_waveX"
+      short_description:
+        "Select the waveform type used for the waveform number X (max 8)
+        for LFO number N, with the same allowed values as
+        <a href='/opcodes/lfoN_wave'>lfoN_wave</a> normally can use."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 1
+
     - name: "lfoN_steps"
       short_description: ""
       version: "SFZ v2"
@@ -4392,16 +4402,6 @@ categories:
       - "lfoN_offset"
       - "lfoN_ratio"
       - "lfoN_wave"
-
-    - name: "lfoN_wave2"
-      short_description:
-        "Select the waveform type used for the second waveform for LFO number N,
-        with the same allowed values as
-        <a href='/opcodes/lfoN_wave'>lfoN_wave</a> normally can use."
-      version: "ARIA"
-      value:
-        type_name: "integer"
-        default: 1
 
 - name: "Curves"
   opcodes:
