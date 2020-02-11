@@ -4462,6 +4462,13 @@ categories:
     value:
       type_name: "string"
 
+  - name: "bus"
+    short_description:
+      "Set bus=midi to create midi pre-processing effects"
+    version: "ARIA"
+    value:
+      type_name: "string"
+
   - name: "param_offset"
     short_description:
       "Adds a number to the parameter numbers of built-in
