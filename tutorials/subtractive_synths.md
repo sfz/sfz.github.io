@@ -263,15 +263,18 @@ lfo01_cutoff_oncc113=3600
 
 ## Humanized vibrato
 
+Humanization is obviously not a standard feature of synthesizers.
+Technically, though, it's not difficult to implement.
+
 The example instrument adds CC 117 for controlling the
 amount of randomization
 of the vibrato LFOs. This is similar to the humanization
 described in the [vibrato tutorial](/tutorials/vibrato), but using CC 135 to
 generate a true random number for each voice, which
 means any unison voices' vibrato will drift out of sync
-with those belonging to other voices. Although this is
-nothing like any classic hardware synthesizer, similar
-principles could be used to emulate analog oscillators'
+with those belonging to other voices. This is musically
+useful for creating more complex pads, for example. Similar
+principles could also be used to emulate analog oscillators'
 much more subtle pitch drift.
 
 ```
@@ -383,6 +386,8 @@ tune_cc27=33
 amplitude_cc25=100
 #include "sample_map_transposed_2.sfz"
 ```
+
+## More complex detune
 
 Another highly unsual feature of Caveman Cosmonaut, though, is
 that the detune doesn't have to be fixed. There are additional
