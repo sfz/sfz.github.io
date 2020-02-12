@@ -1,5 +1,6 @@
 ---
 layout: default
+no_anchor: true
 ---
 {%-comment-%}
 	Get the opcode info based from the opcode name, which can be specified in
@@ -7,6 +8,12 @@ layout: default
 	If the file is a symlink, the filename option is OK only for opcode aliases,
 	so the opcode alias info can be used instead, otherwise for related ccN opcodes
 	we need to use the original opcode info, so this is not an option.
+
+	BUG: Using anchor_headings include on default layout and adding some text here
+	(inheriting layout issue?) the text gets trapped inside a non closed header
+	tag; e.g. "some text" becomes "<hsome text", messing the HTML page code.
+	Using a workaround for now, by setting the usual content in the main default
+	layout and including it here.
 {%-endcomment-%}
 {%-if page.opcode_name-%}
 	{%-assign opcode_name = page.opcode_name-%}
@@ -42,20 +49,24 @@ layout: default
 		{%-endfor-%}
 	{%-endif-%}
 {%-endfor-%}
+{%-assign value_versions = opcode_info.version-%}
 {%-if opcode_info.value.min == nil-%}
 	{%-if opcode_info.value.options-%}
 		{%-for option in opcode_info.value.options-%}
-			{%-assign opcode_info_range = opcode_info_range | append: option.name-%}
-			{%-if forloop.last == false-%}
-				{%-assign opcode_info_range = opcode_info_range | append: ", "-%}
+			{%-if option.version-%}
+				{%-unless value_versions contains option.version-%}
+					{%-assign value_versions = value_versions | append: ','
+						| append: option.version-%}
+				{%-endunless-%}
 			{%-endif-%}
 		{%-endfor-%}
+		{%-assign value_versions = value_versions | split: ','-%}
 	{%-else-%}
 		{%-assign opcode_info_range = "N/A"-%}
 	{%-endif-%}
 {%-else-%}
-	{%-assign opcode_info_range = opcode_info.value.min | append: " to " |
-		append: opcode_info.value.max-%}
+	{%-assign opcode_info_range =
+		opcode_info.value.min | append: " to " | append: opcode_info.value.max-%}
 {%-endif-%}
 {%-if opcode_info.value.default == nil-%}
 		{%-assign opcode_info_default = "N/A"-%}
@@ -65,9 +76,9 @@ layout: default
 
 <p>{{ opcode_info.short_description }}</p>
 
-{{ content }}
+{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
 
-<table class="table table-sm table-hover table-striped table-responsive">
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Name</th>
@@ -81,16 +92,51 @@ layout: default
 		</tr>
 	</thead>
 	<tbody>
+{%-if opcode_info_range-%}
 		<tr>
 			<td>{{ opcode_info.name }}</td>
 			<td>{{ opcode_info.version }}</td>
 			<td>{{ opcode_info.value.type_name }}</td>
 			<td>{{ opcode_info_default }}</td>
 			<td>{{ opcode_info_range }}</td>
-{%-if opcode_info.value.unit != nil-%}
+		{%-if opcode_info.value.unit != nil-%}
 			<td>{{ opcode_info.value.unit }}</td>
-{%-endif-%}
+		{%-endif-%}
 		</tr>
+{%-elsif opcode_info.value.options-%}
+	{%-for value_version in value_versions-%}
+		{%-assign version_options = nil-%}
+		{%-for option in opcode_info.value.options-%}
+			{%-if option.version-%}
+				{%-assign option_version = option.version-%}
+			{%-else-%}
+				{%-assign option_version = opcode_info.version-%}
+			{%-endif-%}
+			{%-if option_version == value_version-%}
+				{%-assign version_options = version_options | append: option.name | append: ", "-%}
+			{%-endif-%}
+		{%-endfor-%}
+		{%-assign size = version_options | size | minus: 2-%}
+		{%-assign version_options = version_options | slice: 0, size-%}
+		{%-if forloop.first-%}
+		<tr>
+			<td>{{ opcode_info.name }}</td>
+			<td>{{ opcode_info.version }}</td>
+			<td>{{ opcode_info.value.type_name }}</td>
+			<td>{{ opcode_info_default }}</td>
+			<td>{{ version_options }}</td>
+		</tr>
+		{%-else-%}
+		<tr>
+			<td></td>
+			<td>{{ value_version }}</td>
+			<td></td>
+			<td></td>
+			<td>{{ version_options }}</td>
+		</tr>
+		{%-endif-%}
+	{%-endfor-%}
+{%-endif-%}
 {%-for midi_cc in opcode_info.modulation.midi_cc-%}
 	{%-if midi_cc.value.default != nil-%}
 		{%-assign midi_cc_default = midi_cc.value.default-%}

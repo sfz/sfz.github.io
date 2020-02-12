@@ -39,10 +39,10 @@ lfoN_offsetX              with X = 1 (or none, implicit) to 8
 ## Website / db features
 
 - Fix/replace Yarn (with [gulp]?)
-- Anchor links in h2 titles
 - Site search on generated HTML, not markdown source
-- Specify opcode option value version
-	(See [off_mode] `time` and [trigger] `release_key`)
+- Specify opcode options value version in table lists?
+	(Implemented in opcode pages only, see [off_mode] `time`,
+	[trigger] `release_key` and `fil_type`)
 - Generate opcode list in [Prettify SFZ definition script]
 - Remove redundant MIDI CC modulations from list that is already in the opcode
 	info table and keep track of aliases (opcode layout)
