@@ -1,12 +1,9 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "global_label"
 ---
 Useful for debugging.
-It can be set anywhere, not just under the ‹[global](/headers/global)› header.
-
-See also [master_label](master_label), [group_label](group_label) and [region_label](region_label).
+It can be set anywhere, not just under the ‹[global]› header.
 
 ## Examples
 
@@ -14,3 +11,5 @@ See also [master_label](master_label), [group_label](group_label) and [region_la
 global_label=Acoustic piano
 global_label=Test legato patch
 ```
+
+[global]: /headers/global

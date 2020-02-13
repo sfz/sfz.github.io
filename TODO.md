@@ -7,6 +7,7 @@ title: "TODO"
 - Update [sw_down] with new info
 - Complete _envelope_generators_ and _lfo_ type pages
 - Add screenshots to group_label/master_label/global_label and also to sw_label
+- More page types other than opcodes in the `see_also` section
 
 ### Modulations
 

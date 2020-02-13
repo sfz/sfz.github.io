@@ -412,6 +412,8 @@ categories:
     short_description:
       "Determines whether a parameter is modulated by addition or multiplication."
     version: "ARIA"
+    see_also:
+    - "varNN_mod"
 
   - name: "set_hdccN"
     short_description:
@@ -484,6 +486,10 @@ categories:
     value:
       type_name: "string"
       default: "null"
+    see_also:
+    - "master_label"
+    - "group_label"
+    - "region_label"
 
   - name: "master_label"
     short_description:
@@ -493,6 +499,10 @@ categories:
     value:
       type_name: "string"
       default: "null"
+    see_also:
+    - "global_label"
+    - "group_label"
+    - "region_label"
 
   - name: "group_label"
     short_description:
@@ -502,6 +512,10 @@ categories:
     value:
       type_name: "string"
       default: "null"
+    see_also:
+    - "master_label"
+    - "global_label"
+    - "region_label"
 
   - name: "region_label"
     short_description:
@@ -511,6 +525,10 @@ categories:
     value:
       type_name: "string"
       default: "null"
+    see_also:
+    - "master_label"
+    - "global_label"
+    - "group_label"
 
   types:
   - name: "Voice Lifecycle"
@@ -615,6 +633,9 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "off_shape"
+      - "off_time"
 
     - name: "off_shape"
       short_description:
@@ -624,6 +645,9 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "off_curve"
+      - "off_time"
 
     - name: "off_time"
       short_description:
@@ -632,6 +656,9 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+      see_also:
+      - "off_curve"
+      - "off_shape"
 
     - name: "polyphony_group"
       short_description:

@@ -1,10 +1,7 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "off_shape"
 ---
-See also [off_time](off_time) and [off_curve](off_curve).
-
 0 is linear, positive values are slower curves
 (in the case of fading out a region, that means it will initially not fade out
 much, and most of the fadeout will happen towards the end of the [off_time](off_time)
