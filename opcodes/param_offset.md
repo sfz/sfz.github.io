@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "param_offset"
 ---
 Multiples of 100 seem most convenient, because with param_offset=300 that would

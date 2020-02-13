@@ -5,7 +5,7 @@ lang: en
 SFZ header for effects controls.
 
 This will vary across SFZ players, but in the PC version of ARIA,
-the MDA effects are bundled. That means that under the effect header,
+the MDA effects are bundled. That means that under the `effect` header,
 any of these effect types can be set.
 
 ```
@@ -25,12 +25,12 @@ com.mda.SubSynth
 com.mda.RezFilter
 ```
 
-Also see [param_offset](/opcodes/param_offset) for how to
+Also see [param_offset] for how to
 configure the parameters for these effects in ARIA.
-The order of the parameters is the same as at [the plugin version of the MDA effects](http://mda.smartelectronix.com/).
+The order of the parameters is the same as at [the plugin version of the MDA effects].
 These effects are not part of the SFZ engine, so it is not possible to, for
 example, have one MIDI CC parameter control two parameters in the same effect,
-or use [curve_index](/headers/curve). Example usage below:
+or use [curve_index]. Example usage below:
 
 ```
 <control>
@@ -41,3 +41,7 @@ set_cc301=127
 param_offset=300
 type=com.mda.Overdrive
 ```
+
+[param_offset] :/opcodes/param_offset
+[the plugin version of the MDA effects] :http://mda.smartelectronix.com/
+[curve_index]: /headers/curve

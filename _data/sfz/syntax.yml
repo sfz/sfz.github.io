@@ -4458,6 +4458,28 @@ categories:
 
 - name: "Effects"
   opcodes:
+  - name: "bus"
+    version: "SFZ v2"
+    short_description:
+      "The target bus for the effect."
+    value:
+      type_name: "string"
+      options:
+      - name: "aux1"
+      - name: "aux2"
+      - name: "aux3"
+      - name: "aux4"
+      - name: "aux5"
+      - name: "aux6"
+      - name: "aux7"
+      - name: "aux8"
+      - name: "fx1"
+      - name: "fx2"
+      - name: "fx3"
+      - name: "fx4"
+      - name: "midi"
+        version: "ARIA"
+
   - name: "effect1"
     short_description:
       "Level of effect1 send, in percentage (reverb in Cakewalk sfz)."
@@ -4486,6 +4508,32 @@ categories:
     version: "SFZ v2"
     value:
       type_name: "string"
+      options:
+      - name: "am"
+      - name: "autopan"
+      - name: "bitred"
+      - name: "buffer"
+      - name: "comp"
+      - name: "decim"
+      - name: "delay"
+      - name: "distorsion"
+      - name: "eq"
+      - name: "filter"
+      - name: "fm"
+      - name: "fverb"
+      - name: "gain"
+      - name: "gate"
+      - name: "limiter"
+      - name: "mixer"
+      - name: "octaver"
+      - name: "phaser"
+      - name: "rectify"
+      - name: "resonator"
+      - name: "ringmod"
+      - name: "static"
+      - name: "strings"
+      - name: "tdfir"
+      - name: "width"
 
   - name: "param_offset"
     short_description:
