@@ -43,11 +43,16 @@ ampeg_release=0.07
 
 ## Hierarchical self-muting
 
-This is an improvement, and is the way many virtual drum kits work, but it is not
-fully satisfactory if, for example, playing a ride pattern on an open hi-hat.
-Things do start getting more complicated here, though, and many developers feel
-that it's enough to stop here. Peter L. Jones has developed a hierarchy of muting,
-where chiks mute all hits, closed hits mute any partially open hits but not chiks
+This is the way many virtual drum kits work, but it is not fully satisfactory if,
+for example, playing a ride pattern on an open hi-hat. Things do start getting more
+complicated here, though, and many developers feel that it's enough to stop here, just
+implement the above rules, and have a reasonably working virtual hi-hat. For those
+who want more, however, Peter L. Jones has developed a hierarchy of muting, where
+hits which are more closed mute hits that are more open, but hits which are
+more open do not mute hits which are more closed. Hits also don't mute hits with
+the same degree of openness.
+
+So, chiks mute all hits, closed hits mute any partially open hits but not chiks
 or closed hits etc. With this amount of degrees of openness, half-open hits would
 mute open hits, and open hits would mute nothing. So, we need to put each hi-hat
 articulation in a different group. This, however, means we need a group which
@@ -100,9 +105,10 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 
 The above isn't perfect - for example, fully opening up a hi-hat after playing
 a hard half-open hit in the real world would stop the clashes between the top
-and bottom, effectively stopping a half-open sound - but it is a reasonable
-compromise covering various degrees of openness. Also, the more degrees of
-openness there are, the more groups will be needed.
+and bottom, effectively stopping a half-open sound and replacing it with quieter
+open ringing - but it is a reasonable compromise covering various degrees of
+openness. Also, the more degrees of openness there are, the more groups will be needed.
+
 There are, however, more hi-hat articulations possible. One which has special
 behavior when it comes to muting is the foot splash - closing the hi-hat with
 the pedal, then quickly reopening it. This articulation needs to mute itself,
@@ -302,6 +308,9 @@ rapidly, is another problem which requires a solution.
 So far, each hi-hat articulation has only one sample, which will obviously not
 be the case in most virtual drum kits. This does not add much complexity, though,
 as the samples for each degree of openness simply need to all be in the same group.
+All half-open samples, for example, including all round robins, all velocity layers,
+can share the same group.
+
 If there are separate articulations for each degree of openness, such as shank,
 tip and bell, those can also all be on the same group. Brushes, sticks and
 mallets can often also share the same groups, unless the brushes need lower
