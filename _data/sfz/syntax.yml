@@ -4442,7 +4442,7 @@ categories:
     value:
       type_name: "integer"
       min: 0
-      max: "N/A"
+      max: 255
 
   - name: "vN"
     short_description: ""
