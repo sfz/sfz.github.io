@@ -1,6 +1,5 @@
 ---
 layout: default
-no_anchor: true
 ---
 {%-comment-%}
 	Get the opcode info based from the opcode name, which can be specified in
@@ -76,7 +75,7 @@ no_anchor: true
 
 <p>{{ opcode_info.short_description }}</p>
 
-{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
+{{ content }}
 
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">

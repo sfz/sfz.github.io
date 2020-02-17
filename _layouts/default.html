@@ -25,11 +25,7 @@
 	{%-endif-%}
 						<h1>{{ page_title }}</h1>
 {%-endif-%}
-{%-if layout.no_anchor-%}
-	{{ content }}
-{%-else-%}
-	{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
-{%-endif-%}
+{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
 					</article>
 				</div>
 				<div class="col-md-3">
