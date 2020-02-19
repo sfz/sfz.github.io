@@ -1005,6 +1005,10 @@ categories:
             "Specifies the ‹<a href='/headers/curve'>curve</a>› number
             which MIDI CC X uses to modulate variable NN."
           version: "ARIA"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
 
     - name: "varNN_target"
       short_description: "Specifies the target for variable NN to modulate."
@@ -1293,6 +1297,10 @@ categories:
             version: "ARIA"
         - name: "pan_curveccN"
           version: "Cakewalk"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "pan_smoothccN"
           version: "Cakewalk"
         - name: "pan_stepccN"
@@ -1341,6 +1349,10 @@ categories:
             unit: "dB"
         - name: "volume_curveccN"
           version: "ARIA"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "volume_smoothccN"
           version: "ARIA"
         - name: "volume_stepccN"
@@ -1365,6 +1377,10 @@ categories:
           version: "Cakewalk"
         - name: "width_curveccN"
           version: "Cakewalk"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "width_smoothccN"
           version: "Cakewalk"
         - name: "width_stepccN"
@@ -1650,6 +1666,10 @@ categories:
             unit: "%"
         - name: "amplitude_curveccN"
           version: "ARIA"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "amplitude_smoothccN"
           version: "ARIA"
 
@@ -1913,9 +1933,8 @@ categories:
           version: "SFZ v2"
           value:
             type_name: "integer"
-            default: 0
-            min: -9600
-            max: 9600
+            min: 0
+            max: 127
             unit: "cents"
         - name: "cutoff_smoothccN"
           version: "SFZ v2"
@@ -2110,11 +2129,9 @@ categories:
         - name: "resonance_curveccN"
           version: "SFZ v2"
           value:
-            type_name: "float"
-            default: 0
+            type_name: "integer"
             min: 0
-            max: 40
-            unit: "dB"
+            max: 127
         - name: "resonance_smoothccN"
           version: "SFZ v2"
           value:
@@ -2162,10 +2179,8 @@ categories:
           version: "SFZ v2"
           value:
             type_name: "integer"
-            default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
+            min: 0
+            max: 127
         - name: "cutoff2_smoothccN"
           version: "SFZ v2"
           value:
@@ -2292,11 +2307,9 @@ categories:
         - name: "resonance2_curveccN"
           version: "SFZ v2"
           value:
-            type_name: "float"
-            default: 0
+            type_name: "integer"
             min: 0
-            max: 40
-            unit: "dB"
+            max: 127
         - name: "resonance2_smoothccN"
           version: "SFZ v2"
           value:
@@ -2481,9 +2494,10 @@ categories:
           alias:
           - name: "tune_curveccN"
             version: "ARIA"
-            value:
-              min: -100
-              max: 100
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "pitch_smoothccN"
           version: "SFZ v2"
           alias:
@@ -2644,6 +2658,11 @@ categories:
           alias:
           - name: "ampeg_decay_onccN"
             version: "SFZ v2"
+        - name: "ampeg_decay_curveccN"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         velocity:
         - name: "ampeg_vel2decay"
           short_description: "Velocity effect on pitch EG decay time."
@@ -2710,6 +2729,11 @@ categories:
           alias:
           - name: "ampeg_hold_onccN"
             version: "SFZ v2"
+        - name: "ampeg_hole_curveccN"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         velocity:
         - name: "ampeg_vel2hold"
           short_description: "Velocity effect on EG hold time."
@@ -2776,6 +2800,11 @@ categories:
             min: -100
             max: 100
             unit: "%"
+        - name: "ampeg_sustain_curveccN"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         velocity:
         - name: "ampeg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
@@ -4181,6 +4210,11 @@ categories:
       version: "SFZ v2"
       modulation:
         midi_cc:
+        - name: "lfoN_picth_curveccN"
+          value:
+            type_name: "integer"
+            min: 0
+            max: 127
         - name: "lfoN_pitch_onccX"
           version: "SFZ v2"
         - name: "lfoN_pitch_smoothccX"
