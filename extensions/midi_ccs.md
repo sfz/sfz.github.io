@@ -42,8 +42,9 @@ all DAWs.
 - time since last key on (in seconds): 151
 - time since last key off (in seconds): 152
 
-CCs 142-149 are shared across all instances of the ARIA engine currently running.
-The others can have a different value for different instruments concurrently.
+Some of these are shared across all instances of the ARIA engine currently running.
+Others can have concurrently have a different value for different instances or different
+instruments concurrently.
 
 CC 151 is reset as soon as a new note is hit, so it cannot be used to measure
 the time between the previous note and the current one, for adaptive legato
