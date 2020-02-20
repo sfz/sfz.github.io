@@ -25,11 +25,29 @@ Bipolar random is from -1 to 1. Alternate changes between 0 and 1 every time
 a note on message is received.
 
 Anything above 137 is not specified in the SFZ 2 standard and strictly
-engine-dependent. ARIA adds more:
+engine-dependent. ARIA adds more. Some of these might not work properly in
+all DAWs.
 
 - keydelta: 140
 - keydelta absolute: 141
 - host tempo (bpm): 142
+- host transport status (0 is off, 1 on in non-loop mode, 2 is playing in loop mode): 143
+- host sample rate: 144
+- time since the engine has been up: 145
+- current time signature numerator: 146
+- current time signature denominator: 147
+- position since song start in PPQ (pulses per quarter note): 148
+- position since bar start in PPQ: 149
+- time since the instrument has been up: 150
+- time since last key on (in seconds): 151
+- time since last key off (in seconds): 152
+
+CCs 142-149 are shared across all instances of the ARIA engine currently running.
+The others can have a different value for different instruments concurrently.
+
+CC 151 is reset as soon as a new note is hit, so it cannot be used to measure
+the time between the previous note and the current one, for adaptive legato
+speed purposes. CC 141 has been used successfully for portamento glides, though.
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
