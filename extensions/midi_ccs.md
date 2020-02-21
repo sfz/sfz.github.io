@@ -41,6 +41,9 @@ all DAWs.
 - time since the instrument has been up: 150
 - time since last key on (in seconds): 151
 - time since last key off (in seconds): 152
+- number of keys currently down: 153
+- number of currently active voices: 154
+- last playahead (offset) of any sample in the instrument: 155
 
 Some of these are shared across all instances of the ARIA engine currently running.
 Others can have concurrently have a different value for different instances or different
