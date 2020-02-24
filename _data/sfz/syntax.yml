@@ -1,4 +1,4 @@
-format: 0
+format: 1
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -412,6 +412,31 @@ categories:
     short_description:
       "Determines whether a parameter is modulated by addition or multiplication."
     version: "ARIA"
+    targets:
+    - name: "amplitude"
+    - name: "bitred"
+    - name: "cutoff"
+    - name: "cutoff2"
+    - name: "decim"
+    - name: "delay"
+    - name: "delay_beats"
+    - name: "fil_gain"
+    - name: "fil2_gain"
+    - name: "offset"
+    - name: "pan"
+    - name: "pitch"
+    - name: "position"
+    - name: "resonance"
+    - name: "resonance2"
+    - name: "stop_beats"
+    - name: "tune"
+    - name: "volume"
+    - name: "width"
+    value:
+      type_name: "string"
+      options:
+      - name: "add"
+      - name: "mult"
     see_also:
     - "varNN_mod"
 
@@ -1009,23 +1034,21 @@ categories:
     - name: "varNN_target"
       short_description: "Specifies the target for variable NN to modulate."
       version: "ARIA"
-      value:
-        type_name: "string"
-        options:
-        - name: "amplitude"
-        - name: "bitred"
-        - name: "cutoff"
-        - name: "cutoff2"
-        - name: "decim"
-        - name: "eqNbw"
-        - name: "eqNfreq"
-        - name: "eqNgain"
-        - name: "pan"
-        - name: "pitch"
-        - name: "resonance"
-        - name: "resonance2"
-        - name: "volume"
-        - name: "width"
+      targets:
+      - name: "amplitude"
+      - name: "bitred"
+      - name: "cutoff"
+      - name: "cutoff2"
+      - name: "decim"
+      - name: "eqNbw"
+      - name: "eqNfreq"
+      - name: "eqNgain"
+      - name: "pan"
+      - name: "pitch"
+      - name: "resonance"
+      - name: "resonance2"
+      - name: "volume"
+      - name: "width"
 
   - name: "Internal Conditions"
     opcodes:
