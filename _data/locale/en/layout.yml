@@ -64,6 +64,9 @@ navigation:
 
   - label: "Legato"
     url: "/tutorials/legato"
+    
+  - label: "Subtractive Synthesizers"
+    url: "/tutorials/subtractive_synths"    
   -
   - label: "Drum Basics"
     url: "/tutorials/drum_basics"
