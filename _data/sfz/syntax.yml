@@ -2752,7 +2752,7 @@ categories:
           alias:
           - name: "ampeg_hold_onccN"
             version: "SFZ v2"
-        - name: "ampeg_hole_curveccN"
+        - name: "ampeg_hold_curveccN"
           value:
             type_name: "integer"
             min: 0
@@ -4233,7 +4233,7 @@ categories:
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_picth_curveccN"
+        - name: "lfoN_pitch_curveccN"
           value:
             type_name: "integer"
             min: 0
