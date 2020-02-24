@@ -4233,7 +4233,7 @@ categories:
       version: "SFZ v2"
       modulation:
         midi_cc:
-        - name: "lfoN_pitch_curveccN"
+        - name: "lfoN_pitch_curveccX"
           value:
             type_name: "integer"
             min: 0
