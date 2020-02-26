@@ -4149,12 +4149,23 @@ categories:
         default: 1
 
     - name: "lfoN_steps"
-      short_description: ""
+      short_description: "Number of steps in LFO step sequencer."
       version: "SFZ v2"
+      value:
+        type_name: "integer"
 
     - name: "lfoN_stepX"
-      short_description: ""
+      short_description: "Level of the step number X in LFO step sequencer."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        min: -100
+        max: 100
+        unit: "percent"
+      modulation:
+        midi_cc:
+        - name: "lfoN_stepX_onccY"
+          version: "SFZ v2"
 
     - name: "lfoN_smooth"
       short_description: ""
