@@ -160,6 +160,13 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
+  - name: "OpenMPT"
+    license: "BSD-3-Clause"
+    url: "/software/players/openmpt"
+    documented: true
+    os:
+    - name: "Windows"
+
   - name: "Renoise (Redux)"
     license: "Commercial"
     url: "https://www.renoise.com/"

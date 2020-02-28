@@ -44,6 +44,7 @@
 - Variables inheritance
 - Add DragonFlyBSD, FreeBSD, NetBSD and Solaris as OSs in software section
 - Use the same OSs info for both software section and player pages
+- OpenMPT: Missing section "Import / Export"
 
 ### Other tasks
 
