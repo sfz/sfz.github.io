@@ -1921,6 +1921,17 @@ categories:
         min: 0
         max: 1
 
+    - name: "eqN_type"
+      short_description: "Sets the type of EQ filter."
+      version: "SFZ v2"
+      value:
+        type_name: "string"
+        default: "peak"
+        options:
+        - name: "peak"
+        - name: "lshelf"
+        - name: "hshelf"
+
   - name: "Filter"
     opcodes:
     - name: "cutoff"
