@@ -64,9 +64,9 @@ navigation:
 
   - label: "Legato"
     url: "/tutorials/legato"
-    
+
   - label: "Subtractive Synthesizers"
-    url: "/tutorials/subtractive_synths"    
+    url: "/tutorials/subtractive_synths"
   -
   - label: "Drum Basics"
     url: "/tutorials/drum_basics"
@@ -115,16 +115,6 @@ cards:
   icon_type: "eye"
   icon_category: "fas"
   links:
-  - label: "GitHub Organization"
-    url: "https://github.com/sfzformat/"
-    icon_type: "github"
-    icon_category: "fab"
-
-  - label: "Plogue Forum"
-    url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
-    icon_type: "users"
-    icon_category: "fas"
-
   - label: "Discord Chat"
     url: "https://discord.gg/t7nrZ6d"
     icon_type: "discord"
@@ -135,6 +125,11 @@ cards:
     url: "https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#sfzformat"
     icon_type: "hashtag"
     icon_category: "fas"
+
+  - label: "GitHub Organization"
+    url: "https://github.com/sfzformat/"
+    icon_type: "github"
+    icon_category: "fab"
 
   - label: "News Atom Feed"
     url: "/atom.xml"
@@ -155,12 +150,17 @@ cards:
     icon_type: "book"
     icon_category: "fas"
 
-  - label: "Free SFZ Instruments"
-    url: "https://github.com/sfzinstruments/"
-    icon_type: "download"
-    icon_category: "fas"
-
   - label: "KVR Forum SFZ post"
     url: "https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
     icon_type: "users"
+    icon_category: "fas"
+
+  - label: "Plogue Forum"
+    url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
+    icon_type: "users"
+    icon_category: "fas"
+
+  - label: "Free SFZ Instruments"
+    url: "https://github.com/sfzinstruments/"
+    icon_type: "download"
     icon_category: "fas"
