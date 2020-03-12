@@ -32,7 +32,6 @@
 ## Website / db features
 
 - Fix/replace Yarn (with [gulp]?)
-- Site search on generated HTML, not markdown source
 - Specify opcode options value version in table lists?
 	(Implemented in opcode pages only, see [off_mode] `time`,
 	[trigger] `release_key` and `fil_type`)
