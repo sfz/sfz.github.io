@@ -17,11 +17,13 @@ with the ride group including both the bow and bell articulations:
 ```
 <group>
 group=1
+off_by=1
 polyphony=4
 <region> key=49 sample=crash.wav
 
 <group>
 group=2
+off_by=2
 polyphony=7
 <region> key=51 sample=ride_bow.wav
 <region> key=53 sample=ride_bell.wav
