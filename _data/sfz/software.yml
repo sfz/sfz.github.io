@@ -227,6 +227,12 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
+  - name: "SFZ syntax highlighting for gedit"
+    license: "FOSS"
+    url: "https://github.com/sfztools/syntax-highlighting-gedit"
+    os:
+    - name: "Linux"
+
   - name: "SFZ syntax highlighting for Sublime Text"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-sublime-text"
