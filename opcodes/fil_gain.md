@@ -11,7 +11,7 @@ also allows shelving EQ.
 In ARIA, low-shelf or high-shelf EQ "borrows" one of the
 filters, while in some Cakewalk plugins it's also possible to have shelf EQ
 but it "borrows" from the three EQ bands rather than the two filters,
-and uses the eqN_type opcode.
+and uses the [eqN_type](eqN_type) opcode.
 
 ## Examples
 

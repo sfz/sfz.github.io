@@ -42,6 +42,6 @@ param_offset=300
 type=com.mda.Overdrive
 ```
 
-[param_offset] :/opcodes/param_offset
-[the plugin version of the MDA effects] :http://mda.smartelectronix.com/
-[curve_index]: /headers/curve
+[curve_index]:  /headers/curve
+[param_offset]: /opcodes/param_offset
+[the plugin version of the MDA effects]: http://mda.smartelectronix.com/
