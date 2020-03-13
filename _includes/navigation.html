@@ -1,5 +1,3 @@
-<script src="/assets/js/lunr.min.js"></script>
-
 {%-assign locale_count = 0-%}
 {%-for language in site.data.locale-%}
 	{%-if language[0] == page.lang-%}
@@ -75,7 +73,7 @@
 	{% endif %}
 						</li>
 {% endfor %}
-						<li class="nav-item"></li>
+						<li class="nav-item">
 							<a class="nav-link"
 								href="{{ page_path_prefix | append: 'search/' | relative_url }}">
 								{{ t.search }}</a>
