@@ -4564,7 +4564,7 @@ categories:
       "Level of effect1 send, in percentage (reverb in Cakewalk sfz)."
     version: "SFZ v1"
     value:
-      type_name: "integer"
+      type_name: "float"
       default: 0
       min: 0
       max: 100
@@ -4575,7 +4575,29 @@ categories:
       "Level of effect2 send, in percentage (chorus in Cakewalk sfz)."
     version: "SFZ v1"
     value:
-      type_name: "integer"
+      type_name: "float"
+      default: 0
+      min: 0
+      max: 100
+      unit: "%"
+
+  - name: "effect3"
+    short_description:
+      "Gain of the region's send into the 3rd effect bus."
+    version: "SFZ v2"
+    value:
+      type_name: "float"
+      default: 0
+      min: 0
+      max: 100
+      unit: "%"
+
+  - name: "effect4"
+    short_description:
+      "Gain of the region's send into the 4th effect bus."
+    version: "SFZ v2"
+    value:
+      type_name: "float"
       default: 0
       min: 0
       max: 100
