@@ -3,7 +3,7 @@ title: ‹effect›
 ---
 SFZ v2 header for effects controls.
 
-In [SFZ v1] only [effect1] and [effect1] opcodes was available
+In [SFZ v1] only [effect1] and [effect2] opcodes was available
 and only at [‹region›] level.
 
 From [SFZ v2] this header was added together with the addition of
