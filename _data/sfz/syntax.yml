@@ -29,7 +29,7 @@ headers:
   version: "SFZ v2"
 
 - name: "effect"
-  short_description: "SFZ header for effects controls."
+  short_description: "SFZ v2 header for effects controls."
   version: "SFZ v2"
 
 - name: "master"
@@ -4536,6 +4536,7 @@ categories:
       max: 1
 
 - name: "Effects"
+  url: "/headers/effect"
   opcodes:
   - name: "bus"
     version: "SFZ v2"
@@ -4543,7 +4544,9 @@ categories:
       "The target bus for the effect."
     value:
       type_name: "string"
+      default: "main"
       options:
+      - name: "main"
       - name: "aux1"
       - name: "aux2"
       - name: "aux3"
