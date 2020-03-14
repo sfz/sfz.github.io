@@ -13,12 +13,49 @@ The effect routing logic is represented as follows:
 
 <img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
 	class="img-fluid" alt="Effect routing image">
+	
+## Cakewalk
+
+This information is based on testing peformed in Rapture. Other
+Cakewalk products may differ, and though this works in some Cakewalk
+products, some of this is likely specific to Cakewalk, and not part
+of the SFZ v2 specification.
+
+Rapture supports the [type](/opcodes/type) opcode to set the effect
+type, though the value "autopan" is replaced with "apan".
+
+Other opcodes supported under the `effect` header are:
+
+bus: can be set to fxN where N can be 1-4, auxN with an unknown range
+of N. If not set, or any other value is set, this goes to the main
+output. Possibly `main` is the default value.
+
+directtomain: global, can be set under any <effect> header for identical
+result. This is the gain of the Main bus into the output. (see routing graph)
+Translates from % into a linear gain 0-1.
+Unit:% Default:100%
+
+fxNtomain: Global, can be set under any <effect> header for identical result.
+Gain of the Nth effect bus into the output. (N: 1-4, see routing graph)
+Translates from % into a linear gain 0-1.
+Unit:% Default:0%
+
+fxNtomix: Global, can be set under any <effect> header for identical result.
+Gain of the Nth effect bus into the Mix node. (N: 1-4, see routing graph)
+Translates from % into a linear gain 0-1.
+Unit:% Default:0%
+	
+bypass_onccN: Sets up a bypass controller for the effect. When the MIDI CC
+value (0-127) is >= a threshold, the effect plays, otherwise it's disabled.
+The threshold is determined according to this expression: 64.0 / BypassValue
+where BypassValue is the opcode's value, strictly positive, interpreted as
+real number. At BypassValue=1, without doubt the most useful, the effect is
+off at CC<64 and on at CC>=64
 
 ## ARIA Extensions
 
-This will vary across SFZ players, but in the PC version of ARIA,
-the MDA effects are bundled. That means that under the `effect` header,
-any of these effect types can be set.
+In the PC version of ARIA, the MDA effects are bundled. That means
+that under the `effect` header, any of these effect types can be set.
 
 ```
 com.mda.Limiter
