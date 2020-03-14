@@ -1668,7 +1668,7 @@ categories:
         "Amplitude for the specified region in percentage of full amplitude."
       version: "ARIA"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 100
         min: 0
         max: 100
@@ -1683,7 +1683,7 @@ categories:
           - name: "amplitude_ccN"
             version: "ARIA"
           value:
-            type_name: "integer"
+            type_name: "float"
             min: 0
             max: 100
             unit: "%"
@@ -1703,7 +1703,7 @@ categories:
         the ‹<a href='/headers/global'>global</a>› header."
       version: "ARIA"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 100
         min: 0
         max: 100
@@ -1716,7 +1716,7 @@ categories:
         the ‹<a href='/headers/master'>master</a>› header."
       version: "ARIA"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 100
         min: 0
         max: 100
@@ -1729,7 +1729,7 @@ categories:
         the ‹<a href='/headers/group'>group</a>› header."
       version: "ARIA"
       value:
-        type_name: "integer"
+        type_name: "float"
         default: 100
         min: 0
         max: 100
