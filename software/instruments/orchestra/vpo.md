@@ -13,4 +13,5 @@ all .zip files need to be unzipped in the same place and in the same way
 (i.e. extract the .zip files into the same sub-directory,
 “Virtual-Playing-Orchestra3” for example).
 
-To get the latest version of the free Virtual Playing Orchestra, visit http://virtualplaying.com
+To get the latest version of the free Virtual Playing Orchestra,
+visit <http://virtualplaying.com>

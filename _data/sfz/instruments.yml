@@ -236,7 +236,7 @@ categories:
     use_details_page: true
     downloads:
     - label: "Instrument"
-      url: "http://virtualplaying.com/go/virtual-playing-orchestra-v3-1-wave-files-onedrive/"
+      url: "http://virtualplaying.com/virtual-playing-orchestra/#download"
       format: "wav"
       samplerate: "44.1"
       size: "617 MB"
