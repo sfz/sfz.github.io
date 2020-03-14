@@ -8,20 +8,10 @@ and only at [‹region›] level.
 
 From [SFZ v2] this header was added together with the addition of
 [effect3] and [effect4] opcodes also to modulate the related bus.
-
-The effect routing logic is represented as follows:
-
-<img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
-	class="img-fluid" alt="Effect routing image">
 	
 ## Cakewalk
 
-This information is based on testing peformed in Rapture. Other
-Cakewalk products may differ, and though this works in some Cakewalk
-products, some of this is likely specific to Cakewalk, and not part
-of the SFZ v2 specification.
-
-Rapture supports the [type](/opcodes/type) opcode to set the effect
+Cakewalk supports the [type](/opcodes/type) opcode to set the effect
 type, though the value "autopan" is replaced with "apan".
 
 Other opcodes supported under the `effect` header are:
@@ -31,7 +21,7 @@ of N. If not set, or any other value is set, this goes to the main
 output. Possibly `main` is the default value.
 
 directtomain: global, can be set under any <effect> header for identical
-result. This is the gain of the Main bus into the output. (see routing graph)
+result. This is the gain of the Main bus into the output. (See routing graph)
 Translates from % into a linear gain 0-1.
 Unit:% Default:100%
 
@@ -39,6 +29,10 @@ fxNtomain: Global, can be set under any <effect> header for identical result.
 Gain of the Nth effect bus into the output. (N: 1-4, see routing graph)
 Translates from % into a linear gain 0-1.
 Unit:% Default:0%
+
+The following is not found in the rcg suite of SFZ v2 tests, and therefore
+probably isn't part of the SFZ v2 specification, but works in Cakewalk
+products:
 
 fxNtomix: Global, can be set under any <effect> header for identical result.
 Gain of the Nth effect bus into the Mix node. (N: 1-4, see routing graph)
@@ -50,7 +44,17 @@ value (0-127) is >= a threshold, the effect plays, otherwise it's disabled.
 The threshold is determined according to this expression: 64.0 / BypassValue
 where BypassValue is the opcode's value, strictly positive, interpreted as
 real number. At BypassValue=1, without doubt the most useful, the effect is
-off at CC<64 and on at CC>=64
+off at CC<64 and on at CC>=64.
+
+The following works in Rapture, but not in other Cakewalk products, and
+doesn't appear to be officially documented anywhere:
+
+dsp_order and internal (which can be set to on or off) opcodes.
+
+The effect routing logic in Rapture is as follows:
+
+<img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
+	class="img-fluid" alt="Effect routing image">
 
 ## ARIA Extensions
 
