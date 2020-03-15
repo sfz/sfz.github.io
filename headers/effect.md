@@ -8,48 +8,27 @@ and only at [‹region›] level.
 
 From [SFZ v2] this header was added together with the addition of
 [effect3] and [effect4] opcodes also to modulate the related bus.
-	
+Other opcodes listed in the book are [bus], [type] and [dsp_order].
+
 ## Cakewalk
 
-Cakewalk supports the [type](/opcodes/type) opcode to set the effect
+Cakewalk supports the [type] opcode to set the effect
 type, though the value "autopan" is replaced with "apan".
+Other opcodes supported under the `‹effect›` header are:
 
-Other opcodes supported under the `effect` header are:
+- [directtomain]
+- [fxNtomain]
 
-bus: can be set to fxN where N can be 1-4, auxN with an unknown range
-of N. If not set, or any other value is set, this goes to the main
-output. Possibly `main` is the default value.
-
-directtomain: global, can be set under any <effect> header for identical
-result. This is the gain of the Main bus into the output. (See routing graph)
-Translates from % into a linear gain 0-1.
-Unit:% Default:100%
-
-fxNtomain: Global, can be set under any <effect> header for identical result.
-Gain of the Nth effect bus into the output. (N: 1-4, see routing graph)
-Translates from % into a linear gain 0-1.
-Unit:% Default:0%
-
-The following is not found in the rcg suite of SFZ v2 tests, and therefore
+The following is not found in the rgc suite of SFZ v2 tests, and therefore
 probably isn't part of the SFZ v2 specification, but works in Cakewalk
 products:
 
-fxNtomix: Global, can be set under any <effect> header for identical result.
-Gain of the Nth effect bus into the Mix node. (N: 1-4, see routing graph)
-Translates from % into a linear gain 0-1.
-Unit:% Default:0%
-	
-bypass_onccN: Sets up a bypass controller for the effect. When the MIDI CC
-value (0-127) is >= a threshold, the effect plays, otherwise it's disabled.
-The threshold is determined according to this expression: 64.0 / BypassValue
-where BypassValue is the opcode's value, strictly positive, interpreted as
-real number. At BypassValue=1, without doubt the most useful, the effect is
-off at CC<64 and on at CC>=64.
+- [fxNtomix]
+- [bypass_onccN]
 
-The following works in Rapture, but not in other Cakewalk products, and
-doesn't appear to be officially documented anywhere:
-
-dsp_order and internal (which can be set to on or off) opcodes.
+`internal`, which can be set to `on` or `off`, works in Rapture,
+but not in other Cakewalk products, and doesn't appear to be officially
+documented anywhere.
 
 The effect routing logic in Rapture is as follows:
 
@@ -59,7 +38,7 @@ The effect routing logic in Rapture is as follows:
 ## ARIA Extensions
 
 In the PC version of ARIA, the MDA effects are bundled. That means
-that under the `effect` header, any of these effect types can be set.
+that under the `‹effect›` header, any of these effect types can be set.
 
 ```
 com.mda.Limiter
@@ -97,11 +76,18 @@ type=com.mda.Overdrive
 
 [SFZ v1]:       /misc/sfz1
 [SFZ v2]:       /misc/sfz2
+[‹region›]:     /headers/region
 [effect1]:      /opcodes/effect1
 [effect2]:      /opcodes/effect2
 [effect3]:      /opcodes/effect3
 [effect4]:      /opcodes/effect4
-[‹region›]:     /headers/region
+[bus]:          /opcodes/bus
+[type]:         /opcodes/type
+[dsp_order]:    /opcodes/dsp_order
+[directtomain]: /opcodes/directtomain
+[fxNtomain]:    /opcodes/fxNtomain
+[fxNtomix]:     /opcodes/fxNtomix
+[bypass_onccN]: /opcodes/bypass_onccN
 [curve_index]:  /headers/curve
 [param_offset]: /opcodes/param_offset
 [the plugin version of the MDA effects]: http://mda.smartelectronix.com/

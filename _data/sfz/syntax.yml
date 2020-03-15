@@ -4562,6 +4562,55 @@ categories:
       - name: "midi"
         version: "ARIA"
 
+  - name: "directtomain"
+    short_description:
+      "Gain of the main bus into the output."
+    version: "Cakewalk"
+    value:
+      type_name: "float"
+      unit: "%"
+      default: 100
+      min: 0
+      max: 100
+
+  - name: "fxNtomain"
+    short_description:
+      "Gain of the Nth effect bus into the output."
+    version: "Cakewalk"
+    value:
+      type_name: "float"
+      unit: "%"
+      default: 0
+      min: 0
+      max: 100
+
+  - name: "fxNtomix"
+    short_description:
+      "Gain of the Nth effect bus into the Mix node."
+    version: "Cakewalk"
+    value:
+      type_name: "float"
+      unit: "%"
+      default: 0
+      min: 0
+      max: 100
+
+  - name: "bypass_onccN"
+    short_description:
+      "Sets up a bypass controller for the effect."
+    version: "Cakewalk"
+    value:
+      type_name: "float"
+
+  - name: "dsp_order"
+    short_description:
+      "Signal flow type in Rapture's DSP block."
+    version: "Cakewalk" # TODO: or "Rapture"?
+    value:
+      type_name: "integer"
+      min: 0
+      max: 14
+
   - name: "effect1"
     short_description:
       "Level of effect1 send, in percentage (reverb in Cakewalk sfz)."
