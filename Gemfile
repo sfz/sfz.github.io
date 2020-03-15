@@ -1,17 +1,18 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
 
-# We'll need rake to build our site in TravisCI
-gem "rake", "~> 12"
-gem "jekyll", '3.8.5'
+# Force gh-pages compatibility in RVM without gh-pages installed
+# see https://pages.github.com/versions/
+ruby "2.5.3"
 
-# Optional: Add any custom plugins here.
-# Some useful examples are listed below
+# Uncomment to build our site in Travis-CI
+# see https://docs.travis-ci.com/user/languages/ruby/#default-build-script
+# and https://github.com/travis-ci/travis-web/blob/master/Gemfile
+group :development, :test do
+  gem "rake", "~> 12"
+end
+
+gem "jekyll", "3.8.5"
+
 group :jekyll_plugins do
-# gem "jekyll-feed"
-  gem "jekyll-sitemap"
-# gem "jekyll-paginate-v2"
-# gem "jekyll-seo-tag"
-# gem "jekyll-compose", "~> 0.5"
-# gem "jekyll-redirect-from"
+  gem "jekyll-sitemap", "1.4.0"
 end
