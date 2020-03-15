@@ -32,7 +32,7 @@ documented anywhere.
 
 The effect routing logic in Rapture is as follows:
 
-<img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
+<img src="{{ '/assets/img/effect/routing.svg' | relative_url }}"
 	class="img-fluid" alt="Effect routing image">
 
 ## ARIA Extensions
