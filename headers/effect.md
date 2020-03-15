@@ -74,20 +74,20 @@ param_offset=300
 type=com.mda.Overdrive
 ```
 
-[SFZ v1]:       misc/sfz1
-[SFZ v2]:       misc/sfz2
-[‹region›]:     headers/region
-[effect1]:      opcodes/effect1
-[effect2]:      opcodes/effect2
-[effect3]:      opcodes/effect3
-[effect4]:      opcodes/effect4
-[bus]:          opcodes/bus
-[type]:         opcodes/type
-[dsp_order]:    opcodes/dsp_order
-[directtomain]: opcodes/directtomain
-[fxNtomain]:    opcodes/fxNtomain
-[fxNtomix]:     opcodes/fxNtomix
-[bypass_onccN]: opcodes/bypass_onccN
-[curve_index]:  headers/curve
-[param_offset]: opcodes/param_offset
+[SFZ v1]:       /misc/sfz1
+[SFZ v2]:       /misc/sfz2
+[‹region›]:     /headers/region
+[effect1]:      /opcodes/effect1
+[effect2]:      /opcodes/effect2
+[effect3]:      /opcodes/effect3
+[effect4]:      /opcodes/effect4
+[bus]:          /opcodes/bus
+[type]:         /opcodes/type
+[dsp_order]:    /opcodes/dsp_order
+[directtomain]: /opcodes/directtomain
+[fxNtomain]:    /opcodes/fxNtomain
+[fxNtomix]:     /opcodes/fxNtomix
+[bypass_onccN]: /opcodes/bypass_onccN
+[curve_index]:  /headers/curve
+[param_offset]: /opcodes/param_offset
 [the plugin version of the MDA effects]: http://mda.smartelectronix.com/
