@@ -1,0 +1,7 @@
+---
+layout: "sfz/opcode"
+opcode_name: "fxNtomain"
+---
+Global, can be set under any `‹effect›` header for identical
+result. N: 1-4, see routing graph.
+Translates from % into a linear gain 0-1.

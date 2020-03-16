@@ -2,119 +2,138 @@
 layout: "sfz/opcode"
 opcode_name: "type"
 ---
-In Cakewalk, of the above effect types has its own set of opcodes controlling its parameters. Here is a list of what is currently known. A separate page for each opcode will probably be created later.
+In Cakewalk, of the above effect types has its own set of opcodes
+controlling its parameters. Here is a list of what is currently known.
 
-```
-disto opcodes:
-disto_stages
-disto_tone[_oncc] 0-100
-disto_depth[_oncc] 0-100
-disto_wet[_oncc] 0-100
-disto_dry[_oncc] 0-100
+### apan
+Automatic panning with LFO:
+- [apan_depth](apan_depth)
+- [apan_dry](apan_dry)
+- [apan_freq](apan_freq)
+- [apan_phase](apan_phase)
+- [apan_waveform](apan_waveform)
+- [apan_wet](apan_wet)
 
-fverb opcodes:
-reverb_type: chamber, large_hall, mid_hall, small_hall, large_room, mid_room, small_room
-reverb_damp[_oncc] 0-100
-reverb_tone[_oncc] 0-100
-reverb_predelay[_oncc] seconds
-reverb_size[_oncc] 0-100
-reverb_input[_oncc] 0-100
-reverb_wet[_oncc] 0-100
-reverb_dry[_oncc] 0-100
+### comp
+Compressor:
+- [comp_attack](comp_attack)
+- [comp_gain](comp_gain)
+- [comp_ratio](comp_ratio)
+- [comp_release](comp_release)
+- [comp_stlink](comp_stlink)
+- [comp_threshold](comp_threshold)
 
-apan opcodes:
-apan_waveform: LFO wave number
-apan_depth[_oncc] 0-100
-apan_wet[_oncc] 0-100
-apan_dry[_oncc] 0-100
-apan_phase[_oncc] degrees
-apan_freq[_oncc] Hz
+### delay
+Multi-purpose delay line:
+- [delay_cutoff](delay_cutoff)
+- [delay_damphi](delay_damphi)
+- [delay_damplo](delay_damplo)
+- [delay_dry](delay_dry)
+- [delay_feedback](delay_feedback)
+- [delay_filter](delay_filter)
+- [delay_input](delay_input)
+- [delay_levelc](delay_levelc)
+- [delay_levell](delay_levell)
+- [delay_levelr](delay_levelr)
+- [delay_lfofreq](delay_lfofreq)
+- [delay_moddepth](delay_moddepth)
+- [delay_mode](delay_mode)
+- [delay_panc](delay_panc)
+- [delay_panl](delay_panl)
+- [delay_panr](delay_panr)
+- [delay_resonance](delay_resonance)
+- [delay_spread](delay_spread)
+- [delay_syncc_oncc](delay_syncc_oncc)
+- [delay_syncl_oncc](delay_syncl_oncc)
+- [delay_syncr_oncc](delay_syncr_oncc)
+- [delay_time_tap](delay_time_tap)
+- [delay_timec](delay_timec)
+- [delay_timel](delay_timel)
+- [delay_timer](delay_timer)
+- [delay_wet](delay_wet)
 
-tdfir opcodes:
-tdfir_gain 0-100
-tdfir_impulse
-tdfir_wet[_oncc] 0-100
-tdfir_dry[_oncc] 0-100
+### disto
+Asymmetric distorsion with tone control:
+- [disto_depth](disto_depth)
+- [disto_dry](disto_dry)
+- [disto_stages](disto_stages)
+- [disto_tone](disto_tone)
+- [disto_wet](disto_wet)
 
-static opcodes:
-static_tone 0-100
-static_filter: name of filter type
-static_random_maxtime: seconds
-static_random_mintime: seconds
-static_cyclic_time: seconds
-static_random_level 0-100
-static_cyclic_level 0-100
-static_level[_oncc] 0-100
-static_stereo ?
+### eq
+Equalizer (Same opcode meanings as ordinary EQ):
+- [eq_bw](eq_bw)
+- [eq_freq](eq_freq)
+- [eq_gain](eq_gain)
+- [eq_type](eq_type)
 
-comp opcodes:
-comp_gain: (probably dB)
-comp_release: seconds
-comp_attack: seconds
-comp_ratio 0-100
-comp_threshold: dB
-comp_stlink: on/off
+### filter
+(Same opcode meanings as ordinary filter):
+- [filter_cutoff](filter_cutoff)
+- [filter_resonance](filter_resonance)
+- [filter_type](filter_type)
 
-gate opcodes:
-gate_oncc (gate manual control according to book)
-gate_release (probably seconds)
-gate_attack (probably seconds)
-gate_threshold (probably dB)
-gate_stlink: on/off
+### fverb
+Algorithmic reverberation:
+- [reverb_damp](reverb_damp)
+- [reverb_dry](reverb_dry)
+- [reverb_input](reverb_input)
+- [reverb_predelay](reverb_predelay)
+- [reverb_size](reverb_size)
+- [reverb_tone](reverb_tone)
+- [reverb_type](reverb_type)
+- [reverb_wet](reverb_wet)
 
-lofi opcodes:
-bitred[_oncc] 0-100
-decim[_oncc] 0-100
+### gate
+Signal gate:
+- [gate_oncc](gate_oncc)
+- [gate_attack](gate_attack)
+- [gate_release](gate_release)
+- [gate_stlink](gate_stlink)
+- [gate_threshold](gate_threshold)
 
-delay opcodes:
-delay_mode: detune, multimod, flanger, chorus, mod, panning, tlcr, rlc, lrc, ping, cross, stereo
-delay_time_tap ?
-delay_moddepth[_oncc] 0-100
-delay_lfofreq[_oncc] Hz
-delay_resonance[_oncc] (probably dB)
-delay_cutoff[_oncc] Hz
-delay_damphi[_oncc] 0-100
-delay_damplo[_oncc] 0-100
-delay_filter: name of filter type
-delay_feedback[_oncc] 0-100
-delay_timec[_oncc] (probably seconds)
-delay_timer[_oncc] (probably seconds)
-delay_timel[_oncc] (probably seconds)
-delay_syncc_oncc
-delay_syncr_oncc
-delay_syncl_oncc
-delay_panc[_oncc] 0-100
-delay_panr[_oncc] 0-100
-delay_panl[_oncc] 0-100
-delay_levelc 0-100
-delay_levelr 0-100
-delay_levell 0-100
-delay_spread[_oncc] 0-100
-delay_input[_oncc] 0-100
-delay_wet[_oncc] 0-100
-delay_dry[_oncc] 0-100
+### lofi
+Bit depth reducer and decimator combined:
+- [bitred](bitred)
+- [decim](decim)
 
-phaser opcodes:
-phaser_stages
-phaser_phase_oncc 0-100
-phaser_feedback[_oncc] 0-100
-phaser_depth[_oncc] 0-100
-phaser_wet[_oncc] 0-100
-phaser_freq[_oncc] Hz
-phaser_waveform: LFO wave number
+### phaser
+Dual-notch phaser with LFO:
+- [phaser_depth](phaser_depth)
+- [phaser_feedback](phaser_feedback)
+- [phaser_freq](phaser_freq)
+- [phaser_phase_oncc](phaser_phase_oncc)
+- [phaser_stages](phaser_stages)
+- [phaser_waveform](phaser_waveform)
+- [phaser_wet](phaser_wet)
 
-eq opcodes (Same opcode meanings as ordinary EQ):
-eq_type
-eq_gain[_oncc]
-eq_bw[_oncc]
-eq_freq[_oncc]
+### static
+Static noise generator:
+- [static_cyclic_level](static_cyclic_level)
+- [static_cyclic_time](static_cyclic_time)
+- [static_filter](static_filter)
+- [static_level](static_level)
+- [static_random_level](static_random_level)
+- [static_random_maxtime](static_random_maxtime)
+- [static_random_mintime](static_random_mintime)
+- [static_stereo](static_stereo)
+- [static_tone](static_tone)
 
-filter opcodes (same opcode meanings as ordinary filter):
-filter_type
-filter_resonance[_oncc]
-filter_cutoff[_oncc]
+### strings
+Sympathetic resonance with waveguide synthesis:
+- [strings_number](strings_number)
+- [strings_wet_oncc](strings_wet_oncc)
 
-strings opcodes (sympathetic resonance with waveguide synthesis):
-strings_wet_oncc 0-100
-strings_number: number of synthesized resonant strings
-```
+### tdfir
+Impulse response convolver:
+- [tdfir_dry](tdfir_dry)
+- [tdfir_gain](tdfir_gain)
+- [tdfir_impulse](tdfir_impulse)
+- [tdfir_wet](tdfir_wet)
+
+Note that the book has some typos/misspelled in opcode names, such as `EffectN`
+(capital letter) or `‹effects›`, others not implemented anywhere.
+In the following table some types values were replaced with tested ones,
+like `autopan` and releated opcodes, which seems not used in any Cakewalk product,
+where `apan` is the correct one, same for `lofi` instead `bitred` and `decim`,
+`disto` instead `distorsion`.
