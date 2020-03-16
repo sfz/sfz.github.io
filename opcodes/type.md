@@ -2,7 +2,49 @@
 layout: "sfz/opcode"
 opcode_name: "type"
 ---
-In Cakewalk, of the above effect types has its own set of opcodes
+
+## ARIA Extensions
+
+In the PC version of ARIA, the MDA effects are bundled. That means
+that under the [‹effect›](/headers/effect) header, any of these effect types can be set.
+
+```
+com.mda.Limiter
+com.mda.Overdrive
+com.mda.Leslie
+com.mda.RingMod
+com.mda.Delay
+com.mda.Bandisto
+com.mda.Ambience
+com.mda.DubDelay
+com.mda.Detune
+com.mda.Dither
+com.mda.Combo
+com.mda.Degrade
+com.mda.SubSynth
+com.mda.RezFilter
+```
+
+Also see [param_offset](/opcodes/param_offset) for how to
+configure the parameters for these effects in ARIA.
+The order of the parameters is the same as at [the plugin version of the MDA effects].
+These effects are not part of the SFZ engine, so it is not possible to, for
+example, have one MIDI CC parameter control two parameters in the same effect,
+or use [custom curves](/headers/curve). Example usage below:
+
+```
+<control>
+set_cc300=64
+set_cc301=127
+
+<effect>
+param_offset=300
+type=com.mda.Overdrive
+```
+
+## Cakewalk implementation
+
+In Cakewalk, each of the effect types has its own set of opcodes
 controlling its parameters. Here is a list of what is currently known.
 
 ### apan
@@ -131,9 +173,9 @@ Impulse response convolver:
 - [tdfir_impulse](tdfir_impulse)
 - [tdfir_wet](tdfir_wet)
 
-Note that the book has some typos/misspelled in opcode names, such as `EffectN`
-(capital letter) or `‹effects›`, others not implemented anywhere.
-In the following table some types values were replaced with tested ones,
-like `autopan` and releated opcodes, which seems not used in any Cakewalk product,
-where `apan` is the correct one, same for `lofi` instead `bitred` and `decim`,
-`disto` instead `distorsion`.
+Note that the Cakewalk book has some typos in opcode names, such as `EffectN`
+(capital letter) or `‹effects›`.
+On this site, non-working effect types mentioned in the book were replaced with tested
+ones. For example, `autopan` does not appear to work in any Cakewalk product, while
+`apan` works. Same for `lofi` instead `bitred` and `decim`, and `disto` instead of
+`distortion`.
