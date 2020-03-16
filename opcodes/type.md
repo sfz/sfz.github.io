@@ -6,14 +6,14 @@ In Cakewalk, of the above effect types has its own set of opcodes
 controlling its parameters. Here is a list of what is currently known.
 A separate page for each opcode will probably be created later.
 
-## `disto` opcodes
+## `disto`
 - disto_stages
 - disto_tone[_oncc] 0-100
 - disto_depth[_oncc] 0-100
 - disto_wet[_oncc] 0-100
 - disto_dry[_oncc] 0-100
 
-## `fverb` opcodes
+## `fverb`
 - reverb_type: chamber, large_hall, mid_hall, small_hall, large_room, mid_room, small_room
 - reverb_damp[_oncc] 0-100
 - reverb_tone[_oncc] 0-100
@@ -23,7 +23,7 @@ A separate page for each opcode will probably be created later.
 - reverb_wet[_oncc] 0-100
 - reverb_dry[_oncc] 0-100
 
-## `apan` opcodes
+## `apan`
 - apan_waveform: LFO wave number
 - apan_depth[_oncc] 0-100
 - apan_wet[_oncc] 0-100
@@ -31,13 +31,13 @@ A separate page for each opcode will probably be created later.
 - apan_phase[_oncc] degrees
 - apan_freq[_oncc] Hz
 
-## `tdfir` opcodes
+## `tdfir`
 - tdfir_gain 0-100
 - tdfir_impulse
 - tdfir_wet[_oncc] 0-100
 - tdfir_dry[_oncc] 0-100
 
-## `static` opcodes
+## `static`
 - static_tone 0-100
 - static_filter: name of filter type
 - static_random_maxtime: seconds
@@ -48,7 +48,7 @@ A separate page for each opcode will probably be created later.
 - static_level[_oncc] 0-100
 - static_stereo ?
 
-## `comp` opcodes
+## `comp`
 - comp_gain: (probably dB)
 - comp_release: seconds
 - comp_attack: seconds
@@ -56,18 +56,18 @@ A separate page for each opcode will probably be created later.
 - comp_threshold: dB
 - comp_stlink: on/off
 
-## `gate` opcodes
+## `gate`
 - gate_oncc (gate manual control according to book)
 - gate_release (probably seconds)
 - gate_attack (probably seconds)
 - gate_threshold (probably dB)
 - gate_stlink: on/off
 
-## `lofi` opcodes
-- bitred[_oncc] 0-100
-- decim[_oncc] 0-100
+## `lofi`
+- [bitred](bitred)
+- [decim](decim)
 
-## `delay` opcodes
+## `delay`
 - delay_mode: detune, multimod, flanger, chorus, mod, panning, tlcr, rlc, lrc, ping, cross, stereo
 - delay_time_tap ?
 - delay_moddepth[_oncc] 0-100
@@ -95,7 +95,7 @@ A separate page for each opcode will probably be created later.
 - delay_wet[_oncc] 0-100
 - delay_dry[_oncc] 0-100
 
-## `phaser` opcodes:
+## `phaser`:
 - phaser_stages
 - phaser_phase_oncc 0-100
 - phaser_feedback[_oncc] 0-100
@@ -104,18 +104,24 @@ A separate page for each opcode will probably be created later.
 - phaser_freq[_oncc] Hz
 - phaser_waveform: LFO wave number
 
-## `eq` opcodes (Same opcode meanings as ordinary EQ):
+## `eq`
+
+(Same opcode meanings as ordinary EQ):
 - eq_type
 - eq_gain[_oncc]
 - eq_bw[_oncc]
 - eq_freq[_oncc]
 
-## `filter` opcodes (same opcode meanings as ordinary filter):
+## `filter`
+
+(same opcode meanings as ordinary filter):
 - filter_type
 - filter_resonance[_oncc]
 - filter_cutoff[_oncc]
 
-## `strings` opcodes (sympathetic resonance with waveguide synthesis):
+## `strings`
+
+(sympathetic resonance with waveguide synthesis):
 - strings_wet_oncc 0-100
 - strings_number: number of synthesized resonant strings
 

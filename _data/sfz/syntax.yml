@@ -4538,6 +4538,46 @@ categories:
 - name: "Effects"
   url: "/headers/effect"
   opcodes:
+  - name: "bitred"
+    version: "Cakewalk SFZ v2"
+    short_description: "Bit reduction."
+    value:
+      type_name: ""
+      min: 0
+      max: 100
+    modulation:
+      envelope: "✓"
+      lfo: "✓"
+      midi_cc:
+      - name: "bitred_onccN"
+        version: "Cakewalk SFZ v2"
+      - name: "bitred_curveccN"
+        version: "Cakewalk SFZ v2"
+      - name: "bitred_smoothccN"
+        version: "Cakewalk SFZ v2"
+      - name: "bitred_stepccN"
+        version: "Cakewalk SFZ v2"
+
+  - name: "decim"
+    version: "Cakewalk SFZ v2"
+    short_description: "Decimator."
+    value:
+      type_name: ""
+      min: 0
+      max: 100
+    modulation:
+      envelope: "✓"
+      lfo: "✓"
+      midi_cc:
+      - name: "decim_onccN"
+        version: "Cakewalk SFZ v2"
+      - name: "decim_curveccN"
+        version: "Cakewalk SFZ v2"
+      - name: "decim_smoothccN"
+        version: "Cakewalk SFZ v2"
+      - name: "decim_stepccN"
+        version: "Cakewalk SFZ v2"
+
   - name: "bus"
     version: "SFZ v2"
     short_description:
