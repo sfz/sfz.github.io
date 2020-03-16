@@ -1,5 +1,4 @@
 ---
-lang: en
 title: ARIA Extensions Opcodes (SFZ 3 hopefuls)
 sfz_version: ARIA
 ---

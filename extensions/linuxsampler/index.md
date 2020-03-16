@@ -1,5 +1,4 @@
 ---
-lang: en
 title: LinuxSampler Extensions Opcodes
 sfz_version: LinuxSampler
 ---

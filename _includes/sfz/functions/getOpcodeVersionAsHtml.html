@@ -3,11 +3,10 @@
 	{%-assign url = "/misc/sfz1"-%}
 {%-elsif include.const_version == "SFZ v2"-%}
 	{%-assign url = "/misc/sfz2"-%}
-{%-elsif include.const_version == "Cakewalk"-%}
-	{%-comment-%}FIXME{%-endcomment-%}
-	{%-assign opcode_version_result = "Cakewalk"-%}
 {%-elsif include.const_version == "Cakewalk SFZ v2"-%}
 	{%-assign url = "/misc/cakewalk"-%}
+{%-elsif include.const_version == "Cakewalk"-%}
+	{%-assign url = "/extensions/cakewalk"-%}
 {%-elsif include.const_version == "ARIA"-%}
 	{%-assign url = "/extensions/aria"-%}
 {%-elsif include.const_version == "LinuxSampler"-%}

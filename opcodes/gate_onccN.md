@@ -1,6 +1,6 @@
 ---
 layout: "sfz/opcode"
-opcode_name: "gate_oncc"
+opcode_name: "gate_onccN"
 ---
 Used under the `‹effect›` header, with [type]=`gate`.
 

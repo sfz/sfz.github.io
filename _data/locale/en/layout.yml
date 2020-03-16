@@ -17,6 +17,9 @@ navigation:
   - label: "ARIA Extensions"
     url: "/extensions/aria/"
 
+  - label: "Cakewalk Extensions"
+    url: "/extensions/cakewalk/"
+
   - label: "LinuxSampler Extensions"
     url: "/extensions/linuxsampler/"
 

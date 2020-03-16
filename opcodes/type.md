@@ -90,9 +90,9 @@ Multi-purpose delay line:
 - [delay_panr](delay_panr)
 - [delay_resonance](delay_resonance)
 - [delay_spread](delay_spread)
-- [delay_syncc_oncc](delay_syncc_oncc)
-- [delay_syncl_oncc](delay_syncl_oncc)
-- [delay_syncr_oncc](delay_syncr_oncc)
+- [delay_syncc_onccN](delay_syncc_onccN)
+- [delay_syncl_onccN](delay_syncl_onccN)
+- [delay_syncr_onccN](delay_syncr_onccN)
 - [delay_time_tap](delay_time_tap)
 - [delay_timec](delay_timec)
 - [delay_timel](delay_timel)
@@ -133,23 +133,29 @@ Algorithmic reverberation:
 
 ### gate
 Signal gate:
-- [gate_oncc](gate_oncc)
+- [gate_onccN](gate_onccN)
 - [gate_attack](gate_attack)
 - [gate_release](gate_release)
 - [gate_stlink](gate_stlink)
 - [gate_threshold](gate_threshold)
+
+### limiter
+No opcodes for this type.
 
 ### lofi
 Bit depth reducer and decimator combined:
 - [bitred](bitred)
 - [decim](decim)
 
+### mverb
+Present in some Cakewalk products only, undocumented.
+
 ### phaser
 Dual-notch phaser with LFO:
 - [phaser_depth](phaser_depth)
 - [phaser_feedback](phaser_feedback)
 - [phaser_freq](phaser_freq)
-- [phaser_phase_oncc](phaser_phase_oncc)
+- [phaser_phase_onccN](phaser_phase_onccN)
 - [phaser_stages](phaser_stages)
 - [phaser_waveform](phaser_waveform)
 - [phaser_wet](phaser_wet)
@@ -169,7 +175,7 @@ Static noise generator:
 ### strings
 Sympathetic resonance with waveguide synthesis:
 - [strings_number](strings_number)
-- [strings_wet_oncc](strings_wet_oncc)
+- [strings_wet_onccN](strings_wet_onccN)
 
 ### tdfir
 Impulse response convolver:

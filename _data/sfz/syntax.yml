@@ -4656,9 +4656,6 @@ categories:
     value:
       type_name: "float"
       unit: "seconds"
-    modulation:
-      midi_cc:
-      - name: "_onccN"
 
   - name: "comp_gain"
     short_description: ""
@@ -4666,9 +4663,6 @@ categories:
 #   value:
 #     type_name: "float"
 #     unit: "dB"
-    modulation:
-      midi_cc:
-      - name: "_onccN"
 
   - name: "comp_ratio"
     short_description: ""
@@ -5156,7 +5150,7 @@ categories:
       min: 0
       max: 100
 
-  - name: "gate_oncc"
+  - name: "gate_onccN"
     short_description: "Gate manual control."
     version: "Cakewalk SFZ v2"
 
@@ -5180,8 +5174,8 @@ categories:
     value:
       type_name: "string"
       options:
-      -name: "on"
-      -name: "off"
+      - name: "on"
+      - name: "off"
 
   - name: "gate_threshold"
     short_description: ""
@@ -5189,6 +5183,16 @@ categories:
 #   value:
 #     type_name: "float"
 #     unit: "dB"
+
+  - name: "internal"
+    short_description: "Cakewalk internal features switch."
+    version: "Cakewalk"
+    value:
+      type_name: "string"
+      options:
+      - name: "on"
+      - name: "off"
+      default: "off"
 
   - name: "param_offset"
     short_description:
@@ -5218,7 +5222,7 @@ categories:
       max: 100
     modulation:
       midi_cc:
-      - name: "phaser_depth_onccN"
+      - name: "phaser_feedback_onccN"
 
   - name: "phaser_freq"
     short_description: ""
@@ -5230,7 +5234,7 @@ categories:
       midi_cc:
       - name: "phaser_freq_onccN"
 
-  - name: "phaser_phase_oncc"
+  - name: "phaser_phase_onccN"
     short_description: ""
     version: "Cakewalk SFZ v2"
     value:
@@ -5419,7 +5423,7 @@ categories:
     short_description: "Number of synthesized resonant strings."
     version: "Cakewalk SFZ v2"
 
-  - name: "strings_wet_oncc"
+  - name: "strings_wet_onccN"
     short_description: ""
     version: "Cakewalk SFZ v2"
     value:
@@ -5464,35 +5468,25 @@ categories:
   - name: "type"
     short_description:
       "Effect type or vendor-specific effect name. Varies across SFZ players."
-    version: "Cakewalk SFZ v2"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
-      - name: "am"
       - name: "apan"
-      - name: "buffer"
       - name: "comp"
       - name: "delay"
       - name: "disto"
       - name: "eq"
       - name: "filter"
-      - name: "fm"
       - name: "fverb"
-      - name: "gain"
       - name: "gate"
       - name: "limiter"
       - name: "lofi"
-      - name: "mixer"
       - name: "mverb"
-      - name: "octaver"
       - name: "phaser"
-      - name: "rectify"
-      - name: "resonator"
-      - name: "ringmod"
       - name: "static"
       - name: "strings"
       - name: "tdfir"
-      - name: "width"
       - name: "com.mda.Limiter"
         version: "ARIA"
       - name: "com.mda.Overdrive"
