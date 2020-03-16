@@ -54,6 +54,9 @@
 	- option values validation? (no_loop, one_shot etc)
 - Add missing links to external opcode pages and use tooltips with brief opcode
 	descriptions from the syntax.yml opcode db when hover over links
+- Add a 1st small column on the left of the `all opcodes` page,
+  fill its cell with colors and add a card legend on the right with matching
+  color categories like in [this page]
 
 [cutoff]:   /opcodes/cutoff.md
 [off_mode]: /opcodes/off_mode.md
@@ -62,3 +65,4 @@
 [PR #5]:    https://github.com/sfzformat/sfzformat.github.io/pull/5
 [gulp]:     https://gulpjs.com/
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
+[this page]: https://software.intel.com/sites/landingpage/IntrinsicsGuide/#
