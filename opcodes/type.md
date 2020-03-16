@@ -27,7 +27,7 @@ com.mda.RezFilter
 
 Also see [param_offset](/opcodes/param_offset) for how to
 configure the parameters for these effects in ARIA.
-The order of the parameters is the same as at [the plugin version of the MDA effects].
+The order of the parameters is the same as at [the plugin version of the MDA effects](http://mda.smartelectronix.com/).
 These effects are not part of the SFZ engine, so it is not possible to, for
 example, have one MIDI CC parameter control two parameters in the same effect,
 or use [custom curves](/headers/curve). Example usage below:
@@ -46,6 +46,11 @@ type=com.mda.Overdrive
 
 In Cakewalk, each of the effect types has its own set of opcodes
 controlling its parameters. Here is a list of what is currently known.
+
+The effect routing logic in Rapture is as follows:
+
+<img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
+	class="img-fluid" alt="Effect routing image">
 
 ### apan
 Automatic panning with LFO:
