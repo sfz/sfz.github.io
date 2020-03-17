@@ -4518,6 +4518,7 @@ categories:
       - "lfoN_wave"
 
 - name: "Curves"
+  url: "/headers/curve"
   opcodes:
   - name: "curve_index"
     short_description: "Curve ID definition."
