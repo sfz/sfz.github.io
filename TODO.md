@@ -2,11 +2,14 @@
 
 ## Opcode documentation
 
-- Handle `Cakewalk` opcodes to be listed in some page
 - Update [sw_down] with new info
+- bend_smooth: Missing range
+- cutoff: merge with cutoff2
+- resonance: merge with resonance2
 - Complete _envelope_generators_ and _lfo_ type pages
 - Add screenshots to group_label/master_label/global_label and also to sw_label
-- More page types other than opcodes in the `see_also` section
+- Add more link types other than opcodes in the `see_also` section,
+  replace the current method from within another file, not in db
 
 ### Modulations
 
@@ -16,25 +19,9 @@
 - Remove the temporary /modulations/moved directory when done
 - Add missing ARIA aliases (WIP)
 
-### Instrument settings:
-
-- Filter:
-	- cutoff: merge with cutoff2
-	- resonance: merge with resonance2
-
-- Pitch:
-	- bend_smooth: Missing range
-
-- Amplifier:
-	- position_onccN
-	- volume: 'Real' range?
-
 ## Website / db features
 
 - Fix/replace Yarn (with [gulp]?)
-- Specify opcode options value version in table lists?
-	(Implemented in opcode pages only, see [off_mode] `time`,
-	[trigger] `release_key` and `fil_type`)
 - Generate opcode list in [Prettify SFZ definition script]
 - Remove redundant MIDI CC modulations from list that is already in the opcode
 	info table and keep track of aliases (opcode layout)
