@@ -2480,7 +2480,7 @@ categories:
         unit: "cents"
 
     - name: "bend_smooth"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description:
         "Pitch bend smoothness. Adds “inertia” to pitch bends,
         so fast movements of the pitch bend wheel will have a delayed effect
