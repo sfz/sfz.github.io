@@ -277,7 +277,7 @@ categories:
 
     - name: "direction"
       short_description: "The direction in which the sample is to be played."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "string"
         default: "forward"
@@ -287,7 +287,7 @@ categories:
 
     - name: "loop_count"
       short_description: "The number of times a loop will repeat."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "integer"
 
@@ -300,7 +300,7 @@ categories:
 
     - name: "loop_type"
       short_description: "Defines the looping mode."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "string"
         default: "forward"
@@ -622,7 +622,7 @@ categories:
 
     - name: "note_polyphony"
       short_description: "Polyphony limit for playing the same note repeatedly."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "integer"
 
@@ -630,7 +630,7 @@ categories:
       short_description:
         "Controls note-stealing behavior for a single pitch,
         when using <a href='/opcodes/note_polyphony'>note_polyphony</a>."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "string"
         default: "on"
@@ -967,15 +967,16 @@ categories:
         type_name: "float"
 
     - name: "sw_default"
-      short_description: ""
-      version: "ARIA"
+      short_description:
+        "Define keyswitch 'power on default' so that you hear something when a patch loads."
+      version: "SFZ v2"
       value:
         type_name: "integer"
         min: 0
         max: 127
 
     - name: "sw_label"
-      short_description: ""
+      short_description: "Label for activated keyswitch on GUI."
       version: "ARIA"
       value:
         type_name: "string"
@@ -1480,8 +1481,6 @@ categories:
         max: 200
         unit: "dB"
 
-    # TODO: Single 'Crossfade' page with common description?
-
     - name: "xf_cccurve"
       short_description: "MIDI controllers crossfade curve for the region."
       version: "SFZ v1"
@@ -1655,7 +1654,7 @@ categories:
     - name: "phase"
       short_description:
         "If invert is set, the region is played with inverted phase."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "string"
         default: "normal"
@@ -1746,7 +1745,7 @@ categories:
 
     - name: "pan_keycenter"
       short_description: "Center key for pan keyboard tracking."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "integer"
         default: 60
@@ -1756,7 +1755,7 @@ categories:
     - name: "pan_keytrack"
       short_description:
         "The amount by which the panning of a note is shifted with each key."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "float"
         default: 0
@@ -1766,7 +1765,7 @@ categories:
 
     - name: "pan_veltrack"
       short_description: "The effect of note velocity on panning."
-      version: "ARIA"
+      version: "SFZ v2"
       value:
         type_name: "float"
         default: 0
@@ -4649,7 +4648,7 @@ categories:
   - name: "bypass_onccN"
     short_description:
       "Sets up a bypass controller for the effect."
-    version: "Cakewalk" # TODO: or "Rapture"?
+    version: "Cakewalk"
     value:
       type_name: "float"
 
@@ -5028,7 +5027,7 @@ categories:
   - name: "dsp_order"
     short_description:
       "Signal flow type in Rapture's DSP block."
-    version: "Cakewalk" # TODO: or "Rapture"?
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 0
