@@ -1315,20 +1315,20 @@ categories:
       modulation:
         midi_cc:
         - name: "pan_onccN"
-          version: "Cakewalk"
+          version: "Cakewalk SFZ v2"
           alias:
           - name: "pan_ccN"
             version: "ARIA"
         - name: "pan_curveccN"
-          version: "Cakewalk"
+          version: "Cakewalk SFZ v2"
           value:
             type_name: "integer"
             min: 0
             max: 255
         - name: "pan_smoothccN"
-          version: "Cakewalk"
+          version: "Cakewalk SFZ v2"
         - name: "pan_stepccN"
-          version: "Cakewalk"
+          version: "Cakewalk SFZ v2"
 
     - name: "position"
       short_description:
@@ -1398,7 +1398,7 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "width_onccN"
-          version: "Cakewalk"
+          version: "Cakewalk SFZ v2"
         - name: "width_curveccN"
           version: "Cakewalk"
           value:
