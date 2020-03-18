@@ -51,11 +51,12 @@ sample=*sine
 sample=*saw
 sample=*square
 sample=*triangle
+sample=*tri
 sample=*noise
 sample=*silence
 ```
 
-For cases where we don't want to actually play a sample but want a region to
+Tri is an alias for triangle. For cases where we don't want to actually play a sample but want a region to
 exist and be played (for example, to mute other sounds when using
 [group](/opcodes/group) and [off_by](/opcodes/off_by), the silence
 value can be very convenient.
