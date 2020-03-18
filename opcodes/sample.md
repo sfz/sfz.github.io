@@ -48,6 +48,7 @@ using this opcode for some basic synthesized sound waves such as:
 
 ```
 sample=*sine
+sample=*saw
 sample=*square
 sample=*triangle
 sample=*noise
