@@ -1,6 +1,5 @@
 ---
 title: Brush stirs
-lang: en
 ---
 Not all drum sounds are hits which can be used in the usual way described in our [drum basics](/tutorials/drum_basics)
 article. One major exception are brush techniques which involve scraping the
@@ -56,7 +55,9 @@ ampeg_attack=1.0 ampeg_decay=1.0 ampeg_sustain=0
 The resulting volume envelope will look something like this. The illustrations are
 not precise, only general shapes.
 
-![Simple stir envelope](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir1.jpg)
+{%include img-fluid.html
+  img="/assets/img/tutorials/brush_stirs/stir1.jpg"
+  alt="Simple stir envelope"%}
 
 This is a good start, and we can add expression and realism by layering a
 faster speed on top of it near the stir's peak, with half the duration
@@ -72,7 +73,9 @@ sample=snare_stir_speed_3.wav
 ampeg_delay=0.5 ampeg_attack=0.5 ampeg_decay=0.5 ampeg_sustain=0
 ```
 
-![Two layer stir envelopes](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir2.jpg)
+{%include img-fluid.html
+  img="/assets/img/tutorials/brush_stirs/stir2.jpg"
+  alt="Two layer stir envelopes"%}
 
 ## Modulating stir duration
 
@@ -115,7 +118,9 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ```
 
-![Stir envelopes using hold in base layer](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir3.jpg)
+{%include img-fluid.html
+  img="/assets/img/tutorials/brush_stirs/stir3.jpg"
+  alt="Stir envelopes using hold in base layer"%}
 
 Also, the peak should be sharper and more accented than it is
 with linear envelopes. Changing the envelope curves accomplishes this,
@@ -134,7 +139,10 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 ```
-![Stir envelopes with curves](https://sfzformat.com/assets/img/tutorials/brush_stirs/stir4.jpg)
+
+{%include img-fluid.html
+  img="/assets/img/tutorials/brush_stirs/stir4.jpg"
+  alt="Stir envelopes with curves"%}
 
 ## Adjusting the envelope shapes
 
@@ -148,7 +156,6 @@ several pre-baked [envelope shapes](/opcodes/ampeg_attack_shape). Here's an
 example of the latter method.
 
 ```
-
 <group>key=26 loop_mode=one_shot
 
 <region>hicc100=42
@@ -218,7 +225,6 @@ patterns. The difference in the SFZ here is that the attack curve shape can be a
 the attack portion as well, and there is no hold stage in the envelope.
 
 ```
-
 <group>key=28 loop_mode=one_shot
 
 <region>hicc100=42
@@ -275,7 +281,6 @@ For a more sophisticated use of mute groups with other pieces of the drum kit,
 please see [cymbal muting](/tutorials/cymbal_muting).
 
 ```
-
 <global>loop_mode=one_shot off_mode=normal
 ampeg_release=0.1 ampeg_releasecc1=0.2
 
@@ -373,7 +378,6 @@ ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_attackcc1=0.05 ampeg_decaycc1=0.2
 ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 group=2 off_by=2
-
 
 <group>key=29 sample=*silence
 
