@@ -4969,7 +4969,7 @@ categories:
   - name: "directtomain"
     short_description:
       "Gain of the main bus into the output."
-    version: "Cakewalk"
+    version: "Cakewalk SFZ v2"
     value:
       type_name: "float"
       unit: "%"
@@ -5134,7 +5134,7 @@ categories:
   - name: "fxNtomain"
     short_description:
       "Gain of the Nth effect bus into the output."
-    version: "Cakewalk"
+    version: "Cakewalk SFZ v2"
     value:
       type_name: "float"
       unit: "%"
