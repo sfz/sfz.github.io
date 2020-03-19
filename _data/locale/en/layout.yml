@@ -167,3 +167,8 @@ cards:
     url: "https://github.com/sfzinstruments/"
     icon_type: "download"
     icon_category: "fas"
+
+  - label: "rgc:audio SFZ test suite"
+    url: "https://github.com/sfz/tests/"
+    icon_type: "download"
+    icon_category: "fas"
