@@ -2,9 +2,9 @@
 
 		<title>
 		{%-if page.title-%}
-			{{ page.title | escape }} - {{ site.organization.name }}
+			{{ page.title | escape }} - {{ site.name }}
 		{%-else-%}
-			{%-assign page_title = page.name | replace: ".md", '' | append: " - " | append: site.organization.name-%}
+			{%-assign page_title = page.name | replace: ".md", '' | append: " - " | append: site.name-%}
 			{{ page_title }}
 		{%-endif-%}
 		</title>

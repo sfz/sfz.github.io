@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>SFZ Format News</title>
+	<title>{{ site.name }} News</title>
 	<link href="{{ '/atom.xml' | absolute_url }}" rel="self"/>
 	<icon>{{ '/assets/ico/favicon.ico' | absolute_url }}</icon>
 	<link href="{{ '/' | absolute_url }}"/>

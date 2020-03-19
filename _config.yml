@@ -42,11 +42,8 @@ exclude:
 plugins:
 - jekyll-sitemap
 
+name: "SFZ Format"
 url: "https://sfzformat.github.io"
-
-organization:
-  name: "SFZ Format"
-  url: "https://sfzformat.github.io"
 
 repository:
   branch: "source"
