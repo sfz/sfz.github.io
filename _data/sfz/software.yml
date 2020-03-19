@@ -219,6 +219,14 @@ categories:
     - name: "Solaris"
     - name: "Windows"
 
+  - name: "SFZ major mode for GNU Emacs"
+    license: "FOSS"
+    url: "https://github.com/sfztools/emacs-sfz-mode"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+
   - name: "SFZ syntax highlighting for Geany"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-geany"
@@ -251,17 +259,9 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ Tools for UltraEdit"
-    license: "FOSS"
-    url: "https://noisesculpture.com/sfz-tools/"
-    os:
-    - name: "Linux"
-    - name: "macOS"
-    - name: "Windows"
-
   - name: "SFZ syntax highlighting for Notepad++"
     license: "FOSS"
-    url: "https://musescore.org/en/node/99411"
+    url: "https://github.com/sfztools/syntax-highlighting-notepad-plus-plus"
     os:
     - name: "Windows"
 
@@ -271,9 +271,9 @@ categories:
     os:
     - name: "Windows"
 
-  - name: "SFZ major mode for GNU Emacs"
+  - name: "SFZ Tools for UltraEdit"
     license: "FOSS"
-    url: "https://github.com/sfztools/emacs-sfz-mode"
+    url: "https://noisesculpture.com/sfz-tools/"
     os:
     - name: "Linux"
     - name: "macOS"
