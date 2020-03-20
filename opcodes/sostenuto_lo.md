@@ -1,10 +1,8 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sostenuto_lo"
 ---
-Used under the ‹[control](/headers/control)› header.
-Default is 1, meaning the sustain pedal is down as long as the CC value is
+Default is 0.5, meaning the sustain pedal is down as long as the CC value is
 anything above 0. To make the pedal only act as "down" past the halfway point,
 set this to 64 - then the pedal is considered "up" from CC value 0 to 63, and
 "down" from 64 to 127. Leaving this at the default value of 1, or setting it to

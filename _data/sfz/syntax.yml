@@ -447,46 +447,6 @@ categories:
     value:
       type_name: "float"
 
-  - name: "sostenuto_lo"
-    short_description:
-      "Sets the minimum point at which the sostenuto pedal (MIDI CC 66)
-      is considered 'down'."
-    version: "ARIA"
-    value:
-      type_name: "integer"
-      default: 1
-      min: 0
-      max: 127
-
-  - name: "sostenuto_cc"
-    short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
-    version: "ARIA"
-    value:
-      type_name: "integer"
-      default: 66
-      min: 0
-      max: 127
-
-  - name: "sustain_lo"
-    short_description:
-      "Sets the minimum point at which the sustain pedal (MIDI CC 64)
-      is considered 'down'."
-    version: "ARIA"
-    value:
-      type_name: "integer"
-      default: 1
-      min: 0
-      max: 127
-
-  - name: "sustain_cc"
-    short_description: "Reassigns the sustain pedal CC to a non-standard value."
-    version: "ARIA"
-    value:
-      type_name: "integer"
-      default: 64
-      min: 0
-      max: 127
-
   - name: "sw_note_offset"
     short_description:
       "Follows the same logic as SFZ 2.0’s
@@ -829,6 +789,64 @@ categories:
         min: -8192
         max: 8192
 
+    - name: "sostenuto_cc"
+      short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 66
+        min: 0
+        max: 127
+
+    - name: "sostenuto_lo"
+      short_description:
+        "Sets the minimum point at which the sostenuto pedal (MIDI CC 66)
+        is considered 'down'."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0.5
+        min: 0
+        max: 127
+
+    - name: "sostenuto_sw"
+      short_description: "Turns the sostenuto switch on or off."
+      version: "SFZ v2"
+      value:
+        type_name: "string"
+        options:
+        - name: "on"
+        - name: "off"
+
+    - name: "sustain_cc"
+      short_description: "Reassigns the sustain pedal CC to a non-standard value."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 64
+        min: 0
+        max: 127
+
+    - name: "sustain_lo"
+      short_description:
+        "Sets the minimum point at which the sustain pedal (MIDI CC 64)
+        is considered 'down'."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0.5
+        min: 0
+        max: 127
+
+    - name: "sustain_sw"
+      short_description: "Turns the sustain switch on or off."
+      version: "SFZ v2"
+      value:
+        type_name: "string"
+        options:
+        - name: "on"
+        - name: "off"
+
     - name: "sw_lokey"
       short_description:
         "Defines the range of the keyboard to be used as trigger selectors
@@ -911,24 +929,6 @@ categories:
 
         - name: "previous"
           description: "Region uses the velocity of the previous note."
-
-    - name: "sustain_sw"
-      short_description: "Turns the sustain switch on or off."
-      version: "SFZ v2"
-      value:
-        type_name: "string"
-        options:
-        - name: "on"
-        - name: "off"
-
-    - name: "sostenuto_sw"
-      short_description: "Turns the sostenuto switch on or off."
-      version: "SFZ v2"
-      value:
-        type_name: "string"
-        options:
-        - name: "on"
-        - name: "off"
 
     - name: "loprog"
       short_description:
