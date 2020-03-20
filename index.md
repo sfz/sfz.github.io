@@ -82,4 +82,3 @@ Some more advanced topics
 [Sustained note basics]: /tutorials/sustained_note_basics
 [Legato]:                /tutorials/legato
 [Vibrato]:               /tutorials/vibrato
-[Cakewalk forum]:        http://forum.cakewalk.com/Dimension-Pro-sfz-v2-test-suite-1-m645298.aspx
