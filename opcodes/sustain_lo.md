@@ -16,6 +16,10 @@ Please note that the direction of the MIDI CC values is normally from 0 at the
 top of the pedal to 127 when it is at the bottom, meaning that physically "down"
 on the pedal is up in terms of MIDI CC value.
 
+It is possible to set this to different values for different regions, so that
+for example mechanical noises and notes will not be affected by the sustain pedal
+in the same way.
+
 ## Examples
 
 ```
