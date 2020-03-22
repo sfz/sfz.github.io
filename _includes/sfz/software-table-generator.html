@@ -12,40 +12,28 @@
 		<tr>
 			<th scope="col">Name</th>
 			<th scope="col">License</th>
-{%-if page.show_documented_column-%}
-			<th scope="col">Documented</th>
-{%-endif-%}
-{%-for os in apps_os-%}
+			{%-for os in apps_os-%}
 			<th scope="col" style="text-align:center">{{ os.name }}</th>
-{%-endfor-%}
+			{%-endfor-%}
 		</tr>
 	</thead>
 	<tbody>
-{%-for app in category.applications-%}
+			{%-for app in category.applications-%}
 	<tr>
 		<td><a href="{{ app.url }}">{{ app.name }}</a></td>
 		<td>{{ app.license }}</td>
-		{%-if page.show_documented_column-%}
-			{%-if app.documented-%}
-				{%-assign documented = "✓"-%}
-			{%-else-%}
-				{%-assign documented = "X"-%}
-			{%-endif-%}
-		<td style="text-align:center">{{ documented }}</td>
-		{%-endif-%}
-	{%-for os in apps_os-%}
-		{%-if app.os contains os-%}
-			{%-assign os_supported = "✓"-%}
-		{%-else-%}
-			{%-assign os_supported = "X"-%}
-		{%-endif-%}
+				{%-for os in apps_os-%}
+					{%-if app.os contains os-%}
+						{%-assign os_supported = "✓"-%}
+					{%-else-%}
+						{%-assign os_supported = "X"-%}
+					{%-endif-%}
 		<td style="text-align:center">{{ os_supported }}</td>
-	{%-endfor-%}
+				{%-endfor-%}
 	</tr>
-{%-endfor-%}
+			{%-endfor-%}
 	</tbody>
 </table>
-
 		{%-endif-%}
 	{%-endfor-%}
 {%-endfor-%}

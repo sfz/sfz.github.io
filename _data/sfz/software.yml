@@ -17,7 +17,6 @@ categories:
   - name: "Carla (SFZero)"
     license: "FOSS"
     url: "https://kx.studio/Applications:Carla"
-    documented: true
     os:
     - name: "DragonFlyBSD"
     - name: "FreeBSD"
@@ -27,15 +26,13 @@ categories:
 
   - name: "liquidsfz"
     license: "FOSS"
-    url: "/software/players/liquidsfz"
-    documented: true
+    url: "https://github.com/swesterfeld/liquidsfz/"
     os:
     - name: "Linux"
 
   - name: "sfizz"
-    license: "FOSS"
-    url: "/software/players/sfizz"
-    documented: true
+    license: "BSD-2-Clause"
+    url: "https://sfz.tools/sfizz/"
     os:
     - name: "Linux"
     - name: "macOS"
@@ -43,17 +40,15 @@ categories:
 
   - name: "SFZero"
     license: "FOSS"
-    url: "/software/players/sfzero"
-    documented: true
+    url: "https://github.com/altalogix/SFZero/"
     os:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
 
-  - name: "Zerberus (MuseScore SFZ Synthetizer)"
+  - name: "Zerberus, The MuseScore SFZ synthesizer"
     license: "FOSS"
-    url : "/software/players/zerberus"
-    documented: true
+    url : "https://musescore.org/en/handbook/developers-handbook/references/zerberus-musescore-sfz-synthesizer/"
     os:
     - name: "Linux"
     - name: "macOS"
@@ -61,8 +56,7 @@ categories:
 
   - name: "LinuxSampler"
     license: "Custom"
-    url: "/software/players/linuxsampler"
-    documented: true
+    url: "http://linuxsampler.org/"
     os:
     - name: "Linux"
     - name: "macOS"
@@ -83,7 +77,6 @@ categories:
   - name: "Sforzando"
     license: "Freeware"
     url: "https://plogue.com/products/sforzando.html"
-    documented: true
     os:
     - name: "macOS"
     - name: "Windows"
@@ -104,9 +97,7 @@ categories:
 
   - name: "ARIA"
     license: "OEM"
-    url: "/software/players/aria"
-    documented: true
-    visible: true
+    url: "http://ariaengine.com/"
     os:
     - name: "iOS"
     - name: "macOS"
@@ -152,8 +143,7 @@ categories:
 
   - name: "HISE"
     license: "FOSS"
-    url: "/software/players/hise"
-    documented: true
+    url: "http://hise.audio/"
     os:
     - name: "iOS"
     - name: "Linux"
@@ -162,8 +152,7 @@ categories:
 
   - name: "OpenMPT"
     license: "BSD-3-Clause"
-    url: "/software/players/openmpt"
-    documented: true
+    url: "https://openmpt.org/"
     os:
     - name: "Windows"
 
