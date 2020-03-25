@@ -24,3 +24,10 @@ Additional information based on testing by paulfd:
 
 The decay stage is also multiplicative but the ramp does not seem to follow the same law with target = sustain, but rather something strange like x_{n+1} = (0.0005/(1-sustain)/num) *x_{n} where the actual envelope would be sustain + x_{n}.
 ```
+
+Here is a screenshot of a file output using Sforzando, showing the
+ampeg_envelope shape and its stages.
+
+{%include img-fluid.html
+  img="/assets/img/ampeg_env.jpg"
+  alt="DAHDSR envelope shape image"%}
