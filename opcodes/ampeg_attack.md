@@ -17,11 +17,6 @@ These are very frequently used, especially with amplifier envelopes.
 In ARIA, the SFZ1 envelopes have linear attack (for pitcheg and fileg,
 probably linear in cents, which won't translate into linear in Hertz).
 Decay and release stages have a curve which is faster than linear.
-Below is a screenshot of a file output from Sforzando, showing the
-stages of an ampeg curve.
-
-<img src="{{ '/assets/img/ampeg_attack.jpg' | relative_url }}" class="img-fluid" alt="DAHDSR envelope shape image">
-
 Additional information based on testing by paulfd:
 
 ```
