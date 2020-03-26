@@ -2,7 +2,6 @@
 title: "SFZ Creation Tools"
 app_categories: ['Editors', 'Syntax Highlighting', 'Converters']
 show_category_titles: true
-lang: "en"
 ---
 Although SFZ files can be created with any text editor, and some users have also
 created SFZ with spreadsheets, there are some dedicated tools which can make
@@ -20,3 +19,5 @@ using [Wine] / [CrossOver] or in a virtual machine software like [VirtualBox].
 [Wine]:       https://www.winehq.org/
 [CrossOver]:  https://www.codeweavers.com/
 [VirtualBox]: https://www.virtualbox.org/
+
+{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}

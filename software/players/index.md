@@ -1,8 +1,6 @@
 ---
 title: "SFZ Players"
 app_categories: ['Players', 'Import from SFZ']
-lang: "en"
-show_documented_column: true
 show_category_titles: true
 ---
 There are several SFZ players, which are used to play samples as defined in SFZ
@@ -27,3 +25,5 @@ as "software to be freely used, modified, and shared."
 [OSI]:     https://opensource.org/licenses
 [SFZ v1]: /misc/sfz1
 [SFZ v2]: /misc/sfz2
+
+{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
