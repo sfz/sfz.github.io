@@ -1,6 +1,5 @@
 ---
 title: SFZ Headers
-lang: en
 ---
 SFZ files are subdivided into sections by headers. The region header is the most
 essential, and is the basic unit from which instruments are constructed. A group

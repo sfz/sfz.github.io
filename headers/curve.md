@@ -1,10 +1,8 @@
 ---
-title: ‹curve›
-lang: en
+title:  "‹curve›"
+layout: "sfz/header"
 ---
-A header for defining curves for MIDI CC controls.
-
-One curve header is used to define each curve. 
+One curve header is used to define each curve.
 The values for various points along the curve can then be set, from `v000` to `v127`.
 The default is `v000=0` and `v127=1`. Any points along the curve not defined explicitly
 will be interpolated linearly between points which are defined.

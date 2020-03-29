@@ -1,9 +1,8 @@
 ---
-title: ‹global›
-lang: en
+title:  "‹global›"
+layout: "sfz/header"
 ---
-The global header allows entering parameters which are common for many regions in
-the SFZ file. If the same opcode defined in global is also defined in group or
+If the same opcode defined in global is also defined in group or
 region, the group or region setting is used. This means global can be used to
 set values which are common for most regions in the SFZ file, but if a few
 regions need something different, they can override the global setting at a

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{%-assign header_name = page.name | replace: ".md", ''-%}
+{%-for header in site.data.sfz.syntax.headers-%}
+	{%-if header.name == header_name-%}
+<p>{{ header.short_description }}</p>
+		{%-break-%}
+	{%-endif-%}
+{%-endfor-%}
+
+{{ content }}

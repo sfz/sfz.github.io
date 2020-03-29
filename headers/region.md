@@ -1,6 +1,6 @@
 ---
-title: ‹region›
-lang: en
+title:  "‹region›"
+layout: "sfz/header"
 ---
 Inside the definition file, a region starts with the <region\> header. A region
 is defined between two <region\> headers, or between a <region\> header and a

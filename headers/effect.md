@@ -1,8 +1,7 @@
 ---
-title: ‹effect›
+title:  "‹effect›"
+layout: "sfz/header"
 ---
-SFZ v2 header for effects controls.
-
 In [SFZ v1] only [effect1] and [effect2] opcodes was available
 and only at [‹region›] level.
 

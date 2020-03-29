@@ -1,9 +1,8 @@
 ---
-title: ‹master›
-lang: en
+title:  "‹master›"
+layout: "sfz/header"
 ---
-An intermediate level in the header hierarchy, between global and group.
-Example:
+## Example
 
 ```
 <global>

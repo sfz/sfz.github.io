@@ -7,12 +7,6 @@ layout: default
 	If the file is a symlink, the filename option is OK only for opcode aliases,
 	so the opcode alias info can be used instead, otherwise for related ccN opcodes
 	we need to use the original opcode info, so this is not an option.
-
-	BUG: Using anchor_headings include on default layout and adding some text here
-	(inheriting layout issue?) the text gets trapped inside a non closed header
-	tag; e.g. "some text" becomes "<hsome text", messing the HTML page code.
-	Using a workaround for now, by setting the usual content in the main default
-	layout and including it here.
 {%-endcomment-%}
 {%-if page.opcode_name-%}
 	{%-assign opcode_name = page.opcode_name-%}

@@ -38,7 +38,10 @@ headers:
   version: "ARIA"
 
 - name: "midi"
-  short_description: "ARIA extension, was added for MIDI pre-processor effects."
+  short_description:
+    "ARIA extension, was added for MIDI pre-processor effects.
+    From ARIA v1.0.8.0+ an ‹<a href='/headers/effect'>effect<a>› section with a
+    <a href='/opcodes/bus'>bus</a>=midi can be used instead."
   version: "ARIA"
 # ------------------------------------------------------------------------------
 # Opcodes
@@ -3526,6 +3529,10 @@ categories:
             default: 0
             min: -1
             max: 1
+
+    - name: "egN_ampeg"
+      short_description: ""
+      version: "ARIA"
 
     - name: "egN_shapeX"
       short_description: ""

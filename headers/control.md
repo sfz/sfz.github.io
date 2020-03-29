@@ -1,6 +1,6 @@
 ---
-title: ‹control›
-lang: en
+title:  "‹control›"
+layout: "sfz/header"
 ---
 SFZ 2 header which should come before ‹[global](global)› in the file,
 and can contain the following special directives,
