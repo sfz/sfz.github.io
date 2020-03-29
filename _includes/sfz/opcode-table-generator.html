@@ -9,7 +9,8 @@ the parameters they modulate.</p>
 		{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category-%}
 	{%-endcapture-%}
 	{%-if category_opcodes.size > 0-%}
-<h2>{{category_url}}</h2>
+		{%-assign category_id = category.name | downcase | replace: " ", '-'-%}
+<h2 id="{{category_id}}">{{category_url}}</h2>
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
 		<tr>
@@ -89,7 +90,8 @@ the parameters they modulate.</p>
 			{%-capture category_type_url-%}
 				{%-include sfz/functions/getCategoryUrlAsHtml.html const_category=category_type-%}
 			{%-endcapture-%}
-<h2>{{ category_url }}: {{ category_type_url }}</h2>
+			{%-assign category_type_id = category_type.name | downcase | replace: " ", '-'-%}
+<h2 id="{{category_type_id}}">{{ category_url }}: {{ category_type_url }}</h2>
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="thead-dark">
 		<tr>
