@@ -16,28 +16,26 @@ violins example:
 
 ```
 <global>
-<region>sample=c4.wav lokey=48 hikey=48 pitch_keycenter=48
-<region>sample=db4.wav lokey=49 hikey=49 pitch_keycenter=49
-<region>sample=d4.wav lokey=50 hikey=50 pitch_keycenter=50
-<region>sample=eb4.wav lokey=51 hikey=51 pitch_keycenter=51
-<region>sample=e4.wav lokey=52 hikey=52 pitch_keycenter=52
-<region>sample=f4.wav lokey=53 hikey=53 pitch_keycenter=53
-<region>sample=gb4.wav lokey=54 hikey=54 pitch_keycenter=54
-<region>sample=g4.wav lokey=55 hikey=55 pitch_keycenter=55
-<region>sample=ab4.wav lokey=56 hikey=56 pitch_keycenter=56
-<region>sample=a4.wav lokey=57 hikey=57 pitch_keycenter=57
-<region>sample=bb4.wav lokey=58 hikey=58 pitch_keycenter=58
-<region>sample=b4.wav lokey=59 hikey=59 pitch_keycenter=59
-<region>sample=c5.wav lokey=60 hikey=60 pitch_keycenter=60
+<region>sample=c4.wav key=48
+<region>sample=db4.wav key=49
+<region>sample=d4.wav key=50
+<region>sample=eb4.wav key=51
+<region>sample=e4.wav key=52
+<region>sample=f4.wav key=53
+<region>sample=gb4.wav key=54
+<region>sample=g4.wav key=55
+<region>sample=ab4.wav key=56
+<region>sample=a4.wav key=57
+<region>sample=bb4.wav key=58
+<region>sample=b4.wav key=59
+<region>sample=c5.wav key=60
 ```
 
 Using this for both first and second violins will result in two identical-sounding
 sections with the same timbre, but it's easily possible to use the same samples
 transposed, and get a different timbre. Instead of using the C4 sample to play C4,
-use the Db4 sample transposed down a half step to play C4. Basically,
-pitch_keycenter stays the same and.wav lokey and hikey are lowered by 1 for all samples.
-Of course, it's not possible to use just key here, and all three of the.wav lokey,
-hikey and pitch_keycenter opcodes are needed.
+use the Db4 sample transposed down a half step to play C4. This can be done by
+using lokey, hikey and pitch_keycenter opcodes instead of just key.
 
 ```
 <region>sample=c4.wav lokey=47 hikey=47 pitch_keycenter=48
@@ -55,34 +53,61 @@ hikey and pitch_keycenter opcodes are needed.
 <region>sample=c5.wav lokey=59 hikey=59 pitch_keycenter=60
 ```
 
-Doing this editing manually on large sample sets would be time-consuming, but
+Howerver, in most cases it's easier to use the key and transpose opcodes instead,
+and set the transpose amount for all the transposed regions at once.
+
+```
+<global>
+transpose=-1
+<region>sample=c4.wav key=47
+<region>sample=db4.wav key=48
+<region>sample=d4.wav key=49
+<region>sample=eb4.wav key=50
+<region>sample=e4.wav key=51
+<region>sample=f4.wav key=52
+<region>sample=gb4.wav key=53
+<region>sample=g4.wav key=54
+<region>sample=ab4.wav key=55
+<region>sample=a4.wav key=56
+<region>sample=bb4.wav key=57
+<region>sample=b4.wav key=58
+<region>sample=c5.wav key=59
+```
+
+This still requires changing the key opcode for every region, however. Doing
+this editing manually on large sample sets would be time-consuming, but
 the old tool sfzed allows easily adding, subtracting or multiplying current
-parameter values to regions, so it can be a good tool.
+parameter values to regions, which becomes very useful when doing this with
+thousands of samples.
 
 This shifts the entire range of the instrument down by a half-step, though. In
 order to preserve the correct range, we can remove the transposed notes which
 got moved below the lowest pitch the instrument is capable of. That's easy. The
 top range is more tricky - if we extend the highest note to cover its original
 pitch as well, but then the same sample would be used for the same pitch by
-both sections. So, we can instead use the next-to-highest note, transposed a
-whole step up. This might not sound very consistent with the rest, but under
-these limitations, it can be a reasonable compromise.
+both sections. So, we can instead use the next-to-highest note, transposed up.
+This might not sound very consistent with the rest, but under these limitations,
+it can be a reasonable compromise.
 
 ```
-<region>sample=db4.wav lokey=48 hikey=48 pitch_keycenter=49
-<region>sample=d4.wav lokey=49 hikey=49 pitch_keycenter=50
-<region>sample=eb4.wav lokey=50 hikey=50 pitch_keycenter=51
-<region>sample=e4.wav lokey=51 hikey=51 pitch_keycenter=52
-<region>sample=f4.wav lokey=52 hikey=52 pitch_keycenter=53
-<region>sample=gb4.wav lokey=53 hikey=53 pitch_keycenter=54
-<region>sample=g4.wav lokey=54 hikey=54 pitch_keycenter=55
-<region>sample=ab4.wav lokey=55 hikey=55 pitch_keycenter=56
-<region>sample=a4.wav lokey=56 hikey=56 pitch_keycenter=57
-<region>sample=bb4.wav lokey=57 hikey=57 pitch_keycenter=58
-<region>sample=b4.wav lokey=58 hikey=58 pitch_keycenter=59
-<region>sample=c5.wav lokey=59 hikey=59 pitch_keycenter=60
-<region>sample=b4.wav lokey=60 hikey=60 pitch_keycenter=59
+<global>
+transpose=-1
+<region>sample=db4.wav key=48
+<region>sample=d4.wav key=49
+<region>sample=eb4.wav key=50
+<region>sample=e4.wav key=51
+<region>sample=f4.wav key=52
+<region>sample=gb4.wav key=53
+<region>sample=g4.wav key=54
+<region>sample=ab4.wav key=55
+<region>sample=a4.wav key=56
+<region>sample=bb4.wav key=57
+<region>sample=b4.wav key=58
+<region>sample=c5.wav key=59
+<region>sample=b4.wav key=60 transpose=1
 ```
+
+## Transposition Values
 
 In general, transposing downwards will result in a warmer sound, and transposing
 upwards will make the sound brighter and thinner. Transposing by more than a half
@@ -91,6 +116,27 @@ to create a big change in timbre. Transposing by much more than a minor third
 doesn't seem common outside of sound design not intended to be a realistic instrument
 emulation.
 
+Transposing down by a minor third while preserving the range in our example, and
+filling in the lost top of the range by transposing upwards might look like this:
+
+```
+<global>
+transpose=-3
+<region>sample=eb4.wav key=48
+<region>sample=e4.wav key=49
+<region>sample=f4.wav key=50
+<region>sample=gb4.wav key=51
+<region>sample=g4.wav key=52
+<region>sample=ab4.wav key=53
+<region>sample=a4.wav key=54
+<region>sample=bb4.wav key=55
+<region>sample=b4.wav key=56
+<region>sample=c5.wav key=57
+<region>sample=a4.wav key=58 transpose=1
+<region>sample=bb4.wav key=59 transpose=1
+<region>sample=b4.wav key=60 transpose=1
+```
+
 ## Unison
 
 If we put both the original and transposed samples in the same SFZ file, each MIDI
@@ -98,33 +144,36 @@ note will trigger two regions, and we now will have the sound of an ensemble whi
 is twice as large as what was actually sampled.
 
 ```
-<region>sample=c4.wav lokey=47 hikey=47 pitch_keycenter=48
-<region>sample=db4.wav lokey=48 hikey=48 pitch_keycenter=49
-<region>sample=d4.wav lokey=49 hikey=49 pitch_keycenter=50
-<region>sample=eb4.wav lokey=50 hikey=50 pitch_keycenter=51
-<region>sample=e4.wav lokey=51 hikey=51 pitch_keycenter=52
-<region>sample=f4.wav lokey=52 hikey=52 pitch_keycenter=53
-<region>sample=gb4.wav lokey=53 hikey=53 pitch_keycenter=54
-<region>sample=g4.wav lokey=54 hikey=54 pitch_keycenter=55
-<region>sample=ab4.wav lokey=55 hikey=55 pitch_keycenter=56
-<region>sample=a4.wav lokey=56 hikey=56 pitch_keycenter=57
-<region>sample=bb4.wav lokey=57 hikey=57 pitch_keycenter=58
-<region>sample=b4.wav lokey=58 hikey=58 pitch_keycenter=59
-<region>sample=c5.wav lokey=59 hikey=59 pitch_keycenter=60
+<group>
+<region>sample=c4.wav key=48
+<region>sample=db4.wav key=49
+<region>sample=d4.wav key=50
+<region>sample=eb4.wav key=51
+<region>sample=e4.wav key=52
+<region>sample=f4.wav key=53
+<region>sample=gb4.wav key=54
+<region>sample=g4.wav key=55
+<region>sample=ab4.wav key=56
+<region>sample=a4.wav key=57
+<region>sample=bb4.wav key=58
+<region>sample=b4.wav key=59
+<region>sample=c5.wav key=60
 
-<region>sample=db4.wav lokey=48 hikey=48 pitch_keycenter=49
-<region>sample=d4.wav lokey=49 hikey=49 pitch_keycenter=50
-<region>sample=eb4.wav lokey=50 hikey=50 pitch_keycenter=51
-<region>sample=e4.wav lokey=51 hikey=51 pitch_keycenter=52
-<region>sample=f4.wav lokey=52 hikey=52 pitch_keycenter=53
-<region>sample=gb4.wav lokey=53 hikey=53 pitch_keycenter=54
-<region>sample=g4.wav lokey=54 hikey=54 pitch_keycenter=55
-<region>sample=ab4.wav lokey=55 hikey=55 pitch_keycenter=56
-<region>sample=a4.wav lokey=56 hikey=56 pitch_keycenter=57
-<region>sample=bb4.wav lokey=57 hikey=57 pitch_keycenter=58
-<region>sample=b4.wav lokey=58 hikey=58 pitch_keycenter=59
-<region>sample=c5.wav lokey=59 hikey=59 pitch_keycenter=60
-<region>sample=b4.wav lokey=60 hikey=60 pitch_keycenter=59
+<group>
+transpose=-1
+<region>sample=db4.wav key=48
+<region>sample=d4.wav key=49
+<region>sample=eb4.wav key=50
+<region>sample=e4.wav key=51
+<region>sample=f4.wav key=52
+<region>sample=gb4.wav key=53
+<region>sample=g4.wav key=54
+<region>sample=ab4.wav key=55
+<region>sample=a4.wav key=56
+<region>sample=bb4.wav key=57
+<region>sample=b4.wav key=58
+<region>sample=c5.wav key=59
+<region>sample=b4.wav key=60 transpose=1
 ```
 
 ## Unison By Round Robin
