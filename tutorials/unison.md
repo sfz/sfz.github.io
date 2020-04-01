@@ -137,7 +137,7 @@ transpose=-3
 <region>sample=b4.wav key=60 transpose=1
 ```
 
-## Unison
+## Unison By Transposition
 
 If we put both the original and transposed samples in the same SFZ file, each MIDI
 note will trigger two regions, and we now will have the sound of an ensemble which
@@ -295,9 +295,15 @@ is an example of a saw oscillator with seven voices.
 ## Legato
 
 This is just a reminder that with legato, each set of unison samples will
-need to have its own polyphony groups.
+need to have its own polyphony groups, same as would be needed with multiple
+microphone positions.
 
 ## Humanization
 
-To be added: randomization of timing, phase and pitch, creating differences in vibrato
-and legato between voices.
+When trying to emulate the sound of a larger section of instruments, especially when
+trying to turn a solo instrument into an emulated section, it can be useful to
+create small differences between each voice, especially when vibrato and legato
+are also emulated.
+
+Aspects of the sound which can be humanized or randomized include timing, phase and pitch,
+vibrato speed and vibrato depth. An example will be added later.
