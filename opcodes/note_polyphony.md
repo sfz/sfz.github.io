@@ -6,7 +6,7 @@ opcode_name: "note_polyphony"
 ## Example
 
 ```
-polyphony_limit=3
+note_polyphony=3
 ```
 
 Under default voice stealing behavior, this is not a "hard" limit because
