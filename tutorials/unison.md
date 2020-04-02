@@ -303,7 +303,138 @@ microphone positions.
 When trying to emulate the sound of a larger section of instruments, especially when
 trying to turn a solo instrument into an emulated section, it can be useful to
 create small differences between each voice, especially when vibrato and legato
-are also emulated.
+are also emulated. Without independent per-voice humanization, emulated vibrato and
+legato can sound more like a solo instrument run through a chorus or other doubling
+effect, rather than a section of separate instruments played by separate people.
 
-Aspects of the sound which can be humanized or randomized include timing, phase and pitch,
-vibrato speed and vibrato depth. An example will be added later.
+Aspects of the sound which can be humanized or randomized include timing, smoothing,
+phase, pitch, vibrato speed and vibrato depth.
+
+Here is a rather lengthy example, adapted from a real instrument, where each voice has
+separate pan settings for stereo spread and separate polyphony groups - these are basic
+features of unison, and not related to humanization, of course. The humanizing
+differences between the voices are differences in bend smoothing, in maximum vibrato
+depth, in the initial phase of the vibrato humanization LFOs, and in the fade times of
+the legato regions. The shallower vibrato and slower legato of the transposed regions
+emulate less confident, more hesitant players.
+
+```
+<global>
+//Basic global stuff shared by all voices
+ampeg_release=0.25
+ampeg_attack_oncc106=1
+ampeg_release_oncc107=1.25
+off_mode=normal
+bend_down=-1200
+bend_up=1200
+//Pitch bend smoothing is set separately for each voice
+amplitude_oncc100=100
+amplitude_smoothcc1=100
+locc100=1
+amp_veltrack=0
+loop_mode=loop_continuous
+
+//Vibrato
+//Pitch LFO depth is set separately for each voice
+lfo01_freq=2 //Any slower than this sounds really lousy
+lfo01_freq_oncc112=6 //8 Hz is about as fast as vibrato on cello can go
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+//This LFO also does tremolo
+lfo01_volume_oncc21=1 //Not much - just a subtle effect on volume
+eq1_freq=2200 //EQ band for vibrato
+eq1_bw=2
+lfo01_eq1gain_oncc21=3 //Again, pretty subtle
+
+lfo02_wave=1 //Second LFO to make things wobblier
+//Initial phase is set separately for each voice
+lfo02_phase_oncc131=0.7 //Phase affected by velocity, to pseudo-randomize while keeping both mics' LFOs in sync
+lfo02_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo02_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo02_pitch_oncc117=6 //Slight pitch wobbliness
+lfo02_freq_lfo01_oncc117=0.2 lfo02_freq_lfo01_oncc112=0.8 //Affect the rate of the other LFO for unsteady vibrato
+
+lfo03_wave=1 //And a third LFO for secondhand complex wobbliness
+//Initial phase is set separately for each voice
+lfo03_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
+lfo03_freq=0.5
+lfo03_freq_oncc117=-0.4
+lfo03_freq_lfo2_oncc117=1
+lfo03_pitch_oncc117=-4
+
+<master>
+//Central voice
+bend_smooth=80
+lfo01_pitch_oncc21=29
+lfo02_phase=0
+lfo03_phase=0.4
+group=1
+off_by=1
+
+//Sustains legato
+
+<group>
+trigger=first
+#include "mappings/ord_sus_map.sfz"
+
+<group>
+trigger=legato
+offset=5000 offset_random=500
+ampeg_attack=0.5
+ampeg_vel2attack=-0.35
+#include "mappings/ord_sus_map.sfz"
+
+
+<master>
+//Left voice using sample maps transposed by a half-step
+//Pan control not used in the central voice
+pan_oncc101=-100
+//Values different than the central voice, for humanization purposes
+bend_smooth=91
+lfo01_pitch_oncc21=17
+lfo02_phase=0.05
+lfo03_phase=0.3
+group=2
+off_by=2
+
+//Sustains legato
+
+<group>
+trigger=first
+#include "mappings/t1/ord_sus_map.sfz"
+
+<group>
+trigger=legato
+offset=5000 offset_random=500
+//Values different than the central voice, for humanization purposes
+ampeg_attack=0.55
+ampeg_vel2attack=-0.4
+#include "mappings/t1/ord_sus_map.sfz"
+
+
+<master>
+//Right voice using sample maps transposed by a whole step
+//Pan control not used in the central voice
+pan_oncc101=100
+//Values different than the central voice, for humanization purposes
+bend_smooth=87
+lfo01_pitch_oncc21=19
+lfo02_phase=0.02
+lfo03_phase=0.28
+group=3
+off_by=3
+
+//Sustains legato
+
+<master>
+trigger=first
+#include "mappings/t2/ord_sus_map.sfz"
+
+<master>
+trigger=legato
+offset=5000 offset_random=500
+//Values different than the central voice, for humanization purposes
+ampeg_attack=0.58
+ampeg_vel2attack=-0.43
+#include "mappings/t2/ord_sus_map.sfz"
+```
