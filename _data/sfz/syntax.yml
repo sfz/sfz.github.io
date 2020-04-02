@@ -1350,6 +1350,9 @@ categories:
     - name: "volume"
       short_description: "The volume for the region, in decibels."
       version: "SFZ v1"
+      alias:
+      - name: "gain"
+        version: "ARIA"
       value:
         type_name: "float"
         default: 0
