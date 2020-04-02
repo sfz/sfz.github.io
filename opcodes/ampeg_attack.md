@@ -20,8 +20,8 @@ Decay and release stages have a curve which is faster than linear, and it
 seems to match "well enough"  with a multiplicatively decreasing curve.
 The step size should be close to
 $$ \mu = \exp \left( - \frac{8.0}{t \times s} \right) $$
-where $t$ is the decay duration in seconds, and $s$ is the sample rate in Hertz.
-The envelope $x_{n+1}$ at index $n+1$ is thus computed as
+where $$t$$ is the decay duration in seconds, and $$s$$ is the sample rate in Hertz.
+The envelope $$x_{n+1}$$ at index $$n+1$$ is thus computed as
 $$ x_{n+1} = \mu \times x_{n}. $$
 
 Here is a screenshot of a file output using Sforzando, showing the
