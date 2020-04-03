@@ -303,12 +303,14 @@ microphone positions.
 When trying to emulate the sound of a larger section of instruments, especially when
 trying to turn a solo instrument into an emulated section, it can be useful to
 create small differences between each voice, especially when vibrato and legato
-are also emulated. Without independent per-voice humanization, emulated vibrato and
-legato can sound more like a solo instrument run through a chorus or other doubling
-effect, rather than a section of separate instruments played by separate people.
+are also emulated. This is probably not that important with sampled ensembles, such
+as emulating second violins, but with solo instruments it becomes crucial. Without
+independent per-voice humanization, emulated vibrato and legato can sound more like
+a solo instrument run through a chorus or other doubling effect, rather than separate
+performances.
 
 Aspects of the sound which can be humanized or randomized include timing, smoothing,
-phase, pitch, vibrato speed and vibrato depth.
+phase, pitch, vibrato speed and vibrato depth. 
 
 Here is a rather lengthy example, adapted from a real instrument, where each voice has
 separate pan settings for stereo spread and separate polyphony groups - these are basic
