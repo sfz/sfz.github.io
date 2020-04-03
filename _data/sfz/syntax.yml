@@ -5538,6 +5538,7 @@ categories:
       type_name: "string"
 
 - name: "Loading"
+  url: "/misc/cakewalk#loading"
   opcodes:
   - name: "load_mode"
     short_description: ""
@@ -5574,6 +5575,7 @@ categories:
       type_name: "string"
 
 - name: "Wavetable Oscillator"
+  url: "/misc/cakewalk#wavetable-oscillator"
   opcodes:
   - name: "oscillator"
     short_description: ""
