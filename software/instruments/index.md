@@ -8,3 +8,4 @@ Be aware that these instruments may not be compatible with some players
 due to the use of unsupported sfz opcodes.
 
 {% include sfz/instruments_index.html %}
+{%-comment-%} See https://sfzformat.com/docs/adding-instruments {%-endcomment-%}

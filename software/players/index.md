@@ -13,6 +13,7 @@ will work with multiple SFZ players.
 We use "Free and Open Source" (FOSS) as defined by the [OSI]
 as "software to be freely used, modified, and shared."
 
+{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
 {% include sfz/software-table-generator.html %}
 
 ## No longer available
@@ -25,5 +26,3 @@ as "software to be freely used, modified, and shared."
 [OSI]:     https://opensource.org/licenses
 [SFZ v1]: /misc/sfz1
 [SFZ v2]: /misc/sfz2
-
-{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}

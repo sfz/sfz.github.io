@@ -15,6 +15,7 @@ special opcodes for setting up MIDI CC controls. The curve headers, when used,
 are normally found at the end of the file, and define the curves used for
 shaping envelopes, parameter response etc.
 
+{%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
 {% include sfz/headers-table-generator.html %}
 
 See also [SFZ1], [SFZ2] and [ARIA Extensions].

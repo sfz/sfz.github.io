@@ -6,6 +6,7 @@ ARIA also adds some [extended MIDI CCs] in addition to those already added
 by [SFZ 2], and [XML instrument banks] as a way of organizing multiple
 SFZ instruments and configuring graphical user interfaces.
 
+{%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
 {% include sfz/opcode-table-generator.html %}
 
 Source: [Plogue forum's ARIA's Custom opcodes post]
