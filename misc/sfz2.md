@@ -6,5 +6,5 @@ The SFZ v2 standard has never been clearly set down anywhere. For the purpose of
 
 The book is not recent, and was not intended to be a standards document, but rather a manual for users of Cakewalk products. So, if you are developing a new SFZ player, do not feel obligated to support all opcodes in this list - instead, use your judgment.
 
-{%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
 {% include sfz/opcode-table-generator.html %}
+{%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
