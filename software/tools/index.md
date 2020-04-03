@@ -11,8 +11,8 @@ One way of creating SFZ files is to use one of these tools to create the initial
 maps with keys, dynamic layers, round robins etc. defined,
 then add controls etc. using a text editor.
 
-{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
 {% include sfz/software-table-generator.html %}
+{%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
 
 Some Windows only software can be used under other Unix based operating systems
 using [Wine] / [CrossOver] or in a virtual machine software like [VirtualBox].
