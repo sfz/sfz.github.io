@@ -5600,7 +5600,7 @@ categories:
         version: "Cakewalk SFZ v2"
 
   - name: "oscillator_mode"
-    short_description: ""
+    short_description: "The modulation type."
     version: "Cakewalk SFZ v2"
     value:
       type_name: "integer"

@@ -2,9 +2,10 @@
 layout: "sfz/opcode"
 opcode_name: "oscillator_multi"
 ---
-- If the value is 1, the region operates normally or in ring modulation.
-- If the value is 2, the region operates in frequency or phase modulation
-  (see also [oscillator_mode]).
+Assuming [oscillator_mode]=0:
+
+- If the value is 1, the region operates normally, in single oscillator mode.
+- If the value is 2, the region operates in ring modulation mode.
 - If between 3 and 9, this defines a unison,
   with the value being the number of oscillators.
   In this case, [oscillator_detune] must also be set
