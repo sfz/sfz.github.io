@@ -5606,6 +5606,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 2
+      default: 0
 
   - name: "oscillator_mod_depth"
     short_description: ""
