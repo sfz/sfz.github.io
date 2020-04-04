@@ -68,6 +68,9 @@ navigation:
   - label: "Legato"
     url: "/tutorials/legato"
 
+  - label: "Unison"
+    url: "/tutorials/unison"
+
   - label: "Subtractive Synthesizers"
     url: "/tutorials/subtractive_synths"
   -
