@@ -5586,6 +5586,45 @@ categories:
       - name: "on"
       - name: "off"
 
+  - name: "oscillator_detune"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    modulation:
+      midi_cc:
+      - name: "oscillator_detune_onccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"
+
+  - name: "oscillator_mode"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 0
+      max: 2
+
+  - name: "oscillator_mod_depth"
+    short_description: ""
+    version: "Cakewalk SFZ v2"
+    modulation:
+      midi_cc:
+      - name: "oscillator_mod_depth_onccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"
+
+      - name: "oscillator_mod_smoothccN"
+        short_description: ""
+        version: "Cakewalk SFZ v2"
+
+  - name: "oscillator_multi"
+    short_description: "Configure a region to use more than one oscillator."
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      min: 1
+      max: 9
+      default: 1
+
   - name: "oscillator_phase"
     short_description: "Oscillator phase. Negative values for random phase."
     version: "Cakewalk SFZ v2"
@@ -5606,41 +5645,3 @@ categories:
   - name: "oscillator_table_size"
     short_description: ""
     version: "Cakewalk SFZ v2"
-
-  - name: "oscillator_multi"
-    short_description: ""
-    version: "Cakewalk SFZ v2"
-    value:
-      type_name: "integer"
-      min: 1
-      max: 9
-
-  - name: "oscillator_mode"
-    short_description: ""
-    version: "Cakewalk SFZ v2"
-    value:
-      type_name: "integer"
-      min: 0
-      max: 2
-
-  - name: "oscillator_detune"
-    short_description: ""
-    version: "Cakewalk SFZ v2"
-    modulation:
-      midi_cc:
-      - name: "oscillator_detune_onccN"
-        short_description: ""
-        version: "Cakewalk SFZ v2"
-
-  - name: "oscillator_mod_depth"
-    short_description: ""
-    version: "Cakewalk SFZ v2"
-    modulation:
-      midi_cc:
-      - name: "oscillator_mod_depth_onccN"
-        short_description: ""
-        version: "Cakewalk SFZ v2"
-
-      - name: "oscillator_mod_smoothccN"
-        short_description: ""
-        version: "Cakewalk SFZ v2"
