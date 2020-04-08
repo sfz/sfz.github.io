@@ -440,3 +440,99 @@ ampeg_attack=0.58
 ampeg_vel2attack=-0.43
 #include "mappings/t2/ord_sus_map.sfz"
 ```
+
+## Round Robin Neighbor Borrowing
+
+Although not a method of achieving unison, round robin neighbor borrowing
+is another use of transposition, which likewise milks more out of a limited
+set of samples - specifically, emulating round robins where there are none,
+or increasing the amonut of available round robins.
+
+This works with either sequential round robin and random round robin
+approaches, or both at once. Let's use sequential round robins for this
+example, with a very small note range and three round robins sampled.
+
+```
+<global>
+seq_length=3
+
+<group>
+seq_position=1
+<region>sample=c5_rr1.wav key=60
+<region>sample=c#5_rr1.wav key=61
+<region>sample=d5_rr1.wav key=62
+
+
+<group>
+seq_position=2
+<region>sample=c5_rr2.wav key=60
+<region>sample=c#5_rr2.wav key=61
+<region>sample=d5_rr2.wav key=62
+
+
+<group>
+seq_position=3
+<region>sample=c5_rr3.wav key=60
+<region>sample=c#5_rr3.wav key=61
+<region>sample=d5_rr3.wav key=62
+```
+
+We can double the amount of round robins by using a transposed
+sample from a neighboring note for every other note in the
+sequence. This means every other note repeat has a slightly
+different timbre, but it should sound more acceptable than
+using untransposed notes for the first three sequence positions
+and transposed notes for positions four through six. So, we
+increase the sequence length to six, and alternate between
+transposed and untransposed samples like this:
+
+```
+<global>
+seq_length=6
+
+<group>
+seq_position=1
+<region>sample=c5_rr1.wav key=60
+<region>sample=c#5_rr1.wav key=61
+<region>sample=d5_rr1.wav key=62
+
+<group>
+seq_position=2
+<region>sample=c#5_rr1.wav key=60 transpose=-1
+<region>sample=d5_rr1.wav key=61 transpose=-1
+<region>sample=c#5_rr1.wav key=62 transpose=1
+
+<group>
+seq_position=3
+<region>sample=c5_rr2.wav key=60
+<region>sample=c#5_rr2.wav key=61
+<region>sample=d5_rr2.wav key=62
+
+<group>
+seq_position=4
+<region>sample=c#5_rr2.wav key=60 transpose=-1
+<region>sample=d5_rr2.wav key=61 transpose=-1
+<region>sample=c#5_rr2.wav key=62 transpose=1
+
+<group>
+seq_position=5
+<region>sample=c5_rr3.wav key=60
+<region>sample=c#5_rr3.wav key=61
+<region>sample=d5_rr3.wav key=62
+
+<group>
+seq_position=6
+<region>sample=c#5_rr3.wav key=60 transpose=-1
+<region>sample=d5_rr3.wav key=61 transpose=-1
+<region>sample=c#5_rr3.wav key=62 transpose=1
+```
+
+It's also possible to triple the amount of round robins by
+borrowing neighbors in both upwards and downwards direction
+for each note (except the lowest and highest note in the range,
+of course). In general, transposing by more than a half-step
+is not a good idea, as the timbral differences grow larger with
+larger transposition, but with some instruments it can be
+possible to get away with it. If there are many dynamic layers
+available, it's also possible to borrow from nearby dynamic layers,
+especially in the case of drums.
