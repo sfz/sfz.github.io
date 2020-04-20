@@ -32,10 +32,10 @@ layout: "no_title"
 					{%-endif-%}
 				{%-endfor-%}
 				{%-if have_audio_example-%}
-<h2>Audio Example</h2>
+<h2 id="audio_example">Audio Example</h2>
 <audio src="{{ audio_example | absolute_url }}" controls preload></audio>
 				{%-endif-%}
-<h2>Info</h2>
+<h2 id="info">Info</h2>
 <table class="table table-sm table-hover table-striped table-responsive">
 	<tr class="table-bordered">
 		<th>Author</th>

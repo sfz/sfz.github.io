@@ -311,6 +311,16 @@ categories:
 - name: "Pianos"
   page: "pianos"
   instruments:
+  - name:    "Church Steinway"
+    page:    "church_steinway"
+   #version: ""
+    author:  "Pianobook"
+   #license: ""
+    url:     "https://www.pianobook.co.uk/library/church-steinway/"
+    short_description:
+      "Steinway Model D recorded in a church in Glasgow."
+    use_details_page: true
+
   - name:    "Piano in 162"
     page:    "in_162"
 #   version: ""
