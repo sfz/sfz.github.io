@@ -48,6 +48,15 @@ look like this:
 <region> seq_length=2 seq_position=2 lorand=0.75 sample=kick_vl1_rr8.wav
 ```
 
+In the ARIA implementation of SFZ, sequence position is not tracked together for
+all regions, which means the above is not a practical way to implement alternating
+left/right hand or up/down bowing samples.
+
+Also in ARIA, a separate random number is generated for each region which is playing,
+which means lorand/hirand probably should not be used with samples which have
+multiple mic positions. Using it can result in triggering spot, overhead and room
+mics which do not match, and that can result in phasing issues etc.
+
 There are other potential uses which have nothing to do with round robins, for
 example having key fingering noises on a clarinet trigger sometimes
 (but not always) when a note is played.
