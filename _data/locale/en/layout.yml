@@ -45,7 +45,7 @@ navigation:
   type: "dropdown"
   pages:
   - label: "Instruments"
-    url: "/software/instruments"
+    url: "https://sfzinstruments.github.io"
 
   - label: "Players"
     url: "/software/players"
