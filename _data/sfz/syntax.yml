@@ -620,20 +620,28 @@ categories:
     - name: "off_curve"
       short_description:
         "When <a href='/opcodes/off_mode'>off_mode</a> is set to time,
-        this specifies the ‹<a href='/headers/curve'>curve</a>› number
-        for regions being muted by voice-stealing."
+        this specifies the math to be used to fade out the regions being
+        muted by voice-stealing."
       version: "ARIA"
       value:
-        type_name: "float"
+        type_name: "integer"
+        default: 10
+        min: -2
+        max: 10
+        options:
+        - name: "-2"
+        - name: "-1"
+        - name: "0"
+        - name: "1"
+        - name: "2"
+        - name: "10"
       see_also:
       - "off_shape"
       - "off_time"
 
     - name: "off_shape"
       short_description:
-        "When <a href='/opcodes/off_mode'>off_mode</a> is set to time,
-        this specifies the curvature of the fadeout curve for regions
-        being muted by voice-stealing."
+        "The coefficient used by <a href='/opcodes/off_curve'>off_curve</a>."
       version: "ARIA"
       value:
         type_name: "float"
