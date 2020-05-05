@@ -1,10 +1,13 @@
 ---
 title: curveccN
 ---
-(target)_icurvecc is a deprecated ARIA extension. It acted as a companion to
-(target)_curvecc and determined whether the curve for the specified target
-and CC should be calculated allowing fractional values,
-or whether the calculations should be rounded off to allow whole numbers only.
-With interpolation, it would be possible, for example, for CC2 to be effectively
-equal to 63.5, but with interpolation off it would jump from 63 directly to 64.
-In later versions of ARIA, fractional values are always used.
+The `curvecc` modifier, when it's present, designates a [curve] which shapes
+the controller input. If absent, the default curve is used, a straight line
+which runs from 0 to 1.
+
+The value of `curvecc` is a positive integer. It is the index of a curve,
+either built in or user-defined, which corresponds to the `‹curve›` opcode
+[curve_index].
+
+[curve]:       /headers/curve
+[curve_index]: /opcodes/curve_index

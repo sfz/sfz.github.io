@@ -1,15 +1,17 @@
 ---
-lang: en
 title: stepccN
 ---
-Sets the number of steps with which the modulation target is modulated by
-MIDI CC N. If this is not used, there are 127 modulation steps.
+Sets the interval between consecutive steps.
+If this is not used, there are 127 modulation steps.
 
-## Examples
+## Example
+
+This describes a pitch controller which has 5 positions:
+0, 300, 600, 900, 1200 cents.
 
 ```
-lfo01_freq_oncc70=5
-lfo01_freq_stepcc70=10
-lfo01_freq_oncc71=10
-lfo01_freq_stepcc71=4
+<region>
+sample=*sine
+pitch_oncc16=1200
+pitch_stepcc16=300
 ```
