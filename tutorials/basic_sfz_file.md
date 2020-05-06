@@ -1,6 +1,5 @@
 ---
 title: "Basic SFZ file"
-lang: "en"
 ---
 Just copy the following in your preferred text editor.
 We also have a section in the [tools page] listing some text editor's
@@ -26,7 +25,7 @@ default_path= // relative path of your samples
 // Parameters that affect multiple regions go here
 
   fil_type=         // One of the many filter types available
-  cutoff=           // freq un hertz
+  cutoff=           // freq in hertz
   cutoff_onccX=     // variation in cents
   resonance=        // value in db
   resonance_onccX=  // variation in db
