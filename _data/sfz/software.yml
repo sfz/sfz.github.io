@@ -176,12 +176,6 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "Bjoerns Sample Mapper"
-    license: "Freeware"
-    url: "https://www.bjoernbojahr.de/bjoerns-sample-mapper.html"
-    os:
-    - name: "Windows"
-
   - name: "sfZed"
     license: "Freeware"
     url: "http://audio.clockbeat.com/sfZed.html"
@@ -191,6 +185,68 @@ categories:
   - name: "SFZ Designer"
     license: "Freeware"
     url: "http://mildon.me/sfzdesigner"
+    os:
+    - name: "Windows"
+
+- name: "Automappers"
+  applications:
+
+  - name: "SFZ Python Automapper by Peter Eastman"
+    license: "Public Domain"
+    url: "https://vis.versilstudios.com/sfzconverter.html#u13452-4"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+
+  - name: "Folder-to-SFZ converter"
+    license: "Freeware"
+    url: "http://vis.versilstudios.net/sfzconverter.html"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+
+  - name: "Bjoerns Sample Mapper"
+    license: "Freeware"
+    url: "https://www.bjoernbojahr.de/bjoerns-sample-mapper.html"
+    os:
+    - name: "Windows"
+
+- name: "Converters"
+  applications:
+
+  - name: "EXS24 to SFZ converter (Python 3)"
+    license: "FOSS"
+    url: "https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+
+  - name: "EXS2SFZ"
+    license: "Freeware"
+    url: "https://www.bjoernbojahr.de/exs2sfz.html"
+    os:
+    - name: "Windows"
+
+  - name: "Awave Studio"
+    license: "Commercial"
+    url: "https://www.fmjsoft.com/awavestudio.html#main"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+
+  - name: "Chicken Systems Translator"
+    license: "Commercial"
+    url: "https://www.chickensys.com/products2/translator/index.html"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+
+  - name: "Extreme Sample Converter"
+    license: "Commercial"
+    url: "https://extranslator.com/index.php?page=exsc"
     os:
     - name: "Windows"
 
@@ -217,7 +273,7 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ syntax highlighting for Geany"
+  - name: "for Geany"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-geany"
     os:
@@ -225,7 +281,7 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ syntax highlighting for gedit"
+  - name: "for gedit"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-gedit"
     os:
@@ -233,7 +289,7 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ syntax highlighting for Sublime Text"
+  - name: "for Sublime Text"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-sublime-text"
     os:
@@ -241,7 +297,7 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ syntax highlighting for VSCode"
+  - name: "for VSCode"
     license: "FOSS"
     url: "https://github.com/jokela/vscode-sfz"
     os:
@@ -249,13 +305,13 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "SFZ syntax highlighting for Notepad++"
+  - name: "for Notepad++"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-notepad-plus-plus"
     os:
     - name: "Windows"
 
-  - name: "Another XML for Notepad++"
+  - name: "for Notepad++ by Peter Jones"
     license: "FOSS"
     url: "http://www.drealm.info/sfz/sfz-udl.xml"
     os:
@@ -267,49 +323,4 @@ categories:
     os:
     - name: "Linux"
     - name: "macOS"
-    - name: "Windows"
-
-- name: "Converters"
-  applications:
-
-  - name: "EXS24 to SFZ converter (Python 3)"
-    license: "FOSS"
-    url: "https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py"
-    os:
-    - name: "Linux"
-    - name: "macOS"
-    - name: "Windows"
-
-  - name: "EXS2SFZ"
-    license: "Freeware"
-    url: "https://www.bjoernbojahr.de/exs2sfz.html"
-    os:
-    - name: "Windows"
-
-  - name: "Folder-to-SFZ converter"
-    license: "Freeware"
-    url: "http://vis.versilstudios.net/sfzconverter.html"
-    os:
-    - name: "Linux"
-    - name: "macOS"
-    - name: "Windows"
-
-  - name: "Awave Studio"
-    license: "Commercial"
-    url: "https://www.fmjsoft.com/awavestudio.html#main"
-    os:
-    - name: "macOS"
-    - name: "Windows"
-
-  - name: "Chicken Systems Translator"
-    license: "Commercial"
-    url: "https://www.chickensys.com/products2/translator/index.html"
-    os:
-    - name: "macOS"
-    - name: "Windows"
-
-  - name: "Extreme Sample Converter"
-    license: "Commercial"
-    url: "https://extranslator.com/index.php?page=exsc"
-    os:
     - name: "Windows"
