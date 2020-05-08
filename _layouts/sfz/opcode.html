@@ -195,8 +195,12 @@ layout: default
 		<li>MIDI CC:</li>
 		<ul>
 	{%-for midi_cc in opcode_info.modulation.midi_cc-%}
-		{%-assign midi_cc_name = midi_cc.name |
-			append: " (" | append: midi_cc.version	| append: ')'-%}
+		{%-if midi_cc.version-%}
+			{%-assign midi_cc_name = midi_cc.name |
+				append: " (" | append: midi_cc.version	| append: ')'-%}
+		{%-else-%}
+			{%-assign midi_cc_name = midi_cc.name-%}
+		{%-endif-%}
 <li>
 		{%-for alias in midi_cc.alias-%}
 			{%-assign midi_cc_name = midi_cc_name | append: ", alias " | append: alias.name-%}
