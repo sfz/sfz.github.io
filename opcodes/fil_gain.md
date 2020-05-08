@@ -1,5 +1,6 @@
 ---
 layout: "sfz/opcode"
+opcode_name: "fil_gain"
 title: "fil_gain / fil2_gain"
 ---
 `fil_gain` and `fil2_gain` are used by the additional ARIA extension

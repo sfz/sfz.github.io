@@ -2135,6 +2135,9 @@ categories:
         type_name: "float"
         default: 0
         unit: "dB"
+      modulation:
+        midi_cc:
+        - name: "fil_gain_onccN"
 
     - name: "fil2_gain"
       short_description: "Gain for lsh, hsh and peq filter types."
@@ -2143,6 +2146,9 @@ categories:
         type_name: "float"
         default: 0
         unit: "dB"
+      modulation:
+        midi_cc:
+        - name: "fil2_gain_onccN"
 
     - name: "fil_veltrack"
       version: "SFZ v1"
