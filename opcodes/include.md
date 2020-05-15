@@ -1,11 +1,9 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "#include"
 ---
-A special directive, #include allows using SFZ files as building blocks for
-creating larger, more complex SFZ files. The file to which #include points is,
-in effect, pasted into the SFZ file at the point of the #include. This means that
+The file to which #include points is, in effect,
+pasted into the SFZ file at the point of the #include. This means that
 the file structure needs to be respected - after all #includes are processed,
 ‹[control](/headers/control)› header needs to be before the regions in the file,
 ‹[curve](/headers/curve)› opcodes need to be at the bottom etc. This can be

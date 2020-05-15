@@ -7,6 +7,6 @@ Other opcodes such as [set_hdccN](set_hdccN) can also be used with these.
 ## Example
 
 ```
-lohdcc90=3.14159
-hihdcc90=5.5
+lohdcc90=0.333
+hihdcc90=0.7
 ```

@@ -328,7 +328,7 @@ categories:
 
     - name: "reverse_loccN"
       short_description:
-        "If MIDI CC X is between <code>reverse_loccN</code> and
+        "If MIDI CC N is between <code>reverse_loccN</code> and
         <code>reverse_hiccN</code>, the region plays reversed."
       version: "SFZ v2"
       value:
@@ -338,7 +338,7 @@ categories:
 
     - name: "reverse_hiccN"
       short_description:
-        "If MIDI CC X is between <code>reverse_loccN</code> and
+        "If MIDI CC N is between <code>reverse_loccN</code> and
         <code>reverse_hiccN</code>, the region plays reversed."
       version: "SFZ v2"
       value:
@@ -393,7 +393,7 @@ categories:
 
   - name: "set_ccN"
     short_description:
-      "Sets a default initial value for MIDI CC number X,
+      "Sets a default initial value for MIDI CC number N,
       when the instrument is initially loaded."
     version: "SFZ v2"
     value:
@@ -403,8 +403,8 @@ categories:
 
   - name: "#include"
     short_description:
-      "Allows using SFZ files as building blocks for creating larger,
-      more complex SFZ files."
+      "A special directive, which allows using SFZ files as building blocks
+      for creating larger, more complex SFZ files."
     version: "ARIA"
     macro: true
     value:
