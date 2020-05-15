@@ -26,7 +26,8 @@
 - Remove redundant MIDI CC modulations from list that is already in the opcode
 	info table and keep track of aliases (opcode layout)
 	(E.g.: see [cutoff] opcode page)
-- Support for aliased opcodes, removing duplicated data
+- Support for aliased opcodes, removing duplicated data,
+  add some `custom_title` option for page titles
 - Variables inheritance
 - Add DragonFlyBSD, FreeBSD, NetBSD and Solaris as OSs in software section
 - Use the same OSs info for both software section and player pages

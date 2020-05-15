@@ -451,8 +451,12 @@ categories:
     short_description:
       "Like <a href='/opcodes/set_ccN'>set_ccN</a> but with floating point MIDI CCs."
     version: "ARIA"
+    alias:
+    - name: "set_realccN"
     value:
       type_name: "float"
+      min: 0
+      max: 1
 
   - name: "sw_note_offset"
     short_description:
@@ -973,6 +977,9 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+        min: 0
+        max: 1
+        default: 0
 
     - name: "hihdccN"
       short_description:
@@ -980,6 +987,9 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+        min: 0
+        max: 1
+        default: 1
 
     - name: "sw_default"
       short_description:
@@ -1262,6 +1272,30 @@ categories:
         min: 0
         max: 127
 
+    - name: "on_lohdccN"
+      short_description:
+        "Like <a href='/opcodes/on_loccN'>on_loccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      alias:
+      - name: "start_lohdccN"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
+
+    - name: "on_hihdccN"
+      short_description:
+        "Like <a href='/opcodes/on_hiccN'>on_hiccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      alias:
+      - name: "start_hihdccN"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
+
     - name: "start_loccN"
       short_description:
         "If a MIDI control message with a value between <code>start_loccN</code>
@@ -1288,6 +1322,26 @@ categories:
         min: 0
         max: 127
 
+    - name: "start_lohdccN"
+      short_description:
+        "Like <a href='/opcodes/start_loccN'>start_loccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
+
+    - name: "start_hihdccN"
+      short_description:
+        "Like <a href='/opcodes/start_hiccN'>start_hiccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
+
     - name: "stop_loccN"
       short_description:
         "If a MIDI control message with a value between <code>stop_loccN</code>
@@ -1311,6 +1365,26 @@ categories:
         default: -1
         min: 0
         max: 127
+
+    - name: "stop_lohdccN"
+      short_description:
+        "Like <a href='/opcodes/stop_loccN'>stop_loccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
+
+    - name: "stop_hihdccN"
+      short_description:
+        "Like <a href='/opcodes/stop_hiccN'>stop_hiccN</a> but with floating point MIDI CCs."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
 
 - name: "Performance Parameters"
   url: "/misc/categories#performance-parameters"
