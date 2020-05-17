@@ -41,6 +41,22 @@ in the [_posts] directory, paying attention for a correct filename, date and
 $ ./new_post.sh "New post title" "<author_name>"
 ```
 
+## License
+
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="https://sfzformat.com">
+    <span property="dct:title">sfz format team</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">sfz format website</span>.
+</p>
+
 [Alleyo]:                 https://pure-liquid.allejo.org/
 [SFZ Format]:             https://sfzformat.github.io/
 [Bootstrap]:              http://getbootstrap.com/
