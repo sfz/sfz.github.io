@@ -111,9 +111,9 @@ categories:
     - name: "macOS"
     - name: "Windows"
 
-  - name: "Extreme Sample Converter"
+  - name: "Samplelord"
     license: "Commercial"
-    url: "https://www.extranslator.com/"
+    url: "https://www.samplelord.com/"
     os:
     - name: "Windows"
 
