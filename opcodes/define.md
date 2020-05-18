@@ -33,6 +33,8 @@ used repeatedly in the SFZ file, but can be easily changed just by editing their
 `#define` value in one place.
 
 It is possible to redefine variable values in an SFZ file, so that the variable
-has different values in different portions of the SFZ file.  Note, however, that
-when using Sforzande and using #[opcode](/opcodes/include), the last value set
-in the outer SFZ file will be used in any included files.
+has different values in different portions of the SFZ file.  Note, however, 
+that it is not strictly defined how variables are propagated to #include files.
+Some implementations such as Sforzando pass the last value set in the outer
+SFZ file to included files, while other implementations may use value at the
+point of the #include opcode.
