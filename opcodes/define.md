@@ -31,3 +31,8 @@ This can be used to make an instrument easier to configure - for example, to
 change key maps, MIDI CC assignments, pitch bend ranges etc. which can then be
 used repeatedly in the SFZ file, but can be easily changed just by editing their
 `#define` value in one place.
+
+It is possible to redefine variable values in an SFZ file, so that the variable
+has different values in different portions of the SFZ file.  Note, however, that
+when using Sforzande and using #[opcode](/opcodes/include), the last value set
+in the outer SFZ file will be used in any included files.
