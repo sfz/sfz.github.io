@@ -3,6 +3,13 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "polyphony"
 ---
+
+This can be applied to all regions under a header such as
+[<global>](/headers/global) or [<group>](/headers/group) or to regions
+which have the same [group](/opcodes/group) opcdde value set. The
+below examples all use the group opcode, not the group header, but
+that is not the only way to use the polyphony opcode.
+
 ## Examples
 
 ```
