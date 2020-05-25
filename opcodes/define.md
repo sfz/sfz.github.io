@@ -4,8 +4,13 @@ lang: "en"
 opcode_name: "#define"
 ---
 Variable names start with the $ character.
-This opcode is used under the ‹[control](/headers/control)› header,
-and the defined variables can then be used anywhere else in the file.
+
+Defining the same variable to have multiple values at different points in the
+same instrument, especially when also using [#include](/opcodes/include), might
+not behave as expected, as #define statements and #include statements are
+processed in separate passes at least in ARIA/Sforzando. So, careful testing of
+an instrument may be needed, and there is no precise specification how #include
+and #define should be parsed by the SFZ player when both are used in the same file.
 
 ## Example
 
