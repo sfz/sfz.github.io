@@ -5,13 +5,6 @@ opcode_name: "#define"
 ---
 Variable names start with the $ character.
 
-Defining the same variable to have multiple values at different points in the
-same instrument, especially when also using [#include](/opcodes/include), might
-not behave as expected, as #define statements and #include statements are
-processed in separate passes at least in ARIA/Sforzando. So, careful testing of
-an instrument may be needed, and there is no precise specification how #include
-and #define should be parsed by the SFZ player when both are used in the same file.
-
 ## Example
 
 ```
@@ -36,3 +29,11 @@ This can be used to make an instrument easier to configure - for example, to
 change key maps, MIDI CC assignments, pitch bend ranges etc. which can then be
 used repeatedly in the SFZ file, but can be easily changed just by editing their
 `#define` value in one place.
+
+Defining the same variable to have multiple values at different points in the
+same instrument, especially when also using [#include](/opcodes/include), requires
+care. It appears that #define statements and #include statements appear to be
+processed in separate passes at least in ARIA/Sforzando when loading an instrument.
+So, careful testing of an instrument may be needed, and there is no precise
+specification how #include and #define should be parsed by the SFZ player when both
+are used in the same file.
