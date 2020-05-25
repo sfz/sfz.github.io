@@ -10,18 +10,20 @@ polyphony=12
 polyphony=5
 ```
 
-An example limiting a crash cymbal to four polyphony voices, and a ride to a
-total of seven voices,
-with the ride group including both the bow and bell articulations:
+An example limiting a crash cymbal to four polyphony voices.
 
 ```
-<group>
 group=1
 off_by=1
 polyphony=4
 <region> key=49 sample=crash.wav
+```
 
-<group>
+Here is a ride limited to a total of seven voices, with both bow and bell
+articulations sharing the same polyphony group and the same seven-voice
+limit.
+
+```
 group=2
 off_by=2
 polyphony=7
@@ -31,7 +33,7 @@ polyphony=7
 
 This opcode is useful for controlling sound buildup, limiting resource use,
 and for emulating the behavior of vintage keyboards with limited polyphony.
-It's also possible to use [note_polyphony](note_polyphony) instead when there is
-only one pitch in a group, or use both in combination. An alternative for
-controlling sound buildup is using [ampeg_release](ampeg_release) with
-[off_mode](off_mode) set to normal.
+It's also possible to use [note_polyphony](note_polyphony) instead when all the
+sounds we want to mute each other are mapped to the same pitch, or use both in
+combination. An alternative for controlling sound buildup is using
+[ampeg_release](ampeg_release) with [off_mode](off_mode) set to normal.
