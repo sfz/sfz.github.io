@@ -61,3 +61,9 @@ tune_cc55=-250
 #include "mappings/bobobo_tenor_l_1.sfz"
 #include "mappings/bobobo_tenor_l_2.sfz"
 ```
+
+Using include together with [#define](/opcodes/define), might not behave as expected,
+as #define statements and #include statements appear to be processed in separate passes
+at least in ARIA/Sforzando when loading an instrument. So, careful testing of
+an instrument may be needed, and there is no precise specification how #include
+and #define should be parsed by the SFZ player when both are used in the same file.
