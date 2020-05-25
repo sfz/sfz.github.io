@@ -25,3 +25,24 @@ Both are also equivalent to:
 ```
 lokey=72 hikey=72 pitch_keycenter=72
 ```
+
+Key can also be combined with the others, which will override the value set by key
+although key must be specified first. Not all SFZ players might support this
+behavior but rgcaudio sfz and ARIA both do.
+
+```
+key=72 lokey=70
+```
+
+Will be equivalent to
+
+```
+lokey=70 hikey=72 pitch_keycenter=72
+```
+
+However, this would just be the same as setting key=72, as key comes later and
+the lokey value it would set will override the previous lokey.
+
+```
+lokey=70 key=72
+```
