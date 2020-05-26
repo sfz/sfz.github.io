@@ -10,15 +10,12 @@ below examples all use the group opcode, not the group header, but
 that is not the only way to use the polyphony opcode.
 
 In addition to positive integer values, polyphony can also be set to
-one of three special values. These values are legato_high, legato_last
-and legato_low. With all of these, the polyphony limit is set to 1,
-and the following behavior is also triggered:
+one of three special text values. With all of these, the polyphony limit
+is set to 1, and the following behavior is also triggered:
 
-For legato_high, the highest note played sounds and lower notes are muted.
-
-For legato_last, the most recent note played sounds (typical legato behavior).
-
-For legato_low, the lowest note played sounds.
+- ***legato_high***: the highest note played sounds and lower notes are muted.
+- ***legato_last***: the most recent note played sounds (typical legato behavior).
+- ***legato_low***:  the lowest note played sounds.
 
 ## Examples
 
