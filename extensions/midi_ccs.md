@@ -33,6 +33,12 @@ at least one note is currently pressed. Unipolar random is from 0 to 1.
 Bipolar random is from -1 to 1. Alternate changes between 0 and 1 every time
 a note on message is received.
 
+Some of the parameters, such as aftertouch and note off velocity, are rarely
+supported by modern MIDI hardware controllers, though they are part of the MIDI
+specification and can be edited in DAWs. Many MIDI keyboards will send a
+default note off velocity, such as 64, with every note off event regardless of
+how fast the key was actually moving at the time.
+
 Anything above 137 is not specified in the SFZ 2 standard and strictly
 engine-dependent. ARIA adds more. Some of these might not work properly in
 all DAWs.
