@@ -19,6 +19,15 @@ The additions in SFZ 2 are:
 - bipolar random: 136
 - alternate: 137
 
+Values such as note on velocity and MIDI note number, when used as CCs, do not
+behave exactly the same as note number or velocity of the note itself, in
+some contexts. This is because once a note is played, its MIDI note number and
+note on velocity remain the same for that note. MIDI CC, however, is shared
+across the entire instrument, and this means another note on or note off event
+will change CC 131, 132 and 133. This can give unexpected results when using
+these CCs to adjust keytracking or velocity tracking of various parameters,
+especially in polyphonic instruments with long-sustaining sounds.
+
 Note gate is an on/off - it's 0 when no MIDI notes are pressed, and 1 when
 at least one note is currently pressed. Unipolar random is from 0 to 1.
 Bipolar random is from -1 to 1. Alternate changes between 0 and 1 every time
