@@ -660,6 +660,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+        default: 0.006
       see_also:
       - "off_curve"
       - "off_shape"
