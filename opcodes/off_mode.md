@@ -15,7 +15,10 @@ Region off mode. This opcode will determinate how a region is turned off by an
 ARIA also adds `off_mode`=time which can be used to specify a time independent
 of the sample release time using [off_time](/opcodes/off_time),
 and also [off_shape](/opcodes/off_shape) and [off_curve](/opcodes/off_curve)
-to control the curve of the fadeout.
+to control the curve of the fadeout. In ARIA, time is actually the default value
+with a default off_time of 6 ms. 6 ms is also the fadeout time for off_mode=fast
+so these are equivalent in end result, but time is the true default value
+"under the hood".
 
 ## Examples
 

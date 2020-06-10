@@ -586,7 +586,7 @@ categories:
         max: 1024
 
     - name: "polyphony"
-      short_description: "Polyphony voice limit for a group."
+      short_description: "Polyphony voice limit."
       version: "SFZ v2"
       value:
         type_name: "integer"
@@ -660,6 +660,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+        default: 0.006
       see_also:
       - "off_curve"
       - "off_shape"

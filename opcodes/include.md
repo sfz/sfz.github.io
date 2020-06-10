@@ -61,3 +61,10 @@ tune_cc55=-250
 #include "mappings/bobobo_tenor_l_1.sfz"
 #include "mappings/bobobo_tenor_l_2.sfz"
 ```
+
+Using #include with [#define](/opcodes/define) in the same instrument requires care,
+especially if the same value has to be #defined to have different settings at
+different points in an instrument. Using #define to set the same variable to different
+values at one point in the same SFZ file does not work well at least in ARIA/Sforzando
+when loading an instrument. However, a workaround there is to use #include to put each
+#define statement in a separate file. In simple tests, that has been successful.
