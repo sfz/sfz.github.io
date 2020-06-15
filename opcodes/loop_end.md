@@ -3,6 +3,8 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "loop_end"
 ---
+This is inclusive - the sample specified is played as part of the loop.
+
 If `loop_end` is not specified and the sample has a loop defined, the SFZ player
 will use the end point of the first loop defined in the file. That means for
 files with one loop, `loop_end` does not usually need to be set, as it's generally
