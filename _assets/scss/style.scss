@@ -11,6 +11,24 @@ pre {
 	border-radius: 0.50rem;
 }
 */
+/* Mimic Bootstrap tables for markdown tables only */
+table {
+	width:100%;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+th, td {
+	text-align: left;
+	padding: 5px 10px;
+	border: 1px solid #dee2e6;
+}
+th {
+	color: #ffffff;
+	background-color: #343A40;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
 #scrollButton {
 	display: none;
 	position: fixed;
