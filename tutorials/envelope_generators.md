@@ -30,5 +30,5 @@ ampeg_envelope shape and its stages.
 
 The SF2 standard has a more flexible generator that can be used in addition to the above.
 
-(Description TBD.)
+(TODO: Add description.)
 
