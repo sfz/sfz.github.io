@@ -83,8 +83,8 @@ navigation:
   - label: "Brush Stirs"
     url: "/tutorials/brush_stirs"
   -
-  - label: "Envelope Generators"
-    url: "/tutorials/envelope_generators"
+# - label: "Envelope Generators"
+#   url: "/tutorials/envelope_generators"
 
   - label: "SFZ 1 Modulations"
     url: "/tutorials/sfz1_modulations"
