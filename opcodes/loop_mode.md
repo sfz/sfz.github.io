@@ -18,10 +18,9 @@ The possible values are:
                 This mode is engaged automatically if the [count](count) opcode
                 is defined.
 - ***loop_continuous***: once the player reaches sample loop point,
-                        the loop will play until note expiration.
+                        the loop will play until note expiration. This includes looping during the release phase.
 - ***loop_sustain***: the player will play the loop while the note is held, by keeping
-                    it depressed or by using the sustain pedal (CC64).
-                    The rest of the sample will play after note release.
+                    it depressed or by using the sustain pedal (CC64). During the release phase, there's no looping.
 
 ## Examples
 
