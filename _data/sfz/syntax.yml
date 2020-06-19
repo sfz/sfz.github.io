@@ -3019,7 +3019,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "integer"
-        default: 1
+        default: 0
         min: 0
         max: 1
 
@@ -3058,7 +3058,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "integer"
-        default: 1
+        default: 0
         min: 0
         max: 1
 
@@ -3106,7 +3106,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "integer"
-        default: 1
+        default: 0
         min: 0
         max: 1
 
