@@ -1,16 +1,16 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "amp_veltrack"
+math: true
 ---
-With amp_veltrack at the default value of 100, volume is reduced by the amount
+With amp_veltrack at the default value of 100, volume is modified by the amount
 calculated by the following expression, based on incoming velocity.
 
-Amplitude(dB) = 20 log (127^2 / Velocity^2)
+Amplitude(dB) = $$ 20 * log10((v/127)^2) $$
 
 The [amp_velcurve_N](amp_velcurve_N) opcodes allow overriding the default
 velocity curve, and are useful for making more complex curves than
-amp_veltrack allows.
+`amp_veltrack` allows.
 
 ## Examples
 
