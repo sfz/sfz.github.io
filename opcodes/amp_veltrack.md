@@ -3,8 +3,8 @@ layout: "sfz/opcode"
 lang: "en"
 opcode_name: "amp_veltrack"
 ---
-Volume changes with incoming velocity in a concave shape according to the
-following expression:
+With amp_veltrack at the default value of 100, volume is reduced by the amount
+calculated by the following expression, based on incoming velocity.
 
 Amplitude(dB) = 20 log (127^2 / Velocity^2)
 
