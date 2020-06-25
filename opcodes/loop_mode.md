@@ -21,6 +21,15 @@ The possible values are:
                         the loop will play until note expiration. This includes looping during the release phase.
 - ***loop_sustain***: the player will play the loop while the note is held, by keeping
                     it depressed or by using the sustain pedal (CC64). During the release phase, there's no looping.
+										
+For samples with [trigger](/opcodes/trigger)=release set, no_loop and one_shot will both behave as one_shot
+and the entire release sample will play. If loop_continuous is set, looping will be
+applied - and unless loop_count is set or there is some other way the sound will be muted,
+that means the sound can potentially continue indefinitely.
+
+If an instrument is using the default loop_mode=no_loop, there is no need to set loop_mode=one_shot for the
+release samples; however, if an instrument has loop_mode=loop_continuous set under a header which also
+includes release samples, the release regions will normally need to be set to loop_mode=one_shot to override that.
 
 ## Examples
 
