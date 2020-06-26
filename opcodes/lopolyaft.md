@@ -3,8 +3,10 @@ layout: "sfz/opcode"
 lang: "en"
 title: "lopolyaft / hipolyaft"
 ---
-The incoming note information in the Polyphonic Aftertouch message is
-not relevant.
+In the rgcaudio sfz player, the incoming note information in the Polyphonic Aftertouch message is
+not relevant (which basically means polyphonic aftertouch isn't polyphonic, and works like channel
+aftertouch). In ARIA, the incoming note information is used, and polyphonic aftertouch works
+polyphonically. Other SFZ players need testing.
 
 ## Example
 
