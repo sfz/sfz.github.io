@@ -250,6 +250,17 @@ categories:
     os:
     - name: "Windows"
 
+- name: "Misc"
+  applications:
+
+  - name: "Freepats-tools"
+    license: "GPL-3.0"
+    url: "https://github.com/freepats/freepats-tools"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+
 - name: "Syntax Highlighting"
   applications:
 

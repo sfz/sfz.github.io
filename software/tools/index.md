@@ -1,6 +1,6 @@
 ---
 title: "SFZ Creation Tools"
-app_categories: ['Automappers', 'Converters', 'Editors', 'Syntax Highlighting']
+app_categories: ['Automappers', 'Converters', 'Editors', 'Misc', 'Syntax Highlighting']
 show_category_titles: true
 ---
 Although SFZ files can be created with any text editor, and some users have also
