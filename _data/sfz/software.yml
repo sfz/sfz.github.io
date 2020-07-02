@@ -25,7 +25,7 @@ categories:
     - name: "Windows"
 
   - name: "liquidsfz"
-    license: "FOSS"
+    license: "LGPL-2.1"
     url: "https://github.com/swesterfeld/liquidsfz/"
     os:
     - name: "Linux"
@@ -143,7 +143,7 @@ categories:
   applications:
 
   - name: "HISE"
-    license: "FOSS"
+    license: "GPL-3.0"
     url: "http://hise.audio/"
     os:
     - name: "iOS"
@@ -169,7 +169,7 @@ categories:
   applications:
 
   - name: "Polyphone"
-    license: "FOSS"
+    license: "GPL-3.0"
     url: "https://www.polyphone-soundfonts.com/en/"
     os:
     - name: "Linux"
@@ -265,7 +265,7 @@ categories:
   applications:
 
   - name: "CudaText Editor"
-    license: "FOSS"
+    license: "MPL-2.0"
     url: "http://uvviewsoft.com/cudatext/"
     os:
     - name: "DragonFlyBSD"
@@ -277,7 +277,7 @@ categories:
     - name: "Windows"
 
   - name: "SFZ major mode for GNU Emacs"
-    license: "FOSS"
+    license: "MIT"
     url: "https://github.com/sfztools/emacs-sfz-mode"
     os:
     - name: "Linux"
@@ -309,7 +309,7 @@ categories:
     - name: "Windows"
 
   - name: "for VSCode"
-    license: "FOSS"
+    license: "MIT"
     url: "https://github.com/jokela/vscode-sfz"
     os:
     - name: "Linux"
