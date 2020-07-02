@@ -170,7 +170,7 @@ cards:
     icon_category: "fas"
 
   - label: "Free SFZ Instruments"
-    url: "https://github.com/sfzinstruments/"
+    url: "https://sfzinstruments.github.io/"
     icon_type: "download"
     icon_category: "fas"
 
