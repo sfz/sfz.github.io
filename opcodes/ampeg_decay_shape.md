@@ -1,12 +1,11 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "ampeg_decay_shape"
 ---
 0 is linear, positive values are slower curves (that means the envelope will
 initially not decay out much, and most of the decay will happen towards the end
 of the decay period) and negative values faster (quick initial decay with quiet
-tail decaying more slowly). Default in ARIA is -10.3616.
+tail decaying more slowly).
 
 ## Examples
 

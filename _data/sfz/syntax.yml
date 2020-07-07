@@ -649,6 +649,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
+        default: -10.3616
       see_also:
       - "off_curve"
       - "off_time"
@@ -2987,7 +2988,7 @@ categories:
       short_description: "Specifies the curvature of decay stage of the envelope."
       value:
         type_name: "float"
-        default: 0
+        default: -10.3616
 
     - name: "ampeg_decay_zero"
       short_description: "Specifies how decay time is calculated."
@@ -3012,7 +3013,7 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
-        default: 0
+        default: -10.3616
 
     - name: "ampeg_release_zero"
       short_description: "Specifies how release time is calculated."
