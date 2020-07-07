@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "fileg_attack_shape"
 ---
 0 is linear. Positive values are slower curves (that means the envelope will
@@ -9,7 +8,7 @@ of the attack period) and negative values faster (quick initial fade in with the
 latter part of the attack stage fading in less). Past 10 or -10, there's little
 difference - at that point, the envelope is practically a horizontal line and a
 vertical line (if positive) or a vertical line followed by a horizontal line
-(if negative). Default is 0.
+(if negative).
 
 ## Examples
 

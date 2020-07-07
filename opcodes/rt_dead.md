@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "rt_dead"
 ---
 Allowed values are on and off, default is off, so by default, release

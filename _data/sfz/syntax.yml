@@ -3634,6 +3634,9 @@ categories:
     - name: "egN_shapeX"
       short_description: ""
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 0
 
     - name: "egN_curveX"
       short_description:

@@ -1,9 +1,8 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "egN_shapeX"
 ---
-Curve shape before the specified envelope point in envelope N. Default is 0.
+Curve shape before the specified envelope point in envelope N.
 0 is linear, positive values are slower and negative values faster.
 Past 10 or -10, there's little difference - at that point, the envelope is
 practically a horizontal line and a vertical line (if positive) or a
