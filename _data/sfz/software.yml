@@ -15,7 +15,7 @@ categories:
   applications:
 
   - name: "Carla (SFZero)"
-    license: "FOSS"
+    license: "GPL-2.0-or-later"
     url: "https://kx.studio/Applications:Carla"
     os:
     - name: "DragonFlyBSD"
@@ -23,12 +23,16 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "Fully-featured audio plugin host, with support for many audio drivers and plugin formats."
 
   - name: "liquidsfz"
     license: "LGPL-2.1"
     url: "https://github.com/swesterfeld/liquidsfz/"
     os:
     - name: "Linux"
+    short_description:
+      "SFZ sampler library with LV2 and JACK support."
 
   - name: "sfizz"
     license: "BSD-2-Clause"
@@ -37,6 +41,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "SFZ library, AU/LV2/VST3 plugin with JACK support."
 
   - name: "SFZero"
     license: "FOSS"
@@ -45,14 +51,18 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "An SFZ (and SF2) player and Juce module."
 
-  - name: "Zerberus, The MuseScore SFZ synthesizer"
+  - name: "Zerberus"
     license: "FOSS"
     url : "https://musescore.org/en/handbook/developers-handbook/references/zerberus-musescore-sfz-synthesizer/"
     os:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "MuseScore SFZ synthesizer."
 
   - name: "LinuxSampler"
     license: "Custom"
@@ -67,6 +77,10 @@ categories:
     url: "http://falcosoft.hu/softwares.html"
     os:
     - name: "Windows"
+    short_description:
+      "Extension to the BASS audio library, enabling the playing of MIDI files
+      and custom event sequences, using SF2 soundfonts and/or SFZ to provide
+      the sounds. MIDI input is also supported."
 
   - name: "Grace"
     license: "Freeware"
@@ -156,6 +170,14 @@ categories:
     url: "https://openmpt.org/"
     os:
     - name: "Windows"
+
+  - name: "Poise"
+    license: "Freeware"
+    url: "https://www.onesmallclue.com/index.html"
+    os:
+    - name: "Windows"
+    short_description:
+      "Simple 16 drum pads percussion sampler, 8 layers. Very limited SFZ support."
 
   - name: "Renoise (Redux)"
     license: "Commercial"

@@ -16,6 +16,7 @@
 			{%-for os in apps_os-%}
 			<th scope="col" style="text-align:center">{{ os.name }}</th>
 			{%-endfor-%}
+			<th scope="col">Description</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -31,6 +32,7 @@
 					{%-endif-%}
 		<td style="text-align:center">{{ os_supported }}</td>
 				{%-endfor-%}
+		<td>{{ app.short_description }}</td>
 	</tr>
 			{%-endfor-%}
 	</tbody>
