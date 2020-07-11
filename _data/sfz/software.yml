@@ -71,6 +71,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "BassMIDI VSTi"
     license: "Freeware"
@@ -83,17 +85,22 @@ categories:
       the sounds. MIDI input is also supported."
 
   - name: "Grace"
-    license: "Freeware"
-    url: "http://www.onesmallclue.com/plugin/grace/"
+    license: "MIT"
+    url: "https://github.com/s-oram/Grace/"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
-  - name: "Sforzando"
+  - name: "sforzando"
     license: "Freeware"
     url: "https://plogue.com/products/sforzando.html"
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "A free, highly SFZ 2.0 compliant sample player.
+      Supports almost all SFZ v1 and v2 opcodes, plus ARIA extensions."
 
   - name: "TX16Wx Sampler"
     license: "Freeware"
@@ -108,6 +115,10 @@ categories:
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "Synth-based sample player using SFZ format as its sound generator.
+      It supports very minimal SFZ v1 opcodes,
+      only for key-range and velocity-range mapping."
 
   - name: "ARIA"
     license: "OEM"
@@ -116,6 +127,10 @@ categories:
     - name: "iOS"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "An audio sampling and synthesis Engine based on the SFZ 1.0 / SFZ 2.0
+      open file formats for instrument programming and the Scala open file
+      format to define scales and temperaments."
 
   - name: "Bliss Sampler"
     license: "Commercial"
@@ -124,12 +139,18 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Samplelord"
     license: "Commercial"
     url: "https://www.samplelord.com/"
     os:
     - name: "Windows"
+    short_description:
+      "Sample player as standalone or VSTi plugin for Windows 32-bit OS that
+      can load different sounds in different formats.
+      Has basic parameter controls, supports only SFZ v1 opcodes."
 
   - name: "TAL-Sampler"
     license: "Commercial"
@@ -138,6 +159,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "UVI Falcon"
     license: "Commercial"
@@ -145,6 +168,8 @@ categories:
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Wusik Station V9, Wusik 9009, Wusik One, Wusik EVE V5"
     license: "Commercial"
@@ -152,6 +177,8 @@ categories:
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
 - name: "Import from SFZ"
   applications:
@@ -164,12 +191,16 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "OpenMPT"
     license: "BSD-3-Clause"
     url: "https://openmpt.org/"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Poise"
     license: "Freeware"
@@ -186,6 +217,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
 - name: "Editors"
   applications:
@@ -197,18 +230,28 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "An open-source soundfont editor for creating musical instruments."
 
   - name: "sfZed"
     license: "Freeware"
     url: "http://audio.clockbeat.com/sfZed.html"
     os:
     - name: "Windows"
+    short_description:
+      "An editor for the SFZ format used by certain VST instruments.
+      It will also convert Soundfont SF2 to SFZ and works with a midi keyboard
+      to allow you to play and set values, including mapping drum samples."
 
   - name: "SFZ Designer"
     license: "Freeware"
     url: "http://mildon.me/sfzdesigner"
     os:
     - name: "Windows"
+    short_description:
+      "A visual sample mapping tool optimized for multiple velocity and
+      round-robin layers. It features a streamlined workflow, assisted opcode
+      entry, draggable key-range and velocity splits-points, and more."
 
 - name: "Automappers"
   applications:
@@ -220,6 +263,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Folder-to-SFZ converter"
     license: "Freeware"
@@ -228,12 +273,16 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Bjoerns Sample Mapper"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/bjoerns-sample-mapper.html"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
 - name: "Converters"
   applications:
@@ -245,12 +294,17 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "EXS24 to SFZ sample library metadata converter."
 
   - name: "EXS2SFZ"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/exs2sfz.html"
     os:
     - name: "Windows"
+    short_description:
+      "Imports sample mapping information from EXS24 instruments and generates
+      SFZ files from it."
 
   - name: "Awave Studio"
     license: "Commercial"
@@ -258,6 +312,11 @@ categories:
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "Multi-purpose audio tool that reads a veritable host of audio carrying
+      file formats from different platforms, synthesizers, trackers, mobile phones.
+      It can be used in a variety of ways; as a file format converter,
+      as an audio editor, or as a synth instrument editor."
 
   - name: "Chicken Systems Translator"
     license: "Commercial"
@@ -265,12 +324,16 @@ categories:
     os:
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "Extreme Sample Converter"
     license: "Commercial"
     url: "https://extranslator.com/index.php?page=exsc"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
 - name: "Misc"
   applications:
@@ -282,6 +345,10 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      "Tools to manage, create and convert sound fonts, collections of sampled
+      musical instruments and sound banks. Originally created for the
+      <a href='http://freepats.zenvoid.org/'>FreePats project</a>."
 
 - name: "Syntax Highlighting"
   applications:
@@ -297,6 +364,8 @@ categories:
     - name: "macOS"
     - name: "Solaris"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "SFZ major mode for GNU Emacs"
     license: "MIT"
@@ -305,6 +374,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for Geany"
     license: "FOSS"
@@ -313,6 +384,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for gedit"
     license: "FOSS"
@@ -321,6 +394,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for Sublime Text"
     license: "FOSS"
@@ -329,6 +404,8 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for VSCode"
     license: "MIT"
@@ -337,18 +414,24 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for Notepad++"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-notepad-plus-plus"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "for Notepad++ by Peter Jones"
     license: "FOSS"
     url: "http://www.drealm.info/sfz/sfz-udl.xml"
     os:
     - name: "Windows"
+    short_description:
+      ""
 
   - name: "SFZ Tools for UltraEdit"
     license: "FOSS"
@@ -357,3 +440,5 @@ categories:
     - name: "Linux"
     - name: "macOS"
     - name: "Windows"
+    short_description:
+      ""
