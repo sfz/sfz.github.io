@@ -5658,7 +5658,7 @@ categories:
       type_name: "integer"
 
   - name: "sample_quality"
-    short_description: ""
+    short_description: "Sample playback quality settings."
     version: "Cakewalk SFZ v2"
     value:
       type_name: "integer"
