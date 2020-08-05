@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lobend / hibend"
 ---
 The region will play only if last Pitch Bend message received was in the

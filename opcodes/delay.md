@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "delay"
 ---
 If a `delay` value is specified, the region playback will be postponed for the

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "fileg_release"
 ---
 ## Examples

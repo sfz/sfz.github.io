@@ -1,6 +1,5 @@
 ---
 title: SFZ2 modulations
-lang: en
 ---
 The [modulations] available under SFZ2 are much more flexible than the fixed set
 [specified by SFZ1](/tutorials/sfz1_modulations). All SFZ1 modulations are still

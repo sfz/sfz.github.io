@@ -1,6 +1,5 @@
 ---
 title: Legato
-lang: en
 ---
 
 ## Basic monophony

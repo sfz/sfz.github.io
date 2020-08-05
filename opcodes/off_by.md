@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "off_by"
 ---
 When a new region with a group number equal to `off_by` plays,

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "waveguide"
 ---
 Enables waveguide synthesis for the region. Not properly documented,

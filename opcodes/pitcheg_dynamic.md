@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitcheg_dynamic"
 ---
 When 1, causes envelope durations to be recalculated when a MIDI CC message

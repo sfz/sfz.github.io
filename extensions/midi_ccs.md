@@ -1,6 +1,5 @@
 ---
 title: "Extended MIDI CCs"
-lang: "en"
 ---
 In the MIDI specification, [MIDI Control Change Messages] can have numbers from 0 to 127.
 

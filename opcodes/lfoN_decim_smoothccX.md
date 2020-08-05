@@ -1,1 +1,4 @@
-lfoN_decim.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_decim"
+---

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "fil_keytrack"
 ---
 A value of 100 means 100 cents per half-step.

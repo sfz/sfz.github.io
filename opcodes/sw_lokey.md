@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "sw_lokey / sw_hikey"
 ---
 Basically, this tells the SFZ player where the keyswitches are.

@@ -1,5 +1,4 @@
 ---
-lang: en
 title: smoothccN
 ---
 Sets the smoothness with which the modulation target is modulated by MIDI CC N.

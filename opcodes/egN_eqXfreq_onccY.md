@@ -1,1 +1,4 @@
-egN_eqXfreq.md
+---
+layout: "sfz/opcode"
+opcode_name: "egN_eqXfreq"
+---

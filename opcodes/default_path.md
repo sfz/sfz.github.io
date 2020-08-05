@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "default_path"
 ---
 Default path under which the samples should be found. Can also be

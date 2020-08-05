@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "loccN / hiccN"
 ---
 N will normally be a number from 1 to 127.

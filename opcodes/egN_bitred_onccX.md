@@ -1,1 +1,4 @@
-egN_bitred.md
+---
+layout: "sfz/opcode"
+opcode_name: "egN_bitred"
+---

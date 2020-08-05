@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitchlfo_freq"
 ---
 ## Examples

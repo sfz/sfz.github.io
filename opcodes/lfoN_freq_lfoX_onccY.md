@@ -1,1 +1,4 @@
-lfoN_freq_lfoX.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_freq_lfoX"
+---

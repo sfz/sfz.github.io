@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "eqN_freq"
 ---
 The SFZ specification has three EQ bands, with this opcode setting

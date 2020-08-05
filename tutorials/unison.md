@@ -1,6 +1,5 @@
 ---
 title: Unison
-lang: en
 ---
 
 This tutorial describes various methods of using one set of samples to emulate
@@ -187,22 +186,22 @@ robins as an example:
 
 ```
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=1 
+<region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
-<region>sample=c4_rr3.wav seq_position=3 
-<region>sample=c4_rr4.wav seq_position=4 
+<region>sample=c4_rr3.wav seq_position=3
+<region>sample=c4_rr4.wav seq_position=4
 ```
 
 We can create two by offsetting the round robins like this:
 
 ```
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=1 
+<region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
-<region>sample=c4_rr3.wav seq_position=3 
-<region>sample=c4_rr4.wav seq_position=4 
+<region>sample=c4_rr3.wav seq_position=3
+<region>sample=c4_rr4.wav seq_position=4
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=4 
+<region>sample=c4_rr1.wav seq_position=4
 <region>sample=c4_rr2.wav seq_position=1
 <region>sample=c4_rr3.wav seq_position=2
 <region>sample=c4_rr4.wav seq_position=3
@@ -215,22 +214,22 @@ Or three, or a maximum of four:
 
 ```
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=1 
+<region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
-<region>sample=c4_rr3.wav seq_position=3 
-<region>sample=c4_rr4.wav seq_position=4 
+<region>sample=c4_rr3.wav seq_position=3
+<region>sample=c4_rr4.wav seq_position=4
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=4 
+<region>sample=c4_rr1.wav seq_position=4
 <region>sample=c4_rr2.wav seq_position=1
 <region>sample=c4_rr3.wav seq_position=2
 <region>sample=c4_rr4.wav seq_position=3
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=3 
+<region>sample=c4_rr1.wav seq_position=3
 <region>sample=c4_rr2.wav seq_position=4
 <region>sample=c4_rr3.wav seq_position=1
 <region>sample=c4_rr4.wav seq_position=2
 <group>seq_length=4 key=48
-<region>sample=c4_rr1.wav seq_position=2 
+<region>sample=c4_rr1.wav seq_position=2
 <region>sample=c4_rr2.wav seq_position=3
 <region>sample=c4_rr3.wav seq_position=4
 <region>sample=c4_rr4.wav seq_position=1
@@ -249,25 +248,25 @@ is simple:
 ```
 <group>seq_length=4 key=48
 pan=-100
-<region>sample=c4_rr1.wav seq_position=1 
+<region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
-<region>sample=c4_rr3.wav seq_position=3 
-<region>sample=c4_rr4.wav seq_position=4 
+<region>sample=c4_rr3.wav seq_position=3
+<region>sample=c4_rr4.wav seq_position=4
 <group>seq_length=4 key=48
 pan=100
-<region>sample=c4_rr1.wav seq_position=4 
+<region>sample=c4_rr1.wav seq_position=4
 <region>sample=c4_rr2.wav seq_position=1
 <region>sample=c4_rr3.wav seq_position=2
 <region>sample=c4_rr4.wav seq_position=3
 <group>seq_length=4 key=48
 pan=-50
-<region>sample=c4_rr1.wav seq_position=3 
+<region>sample=c4_rr1.wav seq_position=3
 <region>sample=c4_rr2.wav seq_position=4
 <region>sample=c4_rr3.wav seq_position=1
 <region>sample=c4_rr4.wav seq_position=2
 <group>seq_length=4 key=48
 pan=50
-<region>sample=c4_rr1.wav seq_position=2 
+<region>sample=c4_rr1.wav seq_position=2
 <region>sample=c4_rr2.wav seq_position=3
 <region>sample=c4_rr3.wav seq_position=4
 <region>sample=c4_rr4.wav seq_position=1
@@ -310,7 +309,7 @@ a solo instrument run through a chorus or other doubling effect, rather than sep
 performances.
 
 Aspects of the sound which can be humanized or randomized include timing, smoothing,
-phase, pitch, vibrato speed and vibrato depth. 
+phase, pitch, vibrato speed and vibrato depth.
 
 Here is a rather lengthy example, adapted from a real instrument, where each voice has
 separate pan settings for stereo spread and separate polyphony groups - these are basic

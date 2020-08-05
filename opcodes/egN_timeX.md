@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "egN_timeX"
 ---
 The time duration from an envelope point to another, in seconds.

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "offset_random"
 ---
 In many cases, will need to be used with a small [ampeg_attack](ampeg_attack)

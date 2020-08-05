@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pan"
 ---
 If a mono sample is used, pan value defines the position in the stereo image

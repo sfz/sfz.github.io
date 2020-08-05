@@ -1,6 +1,5 @@
 ---
 title: Add players description and opcode support pages
-lang: en
 ---
 Some players in the [players page] are flagged as documented, that means that
 their opcode support is known. For those items in the list the link doesn't

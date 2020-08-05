@@ -1,1 +1,4 @@
-lfoN_resonance2.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_resonance"
+---

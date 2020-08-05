@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitcheg_delay"
 ---
 This is the time elapsed from note on to the start of

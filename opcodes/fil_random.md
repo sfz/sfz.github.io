@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "fil_random"
 ---
 Amount of random variation for filter cutoff in cents. Computed when the note is

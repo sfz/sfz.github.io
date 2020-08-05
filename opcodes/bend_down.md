@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "bend_down"
 ---
 If [bend_up](bend_up) is set to a positive value,

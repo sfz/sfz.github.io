@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "delay_random"
 ---
 If the region receives a note-off message before delay time,

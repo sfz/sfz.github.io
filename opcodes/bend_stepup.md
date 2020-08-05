@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "bend_stepup"
 ---
 If this is set to the same value as [bend_stepdown](bend_stepdown),

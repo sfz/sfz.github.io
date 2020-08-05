@@ -1,6 +1,4 @@
 ---
-layout: "sfz/opcode"
-lang: "en"
 ---
 ## Examples
 

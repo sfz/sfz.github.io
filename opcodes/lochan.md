@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lochan / hichan"
 ---
  `lochan` and `hichan` will almost always be used together.

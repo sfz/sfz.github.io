@@ -1,6 +1,4 @@
 ---
-layout: "sfz/opcode"
-lang: "en"
 ---
 Can be negative, and according to the SFZ spec the allowed range is -200 to 200,
 which could be used to push LFO frequencies into audio frequency range,

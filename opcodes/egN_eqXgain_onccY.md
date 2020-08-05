@@ -1,1 +1,4 @@
-egN_eqXgain.md
+---
+layout: "sfz/opcode"
+opcode_name: "egN_eqXgain"
+---

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "xfout_loccN / xfout_hiccN"
 ---
 `xfout_loccN` and `xfout_hiccN` set the range of values in the MIDI continuous

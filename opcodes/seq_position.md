@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "seq_position"
 ---
 This is used together with [seq_length](/opcodes/seq_length) to use samples

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "loop_start"
 ---
 If `loop_start` is not specified and the sample has a loop defined, the SFZ player

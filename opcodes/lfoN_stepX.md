@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_stepX"
 ---
 The level of step number X in an LFO used as a step sequencer,

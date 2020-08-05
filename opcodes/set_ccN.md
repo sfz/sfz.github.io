@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "set_ccN"
 ---
 Used under the ‹[control](/headers/control)› header.

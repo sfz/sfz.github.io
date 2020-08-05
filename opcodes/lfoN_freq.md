@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_freq"
 ---
 Can be modulated by MIDI CC, and the modulation can be smoothed

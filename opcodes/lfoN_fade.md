@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_fade"
 ---
 Can be quite useful for making vibrato sound more realistic on instruments such

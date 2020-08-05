@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sw_last"
 ---
 `sw_last` can be entered in either MIDI note numbers (0 to 127) or in MIDI note

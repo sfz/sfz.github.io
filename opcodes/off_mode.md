@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "off_mode"
 ---
 Region off mode. This opcode will determinate how a region is turned off by an

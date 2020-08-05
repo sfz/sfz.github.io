@@ -1,6 +1,5 @@
 ---
 title: Sustained note basics
-lang: en
 ---
 We've covered the basic opcodes required to map simple drum instruments on
 [another page](/tutorials/drum_basics), and here we are going to apply that
@@ -21,7 +20,7 @@ This would work well enough to make a sound when a MIDI note corresponding to
 one of the sampled pitches is played. However, playing notes inbetween
 the D and E, or E and F#, would mean no sound. We can "stretch" one of the
 neighboring notes to cover that D# and that F using the
-[lokey, hikey](/opcodes/lokey) and 
+[lokey, hikey](/opcodes/lokey) and
 [pitch_keycenter](/opcodes/pitch_keycenter) opcodes instead of key.
 If a sample does not need to cover multiple notes, it can still use key. Whether
 to use the D or E sample to cover the D# in our example is a judgment call -
@@ -64,11 +63,11 @@ so that velocity does not affect volume.
 ```
 <global>ampeg_release=0.3 amp_veltrack=0
 
-<group>lokey=50 hikey=51 pitch_keycenter=50 
+<group>lokey=50 hikey=51 pitch_keycenter=50
 <region>sample=d4_p.wav xfin_locc1=0 xfin_hicc1=42 xfout_locc1=43 xfout_hicc1=85
 <region>sample=d4_mf.wav xfin_locc1=43 xfin_hicc1=85 xfout_locc1=86 xfout_hicc1=127
 <region>sample=d4_f.wav xfin_locc1=86 xfin_hicc1=127
-<group>lokey=52 hikey=53 pitch_keycenter=52 
+<group>lokey=52 hikey=53 pitch_keycenter=52
 <region>sample=e4_p.wav xfin_locc1=0 xfin_hicc1=42 xfout_locc1=43 xfout_hicc1=85
 <region>sample=e4_mf.wav xfin_locc1=43 xfin_hicc1=85 xfout_locc1=86 xfout_hicc1=127
 <region>sample=e4_f.wav xfin_locc1=86 xfin_hicc1=127
@@ -76,7 +75,7 @@ so that velocity does not affect volume.
 
 Now, CC1 would first fade in the quiet sample when it was between 0 and 42.
 From 43 to 85, the quiet sample is faded out and the medium sample faded in.
-From 86 to the max value of 127, the medium sample is faded out while the loud 
+From 86 to the max value of 127, the medium sample is faded out while the loud
 sample fades in. If we have multiple techniques or articulation sampled, for
 example regular sustains and fluttertongue sustains, we need a way to switch
 between them. Each could be its own independent and complete SFZ file, and we

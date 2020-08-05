@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitcheg_hold"
 ---
 During the hold stage, EG output will remain at its maximum value.

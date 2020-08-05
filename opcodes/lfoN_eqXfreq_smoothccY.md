@@ -1,1 +1,4 @@
-lfoN_eqXfreq.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_eqXfreq"
+---

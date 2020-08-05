@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lopolyaft / hipolyaft"
 ---
 In the rgcaudio sfz player, the incoming note information in the Polyphonic Aftertouch message is

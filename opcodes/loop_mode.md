@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "loop_mode"
 ---
 If `loop_mode` is not specified, each sample will play according to its predefined

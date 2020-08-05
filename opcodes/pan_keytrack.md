@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pan_keytrack"
 ---
 Positive values mean higher notes are panned more to the right, negative means

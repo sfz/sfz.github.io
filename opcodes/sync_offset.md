@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sync_offset"
 ---
 When [sync_beats](sync_beats) is specified and after input controls instruct

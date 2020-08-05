@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "xfin_loccN / xfin_hiccN"
 ---
 `xfin_loccN` and `xfin_hiccN` set the range of values in the MIDI continuous

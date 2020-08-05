@@ -1,6 +1,5 @@
 ---
 title: Subtractive synthesizers
-lang: en
 ---
 
 ## Introduction

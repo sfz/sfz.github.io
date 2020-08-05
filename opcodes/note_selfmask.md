@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "note_selfmask"
 ---
 This affects only muting of notes where the polyphony is limited by

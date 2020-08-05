@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "xfin_lovel / xfin_hivel"
 ---
 `xfin_lovel` and `xfin_hivel` define the fade-in velocity range for the region.

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitcheg_decay_zero"
 ---
 When set to 1, the decay slope is fixed, and the higher

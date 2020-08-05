@@ -1,1 +1,4 @@
-oscillator_mod_depth.md
+---
+layout: "sfz/opcode"
+opcode_name: "oscillator_mod_depth"
+---

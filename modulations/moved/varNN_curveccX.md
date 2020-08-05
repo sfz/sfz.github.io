@@ -1,7 +1,4 @@
 ---
-layout: "sfz/opcode"
-lang: "en"
-opcode_name: "varNN_curveccX"
 ---
 ## Example
 

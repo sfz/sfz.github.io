@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "loprog / hiprog"
 ---
 MIDI program numbers in the General MIDI spec ranged from 0 to 127 but were

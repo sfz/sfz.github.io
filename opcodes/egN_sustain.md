@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "egN_sustain"
 ---
 This needs to be tested to verify if this is what it actually does.

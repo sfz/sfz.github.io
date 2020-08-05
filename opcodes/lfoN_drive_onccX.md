@@ -1,1 +1,4 @@
-lfoN_drive.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_drive"
+---

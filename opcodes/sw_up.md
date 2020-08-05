@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sw_up"
 ---
 Key has to be in the range specified by [sw_lokey](sw_lokey) and [sw_hikey](sw_lokey).

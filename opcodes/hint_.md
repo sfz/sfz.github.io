@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "hint_*"
 ---
 ARIA supports specific opcodes in ‹[control](/headers/control)›

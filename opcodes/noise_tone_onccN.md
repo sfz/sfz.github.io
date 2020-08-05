@@ -1,1 +1,4 @@
-noise_tone.md
+---
+layout: "sfz/opcode"
+opcode_name: "noise_tone"
+---

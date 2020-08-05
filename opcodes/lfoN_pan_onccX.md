@@ -1,1 +1,4 @@
-lfoN_pan.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_pan"
+---

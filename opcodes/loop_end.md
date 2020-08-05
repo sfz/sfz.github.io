@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "loop_end"
 ---
 This is inclusive - the sample specified is played as part of the loop.

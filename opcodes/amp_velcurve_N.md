@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "amp_velcurve_N"
 ---
 This opcode range allows defining a specific curve for the amplifier velocity.

@@ -1,6 +1,5 @@
 ---
 title: Vibrato
-lang: en
 ---
 Emulating vibrato for solo instruments or voices with LFOs is not difficult. The challenges
 are understanding the key aspects of vibrato on the real instrument, and keeping the number of

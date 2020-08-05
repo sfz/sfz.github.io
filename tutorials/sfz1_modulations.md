@@ -1,6 +1,5 @@
 ---
 title: SFZ1 modulations
-lang: en
 ---
 The set of [modulations] available under the SFZ1 specification is fixed, and
 there's a dedicated opcode for every possible modulation, including fairly

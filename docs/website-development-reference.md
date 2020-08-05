@@ -1,6 +1,5 @@
 ---
 title: Website Development Reference
-lang: en
 ---
 ## Introduction
 
@@ -63,7 +62,6 @@ opcode it modulates in source code) will use the correct references.
 <pre class="prettyprint">
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lovel / hivel"
 ---
 (Here the auto-generated brief text description from syntax.yml db...)

@@ -1,1 +1,4 @@
-noise_level.md
+---
+layout: "sfz/opcode"
+opcode_name: "noise_level"
+---

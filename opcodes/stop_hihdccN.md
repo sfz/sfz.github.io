@@ -1,1 +1,4 @@
-stop_lohdccN.md
+---
+layout: "sfz/opcode"
+title: "stop_lohdccN / stop_hihdccN"
+---

@@ -1,1 +1,4 @@
-egN_noisetone.md
+---
+layout: "sfz/opcode"
+opcode_name: "egN_noisetone"
+---

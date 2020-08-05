@@ -1,1 +1,4 @@
-lfoN_eqXgain.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_eqXgain"
+---

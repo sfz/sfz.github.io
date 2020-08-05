@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "width"
 ---
 A `width` value of 0 makes a stereo sample play as if it were mono (adding both

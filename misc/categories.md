@@ -1,5 +1,4 @@
 ---
-lang: "en"
 title: "Categories"
 ---
 ## Instruments Settings

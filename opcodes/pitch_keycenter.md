@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitch_keycenter"
 ---
 For samples which only need to be played at their

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "eqN_dynamic"
 ---
 When 1, causes parameters for eq band N to be recalculated when a MIDI

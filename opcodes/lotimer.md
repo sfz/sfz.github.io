@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lotimer / hitimer"
 ---
 Not implemented in ARIA, may have been implemented in some Cakewalk products.

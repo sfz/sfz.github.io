@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sample"
 ---
 Possibly the most important opcode, this is the one that tells the sampler which

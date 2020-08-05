@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lokey / hikey"
 ---
 When a region only covers one note, it is generally more convenient to use

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitch_keytrack"
 ---
 Default value is 100, which means pitch will change one hundred cents

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "key"
 ---
 Because of this, it is a very useful and convenient opcode for instruments which

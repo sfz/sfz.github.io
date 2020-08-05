@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "seq_length"
 ---
 The player will keep an internal counter creating a consecutive note-on sequence

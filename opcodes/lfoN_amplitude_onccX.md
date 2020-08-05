@@ -1,1 +1,4 @@
-lfoN_amplitude.md
+---
+layout: "sfz/opcode"
+opcode_name: "lfoN_amplitude"
+---

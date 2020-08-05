@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "position"
 ---
 A value of zero means centered, negative values move the panoramic to the left,

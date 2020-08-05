@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "bend_up"
 ---
 If `bend_up` is negative,

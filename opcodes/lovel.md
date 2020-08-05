@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lovel / hivel"
 ---
 This is obviously useful for instruments with dynamic layers controlled by velocity.

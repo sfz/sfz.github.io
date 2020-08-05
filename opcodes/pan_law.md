@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pan_law"
 ---
 Allowed values are balance and mma. In earlier versions of ARIA,

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "xfout_lokey / xfout_hikey"
 ---
 `xfout_lokey` and `xfout_hikey` define the fade-out keyboard zone for the region.

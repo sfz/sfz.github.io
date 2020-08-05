@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "volume"
 ---
 Range is -144.6 to 6 in the specification,

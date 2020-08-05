@@ -1,6 +1,5 @@
 ---
 title: "Pitch LFO Examples"
-lang: "en"
 ---
 Just copy the following in your preferred text editor.
 We also have a section in the [tools page] listing some text editor's

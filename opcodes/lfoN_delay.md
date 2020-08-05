@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "lfoN_delay"
 ---
 Often useful for delaying vibrato onset in strings, vocals, guitar, saxophone etc.

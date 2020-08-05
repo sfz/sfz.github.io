@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "note_offset"
 ---
 This opcode tells SFZ to shift all incoming MIDI data by the specified number of

@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "loop_type"
 ---
 This only affects the loop portion of the sample.

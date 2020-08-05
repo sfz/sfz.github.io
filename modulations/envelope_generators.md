@@ -1,6 +1,5 @@
 ---
 title: Envelope Generators
-lang: en
 ---
 Envelope Generator opcodes are part of the [Modulation](/misc/categories#modulation)
 category of opcodes:
@@ -87,4 +86,4 @@ with an envelope depth of 2400 cents.
 - volume
 - volume_oncc
 - width
-- width_oncc 
+- width_oncc

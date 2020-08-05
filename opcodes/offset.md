@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "offset"
 ---
 The player will reproduce samples starting with the very first sample in the file,

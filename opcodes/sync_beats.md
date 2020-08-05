@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "sync_beats"
 ---
 When `sync_beats` is specified and after input controls instruct the region to play,

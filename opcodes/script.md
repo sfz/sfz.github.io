@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "script"
 ---
 This is an extension to the SFZ file format which is currently only available

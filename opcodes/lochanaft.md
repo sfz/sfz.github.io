@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 title: "lochanaft / hichanaft"
 ---
 ## Examples

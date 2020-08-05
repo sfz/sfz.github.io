@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "cutoff"
 ---
 Note that while this is specified in Hertz,

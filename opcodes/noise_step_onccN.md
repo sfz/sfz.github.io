@@ -1,1 +1,4 @@
-noise_step.md
+---
+layout: "sfz/opcode"
+opcode_name: "noise_step"
+---

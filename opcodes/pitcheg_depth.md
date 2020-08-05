@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "pitcheg_depth"
 ---
 For pitcheg and fileg, this is in cents, and can range from -12000 to 12000.

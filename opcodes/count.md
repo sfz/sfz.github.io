@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "count"
 ---
 If this opcode is specified, the sample will restart as many times as defined.

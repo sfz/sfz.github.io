@@ -1,6 +1,5 @@
 ---
 layout: "sfz/opcode"
-lang: "en"
 opcode_name: "end"
 ---
 End is inclusive, so if set to 133000, the sample will play all samples up to and
