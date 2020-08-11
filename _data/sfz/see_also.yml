@@ -1,0 +1,117 @@
+- name: "*_mod"
+  pages:
+  - name: "varNN_mod"
+
+- name: "global_label"
+  pages:
+  - name: "master_label"
+  - name: "group_label"
+  - name: "region_label"
+
+- name: "group_label"
+  pages:
+  - name: "master_label"
+  - name: "global_label"
+  - name: "region_label"
+
+- name: "master_label"
+  pages:
+  - name: "global_label"
+  - name: "group_label"
+  - name: "region_label"
+
+- name: "region_label"
+  pages:
+  - name: "master_label"
+  - name: "global_label"
+  - name: "group_label"
+
+- name: "off_curve"
+  pages:
+  - name: "off_shape"
+  - name: "off_time"
+
+- name: "off_shape"
+  pages:
+  - name: "off_curve"
+  - name: "off_time"
+
+- name: "off_time"
+  pages:
+  - name: "off_curve"
+  - name: "off_shape"
+
+- name: "lfoN_delay"
+  pages:
+  - name: "lfoN_fade"
+  - name: "lfoN_freq"
+  - name: "lfoN_offset"
+  - name: "lfoN_ratio"
+  - name: "lfoN_scale"
+  - name: "lfoN_wave"
+
+- name: "lfoN_fade"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_freq"
+  - name: "lfoN_offset"
+  - name: "lfoN_ratio"
+  - name: "lfoN_scale"
+  - name: "lfoN_wave"
+
+- name: "lfoN_freq"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_fade"
+  - name: "lfoN_offset"
+  - name: "lfoN_ratio"
+  - name: "lfoN_scale"
+  - name: "lfoN_wave"
+
+- name: "lfoN_offset"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_fade"
+  - name: "lfoN_freq"
+  - name: "lfoN_ratio"
+  - name: "lfoN_scale"
+  - name: "lfoN_wave"
+
+- name: "lfoN_ratio"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_fade"
+  - name: "lfoN_freq"
+  - name: "lfoN_offset"
+  - name: "lfoN_scale"
+  - name: "lfoN_wave"
+
+- name: "lfoN_scale"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_fade"
+  - name: "lfoN_freq"
+  - name: "lfoN_offset"
+  - name: "lfoN_ratio"
+  - name: "lfoN_wave"
+
+- name: "lfoN_wave"
+  pages:
+  - name: "lfoN_delay"
+  - name: "lfoN_fade"
+  - name: "lfoN_freq"
+  - name: "lfoN_offset"
+  - name: "lfoN_ratio"
+  - name: "lfoN_scale"
+
+- name: "delay_filter"
+  pages:
+  - name: "fil_type"
+
+- name: "filter_type"
+  pages:
+  - name: "fil_type"
+
+- name: "static_filter"
+  pages:
+  - name: "fil_type"

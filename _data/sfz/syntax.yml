@@ -1,4 +1,4 @@
-format: 1
+format: 2
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -444,8 +444,6 @@ categories:
       options:
       - name: "add"
       - name: "mult"
-    see_also:
-    - "varNN_mod"
 
   - name: "set_hdccN"
     short_description:
@@ -482,10 +480,6 @@ categories:
     value:
       type_name: "string"
       default: "null"
-    see_also:
-    - "master_label"
-    - "group_label"
-    - "region_label"
 
   - name: "master_label"
     short_description:
@@ -495,10 +489,6 @@ categories:
     value:
       type_name: "string"
       default: "null"
-    see_also:
-    - "global_label"
-    - "group_label"
-    - "region_label"
 
   - name: "group_label"
     short_description:
@@ -508,10 +498,6 @@ categories:
     value:
       type_name: "string"
       default: "null"
-    see_also:
-    - "master_label"
-    - "global_label"
-    - "region_label"
 
   - name: "region_label"
     short_description:
@@ -521,10 +507,6 @@ categories:
     value:
       type_name: "string"
       default: "null"
-    see_also:
-    - "master_label"
-    - "global_label"
-    - "group_label"
 
   types:
   - name: "Voice Lifecycle"
@@ -639,9 +621,6 @@ categories:
         - name: "1"
         - name: "2"
         - name: "10"
-      see_also:
-      - "off_shape"
-      - "off_time"
 
     - name: "off_shape"
       short_description:
@@ -650,9 +629,6 @@ categories:
       value:
         type_name: "float"
         default: -10.3616
-      see_also:
-      - "off_curve"
-      - "off_time"
 
     - name: "off_time"
       short_description:
@@ -662,9 +638,6 @@ categories:
       value:
         type_name: "float"
         default: 0.006
-      see_also:
-      - "off_curve"
-      - "off_shape"
 
     - name: "polyphony_group"
       short_description:
@@ -4177,13 +4150,6 @@ categories:
           version: "SFZ v2"
         - name: "lfoN_freq_stepccX"
           version: "SFZ v2"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_fade"
-      - "lfoN_offset"
-      - "lfoN_ratio"
-      - "lfoN_scale"
-      - "lfoN_wave"
 
     - name: "lfoN_delay"
       short_description: "Onset delay for LFO number N."
@@ -4197,13 +4163,6 @@ categories:
         midi_cc:
         - name: "lfoN_delay_onccX"
           version: "SFZ v2"
-      see_also:
-      - "lfoN_fade"
-      - "lfoN_freq"
-      - "lfoN_offset"
-      - "lfoN_ratio"
-      - "lfoN_scale"
-      - "lfoN_wave"
 
     - name: "lfoN_fade"
       short_description: "Fade-in time for LFO number N."
@@ -4216,13 +4175,6 @@ categories:
           version: "SFZ v2"
           value:
             type_name: "float"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_freq"
-      - "lfoN_offset"
-      - "lfoN_ratio"
-      - "lfoN_scale"
-      - "lfoN_wave"
 
     - name: "lfoN_phase"
       short_description: "Initial phase shift for LFO number N."
@@ -4252,13 +4204,6 @@ categories:
         midi_cc:
         - name: "lfoN_wave_onccX"
           version: "ARIA"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_fade"
-      - "lfoN_freq"
-      - "lfoN_offset"
-      - "lfoN_ratio"
-      - "lfoN_scale"
 
     - name: "lfoN_waveX"
       short_description:
@@ -4584,13 +4529,6 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_fade"
-      - "lfoN_freq"
-      - "lfoN_ratio"
-      - "lfoN_scale"
-      - "lfoN_wave"
 
     - name: "lfoN_ratio"
       short_description:
@@ -4600,13 +4538,6 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_fade"
-      - "lfoN_freq"
-      - "lfoN_offset"
-      - "lfoN_scale"
-      - "lfoN_wave"
 
     - name: "lfoN_scale"
       short_description:
@@ -4616,13 +4547,6 @@ categories:
       version: "ARIA"
       value:
         type_name: "float"
-      see_also:
-      - "lfoN_delay"
-      - "lfoN_fade"
-      - "lfoN_freq"
-      - "lfoN_offset"
-      - "lfoN_ratio"
-      - "lfoN_wave"
 
 - name: "Curves"
   url: "/headers/curve"
@@ -4884,8 +4808,6 @@ categories:
     version: "Cakewalk SFZ v2"
     value:
       type_name: "string"
-    see_also:
-    - "fil_type"
 
   - name: "delay_input"
     short_description: ""
@@ -5235,8 +5157,6 @@ categories:
     version: "Cakewalk SFZ v2"
     value:
       type_name: "string"
-    see_also:
-    - "fil_type"
 
   - name: "fxNtomain"
     short_description:
@@ -5481,8 +5401,6 @@ categories:
     version: "Cakewalk SFZ v2"
     value:
       type_name: "string"
-    see_also:
-    - "fil_type"
 
   - name: "static_level"
     short_description: ""

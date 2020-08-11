@@ -20,9 +20,7 @@ layout: default
 			{%-assign found = true-%}
 			{%-assign opcode_info = opcode-%}
 			{%-assign category_info = category-%}
-			{%-if opcode.see_also != nil-%}
-				{%-assign see_also = opcode.see_also-%}
-			{%-endif-%}
+			{%-assign see_also = site.data.sfz.see_also | where: "name", opcode_name-%}
 			{%break%}
 		{%-endif-%}
 	{%-endfor-%}
@@ -33,9 +31,7 @@ layout: default
 					{%-assign opcode_info = opcode-%}
 					{%-assign category_info = category-%}
 					{%-assign category_type_info = category_type-%}
-					{%-if opcode.see_also != nil-%}
-						{%-assign see_also = opcode.see_also-%}
-					{%-endif-%}
+					{%-assign see_also = site.data.sfz.see_also | where: "name", opcode_name-%}
 					{%break%}
 				{%-endif-%}
 			{%-endfor-%}
@@ -237,12 +233,17 @@ layout: default
 {%-endif-%}
 
 {%-if see_also != nil-%}
-	{%-for opcode_ref in see_also-%}
+	{%-for opcode_ref in see_also[0].pages-%}
 		{%-if see_also_list != nil-%}
 			{%-assign see_also_list = see_also_list | append: ", "-%}
 		{%-endif-%}
+		{%if opcode_ref.url != nil%}
+			{%-assign opcode_ref_url = opcode_ref.url-%}
+		{%-else-%}
+			{%-assign opcode_ref_url = "opcodes/" | append: opcode_ref.name | relative_url-%}
+		{%-endif-%}
 		{%-assign see_also_list = see_also_list | append: "<a href='" |
-			append: opcode_ref | append: "'>" | append: opcode_ref | append: "</a>"-%}
+			append: opcode_ref_url | append: "'>" | append: opcode_ref.name | append: "</a>"-%}
 	{%-endfor-%}
 	<p>See also: {{ see_also_list }}</p>
 {%-endif-%}

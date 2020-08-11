@@ -8,8 +8,6 @@
 - resonance: merge with resonance2
 - Complete _envelope_generators_ and _lfo_ type pages
 - Add screenshots to group_label/master_label/global_label and also to sw_label
-- Add more link types other than opcodes in the `see_also` section,
-  replace the current method from within another file, not in db
 
 ### Modulations
 
