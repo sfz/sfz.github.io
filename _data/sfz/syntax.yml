@@ -134,11 +134,11 @@ categories:
             unit: "sample units"
 
     - name: "end"
-      short_description: "The endpoint of the sample."
+      short_description: "The endpoint of the sample. If unspecified, the entire sample will play."
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
+        default: "unspecified"
         min: 0
         max: 4294967296
         unit: "sample units"
