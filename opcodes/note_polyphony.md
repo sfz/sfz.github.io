@@ -7,6 +7,11 @@ opcode_name: "note_polyphony"
 ```
 note_polyphony=3
 ```
+
+The difference between applying [polyphony](/opcodes/polyphony) across one
+note and using note_polyphony is that note_polyphony also uses
+[note_selfmask](/opcodes/note_selfmask) which opens up some additional
+options.
 Default self-masking behavior is that higher-or-equal-velocity notes turn off
 lower-velocity notes, but lower-velocity notes do not turn off
 higher-velocity notes. A new note will always play.
