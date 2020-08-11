@@ -232,7 +232,7 @@ layout: default
 	</ul>
 {%-endif-%}
 
-{%-if see_also != nil-%}
+{%-if see_also.size > 0-%}
 	{%-for opcode_ref in see_also[0].pages-%}
 		{%-if see_also_list != nil-%}
 			{%-assign see_also_list = see_also_list | append: ", "-%}
