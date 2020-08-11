@@ -1,3 +1,8 @@
+- name: "polyphony_stealing"
+  pages:
+  - name: "SFZ test"
+    url: "https://github.com/sfz/tests/blob/master/sfz2%20basic%20tests/04%20-%20voice%20groups/20%20-%20polyphony%20stealing%20(ARIA).sfz"
+
 - name: "*_mod"
   pages:
   - name: "varNN_mod"
