@@ -7,7 +7,6 @@
 - cutoff: merge with cutoff2
 - resonance: merge with resonance2
 - Complete _envelope_generators_ and _lfo_ type pages
-- Add screenshots to group_label/master_label/global_label and also to sw_label
 
 ### Modulations
 

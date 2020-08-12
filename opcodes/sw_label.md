@@ -33,3 +33,7 @@ an sfz file.
 
 <region> sw_last=40 sw_label=Saw lokey=41 sample=*saw
 ```
+
+{%include img-fluid.html
+  img="/assets/img/opcodes/sw_label.jpg"
+  alt="sw_label example image"%}

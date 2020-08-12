@@ -5,11 +5,14 @@ opcode_name: "group_label"
 Useful for debugging.
 It can be set anywhere, not just under the ‹[group]› header.
 
-## Examples
+## Example
 
 ```
-group_label=C3 staccato
-group_label=Snare rimshot
+group_label=Edge
 ```
+
+{%include img-fluid.html
+  img="/assets/img/opcodes/labels.jpg"
+  alt="group_label example image"%}
 
 [group]: /headers/group
