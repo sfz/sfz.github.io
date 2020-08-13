@@ -14,3 +14,7 @@ label_cc31=Bass pan
 label_cc32=Tune
 label_cc33=Mute
 ```
+
+{%include img-fluid.html
+  img="/assets/img/opcodes/label_cc.jpg"
+  alt="label_cc example image"%}
