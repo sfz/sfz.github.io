@@ -88,9 +88,7 @@ layout: default
 			<td>{{ opcode_info.value.type_name }}</td>
 			<td>{{ opcode_info_default }}</td>
 			<td>{{ opcode_info_range }}</td>
-		{%-if opcode_info.value.unit != nil-%}
 			<td>{{ opcode_info.value.unit }}</td>
-		{%-endif-%}
 		</tr>
 {%-elsif opcode_info.value.options-%}
 	{%-for value_version in value_versions-%}
@@ -144,9 +142,7 @@ layout: default
 			<td>{{ midi_cc.value.type_name }}</td>
 			<td>{{ midi_cc_default }}</td>
 			<td>{{ midi_cc_range }}</td>
-	{%-if midi_cc.value.unit != nil-%}
 			<td>{{ midi_cc.value.unit }}</td>
-	{%-endif-%}
 		</tr>
 {%-endfor-%}
 {%-for velocity in opcode_info.modulation.velocity-%}
@@ -167,9 +163,7 @@ layout: default
 		<td>{{ velocity.value.type_name }}</td>
 		<td>{{ velocity_default }}</td>
 		<td>{{ velocity_range }}</td>
-	{%-if velocity.value.unit != nil-%}
 		<td>{{ velocity.value.unit }}</td>
-	{%-endif-%}
 	</tr>
 {%-endfor-%}
 		</tbody>
