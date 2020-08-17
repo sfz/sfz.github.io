@@ -1414,6 +1414,10 @@ categories:
         max: 100
         unit: "%"
 
+    - name: "position_veltrack"
+      short_description: ""
+      version: "ARIA"
+
     - name: "volume"
       short_description: "The volume for the region, in decibels."
       version: "SFZ v1"
@@ -1516,6 +1520,19 @@ categories:
         min: -100
         max: 100
         unit: "%"
+      modulation:
+        midi_cc:
+        - name: "amp_veltrack_onccN"
+          version: "ARIA"
+          alias:
+          - name: "amp_veltrack_ccN"
+            version: "ARIA"
+        - name: "amp_veltrack_curveccN"
+          version: "ARIA"
+
+    - name: "amp_veltrack_random"
+      short_description: ""
+      version: "ARIA"
 
     - name: "amp_velcurve_N"
       short_description: "User-defined amplifier velocity curve."
@@ -2669,6 +2686,9 @@ categories:
         min: -9600
         max: 9600
         unit: "cents"
+      alias:
+      - name: "tune_veltrack"
+        version: "ARIA"
 
     - name: "transpose"
       short_description:
