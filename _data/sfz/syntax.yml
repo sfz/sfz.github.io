@@ -2632,6 +2632,11 @@ categories:
             max: 255
         - name: "pitch_smoothccN"
           version: "SFZ v2"
+          value:
+            type_name: "float"
+            default: 0
+            min: 0
+            unit: "%"
           alias:
           - name: "tune_smoothccN"
             version: "ARIA"
