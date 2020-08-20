@@ -2,12 +2,8 @@
 title: smoothccN
 ---
 Sets the smoothness in percent of the target modulation.
-Adds inertia of modulation, so fast movements of the controller will have
+Adds inertia to the modulation, so fast movements of the controller will have
 a delayed, smoothed effect, similar to bend_smooth. 
-
-Default values:
-* ARIA: 100% (smoothing)
-* SFZ v2: 0% (no smoothing)
 
 ## Examples
 
@@ -24,4 +20,8 @@ lfo01_freq_smoothcc70=100
 
 SFZ v2 is able to accept greater values than 100%, which increase the smoothed inertia.
 
-Increasing the smoothing past 100% allows the SFZ writer to define cc controllers that have a noticeable smoothed lag when changed.
+Increasing the smoothing past 100% allows the SFZ script writer to define CC targets that have a noticeable smoothed lag when changed, and represents a simple way to add character to the instrument.
+
+Default value is 0% (no smoothing). However be aware some DAW's are able to interpolate drawn CC automation. Which means if such a DAW is used then the CC value will be smoothed before it reaches the SFZ player.
+
+Currently Logic Pro X is the only known host that smooths drawn CC automation internally.
