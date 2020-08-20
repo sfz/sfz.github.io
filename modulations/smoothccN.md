@@ -5,6 +5,11 @@ Sets the smoothness in percent of the target modulation.
 Adds inertia to the modulation, so fast movements of the controller will have
 a delayed, smoothed effect, similar to bend_smooth. 
 
+While SFZv2 has many smoothing targets, currently ARIA only implements smoothers for:
+* pitch
+* volume
+* gain
+
 ## Examples
 
 ```
@@ -12,8 +17,6 @@ a delayed, smoothed effect, similar to bend_smooth.
 sample=*sine
 pitch_oncc27=1200
 pitch_smoothcc27=100
-lfo01_freq_oncc70=5
-lfo01_freq_smoothcc70=100
 ```
 
 ## Notes
