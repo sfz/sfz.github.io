@@ -2640,7 +2640,7 @@ categories:
       value:
         type_name: "integer"
         default: 60 # (C4)
-        min: -127
+        min: 0
         max: 127
 
     - name: "pitch_keytrack"
