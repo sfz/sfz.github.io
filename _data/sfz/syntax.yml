@@ -2062,19 +2062,14 @@ categories:
         - name: "cutoff_smoothccN"
           version: "SFZ v2"
           value:
-            type_name: "integer"
+            type_name: "float"
             default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
+            min: 0
+            unit: "ms"
         - name: "cutoff_stepccN"
           version: "SFZ v2"
           value:
             type_name: "integer"
-            default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
         - name: "cutoff_chanaft"
           short_description:
             "The variation in the cutoff frequency when MIDI channel aftertouch
@@ -2267,16 +2262,13 @@ categories:
             type_name: "float"
             default: 0
             min: 0
-            max: 40
-            unit: "dB"
+            unit: "ms"
         - name: "resonance_stepccN"
           version: "SFZ v2"
           value:
-            type_name: "float"
+            type_name: "integer"
             default: 0
             min: 0
-            max: 40
-            unit: "dB"
 
     - name: "cutoff2"
       version: "SFZ v2"
@@ -2313,19 +2305,16 @@ categories:
         - name: "cutoff2_smoothccN"
           version: "SFZ v2"
           value:
-            type_name: "integer"
+            type_name: "float"
             default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
+            min: 0
+            unit: "ms"
         - name: "cutoff2_stepccN"
           version: "SFZ v2"
           value:
             type_name: "integer"
             default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
+            min: 0
 
     - name: "fil2_keycenter"
       short_description:
@@ -2445,16 +2434,13 @@ categories:
             type_name: "float"
             default: 0
             min: 0
-            max: 40
-            unit: "dB"
+            unit: "ms"
         - name: "resonance2_stepccN"
           version: "SFZ v2"
           value:
-            type_name: "float"
+            type_name: "integer"
             default: 0
             min: 0
-            max: 40
-            unit: "dB"
 
     - name: "noise_filter"
       version: "Cakewalk SFZ v2"
@@ -2513,9 +2499,9 @@ categories:
           short_description: ""
           value:
             type_name: "float"
-            min: -96
-            max: 24
-            unit: "dB"
+            min: 0
+            default: 0
+            unit: "ms"
 
     - name: "noise_step"
       version: "Cakewalk SFZ v2"
@@ -2584,9 +2570,8 @@ categories:
       value:
         type_name: "float"
         min: 0
-        max: 100
         default: 0
-        unit: "%"
+        unit: "ms"
 
     - name: "bend_step"
       version: "SFZ v1"
@@ -2636,7 +2621,7 @@ categories:
             type_name: "float"
             default: 0
             min: 0
-            unit: "%"
+            unit: "ms"
           alias:
           - name: "tune_smoothccN"
             version: "ARIA"
@@ -2647,8 +2632,7 @@ categories:
             version: "ARIA"
           value:
             min: 0
-            max: 1200
-            unit: "cents"
+            default: 0
 
     - name: "pitch_keycenter"
       short_description: "Root key for the <a href='/opcodes/sample'>sample</a>."
