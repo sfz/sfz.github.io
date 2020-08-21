@@ -3,12 +3,9 @@ title: smoothccN
 ---
 Sets the smoothness for the target modulation in milliseconds.
 Adds inertia to the modulation, so fast movements of the controller will have
-a delayed, smoothed effect, similar to bend_smooth. 
+a delayed, smoothed effect, similar to [bend_smooth](/opcodes/bend_smooth). 
 
-While SFZv2 has many smoothing targets, currently ARIA only implements smoothers for:
-* pitch
-* volume
-* gain
+While SFZv2 does not limit the targets for smoothing in the spec, currently ARIA only implements smoothing for pitch-related and volume-related (including amplitude, pan and position) modulation targets.
 
 ## Examples
 
