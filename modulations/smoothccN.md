@@ -23,8 +23,8 @@ pitch_smoothcc27=100
 
 SFZ v2 is able to accept greater values than 100 milliseconds, which increase the smoothed inertia.
 
-Increasing the smoothing past 100ms allows the SFZ script writer to define CC targets that have a noticeable smoothed lag when changed, and represents a simple way to add character to the instrument.
+Increasing the smoothing past 100 ms allows the SFZ instrument creator to create a noticeable lag in the control response, which is useful when modeling guitar feedback, for example.
 
-Default value is 0ms (no smoothing). However be aware some DAW's are able to interpolate drawn CC automation. Which means if such a DAW is used then the CC value will be smoothed before it reaches the SFZ player.
+Default value is 0ms (no smoothing). However be aware some DAWs smooth the drawn CC automation before it reaches the SFZ player, which means some smoothing will occur regardless of what smoothcc is set to, and any smoothcc smoothing will be applied to those already smoothed control values.
 
-Currently Logic Pro X is the only known host that smooths drawn CC automation internally.
+For a detailed overview of how DAWs handle instananeous jumps in automation, see https://www.admiralbumblebee.com/music/2019/06/22/Daw-V-Daw-Automation-Part-4.html
