@@ -37,6 +37,15 @@ distribute the SFZ format files for free, for either free or commercial applicat
 - A few opcodes have been added to [ARIA / Sforzando] for more flexibility
 </div>
 
+### What SFZ is not
+
+To clarify, the term SFZ as used on this site does not mean a sforzando dynamic marking,
+and it also is not the same thing as a soundfont. Soundfonts are a completely different
+file format which includes both the samples and the definitions of sample behavior in the
+same binary file, while SFZ is a file format which only defines the behavior of musical
+instruments and does not include the sample content. SF2 may look a bit like SFZ visually,
+but that's a coincidence.
+
 ### Making Instruments
 
 <div markdown="1" class="jumbotron p-4 mb-3">
