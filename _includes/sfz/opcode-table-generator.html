@@ -11,14 +11,14 @@ the parameters they modulate.</p>
 	{%-if category_opcodes.size > 0-%}
 		{%-assign category_id = category.name | downcase | replace: " ", '-'-%}
 <h2 id="{{category_id}}">{{category_url}}</h2>
-<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl" data-toggle="table">
 	<thead class="thead-dark">
 		<tr>
-			<th scope="col">Opcode</th>
-			<th scope="col">Description</th>
-			<th scope="col">Type</th>
-			<th scope="col">Default</th>
-			<th scope="col">Range</th>
+			<th data-field="opcode" data-sortable="true">Opcode</th>
+			<th data-field="description" data-sortable="true">Description</th>
+			<th data-field="type" data-sortable="true">Type</th>
+			<th data-field="default" data-sortable="true">Default</th>
+			<th data-field="range" data-sortable="true">Range</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -92,14 +92,14 @@ the parameters they modulate.</p>
 			{%-endcapture-%}
 			{%-assign category_type_id = category_type.name | downcase | replace: " ", '-'-%}
 <h2 id="{{category_type_id}}">{{ category_url }}: {{ category_type_url }}</h2>
-<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl" data-toggle="table">
 	<thead class="thead-dark">
 		<tr>
-			<th scope="col">Opcode</th>
-			<th scope="col">Description</th>
-			<th scope="col">Type</th>
-			<th scope="col">Default</th>
-			<th scope="col">Range</th>
+			<th data-field="opcode" data-sortable="true">Opcode</th>
+			<th data-field="description" data-sortable="true">Description</th>
+			<th data-field="type" data-sortable="true">Type</th>
+			<th data-field="default" data-sortable="true">Default</th>
+			<th data-field="range" data-sortable="true">Range</th>
 		</tr>
 	</thead>
 	<tbody>
