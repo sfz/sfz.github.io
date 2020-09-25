@@ -3398,7 +3398,7 @@ categories:
             max: 100
         velocity:
         - name: "pitcheg_vel2decay"
-          short_description: "Velocity effect on filter EG decay time."
+          short_description: "Velocity effect on pitch EG decay time."
           version: "SFZ v1"
           value:
             type_name: "float"
@@ -3428,7 +3428,7 @@ categories:
             max: 100
         velocity:
         - name: "pitcheg_vel2delay"
-          short_description: "Velocity effect on filter EG delay time."
+          short_description: "Velocity effect on pitch EG delay time."
           version: "SFZ v1"
           value:
             type_name: "float"
