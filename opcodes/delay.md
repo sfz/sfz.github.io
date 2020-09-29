@@ -4,10 +4,13 @@ opcode_name: "delay"
 ---
 If a `delay` value is specified, the region playback will be postponed for the
 specified time. If the region receives a note-off message before `delay` time,
-the region won't play.
+the region won't play. In ARIA, if [loop_mode](/opcodes/loop_mode) is set to
+one_shot, the region will play regardless of whether a note-off message is
+received or not.
 
 Sample playback and all envelope generators' delay stage will start counting
-after region delay time - this is the difference between this and [ampeg_delay](ampeg_delay).
+after region delay time - this is the core difference between this and
+[ampeg_delay](ampeg_delay).
 
 ## Examples
 
