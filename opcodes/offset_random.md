@@ -5,7 +5,7 @@ opcode_name: "offset_random"
 In many cases, will need to be used with a small [ampeg_attack](ampeg_attack)
 value to avoid clicks caused by the region playing starting with a point
 in the sample file where the value is non-zero. Computed when the note is
-triggered.
+triggered. Unipolar in ARIA, Cakewalk and rcg sfz.
 
 Note: when using a player with disk streaming, such as Sforzando/ARIA, which does
 not load entire samples to memory but instead preloads on only the start (usually
