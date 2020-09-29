@@ -5,6 +5,8 @@ opcode_name: "fil_random"
 Amount of random variation for filter cutoff in cents. Computed when the note is
 triggered, remains the same for that region for as long as the region plays.
 
+In ARIA and Cakewalk, this is unipolar. In the rgc sfz player, this is bipolar.
+
 ## Examples
 
 ```
