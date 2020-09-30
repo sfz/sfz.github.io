@@ -110,9 +110,6 @@ navigation:
   - label: "Add Players Description and Opcode Support Pages"
     url: "/docs/adding-player-opcode-list"
 
-  - label: "Add Instruments"
-    url: "/docs/adding-instruments"
-
   - label: "Add Multimedia Content"
     url: "/docs/adding-multimedia-content"
 
