@@ -287,16 +287,6 @@ categories:
 - name: "Converters"
   applications:
 
-  - name: "EXS24 to SFZ converter (Python 3)"
-    license: "FOSS"
-    url: "https://bitbucket.org/vonred/exstosfz/src/default/exs2sfz.py"
-    os:
-    - name: "Linux"
-    - name: "macOS"
-    - name: "Windows"
-    short_description:
-      "EXS24 to SFZ sample library metadata converter."
-
   - name: "EXS2SFZ"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/exs2sfz.html"

@@ -107,9 +107,6 @@ navigation:
   - label: "Jekyll Setup on Windows"
     url: "/docs/jekyll-windows-setup"
 
-  - label: "Add Players Description and Opcode Support Pages"
-    url: "/docs/adding-player-opcode-list"
-
   - label: "Add Multimedia Content"
     url: "/docs/adding-multimedia-content"
 

@@ -19,9 +19,9 @@ Last but not least, for those like me who prefer [IRC] we have now also an
 
 `/join` us!
 
-[HISE]:      https://sfzformat.com/software/players/hise
-[sfizz]:     https://sfzformat.com/software/players/sfizz
-[liquidsfz]: https://sfzformat.com/software/players/liquidsfz
+[HISE]:      http://hise.audio/
+[sfizz]:     https://sfz.tools/sfizz/
+[liquidsfz]: https://github.com/swesterfeld/liquidsfz
 
 [Sonoj 2019 Convention]: https://www.sonoj.org/
 [Christoph Kuhr]:        https://media.ccc.de/search?q=Christoph+Kuhr
