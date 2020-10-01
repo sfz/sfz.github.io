@@ -2,10 +2,11 @@
 
 ## Opcode documentation
 
+- Create a script that recreates symbolic links for opcode modulations and then
+  remove page copies that can lead to unneeded duplicated/desynced information.
 - Update [sw_down] with new info
 - bend_smooth: Missing range
-- cutoff: merge with cutoff2
-- resonance: merge with resonance2
+- Merge opcodes like cutoff(2) and resonance(2) in the same page.
 - Complete _envelope_generators_ and _lfo_ type pages
 
 ### Modulations
@@ -18,7 +19,6 @@
 
 ## Website / db features
 
-- Fix/replace Yarn (with [gulp]?)
 - Generate opcode list in [Prettify SFZ definition script]
 - Remove redundant MIDI CC modulations from list that is already in the opcode
 	info table and keep track of aliases (opcode layout)
@@ -48,6 +48,5 @@
 [trigger]:  /opcodes/trigger.md
 [sw_down]:  /opcodes/sw_down.md
 [PR #5]:    https://github.com/sfzformat/sfzformat.github.io/pull/5
-[gulp]:     https://gulpjs.com/
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
 [this page]: https://software.intel.com/sites/landingpage/IntrinsicsGuide/#
