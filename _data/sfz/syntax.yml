@@ -245,6 +245,15 @@ categories:
       value:
         type_name: "string"
 
+    - name: "sample_fadeout"
+      short_description:
+        "Number of seconds before the end of sample playback that the player
+        should begin a realtime fadeout."
+      version: "Cakewalk"
+      value:
+        type_name: "float"
+        unit: "seconds"
+
     - name: "sync_beats"
       short_description: "Region playing synchronization to host position."
       version: "SFZ v1"
