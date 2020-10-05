@@ -6,7 +6,7 @@ opcode_name: "amplfo_fade"
 
 ```
 amplfo_fade=1
-pitchfo_fade=0.4
+pitchlfo_fade=0.4
 ```
 
 Useful for vibrato which grows in intensity gradually,
