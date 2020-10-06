@@ -3,8 +3,8 @@ layout: "sfz/opcode"
 opcode_name: "pitch_random"
 ---
 ## Examples
-Amount of random variation for pitch in cents. Computed when the note is
-triggered, remains the same for that region for as long as the region plays.
+Computed when the note is triggered,
+remains the same for that region for as long as the region plays.
 
 ```
 pitch_random=10
@@ -31,4 +31,4 @@ Or use CC136, which is bipolar random from -1 to 1:
 ```
 pitch_oncc136=20
 ```
-In rcg sfz and Cakewalk, this is bipolar. 
+In rcg sfz and Cakewalk, this is bipolar.
