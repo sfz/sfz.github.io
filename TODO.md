@@ -4,10 +4,10 @@
 
 - Create a script that recreates symbolic links for opcode modulations and then
   remove page copies that can lead to unneeded duplicated/desynced information.
-- Update [sw_down] with new info
 - bend_smooth: Missing range
 - Merge opcodes like cutoff(2) and resonance(2) in the same page.
 - Complete _envelope_generators_ and _lfo_ type pages
+- Add Cakewalk loop_length_oncc and loop_tune opcodes.
 
 ### Modulations
 
@@ -15,7 +15,23 @@
 	and amplfo_freq* with related opcodes
 - varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
 - Remove the temporary /modulations/moved directory when done
-- Add missing ARIA aliases (WIP)
+- Add missing ARIA aliases:
+		delay_curveccN
+		delay_beats_onccN
+		delay_beats_curveccN
+		delay_beats_random
+		group_tune
+		master_tune
+		global_tune
+		resonance_random
+		pan_random
+		position_random
+		position_keytrack
+		position_keycenter
+		position_onccN
+		position_curveccN
+		position_smoothccN
+		position_stepccN
 
 ## Website / db features
 
