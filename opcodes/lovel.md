@@ -15,6 +15,8 @@ that with default velocity tracking behavior and non-normalized samples (and
 there are many reasons why normalizing samples should be avoided), the quiet
 velocity layers will be too quiet.
 
+Velocity 0 is a note-off message, so 1 is the lowest usable value with hivel/lovel.
+
 ## Example
 
 ```
