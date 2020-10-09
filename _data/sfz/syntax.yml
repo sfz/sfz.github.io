@@ -1450,7 +1450,7 @@ categories:
           - name: "gain_onccN"
             version: "SFZ v2"
           - name: "volume_onccN"
-            version: "ARIA"
+            version: "SFZ v2"
           value:
             type_name: "float"
             default: 0
@@ -1458,15 +1458,15 @@ categories:
             max: 48
             unit: "dB"
         - name: "volume_curveccN"
-          version: "ARIA"
+          version: "SFZ v2"
           value:
             type_name: "integer"
             min: 0
             max: 255
         - name: "volume_smoothccN"
-          version: "ARIA"
+          version: "SFZ v2"
         - name: "volume_stepccN"
-          version: "ARIA"
+          version: "SFZ v2"
 
     - name: "width"
       short_description:
@@ -1566,6 +1566,9 @@ categories:
         min: 0
         max: 24
         unit: "dB"
+      alias:
+      - name: "gain_random"
+        version: "Cakewalk"
 
     - name: "rt_decay"
       short_description:
@@ -2132,6 +2135,9 @@ categories:
         min: 0
         max: 9600
         unit: "cents"
+      alias:
+      - name: "cutoff_random"
+        version: "SFZ v2"
 
     - name: "fil_type"
       short_description: "Filter type."
@@ -2662,6 +2668,9 @@ categories:
         default: 100
         min: -1200
         max: 1200
+      alias:
+      - name: "tune_keytrack"
+        version: "ARIA"
 
     - name: "pitch_random"
       short_description: "Random tuning for the region, in cents."
@@ -2672,6 +2681,9 @@ categories:
         min: 0
         max: 9600
         unit: "cents"
+      alias:
+      - name: "tune_random"
+        version: "ARIA"
 
     - name: "pitch_veltrack"
       short_description:
