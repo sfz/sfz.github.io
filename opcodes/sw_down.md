@@ -12,9 +12,11 @@ sw_down=Cb3
 ```
 
 The difference between this and [sw_last](sw_last) is that [sw_last](sw_last)
-is a "sticky" keyswitch - after releasing the keyswitch note, it continues to
+is a real, "sticky" keyswitch - after releasing the keyswitch note, it continues to
 affect notes until another keyswitch is pressed. `sw_down`, on the other hand, is
-"non-sticky" and only affects notes played while the switch is held down. This
-makes `sw_down` a good choice for keyswitching articulations which are often used
-for only one note before going back to a "normal" articulation. For example,
-hammer-ons on a guitar could be a good use case for `sw_down`.
+"non-sticky" and only affects notes played while the switch is held down. In
+typical usage, `sw_down` is not used as a real keyswitch at all, but is used to
+select the correct note transition sample to play in true legato instruments.
+
+This is why `sw_down` can be a note in the playable range, while `sw_last` keyswitches
+should normally be outside the playable range.
