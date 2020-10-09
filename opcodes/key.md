@@ -26,8 +26,11 @@ lokey=72 hikey=72 pitch_keycenter=72
 ```
 
 Key can also be combined with the others, which will override the value set by key
-although key must be specified first. Not all SFZ players might support this
-behavior but rgcaudio sfz and ARIA both do.
+although key should be specified first. In ARIA, the value set by [pitch_keycenter]
+will always be used, whether key or pitch_keycenter is set first in the SFZ file.
+However, in some other players, setting pitch_keycenter to a different value than key
+is only effective if key is set first and pitch_keycenter second. Therefore, for
+compatibility, it is best to set key first, and pitch_keycenter later.
 
 ```
 key=72 lokey=70
