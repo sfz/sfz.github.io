@@ -4,7 +4,8 @@ opcode_name: "pitch_keycenter"
 ---
 For samples which only need to be played at their
 natural pitch and triggered by one specific MIDI note, it's generally easier to
-use [key] instead.
+use [key] instead. Cases using both pitch_keycenter and key are described in
+more detail under key.
 
 ## sample as value
 
