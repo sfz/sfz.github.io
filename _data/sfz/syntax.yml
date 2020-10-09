@@ -714,8 +714,8 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
-        min: 0
+        default: 1
+        min: 1
         max: 127
 
     - name: "hivel"
@@ -727,7 +727,7 @@ categories:
       value:
         type_name: "integer"
         default: 127
-        min: 0
+        min: 1
         max: 127
 
   - name: "MIDI Conditions"
