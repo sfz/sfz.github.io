@@ -21,6 +21,11 @@ The possible values are:
 - ***loop_sustain***: the player will play the loop while the note is held, by keeping
                     it depressed or by using the sustain pedal (CC64). During the release phase, there's no looping.
 										
+Whether no_loop, loop_continuous or loop_sustain is set, the duration of the release phase is set using
+[ampeg_release](/opcodes/ampeg_release). However, in loop_sustain or no_loop mode, the sound can be cut off
+before the release phase ends, if the end of sample is reached. In loop_continuous mode, the loop will
+repeat if the loop end is reached during the release phase.
+										
 For samples with [trigger](/opcodes/trigger)=release set, no_loop and one_shot will both behave as one_shot
 and the entire release sample will play. If loop_continuous is set, looping will be
 applied - and unless loop_count is set or there is some other way the sound will be muted,
