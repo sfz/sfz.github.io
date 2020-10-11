@@ -1,6 +1,6 @@
 ---
 layout: "sfz/opcode"
-opcode_name: "varNN_target"
+opcode_name: "varNN_*"
 ---
 ## Example
 

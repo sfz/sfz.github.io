@@ -1051,7 +1051,7 @@ categories:
             min: 0
             max: 255
 
-    - name: "varNN_target"
+    - name: "varNN_*"
       short_description: "Specifies the target for variable NN to modulate."
       version: "ARIA"
       targets:
