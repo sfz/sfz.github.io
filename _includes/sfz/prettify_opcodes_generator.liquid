@@ -8,7 +8,14 @@
 {%-endfor-%}
 
 {%-for opcode in opcodes-%}
-	{%-assign opcode_names = opcode_names | append: '|' | append: opcode.name-%}
+	{%-if opcode.targets-%}
+		{%-for target in opcode.targets-%}
+			{%-assign target_name  = opcode.name | replace: '*', target.name-%}
+			{%-assign opcode_names = opcode_names | append: '|' | append: target_name-%}
+		{%-endfor-%}
+	{%-else-%}
+		{%-assign opcode_names = opcode_names | append: '|' | append: opcode.name-%}
+	{%-endif-%}
 	{%-for midi_cc in opcode.modulation.midi_cc-%}
 		{%-assign opcode_names = opcode_names | append: '|' | append: midi_cc.name-%}
 		{%-for alias in midi_cc.alias-%}
@@ -27,8 +34,6 @@
 {%-endfor-%}
 {%-assign opcode_names = opcode_names |
 	replace: "hint_*", "hint_([a-z]*)" |
-	replace: "*_mod|", '' |
-	replace: "varNN_target|", '' |
 	replace: "eqN_", "eq([1-3]{1})_" |
 	replace: "lfoN_offsetX", "lfo([0-9]{1,3})_offset([2-8]{1})" |
 	replace: "lfoN_ratioX", "lfo([0-9]{1,3})_ratio([2-8]{1})" |
