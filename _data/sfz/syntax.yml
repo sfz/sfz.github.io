@@ -2142,6 +2142,8 @@ categories:
     - name: "fil_type"
       short_description: "Filter type."
       version: "SFZ v1"
+      alias:
+      - name: "filtype"
       value:
         type_name: "string"
         default: "lpf_2p"
@@ -2437,6 +2439,8 @@ categories:
             min: 0
             max: 40
             unit: "dB"
+          alias:
+          - name: "resonance2_ccN"
         - name: "resonance2_curveccN"
           version: "SFZ v2"
           value:
@@ -2564,6 +2568,8 @@ categories:
         min: -9600
         max: 9600
         unit: "cents"
+      alias:
+      - name: "bendup"
 
     - name: "bend_down"
       version: "SFZ v1"
@@ -2575,6 +2581,8 @@ categories:
         min: -9600
         max: 9600
         unit: "cents"
+      alias:
+      - name: "benddown"
 
     - name: "bend_smooth"
       version: "SFZ v2"
@@ -2597,6 +2605,8 @@ categories:
         min: 1
         max: 1200
         unit: "cents"
+      alias:
+      - name: "bendstep"
 
     - name: "pitch"
       version: "ARIA"
