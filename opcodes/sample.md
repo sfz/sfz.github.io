@@ -59,3 +59,5 @@ Tri is an alias for triangle. For cases where we don't want to actually play a s
 exist and be played (for example, to mute other sounds when using
 [group](/opcodes/group) and [off_by](/opcodes/off_by), the silence
 value can be very convenient.
+
+Note that in this case the `*` is a real character and not a wildcard.
