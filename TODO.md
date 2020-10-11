@@ -35,7 +35,6 @@
 
 ## Website / db features
 
-- Generate opcode list in [Prettify SFZ definition script]
 - Remove redundant MIDI CC modulations from list that is already in the opcode
 	info table and keep track of aliases (opcode layout)
 	(E.g.: see [cutoff] opcode page)
