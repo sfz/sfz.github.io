@@ -24,7 +24,6 @@ the parameters they modulate.</p>
 	</thead>
 	<tbody>
 {%-for opcode in opcodes-%}
-	{%-assign opcode_letter = opcode.name | slice: 0 | upcase-%}
 	{%-capture opcode_url-%}
 		{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
 	{%-endcapture-%}
