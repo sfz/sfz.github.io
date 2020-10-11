@@ -14,6 +14,8 @@ the parameters they modulate.</p>
 {%-endfor-%}
 {%-assign opcodes = opcodes | sort: "name"-%}
 
+<input type="text" onkeyup="opcodeSearch()" placeholder="Search for opcodes..">
+
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl" data-toggle="table">
 	<thead class="thead-dark">
 		<tr>
@@ -64,3 +66,25 @@ the parameters they modulate.</p>
 {%-endfor-%}
 	</tbody>
 </table>
+
+<script>
+function opcodeSearch() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementsByTagName("input")[0];
+  filter = input.value.toUpperCase();
+  table = document.getElementsByClassName("table-striped")[0];
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
