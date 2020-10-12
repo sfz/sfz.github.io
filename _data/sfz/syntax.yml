@@ -2627,10 +2627,14 @@ categories:
       alias:
       - name: "bendstep"
 
-    - name: "pitch"
-      version: "ARIA"
-      short_description:
-        "Pitch change in cents. ARIA alias for <a href='/opcodes/tune'>tune</a>."
+    - name: "tune"
+      version: "SFZ v1"
+      short_description: "The fine tuning for the sample, in cents."
+      alias:
+      - name: "pitch"
+        version: "ARIA"
+        short_description:
+          "Pitch change in cents. ARIA alias for <a href='/opcodes/tune'>tune</a>."
       value:
         type_name: "integer"
         default: 0
@@ -2739,16 +2743,6 @@ categories:
         default: 0
         min: -127
         max: 127
-
-    - name: "tune"
-      version: "SFZ v1"
-      short_description: "The fine tuning for the sample, in cents."
-      value:
-        type_name: "integer"
-        default: 0
-        min: -100
-        max: 100
-        unit: "cents"
 
     - name: "bend_stepup"
       version: "SFZ v2"
