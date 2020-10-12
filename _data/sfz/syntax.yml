@@ -205,7 +205,7 @@ categories:
       modulation:
         midi_cc:
         - name: "loop_lengthccN"
-          version: "SFZ v2"
+          version: "Cakewalk"
           short_description: "Change of loop end point."
           alias:
           - name: "loop_length_onccN"
@@ -219,7 +219,7 @@ categories:
       version: "Cakewalk"
       value:
         type_name: "float"
-        unit: "cent"
+        unit: "cents"
         default: 0
 
     - name: "offset"
