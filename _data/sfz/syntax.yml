@@ -5707,3 +5707,19 @@ categories:
   - name: "oscillator_table_size"
     short_description: ""
     version: "Cakewalk SFZ v2"
+
+  - name: "loop_length_oncc"
+    short_description: "Change of loop end point."
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "integer"
+      unit: "sample"
+      default: 0
+      
+  - name: "loop_tune"
+    short_description: "Tuning for only the loop segment."
+    version: "Cakewalk SFZ v2"
+    value:
+      type_name: "float"
+      unit: "cent"
+      default: 0
