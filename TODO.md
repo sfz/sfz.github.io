@@ -7,7 +7,6 @@
 - bend_smooth: Missing range
 - Merge opcodes like cutoff(2) and resonance(2) in the same page.
 - Complete _envelope_generators_ and _lfo_ type pages
-- Add Cakewalk loop_length_oncc and loop_tune opcodes.
 
 ### Modulations
 
@@ -41,8 +40,6 @@
 - Support for aliased opcodes, removing duplicated data,
   add some `custom_title` option for page titles
 - Variables inheritance
-- Add DragonFlyBSD, FreeBSD, NetBSD and Solaris as OSs in software section
-- Use the same OSs info for both software section and player pages
 - OpenMPT: Missing section "Import / Export"
 
 ### Other tasks
@@ -59,9 +56,5 @@
   color categories like in [this page]
 
 [cutoff]:   /opcodes/cutoff.md
-[off_mode]: /opcodes/off_mode.md
-[trigger]:  /opcodes/trigger.md
-[sw_down]:  /opcodes/sw_down.md
-[PR #5]:    https://github.com/sfzformat/sfzformat.github.io/pull/5
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
 [this page]: https://software.intel.com/sites/landingpage/IntrinsicsGuide/#
