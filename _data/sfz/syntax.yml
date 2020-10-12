@@ -202,6 +202,17 @@ categories:
         default: 0
         min: 0
         max: 4294967296
+      modulation:
+        midi-cc:
+        - name: "loop_lengthccN"
+          version: "SFZ v2"
+          short_description: "Change of loop end point."
+          alias:
+          - name: "loop_length_onccN"
+            version: "Cakewalk"
+          value:
+            type_name: "integer"
+            unit: "sample units"
 
     - name: "offset"
       short_description: "The offset used to play the sample."
@@ -1394,20 +1405,20 @@ categories:
       modulation:
         midi_cc:
         - name: "pan_onccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           alias:
           - name: "pan_ccN"
             version: "ARIA"
         - name: "pan_curveccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           value:
             type_name: "integer"
             min: 0
             max: 255
         - name: "pan_smoothccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
         - name: "pan_stepccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "position"
       short_description:
@@ -1484,7 +1495,7 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "width_onccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
         - name: "width_curveccN"
           version: "Cakewalk"
           value:
@@ -2462,7 +2473,7 @@ categories:
             min: 0
 
     - name: "noise_filter"
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       short_description: ""
       value:
         type_name: "string"
@@ -2487,7 +2498,7 @@ categories:
         - name: "pink"
 
     - name: "noise_stereo"
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       short_description: ""
       value:
         type_name: "string"
@@ -2496,7 +2507,7 @@ categories:
         - name: "off"
 
     - name: "noise_level"
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       short_description: ""
       value:
         type_name: "float"
@@ -2506,7 +2517,7 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_level_onccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           short_description: ""
           value:
             type_name: "float"
@@ -2514,7 +2525,7 @@ categories:
             max: 24
             unit: "dB"
         - name: "noise_level_smoothccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           short_description: ""
           value:
             type_name: "float"
@@ -2523,7 +2534,7 @@ categories:
             unit: "ms"
 
     - name: "noise_step"
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       short_description: ""
       value:
         type_name: "integer"
@@ -2532,7 +2543,7 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_step_onccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           short_description: ""
           value:
             type_name: "integer"
@@ -2540,7 +2551,7 @@ categories:
             max: 100
 
     - name: "noise_tone"
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       short_description: ""
       value:
         type_name: "integer"
@@ -2549,7 +2560,7 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_tone_onccN"
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
           short_description: ""
           value:
             type_name: "integer"
@@ -3792,75 +3803,75 @@ categories:
 
     - name: "egN_decim"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_decim_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_bitred"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_bitred_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_rectify"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_rectify_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_ringmod"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_ringmod_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_noiselevel"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_noiselevel_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_noisestep"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_noisestep_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_noisetone"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_noisetone_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "egN_driveshape"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "egN_driveshape_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
   - name: "LFO"
     url: "/modulations/lfo"
@@ -4467,105 +4478,105 @@ categories:
 
     - name: "lfoN_decim"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_decim_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_decim_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_decim_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_bitred"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_bitred_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_bitred_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_bitred_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_noiselevel"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_noiselevel_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noiselevel_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noiselevel_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_noisestep"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_noisestep_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noisestep_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noisestep_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_noisetone"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_noisetone_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noisetone_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_noisetone_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_drive"
       short_description: ""
-      version: "Cakewalk SFZ v2"
+      version: "Cakewalk"
       modulation:
         midi_cc:
         - name: "lfoN_drive_onccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_drive_smoothccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
         - name: "lfoN_drive_stepccX"
           short_description: ""
-          version: "Cakewalk SFZ v2"
+          version: "Cakewalk"
 
     - name: "lfoN_offset"
       short_description:
@@ -4622,7 +4633,7 @@ categories:
   opcodes:
   - name: "apan_depth"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4633,7 +4644,7 @@ categories:
 
   - name: "apan_dry"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4644,7 +4655,7 @@ categories:
 
   - name: "apan_freq"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "Hz"
@@ -4654,7 +4665,7 @@ categories:
 
   - name: "apan_phase"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       min: 0
@@ -4666,11 +4677,11 @@ categories:
 
   - name: "apan_waveform"
     short_description: "LFO wave number."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "apan_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4680,7 +4691,7 @@ categories:
       - name: "apan_wet_onccN"
 
   - name: "bitred"
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     short_description: "Bit reduction."
     value:
       type_name: ""
@@ -4691,13 +4702,13 @@ categories:
       lfo: "✓"
       midi_cc:
       - name: "bitred_onccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "bitred_curveccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "bitred_smoothccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "bitred_stepccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
 
   - name: "bus"
     version: "SFZ v2"
@@ -4732,21 +4743,21 @@ categories:
 
   - name: "comp_attack"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "comp_gain"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "dB"
 
   - name: "comp_ratio"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4754,14 +4765,14 @@ categories:
 
   - name: "comp_release"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "comp_stlink"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
       options:
@@ -4770,13 +4781,13 @@ categories:
 
   - name: "comp_threshold"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "dB"
 
   - name: "decim"
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     short_description: "Decimator."
     value:
       type_name: ""
@@ -4787,17 +4798,17 @@ categories:
       lfo: "✓"
       midi_cc:
       - name: "decim_onccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "decim_curveccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "decim_smoothccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
       - name: "decim_stepccN"
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
 
   - name: "delay_cutoff"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "Hz"
@@ -4807,7 +4818,7 @@ categories:
 
   - name: "delay_damphi"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4818,7 +4829,7 @@ categories:
 
   - name: "delay_damplo"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4829,7 +4840,7 @@ categories:
 
   - name: "delay_dry"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4840,7 +4851,7 @@ categories:
 
   - name: "delay_feedback"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4851,13 +4862,13 @@ categories:
 
   - name: "delay_filter"
     short_description: "Name of filter type."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
 
   - name: "delay_input"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4868,7 +4879,7 @@ categories:
 
   - name: "delay_levelc"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4876,7 +4887,7 @@ categories:
 
   - name: "delay_levell"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4884,7 +4895,7 @@ categories:
 
   - name: "delay_levelr"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4892,7 +4903,7 @@ categories:
 
   - name: "delay_lfofreq"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "Hz"
@@ -4902,7 +4913,7 @@ categories:
 
   - name: "delay_moddepth"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4913,7 +4924,7 @@ categories:
 
   - name: "delay_mode"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
       options:
@@ -4932,7 +4943,7 @@ categories:
 
   - name: "delay_panc"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4943,7 +4954,7 @@ categories:
 
   - name: "delay_panl"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4954,7 +4965,7 @@ categories:
 
   - name: "delay_panr"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4965,7 +4976,7 @@ categories:
 
   - name: "delay_resonance"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "dB"
@@ -4975,7 +4986,7 @@ categories:
 
   - name: "delay_spread"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -4986,23 +4997,23 @@ categories:
 
   - name: "delay_syncc_onccN"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "delay_syncl_onccN"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "delay_syncr_onccN"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "delay_time_tap"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "delay_timec"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "seconds"
@@ -5012,7 +5023,7 @@ categories:
 
   - name: "delay_timel"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "seconds"
@@ -5022,7 +5033,7 @@ categories:
 
   - name: "delay_timer"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "seconds"
@@ -5032,7 +5043,7 @@ categories:
 
   - name: "delay_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5044,7 +5055,7 @@ categories:
   - name: "directtomain"
     short_description:
       "Gain of the main bus into the output."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "%"
@@ -5054,7 +5065,7 @@ categories:
 
   - name: "disto_depth"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5065,7 +5076,7 @@ categories:
 
   - name: "disto_dry"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5076,11 +5087,11 @@ categories:
 
   - name: "disto_stages"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "disto_tone"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5091,7 +5102,7 @@ categories:
 
   - name: "disto_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5155,32 +5166,32 @@ categories:
 
   - name: "eq_bw"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     modulation:
       midi_cc:
       - name: "eq_bw_onccN"
 
   - name: "eq_freq"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     modulation:
       midi_cc:
       - name: "eq_freq_onccN"
 
   - name: "eq_gain"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     modulation:
       midi_cc:
       - name: "eq_gain_onccN"
 
   - name: "eq_type"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "filter_cutoff"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "Hz"
@@ -5190,7 +5201,7 @@ categories:
 
   - name: "filter_resonance"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "dB"
@@ -5200,14 +5211,14 @@ categories:
 
   - name: "filter_type"
     short_description: "Name of filter type."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
 
   - name: "fxNtomain"
     short_description:
       "Gain of the Nth effect bus into the output."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "%"
@@ -5228,25 +5239,25 @@ categories:
 
   - name: "gate_onccN"
     short_description: "Gate manual control."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "gate_attack"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "seconds"
 
   - name: "gate_release"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "seconds"
 
   - name: "gate_stlink"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
       options:
@@ -5255,7 +5266,7 @@ categories:
 
   - name: "gate_threshold"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 #   value:
 #     type_name: "float"
 #     unit: "dB"
@@ -5280,7 +5291,7 @@ categories:
 
   - name: "phaser_depth"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5291,7 +5302,7 @@ categories:
 
   - name: "phaser_feedback"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5302,7 +5313,7 @@ categories:
 
   - name: "phaser_freq"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "Hz"
@@ -5312,7 +5323,7 @@ categories:
 
   - name: "phaser_phase_onccN"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5320,15 +5331,15 @@ categories:
 
   - name: "phaser_stages"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "phaser_waveform"
     short_description: "LFO wave number."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "phaser_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5339,7 +5350,7 @@ categories:
 
   - name: "reverb_damp"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5350,7 +5361,7 @@ categories:
 
   - name: "reverb_dry"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5361,7 +5372,7 @@ categories:
 
   - name: "reverb_input"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5372,7 +5383,7 @@ categories:
 
   - name: "reverb_predelay"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
@@ -5382,7 +5393,7 @@ categories:
 
   - name: "reverb_size"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5393,7 +5404,7 @@ categories:
 
   - name: "reverb_tone"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5404,7 +5415,7 @@ categories:
 
   - name: "reverb_type"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
       options:
@@ -5418,7 +5429,7 @@ categories:
 
   - name: "reverb_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5429,7 +5440,7 @@ categories:
 
   - name: "static_cyclic_level"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5437,20 +5448,20 @@ categories:
 
   - name: "static_cyclic_time"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_filter"
     short_description: "Name of filter type."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
 
   - name: "static_level"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5461,7 +5472,7 @@ categories:
 
   - name: "static_random_level"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5469,25 +5480,25 @@ categories:
 
   - name: "static_random_maxtime"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_random_mintime"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_stereo"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "static_tone"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5495,11 +5506,11 @@ categories:
 
   - name: "strings_number"
     short_description: "Number of synthesized resonant strings."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "strings_wet_onccN"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5507,7 +5518,7 @@ categories:
 
   - name: "tdfir_dry"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5518,7 +5529,7 @@ categories:
 
   - name: "tdfir_gain"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5526,11 +5537,11 @@ categories:
 
   - name: "tdfir_impulse"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
   - name: "tdfir_wet"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: ""
       min: 0
@@ -5603,7 +5614,7 @@ categories:
   opcodes:
   - name: "load_mode"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 0
@@ -5611,19 +5622,19 @@ categories:
 
   - name: "load_start"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
 
   - name: "load_end"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
 
   - name: "sample_quality"
     short_description: "Sample playback quality settings."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 1
@@ -5631,7 +5642,7 @@ categories:
 
   - name: "image"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
 
@@ -5640,7 +5651,7 @@ categories:
   opcodes:
   - name: "oscillator"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "string"
       options:
@@ -5649,16 +5660,16 @@ categories:
 
   - name: "oscillator_detune"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     modulation:
       midi_cc:
       - name: "oscillator_detune_onccN"
         short_description: ""
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
 
   - name: "oscillator_mode"
     short_description: "The modulation type."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 0
@@ -5667,20 +5678,20 @@ categories:
 
   - name: "oscillator_mod_depth"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     modulation:
       midi_cc:
       - name: "oscillator_mod_depth_onccN"
         short_description: ""
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
 
       - name: "oscillator_mod_smoothccN"
         short_description: ""
-        version: "Cakewalk SFZ v2"
+        version: "Cakewalk"
 
   - name: "oscillator_multi"
     short_description: "Configure a region to use more than one oscillator."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 1
@@ -5689,7 +5700,7 @@ categories:
 
   - name: "oscillator_phase"
     short_description: "Oscillator phase. Negative values for random phase."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "°"
@@ -5698,7 +5709,7 @@ categories:
 
   - name: "oscillator_quality"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "integer"
       min: 0
@@ -5706,19 +5717,11 @@ categories:
 
   - name: "oscillator_table_size"
     short_description: ""
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
 
-  - name: "loop_length_oncc"
-    short_description: "Change of loop end point."
-    version: "Cakewalk SFZ v2"
-    value:
-      type_name: "integer"
-      unit: "sample"
-      default: 0
-      
   - name: "loop_tune"
     short_description: "Tuning for only the loop segment."
-    version: "Cakewalk SFZ v2"
+    version: "Cakewalk"
     value:
       type_name: "float"
       unit: "cent"
