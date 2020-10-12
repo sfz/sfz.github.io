@@ -17,6 +17,10 @@ get anything other than the first defined loop to play.
 This opcode will not have any effect if [loop_mode](loop_mode) is set
 to ***no_loop***.
 
+Loop endpoints can be modulated using `loop_lengthccN` in rgc sfz, and
+`loop_length_onccN` in Cakewalk products - though the term "length" is used, it's
+specifically the location of the end point which is modulated.
+
 ## Examples
 
 ```
