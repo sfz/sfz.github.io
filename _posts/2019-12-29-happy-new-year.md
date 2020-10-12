@@ -12,7 +12,6 @@ Here we are with the latest relevant updates, the last ones for this year:
 
 Happy new year!
 
-
-[Cakewalk SFZv2 opcodes]:  /misc/cakewalk
+[Cakewalk SFZv2 opcodes]:  /extensions/cakewalk
 [Google Prettify]:         https://github.com/google/code-prettify
 [SFZ syntax highlighting]: /assets/js/prettify/lang-sfz.js

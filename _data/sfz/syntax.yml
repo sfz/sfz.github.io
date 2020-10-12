@@ -203,7 +203,7 @@ categories:
         min: 0
         max: 4294967296
       modulation:
-        midi-cc:
+        midi_cc:
         - name: "loop_lengthccN"
           version: "SFZ v2"
           short_description: "Change of loop end point."
@@ -213,6 +213,14 @@ categories:
           value:
             type_name: "integer"
             unit: "sample units"
+
+    - name: "loop_tune"
+      short_description: "Tuning for only the loop segment."
+      version: "Cakewalk"
+      value:
+        type_name: "float"
+        unit: "cent"
+        default: 0
 
     - name: "offset"
       short_description: "The offset used to play the sample."
@@ -5610,7 +5618,7 @@ categories:
       type_name: "string"
 
 - name: "Loading"
-  url: "/misc/cakewalk#loading"
+  url: "/extensions/cakewalk#loading"
   opcodes:
   - name: "load_mode"
     short_description: ""
@@ -5647,7 +5655,7 @@ categories:
       type_name: "string"
 
 - name: "Wavetable Oscillator"
-  url: "/misc/cakewalk#wavetable-oscillator"
+  url: "/extensions/cakewalk#wavetable-oscillator"
   opcodes:
   - name: "oscillator"
     short_description: ""
@@ -5718,11 +5726,3 @@ categories:
   - name: "oscillator_table_size"
     short_description: ""
     version: "Cakewalk"
-
-  - name: "loop_tune"
-    short_description: "Tuning for only the loop segment."
-    version: "Cakewalk"
-    value:
-      type_name: "float"
-      unit: "cent"
-      default: 0
