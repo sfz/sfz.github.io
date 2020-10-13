@@ -37,6 +37,19 @@ the parameters they modulate.</p>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode_version }}</td>
 		</tr>
+	{%-for alias in opcode.alias-%}
+		{%-capture alias_url-%}
+			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+		{%-endcapture-%}
+		{%-capture alias_version-%}
+			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=alias.version-%}
+		{%-endcapture-%}
+		<tr>
+			<td>{{ alias_url }}</td>
+			<td>{{ alias.short_description }}</td>
+			<td>{{ alias_version }}</td>
+		</tr>
+	{%-endfor-%}
 	{%-for midi_cc in opcode.modulation.midi_cc-%}
 		{%-capture midi_cc_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
@@ -49,6 +62,19 @@ the parameters they modulate.</p>
 			<td>{{ midi_cc.short_description }}</td>
 			<td>{{ midi_cc_version }}</td>
 		</tr>
+		{%-for alias in midi_cc.alias-%}
+			{%-capture alias_url-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+			{%-endcapture-%}
+			{%-capture alias_version-%}
+				{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=alias.version-%}
+			{%-endcapture-%}
+			<tr>
+				<td>{{ alias_url }}</td>
+				<td>{{ alias.short_description }}</td>
+				<td>{{ alias_version }}</td>
+			</tr>
+		{%-endfor-%}
 	{%-endfor-%}
 	{%-for velocity_cc in opcode.modulation.velocity-%}
 		{%-capture velocity_cc_url-%}
