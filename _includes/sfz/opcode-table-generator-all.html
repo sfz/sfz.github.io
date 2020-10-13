@@ -14,14 +14,38 @@ the parameters they modulate.</p>
 {%-endfor-%}
 {%-assign opcodes = opcodes | sort: "name"-%}
 
-<input type="text" onkeyup="opcodeSearch()" placeholder="Search for opcodes..">
+<div id="filter-container" style="margin-bottom:1em">
+	<input
+		placeholder="Search for opcodes..."
+		class="bootstrap-table-filter-control-opcode">
+	<select class="bootstrap-table-filter-control-version">
+		<option value="">Choose a version...</option>
+		<option>ARIA</option>
+		<option>Cakewalk</option>
+		<option>LinuxSampler</option>
+		<option>SFZ v1</option>
+		<option>SFZ v2</option>
+	</select>
+</div>
 
-<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl" data-toggle="table">
+<table
+	class="table table-sm table-bordered table-hover table-striped table-responsive-xl"
+	data-toggle="table"
+	data-filter-control="true"
+	data-filter-control-container="#filter-container">
 	<thead class="thead-dark">
 		<tr>
-			<th data-field="opcode" data-sortable="true">Opcode</th>
-			<th data-field="description" data-sortable="true">Description</th>
-			<th data-field="version" data-sortable="true">Version</th>
+			<th
+				data-field="opcode"
+				data-sortable="true"
+				data-filter-control="input">
+				Opcode</th>
+			<th data-field="description">Description</th>
+			<th
+				data-field="version"
+				data-sortable="true"
+				data-filter-control="select">
+				Version</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -29,50 +53,38 @@ the parameters they modulate.</p>
 	{%-capture opcode_url-%}
 		{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
 	{%-endcapture-%}
-	{%-capture opcode_version-%}
-		{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=opcode.version-%}
-	{%-endcapture-%}
 		<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
-			<td>{{ opcode_version }}</td>
+			<td>{{ opcode.version }}</td>
 		</tr>
 	{%-for alias in opcode.alias-%}
 		{%-capture alias_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
 		{%-endcapture-%}
-		{%-capture alias_version-%}
-			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=alias.version-%}
-		{%-endcapture-%}
 		<tr>
 			<td>{{ alias_url }}</td>
 			<td>{{ alias.short_description }}</td>
-			<td>{{ alias_version }}</td>
+			<td>{{ alias.version }}</td>
 		</tr>
 	{%-endfor-%}
 	{%-for midi_cc in opcode.modulation.midi_cc-%}
 		{%-capture midi_cc_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
 		{%-endcapture-%}
-		{%-capture midi_cc_version-%}
-			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=midi_cc.version-%}
-		{%-endcapture-%}
 		<tr>
 			<td>{{ midi_cc_url }}</td>
 			<td>{{ midi_cc.short_description }}</td>
-			<td>{{ midi_cc_version }}</td>
+			<td>{{ midi_cc.version }}</td>
 		</tr>
 		{%-for alias in midi_cc.alias-%}
 			{%-capture alias_url-%}
 				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
 			{%-endcapture-%}
-			{%-capture alias_version-%}
-				{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=alias.version-%}
-			{%-endcapture-%}
 			<tr>
 				<td>{{ alias_url }}</td>
 				<td>{{ alias.short_description }}</td>
-				<td>{{ alias_version }}</td>
+				<td>{{ alias.version }}</td>
 			</tr>
 		{%-endfor-%}
 	{%-endfor-%}
@@ -80,37 +92,12 @@ the parameters they modulate.</p>
 		{%-capture velocity_cc_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=velocity_cc-%}
 		{%-endcapture-%}
-		{%-capture velocity_cc_version-%}
-			{%-include sfz/functions/getOpcodeVersionAsHtml.html const_version=velocity_cc.version-%}
-		{%-endcapture-%}
 		<tr>
 			<td>{{ velocity_cc_url }}</td>
 			<td>{{ velocity_cc.short_description }}</td>
-			<td>{{ velocity_cc_version }}</td>
+			<td>{{ velocity_cc.version }}</td>
 		</tr>
 	{%-endfor-%}
 {%-endfor-%}
 	</tbody>
 </table>
-
-<script>
-function opcodeSearch() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementsByTagName("input")[0];
-  filter = input.value.toUpperCase();
-  table = document.getElementsByClassName("table-striped")[0];
-  tr = table.getElementsByTagName("tr");
-
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>

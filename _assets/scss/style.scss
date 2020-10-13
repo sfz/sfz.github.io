@@ -5,8 +5,9 @@ $scrollbutton-bg:         rgba(255, 255, 255, 0.5);
 $scrollbutton-bg-hover:   rgba(255, 255, 255, 0.8);
 $scrollbutton-color:      rgba(0, 0, 0, 0.5);
 
-@import "../../node_modules/bootstrap-table/dist/bootstrap-table.css";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-table/dist/bootstrap-table.css";
+@import "../../node_modules/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control.css";
 @import "syntax-highlight";
 
 /* Mimic Bootstrap tables for markdown tables only
