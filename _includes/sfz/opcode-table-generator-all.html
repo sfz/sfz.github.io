@@ -41,6 +41,9 @@ the parameters they modulate.</p>
 				data-filter-control="input">
 				Opcode</th>
 			<th data-field="description">Description</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Range</th>
 			<th
 				data-field="version"
 				data-sortable="true"
@@ -53,9 +56,18 @@ the parameters they modulate.</p>
 	{%-capture opcode_url-%}
 		{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
 	{%-endcapture-%}
+	{%-capture opcode_value_default-%}
+		{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=opcode-%}
+	{%-endcapture-%}
+	{%-capture opcode_value_range-%}
+		{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
+	{%-endcapture-%}
 		<tr>
 			<td>{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
+			<td>{{ opcode.value.type_name }}</td>
+			<td>{{ opcode_value_default }}</td>
+			<td>{{ opcode_value_range }}</td>
 			<td>{{ opcode.version }}</td>
 		</tr>
 	{%-for alias in opcode.alias-%}
@@ -64,7 +76,10 @@ the parameters they modulate.</p>
 		{%-endcapture-%}
 		<tr>
 			<td>{{ alias_url }}</td>
-			<td>{{ alias.short_description }}</td>
+			<td>{{ midi_cc_url }} alias.</td>
+			<td>{{ opcode.value.type_name }}</td>
+			<td>{{ opcode_value_default }}</td>
+			<td>{{ opcode_value_range }}</td>
 			<td>{{ alias.version }}</td>
 		</tr>
 	{%-endfor-%}
@@ -72,9 +87,18 @@ the parameters they modulate.</p>
 		{%-capture midi_cc_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
 		{%-endcapture-%}
+		{%-capture midi_cc_value_default-%}
+			{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=midi_cc-%}
+		{%-endcapture-%}
+		{%-capture midi_cc_value_range-%}
+			{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=midi_cc-%}
+		{%-endcapture-%}
 		<tr>
 			<td>{{ midi_cc_url }}</td>
 			<td>{{ midi_cc.short_description }}</td>
+			<td>{{ midi_cc.value.type_name }}</td>
+			<td>{{ midi_cc_value_default }}</td>
+			<td>{{ midi_cc_value_range }}</td>
 			<td>{{ midi_cc.version }}</td>
 		</tr>
 		{%-for alias in midi_cc.alias-%}
@@ -83,7 +107,10 @@ the parameters they modulate.</p>
 			{%-endcapture-%}
 			<tr>
 				<td>{{ alias_url }}</td>
-				<td>{{ alias.short_description }}</td>
+				<td>{{ midi_cc_url }} alias.</td>
+				<td>{{ midi_cc.value.type_name }}</td>
+				<td>{{ midi_cc_value_default }}</td>
+				<td>{{ midi_cc_value_range }}</td>
 				<td>{{ alias.version }}</td>
 			</tr>
 		{%-endfor-%}
@@ -92,9 +119,18 @@ the parameters they modulate.</p>
 		{%-capture velocity_cc_url-%}
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=velocity_cc-%}
 		{%-endcapture-%}
+		{%-capture velocity_cc_value_default-%}
+			{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=velocity_cc-%}
+		{%-endcapture-%}
+		{%-capture velocity_cc_value_range-%}
+			{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=velocity_cc-%}
+		{%-endcapture-%}
 		<tr>
 			<td>{{ velocity_cc_url }}</td>
 			<td>{{ velocity_cc.short_description }}</td>
+			<td>{{ velocity_cc.value.type_name }}</td>
+			<td>{{ velocity_cc_value_default }}</td>
+			<td>{{ velocity_cc_value_range }}</td>
 			<td>{{ velocity_cc.version }}</td>
 		</tr>
 	{%-endfor-%}
