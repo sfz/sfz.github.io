@@ -4,6 +4,45 @@
 such as (on)ccN, and vel2* opcodes are included in the pages describing
 the parameters they modulate.</p>
 
+<style>
+div.checkbox-filter {
+    border-left: 10px solid;
+/* border-top: 1px solid; */
+    padding-left: 5px;
+    margin: 1px 0 1px 0
+}
+div.ins {border-color:#ff0;}
+div.vlc {border-color:#b3f500;}
+div.lfo {border-color:#62e800;}
+div.eg  {border-color:#00b730;}
+div.crv {border-color:#00a0a0;}
+div.efx {border-color:#006fbb;}
+div.ptc {border-color:#0039eb;}
+div.amp {border-color:#7d00d3;}
+div.flt {border-color:#bf00bf;}
+div.eq  {border-color:#de007d;}
+div.map {border-color:red;}
+div.mid {border-color:#faa;}
+div.int {border-color:#ff8e00;}
+div.trg {border-color:#ffbf00;}
+div.spl {border-color:#ffe6b3;}
+td.ins {background-color:#ff0;}
+td.vlc {background-color:#b3f500;}
+td.lfo {background-color:#62e800;}
+td.eg  {background-color:#00b730;}
+td.crv {background-color:#00a0a0;}
+td.efx {background-color:#006fbb;}
+td.ptc {background-color:#0039eb;}
+td.amp {background-color:#7d00d3;}
+td.flt {background-color:#bf00bf;}
+td.eq  {background-color:#de007d;}
+td.map {background-color:red;}
+td.mid {background-color:#faa;}
+td.int {background-color:#ff8e00;}
+td.trg {background-color:#ffbf00;}
+td.spl {background-color:#ffe6b3;}
+</style>
+
 {%-for category in site.data.sfz.syntax.categories-%}
 	{%-if category.opcodes-%}
 		{%-assign opcodes = opcodes | concat: category.opcodes-%}
@@ -12,33 +51,25 @@ the parameters they modulate.</p>
 		{%-assign opcodes = opcodes | concat: category_type.opcodes-%}
 	{%-endfor-%}
 {%-endfor-%}
+{%comment%}
 {%-assign opcodes = opcodes | sort: "name"-%}
-
-<div id="filter-container" style="margin-bottom:1em">
-	<input
-		placeholder="Search for opcodes..."
-		class="bootstrap-table-filter-control-opcode">
-	<select class="bootstrap-table-filter-control-version">
-		<option value="">Choose a version...</option>
-		<option>ARIA</option>
-		<option>Cakewalk</option>
-		<option>LinuxSampler</option>
-		<option>SFZ v1</option>
-		<option>SFZ v2</option>
-	</select>
-</div>
-
+{%endcomment%}
 <table
 	class="table table-sm table-bordered table-hover table-striped table-responsive-xl"
+	id="data"
 	data-toggle="table"
-	data-filter-control="true"
-	data-filter-control-container="#filter-container">
+	data-sort-name="opcode"
+	data-sort-order="asc"
+	data-filter-controls="#filter-container"
+	data-search-controls="#search-controls">
 	<thead class="thead-dark">
 		<tr>
 			<th
+				data-field="category">
+			</th>
+			<th
 				data-field="opcode"
-				data-sortable="true"
-				data-filter-control="input">
+				data-sortable="true">
 				Opcode</th>
 			<th data-field="description">Description</th>
 			<th>Type</th>
@@ -46,8 +77,7 @@ the parameters they modulate.</p>
 			<th>Range</th>
 			<th
 				data-field="version"
-				data-sortable="true"
-				data-filter-control="select">
+				data-sortable="true">
 				Version</th>
 		</tr>
 	</thead>
@@ -63,7 +93,8 @@ the parameters they modulate.</p>
 		{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
 	{%-endcapture-%}
 		<tr>
-			<td>{{ opcode_url }}</td>
+			<td class="ins"></td>
+			<td class="opcode">{{ opcode_url }}</td>
 			<td>{{ opcode.short_description }}</td>
 			<td>{{ opcode.value.type_name }}</td>
 			<td>{{ opcode_value_default }}</td>
@@ -75,7 +106,8 @@ the parameters they modulate.</p>
 			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
 		{%-endcapture-%}
 		<tr>
-			<td>{{ alias_url }}</td>
+			<td class="crv"></td>
+			<td class="opcode">{{ alias_url }}</td>
 			<td>{{ opcode_url }} alias.</td>
 			<td>{{ opcode.value.type_name }}</td>
 			<td>{{ opcode_value_default }}</td>
@@ -94,7 +126,8 @@ the parameters they modulate.</p>
 			{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=midi_cc-%}
 		{%-endcapture-%}
 		<tr>
-			<td>{{ midi_cc_url }}</td>
+			<td class="map"></td>
+			<td class="opcode">{{ midi_cc_url }}</td>
 			<td>{{ midi_cc.short_description }}</td>
 			<td>{{ midi_cc.value.type_name }}</td>
 			<td>{{ midi_cc_value_default }}</td>
@@ -106,7 +139,8 @@ the parameters they modulate.</p>
 				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
 			{%-endcapture-%}
 			<tr>
-				<td>{{ alias_url }}</td>
+				<td class="eg"></td>
+				<td class="opcode">{{ alias_url }}</td>
 				<td>{{ midi_cc_url }} alias.</td>
 				<td>{{ midi_cc.value.type_name }}</td>
 				<td>{{ midi_cc_value_default }}</td>
@@ -126,7 +160,8 @@ the parameters they modulate.</p>
 			{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=velocity_cc-%}
 		{%-endcapture-%}
 		<tr>
-			<td>{{ velocity_cc_url }}</td>
+			<td class="int"></td>
+			<td class="opcode">{{ velocity_cc_url }}</td>
 			<td>{{ velocity_cc.short_description }}</td>
 			<td>{{ velocity_cc.value.type_name }}</td>
 			<td>{{ velocity_cc_value_default }}</td>
