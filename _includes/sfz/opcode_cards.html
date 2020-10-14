@@ -1,4 +1,4 @@
-					<div id="filter-container">
+					<div>
 						<div class="card border-dark mb-3">
 							<div class="card-header text-light"
 								style="background-color:#222">
@@ -18,36 +18,20 @@
 								Versions
 							</div>
 							<div class="card-body table-filters" style="padding: 0.5rem">
+								{% assign versions = "ARIA, Cakewalk, LinuxSampler, SFZ v1, SFZ v2, Unknown" | split: ", " %}
+								{% for version in versions %}
 								<div><input
 									type="checkbox"
-									data-filter-column="6"
-									value="ARIA">
-									ARIA</div>
-								<div><input
+									class="versions-checkbox"
+									value="{% if version != "Unknown" %}{{ version }}{% endif %}">
+									{{ version }}</div>
+								<div class="filter-control"><input
 									type="checkbox"
+									class="versions-pseudo-checkbox"
 									data-filter-column="6"
-									value="Cakewalk">
-									Cakewalk</div>
-								<div><input
-									type="checkbox"
-									data-filter-column="6"
-									value="LinuxSampler">
-									LinuxSampler</div>
-								<div><input
-									type="checkbox"
-									data-filter-column="6"
-									value="SFZ v1">
-									SFZ v1</div>
-								<div><input
-									type="checkbox"
-									data-filter-column="6"
-									value="SFZ v2">
-									SFZ v2</div>
-								<div><input
-									type="checkbox"
-									data-filter-column="6"
-									value="">
-									Unknown</div>
+									value="{{ version }}"
+								  style="display: none;"></div>
+								{% endfor %}
 							</div>
 						</div>
 						<div class="card border-dark mb-3">
