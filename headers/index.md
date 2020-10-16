@@ -17,9 +17,3 @@ shaping envelopes, parameter response etc.
 
 {% include sfz/headers-table-generator.html %}
 {%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
-
-See also [SFZ1], [SFZ2] and [ARIA Extensions].
-
-[SFZ1]: /misc/sfz1
-[SFZ2]: /misc/sfz2
-[ARIA Extensions]: /extensions/aria/
