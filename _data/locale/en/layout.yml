@@ -4,23 +4,8 @@ navigation:
   pages:
   - label: "Headers"
     url: "/headers/"
-  -
-  - label: "SFZ v1 Opcodes"
-    url: "/misc/sfz1"
 
-  - label: "SFZ v2 Opcodes"
-    url: "/misc/sfz2"
-
-  - label: "ARIA Extensions"
-    url: "/extensions/aria/"
-
-  - label: "Cakewalk Extensions"
-    url: "/extensions/cakewalk/"
-
-  - label: "LinuxSampler Extensions"
-    url: "/extensions/linuxsampler/"
-
-  - label: "All Opcodes"
+  - label: "Opcodes"
     url: "/opcodes/"
   -
   - label: "Modulations"
