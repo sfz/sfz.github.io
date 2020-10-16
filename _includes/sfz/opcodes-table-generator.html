@@ -1,44 +1,31 @@
 
+{%-for category in site.data.sfz.syntax.categories-%}
+	{%if category.opcodes.size > 0%}
+		{%-assign categories = categories | append: ',' | append: category.name-%}
+		{%-assign category_ids = category_ids | append: ',' | append: category.id-%}
+	{%-endif-%}
+	{%-for category_type in category.types-%}
+		{%-assign categories = categories | append: ',' | append: category_type.name-%}
+		{%-assign category_ids = category_ids | append: ',' | append: category_type.id-%}
+	{%-endfor-%}
+{%-endfor-%}
+{%-assign categories = categories | remove_first: ',' | split: ','-%}
+{%-assign category_ids = category_ids | remove_first: ',' | split: ','-%}
 <style>
 div.checkbox-filter {
 	border-left: 10px solid;
 	padding-left: 5px;
 	margin: 1px 0 1px 0
 }
-div.ins {border-color:#ff0;}
-div.ldg {border-color:#ff0;}
-div.wos {border-color:#ff0;}
-div.vlc {border-color:#b3f500;}
-div.lfo {border-color:#62e800;}
-div.eg  {border-color:#00b730;}
-div.crv {border-color:#00a0a0;}
-div.efx {border-color:#006fbb;}
-div.ptc {border-color:#0039eb;}
-div.amp {border-color:#7d00d3;}
-div.flt {border-color:#bf00bf;}
-div.eq  {border-color:#de007d;}
-div.map {border-color:red;}
-div.mid {border-color:#faa;}
-div.int {border-color:#ff8e00;}
-div.trg {border-color:#ffbf00;}
-div.spl {border-color:#ffe6b3;}
-td.ins {background-color:#ff0;}
-td.ldg {background-color:#ff0;}
-td.wos {background-color:#ff0;}
-td.vlc {background-color:#b3f500;}
-td.lfo {background-color:#62e800;}
-td.eg  {background-color:#00b730;}
-td.crv {background-color:#00a0a0;}
-td.efx {background-color:#006fbb;}
-td.ptc {background-color:#0039eb;}
-td.amp {background-color:#7d00d3;}
-td.flt {background-color:#bf00bf;}
-td.eq  {background-color:#de007d;}
-td.map {background-color:red;}
-td.mid {background-color:#faa;}
-td.int {background-color:#ff8e00;}
-td.trg {background-color:#ffbf00;}
-td.spl {background-color:#ffe6b3;}
+{%-assign i = 0-%}
+{%-assign j = 1-%}
+{%-for category in categories-%}
+	{%-assign id = category_ids[i]-%}
+	{%-assign n = 360 | times: j | divided_by: categories.size-%}
+	div.{{ id }} {border-color:hsl({{n}},100%,50%)} td.{{ id }} {background-color:hsl({{n}},100%,50%)}
+	{%-assign i = i | plus: 1-%}
+	{%-assign j = j | plus: 1-%}
+{%-endfor-%}
 </style>
 
 <table
