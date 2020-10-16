@@ -1,0 +1,60 @@
+					<div>
+						<div class="card border-dark mb-3">
+							<div class="card-header text-light"
+								style="background-color:#222">
+								Opcodes
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<input
+									id="search-opcodes"
+									placeholder="Search for opcodes..."
+									data-filter-column="1">
+							</div>
+						</div>
+						<div class="card border-dark mb-3">
+							<div class="card-header text-light"
+								style="background-color:#222">
+								Versions
+							</div>
+							<div class="card-body table-filters" style="padding: 0.5rem">
+{% for version in site.data.sfz.syntax.versions %}
+								<div>
+									<input
+										type="checkbox"
+										class="versions-checkbox"
+										value="{% if version != "Unknown" %}{{ version }}{% endif %}">
+										{{ version }}
+								</div>
+{% endfor %}
+							</div>
+						</div>
+						<div class="card border-dark mb-3">
+							<div
+								class="card-header text-light"
+								style="background-color:#222">Categories
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+{% for category in site.data.sfz.syntax.categories %}
+	{%assign hue = 10%}
+	{% if category.opcodes.size > 0 %}
+								<div class="checkbox-filter {{ category.id }}">
+									<input
+										type="checkbox"
+										class="categories-checkbox"
+										value="{{ category.name }}">
+										{{ category.name }}
+								</div>
+	{% endif %}
+	{% for category_type in category.types %}
+								<div class="checkbox-filter {{ category_type.id }}">
+									<input
+										type="checkbox"
+										class="categories-checkbox"
+										value="{{ category_type.name }}">
+										{{ category_type.name }}
+								</div>
+	{% endfor %}
+{% endfor %}
+							</div>
+						</div>
+					</div>

@@ -1,4 +1,5 @@
 format: 2
+versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "Unknown"]
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -52,6 +53,7 @@ headers:
 # ------------------------------------------------------------------------------
 categories:
 - name: "Real-Time Instrument Script"
+  id: "scr"
   url: "http://doc.linuxsampler.org/Instrument_Scripts/"
   opcodes:
   - name: "script"
@@ -68,6 +70,7 @@ categories:
     It could be samples or oscillators"
   types:
   - name: "Sample Playback"
+    id: "spl"
     short_description:
       "Sample Playback opcodes defines the parameters of the sound generation."
     opcodes:
@@ -384,6 +387,7 @@ categories:
         - name: "off"
 
 - name: "Instrument Settings"
+  id: "ins"
   url: "/misc/categories#instrument-settings"
   short_description: "Opcodes used under the <control> header."
   opcodes:
@@ -538,6 +542,7 @@ categories:
 
   types:
   - name: "Voice Lifecycle"
+    id: "vlc"
     opcodes:
     - name: "group"
       short_description: "Exclusive group number for this region."
@@ -690,6 +695,7 @@ categories:
     "Region Logic opcodes define the conditions under which a voice plays or stops."
   types:
   - name: "Key Mapping"
+    id: "map"
     opcodes:
     - name: "key"
       short_description:
@@ -750,6 +756,7 @@ categories:
         max: 127
 
   - name: "MIDI Conditions"
+    id: "mid"
     opcodes:
     - name: "lochan"
       short_description:
@@ -1090,6 +1097,7 @@ categories:
       - name: "width"
 
   - name: "Internal Conditions"
+    id: "int"
     opcodes:
     - name: "lobpm"
       short_description: "Host tempo value."
@@ -1216,6 +1224,7 @@ categories:
         type_name: "float"
 
   - name: "Triggers"
+    id: "trg"
     opcodes:
     - name: "trigger"
       short_description:
@@ -1400,6 +1409,7 @@ categories:
   short_description: "Performance Parameters are all sound modifiers."
   types:
   - name: "Amplifier"
+    id: "amp"
     opcodes:
     - name: "pan"
       short_description: "The panoramic position for the region."
@@ -1934,6 +1944,7 @@ categories:
         unit: "dB"
 
   - name: "EQ"
+    id: "eq"
     opcodes:
     - name: "eqN_bw"
       short_description: "Bandwidth of the equalizer band, in octaves."
@@ -2053,6 +2064,7 @@ categories:
         - name: "hshelf"
 
   - name: "Filter"
+    id: "flt"
     opcodes:
     - name: "cutoff"
       version: "SFZ v1"
@@ -2576,6 +2588,7 @@ categories:
             max: 100
 
   - name: "Pitch"
+    id: "ptc"
     opcodes:
     - name: "bend_up"
       version: "SFZ v1"
@@ -2776,6 +2789,7 @@ categories:
   short_description: "Modulation opcodes comprise of all the LFO and EG controls."
   types:
   - name: "Envelope Generators"
+    id: "eg"
     url: "/modulations/envelope_generators"
     opcodes:
     - name: "ampeg_attack"
@@ -3882,6 +3896,7 @@ categories:
           version: "Cakewalk"
 
   - name: "LFO"
+    id: "lfo"
     url: "/modulations/lfo"
     short_description: "Low Frequency Oscillator."
     opcodes:
@@ -4614,6 +4629,7 @@ categories:
         type_name: "float"
 
 - name: "Curves"
+  id: "crv"
   url: "/headers/curve"
   opcodes:
   - name: "curve_index"
@@ -4637,6 +4653,7 @@ categories:
       max: 1
 
 - name: "Effects"
+  id: "efx"
   url: "/headers/effect"
   opcodes:
   - name: "apan_depth"
@@ -4759,9 +4776,9 @@ categories:
   - name: "comp_gain"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "dB"
+   #value:
+     #type_name: "float"
+     #unit: "dB"
 
   - name: "comp_ratio"
     short_description: ""
@@ -4985,9 +5002,9 @@ categories:
   - name: "delay_resonance"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "dB"
+   #value:
+     #type_name: "float"
+     #unit: "dB"
     modulation:
       midi_cc:
       - name: "delay_resonance_onccN"
@@ -5022,9 +5039,9 @@ categories:
   - name: "delay_timec"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "seconds"
+   #value:
+     #type_name: "float"
+     #unit: "seconds"
     modulation:
       midi_cc:
       - name: "delay_timec_onccN"
@@ -5032,9 +5049,9 @@ categories:
   - name: "delay_timel"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "seconds"
+   #value:
+     #type_name: "float"
+     #unit: "seconds"
     modulation:
       midi_cc:
       - name: "delay_timel_onccN"
@@ -5042,9 +5059,9 @@ categories:
   - name: "delay_timer"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "seconds"
+   #value:
+     #type_name: "float"
+     #unit: "seconds"
     modulation:
       midi_cc:
       - name: "delay_timer_onccN"
@@ -5200,9 +5217,9 @@ categories:
   - name: "filter_cutoff"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "Hz"
+   #value:
+     #type_name: "float"
+     #unit: "Hz"
     modulation:
       midi_cc:
       - name: "filter_cutoff_onccN"
@@ -5210,9 +5227,9 @@ categories:
   - name: "filter_resonance"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "dB"
+   #value:
+     #type_name: "float"
+     #unit: "dB"
     modulation:
       midi_cc:
       - name: "filter_resonance_onccN"
@@ -5252,16 +5269,16 @@ categories:
   - name: "gate_attack"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "seconds"
+   #value:
+     #type_name: "float"
+     #unit: "seconds"
 
   - name: "gate_release"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "seconds"
+   #value:
+     #type_name: "float"
+     #unit: "seconds"
 
   - name: "gate_stlink"
     short_description: ""
@@ -5275,9 +5292,9 @@ categories:
   - name: "gate_threshold"
     short_description: ""
     version: "Cakewalk"
-#   value:
-#     type_name: "float"
-#     unit: "dB"
+   #value:
+     #type_name: "float"
+     #unit: "dB"
 
   - name: "internal"
     short_description: "Cakewalk internal features switch."
@@ -5618,6 +5635,7 @@ categories:
       type_name: "string"
 
 - name: "Loading"
+  id: "ldg"
   url: "/extensions/cakewalk#loading"
   opcodes:
   - name: "load_mode"
@@ -5655,6 +5673,7 @@ categories:
       type_name: "string"
 
 - name: "Wavetable Oscillator"
+  id: "wos"
   url: "/extensions/cakewalk#wavetable-oscillator"
   opcodes:
   - name: "oscillator"

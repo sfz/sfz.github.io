@@ -30,7 +30,11 @@
 				</div>
 				<div class="col-md-3">
 					<aside>
-{% include cards.html %}
+{%if page.cards%}
+	{% include {{ page.cards }} %}
+{%else%}
+	{% include cards.html %}
+{%endif%}
 					</aside>
 				</div>
 			</div>

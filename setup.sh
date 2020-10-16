@@ -30,4 +30,4 @@ if [ ! -f "assets/css/style.min.css" ] || [ "$1" == "-a" ] || [ "$1" == "--asset
 fi
 
 echo "Running Jekyll..."
-bundle exec jekyll serve --watch --host=0.0.0.0
+bundle exec jekyll serve --watch --incremental --host=0.0.0.0
