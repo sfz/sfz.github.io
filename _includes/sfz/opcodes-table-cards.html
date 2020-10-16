@@ -6,7 +6,7 @@
 							</div>
 							<div class="card-body" style="padding: 0.5rem">
 								<input
-									id="filter-opcodes"
+									id="search-opcodes"
 									placeholder="Search for opcodes..."
 									data-filter-column="1">
 							</div>
@@ -24,14 +24,6 @@
 										class="versions-checkbox"
 										value="{% if version != "Unknown" %}{{ version }}{% endif %}">
 										{{ version }}
-								</div>
-								<div class="filter-control">
-									<input
-										type="checkbox"
-										class="versions-pseudo-checkbox"
-										data-filter-column="6"
-										value="{{ version }}"
-										style="display: none;">
 								</div>
 {% endfor %}
 							</div>
@@ -52,14 +44,6 @@
 										value="{{ category.name }}">
 										{{ category.name }}
 								</div>
-								<div class="filter-control">
-									<input
-										type="checkbox"
-										class="categories-pseudo-checkbox"
-										data-filter-column="0"
-										value="{{ category.name }}"
-										style="display: none;">
-								</div>
 	{% endif %}
 	{% for category_type in category.types %}
 								<div class="checkbox-filter {{ category_type.id }}">
@@ -68,14 +52,6 @@
 										class="categories-checkbox"
 										value="{{ category_type.name }}">
 										{{ category_type.name }}
-								</div>
-								<div class="filter-control">
-									<input
-										type="checkbox"
-										class="categories-pseudo-checkbox"
-										data-filter-column="0"
-										value="{{ category_type.name }}"
-										style="display: none;">
 								</div>
 	{% endfor %}
 {% endfor %}

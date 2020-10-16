@@ -1,7 +1,7 @@
 ---
 title: "Opcodes"
 cards: "sfz/opcodes-table-cards.html"
-scripts: ["filterable.min", "filterable-init"]
+scripts: ["filterable-init"]
 ---
 All opcodes, including extensions, starting in alphabetical order.\
 Note that [modulations] such as (on)ccN, and vel2* opcodes are included

@@ -1,40 +1,56 @@
-$(function(){
-	$('#data').filterable();
+$(function() {
 
-	var realVersionCheckboxes = $('.versions-checkbox').toArray();
-	var fakeVersionCheckboxes = $('.versions-pseudo-checkbox').toArray();
-	var realCategoryCheckboxes = $('.categories-checkbox').toArray();
-	var fakeCategoryCheckboxes = $('.categories-pseudo-checkbox').toArray();
+var $opcodeTable = $('#table-opcodes');
+var $opcodeSearch = $('#search-opcodes');
+var $versionFilters = $('.versions-checkbox');
+var $categoryFilters = $('.categories-checkbox');
 
-	var updateVersionCheckboxes = function() {
-			var someAreChecked = $(realVersionCheckboxes).filter(':checked').length > 0;
-			if (!someAreChecked)
-					$(fakeVersionCheckboxes).prop('checked', true).trigger('change');
-			else {
-					for (var i = 0, n = realVersionCheckboxes.length; i < n; ++i) {
-							var $fake = $(fakeVersionCheckboxes[i]);
-							var $real = $(realVersionCheckboxes[i]);
-							$fake.prop('checked', $real.prop('checked')).trigger('change');
-					}
-			}
+var categoryColumnNumber = 0;
+var opcodeColumnNumber = 1;
+var versionColumnNumber = 6;
+
+var updateTable = function() {
+	var searchText = $opcodeSearch.val();
+	var activeVersionFilters = $versionFilters.filter(':checked')
+			.map(function() { return $(this).val(); }).toArray();
+	var activeCategoryFilters = $categoryFilters.filter(':checked')
+			.map(function() { return $(this).val(); }).toArray();
+
+	var acceptRow = function($row) {
+		if (searchText !== "") {
+			var text = $row.find('td').eq(opcodeColumnNumber).text();
+			if (!text.includes(searchText))
+				return false;
+		}
+
+		if (activeVersionFilters.length > 0) {
+			var text = $row.find('td').eq(versionColumnNumber).text();
+			if (!activeVersionFilters.includes(text))
+				return false;
+		}
+
+		if (activeCategoryFilters.length > 0) {
+			var text = $row.find('td').eq(categoryColumnNumber).text();
+			if (!activeCategoryFilters.includes(text))
+				return false;
+		}
+
+		return true;
 	};
 
-	var updateCategoryCheckboxes = function() {
-			var someAreChecked = $(realCategoryCheckboxes).filter(':checked').length > 0;
-			if (!someAreChecked)
-					$(fakeCategoryCheckboxes).prop('checked', true).trigger('change');
-			else {
-					for (var i = 0, n = realCategoryCheckboxes.length; i < n; ++i) {
-							var $fake = $(fakeCategoryCheckboxes[i]);
-							var $real = $(realCategoryCheckboxes[i]);
-							$fake.prop('checked', $real.prop('checked')).trigger('change');
-					}
-			}
-	};
+	// go over all rows and apply the filter function
+	$('tbody tr', self.$table).each(function() {
+		var $row = $(this);
+		if (acceptRow($row))
+			$row.show();
+		else
+			$row.hide();
+	});
+};
 
-	updateVersionCheckboxes();
-	$(realVersionCheckboxes).on('change', null, updateVersionCheckboxes);
+// update the rows on checkbox toggled, or search box edited
+$opcodeSearch.on('input', null, updateTable);
+$versionFilters.on('change', null, updateTable);
+$categoryFilters.on('change', null, updateTable);
 
-	updateCategoryCheckboxes();
-	$(realCategoryCheckboxes).on('change', null, updateCategoryCheckboxes);
 });
