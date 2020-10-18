@@ -2,21 +2,14 @@
 						<div class="card border-dark mb-3">
 							<div class="card-header text-light"
 								style="background-color:#222">
-								Opcodes
+								Opcode Filters
 							</div>
 							<div class="card-body" style="padding: 0.5rem">
 								<input
 									id="search-opcodes"
 									placeholder="Search for opcodes..."
 									data-filter-column="1">
-							</div>
-						</div>
-						<div class="card border-dark mb-3">
-							<div class="card-header text-light"
-								style="background-color:#222">
-								Versions
-							</div>
-							<div class="card-body table-filters" style="padding: 0.5rem">
+								<div><b>Versions</b></div>
 {% for version in site.data.sfz.syntax.versions %}
 								<div>
 									<input
@@ -26,14 +19,7 @@
 										{{ version }}
 								</div>
 {% endfor %}
-							</div>
-						</div>
-						<div class="card border-dark mb-3">
-							<div
-								class="card-header text-light"
-								style="background-color:#222">Categories
-							</div>
-							<div class="card-body" style="padding: 0.5rem">
+								<div><b>Categories</b></div>
 {% for category in site.data.sfz.syntax.categories %}
 	{%assign hue = 10%}
 	{% if category.opcodes.size > 0 %}
