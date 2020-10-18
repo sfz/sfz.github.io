@@ -2,6 +2,7 @@
 
 ## Opcode documentation
 
+- Complete versions page.
 - Create a script that recreates symbolic links for opcode modulations and then
   remove page copies that can lead to unneeded duplicated/desynced information.
 - bend_smooth: Missing range
