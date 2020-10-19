@@ -2,6 +2,10 @@
 layout: "sfz/opcode"
 opcode_name: "group"
 ---
+
+ARIA adds also the `polyphony_group` alias to reduce the confusion between
+the group opcode and the ‹<a href='/headers/group'>group</a>› header.
+
 ## Examples
 
 ```

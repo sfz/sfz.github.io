@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "polyphony_group"
----
+group.md
