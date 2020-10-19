@@ -1,6 +1,6 @@
 ---
 layout: "sfz/opcode"
-opcode_name: "sw_down/sw_up"
+title: "sw_down / sw_up"
 ---
 Can be entered in either MIDI note numbers (0 to 127) or in MIDI note
 names (C-1 to G9)
