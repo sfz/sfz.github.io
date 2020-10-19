@@ -190,9 +190,18 @@ categories:
         version: "SFZ v2"
       value:
         type_name: "integer"
+        unit: "sample units"
         default: 0
         min: 0
         max: 4294967296
+      modulation:
+        midi_cc:
+        - name: "loop_startccN"
+          version: "Cakewalk"
+          short_description: "Change of loop start point."
+          alias:
+          - name: "loop_start_onccN"
+            version: "Cakewalk"
 
     - name: "loop_end"
       short_description: "The loop end point, in samples."
@@ -202,6 +211,7 @@ categories:
         version: "SFZ v2"
       value:
         type_name: "integer"
+        unit: "sample units"
         default: 0
         min: 0
         max: 4294967296
@@ -213,9 +223,6 @@ categories:
           alias:
           - name: "loop_length_onccN"
             version: "Cakewalk"
-          value:
-            type_name: "integer"
-            unit: "sample units"
 
     - name: "loop_tune"
       short_description: "Tuning for only the loop segment."
@@ -677,17 +684,6 @@ categories:
       value:
         type_name: "float"
         default: 0.006
-
-    - name: "polyphony_group"
-      short_description:
-        "An alias for <a href='/opcodes/group'>group</a> to reduce the confusion
-        between the group opcode and the ‹<a href='/headers/group'>group</a>› header."
-      version: "ARIA"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 4294967296
 
 - name: "Region Logic"
   url: "/misc/categories#region-logic"
