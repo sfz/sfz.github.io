@@ -38,6 +38,9 @@ navigation:
 - label: "Tutorials"
   type: "dropdown"
   pages:
+  - label: "Basics"
+    url: "/tutorials/basics"
+  -
   - label: "Basic / Template"
     url: "/tutorials/basic_sfz_file"
 
