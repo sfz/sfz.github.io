@@ -2109,6 +2109,8 @@ categories:
           version: "SFZ v2"
           value:
             type_name: "integer"
+            default: 0
+            min: 0
         - name: "cutoff_chanaft"
           short_description:
             "The variation in the cutoff frequency when MIDI channel aftertouch
@@ -2131,6 +2133,47 @@ categories:
             min: -9600
             max: 9600
             unit: "cents"
+      alias:
+      - name: "cutoff2"
+        version: "SFZ v2"
+        modulation:
+          midi_cc:
+          - name: "cutoff2_onccN"
+          - name: "cutoff2_curveccN"
+          - name: "cutoff2_smoothccN"
+          - name: "cutoff2_stepccN"
+
+    - name: "fil_gain"
+      short_description: "Gain for lsh, hsh and peq filter types."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        unit: "dB"
+      modulation:
+        midi_cc:
+        - name: "fil_gain_onccN"
+      alias:
+      - name: "fil2_gain"
+        short_description: "Gain for lsh, hsh and peq filter types."
+        modulation:
+          midi_cc:
+          - name: "fil2_gain_onccN"
+
+    - name: "fil_keycenter"
+      version: "SFZ v1"
+      short_description: "Center key for filter keyboard tracking."
+      value:
+        type_name: "integer"
+        default: 60
+        min: 0
+        max: 127
+      alias:
+      - name: "fil2_keycenter"
+        short_description:
+          "Same as <a href='/opcodes/fil_keycenter'>fil_keycenter</a>,
+          but used to specify the type for the second filter."
+        version: "SFZ v2"
 
     - name: "fil_keytrack"
       version: "SFZ v1"
@@ -2142,15 +2185,12 @@ categories:
         min: 0
         max: 1200
         unit: "cents"
-
-    - name: "fil_keycenter"
-      version: "SFZ v1"
-      short_description: "Center key for filter keyboard tracking."
-      value:
-        type_name: "integer"
-        default: 60
-        min: 0
-        max: 127
+      alias:
+      - name: "fil2_keytrack"
+        short_description:
+          "Same as <a href='/opcodes/fil_keytrack'>fil_keytrack</a>,
+          but used to specify the type for the second filter."
+        version: "SFZ v2"
 
     - name: "fil_random"
       short_description:
@@ -2171,95 +2211,76 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "filtype"
+      - name: "fil2_type"
+        short_description: "Filter type."
+        version: "SFZ v2"
       value:
         type_name: "string"
         default: "lpf_2p"
         options:
         - name: "lpf_1p"
-          description: "One-pole low pass filter (6dB/octave)"
+          description: "One-pole low pass filter (6dB/octave)."
         - name: "hpf_1p"
-          description: "One-pole high pass filter (6dB/octave)"
+          description: "One-pole high pass filter (6dB/octave)."
         - name: "lpf_2p"
-          description: "Two-pole low pass filter (12dB/octave)"
+          description: "Two-pole low pass filter (12dB/octave)."
         - name: "hpf_2p"
-          description: "Two-pole high pass filter (12dB/octave)"
+          description: "Two-pole high pass filter (12dB/octave)."
         - name: "bpf_2p"
-          description: "Two-pole band pass filter (12dB/octave)"
+          description: "Two-pole band pass filter (12dB/octave)."
         - name: "brf_2p"
-          description: "Two-pole band rejection filter (12dB/octave)"
+          description: "Two-pole band rejection filter (12dB/octave)."
         - name: "bpf_1p"
-          description: "One-pole band pass filter (6dB/octave)"
+          description: "One-pole band pass filter (6dB/octave)."
           version: "SFZ v2"
         - name: "brf_1p"
-          description: "One-pole band rejection filter (6dB/octave)"
+          description: "One-pole band rejection filter (6dB/octave)."
           version: "SFZ v2"
         - name: "apf_1p"
-          description: "One-pole all pass filter (6dB/octave)"
+          description: "One-pole all pass filter (6dB/octave)."
           version: "SFZ v2"
         - name: "lpf_2p_sv"
-          description: "Two-pole low pass filter (12dB/octave) state variable"
+          description: "Two-pole low pass state variable filter (12dB/octave)."
           version: "SFZ v2"
         - name: "hpf_2p_sv"
-          description: "Two-pole high pass filter (12dB/octave) state variable"
+          description: "Two-pole high pass state variable filter (12dB/octave)."
           version: "SFZ v2"
         - name: "bpf_2p_sv"
-          description: "Two-pole band pass filter (12dB/octave) state variable"
+          description: "Two-pole band pass state variable filter (12dB/octave)."
           version: "SFZ v2"
         - name: "brf_2p_sv"
-          description: "Two-pole band rejection filter (12dB/octave) state variable"
+          description: "Two-pole band rejection state variable filter (12dB/octave)."
           version: "SFZ v2"
         - name: "pkf_2p"
-          description: "Two-pole peak filter (12dB/octave)"
+          description: "Two-pole peak filter (12dB/octave)."
           version: "SFZ v2"
         - name: "lpf_4p"
-          description: "Four-pole low pass filter (24dB/octave)"
+          description: "Four-pole low pass filter (24dB/octave)."
           version: "SFZ v2"
         - name: "hpf_4p"
-          description: "Four-pole high pass filter (24dB/octave)"
+          description: "Four-pole high pass filter (24dB/octave)."
           version: "SFZ v2"
         - name: "lpf_6p"
-          description: "Six-pole low pass filter (36dB/octave)"
+          description: "Six-pole low pass filter (36dB/octave)."
           version: "SFZ v2"
         - name: "hpf_6p"
-          description: "Six-pole high pass filter (36dB/octave)"
+          description: "Six-pole high pass filter (36dB/octave)."
           version: "SFZ v2"
         - name: "comb"
-          description: "Comb filter"
+          description: "Comb filter."
           version: "SFZ v2"
         - name: "pink"
-          description: "Pink filter"
+          description: "Pink filter."
           version: "SFZ v2"
         - name: "lsh"
-          description: "Low shelf"
+          description: "Low shelf."
           version: "ARIA"
         - name: "hsh"
-          description: "High shelf"
+          description: "High shelf."
           version: "ARIA"
         - name: "peq"
-          description: "Parametric EQ"
+          description: "Parametric EQ."
           version: "ARIA"
-
-    - name: "fil_gain"
-      short_description: "Gain for lsh, hsh and peq filter types."
-      version: "ARIA"
-      value:
-        type_name: "float"
-        default: 0
-        unit: "dB"
-      modulation:
-        midi_cc:
-        - name: "fil_gain_onccN"
-
-    - name: "fil2_gain"
-      short_description: "Gain for lsh, hsh and peq filter types."
-      version: "ARIA"
-      value:
-        type_name: "float"
-        default: 0
-        unit: "dB"
-      modulation:
-        midi_cc:
-        - name: "fil2_gain_onccN"
 
     - name: "fil_veltrack"
       version: "SFZ v1"
@@ -2272,6 +2293,12 @@ categories:
         min: -9600
         max: 9600
         unit: "cents"
+      alias:
+      - name: "fil2_veltrack"
+        short_description:
+          "Same as <a href='/opcodes/fil_veltrack'>fil_veltrack</a>,
+          but used to specify the type for the second filter."
+        version: "SFZ v2"
 
     - name: "resonance"
       short_description: "The filter cutoff resonance value, in decibels."
@@ -2283,6 +2310,8 @@ categories:
         max: 40
         unit: "dB"
       modulation:
+        envelope: "✓"
+        lfo: "✓"
         midi_cc:
         - name: "resonance_onccN"
           version: "SFZ v2"
@@ -2313,180 +2342,40 @@ categories:
             type_name: "integer"
             default: 0
             min: 0
-
-    - name: "cutoff2"
-      version: "SFZ v2"
-      short_description:
-        "Same as <a href='/opcodes/cutoff'>cutoff</a>,
-        but used to specify the cutoff for the second filter."
-      value:
-        type_name: "float"
-        default: "filter disabled"
-        min: 0
-        max: "SampleRate / 2"
-        unit: "Hz"
-      modulation:
-        envelope: "✓"
-        lfo: "✓"
-        midi_cc:
-        - name: "cutoff2_onccN"
-          version: "SFZ v2"
-          short_description:
-            "The variation in the cutoff frequency
-            when MIDI continuous controller N is received."
-          value:
-            type_name: "integer"
-            default: 0
-            min: -9600
-            max: 9600
-            unit: "cents"
-        - name: "cutoff2_curveccN"
-          version: "SFZ v2"
-          value:
-            type_name: "integer"
-            min: 0
-            max: 255
-        - name: "cutoff2_smoothccN"
-          version: "SFZ v2"
-          value:
-            type_name: "float"
-            default: 0
-            min: 0
-            unit: "ms"
-        - name: "cutoff2_stepccN"
-          version: "SFZ v2"
-          value:
-            type_name: "integer"
-            default: 0
-            min: 0
-
-    - name: "fil2_keycenter"
-      short_description:
-        "Same as <a href='/opcodes/fil_keycenter'>fil_keycenter</a>,
-        but used to specify the type for the second filter."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-        default: 60
-        min: 0
-        max: 127
-
-    - name: "fil2_keytrack"
-      short_description:
-        "Same as <a href='/opcodes/fil_keytrack'>fil_keytrack</a>,
-        but used to specify the type for the second filter."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 1200
-        unit: "cents"
-
-    - name: "fil2_type"
-      short_description: "Filter type."
-      version: "SFZ v2"
-      value:
-        type_name: "string"
-        default: "lpf_2p"
-        options:
-        - name: "lpf_1p"
-          description: "One-pole low pass filter (6dB/octave)."
-        - name: "hpf_1p"
-          description: "One-pole high pass filter (6dB/octave)."
-        - name: "lpf_2p"
-          description: "Two-pole low pass filter (12dB/octave)."
-        - name: "hpf_2p"
-          description: "Two-pole high pass filter (12dB/octave)."
-        - name: "bpf_2p"
-          description: "Two-pole band pass filter (12dB/octave)."
-        - name: "brf_2p"
-          description: "Two-pole band rejection filter (12dB/octave)."
-        - name: "bpf_1p"
-          description: "One-pole band pass filter (6dB/octave)."
-        - name: "brf_1p"
-          description: "One-pole band rejection filter (6dB/octave)."
-        - name: "apf_1p"
-          description: "One-pole all pass filter (6dB/octave)."
-        - name: "lpf_2p_sv"
-          description: "Two-pole low pass state variable filter (12dB/octave)."
-        - name: "hpf_2p_sv"
-          description: "Two-pole high pass state variable filter (12dB/octave)."
-        - name: "bpf_2p_sv"
-          description: "Two-pole band pass state variable filter (12dB/octave)."
-        - name: "brf_2p_sv"
-          description: "Two-pole band rejection state variable filter (12dB/octave)."
-        - name: "pkf_2p"
-          description: "Two-pole peak filter (12dB/octave)."
-        - name: "lpf_4p"
-          description: "Four-pole low pass filter (24dB/octave)."
-        - name: "hpf_4p"
-          description: "Four-pole high pass filter (24dB/octave)."
-        - name: "lpf_6p"
-          description: "Six-pole low pass filter (36dB/octave)."
-        - name: "hpf_6p"
-          description: "Six-pole high pass filter (36dB/octave)."
-        - name: "comb"
-          description: "Comb filter."
-        - name: "pink"
-          description: "Pink filter."
-
-    - name: "fil2_veltrack"
-      short_description:
-        "Same as <a href='/opcodes/fil_veltrack'>fil_veltrack</a>,
-        but used to specify the type for the second filter."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-        default: 0
-        min: -9600
-        max: 9600
-        unit: "cents"
-
-    - name: "resonance2"
-      version: "SFZ v2"
-      short_description:
-        "Same as <a href='/opcodes/resonance'>resonance</a>,
-        but used to specify the resonance for the second filter."
-      value:
-        type_name: "float"
-        default: 0
-        min: 0
-        max: 40
-        unit: "dB"
-      modulation:
-        envelope: "✓"
-        lfo: "✓"
-        midi_cc:
-        - name: "resonance2_onccN"
-          version: "SFZ v2"
-          value:
-            type_name: "float"
-            default: 0
-            min: 0
-            max: 40
-            unit: "dB"
-          alias:
-          - name: "resonance2_ccN"
-        - name: "resonance2_curveccN"
-          version: "SFZ v2"
-          value:
-            type_name: "integer"
-            min: 0
-            max: 255
-        - name: "resonance2_smoothccN"
-          version: "SFZ v2"
-          value:
-            type_name: "float"
-            default: 0
-            min: 0
-            unit: "ms"
-        - name: "resonance2_stepccN"
-          version: "SFZ v2"
-          value:
-            type_name: "integer"
-            default: 0
-            min: 0
+      alias:
+      - name: "resonance2"
+        version: "SFZ v2"
+        modulation:
+          midi_cc:
+          - name: "resonance2_onccN"
+            version: "SFZ v2"
+            value:
+              type_name: "float"
+              default: 0
+              min: 0
+              max: 40
+              unit: "dB"
+            alias:
+            - name: "resonance2_ccN"
+          - name: "resonance2_curveccN"
+            version: "SFZ v2"
+            value:
+              type_name: "integer"
+              min: 0
+              max: 255
+          - name: "resonance2_smoothccN"
+            version: "SFZ v2"
+            value:
+              type_name: "float"
+              default: 0
+              min: 0
+              unit: "ms"
+          - name: "resonance2_stepccN"
+            version: "SFZ v2"
+            value:
+              type_name: "integer"
+              default: 0
+              min: 0
 
     - name: "noise_filter"
       version: "Cakewalk"
@@ -4399,25 +4288,17 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_cutoff_onccX"
-          version: "SFZ v2"
         - name: "lfoN_cutoff_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_cutoff_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_cutoff2"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_cutoff2_onccX"
-          version: "SFZ v2"
-
-        - name: "lfoN_cutoff2_smoothccX"
-          version: "SFZ v2"
-
-        - name: "lfoN_cutoff2_stepccX"
-          version: "SFZ v2"
+      alias:
+      - name: "lfoN_cutoff2"
+        short_description: ""
+        version: "SFZ v2"
+        modulation:
+          midi_cc:
+          - name: "lfoN_cutoff2_onccX"
+          - name: "lfoN_cutoff2_smoothccX"
+          - name: "lfoN_cutoff2_stepccX"
 
     - name: "lfoN_resonance"
       short_description: ""
@@ -4425,27 +4306,15 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_resonance_onccX"
-          version: "SFZ v2"
-
         - name: "lfoN_resonance_smoothccX"
-          version: "SFZ v2"
-
         - name: "lfoN_resonance_stepccX"
-          version: "SFZ v2"
-
-    - name: "lfoN_resonance2"
-      short_description: ""
-      version: "SFZ v2"
-      modulation:
-        midi_cc:
-        - name: "lfoN_resonance2_onccX"
-          version: "SFZ v2"
-
-        - name: "lfoN_resonance2_smoothccX"
-          version: "SFZ v2"
-
-        - name: "lfoN_resonance2_stepccX"
-          version: "SFZ v2"
+      alias:
+      - name: "lfoN_resonance2"
+        modulation:
+          midi_cc:
+          - name: "lfoN_resonance2_onccX"
+          - name: "lfoN_resonance2_smoothccX"
+          - name: "lfoN_resonance2_stepccX"
 
     - name: "lfoN_eqXfreq"
       short_description: ""
