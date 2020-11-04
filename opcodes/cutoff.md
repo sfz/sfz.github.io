@@ -1,6 +1,7 @@
 ---
 layout: "sfz/opcode"
 opcode_name: "cutoff"
+title: "cutoff / cutoff2"
 ---
 Note that while this is specified in Hertz, filter LFO depths in the SFZ 1 spec are in cents.
 There are two filters in series - the cutoff frequency of one is controlled by cutoff, that

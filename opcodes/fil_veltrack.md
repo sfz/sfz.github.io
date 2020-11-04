@@ -1,6 +1,7 @@
 ---
 layout: "sfz/opcode"
 opcode_name: "fil_veltrack"
+title: "fil_veltrack / fil2_veltrack"
 ---
 ## Examples
 

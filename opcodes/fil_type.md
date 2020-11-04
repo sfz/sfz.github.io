@@ -1,5 +1,6 @@
 ---
 layout: "sfz/opcode"
+opcode_name: "fil_type"
 title: "fil_type / fil2_type"
 ---
 Allows you to choose which type of filter you use if not specified

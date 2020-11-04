@@ -1,6 +1,7 @@
 ---
 layout: "sfz/opcode"
 opcode_name: "resonance"
+title: "resonance / resonance2"
 ---
 ## Example
 
