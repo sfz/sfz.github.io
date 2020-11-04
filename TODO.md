@@ -6,7 +6,6 @@
 - Create a script that recreates symbolic links for opcode modulations and then
   remove page copies that can lead to unneeded duplicated/desynced information.
 - bend_smooth: Missing range
-- Merge opcodes like cutoff(2) and resonance(2) in the same page.
 - Complete _envelope_generators_ and _lfo_ type pages
 
 ### Modulations
