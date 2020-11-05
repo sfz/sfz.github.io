@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "egN_resonance"
----
+egN_resonance.md

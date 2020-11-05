@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "egN_noiselevel"
----
+egN_noiselevel.md

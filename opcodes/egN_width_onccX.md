@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "egN_width"
----
+egN_width.md

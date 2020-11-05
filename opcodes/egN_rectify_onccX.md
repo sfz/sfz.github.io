@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "egN_rectify"
----
+egN_rectify.md

@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "lfoN_noisestep"
----
+lfoN_noisestep.md

@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-title: "start_lohdccN / start_hihdccN"
----
+on_hihdccN.md

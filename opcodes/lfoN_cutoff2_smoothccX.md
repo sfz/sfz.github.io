@@ -1,4 +1,1 @@
----
-layout: "sfz/opcode"
-opcode_name: "lfoN_cutoff"
----
+lfoN_cutoff.md
