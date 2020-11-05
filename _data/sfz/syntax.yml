@@ -1262,14 +1262,19 @@ categories:
         and <code>on_hiccN</code> is received, the region will play.
         Default value is -1, it means unassigned."
       version: "SFZ v1"
-      alias:
-      - name: "start_loccN"
-        version: "SFZ v2"
       value:
         type_name: "integer"
         default: -1
         min: 0
         max: 127
+      alias:
+      - name: "start_loccN"
+        short_description:
+          "If a MIDI control message with a value between <code>start_loccN</code>
+          and <code>start_hiccN</code> is received, the region will play.
+          Alias for <a href='/opcodes/on_loccN'>on_loccN</a>.
+          Default value is -1, it means unassigned."
+        version: "SFZ v2"
 
     - name: "on_hiccN"
       short_description:
@@ -1277,84 +1282,47 @@ categories:
         and <code>on_hiccN</code> is received, the region will play.
         Default value is -1, it means unassigned."
       version: "SFZ v1"
-      alias:
-      - name: "start_hiccN"
-        version: "SFZ v2"
       value:
         type_name: "integer"
         default: -1
         min: 0
         max: 127
+      alias:
+      - name: "start_hiccN"
+        short_description:
+          "If a MIDI control message with a value between <code>start_loccN</code>
+          and <code>start_hiccN</code> is received, the region will play.
+          Alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>.
+          Default value is -1, it means unassigned."
+        version: "SFZ v2"
 
     - name: "on_lohdccN"
       short_description:
         "Like <a href='/opcodes/on_loccN'>on_loccN</a> but with floating point MIDI CCs."
       version: "ARIA"
-      alias:
-      - name: "start_lohdccN"
       value:
         type_name: "float"
         default: -1
         min: 0
         max: 1
+      alias:
+      - name: "start_lohdccN"
+        short_description:
+          "Like <a href='/opcodes/start_loccN'>start_loccN</a> but with floating point MIDI CCs."
 
     - name: "on_hihdccN"
       short_description:
         "Like <a href='/opcodes/on_hiccN'>on_hiccN</a> but with floating point MIDI CCs."
       version: "ARIA"
+      value:
+        type_name: "float"
+        default: -1
+        min: 0
+        max: 1
       alias:
       - name: "start_hihdccN"
-      value:
-        type_name: "float"
-        default: -1
-        min: 0
-        max: 1
-
-    - name: "start_loccN"
-      short_description:
-        "If a MIDI control message with a value between <code>start_loccN</code>
-        and <code>start_hiccN</code> is received, the region will play.
-        Alias for <a href='/opcodes/on_loccN'>on_loccN</a>.
-        Default value is -1, it means unassigned."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-        default: -1
-        min: 0
-        max: 127
-
-    - name: "start_hiccN"
-      short_description:
-        "If a MIDI control message with a value between <code>start_loccN</code>
-        and <code>start_hiccN</code> is received, the region will play.
-        Alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>.
-        Default value is -1, it means unassigned."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-        default: -1
-        min: 0
-        max: 127
-
-    - name: "start_lohdccN"
-      short_description:
-        "Like <a href='/opcodes/start_loccN'>start_loccN</a> but with floating point MIDI CCs."
-      version: "ARIA"
-      value:
-        type_name: "float"
-        default: -1
-        min: 0
-        max: 1
-
-    - name: "start_hihdccN"
-      short_description:
-        "Like <a href='/opcodes/start_hiccN'>start_hiccN</a> but with floating point MIDI CCs."
-      version: "ARIA"
-      value:
-        type_name: "float"
-        default: -1
-        min: 0
-        max: 1
+        short_description:
+          "Like <a href='/opcodes/start_hiccN'>start_hiccN</a> but with floating point MIDI CCs."
 
     - name: "stop_loccN"
       short_description:
@@ -4159,20 +4127,18 @@ categories:
       version: "SFZ v2"
       value:
         type_name: "integer"
+        default: 1
       modulation:
         midi_cc:
         - name: "lfoN_wave_onccX"
           version: "ARIA"
-
-    - name: "lfoN_waveX"
-      short_description:
-        "Select the waveform type used for the waveform number X (max 8)
-        for LFO number N, with the same allowed values as
-        <a href='/opcodes/lfoN_wave'>lfoN_wave</a> normally can use."
-      version: "ARIA"
-      value:
-        type_name: "integer"
-        default: 1
+      alias:
+      - name: "lfoN_waveX"
+        short_description:
+          "Select the waveform type used for the waveform number X (max 8)
+          for LFO number N, with the same allowed values as
+          <a href='/opcodes/lfoN_wave'>lfoN_wave</a> normally can use."
+        version: "ARIA"
 
     - name: "lfoN_steps"
       short_description: "Number of steps in LFO step sequencer."
