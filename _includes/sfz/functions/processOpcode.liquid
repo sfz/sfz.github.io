@@ -10,13 +10,11 @@
 		<tr>
 			<td class="{{ include.category.id }}"><span style="display:none">{{ include.category.name }}</span></td>
 			<td class="opcode">{{ opcode_url }}</td>
-		{%-if include.opcode.short_description == nil-%}
+		{%-if include.opcode.short_description == nil and include.type == "alias"-%}
 			{%-capture parent_url-%}
 				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.parent-%}
 			{%-endcapture-%}
-			{%-if include.type == "alias"-%}
 			<td>{{ parent_url }} alias.</td>
-			{%-endif-%}
 		{%-else-%}
 			<td>{{ include.opcode.short_description }}</td>
 		{%-endif-%}
