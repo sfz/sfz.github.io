@@ -1,5 +1,5 @@
 format: 2
-versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "Unknown"]
+versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2"] # , "Unknown"
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -95,7 +95,6 @@ categories:
       modulation:
         midi_cc:
         - name: "delay_ccN"
-          version: "SFZ v1"
           short_description:
             "Region delay time after MIDI continuous controller N messages are
             received. If the region receives a note-off message before
@@ -131,7 +130,6 @@ categories:
       modulation:
         midi_cc:
         - name: "delay_samples_onccN"
-          version: "SFZ v2"
           value:
             type_name: "integer"
             unit: "sample units"
@@ -201,7 +199,6 @@ categories:
           short_description: "Change of loop start point."
           alias:
           - name: "loop_start_onccN"
-            version: "Cakewalk"
 
     - name: "loop_end"
       short_description: "The loop end point, in samples."
@@ -222,7 +219,6 @@ categories:
           short_description: "Change of loop end point."
           alias:
           - name: "loop_length_onccN"
-            version: "Cakewalk"
 
     - name: "loop_tune"
       short_description: "Tuning for only the loop segment."
@@ -244,7 +240,6 @@ categories:
       modulation:
         midi_cc:
         - name: "offset_ccN"
-          version: "SFZ v1"
           short_description:
             "The offset used to play the sample according to last position
             of MIDI continuous controller N."
@@ -1058,7 +1053,6 @@ categories:
         - name: "varNN_onccX"
           short_description:
             "Specifies the method used to calculate variable number NN from MIDI CCs."
-          version: "ARIA"
           value:
             type_name: "float"
             min: 0
@@ -1067,7 +1061,6 @@ categories:
           short_description:
             "Specifies the ‹<a href='/headers/curve'>curve</a>› number
             which MIDI CC X uses to modulate variable NN."
-          version: "ARIA"
           value:
             type_name: "integer"
             min: 0
@@ -1772,7 +1765,6 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "amplitude_onccN"
-          version: "ARIA"
           alias:
           - name: "amplitude_ccN"
             version: "ARIA"
@@ -1782,13 +1774,11 @@ categories:
             max: 100
             unit: "%"
         - name: "amplitude_curveccN"
-          version: "ARIA"
           value:
             type_name: "integer"
             min: 0
             max: 255
         - name: "amplitude_smoothccN"
-          version: "ARIA"
 
     - name: "global_amplitude"
       short_description:
@@ -1924,7 +1914,6 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "eqN_bwccX"
-          version: "SFZ v1"
           alias:
           - name: "eqN_bw_onccX"
             version: "SFZ v2"
@@ -1949,7 +1938,6 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "eqN_freqccX"
-          version: "SFZ v1"
           alias:
           - name: "eqN_freq_onccX"
             version: "SFZ v2"
@@ -1961,7 +1949,6 @@ categories:
             unit: "Hz"
         velocity:
         - name: "eqN_vel2freq"
-          version: "SFZ v1"
           short_description:
             "Frequency change of the equalizer band with MIDI velocity, in Hertz."
           value:
@@ -1985,7 +1972,6 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "eqN_gainccX"
-          version: "SFZ v1"
           alias:
           - name: "eqN_gain_onccX"
             version: "SFZ v2"
@@ -1999,7 +1985,6 @@ categories:
         - name: "eqN_vel2gain"
           short_description:
             "Gain change of the equalizer band with MIDI velocity, in decibels."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2046,7 +2031,6 @@ categories:
         lfo: "fillfo_depth"
         midi_cc:
         - name: "cutoff_ccN"
-          version: "SFZ v1"
           short_description:
             "The variation in the cutoff frequency when
             MIDI continuous controller N is received."
@@ -2083,7 +2067,6 @@ categories:
           short_description:
             "The variation in the cutoff frequency when MIDI channel aftertouch
             messages are received, in cents."
-          version: "SFZ v1"
           value:
             type_name: "integer"
             default: 0
@@ -2094,7 +2077,6 @@ categories:
           short_description:
             "The variation in the cutoff frequency when MIDI polyphonic aftertouch
             messages are received, in cents."
-          version: "SFZ v1"
           value:
             type_name: "integer"
             default: 0
@@ -2124,6 +2106,7 @@ categories:
       alias:
       - name: "fil2_gain"
         short_description: "Gain for lsh, hsh and peq filter types."
+        version: "ARIA"
         modulation:
           midi_cc:
           - name: "fil2_gain_onccN"
@@ -2316,7 +2299,6 @@ categories:
         modulation:
           midi_cc:
           - name: "resonance2_onccN"
-            version: "SFZ v2"
             value:
               type_name: "float"
               default: 0
@@ -2325,21 +2307,19 @@ categories:
               unit: "dB"
             alias:
             - name: "resonance2_ccN"
+              version: "SFZ v2" # TODO: Inherit from the last defined
           - name: "resonance2_curveccN"
-            version: "SFZ v2"
             value:
               type_name: "integer"
               min: 0
               max: 255
           - name: "resonance2_smoothccN"
-            version: "SFZ v2"
             value:
               type_name: "float"
               default: 0
               min: 0
               unit: "ms"
           - name: "resonance2_stepccN"
-            version: "SFZ v2"
             value:
               type_name: "integer"
               default: 0
@@ -2390,16 +2370,12 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_level_onccN"
-          version: "Cakewalk"
-          short_description: ""
           value:
             type_name: "float"
             min: -96
             max: 24
             unit: "dB"
         - name: "noise_level_smoothccN"
-          version: "Cakewalk"
-          short_description: ""
           value:
             type_name: "float"
             min: 0
@@ -2416,8 +2392,6 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_step_onccN"
-          version: "Cakewalk"
-          short_description: ""
           value:
             type_name: "integer"
             min: 0
@@ -2433,8 +2407,6 @@ categories:
       modulation:
         midi_cc:
         - name: "noise_tone_onccN"
-          version: "Cakewalk"
-          short_description: ""
           value:
             type_name: "integer"
             min: 0
@@ -2651,7 +2623,6 @@ categories:
       modulation:
         midi_cc:
         - name: "ampeg_attackccN"
-          version: "SFZ v1"
           alias:
           - name: "ampeg_attack_onccN"
             version: "SFZ v2"
@@ -2664,7 +2635,6 @@ categories:
         velocity:
         - name: "ampeg_vel2attack"
           short_description: "Velocity effect on EG attack time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2684,7 +2654,6 @@ categories:
       modulation:
         midi_cc:
         - name: "ampeg_decayccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2701,7 +2670,6 @@ categories:
         velocity:
         - name: "ampeg_vel2decay"
           short_description: "Velocity effect on pitch EG decay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2722,7 +2690,6 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "ampeg_delayccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2734,7 +2701,6 @@ categories:
         velocity:
         - name: "ampeg_vel2delay"
           short_description: "Velocity effect on EG delay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2755,7 +2721,6 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "ampeg_holdccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2772,7 +2737,6 @@ categories:
         velocity:
         - name: "ampeg_vel2hold"
           short_description: "Velocity effect on EG hold time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2792,7 +2756,6 @@ categories:
       modulation:
         midi_cc:
         - name: "ampeg_releaseccN"
-          version: "SFZ v1"
           alias:
           - name: "ampeg_release_onccN"
             version: "SFZ v2"
@@ -2805,7 +2768,6 @@ categories:
         velocity:
         - name: "ampeg_vel2release"
           short_description: "Velocity effect on EG release time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2825,7 +2787,6 @@ categories:
       modulation:
         midi_cc:
         - name: "ampeg_sustainccN"
-          version: "SFZ v1"
           alias:
           - name: "ampeg_sustain_onccN"
             version: "SFZ v2"
@@ -2843,7 +2804,6 @@ categories:
         velocity:
         - name: "ampeg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -2864,7 +2824,6 @@ categories:
         envelope: "✓"
         midi_cc:
         - name: "ampeg_startccN"
-          version: "SFZ v1"
           alias:
           - name: "ampeg_start_onccN"
             version: "SFZ v2"
@@ -3043,7 +3002,6 @@ categories:
         velocity:
         - name: "fileg_vel2attack"
           short_description: "Velocity effect on EG attack time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3074,7 +3032,6 @@ categories:
         velocity:
         - name: "fileg_vel2decay"
           short_description: "Velocity effect on filter EG decay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3106,7 +3063,6 @@ categories:
         velocity:
         - name: "fileg_vel2delay"
           short_description: "Velocity effect on filter EG delay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3138,7 +3094,6 @@ categories:
         - name: "fileg_vel2depth"
           short_description:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
-          version: "SFZ v1"
           value:
             type_name: "integer"
             default: 0
@@ -3170,7 +3125,6 @@ categories:
         velocity:
         - name: "fileg_vel2hold"
           short_description: "Velocity effect on EG hold time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3202,7 +3156,6 @@ categories:
         velocity:
         - name: "fileg_vel2release"
           short_description: "Velocity effect on EG release time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3257,7 +3210,6 @@ categories:
         velocity:
         - name: "fileg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3281,7 +3233,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2attack"
           short_description: "Velocity effect on EG attack time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3310,7 +3261,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2decay"
           short_description: "Velocity effect on pitch EG decay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3340,7 +3290,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2delay"
           short_description: "Velocity effect on pitch EG delay time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3370,7 +3319,6 @@ categories:
         - name: "pitcheg_vel2depth"
           short_description:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
-          version: "SFZ v1"
           value:
             type_name: "integer"
             default: 0
@@ -3400,7 +3348,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2hold"
           short_description: "Velocity effect on EG hold time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3430,7 +3377,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2release"
           short_description: "Velocity effect on EG release time."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3481,7 +3427,6 @@ categories:
         velocity:
         - name: "pitcheg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3502,7 +3447,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_timeX_onccY"
-          version: "SFZ v2"
           value:
             type_name: "float"
             unit: "seconds"
@@ -3519,7 +3463,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_levelX_onccY"
-          version: "SFZ v2"
           value:
             type_name: "float"
             default: 0
@@ -3560,7 +3503,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_volume_onccX"
-          version: "SFZ v2"
 
     - name: "egN_amplitude"
       short_description: ""
@@ -3568,7 +3510,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_amplitude_onccX"
-          version: "SFZ v2"
 
     - name: "egN_pan"
       short_description: ""
@@ -3576,7 +3517,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_pan_onccX"
-          version: "SFZ v2"
 
     - name: "egN_width"
       short_description: ""
@@ -3584,7 +3524,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_width_onccX"
-          version: "SFZ v2"
 
     - name: "egN_pan_curve"
       short_description: ""
@@ -3592,7 +3531,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_pan_curveccX"
-          version: "SFZ v2"
 
     - name: "egN_freq_lfoX"
       short_description: ""
@@ -3612,7 +3550,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_pitch_onccX"
-          version: "SFZ v2"
 
     - name: "egN_cutoff"
       short_description: ""
@@ -3620,7 +3557,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_cutoff_onccX"
-          version: "SFZ v2"
 
     - name: "egN_cutoff2"
       short_description: ""
@@ -3628,7 +3564,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_cutoff2_onccX"
-          version: "SFZ v2"
 
     - name: "egN_resonance"
       short_description: ""
@@ -3636,7 +3571,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_resonance_onccX"
-          version: "SFZ v2"
 
     - name: "egN_resonance2"
       short_description: ""
@@ -3644,7 +3578,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_resonance2_onccX"
-          version: "SFZ v2"
 
     - name: "egN_eqXfreq"
       short_description: ""
@@ -3652,7 +3585,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_eqXfreq_onccY"
-          version: "SFZ v2"
 
     - name: "egN_eqXbw"
       short_description: ""
@@ -3660,7 +3592,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_eqXbw_onccY"
-          version: "SFZ v2"
 
     - name: "egN_eqXgain"
       short_description: ""
@@ -3668,7 +3599,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_eqXgain_onccY"
-          version: "SFZ v2"
 
     - name: "egN_decim"
       short_description: ""
@@ -3676,8 +3606,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_decim_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_bitred"
       short_description: ""
@@ -3685,8 +3613,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_bitred_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_rectify"
       short_description: ""
@@ -3694,8 +3620,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_rectify_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_ringmod"
       short_description: ""
@@ -3703,8 +3627,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_ringmod_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_noiselevel"
       short_description: ""
@@ -3712,8 +3634,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_noiselevel_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_noisestep"
       short_description: ""
@@ -3721,8 +3641,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_noisestep_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_noisetone"
       short_description: ""
@@ -3730,8 +3648,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_noisetone_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "egN_driveshape"
       short_description: ""
@@ -3739,8 +3655,6 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_driveshape_onccX"
-          short_description: ""
-          version: "Cakewalk"
 
   - name: "LFO"
     id: "lfo"
@@ -3769,7 +3683,6 @@ categories:
       modulation:
         midi_cc:
         - name: "amplfo_depthccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3782,7 +3695,6 @@ categories:
         - name: "amplfo_depthchanaft"
           short_description:
             "LFO depth when channel aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3792,7 +3704,6 @@ categories:
         - name: "amplfo_depthpolyaft"
           short_description:
             "LFO depth when polyphonic aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3822,7 +3733,6 @@ categories:
       modulation:
         midi_cc:
         - name: "amplfo_freqccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3833,7 +3743,6 @@ categories:
           short_description:
             "LFO frequency change when channel aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3844,7 +3753,6 @@ categories:
           short_description:
             "LFO frequency change when polyphonic aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3874,7 +3782,6 @@ categories:
       modulation:
         midi_cc:
         - name: "fillfo_depthccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3887,7 +3794,6 @@ categories:
         - name: "fillfo_depthchanaft"
           short_description:
             "LFO depth when channel aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3897,7 +3803,6 @@ categories:
         - name: "fillfo_depthpolyaft"
           short_description:
             "LFO depth when polyphonic aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3927,7 +3832,6 @@ categories:
       modulation:
         midi_cc:
         - name: "fillfo_freqccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3938,7 +3842,6 @@ categories:
           short_description:
             "LFO frequency change when channel aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3949,7 +3852,6 @@ categories:
           short_description:
             "LFO frequency change when polyphonic aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3979,7 +3881,6 @@ categories:
       modulation:
         midi_cc:
         - name: "pitchlfo_depthccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -3992,7 +3893,6 @@ categories:
         - name: "pitchlfo_depthchanaft"
           short_description:
             "LFO depth when channel aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -4002,7 +3902,6 @@ categories:
         - name: "pitchlfo_depthpolyaft"
           short_description:
             "LFO depth when polyphonic aftertouch MIDI messages are received."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -4032,7 +3931,6 @@ categories:
       modulation:
         midi_cc:
         - name: "pitchlfo_freqccN"
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -4043,7 +3941,6 @@ categories:
           short_description:
             "LFO frequency change when channel aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -4054,7 +3951,6 @@ categories:
           short_description:
             "LFO frequency change when polyphonic aftertouch
             MIDI messages are received, in Hertz."
-          version: "SFZ v1"
           value:
             type_name: "float"
             default: 0
@@ -4072,11 +3968,8 @@ categories:
         envelope: "egN_freq_lfoX"
         midi_cc:
         - name: "lfoN_freq_onccX"
-          version: "SFZ v2"
         - name: "lfoN_freq_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_freq_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_delay"
       short_description: "Onset delay for LFO number N."
@@ -4089,7 +3982,6 @@ categories:
         envelope: "egN_freq_lfoX"
         midi_cc:
         - name: "lfoN_delay_onccX"
-          version: "SFZ v2"
 
     - name: "lfoN_fade"
       short_description: "Fade-in time for LFO number N."
@@ -4099,7 +3991,6 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_fade_onccX"
-          version: "SFZ v2"
           value:
             type_name: "float"
 
@@ -4114,7 +4005,6 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_phase_onccX"
-          version: "SFZ v2"
 
     - name: "lfoN_count"
       short_description: "Number of LFO repetitions for LFO N before the LFO stops."
@@ -4157,7 +4047,6 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_stepX_onccY"
-          version: "SFZ v2"
 
     - name: "lfoN_smooth"
       short_description: ""
@@ -4165,7 +4054,6 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_smooth_onccX"
-          version: "SFZ v2"
 
     - name: "lfoN_volume"
       short_description: ""
@@ -4173,11 +4061,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_volume_onccX"
-          version: "SFZ v2"
         - name: "lfoN_volume_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_volume_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_amplitude"
       short_description: ""
@@ -4185,11 +4070,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_amplitude_onccX"
-          version: "SFZ v2"
         - name: "lfoN_amplitude_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_amplitude_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_pan"
       short_description: ""
@@ -4197,11 +4079,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_pan_onccX"
-          version: "SFZ v2"
         - name: "lfoN_pan_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_pan_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_width"
       short_description: ""
@@ -4209,11 +4088,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_width_onccX"
-          version: "SFZ v2"
         - name: "lfoN_width_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_width_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_freq_lfoX"
       short_description: ""
@@ -4242,11 +4118,8 @@ categories:
             min: 0
             max: 255
         - name: "lfoN_pitch_onccX"
-          version: "SFZ v2"
         - name: "lfoN_pitch_smoothccX"
-          version: "SFZ v2"
         - name: "lfoN_pitch_stepccX"
-          version: "SFZ v2"
 
     - name: "lfoN_cutoff"
       short_description: ""
@@ -4258,7 +4131,6 @@ categories:
         - name: "lfoN_cutoff_stepccX"
       alias:
       - name: "lfoN_cutoff2"
-        short_description: ""
         version: "SFZ v2"
         modulation:
           midi_cc:
@@ -4276,6 +4148,7 @@ categories:
         - name: "lfoN_resonance_stepccX"
       alias:
       - name: "lfoN_resonance2"
+        version: "SFZ v2"
         modulation:
           midi_cc:
           - name: "lfoN_resonance2_onccX"
@@ -4288,13 +4161,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_eqXfreq_onccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXfreq_smoothccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXfreq_stepccY"
-          version: "SFZ v2"
 
     - name: "lfoN_eqXbw"
       short_description: ""
@@ -4302,13 +4170,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_eqXbw_onccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXbw_smoothccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXbw_stepccY"
-          version: "SFZ v2"
 
     - name: "lfoN_eqXgain"
       short_description: ""
@@ -4316,13 +4179,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_eqXgain_onccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXgain_smoothccY"
-          version: "SFZ v2"
-
         - name: "lfoN_eqXgain_stepccY"
-          version: "SFZ v2"
 
     - name: "lfoN_decim"
       short_description: ""
@@ -4330,16 +4188,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_decim_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_decim_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_decim_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_bitred"
       short_description: ""
@@ -4347,16 +4197,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_bitred_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_bitred_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_bitred_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_noiselevel"
       short_description: ""
@@ -4364,16 +4206,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_noiselevel_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noiselevel_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noiselevel_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_noisestep"
       short_description: ""
@@ -4381,16 +4215,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_noisestep_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noisestep_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noisestep_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_noisetone"
       short_description: ""
@@ -4398,16 +4224,8 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_noisetone_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noisetone_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_noisetone_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_drive"
       short_description: ""
@@ -4415,41 +4233,33 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_drive_onccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_drive_smoothccX"
-          short_description: ""
-          version: "Cakewalk"
-
         - name: "lfoN_drive_stepccX"
-          short_description: ""
-          version: "Cakewalk"
 
     - name: "lfoN_offset"
       short_description:
         "DC offset - Add to LFO output; not affected by scale."
+      version: "ARIA"
       alias:
       - name: "lfoN_offsetX"
-      version: "ARIA"
       value:
         type_name: "float"
 
     - name: "lfoN_ratio"
       short_description:
         "Sets the ratio between the specified sub waveform and the main waveform."
+      version: "ARIA"
       alias:
       - name: "lfoN_ratioX"
-      version: "ARIA"
       value:
         type_name: "float"
 
     - name: "lfoN_scale"
       short_description:
         "Sets the scaling between the specified sub waveform and the main waveform."
+      version: "ARIA"
       alias:
       - name: "lfoN_scaleX"
-      version: "ARIA"
       value:
         type_name: "float"
 
@@ -4552,13 +4362,9 @@ categories:
       lfo: "✓"
       midi_cc:
       - name: "bitred_onccN"
-        version: "Cakewalk"
       - name: "bitred_curveccN"
-        version: "Cakewalk"
       - name: "bitred_smoothccN"
-        version: "Cakewalk"
       - name: "bitred_stepccN"
-        version: "Cakewalk"
 
   - name: "bus"
     version: "SFZ v2"
@@ -4648,13 +4454,9 @@ categories:
       lfo: "✓"
       midi_cc:
       - name: "decim_onccN"
-        version: "Cakewalk"
       - name: "decim_curveccN"
-        version: "Cakewalk"
       - name: "decim_smoothccN"
-        version: "Cakewalk"
       - name: "decim_stepccN"
-        version: "Cakewalk"
 
   - name: "delay_cutoff"
     short_description: ""
@@ -5516,8 +5318,6 @@ categories:
     modulation:
       midi_cc:
       - name: "oscillator_detune_onccN"
-        short_description: ""
-        version: "Cakewalk"
 
   - name: "oscillator_mode"
     short_description: "The modulation type."
@@ -5534,12 +5334,7 @@ categories:
     modulation:
       midi_cc:
       - name: "oscillator_mod_depth_onccN"
-        short_description: ""
-        version: "Cakewalk"
-
       - name: "oscillator_mod_smoothccN"
-        short_description: ""
-        version: "Cakewalk"
 
   - name: "oscillator_multi"
     short_description: "Configure a region to use more than one oscillator."

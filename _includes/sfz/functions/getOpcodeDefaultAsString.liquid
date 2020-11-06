@@ -1,8 +1,8 @@
 {%-assign opcode_default_value_result = "N/A"-%}
-{%-if include.const_opcode.value.default-%}
-	{%-assign opcode_default_value_result = include.const_opcode.value.default-%}
+{%-if include.opcode.value.default-%}
+	{%-assign opcode_default_value_result = include.opcode.value.default-%}
 {%-comment-%}
-		| append: ' ' | append: include.const_opcode.value.unit-%}
+		| append: ' ' | append: include.opcode.value.unit-%}
 {%-endcomment-%}
 {%-endif-%}
 {{ opcode_default_value_result }}

@@ -1,0 +1,51 @@
+		{%-capture opcode_url-%}
+			{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.opcode-%}
+		{%-endcapture-%}
+		{%-capture opcode_value_default-%}
+			{%-include sfz/functions/getOpcodeDefaultAsString.liquid opcode=include.opcode-%}
+		{%-endcapture-%}
+		{%-capture opcode_value_range-%}
+			{%-include sfz/functions/getOpcodeRangeAsString.liquid opcode=include.opcode-%}
+		{%-endcapture-%}
+		<tr>
+			<td class="{{ include.category.id }}"><span style="display:none">{{ include.category.name }}</span></td>
+			<td class="opcode">{{ opcode_url }}</td>
+		{%-if include.opcode.short_description == nil-%}
+			{%-capture parent_url-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.parent-%}
+			{%-endcapture-%}
+			{%-if include.type == "alias"-%}
+			<td>{{ parent_url }} alias.</td>
+			{%-endif-%}
+		{%-else-%}
+			<td>{{ include.opcode.short_description }}</td>
+		{%-endif-%}
+			<td>{{ include.opcode.value.type_name }}</td>
+			<td>{{ opcode_value_default }}</td>
+			<td>{{ opcode_value_range }}</td>
+		{%-if include.opcode.version-%}
+			<td>{{ include.opcode.version }}</td>
+		{%-else-%}
+			<td>{{ include.parent.version }}</td>
+		{%-endif-%}
+		</tr>
+		{%-for alias in include.opcode.alias-%}
+			{% include sfz/functions/processOpcode.liquid
+				category = include.category
+				parent   = include.opcode
+				opcode   = alias
+				type     = "alias" %}
+		{%-endfor-%}
+		{%-for midi_cc in include.opcode.modulation.midi_cc-%}
+			{% include sfz/functions/processOpcode.liquid
+				category = include.category
+				parent   = include.opcode
+				opcode   = midi_cc
+				type     = "midi_cc" %}
+		{%-endfor-%}
+		{%-for velocity_cc in include.opcode.modulation.velocity-%}
+			{% include sfz/functions/processOpcode.liquid
+				category = include.category
+				parent   = include.opcode
+				opcode   = velocity_cc %}
+		{%-endfor-%}
