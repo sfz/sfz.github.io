@@ -30,7 +30,7 @@ multimedia galleries, which can contain not only images but also videos.
 [ekko-lightbox] was choosed, that seems to well integrate with bootstrap.
 
 A helper function to made the process easier, avoiding to add more lines of code
-into the content, is available at `_includes/lightbox_gallery.html`.
+into the content, is available at `_includes/lightbox_gallery.liquid`.
 Add the following Liquid code in the place you want to add your gallery:
 
 ```
@@ -38,7 +38,7 @@ Add the following Liquid code in the place you want to add your gallery:
 {%raw%}{%-assign titles  = "Image 1 alt text,,Some alt text for the gif" | split: ','-%}{%endraw%}
 {%raw%}{%-assign gallery = "gallery-name"-%}{%endraw%}
 {%raw%}{%-assign path    = "/relative/path/to/images/"-%}{%endraw%}
-{%raw%}{%-include lightbox_gallery.html const_images=images const_titles=titles const_gallery=gallery const_path=path-%}{%endraw%}
+{%raw%}{%-include lightbox_gallery.liquid const_images=images const_titles=titles const_gallery=gallery const_path=path-%}{%endraw%}
 ```
 
 Note that `images` and `titles` arrays want to be the same number of elements

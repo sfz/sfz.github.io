@@ -24,4 +24,4 @@ note held for 2 seconds. Each vertical line represents 0.5 seconds.
 {%-assign titles  = "ampeg_decay_shape=-8,ampeg_decay_shape=-3.8,ampeg_decay_shape=0,ampeg_decay_shape=2.1,ampeg_decay_shape=8" | split: ','-%}
 {%-assign gallery = "ampeg_decay_shape"-%}
 {%-assign path    = "/assets/img/ampeg_decay_shape/"-%}
-{%-include lightbox_gallery.html const_images=images const_titles=titles const_gallery=gallery const_path=path-%}
+{%-include lightbox_gallery.liquid const_images=images const_titles=titles const_gallery=gallery const_path=path-%}

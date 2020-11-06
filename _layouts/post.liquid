@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-{% include head.html %}
+{% include head.liquid %}
 	</head>
 {% if page.classes %}
 	<body class="{{ page.classes | join: ' ' }}">
@@ -25,7 +25,7 @@
 		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
 		<a href="#content" class="sr-only">Skip to content</a>
 		<div class="container">
-{% include header.html %}
+{% include header.liquid %}
 			<div class="row mt-4" id="content">
 				<div class="col-md-9">
 					<article class="mb-4">
@@ -35,7 +35,7 @@
                                     {{ page.date | date: page.date_fmt }}</time>
 {% if page.author %}by {{ page.author }}{% endif %}
 							</p>
-{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
+{% include anchor_headings.liquid html=content anchorClass="toc-anchor" anchorBody="#" %}
 {% if page.comments and site.disqus_shortname %}
 						<h2>{{ t.comments }}</h2>
 						<div id="disqus_thread"></div>
@@ -49,13 +49,13 @@
 				</div>
 				<div class="col-md-3">
 					<aside>
-{% include cards.html %}
+{% include cards.liquid %}
 					</aside>
 				</div>
 			</div>
-{% include footer.html %}
+{% include footer.liquid %}
 		</div>
-{% include scripts.html %}
+{% include scripts.liquid %}
 {% if page.comments and site.disqus_shortname %}
 		<script type="text/javascript">
 			var disqus_shortname = "{{ site.disqus_shortname }}";

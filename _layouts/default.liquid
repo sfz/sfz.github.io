@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-{% include head.html %}
+{% include head.liquid %}
 	</head>
 {% if page.classes %}
 	<body class="{{ page.classes | join: ' ' }}">
@@ -11,7 +11,7 @@
 		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
 		<a href="#content" class="sr-only">Skip to content</a>
 		<div class="container">
-{% include header.html %}
+{% include header.liquid %}
 			<div class="row mt-4" id="content">
 				<div class="col-md-9">
 					<article>
@@ -25,7 +25,7 @@
 	{%-endif-%}
 						<h1>{{ page_title }}</h1>
 {%-endif-%}
-{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
+{% include anchor_headings.liquid html=content anchorClass="toc-anchor" anchorBody="#" %}
 					</article>
 				</div>
 				<div class="col-md-3">
@@ -33,13 +33,13 @@
 {%if page.cards%}
 	{% include {{ page.cards }} %}
 {%else%}
-	{% include cards.html %}
+	{% include cards.liquid %}
 {%endif%}
 					</aside>
 				</div>
 			</div>
-{% include footer.html %}
+{% include footer.liquid %}
 		</div>
-{% include scripts.html %}
+{% include scripts.liquid %}
 	</body>
 </html>

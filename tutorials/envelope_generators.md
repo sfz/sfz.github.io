@@ -32,10 +32,10 @@ We'll get to the asterisks in a moment.  Here is a screenshot of an audio file c
 showing the ampeg_envelope shape and its stages.  Note that this image assumes the Start level is 0.
 If it were nonzero, the tip of the left-pointing arrow would look chopped off vertically.
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/ampeg_env.jpg"
   alt="DAHDSR envelope shape image"%}
-	
+
 	https://media.discordapp.net/attachments/573505647841116161/720408000828932196/EnvelopeGraphic.png
 
 Here's a play-by-play explanation, when using the EG for volume (ampeg_xxx).
@@ -61,4 +61,4 @@ Another note when using an envelope to control volume: if you're playing a sampl
 ## SF2
 
 The SF2 standard has a more flexible generator that can be used in addition to
-the above.  This is briefly described in [SF2 Modulations:Envelopes](/tutorials/sfz2_modulations#envelopes).  
+the above.  This is briefly described in [SF2 Modulations:Envelopes](/tutorials/sfz2_modulations#envelopes).

@@ -1,33 +1,5 @@
 
-{%-for category in site.data.sfz.syntax.categories-%}
-	{%if category.opcodes.size > 0%}
-		{%-assign categories = categories | append: ',' | append: category.name-%}
-		{%-assign category_ids = category_ids | append: ',' | append: category.id-%}
-	{%-endif-%}
-	{%-for category_type in category.types-%}
-		{%-assign categories = categories | append: ',' | append: category_type.name-%}
-		{%-assign category_ids = category_ids | append: ',' | append: category_type.id-%}
-	{%-endfor-%}
-{%-endfor-%}
-{%-assign categories = categories | remove_first: ',' | split: ','-%}
-{%-assign category_ids = category_ids | remove_first: ',' | split: ','-%}
-<style>
-div.checkbox-filter {
-	border-left: 10px solid;
-	padding-left: 5px;
-	margin: 1px 0 1px 0
-}
-{%-assign i = 0-%}
-{%-assign j = 1-%}
-{%-for category in categories-%}
-	{%-assign id = category_ids[i]-%}
-	{%-assign n = 360 | times: j | divided_by: categories.size-%}
-	div.{{ id }} {border-color:hsl({{n}},100%,50%)} td.{{ id }} {background-color:hsl({{n}},100%,50%)}
-	{%-assign i = i | plus: 1-%}
-	{%-assign j = j | plus: 1-%}
-{%-endfor-%}
-</style>
-
+{% include sfz/opcodes-filters.liquid %}
 <table
 	class="table table-sm table-bordered table-hover table-striped table-responsive-xl"
 	id="table-opcodes"
@@ -49,13 +21,13 @@ div.checkbox-filter {
 {%-for category in site.data.sfz.syntax.categories-%}
 	{%-for opcode in category.opcodes-%}
 		{%-capture opcode_url-%}
-			{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
+			{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=opcode-%}
 		{%-endcapture-%}
 		{%-capture opcode_value_default-%}
-			{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=opcode-%}
+			{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=opcode-%}
 		{%-endcapture-%}
 		{%-capture opcode_value_range-%}
-			{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
+			{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=opcode-%}
 		{%-endcapture-%}
 		<tr>
 			<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
@@ -68,7 +40,7 @@ div.checkbox-filter {
 		</tr>
 		{%-for alias in opcode.alias-%}
 			{%-capture alias_url-%}
-				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=alias-%}
 			{%-endcapture-%}
 		<tr>
 			<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
@@ -86,13 +58,13 @@ div.checkbox-filter {
 		{%-endfor-%}
 		{%-for midi_cc in opcode.modulation.midi_cc-%}
 			{%-capture midi_cc_url-%}
-				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=midi_cc-%}
 			{%-endcapture-%}
 			{%-capture midi_cc_value_default-%}
-				{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=midi_cc-%}
+				{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=midi_cc-%}
 			{%-endcapture-%}
 			{%-capture midi_cc_value_range-%}
-				{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=midi_cc-%}
+				{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=midi_cc-%}
 			{%-endcapture-%}
 		<tr>
 			<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
@@ -105,7 +77,7 @@ div.checkbox-filter {
 		</tr>
 			{%-for alias in midi_cc.alias-%}
 				{%-capture alias_url-%}
-					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+					{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=alias-%}
 				{%-endcapture-%}
 			<tr>
 				<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
@@ -120,13 +92,13 @@ div.checkbox-filter {
 		{%-endfor-%}
 		{%-for velocity_cc in opcode.modulation.velocity-%}
 			{%-capture velocity_cc_url-%}
-				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=velocity_cc-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=velocity_cc-%}
 			{%-endcapture-%}
 			{%-capture velocity_cc_value_default-%}
-				{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=velocity_cc-%}
+				{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=velocity_cc-%}
 			{%-endcapture-%}
 			{%-capture velocity_cc_value_range-%}
-				{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=velocity_cc-%}
+				{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=velocity_cc-%}
 			{%-endcapture-%}
 		<tr>
 			<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
@@ -142,13 +114,13 @@ div.checkbox-filter {
 	{%-for category_type in category.types-%}
 		{%-for opcode in category_type.opcodes-%}
 			{%-capture opcode_url-%}
-				{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=opcode-%}
+				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=opcode-%}
 			{%-endcapture-%}
 			{%-capture opcode_value_default-%}
-				{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=opcode-%}
+				{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=opcode-%}
 			{%-endcapture-%}
 			{%-capture opcode_value_range-%}
-				{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=opcode-%}
+				{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=opcode-%}
 			{%-endcapture-%}
 			<tr>
 				<td class="{{ category_type.id }}"><span style="display:none">{{ category_type.name }}</span></td>
@@ -161,7 +133,7 @@ div.checkbox-filter {
 			</tr>
 			{%-for alias in opcode.alias-%}
 				{%-capture alias_url-%}
-					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+					{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=alias-%}
 				{%-endcapture-%}
 			<tr>
 				<td class="{{ category_type.id }}"><span style="display:none">{{ category_type.name }}</span></td>
@@ -179,13 +151,13 @@ div.checkbox-filter {
 			{%-endfor-%}
 			{%-for midi_cc in opcode.modulation.midi_cc-%}
 				{%-capture midi_cc_url-%}
-					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=midi_cc-%}
+					{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=midi_cc-%}
 				{%-endcapture-%}
 				{%-capture midi_cc_value_default-%}
-					{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=midi_cc-%}
+					{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=midi_cc-%}
 				{%-endcapture-%}
 				{%-capture midi_cc_value_range-%}
-					{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=midi_cc-%}
+					{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=midi_cc-%}
 				{%-endcapture-%}
 			<tr>
 				<td class="{{ category_type.id }}"><span style="display:none">{{ category_type.name }}</span></td>
@@ -198,7 +170,7 @@ div.checkbox-filter {
 			</tr>
 				{%-for alias in midi_cc.alias-%}
 					{%-capture alias_url-%}
-						{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=alias-%}
+						{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=alias-%}
 					{%-endcapture-%}
 				<tr>
 					<td class="{{ category_type.id }}"><span style="display:none">{{ category_type.name }}</span></td>
@@ -213,13 +185,13 @@ div.checkbox-filter {
 			{%-endfor-%}
 			{%-for velocity_cc in opcode.modulation.velocity-%}
 				{%-capture velocity_cc_url-%}
-					{%-include sfz/functions/getOpcodeUrlAsHtml.html const_opcode=velocity_cc-%}
+					{%-include sfz/functions/getOpcodeUrlAsHtml.liquid const_opcode=velocity_cc-%}
 				{%-endcapture-%}
 				{%-capture velocity_cc_value_default-%}
-					{%-include sfz/functions/getOpcodeDefaultAsString.html const_opcode=velocity_cc-%}
+					{%-include sfz/functions/getOpcodeDefaultAsString.liquid const_opcode=velocity_cc-%}
 				{%-endcapture-%}
 				{%-capture velocity_cc_value_range-%}
-					{%-include sfz/functions/getOpcodeRangeAsString.html const_opcode=velocity_cc-%}
+					{%-include sfz/functions/getOpcodeRangeAsString.liquid const_opcode=velocity_cc-%}
 				{%-endcapture-%}
 			<tr>
 				<td class="{{ category_type.id }}"><span style="display:none">{{ category_type.name }}</span></td>

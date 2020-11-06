@@ -27,4 +27,4 @@ Each vertical line represents 0.5 seconds.
 {%-assign titles  = "ampeg_attack_shape=-8,ampeg_attack_shape=-3.8,ampeg_attack_shape=0,ampeg_attack_shape=2.1,ampeg_attack_shape=8" | split: ','-%}
 {%-assign gallery = "ampeg_attack_shape"-%}
 {%-assign path    = "/assets/img/ampeg_attack_shape/"-%}
-{%-include lightbox_gallery.html const_images=images const_titles=titles const_gallery=gallery const_path=path-%}
+{%-include lightbox_gallery.liquid const_images=images const_titles=titles const_gallery=gallery const_path=path-%}

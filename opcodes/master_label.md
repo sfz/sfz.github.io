@@ -11,7 +11,7 @@ It can be set anywhere, not just under the ‹[master]› header.
 master_label=China2
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/opcodes/labels.jpg"
   alt="master_label example image"%}
 

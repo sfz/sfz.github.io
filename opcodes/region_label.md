@@ -15,7 +15,7 @@ If not set, the info tab will display the file path of the most recently played 
 <region> sample=china2_30_10.flac seq_position=10 region_label=30 ten
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/opcodes/labels.jpg"
   alt="region_label example image"%}
 

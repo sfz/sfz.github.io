@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-{% include head.html %}
+{% include head.liquid %}
 	</head>
 	<body>
 		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
 		<a href="#content" class="sr-only">Skip to content</a>
 		<div class="container">
-{% include header.html %}
+{% include header.liquid %}
 			<div class="row mt-4" id="content">
 				<div class="col-md-9">
 					<article>
-{% include anchor_headings.html html=content anchorClass="toc-anchor" anchorBody="#" %}
+{% include anchor_headings.liquid html=content anchorClass="toc-anchor" anchorBody="#" %}
 					</article>
 				</div>
 				<div class="col-md-3">
 					<aside>
-{% include cards.html %}
+{% include cards.liquid %}
 					</aside>
 				</div>
 			</div>
-{% include footer.html %}
+{% include footer.liquid %}
 		</div>
-{% include scripts.html %}
+{% include scripts.liquid %}
 {% if site.disqus_shortname %}
 		<script type="text/javascript">
 			var disqus_shortname = "{{ site.disqus_shortname }}";

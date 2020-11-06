@@ -148,7 +148,7 @@ The `/_data/sfz/` directory contains all YAML files used for SFZ related data.
 
 #### `syntax.yml`
 
-The `headers` section is used by the `_includes/sfz/headers-table-generator.html`
+The `headers` section is used by the `_includes/sfz/headers-table-generator.liquid`
 to build `/headers/index.md` description tables:
 
 - name: The header name

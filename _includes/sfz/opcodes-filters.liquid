@@ -1,0 +1,28 @@
+{%-for category in site.data.sfz.syntax.categories-%}
+	{%if category.opcodes.size > 0%}
+		{%-assign categories = categories | append: ',' | append: category.name-%}
+		{%-assign category_ids = category_ids | append: ',' | append: category.id-%}
+	{%-endif-%}
+	{%-for category_type in category.types-%}
+		{%-assign categories = categories | append: ',' | append: category_type.name-%}
+		{%-assign category_ids = category_ids | append: ',' | append: category_type.id-%}
+	{%-endfor-%}
+{%-endfor-%}
+{%-assign categories = categories | remove_first: ',' | split: ','-%}
+{%-assign category_ids = category_ids | remove_first: ',' | split: ','-%}
+<style>
+div.checkbox-filter {
+	border-left: 10px solid;
+	padding-left: 5px;
+	margin: 1px 0 1px 0
+}
+{%-assign i = 0-%}
+{%-assign j = 1-%}
+{%-for category in categories-%}
+	{%-assign id = category_ids[i]-%}
+	{%-assign n = 360 | times: j | divided_by: categories.size-%}
+	div.{{ id }} {border-color:hsl({{n}},100%,50%)} td.{{ id }} {background-color:hsl({{n}},100%,50%)}
+	{%-assign i = i | plus: 1-%}
+	{%-assign j = j | plus: 1-%}
+{%-endfor-%}
+</style>

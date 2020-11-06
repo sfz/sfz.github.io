@@ -1,4 +1,4 @@
 ---
 title: Search
 ---
-{% include search.html %}
+{% include search.liquid %}

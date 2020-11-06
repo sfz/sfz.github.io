@@ -16,7 +16,7 @@ These are very frequently used, especially with amplifier envelopes.
 
 In ARIA, the SFZ1 envelopes have linear attack (for `pitcheg` and `fileg`,
 probably linear in cents, which won't translate into linear in Hertz).
-Decay and release stages have a curve which is faster than linear, and it 
+Decay and release stages have a curve which is faster than linear, and it
 seems to match "well enough"  with a multiplicatively decreasing curve.
 The step size should be close to
 $$ \mu = \exp \left( - \frac{8.0}{t \times s} \right) $$
@@ -27,6 +27,6 @@ $$ x_{n+1} = \mu \times x_{n}. $$
 Here is a screenshot of a file output using Sforzando, showing the
 ampeg_envelope shape and its stages.
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/ampeg_env.jpg"
   alt="DAHDSR envelope shape image"%}

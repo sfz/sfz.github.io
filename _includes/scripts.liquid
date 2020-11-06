@@ -2,4 +2,4 @@
 {%-for script in page.scripts-%}
 		<script src="{{ '/assets/js/' | append: script | append: '.js' | relative_url }}"></script>
 {%-endfor-%}
-{% include custom-scripts.html %}
+{% include custom-scripts.liquid %}

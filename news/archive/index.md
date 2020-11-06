@@ -3,4 +3,4 @@ title: News Archive
 date_fmt: "%F"
 ---
 
-{% include post-archive.html %}
+{% include post-archive.liquid %}

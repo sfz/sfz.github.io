@@ -55,7 +55,7 @@ ampeg_attack=1.0 ampeg_decay=1.0 ampeg_sustain=0
 The resulting volume envelope will look something like this. The illustrations are
 not precise, only general shapes.
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/tutorials/brush_stirs/stir1.jpg"
   alt="Simple stir envelope"%}
 
@@ -73,7 +73,7 @@ sample=snare_stir_speed_3.wav
 ampeg_delay=0.5 ampeg_attack=0.5 ampeg_decay=0.5 ampeg_sustain=0
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/tutorials/brush_stirs/stir2.jpg"
   alt="Two layer stir envelopes"%}
 
@@ -118,7 +118,7 @@ ampeg_delay=0.05 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/tutorials/brush_stirs/stir3.jpg"
   alt="Stir envelopes using hold in base layer"%}
 
@@ -140,7 +140,7 @@ ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/tutorials/brush_stirs/stir4.jpg"
   alt="Stir envelopes with curves"%}
 

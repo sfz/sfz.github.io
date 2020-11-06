@@ -15,6 +15,6 @@ label_cc32=Tune
 label_cc33=Mute
 ```
 
-{%include img-fluid.html
+{%include img-fluid.liquid
   img="/assets/img/opcodes/label_cc.jpg"
   alt="label_cc example image"%}
