@@ -8,7 +8,7 @@ Note that [modulations] such as (on)ccN and vel2* are included in the pages
 describing the parameters they modulate.
 
 <div markdown="0">
-{% include sfz/opcodes-table.liquid %}
+{% include sfz/opcodes-table-generator.liquid %}
 {%-comment-%} Tables data is at /_data/sfz/syntax.yml {%-endcomment-%}
 </div>
 
