@@ -3,14 +3,11 @@
 ## Opcode documentation
 
 - Complete versions page.
-- bend_smooth: Missing range
 - Complete _envelope_generators_ and _lfo_ type pages
 
 ### Modulations
 
-- Merge eqN_vel2freq, eqN_vel2gain, varNN_*ccX, ampeg_vel2*, amplfo_depth*
-	and amplfo_freq* with related opcodes
-- varNN_eqX{gain|freq}, ampeg_{hold|decay|sustain}_curveccN
+- varNN_eqX{gain|freq}
 - Remove the temporary /modulations/moved directory when done
 - Add missing ARIA aliases:
 		delay_curveccN
