@@ -2663,6 +2663,7 @@ categories:
           - name: "ampeg_decay_onccN"
             version: "SFZ v2"
         - name: "ampeg_decay_curveccN"
+          version: "ARIA"
           value:
             type_name: "integer"
             min: 0
@@ -2730,6 +2731,7 @@ categories:
           - name: "ampeg_hold_onccN"
             version: "SFZ v2"
         - name: "ampeg_hold_curveccN"
+          version: "ARIA"
           value:
             type_name: "integer"
             min: 0
@@ -2797,6 +2799,7 @@ categories:
             max: 100
             unit: "%"
         - name: "ampeg_sustain_curveccN"
+          version: "ARIA"
           value:
             type_name: "integer"
             min: 0
