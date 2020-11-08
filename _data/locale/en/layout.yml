@@ -157,3 +157,8 @@ cards:
     url: "https://github.com/sfz/tests/"
     icon_type: "download"
     icon_category: "fas"
+
+  - label: "Opcode suggestions"
+    url: "https://github.com/sfz/opcode-suggestions/"
+    icon_type: "lightbulb"
+    icon_category: "fas"
