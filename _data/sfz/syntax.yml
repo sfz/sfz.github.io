@@ -108,6 +108,8 @@ categories:
             min: 0
             max: 100
             unit: "seconds"
+        - name: "delay_curveccN"
+          version: "ARIA"
 
     - name: "delay_random"
       short_description: "Region random delay time."
@@ -303,6 +305,20 @@ categories:
         "Delays the start of the region
         until a certain amount of musical beats are passed."
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        unit: "beats"
+      modulation:
+        midi_cc:
+        - name: "delay_beats_onccN"
+          version: "ARIA"
+        - name: "delay_beats_curveccN"
+          version: "ARIA"
+
+    - name: "delay_beats_random"
+      short_description:
+        "Delays the start of the region after a random amount of musical beats."
+      version: "ARIA"
       value:
         type_name: "float"
         unit: "beats"
@@ -1395,6 +1411,16 @@ categories:
         - name: "pan_stepccN"
           version: "Cakewalk"
 
+    - name: "pan_random"
+      short_description: "Random panoramic position for the region."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
+
     - name: "position"
       short_description:
         "Only operational for stereo samples, <code>position</code> defines
@@ -1408,6 +1434,35 @@ categories:
         min: -100
         max: 100
         unit: "%"
+      modulation:
+        midi_cc:
+        - name: "position_onccN"
+          version: "ARIA"
+        - name: "position_curveccN"
+          version: "ARIA"
+        - name: "position_smoothccN"
+          version: "ARIA"
+        - name: "position_stepccN"
+          version: "ARIA"
+
+    - name: "position_random"
+      short_description:
+        ""
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: -100
+        max: 100
+        unit: "%"
+
+    - name: "position_keycenter"
+      short_description: ""
+      version: "ARIA"
+
+    - name: "position_keytrack"
+      short_description: ""
+      version: "ARIA"
 
     - name: "position_veltrack"
       short_description: ""
@@ -2321,6 +2376,17 @@ categories:
               default: 0
               min: 0
 
+    - name: "resonance_random"
+      short_description:
+        "Filter cutoff resonance random value, in decibels."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 40
+        unit: "dB"
+
     - name: "noise_filter"
       version: "Cakewalk"
       short_description: ""
@@ -2515,6 +2581,45 @@ categories:
           value:
             min: 0
             default: 0
+
+    - name: "group_tune"
+      short_description:
+        "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
+        but affecting everything when set under
+        the ‹<a href='/headers/group'>group</a>› header."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -100
+        max: 100
+        unit: "cents"
+
+    - name: "master_tune"
+      short_description:
+        "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
+        but affecting everything when set under
+        the ‹<a href='/headers/master'>master</a>› header."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -100
+        max: 100
+        unit: "cents"
+
+    - name: "global_tune"
+      short_description:
+        "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
+        but affecting everything when set under
+        the ‹<a href='/headers/global'>global</a>› header."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: -100
+        max: 100
+        unit: "cents"
 
     - name: "pitch_keycenter"
       short_description: "Root key for the <a href='/opcodes/sample'>sample</a>."

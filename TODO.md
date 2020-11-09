@@ -9,23 +9,6 @@
 
 - varNN_eqX{gain|freq}
 - Remove the temporary /modulations/moved directory when done
-- Add missing ARIA aliases:
-		delay_curveccN
-		delay_beats_onccN
-		delay_beats_curveccN
-		delay_beats_random
-		group_tune
-		master_tune
-		global_tune
-		resonance_random
-		pan_random
-		position_random
-		position_keytrack
-		position_keycenter
-		position_onccN
-		position_curveccN
-		position_smoothccN
-		position_stepccN
 
 ## Website / db features
 
