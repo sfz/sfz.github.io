@@ -1,8 +1,0 @@
-{%-if include.category.url-%}
-	{%-assign category_url_result = "<a href='" | append: include.category.url |
-		append: "'>" | append: include.category.name | append: "</a>"-%}
-{%else%}
-	{%-assign category_url_result = include.category.name-%}
-{%-endif-%}
-{{ category_url_result }}
-{%-comment-%} No new line, avoid <p>{%-endcomment-%}

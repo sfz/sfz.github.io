@@ -18,16 +18,16 @@
 	</thead>
 	<tbody>
 {%-for category_ in site.data.sfz.syntax.categories-%}
-	{%-for opcode_ in category_.opcodes-%}
+	{%-for toplevel_opcode in category_.opcodes-%}
 		{% include sfz/functions/processOpcode.liquid
 			category = category_
-			opcode   = opcode_ %}
+			opcode   = toplevel_opcode %}
 	{%-endfor-%}
 	{%-for category_type in category_.types-%}
-		{%-for opcode_ in category_type.opcodes-%}
+		{%-for toplevel_opcode in category_type.opcodes-%}
 			{% include sfz/functions/processOpcode.liquid
 				category = category_type
-				opcode   = opcode_ %}
+				opcode   = toplevel_opcode %}
 		{%-endfor-%}
 	{%-endfor-%}
 {%-endfor-%}

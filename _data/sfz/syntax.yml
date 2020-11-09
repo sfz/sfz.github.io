@@ -147,10 +147,10 @@ categories:
     - name: "loop_mode"
       short_description:
         "Allows playing samples with loops defined in the unlooped mode."
+      version: "SFZ v1"
       alias:
       - name: "loopmode"
         version: "SFZ v2"
-      version: "SFZ v1"
       value:
         type_name: "string"
         default:
@@ -195,8 +195,8 @@ categories:
       modulation:
         midi_cc:
         - name: "loop_startccN"
-          version: "Cakewalk"
           short_description: "Change of loop start point."
+          version: "Cakewalk"
           alias:
           - name: "loop_start_onccN"
 
@@ -1431,7 +1431,6 @@ categories:
         midi_cc:
         - name: "gain_ccN"
           short_description: "Gain applied on MIDI control N, in decibels."
-          version: "SFZ v1"
           alias:
           - name: "gain_onccN"
             version: "SFZ v2"
@@ -1521,7 +1520,6 @@ categories:
           version: "ARIA"
           alias:
           - name: "amp_veltrack_ccN"
-            version: "ARIA"
         - name: "amp_veltrack_curveccN"
           version: "ARIA"
 
@@ -1767,7 +1765,6 @@ categories:
         - name: "amplitude_onccN"
           alias:
           - name: "amplitude_ccN"
-            version: "ARIA"
           value:
             type_name: "float"
             min: 0
@@ -2106,7 +2103,6 @@ categories:
       alias:
       - name: "fil2_gain"
         short_description: "Gain for lsh, hsh and peq filter types."
-        version: "ARIA"
         modulation:
           midi_cc:
           - name: "fil2_gain_onccN"
@@ -2307,7 +2303,7 @@ categories:
               unit: "dB"
             alias:
             - name: "resonance2_ccN"
-              version: "SFZ v2" # TODO: Inherit from the last defined
+              version: "SFZ v2" # TODO: Inherit from the last defined?
           - name: "resonance2_curveccN"
             value:
               type_name: "integer"

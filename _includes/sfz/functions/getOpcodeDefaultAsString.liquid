@@ -1,9 +1,0 @@
-{%-assign opcode_default_value_result = "N/A"-%}
-{%-if include.opcode.value.default-%}
-	{%-assign opcode_default_value_result = include.opcode.value.default-%}
-{%-comment-%}
-		| append: ' ' | append: include.opcode.value.unit-%}
-{%-endcomment-%}
-{%-endif-%}
-{{ opcode_default_value_result }}
-{%-comment-%} No new line, avoid <p>{%-endcomment-%}

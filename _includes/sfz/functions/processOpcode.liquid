@@ -1,30 +1,30 @@
-		{%-capture opcode_url-%}
-			{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.opcode-%}
-		{%-endcapture-%}
-		{%-capture opcode_value_default-%}
-			{%-include sfz/functions/getOpcodeDefaultAsString.liquid opcode=include.opcode-%}
-		{%-endcapture-%}
-		{%-capture opcode_value_range-%}
-			{%-include sfz/functions/getOpcodeRangeAsString.liquid opcode=include.opcode-%}
-		{%-endcapture-%}
+{%-assign opcode_value_default = "N/A"-%}
 		<tr>
 			<td class="{{ include.category.id }}"><span style="display:none">{{ include.category.name }}</span></td>
-			<td class="opcode">{{ opcode_url }}</td>
-		{%-if include.opcode.short_description == nil and include.type == "alias"-%}
-			{%-capture parent_url-%}
-				{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.parent-%}
-			{%-endcapture-%}
-			<td>{{ parent_url }} alias.</td>
+			<td>{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.opcode-%}</td>
+		{%-if include.type == "alias"-%}
+			<td>{% include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.parent %} alias.</td>
+			<td>{{ include.parent.value.type_name }}</td>
+			{%-if include.parent.value.default-%}
+				{%-assign opcode_value_default = include.parent.value.default-%}
+			{%-endif-%}
+			<td>{{ opcode_value_default }}</td>
+			<td>{%-include sfz/functions/getOpcodeRangeAsString.liquid opcode=include.parent-%}</td>
 		{%-else-%}
 			<td>{{ include.opcode.short_description }}</td>
-		{%-endif-%}
 			<td>{{ include.opcode.value.type_name }}</td>
+			{%-if include.opcode.value.default-%}
+				{%-assign opcode_value_default = include.opcode.value.default-%}
+			{%-endif-%}
 			<td>{{ opcode_value_default }}</td>
-			<td>{{ opcode_value_range }}</td>
+			<td>{%-include sfz/functions/getOpcodeRangeAsString.liquid opcode=include.opcode-%}</td>
+		{%-endif-%}
 		{%-if include.opcode.version-%}
 			<td>{{ include.opcode.version }}</td>
-		{%-else-%}
+		{%-elsif include.parent.version-%}
 			<td>{{ include.parent.version }}</td>
+		{%-else-%}
+			<td>{{ toplevel_opcode.version }}</td>
 		{%-endif-%}
 		</tr>
 		{%-for alias in include.opcode.alias-%}
