@@ -21,7 +21,6 @@
 {% endfor %}
 								<div><b>Categories</b></div>
 {% for category in site.data.sfz.syntax.categories %}
-	{%assign hue = 10%}
 	{% if category.opcodes.size > 0 %}
 								<div class="checkbox-filter {{ category.id }}">
 									<input
