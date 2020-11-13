@@ -20,5 +20,9 @@ and apply a 12 dB boost when CC1 is at maximum.
 
 `gain_ccN`/`volume_onccN` is useful for creating volume controls.
 
+In Aria, either gain or volume can be used in modulations; however, gain by itself
+(for example gain=5) is not valid. For a fixed volume change wihtout modulation,
+only volume works.
+
 Also see the ARIA extension [amplitude_onccN](/opcodes/amplitude) for another way
 to do a simple volume control.
