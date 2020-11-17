@@ -183,6 +183,16 @@ categories:
 - name: "Import from SFZ"
   applications:
 
+  - name: "Bitwig Studio"
+    license: "Commercial"
+    url: "https://www.bitwig.com/"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Sampler device supports the import of SFZ. Also via drag & drop."
+
   - name: "HISE"
     license: "GPL-3.0"
     url: "http://hise.audio/"
