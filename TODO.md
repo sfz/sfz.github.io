@@ -12,9 +12,6 @@
 
 ## Website / db features
 
-- Remove redundant MIDI CC modulations from list that is already in the opcode
-	info table and keep track of aliases (opcode layout)
-	(E.g.: see [cutoff] opcode page)
 - Variables inheritance
 - OpenMPT: Missing section "Import / Export"
 

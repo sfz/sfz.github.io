@@ -122,6 +122,13 @@ layout: default
 		{%-endif-%}
 	{%-endfor-%}
 {%-endif-%}
+{%-if opcode_info.modulation.midi_cc or opcode_info.modulation.velocity-%}
+		<thead class="thead-dark">
+			<tr>
+				<th colspan="6">Modulations</th>
+			</tr>
+		</thead>
+{%-endif-%}
 {%-for midi_cc in opcode_info.modulation.midi_cc-%}
 	{%-if midi_cc.value.default != nil-%}
 		{%-assign midi_cc_default = midi_cc.value.default-%}
@@ -167,8 +174,8 @@ layout: default
 		</tbody>
 </table>
 
-{%-if opcode_info.modulation-%}
-	<h2>Modulation Sources</h2>
+{%-if opcode_info.modulation.envelope or opcode_info.modulation.lfo-%}
+	<h2>Other modulations</h2>
 	{%-assign envelope = opcode_info.modulation.envelope-%}
 	{%-assign lfo = opcode_info.modulation.lfo-%}
 	{%-if envelope == nil-%}
@@ -180,47 +187,6 @@ layout: default
 	<ul>
 		<li>Envelope: {{ envelope }}</li>
 		<li>LFO: {{ lfo }}</li>
-		<li>MIDI CC:</li>
-		<ul>
-	{%-for midi_cc in opcode_info.modulation.midi_cc-%}
-		{%-if midi_cc.version-%}
-			{%-assign midi_cc_name = midi_cc.name |
-				append: " (" | append: midi_cc.version	| append: ')'-%}
-		{%-else-%}
-			{%-assign midi_cc_name = midi_cc.name-%}
-		{%-endif-%}
-<li>
-		{%-for alias in midi_cc.alias-%}
-			{%-assign midi_cc_name = midi_cc_name | append: ", alias " | append: alias.name-%}
-			{%-if alias.version-%}
-				{%-assign midi_cc_name = midi_cc_name | append: " (" |
-					append: alias.version | append: ')'-%}
-			{%-endif-%}
-		{%-endfor-%}
-	{{ midi_cc_name }}
-</li>
-	{%-endfor-%}
-		</ul>
-	{%-if opcode_info.modulation.velocity != nil-%}
-		<li>Velocity:</li>
-		<ul>
-			{%-for velocity in opcode_info.modulation.velocity-%}
-				{%-assign velocity_name = velocity.name |
-					append: " (" | append: velocity.version	| append: ')'-%}
-		<li>
-				{%-for alias in velocity.alias-%}
-					{%-assign velocity_name = velocity_name | append: ", alias " |
-						append: alias.name-%}
-					{%-if alias.version-%}
-						{%-assign midi_cc_name = midi_cc_name | append: " (" |
-							append: alias.version | append: ')'-%}
-					{%-endif-%}
-				{%-endfor-%}
-			{{ velocity_name }}
-		</li>
-			{%-endfor-%}
-		</ul>
-	{%-endif-%}
 	</ul>
 {%-endif-%}
 
