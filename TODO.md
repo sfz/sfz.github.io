@@ -25,5 +25,4 @@
 - Add missing links to external opcode pages and use tooltips with brief opcode
 	descriptions from the syntax.yml opcode db when hover over links
 
-[cutoff]: /opcodes/cutoff.md
 [Prettify SFZ definition script]: /assets/js/prettify/lang-sfz.js
