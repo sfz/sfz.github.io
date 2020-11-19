@@ -31,6 +31,10 @@
   - name: "global_label"
   - name: "group_label"
 
+- name: "label_keyN"
+  pages:
+  - name: "label_ccN"
+
 - name: "off_curve"
   pages:
   - name: "off_shape"

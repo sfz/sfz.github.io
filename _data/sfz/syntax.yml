@@ -441,6 +441,12 @@ categories:
     value:
       type_name: "string"
 
+  - name: "label_keyN"
+    short_description: "Creates a label for a key."
+    version: "sfizz"
+    value:
+      type_name: "string"
+
   - name: "set_ccN"
     short_description:
       "Sets a default initial value for MIDI CC number N,
