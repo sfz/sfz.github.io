@@ -2141,6 +2141,8 @@ categories:
           - name: "cutoff2_curveccN"
           - name: "cutoff2_smoothccN"
           - name: "cutoff2_stepccN"
+          - name: "cutoff2_chanaft"
+          - name: "cutoff2_polyaft"
 
     - name: "fil_gain"
       short_description: "Gain for lsh, hsh and peq filter types."
