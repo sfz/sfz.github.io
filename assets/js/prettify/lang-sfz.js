@@ -42,7 +42,7 @@ PR['registerLangHandler'](
 		[
 			// Opcodes and directives
 			[PR['PR_KEYWORD'],
-			/^(?:{%-include sfz/prettify_opcodes_generator.liquid-%})\b/, null],
+			/^(?:{%-include sfz/prettify-opcodes-generator.liquid-%})\b/, null],
 
 			// Values: valid characters between '=' and a space or the end of line,
 			// excluding single line and block comments (see basic_sfz_file tutorial)

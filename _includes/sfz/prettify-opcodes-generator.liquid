@@ -1,0 +1,25 @@
+{%-for category_ in site.data.sfz.syntax.categories-%}
+	{%-for toplevel_opcode in category_.opcodes-%}
+		{% include sfz/functions/addOpcodeToSyntaxHighlighting.liquid
+			opcode = toplevel_opcode %}
+	{%-endfor-%}
+	{%-for category_type in category_.types-%}
+		{%-for toplevel_opcode in category_type.opcodes-%}
+			{% include sfz/functions/addOpcodeToSyntaxHighlighting.liquid
+				opcode = toplevel_opcode %}
+		{%-endfor-%}
+	{%-endfor-%}
+{%-endfor-%}
+{%-assign opcode_names = opcode_names |
+	replace: "hint_*", "hint_([a-z]*)" |
+	replace: "eqN_", "eq([1-3]{1})_" |
+	replace: "lfoN_offsetX", "lfo([0-9]{1,3})_offset([2-8]{1})" |
+	replace: "lfoN_ratioX", "lfo([0-9]{1,3})_ratio([2-8]{1})" |
+	replace: "lfoN_scaleX", "lfo([0-9]{1,3})_scale([2-8]{1})" |
+	replace: "lfoN_waveX", "lfo([0-9]{1,3})_wave([2-8]{1})" |
+	replace: 'NN', "([0-9]{1,3})" |
+	replace: 'N', "([0-9]{1,3})" |
+	replace: 'X', "([0-9]{1,3})" |
+	replace: 'Y', "([0-9]{1,3})" |
+	split: '|' | sort | join: '|' | remove_first: '|'-%}
+{{ opcode_names }}
