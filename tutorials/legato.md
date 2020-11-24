@@ -176,7 +176,7 @@ pitch_keycenter=48
 ## True sampled legato
 
 Here are examples from a simple flute test by MatFluor. The trigger=first regions
-work similarly as all the above examples, and the [sw_down](/opcodes/sw_down) opcode can be used
+work similarly as all the above examples, and the [sw_previous](/opcodes/sw_previous) opcode can be used
 to choose which sample plays for the legato regions. If the samples would include
 both the legato transition and the complete sustain of the following note, things
 would be very simple:
@@ -191,12 +191,12 @@ ampeg_attack=0.05 ampeg_release=0.2
 off_mode=normal
 
 // Leg transitions up
-<region> sample=legatovib_g4_a4.wav key=A4 sw_down=G4
-<region> sample=legatovib_g4_c5.wav key=C5 sw_down=G4
-<region> sample=legatovib_a4_c5.wav key=C5 sw_down=A4
+<region> sample=legatovib_g4_a4.wav key=A4 sw_previous=G4
+<region> sample=legatovib_g4_c5.wav key=C5 sw_previous=G4
+<region> sample=legatovib_a4_c5.wav key=C5 sw_previous=A4
 // Leg transitions down
-<region> sample=legatovib_c5_a4.wav key=A4 sw_down=C5
-<region> sample=legatovib_c5_g4.wav key=G4 sw_down=C5
+<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5
+<region> sample=legatovib_c5_g4.wav key=G4 sw_previous=C5
 ```
 
 Recording the full sustain after every transition adds greatly to the recording
@@ -214,13 +214,13 @@ ampeg_attack=0.05 ampeg_release=0.2
 off_mode=normal
 
 // Leg transitions up
-<region> sample=legatovib_g4_a4.wav key=A4 sw_down=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_g4_c5.wav key=C5 sw_down=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_a4_c5.wav key=C5 sw_down=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_g4_a4.wav key=A4 sw_previous=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_g4_c5.wav key=C5 sw_previous=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_a4_c5.wav key=C5 sw_previous=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
 // Leg transitions down
-<region> sample=legatovib_c5_a4.wav key=A4 sw_down=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_c5_g4.wav key=G4 sw_down=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_a4_g4.wav key=G4 sw_down=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=43000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_c5_g4.wav key=G4 sw_previous=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_a4_g4.wav key=G4 sw_previous=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=43000 ampeg_decay_shape=-1.4
 // Leg sustains
 <region> sample=sustainvib_c5.wav key=C5 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
 <region> sample=sustainvib_a4.wav key=A4 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
