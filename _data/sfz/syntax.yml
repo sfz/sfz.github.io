@@ -2718,6 +2718,9 @@ categories:
     url: "/modulations/envelope_generators"
     opcodes:
     - name: "ampeg_attack"
+      alias:
+      - name: "amp_attack"
+        version: "Cakewalk"
       short_description: "EG attack time."
       version: "SFZ v1"
       value:
@@ -2741,6 +2744,9 @@ categories:
         velocity:
         - name: "ampeg_vel2attack"
           short_description: "Velocity effect on EG attack time."
+          alias:
+          - name: "amp_vel2attack"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -2751,6 +2757,9 @@ categories:
     - name: "ampeg_decay"
       short_description: "EG decay time."
       version: "SFZ v1"
+      alias:
+      - name: "amp_decay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -2777,6 +2786,9 @@ categories:
         velocity:
         - name: "ampeg_vel2decay"
           short_description: "Velocity effect on pitch EG decay time."
+          alias:
+          - name: "amp_vel2decay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -2787,6 +2799,9 @@ categories:
     - name: "ampeg_delay"
       short_description: "EG delay time."
       version: "SFZ v1"
+      alias:
+      - name: "amp_delay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -2808,6 +2823,9 @@ categories:
         velocity:
         - name: "ampeg_vel2delay"
           short_description: "Velocity effect on EG delay time."
+          alias:
+          - name: "amp_vel2delay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -2818,6 +2836,9 @@ categories:
     - name: "ampeg_hold"
       version: "SFZ v1"
       short_description: "EG hold time."
+      alias:
+      - name: "amp_hold"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -2845,6 +2866,9 @@ categories:
         velocity:
         - name: "ampeg_vel2hold"
           short_description: "Velocity effect on EG hold time."
+          alias:
+          - name: "amp_vel2hold"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -2855,6 +2879,9 @@ categories:
     - name: "ampeg_release"
       short_description: "EG release time (after note release)."
       version: "SFZ v1"
+      alias:
+      - name: "amp_release"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0.001
@@ -2875,6 +2902,9 @@ categories:
             unit: "seconds"
         velocity:
         - name: "ampeg_vel2release"
+          alias:
+          - name: "amp_vel2release"
+            version: "Cakewalk"
           short_description: "Velocity effect on EG release time."
           value:
             type_name: "float"
@@ -2886,6 +2916,9 @@ categories:
     - name: "ampeg_sustain"
       short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      alias:
+      - name: "amp_sustain"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 100
@@ -2913,6 +2946,9 @@ categories:
         velocity:
         - name: "ampeg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
+          alias:
+          - name: "amp_vel2sustain"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
