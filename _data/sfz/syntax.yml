@@ -3126,6 +3126,9 @@ categories:
     - name: "fileg_attack"
       short_description: "EG attack time."
       version: "SFZ v1"
+      alias:
+      - name: "fil_attack"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3147,6 +3150,9 @@ categories:
         velocity:
         - name: "fileg_vel2attack"
           short_description: "Velocity effect on EG attack time."
+          alias:
+          - name: "fil_vel2attack"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3157,6 +3163,9 @@ categories:
     - name: "fileg_decay"
       short_description: "EG decay time."
       version: "SFZ v1"
+      alias:
+      - name: "fil_decay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3177,6 +3186,9 @@ categories:
         velocity:
         - name: "fileg_vel2decay"
           short_description: "Velocity effect on filter EG decay time."
+          alias:
+          - name: "fil_vel2decay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3187,6 +3199,9 @@ categories:
     - name: "fileg_delay"
       short_description: "EG delay time."
       version: "SFZ v1"
+      alias:
+      - name: "fil_delay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3208,6 +3223,9 @@ categories:
         velocity:
         - name: "fileg_vel2delay"
           short_description: "Velocity effect on filter EG delay time."
+          alias:
+          - name: "fil_vel2delay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3218,6 +3236,9 @@ categories:
     - name: "fileg_depth"
       short_description: "Envelope depth."
       version: "SFZ v1"
+      alias:
+      - name: "fil_depth"
+        version: "Cakewalk"
       value:
         type_name: "integer"
         default: 0
@@ -3239,6 +3260,9 @@ categories:
         - name: "fileg_vel2depth"
           short_description:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
+          alias:
+          - name: "fil_vel2depth"
+            version: "Cakewalk"
           value:
             type_name: "integer"
             default: 0
@@ -3249,6 +3273,9 @@ categories:
     - name: "fileg_hold"
       short_description: "EG hold time."
       version: "SFZ v1"
+      alias:
+      - name: "fil_hold"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3270,6 +3297,9 @@ categories:
         velocity:
         - name: "fileg_vel2hold"
           short_description: "Velocity effect on EG hold time."
+          alias:
+          - name: "fil_vel2hold"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3280,6 +3310,9 @@ categories:
     - name: "fileg_release"
       short_description: "EG release time (after note release)."
       version: "SFZ v1"
+      alias:
+      - name: "fil_release"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3301,6 +3334,9 @@ categories:
         velocity:
         - name: "fileg_vel2release"
           short_description: "Velocity effect on EG release time."
+          alias:
+          - name: "fil_vel2release"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3334,6 +3370,9 @@ categories:
     - name: "fileg_sustain"
       short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      alias:
+      - name: "fil_sustain"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3355,6 +3394,9 @@ categories:
         velocity:
         - name: "fileg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
+          alias:
+          - name: "fil_vel2sustain"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3365,6 +3407,9 @@ categories:
     - name: "pitcheg_attack"
       short_description: "EG attack time."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_attack"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3378,6 +3423,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2attack"
           short_description: "Velocity effect on EG attack time."
+          alias:
+          - name: "pitch_vel2attack"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3388,6 +3436,9 @@ categories:
     - name: "pitcheg_decay"
       short_description: "EG decay time."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_decay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3406,6 +3457,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2decay"
           short_description: "Velocity effect on pitch EG decay time."
+          alias:
+          - name: "pitch_vel2decay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3416,6 +3470,9 @@ categories:
     - name: "pitcheg_delay"
       short_description: "EG delay time."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_delay"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3435,6 +3492,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2delay"
           short_description: "Velocity effect on pitch EG delay time."
+          alias:
+          - name: "pitch_vel2delay"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3445,6 +3505,9 @@ categories:
     - name: "pitcheg_depth"
       short_description: "Envelope depth."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_depth"
+        version: "Cakewalk"
       value:
         type_name: "integer"
         default: 0
@@ -3464,6 +3527,9 @@ categories:
         - name: "pitcheg_vel2depth"
           short_description:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
+          alias:
+          - name: "pitch_vel2depth"
+            version: "Cakewalk"
           value:
             type_name: "integer"
             default: 0
@@ -3474,6 +3540,9 @@ categories:
     - name: "pitcheg_hold"
       short_description: "EG hold time."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_hold"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3493,6 +3562,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2hold"
           short_description: "Velocity effect on EG hold time."
+          alias:
+          - name: "pitch_vel2hold"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3503,6 +3575,9 @@ categories:
     - name: "pitcheg_release"
       version: "SFZ v1"
       short_description: "EG release time (after note release)."
+      alias:
+      - name: "pitch_release"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3522,6 +3597,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2release"
           short_description: "Velocity effect on EG release time."
+          alias:
+          - name: "pitch_vel2release"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
@@ -3553,6 +3631,9 @@ categories:
     - name: "pitcheg_sustain"
       short_description: "EG sustain level, in percentage."
       version: "SFZ v1"
+      alias:
+      - name: "pitch_sustain"
+        version: "Cakewalk"
       value:
         type_name: "float"
         default: 0
@@ -3572,6 +3653,9 @@ categories:
         velocity:
         - name: "pitcheg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
+          alias:
+          - name: "pitch_vel2sustain"
+            version: "Cakewalk"
           value:
             type_name: "float"
             default: 0
