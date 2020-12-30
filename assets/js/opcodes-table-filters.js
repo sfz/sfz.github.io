@@ -1,5 +1,12 @@
 $(function() {
 
+// read a search parameter from URL if any, e.g.:
+// https://sfzformat.com/opcodes/?q=amp_decay
+const urlParams = new URLSearchParams(window.location.search);
+const query     = urlParams.get('q');
+
+if (!$.isEmptyObject(query)) $('#search-opcodes').val(query);
+
 var $opcodeTable = $('#table-opcodes');
 var $opcodeSearch = $('#search-opcodes');
 var $versionFilters = $('.versions-checkbox');
@@ -56,4 +63,5 @@ $categoryFilters.on('change', null, updateTable);
 // update after the table was sorted
 $opcodeTable.on('reset-view.bs.table', updateTable);
 
+if (!$.isEmptyObject(query)) updateTable();
 });
