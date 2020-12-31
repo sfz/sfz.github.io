@@ -11,5 +11,6 @@ Gemfile.lock
 package-lock.json
 yarn.lock
 *.code-workspace
+*.diff
 *.geanyprj
 *.log
