@@ -77,17 +77,17 @@ Some more advanced topics
 	drum techniques which produce a continuous sound rather than a hit.
 </div>
 
-[ARIA / Sforzando]:      /extensions/aria/
+[ARIA / Sforzando]:      /opcodes/?v=aria
 [basic SFZ file]:        /tutorials/basic_sfz_file
 [Brush stirs]:           /tutorials/brush_stirs
 [Cymbal muting]:         /tutorials/cymbal_muting
 [Drum basics]:           /tutorials/drum_basics
-[list of SFZ 1]:         /misc/sfz1
+[list of SFZ 1 opcodes]: /opcodes/?v=1
 [list of SFZ headers]:   /headers
 [SFZ creation tools]:    /software/tools
 [SFZ file]:              /tutorials/basic_sfz_file
 [SFZ player]:            /software/players
-[starting here]:         /misc/sfz2
+[starting here]:         /opcodes/?v=2
 [Sustained note basics]: /tutorials/sustained_note_basics
 [Legato]:                /tutorials/legato
 [Vibrato]:               /tutorials/vibrato

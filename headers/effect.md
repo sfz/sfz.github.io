@@ -14,8 +14,8 @@ between SFZ players. The information on available effects and
 how to control them in ARIA and Cakewalk products can be found on
 the [type] page.
 
-[SFZ v1]:       /misc/sfz1
-[SFZ v2]:       /misc/sfz2
+[SFZ v1]:       /opcodes/?v=1
+[SFZ v2]:       /opcodes/?v=2
 [‹region›]:     /headers/region
 [effect1]:      /opcodes/effect1
 [effect2]:      /opcodes/effect2

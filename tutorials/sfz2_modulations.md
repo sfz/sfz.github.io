@@ -345,7 +345,7 @@ discrete number of steps. Setting the number of steps to 1 would make the modula
 all-or-nothing control.
 
 This is what's possible under the SFZ2 specification. There are some additional modulations
-available as [ARIA extensions](/extensions/aria/), with [amplitude_onccN](/opcodes/amplitude)
+available as [ARIA extensions](/opcodes/?v=aria), with [amplitude_onccN](/opcodes/amplitude)
 being a very useful one.
 
 

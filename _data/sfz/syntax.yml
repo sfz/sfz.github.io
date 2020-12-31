@@ -5492,7 +5492,7 @@ categories:
 
 - name: "Loading"
   id: "ldg"
-  url: "/extensions/cakewalk#loading"
+  url: "/opcodes/?v=cakewalk&c=ldg"
   opcodes:
   - name: "load_mode"
     short_description: ""
@@ -5530,7 +5530,7 @@ categories:
 
 - name: "Wavetable Oscillator"
   id: "wos"
-  url: "/extensions/cakewalk#wavetable-oscillator"
+  url: "opcodes/?v=cakewalk&c=wos"
   opcodes:
   - name: "oscillator"
     short_description: ""

@@ -69,6 +69,6 @@ speed purposes. CC 141 has been used successfully for portamento glides, though.
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
-[ARIA]: /extensions/aria
+[ARIA]:  /opcodes/?v=aria
+[SFZ 2]: /opcodes/?v=2
 [MIDI Control Change Messages]: https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
-[SFZ 2]: /misc/sfz2

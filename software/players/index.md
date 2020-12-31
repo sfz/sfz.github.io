@@ -22,7 +22,7 @@ as "software to be freely used, modified, and shared."
 - Alchemy (Camel Audio was acquired by Apple,
   and the current incarnation of Alchemy no longer supports SFZ.)
 
-[ARIA extensions]: /extensions/aria/
+[ARIA extensions]: /opcodes/?v=aria
 [OSI]:     https://opensource.org/licenses
-[SFZ v1]: /misc/sfz1
-[SFZ v2]: /misc/sfz2
+[SFZ v1]: /opcodes/?v=1
+[SFZ v2]: /opcodes/?v=2

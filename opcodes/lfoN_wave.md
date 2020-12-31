@@ -84,6 +84,6 @@ lfo01_step03_oncc73=100 lfo01_step03_smoothcc73=100
 lfo01_step04_oncc73=100 lfo01_step04_smoothcc73=100
 ```
 
-[ARIA]:        /extensions/aria
-[SFZ v2]:      /misc/sfz2
+[ARIA]:        /opcodes/?v=aria
+[SFZ v2]:      /opcodes/?v=2
 [stepped LFO]: /opcodes/lfoN_steps
