@@ -15,7 +15,7 @@ urlParams.forEach(function(value, key) {
 		if (value === '') return;
 		hasParams = true;
 		var values = value.split(',');
-		values.forEach(function(v) {
+		$.each(values, function(_, v) {
 			$(`#chk-${v}`).prop('checked', true);
 		});
 	}
