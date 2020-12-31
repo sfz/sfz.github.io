@@ -12,10 +12,7 @@
 
 ## Website / db features
 
-- Request filters via URL
-  (e.g.: https://sfzformat.com/opcodes/#aria to show only ARIA extensions)
 - Variables inheritance
-- OpenMPT: Missing section "Import / Export"
 
 ### Other tasks
 
