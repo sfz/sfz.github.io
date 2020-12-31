@@ -11,10 +11,12 @@
 									data-filter-column="1">
 								<div><b>Versions</b></div>
 {% for version in site.data.sfz.syntax.versions %}
+	{% assign id = "chk-" | append: version | downcase | remove: "sfz v" %}
 								<div>
 									<input
 										type="checkbox"
 										class="versions-checkbox"
+										id="{{id}}"
 										value="{% if version != "Unknown" %}{{ version }}{% endif %}">
 										{{ version }}
 								</div>
@@ -22,19 +24,23 @@
 								<div><b>Categories</b></div>
 {% for category in site.data.sfz.syntax.categories %}
 	{% if category.opcodes.size > 0 %}
+		{% assign id = "chk-" | append: category.id %}
 								<div class="checkbox-filter {{ category.id }}">
 									<input
 										type="checkbox"
 										class="categories-checkbox"
+										id="{{id}}"
 										value="{{ category.name }}">
 										{{ category.name }}
 								</div>
 	{% endif %}
 	{% for category_type in category.types %}
+		{% assign id = "chk-" | append: category_type.id %}
 								<div class="checkbox-filter {{ category_type.id }}">
 									<input
 										type="checkbox"
 										class="categories-checkbox"
+										id="{{id}}"
 										value="{{ category_type.name }}">
 										{{ category_type.name }}
 								</div>

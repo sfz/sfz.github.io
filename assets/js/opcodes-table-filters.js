@@ -1,12 +1,25 @@
 $(function() {
 
-// read a search parameter from URL if any, e.g.:
-// https://sfzformat.com/opcodes/?q=amp_decay
+// Reads a search parameter from URL if any, e.g.:
+// https://sfzformat.com/opcodes/?c=eg&q=decay&v=cakewalk
 const urlParams = new URLSearchParams(window.location.search);
-const query     = urlParams.get('q');
+var   hasParams = false;
 
-if (!$.isEmptyObject(query)) $('#search-opcodes').val(query);
-
+urlParams.forEach(function(value, key) {
+	if (key === 'q') {
+		if (value === '') return;
+		hasParams = true;
+		$('#search-opcodes').val(value);
+	}
+	else if (key === 'c' || key === 'v') {
+		if (value === '') return;
+		hasParams = true;
+		var values = value.split(',');
+		values.forEach(function(v) {
+			$(`#chk-${v}`).prop('checked', true);
+		});
+	}
+});
 var $opcodeTable = $('#table-opcodes');
 var $opcodeSearch = $('#search-opcodes');
 var $versionFilters = $('.versions-checkbox');
@@ -63,5 +76,5 @@ $categoryFilters.on('change', null, updateTable);
 // update after the table was sorted
 $opcodeTable.on('reset-view.bs.table', updateTable);
 
-if (!$.isEmptyObject(query)) updateTable();
+if (hasParams) updateTable();
 });
