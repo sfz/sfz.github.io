@@ -5,7 +5,9 @@ scripts: ["opcodes-table-filters"]
 ---
 All opcode [versions], including extensions, starting in alphabetical order.
 Note that [modulations] such as (on)ccN and vel2* are included in the pages
-describing the parameters they modulate.
+describing the parameters they modulate.\
+Rows in light pink color represent obsolete opcodes which should not be used
+in new instruments.
 
 <div markdown="0">
 {% include sfz/opcodes-table-generator.liquid %}

@@ -2721,6 +2721,7 @@ categories:
       alias:
       - name: "amp_attack"
         version: "Cakewalk"
+        deprecated: true
       short_description: "EG attack time."
       version: "SFZ v1"
       value:
@@ -2747,6 +2748,7 @@ categories:
           alias:
           - name: "amp_vel2attack"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -2760,6 +2762,7 @@ categories:
       alias:
       - name: "amp_decay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -2788,6 +2791,7 @@ categories:
           short_description: "Velocity effect on pitch EG decay time."
           alias:
           - name: "amp_vel2decay"
+            deprecated: true
             version: "Cakewalk"
           value:
             type_name: "float"
@@ -2802,6 +2806,7 @@ categories:
       alias:
       - name: "amp_delay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -2826,6 +2831,7 @@ categories:
           alias:
           - name: "amp_vel2delay"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -2839,6 +2845,7 @@ categories:
       alias:
       - name: "amp_hold"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -2869,6 +2876,7 @@ categories:
           alias:
           - name: "amp_vel2hold"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -2882,6 +2890,7 @@ categories:
       alias:
       - name: "amp_release"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0.001
@@ -2902,10 +2911,11 @@ categories:
             unit: "seconds"
         velocity:
         - name: "ampeg_vel2release"
+          short_description: "Velocity effect on EG release time."
           alias:
           - name: "amp_vel2release"
             version: "Cakewalk"
-          short_description: "Velocity effect on EG release time."
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -2919,6 +2929,7 @@ categories:
       alias:
       - name: "amp_sustain"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 100
@@ -2949,6 +2960,7 @@ categories:
           alias:
           - name: "amp_vel2sustain"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3129,6 +3141,7 @@ categories:
       alias:
       - name: "fil_attack"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3153,6 +3166,7 @@ categories:
           alias:
           - name: "fil_vel2attack"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3166,6 +3180,7 @@ categories:
       alias:
       - name: "fil_decay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3189,6 +3204,7 @@ categories:
           alias:
           - name: "fil_vel2decay"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3202,6 +3218,7 @@ categories:
       alias:
       - name: "fil_delay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3226,6 +3243,7 @@ categories:
           alias:
           - name: "fil_vel2delay"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3239,6 +3257,7 @@ categories:
       alias:
       - name: "fil_depth"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "integer"
         default: 0
@@ -3263,6 +3282,7 @@ categories:
           alias:
           - name: "fil_vel2depth"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "integer"
             default: 0
@@ -3276,6 +3296,7 @@ categories:
       alias:
       - name: "fil_hold"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3300,6 +3321,7 @@ categories:
           alias:
           - name: "fil_vel2hold"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3313,6 +3335,7 @@ categories:
       alias:
       - name: "fil_release"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3337,6 +3360,7 @@ categories:
           alias:
           - name: "fil_vel2release"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3373,6 +3397,7 @@ categories:
       alias:
       - name: "fil_sustain"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3397,6 +3422,7 @@ categories:
           alias:
           - name: "fil_vel2sustain"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3410,6 +3436,7 @@ categories:
       alias:
       - name: "pitch_attack"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3426,6 +3453,7 @@ categories:
           alias:
           - name: "pitch_vel2attack"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3439,6 +3467,7 @@ categories:
       alias:
       - name: "pitch_decay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3460,6 +3489,7 @@ categories:
           alias:
           - name: "pitch_vel2decay"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3473,6 +3503,7 @@ categories:
       alias:
       - name: "pitch_delay"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3495,6 +3526,7 @@ categories:
           alias:
           - name: "pitch_vel2delay"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3508,6 +3540,7 @@ categories:
       alias:
       - name: "pitch_depth"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "integer"
         default: 0
@@ -3530,6 +3563,7 @@ categories:
           alias:
           - name: "pitch_vel2depth"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "integer"
             default: 0
@@ -3543,6 +3577,7 @@ categories:
       alias:
       - name: "pitch_hold"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3565,6 +3600,7 @@ categories:
           alias:
           - name: "pitch_vel2hold"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3578,6 +3614,7 @@ categories:
       alias:
       - name: "pitch_release"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3600,6 +3637,7 @@ categories:
           alias:
           - name: "pitch_vel2release"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
@@ -3634,6 +3672,7 @@ categories:
       alias:
       - name: "pitch_sustain"
         version: "Cakewalk"
+        deprecated: true
       value:
         type_name: "float"
         default: 0
@@ -3656,6 +3695,7 @@ categories:
           alias:
           - name: "pitch_vel2sustain"
             version: "Cakewalk"
+            deprecated: true
           value:
             type_name: "float"
             default: 0
