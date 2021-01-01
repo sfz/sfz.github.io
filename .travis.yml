@@ -18,13 +18,13 @@ deploy:
   on:
     branch: source
 
-notifications:
-  irc:
-    channels:
-    - "ircs://chat.freenode.net:7070/#sfzformat-dev"
-
-    template:
-    - "[%{repository_name}:%{branch}] Build #%{build_number}: %{message}"
-    - "%{author} : %{commit_subject}"
-    - "Commit URL    : https://github.com/%{repository_slug}/commit/%{commit}"
-    - "Build Details : %{build_url}"
+#notifications:
+#  irc:
+#    channels:
+#    - "ircs://chat.freenode.net:7070/#sfzformat-dev"
+#
+#    template:
+#    - "[%{repository_name}:%{branch}] Build #%{build_number}: %{message}"
+#    - "%{author} : %{commit_subject}"
+#    - "Commit URL    : https://github.com/%{repository_slug}/commit/%{commit}"
+#    - "Build Details : %{build_url}"
