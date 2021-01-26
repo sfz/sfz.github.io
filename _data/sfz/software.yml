@@ -193,6 +193,15 @@ categories:
     short_description:
       "Sampler device supports the import of SFZ. Also via drag & drop."
 
+  - name: "Equator 2"
+    license: "Commercial"
+    url: "https://roli.com/products/software/equator2/"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "MPE synthesizer."
+
   - name: "HISE"
     license: "GPL-3.0"
     url: "http://hise.audio/"
