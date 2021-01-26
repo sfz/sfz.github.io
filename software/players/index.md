@@ -18,7 +18,7 @@ as "software to be freely used, modified, and shared."
 
 ## No longer available
 
-- Cakewalk sfz
+- Cakewalk [sfz] (backup on web.archive.org)
 - Alchemy (Camel Audio was acquired by Apple,
   and the current incarnation of Alchemy no longer supports SFZ.)
 
@@ -26,3 +26,4 @@ as "software to be freely used, modified, and shared."
 [OSI]:     https://opensource.org/licenses
 [SFZ v1]: /opcodes/?v=1
 [SFZ v2]: /opcodes/?v=2
+[sfz]:    https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
