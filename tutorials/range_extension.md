@@ -4,9 +4,13 @@ title: Range extension
 
 This tutorial describes how to extend the range of an instrument which does not
 have samples for all notes in the desired range. This is not complicated, but
-there are some downsides to doing it the simple way.
+there are some downsides to doing it the simple way. Things work the same way
+when extending up or down. When there are intermediate pitches missing, for
+example when an instrument is sampled every minor third or every octave, there
+won't be much choice, though if round robins are available the last approach
+can prove useful.
 
-## Simple extension of highest avaialble note
+## Simple extension of closest avaialble sample
 
 Let's say we have only one sampled violin section with the following map, and
 we want to be able to play the notes for another octave above the highest
@@ -43,7 +47,7 @@ pitch bend is needed, the maximum effectively avaialable
 transpotition becomes an octave less. There is no similar
 limitation with downward transposition, though.
 
-## Alternating several high notes.
+## Alternating several samples
 
 The above is good enough in a lot of cases, though it might
 become obviously audible that the entire top octave uses
