@@ -55,6 +55,9 @@ navigation:
 
   - label: "Unison"
     url: "/tutorials/unison"
+    
+  - label: "Range extension"
+    url: "/tutorials/range_extension"
 
   - label: "Subtractive Synthesizers"
     url: "/tutorials/subtractive_synths"
