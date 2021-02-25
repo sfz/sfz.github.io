@@ -55,7 +55,7 @@ navigation:
 
   - label: "Unison"
     url: "/tutorials/unison"
-    
+
   - label: "Range extension"
     url: "/tutorials/range_extension"
 
@@ -85,18 +85,6 @@ navigation:
   -
   - label: "Video Tutorials"
     url: "/tutorials/videos"
-
-- label: "Docs"
-  type: "dropdown"
-  pages:
-  - label: "Website Development Reference"
-    url: "/docs/website-development-reference"
-
-  - label: "Jekyll Setup on Windows"
-    url: "/docs/jekyll-windows-setup"
-
-  - label: "Add Multimedia Content"
-    url: "/docs/adding-multimedia-content"
 
 - label: "News"
   url: "/news"
