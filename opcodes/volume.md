@@ -4,7 +4,8 @@ opcode_name: "volume"
 ---
 Range is -144.6 to 6 in the specification,
 but many SFZ players can utilize values above 6. Sfz.dll, Rapture and Dimension
-have a +24 dB maximum, and ARIA also has a higher limit.
+have a +24 dB maximum, and ARIA has an upper limit of at least +144,
+perhaps even more.
 
 ## Examples
 
