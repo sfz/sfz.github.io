@@ -1,0 +1,59 @@
+<style>
+#gfx_insert1 {
+	padding-top: 15px;
+}
+#output {
+	width:           440px;
+	text-align:      right;
+	font-size:       14px;
+	border:          none;
+	padding:         20px 20px 20px;
+	-webkit-columns: 180px 2; /* Chrome, Safari, Opera */
+	-moz-columns:    180px 2; /* Firefox */
+	columns:         180px 2;
+}
+.barcontainer {
+	width:       508px;
+	margin-left: 20px;
+}
+.bar {
+	width:      3px;
+	background: #2196F3;
+	margin:     0 1px 0 0;
+	float:      left;
+	display:    block;
+}
+</style>
+<form id="velcurveForm">
+	<label for="min_amp">Min Amplitude:</label>
+	<input type="text" id="min_amp" value="0.0001">
+	<i>Hint: exact 0 holds a surprise</i><br/>
+
+	<label for="max_amp">Max Amplitude:</label>
+	<input type="text" id="max_amp" value="1.0">
+	Usually 1.0<br/>
+
+	<label for="growth">Growth Factor:</label>
+	<input type="text" id="growth" value="1.0075">
+	<i>1.x = Concave | 0.x = Convex</i>
+	<br/><br/>
+
+	<input type="reset" value="reset" class="btn btn-primary" id="clearOutput">
+	<input type="submit" value="generate" class="btn btn-primary">
+	<br/><br/>
+
+	<button id="cc5" class="btn btn-primary">cc5</button>
+	<button id="cc4" class="btn btn-primary">cc4</button>
+	<button id="cc3" class="btn btn-primary">cc3</button>
+	<button id="cc2" class="btn btn-primary">cc2</button>
+	<button id="cc1" class="btn btn-primary">cc1</button>
+	<button id="c"   class="btn btn-primary">c  </button>
+	<button id="cv1" class="btn btn-primary">cv1</button>
+	<button id="cv2" class="btn btn-primary">cv2</button>
+	<button id="cv3" class="btn btn-primary">cv3</button>
+	<button id="cv4" class="btn btn-primary">cv4</button>
+	<button id="cv5" class="btn btn-primary">cv5</button>
+	<button id="inv" class="btn btn-primary">inv</button>
+</form>
+<div id="gfx_insert1" class="barcontainer"></div><br/>
+<div id="output"></div>
