@@ -22,6 +22,4 @@ amp_veltrack=100
 
 Allowed values are from -100 (which would make velocity 127 notes silent, and
 low-velocity notes loud) to 100, but for most practical purposes this paramter
-is generally set to either 0 or 100. In ARIA negative values behave the same as
-0, though at least some Cakewalk products interpret negative values as
-described above.
+is generally set to either 0 or 100.
