@@ -94,7 +94,7 @@ fills in the gaps.
 <region>sample=f5.wav lokey=64 hikey=66 pitch_keycenter=65
 <region>sample=g5.wav lokey=67 hikey=68 pitch_keycenter=67
 <region>sample=a5.wav lokey=69 hikey=70 pitch_keycenter=69
-<region>sample=c6.wav lokey=71 hikey=72 pitch_keycenter=82
+<region>sample=c6.wav lokey=71 hikey=72 pitch_keycenter=72
 ```
 
 ## Alternating several samples
