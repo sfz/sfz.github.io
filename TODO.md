@@ -13,6 +13,10 @@
 ## Website / db features
 
 - Variables inheritance
+- recrate_symlinks.sh script:
+  - set range based {lo|hi} opcodes to share the same page (support from db?)
+  - curve_index and vN to curve header page
+  - not symlinks but share same content, like lfoN_ratio|scale
 
 ### Other tasks
 
