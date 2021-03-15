@@ -1,5 +1,5 @@
 format: 2
-versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2"] # , "Unknown"
+versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "sfizz"] # , "Unknown"
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -1284,11 +1284,6 @@ categories:
         max: 127
       alias:
       - name: "start_loccN"
-        short_description:
-          "If a MIDI control message with a value between <code>start_loccN</code>
-          and <code>start_hiccN</code> is received, the region will play.
-          Alias for <a href='/opcodes/on_loccN'>on_loccN</a>.
-          Default value is -1, it means unassigned."
         version: "SFZ v2"
 
     - name: "on_hiccN"
@@ -1304,11 +1299,6 @@ categories:
         max: 127
       alias:
       - name: "start_hiccN"
-        short_description:
-          "If a MIDI control message with a value between <code>start_loccN</code>
-          and <code>start_hiccN</code> is received, the region will play.
-          Alias for <a href='/opcodes/on_hiccN'>on_hiccN</a>.
-          Default value is -1, it means unassigned."
         version: "SFZ v2"
 
     - name: "on_lohdccN"
