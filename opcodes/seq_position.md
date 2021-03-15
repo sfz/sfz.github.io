@@ -38,6 +38,8 @@ the [lorand / hirand](/opcodes/lorand) page. However, lorand/hirand might not
 be a good idea to use with samples which have multiple microphone positions,
 and sticking to seq_position and seq_length might be necessary.
 
+## Practical Considerations
+
 In at least some SFZ players, sequence position is not tracked together for
 all regions, which means seq_position is not a practical way to implement
 alternating left/right hand or up/down bowing samples.
@@ -64,7 +66,7 @@ key=48
 
 This will also happen in cases where, for example, one step in the
 sequence has three velocity layers and the other step has four, as it's
-not possible to make the layer split points match then. 
+not possible to make the layer split points match then.
 
 In those players, this is a workaround:
 

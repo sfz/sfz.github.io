@@ -34,6 +34,8 @@ on the [lorand / hirand](/opcodes/lorand) page. However, lorand/hirand might
 not be a good idea to use with samples which have multiple microphone
 positions, and sticking to seq_position and seq_length might be necessary.
 
+## Practical Considerations
+
 In the ARIA implementation of SFZ, sequence position is not tracked together
 for all regions, which means sequential ronud robins is not a practical way
 to implement alternating left/right hand or up/down bowing samples.

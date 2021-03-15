@@ -23,7 +23,7 @@ These can be overwritten, but as they are used by the engine for their normal
 functions, it's safer to use `curve_index` numbers of 7 and above for custom curves.
 Curve_index in ARIA can be any integer from 0 to 255.
 
-##### Examples
+## Examples
 
 ```
 <curve>curve_index=17

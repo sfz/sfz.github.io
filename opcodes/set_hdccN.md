@@ -7,8 +7,6 @@ when the instrument is initially loaded.
 
 Used under the ‹[control](/headers/control)› header.
 
-`set_realccN` is a deprecated alias for `set_hdccN`.
-
 ## Examples
 
 ```
@@ -16,3 +14,7 @@ Used under the ‹[control](/headers/control)› header.
 <master> amplitude_oncc16=100
 <region> sample=*sine
 ```
+
+## Practical Considerations
+
+`set_realccN` is a deprecated alias for `set_hdccN`.

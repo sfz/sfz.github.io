@@ -27,14 +27,13 @@ problem to spot when testing.
 <region> lorand=0.75 sample=kick_vl1_rr4.wav
 ```
 
-It is also possible to combine this with the [seq_length](/opcodes/seq_length)
-and [seq_position](/opcodes/seq_position) opcodes to split round robins
-into two subsets, and randomize within each subset. This results in randomization,
-but prevents the possibility of the same sample being triggered twice in a row
-when the random number generated falls into the same range as the previously
-generated number. This can be good when there are a lot (6 or more) round robin
-samples available. The code for 8 samples split into two sequential subsets might
-look like this:
+It is also possible to combine this with the [seq_length] and [seq_position]
+opcodes to split round robins into two subsets, and randomize within each subset.
+This results in randomization, but prevents the possibility of the same sample
+being triggered twice in a row when the random number generated falls into the
+same range as the previously generated number. This can be good when there are
+a lot (6 or more) round robin samples available. The code for 8 samples split
+into two sequential subsets might look like this:
 
 ```
 <region> seq_length=2 seq_position=1 hirand=0.25 sample=kick_vl1_rr1.wav
@@ -46,6 +45,11 @@ look like this:
 <region> seq_length=2 seq_position=2 lorand=0.5 hirand=0.75 sample=kick_vl1_rr7.wav
 <region> seq_length=2 seq_position=2 lorand=0.75 sample=kick_vl1_rr8.wav
 ```
+
+[seq_length]:   seq_length
+[seq_position]: seq_position
+
+## Practical Considerations
 
 In the ARIA implementation of SFZ, sequence position is not tracked together for
 all regions, which means the above is not a practical way to implement alternating

@@ -15,9 +15,11 @@ pitch_random=400
 Useful for humanizing the pitch of instruments with naturally imprecise
 intonation, especially when playing multiple regions in unison.
 
-In ARIA this is unipolar, and equivalent to `pitch_oncc135`. So, if `pitch_random` is set to 20,
-the region will play at pitches tuned by an amount in the range
-from 0 cents to +20 cents. In order to get pitch to fluctuate
+## Practical Considerations
+
+In ARIA this is unipolar, and equivalent to `pitch_oncc135`.
+So, if `pitch_random` is set to 20, the region will play at pitches tuned by an
+amount in the range from 0 cents to +20 cents. In order to get pitch to fluctuate
 between -20 and +20 cents, there would be two ways to get there, either by
 applying a fixed shift of -20 cents and a random shift of up to 40 cents:
 

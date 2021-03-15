@@ -16,5 +16,8 @@ sample_fadeout=2.5
 ```
 
 The curve used for fading out is linear.
+
+## Practical Considerations
+
 This opcode is supported in RGC sfz and Cakewalk products, where at least in
 DropZone uses sample units instead seconds.

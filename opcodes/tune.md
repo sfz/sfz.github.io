@@ -36,4 +36,6 @@ pitch_oncc27=100
 pitch_curvecc27=1
 ```
 
+## Practical Considerations
+
 In ARIA, `tune_*ccN` can also be used as an alias for `pitch_*ccN` (see below).

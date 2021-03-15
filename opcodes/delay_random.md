@@ -8,8 +8,6 @@ is set to one_shot, which will play the region in ARIA.
 Similar to [delay](/opcodes/delay) in general. Computed when
 the note is triggered.
 
-In ARIA, Cakewalk and rcg sfz, this is unipolar.
-
 ## Examples
 
 ```
@@ -17,3 +15,7 @@ delay_random=1
 
 delay_random=0.2
 ```
+
+## Practical Considerations
+
+In ARIA, Cakewalk and rcg sfz, this is unipolar.
