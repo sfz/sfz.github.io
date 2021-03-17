@@ -306,6 +306,15 @@ categories:
 - name: "Converters"
   applications:
 
+  - name: "exs2sfz (Python)"
+    license: "ISC"
+    url: "https://github.com/AudioKit/SamplerDemo/blob/master/Sounds/exs2sfz.py"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "EXS24 to SFZ sample library metadata converter."
+
   - name: "EXS2SFZ"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/exs2sfz.html"
