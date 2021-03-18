@@ -18,7 +18,9 @@ If amp_velcurve_127 is not specified, the player will assign it the value of 1.
 ## Examples
 
 There are several common ways to use this opcode. One is to reduce the dynamic range
-so that low-velocity notes will still produce a fairly loud sound.
+so that low-velocity notes will still produce a fairly loud sound. This is similar
+(but probably not quite identical mathematically) to setting amp_veltrack to less
+than 100.
 
 ```
 // linear, compressed dynamic range
@@ -57,6 +59,18 @@ be reasonably audible.
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav
 <region>lovel=96 sample=kick_vl4.wav
 ```
+
+## Practical Considerations
+
+As a MIDI velocity 0 note is a note-off message, amp_velcurve_0 never actually needs
+to be set. It just creates a slightly different starting point for one side of the
+interpolation, compared to setting amp_velcurve_1. By default, amp_velcurve_0 is
+effectively 0. If amp_velcurve is not set for any N, then amp_velcurve_0 is 0 and
+amp_velcurve_127 is 1, and the volume for notes with velocity is the same as if
+amp_velcurve_1=0.007874016.
+
+Both amp_velcurve_n and amp_veltrack can be used together, though there's probably
+more risk of confusion than benefit to doing this.
 
 ## External Links
 
