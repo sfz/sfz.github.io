@@ -26,9 +26,9 @@ $border-color:                $gray-300 !default;
 $border-width:                1px !default;
 
 $table-accent-bg:             rgba($black, .05) !default;
-$table-dark-bg:               $gray-800 !default;
 $table-striped-order:         odd !default;
 */
+$table-dark-bg:               #222;
 
 table {
 	width:100%;
