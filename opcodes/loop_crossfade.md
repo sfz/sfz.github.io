@@ -7,7 +7,7 @@ This can be used to add a crossfade to a loop where the looped sample does not h
 This opcode is uinimplemented in most SFZ players, but it is avaialble in OpenMPT and sfizz.
 sfizz currently uses a sinusoidal formula as default.
 ```
-amp = (1-cos(pi*x))/2.
+amp = (1-cos(pi*x))/2
 ```
 OpenMPT's crossfade implementation currently applies a fade halfway between a constant volume fade and constant power fade.
 ```
