@@ -1,0 +1,34 @@
+{% include sfz/opcodes-filters.liquid %}
+<table
+	class="table table-sm table-bordered table-hover table-striped table-responsive-xl"
+	id="aria-opcodes"
+	data-toggle="table"
+	data-sort-name="opcode"
+	data-sort-order="asc"
+	>
+	<thead>
+		<tr>
+			<th data-field="category"></th>
+			<th data-field="opcode"    data-sortable="true">Opcode</th>
+			<th data-field="version"   data-sortable="true">Version</th>
+			<th data-field="supported" data-sortable="true">Supported</th>
+			<th data-field="comment"   data-sortable="true">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for category_ in site.data.sfz.syntax.categories-%}
+	{%-for toplevel_opcode in category_.opcodes-%}
+		{% include aria/addOpcodeToTable.liquid
+			category = category_
+			opcode   = toplevel_opcode %}
+	{%-endfor-%}
+	{%-for category_type in category_.types-%}
+		{%-for toplevel_opcode in category_type.opcodes-%}
+			{% include aria/addOpcodeToTable.liquid
+				category = category_type
+				opcode   = toplevel_opcode %}
+		{%-endfor-%}
+	{%-endfor-%}
+{%-endfor-%}
+	</tbody>
+</table>
