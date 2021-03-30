@@ -146,6 +146,45 @@ categories:
         max: 4294967296
         unit: "sample units"
 
+    - name: "loop_count"
+      short_description: "The number of times a loop will repeat."
+      version: "SFZ v2"
+      alias:
+      - name: "loopcount"
+        version: "ARIA"
+      value:
+        type_name: "integer"
+
+    - name: "loop_crossfade"
+      short_description: "Loop cross fade."
+      version: "SFZ v2"
+      alias:
+      - name: "loopcrossfade"
+#       version: "sfizz"
+      value:
+        type_name: "float"
+        unit: "seconds"
+
+    - name: "loop_end"
+      short_description: "The loop end point, in samples."
+      version: "SFZ v1"
+      alias:
+      - name: "loopend"
+        version: "SFZ v2"
+      value:
+        type_name: "integer"
+        unit: "sample units"
+        default: 0
+        min: 0
+        max: 4294967296
+      modulation:
+        midi_cc:
+        - name: "loop_lengthccN"
+          version: "Cakewalk"
+          short_description: "Change of loop end point."
+          alias:
+          - name: "loop_length_onccN"
+
     - name: "loop_mode"
       short_description:
         "Allows playing samples with loops defined in the unlooped mode."
@@ -202,33 +241,30 @@ categories:
           alias:
           - name: "loop_start_onccN"
 
-    - name: "loop_end"
-      short_description: "The loop end point, in samples."
-      version: "SFZ v1"
-      alias:
-      - name: "loopend"
-        version: "SFZ v2"
-      value:
-        type_name: "integer"
-        unit: "sample units"
-        default: 0
-        min: 0
-        max: 4294967296
-      modulation:
-        midi_cc:
-        - name: "loop_lengthccN"
-          version: "Cakewalk"
-          short_description: "Change of loop end point."
-          alias:
-          - name: "loop_length_onccN"
-
     - name: "loop_tune"
       short_description: "Tuning for only the loop segment."
       version: "Cakewalk"
+      alias:
+      - name: "looptune"
+        version: "ARIA"
       value:
         type_name: "float"
         unit: "cents"
         default: 0
+
+    - name: "loop_type"
+      short_description: "Defines the looping mode."
+      version: "SFZ v2"
+      alias:
+      - name: "looptype"
+        version: "ARIA"
+      value:
+        type_name: "string"
+        default: "forward"
+        options:
+        - name: "forward"
+        - name: "backward"
+        - name: "alternate"
 
     - name: "offset"
       short_description: "The offset used to play the sample."
@@ -340,30 +376,6 @@ categories:
         options:
         - name: "forward"
         - name: "reverse"
-
-    - name: "loop_count"
-      short_description: "The number of times a loop will repeat."
-      version: "SFZ v2"
-      value:
-        type_name: "integer"
-
-    - name: "loop_crossfade"
-      short_description: "Loop cross fade."
-      version: "SFZ v2"
-      value:
-        type_name: "float"
-        unit: "seconds"
-
-    - name: "loop_type"
-      short_description: "Defines the looping mode."
-      version: "SFZ v2"
-      value:
-        type_name: "string"
-        default: "forward"
-        options:
-        - name: "forward"
-        - name: "backward"
-        - name: "alternate"
 
     - name: "md5"
       short_description:
@@ -583,17 +595,19 @@ categories:
     - name: "off_by"
       short_description: "Region off group."
       version: "SFZ v1"
+      alias:
+      - name: "offby"
       value:
         type_name: "integer"
         default: 0
         min: 0
         max: 4294967296
-      alias:
-      - name: "offby"
 
     - name: "off_mode"
       short_description: "Region off mode."
       version: "SFZ v1"
+      alias:
+      - name: "offmode"
       value:
         type_name: "string"
         default: "fast"
@@ -2133,6 +2147,7 @@ categories:
         version: "SFZ v2"
         modulation:
           midi_cc:
+          - name: "cutoff2_ccN"
           - name: "cutoff2_onccN"
           - name: "cutoff2_curveccN"
           - name: "cutoff2_smoothccN"
@@ -2202,6 +2217,8 @@ categories:
       alias:
       - name: "cutoff_random"
         version: "SFZ v2"
+      - name: "cutoff2_random"
+        version: "ARIA"
 
     - name: "fil_type"
       short_description: "Filter type."
