@@ -3,7 +3,11 @@ layout: "sfz/opcode"
 opcode_name: "default_path"
 ---
 Default path under which the samples should be found. Can also be
-used as a general prefix for samples, not just a path prefix.
+used as a general prefix for samples, not just a path prefix. At
+least in ARIA this is combined with the path given in the
+[sample](/opcodes/sample) opcode, so either default_path should
+have a trailing slash, or sample should have a leading slash so
+when concatenated they will become a valid file path.
 
 Used under the ‹[control](/headers/control)› header. Default_path
 gets reset by a new control header. Whether settings other than
@@ -15,5 +19,5 @@ does not seem unreasonable.
 ## Example
 
 ```
-default_path=../Samples
+default_path=../Samples/
 ```
