@@ -428,7 +428,7 @@ categories:
       type_name: "string"
 
   - name: "default_path"
-    short_description: "Relative path for samples."
+    short_description: "Default file path."
     version: "SFZ v2"
     value:
       type_name: "string"
