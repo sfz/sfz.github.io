@@ -5573,7 +5573,7 @@ categories:
       max: 10
 
   - name: "image"
-    short_description: ""
+    short_description: "Sets the background image of the instrument."
     version: "Cakewalk"
     value:
       type_name: "string"
