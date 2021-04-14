@@ -22,9 +22,9 @@ degree of openness should play. A simpler example would be switching between
 sine, saw and noise waveforms:
 
 ```
-<region>hicc=63 sample=*sine
-<region>locc=64 hicc=126 sample=*saw
-<region>locc=127 sample=*noise
+<region>hicc1=63 sample=*sine
+<region>locc1=64 hicc=126 sample=*saw
+<region>locc1=127 sample=*noise
 ```
 
 This is a "hard" switch - if a region is within the locc to hicc range it plays,
