@@ -169,7 +169,6 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "loopend"
-        version: "SFZ v2"
       value:
         type_name: "integer"
         unit: "sample units"
@@ -190,7 +189,6 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "loopmode"
-        version: "SFZ v2"
       value:
         type_name: "string"
         default:
@@ -225,7 +223,6 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "loopstart"
-        version: "SFZ v2"
       value:
         type_name: "integer"
         unit: "sample units"
