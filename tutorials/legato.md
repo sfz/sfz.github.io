@@ -10,6 +10,13 @@ tutorial, we have the below example of a monophonic flute, which uses the
 together with [ampeg_release](/opcodes/ampeg_release) make the fadeout of the previous note a little
 smoother. This is a starting point for implementing legato.
 
+If only group and off_by are specified, the resulting sound will probably be quite bad, as
+this will use default values for off_mode, ampeg_attack and ampeg_release. This means the note being
+muted will drop off extremely quickly, which will probably leave an audible drop in levels during the
+transition, unless the next note has an extremely fast attack. Therefore, at least ampeg_release
+will need to be specified in most cases - though most instruments will need to specify that even
+if not using legato.
+
 ```
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
 
