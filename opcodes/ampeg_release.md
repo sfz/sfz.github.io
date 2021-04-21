@@ -14,3 +14,6 @@ cutting off unrealistically quickly when a note ends (unless the instrument uses
 [loop_mode](loop_mode) set to one_shot, in which case the entire sample will
 always play) even if amplifier envelopes are not used otherwise to shape the
 sound. Also, `ampeg_release` is used when [off_mode](off_mode) is set to normal.
+
+Although the spec default is 0.001, ARIA uses a default of 0.03 for smoother
+default cutoffs. Cakewalk products use 0.001.
