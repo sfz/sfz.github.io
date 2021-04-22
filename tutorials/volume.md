@@ -57,3 +57,32 @@ rgc sfz player, amp_random is bipolar.
 
 In ARIA, CC135 (unipolar random) and 136 (bipolar random) can also be used by
 various opcodes which modulate volume.
+
+## Stacking mutliple modulations
+
+It is possible to have multiple CCs modulating the same opcode for the same region.
+This can make sense with multiple mic positions, for example. There can be a release
+samples volume control affecting release sample amplitude for all mics, and individual
+mic controls with the amplitude for all samples recorded through that mic. The effect
+with amplitude would be multiplicative - so with either control at 0, there would be
+no sound.
+
+```
+<master>
+amplitude_oncc80=100 //Close mic volume
+<group>
+#include "close_notes.sfz"
+<group>
+trigger=release
+amplitude_oncc82=100 //Release noise volume
+#include "close_releases.sfz"
+
+<master>
+amplitude_oncc81=100 //Far mic volume
+<group>
+#include "far_notes.sfz"
+<group>
+trigger=release
+amplitude_oncc82=100 //Release noise volume
+#include "far_releases.sfz"
+```
