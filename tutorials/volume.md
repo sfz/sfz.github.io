@@ -19,14 +19,6 @@ There are also envelope and LFO modulation sources: [ampeg](/opcodes/ampeg_attac
 points, CCs etc, so the volume of one sample can be affected by many different things
 at once.
 
-## Volume, amplitude and crossfade
-
-Volume, amplitude, and crossfade generally affect the playback volume of the entire
-region, beginning to end. "Generally" because amplitude and volume can be modulated
-by CCs while the sample is playing.
-
-The difference between volume and amplitude needs explanation.
-
 ## Velocity tracking
 
 This is affected by amp_veltrack and amp_velcurve_N. In addition, vel2 modulations
@@ -36,12 +28,77 @@ modulate things which affect volume, for example egN levels.
 
 Remember that amp_veltrack is 100 by default, so if dynamics are to be controlled
 by things other than velocity and dynamics should be controlled, for examle, by
-mod wheel, then set amp_veltrack to 0.
+mod wheel, then set amp_veltrack to 0, as in the code example in the next section.
 
 When using velocity layers, remember that a quiet velocity layer will have a certain
 max velocity, for example if a region has [hivel](/opcodes/hivel) set to 31, it
 will never be triggered by velocities higher than 31, and therefore should usually
 either have amp_velcurve_31 set to 1, or amp_veltrack should be set to 0.
+
+```
+<group>
+hivel=42
+amp_velcurve_42=1
+#include "quiet_layer.sfz"
+
+<group>
+lovel=43
+hivel=84
+amp_velcurve_84=1
+#include "middle_layer.sfz"
+
+<group>
+lovel=85
+#include "loud_layer.sfz"
+```
+
+## Volume, amplitude and crossfade
+
+Volume, amplitude, and crossfade generally affect the playback volume of the entire
+region, beginning to end. "Generally" because amplitude and volume can be modulated
+by CCs while the sample is playing.
+
+Volume is additive and measured in decibels, so volume=6 adds 6 dB to the sample's
+playback volume. Amplitude is multiplicative, and is a percentage of full amplitude,
+so amplitude=6 would mean the sample is played at 6% amplitude.
+
+Xfin and xfout are intended for cross-fading dynamic layers, and set the CC values for
+zero amplitude and full amplitude. One limitation here is that it's not possible to
+have a layer which has more than zero amplitude at the start of the fade-in. This is
+important for instruments such as bowed strings, which have a certain minimum practical
+playable loudness. These will often have dynamics linked to CC1 or some other CC, and
+need to have some small amount of audible volume even at the lowest CC level. Here,
+amplitude with [curveccN](/modulations/curveccN) can be used to fade in the lowest
+layer. It's still possible to use xfout to fade the layer out at higher CC values as
+the next layer fades in, though it may be simpler to just use amplitude for all layers,
+for example like this:
+
+```
+<global>
+amp_veltrack=0
+
+<group>
+amplitude_oncc1=100
+amplitude_curvecc1=11
+#include "quiet_layer.sfz"
+
+<group>
+amplitude_oncc1=100
+amplitude_curvecc1=12
+#include "loud_layer.sfz"
+
+<curve>
+curve_index=11
+v000=0.4
+v063=1
+v127=0
+
+<curve>
+curve_index=12
+v000=0
+v063=0
+v127=1
+```
 
 ## Envelopes and LFOs
 
