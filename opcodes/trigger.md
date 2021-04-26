@@ -14,7 +14,7 @@ Values can be:
                 (notes after first note in a legato phrase).
 - ***release_key***: Region will play on note-off. Ignores sustain pedal.
 								
-##Practical Considerations
+## Practical Considerations
 
 Setting trigger to release or release_key will cause the region to play as if [loop_mode]
 (/opcodes/loop_mode) was set to one_shot.
