@@ -101,7 +101,7 @@ cards:
 
   - label: "IRC"
     title: "Internet Relay Chat"
-    url: "https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#sfzformat"
+    url: "https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
     icon_type: "hashtag"
     icon_category: "fas"
 
