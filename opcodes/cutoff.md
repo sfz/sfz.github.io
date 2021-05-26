@@ -26,3 +26,13 @@ fil2_type=hpf_2p
 cutoff2=250
 resonance2=3
 ```
+
+## Practical Considerations
+
+Setting cutoff to 0 behaves differently in diffrent players.
+
+ARIA/sforzando : filter disabled, oncc disabled
+rgc sfz : filter off, oncc working
+Dimension Pro and Rapture : lowest cutoff value, oncc working
+sfizz : no sound
+BassMidi : filter off, no oncc support yet
