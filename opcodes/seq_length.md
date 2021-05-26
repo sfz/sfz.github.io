@@ -37,5 +37,10 @@ positions, and sticking to seq_position and seq_length might be necessary.
 ## Practical Considerations
 
 In the ARIA implementation of SFZ, sequence position is not tracked together
-for all regions, which means sequential ronud robins is not a practical way
+for all regions, which means sequential round robins is not a practical way
 to implement alternating left/right hand or up/down bowing samples.
+
+Setting seq_length to 0 behaves the same as setting it to 1 in Cakewalk
+players, sfizz and BassMIDI, but a setting of 0 in ARIA will cause each
+round robin in the sequence to be played once, and playing more notes once
+the counter exceeds the highest seq_position will result in no sound.
