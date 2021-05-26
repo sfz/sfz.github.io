@@ -85,3 +85,6 @@ key=48
 <region> lovel=32 hivel=95 sample=*noise
 <region> lovel=96 hivel=127 sample=*saw
 ```
+
+Setting seq_position to 0 will cause the region to not play in most sfz player,
+except for sfizz where it will behave the same as setting seq_position to 1.
