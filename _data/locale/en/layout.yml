@@ -62,7 +62,7 @@ navigation:
   - label: "Subtractive Synthesizers"
     url: "/tutorials/subtractive_synths"
   -
-  - label: "Drum Basics"
+  - label: "Drum & Round Robin Basics"
     url: "/tutorials/drum_basics"
 
   - label: "Cymbal Muting"
