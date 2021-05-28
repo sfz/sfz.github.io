@@ -8,9 +8,16 @@ this region will be turned off.
 ## Examples
 
 ```
-off_by=3
+<region>
+sample=*sine
+key=60
+group= 1
+off_by= 2
 
-off_by=334
+<region>
+sample=*silence
+key=62
+group= 2
 ```
 
 This is used in conjunction with [group](/opcodes/group) to make things

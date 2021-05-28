@@ -529,8 +529,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: 0
-        max: 4294967296
+        min: -2147483648
+        max: 2147483647
       alias:
       - name: "offby"
 
