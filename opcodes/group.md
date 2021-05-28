@@ -34,5 +34,10 @@ a crash cymbal doesn't need to be monophonic, as allowing the sound to build up
 is reasonably natural, but if we wanted to implement a cymbal choke, then the
 crash sounds would be in one group, the choke samples in another.
 
+## Practical Considerations
+
+In ARIA/Sforzando, group and off_by can be a number or a text string, but in
+Cakewalk players it must be a number.
+
 [group]:  /headers/group
 [off_by]: off_by
