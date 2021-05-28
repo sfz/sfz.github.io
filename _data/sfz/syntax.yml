@@ -585,8 +585,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: 0
-        max: 4294967296
+        min: -2147483648
+        max: 2147483647
 
     - name: "off_by"
       short_description: "Region off group."
@@ -596,8 +596,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: 0
-        max: 4294967296
+        min: -2147483648
+        max: 2147483647
 
     - name: "off_mode"
       short_description: "Region off mode."
