@@ -36,8 +36,11 @@ crash sounds would be in one group, the choke samples in another.
 
 ## Practical Considerations
 
-In ARIA/Sforzando, group and off_by can be a number or a text string, but in
-Cakewalk players it must be a number.
+The actual minimum and maximum values are not currently known. Some players
+will treat numbers outside a certain range as equivalent to group=0, and
+ARIA/Sforzando will also do this with text strings. The behavior of
+non-integer numbers is also currently unknown. This makes it possible to use
+an extremely large number for one group, but it's obviously not recommended.
 
 [group]:  /headers/group
 [off_by]: off_by
