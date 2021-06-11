@@ -324,6 +324,14 @@ categories:
       "Imports sample mapping information from EXS24 instruments and generates
       SFZ files from it."
 
+  - name: "TX2SFZ"
+    license: "Freeware"
+    url: "https://www.kvraudio.com/product/tx2sfz-by-derknott"
+    os:
+    - name: "Windows"
+    short_description:
+      "Converts sample mapping information from TX16WX sampler to SFZ."
+
   - name: "Awave Studio"
     license: "Commercial"
     url: "https://www.fmjsoft.com/awavestudio.html#main"
