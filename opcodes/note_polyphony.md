@@ -30,3 +30,8 @@ articulation.
 The note polyphony is checked within a polyphony group, set by the `group` or `polyphony_group`
 opcodes. If no group is specified on the region (or its group, master or globally) the
 note polyphony applies to the default group as if `group=0` was specified.
+
+This means that instruments where one note needs to trigger multiple layers, for example
+drums with separate microphone samples, will usually need to set a separate `group` number
+for each microphone position, so the note polyphony limit is tracked separately for each
+mic.
