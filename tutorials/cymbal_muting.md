@@ -112,8 +112,16 @@ There are, however, more hi-hat articulations possible. One which has special
 behavior when it comes to muting is the foot splash - closing the hi-hat with
 the pedal, then quickly reopening it. This articulation needs to mute itself,
 because playing one foot splash after another involves closing the hi-hat, which
-will mute the ringing. It should also mute just about everything else, except
-for possibly foot chiks, because it invovles closing the hi-hat fully. So, if a
+will mute the ringing.
+
+Whether the splash should mute other types of hits is an open question, however.
+Splashes, especially gentler ones, involve only momentary contact of the cymbal
+edges and not complete closure. Whether an open hi-hat hit followed by a splash
+sounds better when the splash mutes the open hit is left as a decision to the
+reader.
+
+The below example has the splash muting everything else, except for pedal chiks,
+because it invovles closing the hi-hat fully. So, if a
 kit has foot splash samples (for which there is no standard general MIDI note
 assignment, so let's use 54 here - an octave above the chik, though in general
 MIDI that's supposed to be the cowbell note), we'd need to set up one more group,
@@ -455,6 +463,60 @@ sample=ride_choke_oh.wav
 key=71 ampeg_attack=0.15 group=43
 sample=ride_choke_rm.wav
 ```
+
+It is also possible to use <[note_polyphony]>(/opcodes/note_polyphony) here, which
+has the advantage of allowing <[note_selfmask]>(/opcodes/note_selfmask) to be used. This
+is good when a hard hit is followed by several lighter ones on the same cymbal - using
+polyphony, the quieter hits will mute the loud one when the polyphony
+limit is reached, which can result in the louder hit's sustain suddenly and unrealistically
+vanishing. However, this can cause problems with hi-hats where one MIDI note needs to
+trigger several silence groups as well. This is why Virtuosity Drums has the
+hi-hat regions set with note_polyphony=MAX, though there might be a better way.
+
+Note_polyphony is also separated by keys; while the polyphony limit under a
+group can be tracked together for several keys under one group, note_polyphony
+is tracked separately for each MIDI note value.
+
+The above example modified to use note_polyphony instead of polyphony would look
+like this:
+
+```
+<group>
+off_mode=normal
+
+//Bow hits
+<region>
+key=51 group=30 off_by=33 note_polyphony=5 ampeg_release=0.3
+sample=ride_bow_oh.wav
+<region>
+key=51 group=40 off_by=43 note_polyphony=5 ampeg_release=0.4
+sample=ride_bow_rm.wav
+
+//Bell hits
+<region>
+key=53 group=31 off_by=33 note_polyphony=4 ampeg_release=0.3
+sample=ride_bell_oh.wav
+<region>
+key=53 group=41 off_by=43 note_polyphony=4 ampeg_release=0.4
+sample=ride_bell_rm.wav
+
+//Edge hits (crashes)
+<region>
+key=59 group=32 off_by=33 note_polyphony=6 ampeg_release=0.3
+sample=ride_edge_oh.wav
+<region>
+key=59 group=42 off_by=43 note_polyphony=6 ampeg_release=0.4
+sample=ride_edge_rm.wav
+
+//Edge chokes
+<region>
+key=71 ampeg_attack=0.15 group=33
+sample=ride_choke_oh.wav
+<region>
+key=71 ampeg_attack=0.15 group=43
+sample=ride_choke_rm.wav
+```
+
 
 ## Another approach to limiting polyphony
 
