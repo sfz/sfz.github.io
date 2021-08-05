@@ -59,13 +59,47 @@ all DAWs.
 - number of currently active voices: 154
 - last playahead (offset) of any sample in the instrument: 155
 
-Some of these are shared across all instances of the ARIA engine currently running.
-Others can have concurrently have a different value for different instances or different
-instruments concurrently.
+## Practical Considerations
+
+While all the "regular" CCs have the same range of 0 to 127, and some of these extended CCs
+behave the same way (for example CC 131 or note on velocity), others do not. CC136 or bipolar
+random can have a negative value, for example. Many will often have non-integer values. These 
+CCs will not always behave the same as others and have not been thoroughly documented.
+
+Some of the additional CCs are shared across all instances of the ARIA engine currently running,
+for example the host tempo. Others can have concurrently have a different value for different
+instances or different instruments concurrently, for example keydelta.
+
+CC 140 and 141 are measured in half-steps. So, the below will result in an envelope with a depth
+of 100 cents per half-step. This is typically what would be used for portamento glides.
+
+```
+eg07_pitch_oncc140=100
+```
+
+Using locc and hicc with CC 140 and 141 does not work the same as for other CCs. However, they
+can be used with lohdcc and hihdcc. For example, the below will restrict a region to play only
+when the interval between the current note and the previous one is an octave, ascending. Whether
+the decimal is necessary needs to be tested, but the below is confirmed to work.
+
+```
+lohdc140=12
+hihdcc140=12.1
+```
+
+Using lohdcc alone does not work and will result in the region not triggering, but adding hihdcc
+with a high value will. The below example was tested in an instrument with a range of less than
+two octaves, and there works as a way to trigger some regions only when the interval is more than
+one octave in either direction.
+
+```
+lohdcc141=12.1
+hihdcc141=24
+```
 
 CC 151 is reset as soon as a new note is hit, so it cannot be used to measure
 the time between the previous note and the current one, for adaptive legato
-speed purposes. CC 141 has been used successfully for portamento glides, though.
+speed purposes.
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
