@@ -236,5 +236,53 @@ off_mode=normal
 
 Another consideration is that for instruments with a wide range, it may not be worthwhile
 to record every possible transition, and only record transitions of up to one octave, for
-example. Defaulting to simple crossfade is an option here. This is left as an exercise to
-the reader.
+example. The [extended CCs](/extensions/midi_ccs) do not always behave quite like other CCs,
+necessitating using hdcc in ARIA, but the below works for a legato vocal with a range of
+less than two octaves.
+
+```
+<global>
+off_mode=time
+off_time=0.4
+ampeg_release=0.3
+
+<group>
+trigger=first
+group=1
+off_by=1
+#include "modules/vowel_sustain_a.sfz"
+
+<group>
+trigger=legato
+group=1
+off_by=1
+ampeg_attack=0.1
+ampeg_hold=0.3
+ampeg_decay=0.6
+ampeg_sustain=0
+hihdcc141=12.1
+#include "modules/vowel_transition_a.sfz"
+
+<group>
+trigger=legato
+group=2
+off_by=1
+delay=0.3
+ampeg_attack=0.2
+offset=40000
+hihdcc141=12.1
+#include "modules/vowel_sustain_a.sfz"
+
+<group>
+trigger=legato
+group=1
+off_by=1
+ampeg_attack=0.1
+lohdcc141=12.9
+hihdcc141=24
+offset=12000
+#include "modules/vowel_sustain_a.sfz"
+```
+
+It would also be possible to use CC 140 in a similar way in an instrument which,
+for example, had legato transitions recorded ascending but not descending.
