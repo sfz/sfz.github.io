@@ -281,8 +281,8 @@ pitch_keycenter=65
 
 Keep in mind of course that we can always override the inheriting behavior here, such as in the case of a sample for which only two velocity layers were recorded. This might happen in the case of a mistake, or in the case where time was running short in the session, or in some cases where the instrument physically has less distinction between its quietest and loudest sounds and it was desirable to save some time.
 
-## Inheriting
+## Includes
 
-One final more advanced topic to discuss is Inheriting, which is different from the 'inheriting' process of regions and groups. Perhaps the dark magic of SFZ, `#inherit` allows you to take the contents of one SFZ file and import them into your current file. This allows another layer of organiziation to take place, with, for example, all of the samples for each drum in a drum kit to exist in a separate .sfz file without an assigned key range, and a single master .sfz file to inherit each of those into a `<group>` where their key range is assigned (see Virtuosity Drums as a good example of this process). This might also be useful for an acoustic instrument to organize by mic position or articulation.
+One final more advanced topic to discuss is Includes. Perhaps the dark magic of SFZ, `#include` allows you to take the contents of one SFZ file and import them into your current file. This allows another layer of organiziation to take place, with, for example, all of the samples for each drum in a drum kit to exist in a separate .sfz file without an assigned key range, and a single master .sfz file to inherit each of those into a `<group>` where their key range is assigned (see Virtuosity Drums as a good example of this process). This might also be useful for an acoustic instrument to organize by mic position or articulation.
 
 This allows you to keep an extremely tidy workflow, creating easily-managed main files where you can rapidly change key ranges and other control values to get the controls you need.
