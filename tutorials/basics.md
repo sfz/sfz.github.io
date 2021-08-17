@@ -21,38 +21,39 @@ The primary component of any SFZ file is the opcode. Opcodes essentially define
 'thing=value'. For example, the opcode 'volume=6' defines the volume
 of the sample as +6 decibels relative to normal.
 
-Opcodes functionally perform two different roles: defining performance properties,
-or restricting the conditions under which that sound may be used. For example,
-'volume=6' defines a performance property: the sample will sound 6 decibels louder.
-On the other hand, 'lokey=36 hikey=38' limits what condition
+Opcodes functionally perform two different roles: (1) _defining performance properties_,
+or (2) _restricting the conditions under which that sound may be used_. For example,
+`volume=6` defines a performance property: the sample will sound 6 decibels louder.
+On the other hand, `lokey=36 hikey=38` limits what condition
 the sound may play: the key must be 36, 37, or 38.
 
-If using a pitch based instrument, you will most likely be working heavily with
-three opcodes: lokey, hikey, and pitch_keycenter. These opcodes define the range
-of MIDI note numbers or note names that will allow the note to play.
-It is highly recommended that you use MIDI note numbers, as pitch naming
-conventions are poorly standardized at best.
-
-You can remember the MIDI note numbers for the C's as follows,
-using International Pitch Notation, which states C4=MIDI note number 60:
-
+Opcodes may be listed in a row OR one per line, unofficially known as 'condensed' and 'expanded' view:
 ```
-C1:24
-C2: 36 (this is the C below bass clef)
-C3: 48 (this is the C in bass clef)
-C4: 60 (this is Middle C)
-C5: 72 (this is the C in treble clef)
-C6: 84 (this is the C above treble clef)
-C7: 96
+<region>
+sample=piano_D4_vl1.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+lovel=1
+hivel=50
+```
+is equal to:
+```
+<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
 ```
 
-(note that many, many samplers use a different standard of C3=60,
-in which case all numbers are shifted down one)
+You can see how much space is saved in the latter case, and it allows bulk adjustments to be done easier and makes debugging slightly easier, e.g.:
+```
+<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+<region> sample=piano_E4_vl1.wav lokey=64 hikey=65 pitch_keycenter=64 lovel=1 hivel=50
+<region> sample=piano_F#4_vl1.wav lokey=66 hikey=67 pitch_keycenter=66 lovel=11 hivel=50
+<region> sample=piano_G#4_vl1.wav lokey=68 hikey=69 pitch_keycenter=68 lovel=1 hivel=50
+```
+You can see there is something wrong with the third region, a typo of `lovel=11` instaed of `lovel=1`.
 
-You'll notice each value is exactly 12 notes apart from the others.
-It's not too difficult to calculate notes between the C's, or keep a chart
-on your wall or desk with the note names and MIDI numbers listed out.
-Many hours have been saved debugging and mapping for me in this way.
+These four lines would replace over 20 lines, making files much more manageable. It is possible to swap between the two by using a find-and-replace operation in your text editor (e.g. Notepad++ or equivalent) to replace new line character with a space (this can be done by selecting a blank line by clicking and dragging down on a blank so that one line is highlighted, _THEN_ open the find/replace dialog and it will be auto-filled in the 'find' field; put a single space in the 'replace with' field. Try executing and see if it works; see the video below for a visual representation of the process).
+
+https://www.youtube.com/watch?v=Lr7_qS2iV30
 
 ## Headers
 
@@ -85,7 +86,7 @@ they would appear as such:
 ```
 
 Note that if you entered an opcode between a `<group>` and its first `<region>`,
-that opcode would be inherited by the \<regions\> within the group.
+that opcode would be inherited by the `<region>`s within the group.
 The same can be done for `<global>` as well, allowing the parameters of dozens,
 hundreds, or thousands of samples to be altered with a single line.
 
@@ -117,3 +118,171 @@ Here's what's going on here:
 
 Always look for opportunities to use inheriting to keep your scripts tidy
 by removing duplicate code.
+
+### Header Nesting
+
+Unlike many popular scripting or programming languages or markup languages like HTML, XML, JSON, etc. there is no such concept as _nesting_ in SFZ. _Nesting_ is when a header of the same type can exist within another header of the same type. Nesting is very useful, but it can add a lot of complexity and layers to a language, and is a common source of bugs or mistakes as well as a slight impediment of speed. The downside to the lack of nesting is that the number of layers is restricted severely rather than infinite. That is why there is both `<group>` and `<global>`, and the ARIA Player/Sforzando will also use an intermediate between the two, `<master>` to provide one more layer.
+
+In SFZ format, a header ends when the next header of that type is started. For example, if I put a `<region>` after another `<region>`, it will end the first region automatically at the start of declaring the next.
+
+Keep in mind that group, global, and master are merely macros to reduce duplicate code. When compiled (in most SFZ players), the SFZ file will run as if everything is inside the regions themselves.
+
+## Pitch
+
+If using a pitch based instrument, you will most likely be working heavily with
+three opcodes: `lokey`, `hikey`, and `pitch_keycenter`. These opcodes define the range
+of MIDI note numbers or note names that will allow the note to play.
+It is highly recommended that you use MIDI note numbers, as pitch naming
+conventions are poorly standardized at best.
+
+You can remember the MIDI note numbers for the C's as follows,
+using _International Pitch Notation_, which states C4=MIDI note number 60:
+
+```
+C1:24
+C2: 36 (this is the C below bass clef)
+C3: 48 (this is the C in bass clef)
+C4: 60 (this is Middle C)
+C5: 72 (this is the C in treble clef)
+C6: 84 (this is the C above treble clef)
+C7: 96
+```
+
+(note that many, many samplers use a different standard of C3=60,
+in which case all numbers are shifted down one; in fact, this is probably much more commonly found)
+
+You'll notice each value is exactly 12 notes apart from the others.
+It's not too difficult to calculate notes between the C's, or keep a chart
+on your wall or desk with the note names and MIDI numbers listed out.
+Many hours have been saved debugging and mapping for me in this way.
+
+## Velocity Layers
+For most instruments, it is possible to perform notes of varying intensity. For classically trained musicians, this might be called _dynamics_ (such as _piano, forte, mezzo-forte,_ etc.). For a piano, when a key is struck with minimal force versus a great deal of force, a rather different tone is emitted, with harder strikes having more higher frequency content present.
+
+In the MIDI world, we refer to this as _Velocity_, borrowing the term from the world of physics. In the original MIDI spec, velocity has a range of 1-127 (aside: a velocity value of '0' is actually an alias of 'note off' signal, so the actual range is 1-127, not 0-127).
+
+So, to make a realistic piano (or really most any instrument), it is necessary to sample the tone of the instrument at several different dynamic levels or velocities. We collectively refer to these sets of levels as _Velocity Layers_ or _Dynamic Layers_.
+
+For example, let us say we record a piano with three such velocity layers. The softest layer might be what a classically trained pianist might call _piano_ or _pianissimo (p or pp_ marking). The moderate layer might be _mezzo-forte (mf)_, and the hardest layer _fortissimo (ff)_.
+
+In SFZ, we would assign each layer to a velocity range from the 1-127 range. For example, the lowest layer might get the range of 1-50, the medium from 51-100, and the loudest from 101-127.
+
+We express this in SFZ using lovel and hivel, for example:
+```
+<region>
+sample=piano_C4_vl1.wav
+lovel=1
+hivel=50
+
+<region>
+sample=piano_C4_vl2.wav
+lovel=51
+hivel=100
+
+<region>
+sample=piano_C4_vl3.wav
+lovel=101
+hivel=127
+```
+
+We would of course also add our `lokey`, `hikey`, and `pitch_keycenter` to these as well if we recorded multiple tones on the instrument.
+
+## Using Velocity with Groups
+
+To simplify our lives and keep our SFZ files from being huge, we can also use the `<group>` header to organize our velocity layers.
+
+Any `<region>` within a `<group>` will of course inherit whatever is listed in that `<group>`, so if we group our samples as shown below, we can significantly cut down on the amount of space needed in the file:
+
+```
+<group> //velocity layer 1 (pp)
+lovel=1
+hivel=50
+
+<region> //C4
+sample=piano_C4_vl1.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+<region> //D4
+sample=piano_D4_vl1.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+<region> //E4
+sample=piano_E4_vl1.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+<region> //F4
+sample=piano_F4_vl1.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+
+<group> //velocity layer 2 (mf)
+lovel=51
+hivel=100
+
+<region> //C4
+sample=piano_C4_vl2.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+<region> //D4
+sample=piano_D4_vl2.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+<region> //E4
+sample=piano_E4_vl2.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+<region> //F4
+sample=piano_F4_vl2.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+
+<group> //velocity layer 3 (ff)
+lovel=101
+hivel=127
+
+<region> //C4
+sample=piano_C4_vl3.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+<region> //D4
+sample=piano_D4_vl3.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+<region> //E4
+sample=piano_E4_vl3.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+<region> //F4
+sample=piano_F4_vl3.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+```
+
+Keep in mind of course that we can always override the inheriting behavior here, such as in the case of a sample for which only two velocity layers were recorded. This might happen in the case of a mistake, or in the case where time was running short in the session, or in some cases where the instrument physically has less distinction between its quietest and loudest sounds and it was desirable to save some time.
+
+## Inheriting
+
+One final more advanced topic to discuss is Inheriting, which is different from the 'inheriting' process of regions and groups. Perhaps the dark magic of SFZ, `#inherit` allows you to take the contents of one SFZ file and import them into your current file. This allows another layer of organiziation to take place, with, for example, all of the samples for each drum in a drum kit to exist in a separate .sfz file without an assigned key range, and a single master .sfz file to inherit each of those into a `<group>` where their key range is assigned (see Virtuosity Drums as a good example of this process). This might also be useful for an acoustic instrument to organize by mic position or articulation.
+
+This allows you to keep an extremely tidy workflow, creating easily-managed main files where you can rapidly change key ranges and other control values to get the controls you need.
