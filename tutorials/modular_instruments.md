@@ -74,7 +74,7 @@ off_by=1
 #include "sample_map.sfz"
 ```
 
-## File paths
+## File Paths
 
 With large instruments which would be broken down into many files, the included files can be placed in a different
 folder or in a subfolder of the folder containing the instruments. Regardless of which file folder the included
@@ -197,11 +197,73 @@ seq_position=4
 #include "mappings/palm_mute_rr1_map.sfz"
 ```
 
+## Interaction With Headers
+
+When including files, it's common to put lower levels of header organization, such as region and group in the included file, 
+and put higher levels in the main file. However, this is not necessary, and any levels of headers can be included. It is
+important to keep in mind that included files are essentially just concatenated to make the SFZ file which the SFZ instrument
+actually parses.
+
+SFZ opcodes set under headers within an included file will be in effect until encountering another header of the same or
+higher level. For example, let's say a snare drum sample map contains one-shot samples under region headers and also
+multisampled hits under a group header later in the file, and this file is called snare_map.sfz.
+
+```
+<region>
+key=37
+sample=Sidestick.wav
+<region>
+key=39
+sample=Off_center.wav
+<region>
+key=40
+sample=Rimshot.wav
+<group>
+key=38
+seq_length=4
+<region>
+seq_position=1
+sample=Center_rr1.wav
+<region>
+seq_position=2
+sample=Center_rr2.wav
+<region>
+seq_position=3
+sample=Center_rr3.wav
+<region>
+seq_position=4
+sample=Center_rr4.wav
+```
+
+If we want to put snare controls which apply to all those, this would work:
+
+```
+<master>
+amplitude_oncc100=100
+tune_oncc101=1200
+tune_curvecc101=1
+#include "snare_map.sfz"
+```
+
+This, however, would make the controls affect the sidesticks, off-center hits and rimshot, but not the center hits:
+
+```
+<group>
+amplitude_oncc100=100
+tune_oncc101=1200
+tune_curvecc101=1
+#include "snare_map.sfz"
+```
+
+That is because the opcodes set under the group header would only be active until the group header for the center
+hits is reached. If a master header is used, they remain in force until another master header is encountered. When
+the headers are not immediately visible because they're in an included file, it is easy to fall into this kind of trap.
+
 ## Interaction With Define
 
 User-editable parameters, such as MIDI note assignments for drum kits and CC ranges, can also be placed in a separate file such
 as the below.
-
+	
 ```
 #define $KICKKEY 36
 #define $SIDESTICKKEY 37
