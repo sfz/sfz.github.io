@@ -1,4 +1,4 @@
---
+---
 title: Modular SFZ Instruments
 ---
 
@@ -119,6 +119,10 @@ try to locate the samples in a relative path of ../Samples, which exists when st
 when starting from Programs/modules. This can make testing sample maps somewhat messy, as they need to be moved out of
 their "proper" folder if the map needs to be tested by itself, without the rest of the SFZ.
 
+## Nesting
+
+Included files can, themselves, include files. This is not a problem, just avoid circular recursion.
+
 ## Other Use Cases
 
 In addition to sample maps, modulations can also be reused. For example, a common set of vibrato controls can be included
@@ -127,7 +131,11 @@ transitions. Different dynamics controls for long vs. short bowed articulations 
 
 (Example to be added.)
 
-Putting each set of round robins inside its own file without defining seq_lenght inside that file can also be useful for
+The same file can also be included in multiple instruments, for example a violin spiccato articulation map can
+be used in both a spiccato-only instrument and in a keyswitch instrument which contains other articulations as
+well.
+
+Putting each set of round robins inside its own file without defining seq_length inside that file can also be useful for
 emulating double-tracking. If the basic non-doubletracked instrument is set up like this:
 
 ```
