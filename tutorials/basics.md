@@ -15,45 +15,57 @@ An example of this is an automapper, which is a script or application that takes
 a sample set and uses the names of the samples or actual audio content
 to determine how to map those samples.
 
+The SFZ file's role is a simple, two-part operation:
+1. Explain how to **filter** or **sort** the incoming MIDI data and determine which sample(s), if any, should sound in response.
+2. Instruct the Sampler how to **modulate**, or _adapt_, those samples, such as make them quieter or apply a filter.
+
+```
+Incoming MIDI Data ---> Sampler  - - - - - - - - -> Audio Output
+                          |                              ^
+                        SFZ File ---> Sample1.wav        |
+                                 ---> Sample2.wav >> Modulation
+                                 ---> Sample3.wav
+```
+
 ## Opcodes
 
 The primary component of any SFZ file is the opcode. Opcodes essentially define
 'thing=value'. For example, the opcode 'volume=6' defines the volume
 of the sample as +6 decibels relative to normal.
 
-Opcodes functionally perform two different roles: (1) _defining performance properties_,
+Opcodes functionally perform two different roles: (1) _defining performance parameters_,
 or (2) _restricting the conditions under which that sound may be used_. For example,
 `volume=6` defines a performance property: the sample will sound 6 decibels louder.
 On the other hand, `lokey=36 hikey=38` limits what condition
-the sound may play: the key must be 36, 37, or 38.
+the sound may play: the key to trigger the sound must be in the range 36 through 38.
 
-Opcodes may be listed in a row OR one per line, unofficially known as 'condensed' and 'expanded' view:
+You can think of your SFZ file as a giant conditional filter, which systematically takes a MIDI message and attempts to perform a specific action in response. At the most basic level, if you simply type
 ```
 <region>
-sample=piano_D4_vl1.wav
-lokey=62
-hikey=63
-pitch_keycenter=62
-lovel=1
-hivel=50
+sample=piano.wav
 ```
-is equal to:
+Then that sample will be mapped to MIDI key 60 (middle C), and be available at ALL velocity ranges, ALL key ranges, and under ALL continuous controller values (i.e. regardless of if sustain pedal is held down or not, for example).
+
+If we add `lokey=58 hikey=62 pitch_keycenter=60` to the region, then our piano note will ONLY respond if a key within the range 58-62 (Bb to D on either side of middle C) is played. We are restricting the conditions under which that specific sample will be played.
+
+We can restrict whether or not a specific sample will play by a very wide range of parameters, including which keys are pressed, at what velocity, and what MIDI continuous controller (CC) values are currently present. For example, we can have a piano sample for when the sustain pedal is down AND velocity is less than 20 AND the key pressed is between 58 and 62 as follows:
+
 ```
-<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+<region>
+sample=piano.wav
+
+pitch_keycenter=60 //here we define the real "concert" pitch of the sample, MIDI note 60 or middle C
+lokey=58 //here we set the range of pitches the region will play on
+hikey=62
+
+lovel=1 //here we set the range of key velocities that the region will play on
+hivel=20
+
+locc64=64 //here we set that the sustain pedal, cc64, must be on for the region to play
+hicc64=127
 ```
 
-You can see how much space is saved in the latter case, and it allows bulk adjustments to be done easier and makes debugging slightly easier, e.g.:
-```
-<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
-<region> sample=piano_E4_vl1.wav lokey=64 hikey=65 pitch_keycenter=64 lovel=1 hivel=50
-<region> sample=piano_F#4_vl1.wav lokey=66 hikey=67 pitch_keycenter=66 lovel=11 hivel=50
-<region> sample=piano_G#4_vl1.wav lokey=68 hikey=69 pitch_keycenter=68 lovel=1 hivel=50
-```
-You can see there is something wrong with the third region, a typo of `lovel=11` instaed of `lovel=1`.
-
-These four lines would replace over 20 lines, making files much more manageable. It is possible to swap between the two by using a find-and-replace operation in your text editor (e.g. Notepad++ or equivalent) to replace new line character with a space (this can be done by selecting a blank line by clicking and dragging down on a blank so that one line is highlighted, _THEN_ open the find/replace dialog and it will be auto-filled in the 'find' field; put a single space in the 'replace with' field. Try executing and see if it works; see the video below for a visual representation of the process).
-
-https://www.youtube.com/watch?v=Lr7_qS2iV30
+If for any reason the MIDI signal DOES NOT meet ALL of the conditions, that sample will not play. That is the basic underlying framework on how SFZ files are organized.
 
 ## Headers
 
@@ -85,27 +97,77 @@ they would appear as such:
 			sample=
 ```
 
+### Inheriting
+
 Note that if you entered an opcode between a `<group>` and its first `<region>`,
 that opcode would be inherited by the `<region>`s within the group.
-The same can be done for `<global>` as well, allowing the parameters of dozens,
-hundreds, or thousands of samples to be altered with a single line.
+The same can be done for `<global>` as well, with `<global>` affecting all of the
+`<group>`s within it, and that being passed down to each of the `<region>`s within
+those groups as welll, allowing the parameters of dozens,
+hundreds, or thousands of samples to be altered with a single line. This massively 
+cuts down on file size, as you do not need to repeat the same text in each item.
+
+```
+<group>
+lovel=64 //enter stuff here if you want to apply it to all groups
+hivel=127
+
+<region>
+sample=Trumpet_C4_v2.wav
+key=60
+
+<region>
+sample=Trumpet_C#4_v2.wav
+key=61
+
+<region>
+sample=Trumpet_D4_v2.wav
+key=62
+```
+is the same as:
+```
+<region>
+sample=Trumpet_C4_v2.wav
+key=60
+lovel=64
+hivel=127
+
+<region>
+sample=Trumpet_C#4_v2.wav
+key=61
+lovel=64
+hivel=127
+
+<region>
+sample=Trumpet_D4_v2.wav
+key=62
+lovel=64
+hivel=127
+```
 
 This behavior can be overriden if that same opcode is specified within
 the lesser header with a different value. For example:
 
 ```
 <global>
-	volume=6
+	volume=6 //this value will be inherited by everything, unless overriden below
+
 	<group> //Group A
 		volume=5
+
 		<region> //Region 1
 			volume=4
+
 		<region> //Region 2
+
 	<group> //Group B
+
 		<region> //Region 3
 			volume=2
+
 		<region> //Region 4
 ```
+(indented for clarity; SFZ is not usually indented)
 
 Here's what's going on here:
 
@@ -126,6 +188,36 @@ Unlike many popular scripting or programming languages or markup languages like 
 In SFZ format, a header ends when the next header of that type is started. For example, if I put a `<region>` after another `<region>`, it will end the first region automatically at the start of declaring the next.
 
 Keep in mind that group, global, and master are merely macros to reduce duplicate code. When compiled (in most SFZ players), the SFZ file will run as if everything is inside the regions themselves.
+
+## Organization of Opcodes within Headers
+
+Opcodes may be listed in a row OR one per line, unofficially known as 'condensed' and 'expanded' view:
+```
+<region>
+sample=piano_D4_vl1.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+lovel=1
+hivel=50
+```
+is equal to:
+```
+<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+```
+
+You can see how much space is saved in the latter case, and it allows bulk adjustments to be done easier and makes debugging slightly easier, e.g.:
+```
+<region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+<region> sample=piano_E4_vl1.wav lokey=64 hikey=65 pitch_keycenter=64 lovel=1 hivel=50
+<region> sample=piano_F#4_vl1.wav lokey=66 hikey=67 pitch_keycenter=66 lovel=11 hivel=50
+<region> sample=piano_G#4_vl1.wav lokey=68 hikey=69 pitch_keycenter=68 lovel=1 hivel=50
+```
+You can see there is something wrong with the third region, a typo of `lovel=11` instaed of `lovel=1`.
+
+These four lines would replace over 20 lines, making files much more manageable. It is possible to swap between the two by using a find-and-replace operation in your text editor (e.g. Notepad++ or equivalent) to replace new line character with a space (this can be done by selecting a blank line by clicking and dragging down on a blank so that one line is highlighted, _THEN_ open the find/replace dialog and it will be auto-filled in the 'find' field; put a single space in the 'replace with' field. Try executing and see if it works; see the video below for a visual representation of the process).
+
+https://www.youtube.com/watch?v=Lr7_qS2iV30
 
 ## Pitch
 
@@ -187,9 +279,9 @@ hivel=127
 
 We would of course also add our `lokey`, `hikey`, and `pitch_keycenter` to these as well if we recorded multiple tones on the instrument.
 
-## Using Velocity with Groups
+### Using Velocity with Groups & Inheriting
 
-To simplify our lives and keep our SFZ files from being huge, we can also use the `<group>` header to organize our velocity layers.
+To simplify our lives and keep our SFZ files from being huge, we can also use the `<group>` header to organize our velocity layers, for example.
 
 Any `<region>` within a `<group>` will of course inherit whatever is listed in that `<group>`, so if we group our samples as shown below, we can significantly cut down on the amount of space needed in the file:
 
@@ -280,6 +372,8 @@ pitch_keycenter=65
 ```
 
 Keep in mind of course that we can always override the inheriting behavior here, such as in the case of a sample for which only two velocity layers were recorded. This might happen in the case of a mistake, or in the case where time was running short in the session, or in some cases where the instrument physically has less distinction between its quietest and loudest sounds and it was desirable to save some time.
+
+You can also use group, master, and global to organize other things than velocity layers, such as keys, sustain pedal state, round robins, mic positions, and more. Just be careful as in some cases you might run out of headers to use if the file gets too complex, such as if you are using multiple mic positions, round robins, and grouping your velocity layers as well.
 
 ## Includes
 
