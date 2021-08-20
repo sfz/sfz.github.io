@@ -56,9 +56,12 @@ navigation:
   - label: "Unison"
     url: "/tutorials/unison"
 
-  - label: "Range extension"
+  - label: "Range Extension"
     url: "/tutorials/range_extension"
 
+  - label: "Modular Instruments"
+    url: "/tutorials/modular_instruments"
+    
   - label: "Subtractive Synthesizers"
     url: "/tutorials/subtractive_synths"
   -
@@ -68,6 +71,9 @@ navigation:
   - label: "Cymbal Muting"
     url: "/tutorials/cymbal_muting"
 
+  - label: "Epic Drums"
+    url: "/tutorials/epic_drums"
+    
   - label: "Brush Stirs"
     url: "/tutorials/brush_stirs"
   -
