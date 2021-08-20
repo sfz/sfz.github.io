@@ -60,7 +60,8 @@ If we create an SFZ file called sample_map.sfz with the following content:
 <region>key=60 sample=c5.wav
 ```
 
-Then the sample map becomes a reusable module, and the instrument can be decluttered to this:
+Then the sample map becomes a reusable module which can be "called" using an [#include](/opcodes/include) statement.
+The instrument can be decluttered to this:
 
 ```
 <group>
@@ -129,14 +130,40 @@ In addition to sample maps, modulations can also be reused. For example, a commo
 for violin samples which need them, but left out for samples which don't, such as harmonics, percussive noises and legato
 transitions. Different dynamics controls for long vs. short bowed articulations are also candidates for such treatment.
 
-(Example to be added.)
+```
+<master>
+sw_last=34
+sw_label=Sustain
+#include "modules/vibrato.sfz"
+#include "modules/long_dynamics.sfz"
+#include "mappings/sustain.sfz"
+
+<master>
+sw_last=33
+sw_label=Staccato
+#include "modules/vibrato.sfz"
+#include "modules/short_dynamics.sfz"
+#include "mappings/staccato.sfz"
+
+<master>
+sw_last=32
+sw_label=Natural harmonics
+#include "modules/long_dynamics.sfz"
+#include "mappings/harmonics.sfz"
+
+<master>
+sw_last=31
+sw_label=Percussive noises
+#include "modules/short_dynamics.sfz"
+#include "mappings/noises.sfz"
+```
 
 The same file can also be included in multiple instruments, for example a violin spiccato articulation map can
 be used in both a spiccato-only instrument and in a keyswitch instrument which contains other articulations as
 well.
 
-Putting each set of round robins inside its own file without defining seq_length inside that file can also be useful for
-emulating double-tracking. If the basic non-doubletracked instrument is set up like this:
+Putting each set of round robins inside its own file without defining [seq_position](/opcodes/seq_position) inside that
+file can also be useful for emulating double-tracking. If the basic non-doubletracked instrument is set up like this:
 
 ```
 <global>
@@ -199,14 +226,15 @@ seq_position=4
 
 ## Include And Headers
 
-When including files, it's common to put lower levels of header organization, such as region and group in the included file, 
-and put higher levels in the main file. However, this is not necessary, and any levels of headers can be included. It is
-important to keep in mind that included files are essentially just concatenated to make the SFZ file which the SFZ instrument
-actually parses.
+When including files, it's common to put lower levels of [header](/headers) organization, such as region and group in the
+included file,  and put higher levels in the main file. However, this is not necessary, and any levels of headers can be
+included. It is important to keep in mind that included files are essentially just concatenated to make the SFZ file which
+the SFZ instrument actually parses. Although an included file is a little like a procedure in a programming language, it
+isn't really one, and the end of the included file is not meaningful when 
 
 SFZ opcodes set under headers within an included file will be in effect until encountering another header of the same or
-higher level. For example, let's say a snare drum sample map contains one-shot samples under region headers and also
-multisampled hits under a group header later in the file, and this file is called snare_map.sfz.
+higher level. For example, let's say a snare drum sample map contains one-shot samples under `<region>` headers and also
+multisampled hits under a `<group>` header later in the file, and this file is called snare_map.sfz.
 
 ```
 <region>
@@ -255,13 +283,13 @@ tune_curvecc101=1
 #include "snare_map.sfz"
 ```
 
-That is because the opcodes set under the group header would only be active until the group header for the center
-hits is reached. If a master header is used, they remain in force until another master header is encountered. When
+That is because the opcodes set under the `<group>` header would only be active until the `<group>` header for the center
+hits is reached. If a `<master>` header is used, they remain in force until another `<master>` header is encountered. When
 the headers are not immediately visible because they're in an included file, it is easy to fall into this kind of trap.
 
 ## The Define Statement
 
-In addition to include, define is the other statement which is very useful in making instruments more modular.
+In addition to include, [#define](/opcodes/define) is the other statement which is very useful in making instruments more modular.
 
 Define and include can be used together. For example, user-editable parameters, such as MIDI note assignments for drum kits
 and CC ranges, can also be placed in a separate file such as the below.
@@ -274,16 +302,19 @@ and CC ranges, can also be placed in a separate file such as the below.
 
 The defined variables can then be used throughout the instrument, and an end user who wants to change the keymap can edit the
 file containing the defined numbers without having to search through the entire instrument. In the specific implementation of ARIA,
-anything which uses the #defined variables also needs to be placed in the main SFZ file using #include, because of the way ARIA
+anything which uses the defined variables also needs to be placed in the main SFZ file using include, because of the way ARIA
 parses SFZ files, described in more detail under the opcode page.
 
-The same variables can also be defined and redefined multiple times within the same SFZ instrument, as long as everything
-containing the defines and everything that uses the defines is added via include, and not part of the main SFZ file itself.
+Using define as a constant with a single value thorughout an instrument works easily. Defining the same variable to have multiple
+values at different points in the same instrument, however, requires care. Using #define to set the same variable to different
+values at one point in the same SFZ file does not work well at least in ARIA/Sforzando when loading an instrument. However, a
+workaround there is to use include to put each set of define statements with different values in a separate file. In simple
+tests, that has been successful.
 
 Sometimes copying large chunks of SFZ code and performing search-replace within them is easier than redefining variables comes into
 play. There's a balance of when to use include statements and when to just copy some files and use search-replace.
 
-Multiple defined variables can be used in the same line..
+Multiple defined variables can be used in the same line.
 
 ```
 #define $MIC_NAME Room
