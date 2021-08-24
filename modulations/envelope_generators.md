@@ -21,7 +21,7 @@ These are 6-points Delay-Attack-Hold-Decay-Sustain-Release.
 - [(eg type)_decay_oncc](/opcodes/ampeg_decay)
 - [(eg type)_delay](/opcodes/ampeg_delay)
 - [(eg type)_delay_oncc](/opcodes/ampeg_delay)
-- [(eg type)_depth](/opcodes/ampeg_depth)
+- [(eg type)_depth](/opcodes/fileg_depth)
 - [(eg type)_hold](/opcodes/ampeg_hold)
 - [(eg type)_hold_oncc](/opcodes/ampeg_hold)
 - [(eg type)_release](/opcodes/ampeg_release)
