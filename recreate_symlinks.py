@@ -79,7 +79,7 @@ def recreate_symlinks():
 	os.symlink('../headers/curve.md', 'curve_index.md')
 	os.symlink('../headers/curve.md', 'vN.md')
 	os.symlink('sw_down.md', 'sw_up.md')
-	os.symlink('sw_default', 'sw_label.md')
+	os.symlink('sw_default.md', 'sw_label.md')
 
 # TODO: currently unused but useful for syntax highlighting tools
 def get_all_opcodes():
