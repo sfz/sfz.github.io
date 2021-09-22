@@ -1,6 +1,6 @@
 ---
 layout: "sfz/opcode"
-opcode_name: "delay_damplo"
+title: "delay_damplo / delay_damphi"
 ---
 Used under the `‹effect›` header, with [type]=`delay`.
 

@@ -52,17 +52,34 @@ def silentremove(filename):
 
 # Recrate all ccs / aliases opcode symlinks to primary opcodes from db
 def recreate_symlinks():
+	hilo_list = ["delay_damp--", "--bend", "--bpm", "--ccN", "--chanaft", "--chan",
+		"--hdccN", "--key", "--polyaft", "--prog", "--rand", "--timer", "--vel",
+		"on_--ccN", "on_--hdccN", "reverse_--ccN", "stop_--ccN", "stop_--hdccN",
+		"sw_--key", "sw_--last", "xfin_--ccN", "xfin_--key", "xfin_--vel",
+		"xfout_--ccN", "xfout_--key", "xfout_--vel"
+		]
 	main_pages = set()
 	main_list = list(opcodes)
 	main_list.append("index")
 	[main_pages.add(o + ".md") for o in main_list]
 	os.chdir("opcodes")
+
 	for f in os.listdir('.'):
-		if f not in main_pages:
+		if f not in main_pages or os.path.islink(f):
 			silentremove(f)
+
+	for o in hilo_list:
+		src = o.replace("--", "lo")
+		dst = o.replace("--", "hi")
+		os.symlink(src + ".md", dst + ".md")
+
 	[os.symlink('%s.md' % (dst), '%s.md' % (src)) for src, dst in aliases]
 	[os.symlink('%s.md' % (dst), '%s.md' % (src)) for src, dst in mods_cc]
 	[os.symlink('%s.md' % (dst), '%s.md' % (src)) for src, dst in mods_vl]
+	os.symlink('../headers/curve.md', 'curve_index.md')
+	os.symlink('../headers/curve.md', 'vN.md')
+	os.symlink('sw_down.md', 'sw_up.md')
+	os.symlink('sw_default', 'sw_label.md')
 
 # TODO: currently unused but useful for syntax highlighting tools
 def get_all_opcodes():

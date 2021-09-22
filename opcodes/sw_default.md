@@ -25,6 +25,10 @@ used to select an articulation.
 <region> sw_last=40 sw_label=Saw lokey=41 sample=*saw
 ```
 
+{%include img-fluid.liquid
+  img="/assets/img/opcodes/sw_label.jpg"
+  alt="sw_label example image"%}
+
 ## Practical Considerations
 
 `sw_label` causes ARIA/Sforzando to display the most recent selected keyswitch label
