@@ -25,6 +25,10 @@ include:
 
 exclude:
 - assets/css/style.css
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
 - Gemfile
 - Gemfile.lock
 - LICENSE
