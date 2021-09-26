@@ -43,6 +43,11 @@ exclude:
 plugins:
 - jekyll-sitemap
 
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
+
 name: "SFZ Format"
 url: "https://sfzformat.github.io"
 description: "SFZ File Format Documentation Website"

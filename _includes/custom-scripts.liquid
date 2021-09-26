@@ -1,11 +1,6 @@
-		<script type="text/javascript" src="{{ '/assets/js/prettify/prettify.min.js' | relative_url }}"></script>
-		<script type="text/javascript" src="{{ '/assets/js/prettify/lang-sfz.js' | relative_url }}"></script>
-		<script>
-			$(document).ready(function(){
-			$('pre').addClass('prettyprint lang-sfz');
-			prettyPrint();
-			});
-		</script>
+		<script src="{{ '/assets/js/highlight/highlight.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/highlight/sfz.min.js' | relative_url }}"></script>
+		<script>hljs.highlightAll();</script>
 		<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 		<script>
 		$(document).on('click', '[data-toggle="lightbox"]', function(event) {

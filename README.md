@@ -9,6 +9,7 @@ written using [Markdown], making it extremely easy to write and maintain.
 Icons are provided by [Font Awesome], favicons by [Favicon Generator].
 Anchors headings are provided by [jekyll-anchor-headings] by [Alleyo],
 licensed under the MIT license.
+Syntax highlighting is provided by [highlight.js], BSD 3-Clause License.
 
 ## Local Build Quick-start Guide
 
@@ -67,3 +68,4 @@ $ ./new_post.sh "New post title" "<author_name>"
 [Node.js]:                http://nodejs.org/
 [_posts]:                 https://github.com/sfzformat/sfzformat.github.io/tree/source/_posts/
 [SASS]:                   https://sass-lang.com/
+[highlight.js]:           https://highlightjs.org/
