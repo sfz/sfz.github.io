@@ -162,6 +162,15 @@ categories:
     short_description:
       ""
 
+  - name: "Unify"
+    license: "Commercial"
+    url: "https://www.pluginguru.com/products/unify-standard/"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      ""
+
   - name: "UVI Falcon"
     license: "Commercial"
     url: "https://www.uvi.net/"
@@ -171,11 +180,10 @@ categories:
     short_description:
       ""
 
-  - name: "Wusik Station V9, Wusik 9009, Wusik One, Wusik EVE V5"
+  - name: "Wusik 8008, Wusik One, Wusik EVE V5"
     license: "Commercial"
     url: "https://www.wusik.com/"
     os:
-    - name: "macOS"
     - name: "Windows"
     short_description:
       ""

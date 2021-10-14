@@ -16,8 +16,8 @@ as "software to be freely used, modified, and shared."
 ## Supported Opcodes
 
 Below are the known links to the various lists of supported opcodes:\
-[BassMIDI], [Bitwig], [Bliss], [Equator 2], [HISE], [LinuxSampler], [liquidsfz],
-[OpenMPT], [sfizz] and [zerberus] (MuseScore).
+[BassMIDI], [Bitwig], [Equator 2], [HISE], [LinuxSampler], [liquidsfz],
+[OpenMPT], [sfizz] and [zerberus] (MuseScore <= v3.6.2).
 
 {% include sfz/software-table-generator.liquid %}
 {%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
@@ -35,7 +35,6 @@ Below are the known links to the various lists of supported opcodes:\
 [sfz]:    https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
 
 [BassMIDI]:     https://www.un4seen.com/doc/#bassmidi/BASS_MIDI_FontInit.html
-[Bliss]:        https://www.discodsp.com/bliss/
 [Bitwig]:       https://github.com/sfzformat/sfzformat.github.io/pull/48#issuecomment-731244523
 [Equator 2]:    https://github.com/sfzformat/sfzformat.github.io/wiki/Player-Equator2
 [HISE]:         https://github.com/christophhart/HISE/blob/master/hi_sampler/sampler/SfzImporter.h#L47
@@ -43,4 +42,4 @@ Below are the known links to the various lists of supported opcodes:\
 [liquidsfz]:    https://github.com/swesterfeld/liquidsfz/blob/master/OPCODES.md
 [OpenMPT]:      https://wiki.openmpt.org/Manual:_SFZ_Implementation
 [sfizz]:        https://sfz.tools/sfizz/development/status/opcodes
-[zerberus]:     https://github.com/musescore/MuseScore/blob/master/src/framework/audio/internal/synthesizers/zerberus/internal/README
+[zerberus]:     https://github.com/musescore/MuseScore/blob/3.6.2/audio/midi/zerberus/README
