@@ -86,7 +86,7 @@ fills in the gaps.
 ```
 <region>sample=c4.wav lokey=48 hikey=49 pitch_keycenter=48
 <region>sample=d4.wav lokey=50 hikey=51 pitch_keycenter=50
-<region>sample=f4.wav lokey=52 hikey=44 pitch_keycenter=53
+<region>sample=f4.wav lokey=52 hikey=54 pitch_keycenter=53
 <region>sample=g4.wav lokey=55 hikey=56 pitch_keycenter=55
 <region>sample=a4.wav lokey=57 hikey=58 pitch_keycenter=57
 <region>sample=c5.wav lokey=59 hikey=61 pitch_keycenter=59
