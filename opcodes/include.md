@@ -10,6 +10,10 @@ the file structure needs to be respected - after all #includes are processed,
 nested - #included files can contain more #includes of their own,
 though of course recursion must be avoided!
 
+The included path must be surrounded by double quotes, similar to how include
+works in C/C++ files. Note that this is different from how the paths in the
+<[sample](/opcodes/sample)> opcode works, which do not need quotes.
+
 Either a filename or a path can be used. If the #included files are in another
 folder, the SFZ is interpreted as if it was in the main SFZ file's path, not the
 path where the #included files are. The #included files can either have the
