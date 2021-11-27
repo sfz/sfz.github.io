@@ -258,7 +258,8 @@ categories:
     - name: "macOS"
     - name: "Windows"
     short_description:
-      "An open-source soundfont editor for creating musical instruments."
+      "An open-source soundfont editor for creating musical instruments.
+      Note: being a soundfont editor (sf2) it has limited sfz support when exporting."
 
   - name: "sfZed"
     license: "Freeware"
