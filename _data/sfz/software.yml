@@ -386,6 +386,15 @@ categories:
       musical instruments and sound banks. Originally created for the
       <a href='http://freepats.zenvoid.org/'>FreePats project</a>."
 
+  - name: "sfzlint"
+    license: "MIT"
+    url: "https://github.com/jisaacstone/sfzlint/"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "Linter and parser for .sfz files."
+
 - name: "Syntax Highlighting"
   applications:
 
