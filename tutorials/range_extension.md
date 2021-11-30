@@ -192,4 +192,35 @@ in many cases, but if needed things can be done this way.
 In cases where it's very important to avoid using the same
 sample too many times, it's possible to start addressing this
 at the recording stage, and record additional samples of the notes
-which will need to be stretched.
+which will need to be stretched. Of course this could be more
+work than just recording the target pitches in the first place,
+but if the pitches are difficult to produce consistently (for 
+example are notes that a singer can hit only with considerable
+strain) or just physically fall outside the range, it may be a
+viable option.
+
+## True legato samples.
+
+Extending the range with true legato samples requires extending the range
+for both the previous note (the sw_previous values) and the new note
+(the key/lokey values). Here is a process which has worked in practice
+for extending the range of a legato instrument upwards by a major second:
+
+* Copy regions with the key to be extended. Add the amount of shift (3 if taking the second-highest and third-lowest note and extending the range by a major second) to sw_previous, lokey and hikey to the copy.
+* Copy regions with the sw_previous to be extended except those already copied in the previous step. Likewise add the amount of shift to sw_previous, lokey and hikey to the copy.
+* Delete the regions with sw_previous above the new max range (or could try avoiding copying them in the first step, but this way is probably safer).
+* Add in regions going from the bottom three values of sw_previous to the new notes. This is where some sort of defaults, as mentioned above, will be needed.
+* Add regions going from the new extended notes to the bottom three pitches, as above.
+
+Note that there will be no legato samples covering the widest intervals
+from the extended notes to the farthest notes on the other side. If the
+instrument has legato samples only recorded within a certain range (for
+example only for intervals up to an octave), this isn't going to create
+any additional problems that didn't already have to be solved when making
+the non-extended legato instruments - so whether defaulting to the
+largest interval sampled, triggering a regular sustain or just producing
+no sound at all, just do the same when there's no interval wide enough
+for a leap to or from an extended note. If an instrument does have every
+possible note transition in its range sampled, however (quite possible
+for instruments with a small range, such as rebab), the same
+compromises are available for the missing intervals in the extended range.
