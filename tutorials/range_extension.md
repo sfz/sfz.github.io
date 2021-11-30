@@ -203,7 +203,7 @@ viable option.
 
 Extending the range with true legato samples requires extending the range
 for both the previous note (the sw_previous values) and the new note
-(the key/lokey values). Here is a process which has worked in practice
+(the lokey/hikey values). Here is a process which has worked in practice
 for extending the range of a legato instrument upwards by a major second:
 
 * Copy regions with the key to be extended. Add the amount of shift (3 if taking the second-highest and third-lowest note and extending the range by a major second) to sw_previous, lokey and hikey to the copy.
