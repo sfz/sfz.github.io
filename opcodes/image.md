@@ -4,7 +4,8 @@ opcode_name: "image"
 ---
 ## Practical Considerations
 
-Supported in Cakewalk DropZone, sfizz and possibly other players.
+Supported in Cakewalk DropZone, sfizz and possibly other players,
+but not ARIA / Sforzando.
 
 - **DropZone** supports bitmap images with transparent alpha channels,
 showing one image per instrument and can be placed under any header.
