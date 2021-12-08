@@ -104,12 +104,12 @@ that opcode would be inherited by the `<region>`s within the group.
 The same can be done for `<global>` as well, with `<global>` affecting all of the
 `<group>`s within it, and that being passed down to each of the `<region>`s within
 those groups as welll, allowing the parameters of dozens,
-hundreds, or thousands of samples to be altered with a single line. This massively 
+hundreds, or thousands of samples to be altered with a single line. This massively
 cuts down on file size, as you do not need to repeat the same text in each item.
 
 ```
 <group>
-lovel=64 //enter stuff here if you want to apply it to all groups
+lovel=64 // enter stuff here if you want to apply it to all regions
 hivel=127
 
 <region>

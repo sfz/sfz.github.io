@@ -286,7 +286,7 @@ eg01_pitch_oncc100=-1200
 eg01_time1_oncc101=1
 ```
 
-## Using LFOs and evelopes togehter
+## Using LFOs and envelopes together
 
 Here is an example of using both an envelope and an LFO to modulate pitch, with common
 depth and delay parameters. The goal here is asymmetrical pitch vibrato - vibrato which
