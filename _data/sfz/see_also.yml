@@ -124,3 +124,14 @@
 - name: "static_filter"
   pages:
   - name: "fil_type"
+
+- name: "volume"
+  pages:
+  - name: "Amplifier / Amplitude"
+    url: "https://sfzformat.com/opcodes/?q=amp&c=amp,eg,lfo"
+  - name: "Gain"
+    url: "https://sfzformat.com/opcodes/?q=gain&c=amp,eg,lfo"
+  - name: "Volume"
+    url: "https://sfzformat.com/opcodes/?q=vol&c=amp,eg,lfo"
+  - name: "Cross fade"
+    url: "https://sfzformat.com/opcodes/?q=xf"
