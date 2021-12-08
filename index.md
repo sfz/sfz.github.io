@@ -14,7 +14,7 @@ instruments already, but we'll continue to add more.
 
 To make use of the SFZ format requires three things:
 
-- Samples
+- [Samples]
 - [SFZ player]
 - [SFZ file]
 
@@ -85,6 +85,7 @@ Some more advanced topics
 [list of SFZ 1 opcodes]: /opcodes/?v=1
 [list of SFZ headers]:   /headers
 [SFZ creation tools]:    /software/tools
+[Samples]:               /opcodes/sample
 [SFZ file]:              /tutorials/basic_sfz_file
 [SFZ player]:            /software/players
 [starting here]:         /opcodes/?v=2

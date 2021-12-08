@@ -14,14 +14,6 @@ contents as there's nothing to play. Long names and names with blank spaces and
 other special characters (excepting the = character) are allowed in the sample
 definition.
 
-At the SFZ1 specification level, there is no information about what sample
-formats are supported. For SFZ2, however, the Cakewalk book specifies the following
-sample types are supported:
-+ WAV and AIFF formats of any sample rate (even 384k)
-+ Ogg Vorbis compressed samples
-+ FLAC support is not specified as mandatory, though FLAC was supported by Cakewalk
-Session Drummer, and is supported by ARIA
-
 Getting the sample to play back at the correct pitch is not automatic, and
 generally can't be done with the sample opcode alone, even if the file name
 includes pitch information. Assuming that the tune or transpose opcodes are not
@@ -34,6 +26,16 @@ regardless of how [pitch_keycenter](pitch_keycenter) is set.
 If the key opcode is used to define the range of the sample (instead of [lokey](lokey),
 [hikey](lokey) and [pitch_keycenter](pitch_keycenter)) the sample will also
 be unchanged in pitch.
+
+## Formats
+
+At the SFZ1 specification level, there is no information about what sample
+formats are supported. For SFZ2, however, the Cakewalk book specifies the following
+sample types are supported:
++ WAV and AIFF formats of any sample rate (even 384k)
++ Ogg Vorbis compressed samples
++ [FLAC] support is not specified as mandatory, though FLAC was supported by Cakewalk
+Session Drummer, and is supported by ARIA
 
 ## Examples
 
@@ -61,3 +63,6 @@ exist and be played (for example, to mute other sounds when using
 value can be very convenient.
 
 Note that in this case the `*` is a real character and not a wildcard.
+
+
+[FLAC]: https://en.wikipedia.org/wiki/FLAC
