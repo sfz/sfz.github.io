@@ -37,6 +37,14 @@ sample types are supported:
 + [FLAC] support is not specified as mandatory, though FLAC was supported by Cakewalk
 Session Drummer, and is supported by ARIA
 
+WAV is usually the first choice, or perhaps AIFF when using macOS.
+FLAC is the second choice, as it is [lossless] compression audio is always preferable,
+though it needs to be decoded which can cause slower performance compared to WAV.
+Other compressed formats can be used for test cases or situations where keeping
+the file size small is more important than audio quality.
+
+See also the table of supported sample [formats] by some engines for more details.
+
 ## Examples
 
 ```
@@ -65,4 +73,6 @@ value can be very convenient.
 Note that in this case the `*` is a real character and not a wildcard.
 
 
-[FLAC]: https://en.wikipedia.org/wiki/FLAC
+[FLAC]:     https://en.wikipedia.org/wiki/FLAC
+[lossless]: https://en.wikipedia.org/wiki/Lossless_compression
+[formats]:  /software/engines/

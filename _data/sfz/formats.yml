@@ -1,0 +1,7 @@
+- name: "AIFF"
+- name: "FLAC"
+- name: "MP3"
+  lossy: true
+- name: "Ogg"
+  lossy: true
+- name: "WAV"

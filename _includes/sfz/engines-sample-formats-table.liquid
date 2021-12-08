@@ -1,0 +1,28 @@
+{%-assign formats = site.data.sfz.formats-%}
+{%-assign engines = site.data.sfz.engines-%}
+
+<table class="table table-sm table-hover table-striped table-responsive">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Name</th>
+			{%-for format in formats-%}
+			<th scope="col" style="text-align:center">{{ format.name }}</th>
+			{%-endfor-%}
+		</tr>
+	</thead>
+	<tbody>
+	{%-for engine in engines-%}
+		<tr>
+			<td>{{ engine.name }}</td>
+				{%-for format in formats-%}
+					{%-assign result = ""-%}
+					{%-assign engine_format = engine.formats | where: "name", format.name-%}
+					{%-if engine_format[0].name == format.name-%}
+						{%-assign result = "•"-%}
+					{%-endif-%}
+			<td style="text-align:center">{{ result }}</td>
+				{%-endfor-%}
+		</tr>
+	{%-endfor-%}
+	</tbody>
+</table>

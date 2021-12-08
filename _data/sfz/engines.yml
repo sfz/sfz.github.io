@@ -1,0 +1,14 @@
+- name: "ARIA"
+  formats:
+  - name: "AIFF"
+  - name: "FLAC"
+  - name: "Ogg"
+  - name: "WAV"
+
+- name: "sfizz"
+  formats:
+  - name: "AIFF"
+  - name: "FLAC"
+  - name: "MP3"
+  - name: "Ogg"
+  - name: "WAV"
