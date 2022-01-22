@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"autoprefixer": "^10.3.6",
-		"bootstrap": "^4.4.1",
+		"bootstrap": "4.6.1",
 		"bootstrap-table": "1.19.1",
 		"clean-css-cli": "^5.3.3",
 		"jquery": ">=3.5.0",
