@@ -31,6 +31,7 @@ jobs:
         if: ${{ github.repository_owner == 'sfzformat' }}
         run: bundle exec jekyll build --destination public/
       - name: Upload to GitHub pages
+        if: ${{ github.ref_name == 'source' && github.event_name != 'pull_request' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
