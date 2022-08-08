@@ -263,7 +263,7 @@ categories:
 
   - name: "sfZed"
     license: "Freeware"
-    url: "http://audio.clockbeat.com/sfZed.html"
+    url: "http://steveholt.drealm.info/sfZed.html"
     os:
     - name: "Windows"
     short_description:
@@ -436,6 +436,16 @@ categories:
   - name: "for gedit"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-gedit"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      ""
+
+  - name: "for Kate"
+    license: "MIT"
+    url: "https://www.pling.com/p/1840691/"
     os:
     - name: "Linux"
     - name: "macOS"
