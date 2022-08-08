@@ -271,16 +271,6 @@ categories:
       It will also convert Soundfont SF2 to SFZ and works with a midi keyboard
       to allow you to play and set values, including mapping drum samples."
 
-  - name: "SFZ Designer"
-    license: "Freeware"
-    url: "http://mildon.me/sfzdesigner"
-    os:
-    - name: "Windows"
-    short_description:
-      "A visual sample mapping tool optimized for multiple velocity and
-      round-robin layers. It features a streamlined workflow, assisted opcode
-      entry, draggable key-range and velocity splits-points, and more."
-
 - name: "Automappers"
   applications:
 
