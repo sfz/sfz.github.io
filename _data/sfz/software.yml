@@ -303,6 +303,16 @@ categories:
     short_description:
       ""
 
+  - name: "soundmap"
+    license: "GPL-3.0"
+    url: "https://codeberg.org/KMIJPH/soundmap"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      ""
+
 - name: "Converters"
   applications:
 
