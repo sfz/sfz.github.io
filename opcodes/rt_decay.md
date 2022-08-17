@@ -20,3 +20,10 @@ the higher notes will need higher rt_decay values.
 Release samples for sounds which do not naturally decay, such as organs or
 guitar feedback, do not need their volume to decrease based on note duration,
 and can use the default value of 0.
+
+## Practical Considerations
+
+In ARIA, extended MIDI CC 151 can be used alongside (or instead of) rt_decay to select
+different release samples for different time ranges. However, CCs have one value
+across the entire instrument. CC 151 is time since the last note-on message in seconds.
+This can give undesired results in arpeggios.
