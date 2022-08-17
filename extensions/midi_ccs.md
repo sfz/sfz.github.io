@@ -99,7 +99,10 @@ hihdcc141=24
 
 CC 151 is reset as soon as a new note is hit, so it cannot be used to measure
 the time between the previous note and the current one, for adaptive legato
-speed purposes.
+speed purposes. It can, however, be used to control the triggering of release samples. Like
+CC140 and CC141, it also requires using hdcc to function properly - which makes sense, as
+time since note-on as measured in seconds usually involves fractions of a second in real
+scenarios.
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
