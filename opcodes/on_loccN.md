@@ -20,6 +20,6 @@ will send a MIDI note when the pedal hits bottom.
 
 ## Practical Considerations
 
-on_locc/on_hicc effectively replaces trigger=attack. The behavior of a region which has
+on_locc/on_hicc effectively replaces [trigger](/opcodes/trigger)=attack. The behavior of a region which has
 on_locc/on_hicc and trigger=attack specified is not defined by the SFZ specification,
 and that combination should be used.
