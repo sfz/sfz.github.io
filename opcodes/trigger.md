@@ -74,6 +74,10 @@ or not.
 More detail about release sample behavior in different SFZ players can be found at
 https://github.com/kinwie/sfztest/wiki/How-Release-Trigger-Works-in-SFZ
 
+[on_locc/on_hicc](/opcodes/on_loccN) effectively replaces the default trigger=attack,
+as it is used for regions which are to be triggered by MIDI CC messages and not MIDI
+note messages. For regions which use these opcodes, trigger should be left unspecified.
+
 ## Examples
 
 ```
