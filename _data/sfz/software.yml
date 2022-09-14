@@ -220,7 +220,16 @@ categories:
     - name: "Windows"
     short_description:
       ""
-
+      
+  - name: "MSoundFactory"
+    license: "Commercial"
+    url: "https://www.meldaproduction.com/MSoundFactory"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Sampler module imports/exports SFZ."
+  
   - name: "OpenMPT"
     license: "BSD-3-Clause"
     url: "https://openmpt.org/"
