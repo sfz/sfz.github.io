@@ -2,7 +2,6 @@
 layout: "sfz/opcode"
 opcode_name: "egN_sustain"
 ---
-This needs to be tested to verify if this is what it actually does.
 Defines which envelope point is used for the sustain level.
 The part of the specified envelope before that point will be triggered
 on note attack, and the part after that point will be triggered on note release.
