@@ -14,6 +14,17 @@ categories:
 - name: "Players"
   applications:
 
+  - name: "Calfbox"
+    license: "GPL-3.0-or-later"
+    url: "https://github.com/kfoltman/calfbox"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "C library and Python module to build audio applications like
+       MIDI sequencers or samplers (SFZ or SF2 via Fluidsynth)."
+
   - name: "Carla (SFZero)"
     license: "GPL-2.0-or-later"
     url: "https://kx.studio/Applications:Carla"
@@ -220,7 +231,7 @@ categories:
     - name: "Windows"
     short_description:
       ""
-      
+
   - name: "MSoundFactory"
     license: "Commercial"
     url: "https://www.meldaproduction.com/MSoundFactory"
@@ -229,7 +240,7 @@ categories:
     - name: "Windows"
     short_description:
       "Sampler module imports/exports SFZ."
-  
+
   - name: "OpenMPT"
     license: "BSD-3-Clause"
     url: "https://openmpt.org/"
