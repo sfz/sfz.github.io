@@ -63,7 +63,7 @@ loops this way, for example LFO 01 modulating LFO 02 while LFO 02 modulates
 LFO 01.
 
 In addition to the below, in ARIA it's possible to control the amount
-of freq_lfo with MIDI CC, so lfo03_freq_lfo01_oncc117 would make LFO 03 add
+of freq_lfo with MIDI CC, so lfo03_freq_lfo01_oncc117=1.3 would make LFO 03 add
 up to 1.3 Hertz to the frequency of LFO 01, with the amount modulated by MIDI
 CC 117. So, freq_lfo_oncc would be added to the below list for ARIA, though
 depth_lfo_oncc and depthadd_lfo_oncc do not appear to be available.
