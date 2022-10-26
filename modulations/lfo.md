@@ -127,3 +127,18 @@ depth_lfo_oncc and depthadd_lfo_oncc do not appear to be available.
 - width_oncc
 - width_smoothcc
 - width_stepcc
+
+## Practical Considerations
+
+SFZ allows LFOs to modulate the frequency of other LFOs, including feedback
+(LFO number M modulating LFO number N, and vice versa). Mathematically, this
+can cause very chaotic results. However, in the Cakewalk products (and possibly
+also in ARIA, though this is not checked) this is simplified. If the number of the
+modulating LFO is lower than the LFO being modulated (for example, LFO1 modulates
+LFO2), the modulation is applied when it is calculated. However, if the number
+of the modulating LFO is higher than the LFO being modulated (for example, LFO4
+modulating LFO2), the modulation is not applied until the next LFO frequency
+update cycle.
+
+This both keeps LFO feedback controlled, and reduces the CPU needed to calculate
+LFO modulations.
