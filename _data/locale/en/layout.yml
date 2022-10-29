@@ -26,9 +26,6 @@ navigation:
 - label: "Software"
   type: "dropdown"
   pages:
-  - label: "Instruments"
-    url: "https://sfzinstruments.github.io"
-
   - label: "Players"
     url: "/software/players"
 
@@ -61,7 +58,7 @@ navigation:
 
   - label: "Modular Instruments"
     url: "/tutorials/modular_instruments"
-    
+
   - label: "Subtractive Synthesizers"
     url: "/tutorials/subtractive_synths"
   -
@@ -73,7 +70,7 @@ navigation:
 
   - label: "Epic Drums"
     url: "/tutorials/epic_drums"
-    
+
   - label: "Brush Stirs"
     url: "/tutorials/brush_stirs"
   -
@@ -91,6 +88,9 @@ navigation:
   -
   - label: "Video Tutorials"
     url: "/tutorials/videos"
+
+- label: "Instruments"
+  url: "https://sfzinstruments.github.io"
 
 - label: "News"
   url: "/news"
@@ -143,11 +143,6 @@ cards:
   - label: "Plogue Forum"
     url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
     icon_type: "users"
-    icon_category: "fas"
-
-  - label: "Free SFZ Instruments"
-    url: "https://sfzinstruments.github.io/"
-    icon_type: "download"
     icon_category: "fas"
 
   - label: "rgc:audio SFZ test suite"
