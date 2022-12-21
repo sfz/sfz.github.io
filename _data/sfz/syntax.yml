@@ -2791,7 +2791,7 @@ categories:
             max: 255
         velocity:
         - name: "ampeg_vel2decay"
-          short_description: "Velocity effect on pitch EG decay time."
+          short_description: "Velocity effect on EG decay time."
           alias:
           - name: "amp_vel2decay"
             deprecated: true
@@ -3489,7 +3489,7 @@ categories:
             max: 100
         velocity:
         - name: "pitcheg_vel2decay"
-          short_description: "Velocity effect on pitch EG decay time."
+          short_description: "Velocity effect on EG decay time."
           alias:
           - name: "pitch_vel2decay"
             version: "Cakewalk"
@@ -3526,7 +3526,7 @@ categories:
             max: 100
         velocity:
         - name: "pitcheg_vel2delay"
-          short_description: "Velocity effect on pitch EG delay time."
+          short_description: "Velocity effect on EG delay time."
           alias:
           - name: "pitch_vel2delay"
             version: "Cakewalk"
