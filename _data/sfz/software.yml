@@ -15,6 +15,7 @@ categories:
   applications:
 
   - name: "Calfbox"
+    author: "Krzysztof Foltman"
     license: "GPL-3.0-or-later"
     url: "https://github.com/kfoltman/calfbox"
     os:
@@ -26,6 +27,7 @@ categories:
        MIDI sequencers or samplers (SFZ or SF2 via Fluidsynth)."
 
   - name: "Carla (SFZero)"
+    author: "KXStudio"
     license: "GPL-2.0-or-later"
     url: "https://kx.studio/Applications:Carla"
     os:
@@ -38,6 +40,7 @@ categories:
       "Fully-featured audio plugin host, with support for many audio drivers and plugin formats."
 
   - name: "liquidsfz"
+    author: "Stefan Westerfeld"
     license: "LGPL-2.1"
     url: "https://github.com/swesterfeld/liquidsfz/"
     os:
@@ -46,6 +49,7 @@ categories:
       "SFZ sampler library with LV2 and JACK support."
 
   - name: "sfizz"
+    author: "SFZTools"
     license: "BSD-2-Clause"
     url: "https://sfz.tools/sfizz/"
     os:
@@ -56,6 +60,7 @@ categories:
       "SFZ library, AU/LV2/VST3 plugin with JACK support."
 
   - name: "SFZero"
+    author: "altalogix"
     license: "FOSS"
     url: "https://github.com/altalogix/SFZero/"
     os:
@@ -66,6 +71,7 @@ categories:
       "An SFZ (and SF2) player and Juce module."
 
   - name: "Zerberus"
+    author: "MuseScore"
     license: "FOSS"
     url : "https://musescore.org/en/handbook/developers-handbook/references/zerberus-musescore-sfz-synthesizer/"
     os:
@@ -76,6 +82,7 @@ categories:
       "MuseScore SFZ synthesizer."
 
   - name: "LinuxSampler"
+    author: "The LinuxSampler Project"
     license: "Custom"
     url: "http://linuxsampler.org/"
     os:
@@ -86,6 +93,7 @@ categories:
       ""
 
   - name: "BassMIDI VSTi"
+    author: "Falcosoft"
     license: "Freeware"
     url: "http://falcosoft.hu/softwares.html"
     os:
@@ -96,6 +104,7 @@ categories:
       the sounds. MIDI input is also supported."
 
   - name: "Grace"
+    author: "Shannon Oram"
     license: "MIT"
     url: "https://github.com/s-oram/Grace/"
     os:
@@ -104,6 +113,7 @@ categories:
       ""
 
   - name: "sforzando"
+    author: "Plogue"
     license: "Freeware"
     url: "https://plogue.com/products/sforzando.html"
     os:
@@ -114,6 +124,7 @@ categories:
       Supports almost all SFZ v1 and v2 opcodes, plus ARIA extensions."
 
   - name: "TX16Wx Sampler"
+    author: "CWITEC"
     license: "Freeware"
     url: "https://www.tx16wx.com/"
     os:
@@ -121,6 +132,7 @@ categories:
     - name: "Windows"
 
   - name: "Zampler"
+    author: "Beat"
     license: "Freeware"
     url: "https://www.zampler.de/"
     os:
@@ -132,6 +144,7 @@ categories:
       only for key-range and velocity-range mapping."
 
   - name: "ARIA"
+    author: "Plogue"
     license: "OEM"
     url: "http://ariaengine.com/"
     os:
@@ -144,6 +157,7 @@ categories:
       format to define scales and temperaments."
 
   - name: "Bliss Sampler"
+    author: "discoDSP"
     license: "Commercial"
     url: "https://www.discodsp.com/bliss/"
     os:
@@ -154,6 +168,7 @@ categories:
       ""
 
   - name: "Samplelord"
+    author: "Wlodzimierz Grabowski"
     license: "Commercial"
     url: "https://www.samplelord.com/"
     os:
@@ -164,6 +179,7 @@ categories:
       Has basic parameter controls, supports only SFZ v1 opcodes."
 
   - name: "TAL-Sampler"
+    author: "TAL Software"
     license: "Commercial"
     url: "https://tal-software.com/products/tal-sampler"
     os:
@@ -174,6 +190,7 @@ categories:
       ""
 
   - name: "Unify"
+    author: "Plugin Guru"
     license: "Commercial"
     url: "https://www.pluginguru.com/products/unify-standard/"
     os:
@@ -182,9 +199,10 @@ categories:
     short_description:
       ""
 
-  - name: "UVI Falcon"
+  - name: "Falcon"
+    author: "UVI"
     license: "Commercial"
-    url: "https://www.uvi.net/"
+    url: "https://www.uvi.net/falcon.html"
     os:
     - name: "macOS"
     - name: "Windows"
@@ -192,6 +210,7 @@ categories:
       ""
 
   - name: "Wusik 8008, Wusik One, Wusik EVE V5"
+    author: "Wusik"
     license: "Commercial"
     url: "https://www.wusik.com/"
     os:
@@ -203,6 +222,7 @@ categories:
   applications:
 
   - name: "Bitwig Studio"
+    author: "Bitwig"
     license: "Commercial"
     url: "https://www.bitwig.com/"
     os:
@@ -213,6 +233,7 @@ categories:
       "Sampler device supports the import of SFZ. Also via drag & drop."
 
   - name: "Equator 2"
+    author: "Roli"
     license: "Commercial"
     url: "https://roli.com/products/software/equator2/"
     os:
@@ -222,6 +243,7 @@ categories:
       "MPE synthesizer."
 
   - name: "HISE"
+    author: "Hart Instruments"
     license: "GPL-3.0"
     url: "http://hise.audio/"
     os:
@@ -233,6 +255,7 @@ categories:
       ""
 
   - name: "MSoundFactory"
+    author: "MeldaProduction"
     license: "Commercial"
     url: "https://www.meldaproduction.com/MSoundFactory"
     os:
@@ -242,6 +265,7 @@ categories:
       "Sampler module imports/exports SFZ."
 
   - name: "OpenMPT"
+    author: "ModPlug Central"
     license: "BSD-3-Clause"
     url: "https://openmpt.org/"
     os:
@@ -250,6 +274,7 @@ categories:
       ""
 
   - name: "Poise"
+    author: "One Small Clue"
     license: "Freeware"
     url: "https://www.onesmallclue.com/index.html"
     os:
@@ -258,6 +283,7 @@ categories:
       "Simple 16 drum pads percussion sampler, 8 layers. Very limited SFZ support."
 
   - name: "Renoise (Redux)"
+    author: "Renoise"
     license: "Commercial"
     url: "https://www.renoise.com/"
     os:
@@ -271,6 +297,7 @@ categories:
   applications:
 
   - name: "Polyphone"
+    author: "Polyphone"
     license: "GPL-3.0"
     url: "https://www.polyphone-soundfonts.com/en/"
     os:
@@ -282,6 +309,7 @@ categories:
       Note: being a soundfont editor (sf2) it has limited sfz support when exporting."
 
   - name: "sfZed"
+    author: "Steve Holt"
     license: "Freeware"
     url: "http://steveholt.drealm.info/sfZed.html"
     os:
@@ -294,7 +322,8 @@ categories:
 - name: "Automappers"
   applications:
 
-  - name: "SFZ Python Automapper by Peter Eastman"
+  - name: "SFZ Python Automapper"
+    author: "Peter Eastman"
     license: "Public Domain"
     url: "https://vis.versilstudios.com/sfzconverter.html#u13452-4"
     os:
@@ -305,6 +334,7 @@ categories:
       ""
 
   - name: "Folder-to-SFZ converter"
+    author: "Versilian Studios"
     license: "Freeware"
     url: "http://vis.versilstudios.net/sfzconverter.html"
     os:
@@ -315,6 +345,7 @@ categories:
       ""
 
   - name: "Bjoerns Sample Mapper"
+    author: "Björn Bojahr"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/bjoerns-sample-mapper.html"
     os:
@@ -327,6 +358,7 @@ categories:
   applications:
 
   - name: "exs2sfz (Python)"
+    author: "vonRed"
     license: "ISC"
     url: "https://github.com/AudioKit/SamplerDemo/blob/master/Sounds/exs2sfz.py"
     os:
@@ -336,6 +368,7 @@ categories:
     short_description: "EXS24 to SFZ sample library metadata converter."
 
   - name: "EXS2SFZ"
+    author: "Björn Bojahr"
     license: "Freeware"
     url: "https://www.bjoernbojahr.de/exs2sfz.html"
     os:
@@ -346,6 +379,7 @@ categories:
       SFZ files from it."
 
   - name: "TX2SFZ"
+    author: "derknott"
     license: "Freeware"
     url: "https://www.kvraudio.com/product/tx2sfz-by-derknott"
     os:
@@ -354,6 +388,7 @@ categories:
       "Converts sample mapping information from TX16WX sampler to SFZ."
 
   - name: "Awave Studio"
+    author: "FMJ Software"
     license: "Commercial"
     url: "https://www.fmjsoft.com/awavestudio.html#main"
     os:
@@ -366,6 +401,7 @@ categories:
       as an audio editor, or as a synth instrument editor."
 
   - name: "Chicken Systems Translator"
+    author: "Chicken Systems"
     license: "Commercial"
     url: "https://www.chickensys.com/products2/translator/index.html"
     os:
@@ -375,6 +411,7 @@ categories:
       ""
 
   - name: "Extreme Sample Converter"
+    author: "Wlodzimierz Grabowski"
     license: "Commercial"
     url: "https://extranslator.com/index.php?page=exsc"
     os:
@@ -386,6 +423,7 @@ categories:
   applications:
 
   - name: "Freepats-tools"
+    author: "Freepats"
     license: "GPL-3.0"
     url: "https://github.com/freepats/freepats-tools"
     os:
@@ -398,6 +436,7 @@ categories:
       <a href='http://freepats.zenvoid.org/'>FreePats project</a>."
 
   - name: "sfzlint"
+    author: "jisaacstone"
     license: "MIT"
     url: "https://github.com/jisaacstone/sfzlint/"
     os:
@@ -410,6 +449,7 @@ categories:
   applications:
 
   - name: "CudaText Editor"
+    author: "UVviewsoft"
     license: "MPL-2.0"
     url: "http://uvviewsoft.com/cudatext/"
     os:
@@ -424,6 +464,7 @@ categories:
       ""
 
   - name: "SFZ major mode for GNU Emacs"
+    author: "SFZTools"
     license: "MIT"
     url: "https://github.com/sfztools/emacs-sfz-mode"
     os:
@@ -434,6 +475,7 @@ categories:
       ""
 
   - name: "for Geany"
+    author: "SFZTools"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-geany"
     os:
@@ -444,6 +486,7 @@ categories:
       ""
 
   - name: "for gedit"
+    author: "SFZTools"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-gedit"
     os:
@@ -454,6 +497,7 @@ categories:
       ""
 
   - name: "for Kate"
+    author: "Planet Linux'ing Groups"
     license: "MIT"
     url: "https://www.pling.com/p/1840691/"
     os:
@@ -464,6 +508,7 @@ categories:
       ""
 
   - name: "for Sublime Text"
+    author: "SFZTools"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-sublime-text"
     os:
@@ -474,6 +519,7 @@ categories:
       ""
 
   - name: "for VSCode"
+    author: "Arne Jokela"
     license: "MIT"
     url: "https://github.com/jokela/vscode-sfz"
     os:
@@ -484,6 +530,7 @@ categories:
       ""
 
   - name: "for Notepad++"
+    author: "SFZTools"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-notepad-plus-plus"
     os:
@@ -491,7 +538,8 @@ categories:
     short_description:
       ""
 
-  - name: "for Notepad++ by Peter Jones"
+  - name: "for Notepad++"
+    author: "Peter Jones"
     license: "FOSS"
     url: "http://www.drealm.info/sfz/sfz-udl.xml"
     os:
@@ -500,6 +548,7 @@ categories:
       ""
 
   - name: "SFZ Tools for UltraEdit"
+    author: "Noise Sculpture"
     license: "FOSS"
     url: "https://noisesculpture.com/sfz-tools/"
     os:
