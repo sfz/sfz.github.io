@@ -319,6 +319,43 @@ categories:
       It will also convert Soundfont SF2 to SFZ and works with a midi keyboard
       to allow you to play and set values, including mapping drum samples."
 
+- name: "Loop Editors"
+  applications:
+
+  - name: "LoopAuditioneer"
+    author: "Lars Palo"
+    license: "GPL-3.0-or-later"
+    url: "https://loopauditioneer.sourceforge.io/"
+    os:
+    - name: "Linux"
+    - name: "Windows"
+    short_description:
+      "Software for evaluating, creating and manipulating
+      loops and cues and other properties of wav file metadata."
+
+  - name: "Endless WAV"
+    author: "Björn Bojahr"
+    license: "Freeware"
+    url: "https://www.bjoernbojahr.de/endlesswav.html"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Software to create sustain loops in WAV files (8, 16 and 24 bit)
+      with loop mix, auto loop, realtime crossfade, fade and cut functions."
+
+  - name: "Wavosaur"
+    author: "The Wavosaur Team"
+    license: "Freeware"
+    url: "https://www.wavosaur.com/"
+    os:
+    - name: "Windows"
+    short_description:
+      "Software for editing, processing and recording sounds, wav and mp3 files.
+      Wavosaur has all the features to edit audio (cut, copy, paste, etc.)
+      produce music loops, analyze, record, batch convert. Supports VST plugins,
+      ASIO driver, multichannel wav files, real time effect processing."
+
 - name: "Automappers"
   applications:
 
