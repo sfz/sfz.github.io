@@ -397,7 +397,7 @@ categories:
   - name: "exs2sfz (Python)"
     author: "vonRed"
     license: "ISC"
-    url: "https://github.com/AudioKit/SamplerDemo/blob/master/Sounds/exs2sfz.py"
+    url: "https://github.com/nguyenhao12345/GraduateThesis/blob/main/PianoKaraoke/Piano_App/Resource/Sounds/exs2sfz.py"
     os:
     - name: "Linux"
     - name: "macOS"
@@ -566,7 +566,7 @@ categories:
     short_description:
       ""
 
-  - name: "for Notepad++"
+  - name: "SFZTools for Notepad++"
     author: "SFZTools"
     license: "FOSS"
     url: "https://github.com/sfztools/syntax-highlighting-notepad-plus-plus"
