@@ -397,7 +397,7 @@ categories:
   - name: "exs2sfz (Python)"
     author: "vonRed"
     license: "ISC"
-    url: "https://github.com/AudioKit/SamplerDemo/blob/master/Sounds/exs2sfz.py"
+    url: "/assets/src/exs2sfz.py"
     os:
     - name: "Linux"
     - name: "macOS"
