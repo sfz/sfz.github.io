@@ -429,7 +429,6 @@ categories:
     license: "Commercial"
     url: "https://www.fmjsoft.com/awavestudio.html#main"
     os:
-    - name: "macOS"
     - name: "Windows"
     short_description:
       "Multi-purpose audio tool that reads a veritable host of audio carrying
