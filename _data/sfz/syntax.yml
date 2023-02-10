@@ -44,6 +44,7 @@ headers:
     From ARIA v1.0.8.0+ an ‹<a href='/headers/effect'>effect<a>› section with a
     <a href='/opcodes/bus'>bus</a>=midi can be used instead."
   version: "ARIA"
+  deprecated: true
 
 - name: "sample"
   short_description: "Allows to embed sample data directly in SFZ files (Rapture)."
