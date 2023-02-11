@@ -2652,6 +2652,7 @@ categories:
         default: 100
         min: -1200
         max: 1200
+        unit: "cents"
       alias:
       - name: "tune_keytrack"
         version: "ARIA"
