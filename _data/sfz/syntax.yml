@@ -51,6 +51,9 @@ headers:
   version: "Cakewalk"
 # ------------------------------------------------------------------------------
 # Opcodes
+#
+# NOTE: unlike `min` and `max`, the `default` value is also used as a
+#       documentation string, thus not reliable to evaluate in parsers.
 # ------------------------------------------------------------------------------
 categories:
 - name: "Real-Time Instrument Script"
