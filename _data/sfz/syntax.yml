@@ -547,7 +547,6 @@ categories:
     version: "ARIA"
     value:
       type_name: "string"
-      default: "null"
 
   - name: "master_label"
     short_description:
@@ -556,7 +555,6 @@ categories:
     version: "ARIA"
     value:
       type_name: "string"
-      default: "null"
 
   - name: "group_label"
     short_description:
@@ -565,7 +563,6 @@ categories:
     version: "ARIA"
     value:
       type_name: "string"
-      default: "null"
 
   - name: "region_label"
     short_description:
@@ -574,7 +571,6 @@ categories:
     version: "ARIA"
     value:
       type_name: "string"
-      default: "null"
 
   types:
   - name: "Voice Lifecycle"
