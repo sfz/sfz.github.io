@@ -855,7 +855,7 @@ categories:
       short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
       version: "ARIA"
       value:
-        type_name: "float"
+        type_name: "integer"
         default: 66
         min: 0
         max: 127
