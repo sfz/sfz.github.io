@@ -436,16 +436,25 @@ categories:
 
   - name: "note_offset"
     short_description:
-      "Tells SFZ to shift all incoming MIDI data by the specified number of notes."
+      "MIDI note transpose; tells the SFZ player to offset all incoming MIDI notes by the specified number of semitones."
     version: "SFZ v2"
     value:
       type_name: "integer"
+      default: 0
+      min: -127
+      max: 127
+      unit: "semitones"
 
   - name: "octave_offset"
-    short_description: "Shifts all incoming MIDI data by the specified octave."
+    short_description:
+      "MIDI octave transpose; tells the SFZ player to offset all incoming MIDI notes by the specified number of octaves."
     version: "SFZ v2"
     value:
       type_name: "integer"
+      default: 0
+      min: -10
+      max: 10
+      unit: "octaves"
 
   - name: "label_ccN"
     short_description: "Creates a label for the MIDI CC."
