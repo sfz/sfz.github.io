@@ -333,6 +333,16 @@ categories:
       "Software for evaluating, creating and manipulating
       loops and cues and other properties of wav file metadata."
 
+  - name: "Edison"
+    author: "Image Line"
+    license: "Commercial"
+    url: "https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/plugins/Edison.htm"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Fully integrated audio editing and recording tool in FL Studio."
+
   - name: "Endless WAV"
     author: "Björn Bojahr"
     license: "Freeware"
