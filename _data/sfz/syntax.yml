@@ -86,6 +86,7 @@ categories:
         default: 0
         min: 0
         max: 4294967296
+        unit: "loops"
 
     - name: "delay"
       short_description: "Region delay time."
@@ -396,6 +397,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "reverse_hiccN"
       short_description:
@@ -406,6 +408,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "waveguide"
       short_description: "Enables waveguide synthesis for the region."
@@ -477,6 +480,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 127
+      unit: "MIDI Controller"
 
   - name: "#include"
     short_description:
@@ -600,6 +604,7 @@ categories:
         default: 0
         min: -2147483648
         max: 2147483647
+        unit: "sample units"
 
     - name: "off_by"
       short_description: "Region off group."
@@ -611,6 +616,7 @@ categories:
         default: 0
         min: -2147483648
         max: 2147483647
+        unit: "sample units"
 
     - name: "off_mode"
       short_description: "Region off mode."
@@ -646,6 +652,7 @@ categories:
         default: 0
         min: 0
         max: 1024
+        unit: "MIDI Nodes"
 
     - name: "polyphony"
       short_description: "Polyphony voice limit."
@@ -707,6 +714,7 @@ categories:
         - name: "1"
         - name: "2"
         - name: "10"
+        unit: "curve"
 
     - name: "off_shape"
       short_description:
@@ -744,6 +752,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lokey"
       short_description:
@@ -755,6 +764,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hikey"
       short_description:
@@ -766,6 +776,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lovel"
       short_description:
@@ -778,6 +789,7 @@ categories:
         default: 1
         min: 1
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hivel"
       short_description:
@@ -790,6 +802,7 @@ categories:
         default: 127
         min: 1
         max: 127
+        unit: "MIDI Controller"
 
   - name: "MIDI Conditions"
     id: "mid"
@@ -804,6 +817,7 @@ categories:
         default: 1
         min: 1
         max: 16
+        unit: "MIDI Channel"
 
     - name: "hichan"
       short_description:
@@ -815,6 +829,7 @@ categories:
         default: 16
         min: 1
         max: 16
+        unit: "MIDI Channel"
 
     - name: "loccN"
       short_description:
@@ -826,6 +841,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hiccN"
       short_description:
@@ -837,6 +853,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lobend"
       short_description:
@@ -848,6 +865,7 @@ categories:
         default: -8192
         min: -8192
         max: 8192
+        unit: "cents"
 
     - name: "hibend"
       short_description:
@@ -859,6 +877,7 @@ categories:
         default: 8192
         min: -8192
         max: 8192
+        unit: "cents"
 
     - name: "sostenuto_cc"
       short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
@@ -868,6 +887,7 @@ categories:
         default: 66
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sostenuto_lo"
       short_description:
@@ -879,6 +899,7 @@ categories:
         default: 0.5
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sostenuto_sw"
       short_description: "Turns the sostenuto switch on or off."
@@ -897,6 +918,7 @@ categories:
         default: 64
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sustain_lo"
       short_description:
@@ -908,6 +930,7 @@ categories:
         default: 0.5
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sustain_sw"
       short_description: "Turns the sustain switch on or off."
@@ -928,6 +951,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_hikey"
       short_description:
@@ -939,6 +963,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_last"
       short_description:
@@ -951,6 +976,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_down"
       short_description:
@@ -964,6 +990,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_up"
       short_description:
@@ -975,6 +1002,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_previous"
       short_description:
@@ -985,6 +1013,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_vel"
       short_description:
@@ -1011,6 +1040,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hiprog"
       short_description:
@@ -1022,6 +1052,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lohdccN"
       short_description:
@@ -1051,6 +1082,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_label"
       short_description: "Label for activated keyswitch on GUI."
@@ -1067,6 +1099,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "sw_hilast"
       short_description:
@@ -1077,6 +1110,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "varNN_mod"
       short_description:
@@ -1110,6 +1144,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
 
     - name: "varNN_*"
       short_description: "Specifies the target for variable NN to modulate."
@@ -1163,6 +1198,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hichanaft"
       short_description:
@@ -1174,6 +1210,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lopolyaft"
       short_description:
@@ -1185,6 +1222,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "hipolyaft"
       short_description:
@@ -1196,6 +1234,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "lorand"
       short_description:
@@ -1229,6 +1268,7 @@ categories:
         default: 1
         min: 1
         max: 100
+        unit: "beats"
 
     - name: "seq_position"
       short_description:
@@ -1240,6 +1280,7 @@ categories:
         default: 1
         min: 1
         max: 100
+        unit: "beats"
 
     - name: "lotimer"
       short_description:
@@ -1305,6 +1346,7 @@ categories:
         default: -1
         min: 0
         max: 127
+        unit: "MIDI Controller"
       alias:
       - name: "start_loccN"
         version: "SFZ v2"
@@ -1320,6 +1362,7 @@ categories:
         default: -1
         min: 0
         max: 127
+        unit: "MIDI Controller"
       alias:
       - name: "start_hiccN"
         version: "SFZ v2"
@@ -1363,6 +1406,7 @@ categories:
         default: -1
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "stop_hiccN"
       short_description:
@@ -1375,6 +1419,7 @@ categories:
         default: -1
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "stop_lohdccN"
       short_description:
@@ -1425,6 +1470,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "pan_smoothccN"
           version: "Cakewalk"
         - name: "pan_stepccN"
@@ -1519,6 +1565,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "volume_smoothccN"
           version: "SFZ v2"
         - name: "volume_stepccN"
@@ -1547,6 +1594,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "width_smoothccN"
           version: "Cakewalk"
         - name: "width_stepccN"
@@ -1562,6 +1610,7 @@ categories:
         default: 60
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "amp_keytrack"
       short_description:
@@ -1605,6 +1654,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
+        unit: "MIDI Controller"
       value:
         type_name: "float"
         default:
@@ -1706,6 +1756,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfin_hiccN"
       short_description: "Fade in control based on MIDI CC."
@@ -1715,6 +1766,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_loccN"
       short_description: "Fade out control based on MIDI CC."
@@ -1724,6 +1776,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_hiccN"
       short_description: "Fade out control based on MIDI CC."
@@ -1733,6 +1786,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfin_lokey"
       short_description: "Fade in control based on MIDI note (keyboard position)."
@@ -1742,6 +1796,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfin_hikey"
       short_description: "Fade in control based on MIDI note (keyboard position)."
@@ -1751,6 +1806,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_lokey"
       short_description:
@@ -1761,6 +1817,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_hikey"
       short_description:
@@ -1771,6 +1828,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfin_lovel"
       short_description: "Fade in control based on velocity."
@@ -1780,6 +1838,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfin_hivel"
       short_description: "Fade in control based on velocity."
@@ -1789,6 +1848,7 @@ categories:
         default: 0
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_lovel"
       short_description: "Fade out control, based on velocity."
@@ -1798,6 +1858,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "xfout_hivel"
       short_description: "Fade out control, based on velocity."
@@ -1807,6 +1868,7 @@ categories:
         default: 127
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "phase"
       short_description:
@@ -1846,6 +1908,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "amplitude_smoothccN"
 
     - name: "global_amplitude"
@@ -1904,6 +1967,7 @@ categories:
         default: 60
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "pan_keytrack"
       short_description:
@@ -2189,6 +2253,7 @@ categories:
         default: 60
         min: 0
         max: 127
+        unit: "MIDI Controller"
       alias:
       - name: "fil2_keycenter"
         short_description:
@@ -2352,6 +2417,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "resonance_smoothccN"
           version: "SFZ v2"
           value:
@@ -2385,6 +2451,7 @@ categories:
               type_name: "integer"
               min: 0
               max: 255
+              unit: "cents"
           - name: "resonance2_smoothccN"
             value:
               type_name: "float"
@@ -2533,6 +2600,7 @@ categories:
       value:
         type_name: "float"
         min: 0
+        max: 9600
         default: 0
         unit: "ms"
 
@@ -2584,6 +2652,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "pitch_smoothccN"
           version: "SFZ v2"
           value:
@@ -2650,6 +2719,7 @@ categories:
         default: 60 # (C4)
         min: 0
         max: 127
+        unit: "MIDI Controller"
 
     - name: "pitch_keytrack"
       short_description:
@@ -2704,6 +2774,7 @@ categories:
         default: 0
         min: -127
         max: 127
+        unit: "MIDI Controller"
 
     - name: "bend_stepup"
       version: "SFZ v2"
@@ -2803,6 +2874,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         velocity:
         - name: "ampeg_vel2decay"
           short_description: "Velocity effect on EG decay time."
@@ -2887,6 +2959,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         velocity:
         - name: "ampeg_vel2hold"
           short_description: "Velocity effect on EG hold time."
@@ -2971,6 +3044,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         velocity:
         - name: "ampeg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
@@ -4407,6 +4481,7 @@ categories:
             type_name: "integer"
             min: 0
             max: 255
+            unit: "cents"
         - name: "lfoN_pitch_onccX"
         - name: "lfoN_pitch_smoothccX"
         - name: "lfoN_pitch_stepccX"
@@ -4564,6 +4639,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 255
+      unit: "cents"
 
   - name: "vN"
     short_description: ""
@@ -4572,6 +4648,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 127
+      unit: "MIDI Controller"
     value:
       type_name: "float"
       min: -1
