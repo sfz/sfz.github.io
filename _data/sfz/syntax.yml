@@ -397,7 +397,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "reverse_hiccN"
       short_description:
@@ -408,7 +408,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "waveguide"
       short_description: "Enables waveguide synthesis for the region."
@@ -480,7 +480,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 127
-      unit: "MIDI Controller"
+      unit: "Midi"
 
   - name: "#include"
     short_description:
@@ -752,7 +752,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lokey"
       short_description:
@@ -764,7 +764,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hikey"
       short_description:
@@ -776,7 +776,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lovel"
       short_description:
@@ -789,7 +789,7 @@ categories:
         default: 1
         min: 1
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hivel"
       short_description:
@@ -802,7 +802,7 @@ categories:
         default: 127
         min: 1
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
   - name: "MIDI Conditions"
     id: "mid"
@@ -833,7 +833,7 @@ categories:
 
     - name: "loccN"
       short_description:
-        "Defines the range of the last MIDI controller N required
+        "Defines the range of the last Midi N required
         for the region to play."
       version: "SFZ v1"
       value:
@@ -841,11 +841,11 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hiccN"
       short_description:
-        "Defines the range of the last MIDI controller N required
+        "Defines the range of the last Midi N required
         for the region to play."
       version: "SFZ v1"
       value:
@@ -853,7 +853,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lobend"
       short_description:
@@ -887,7 +887,7 @@ categories:
         default: 66
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sostenuto_lo"
       short_description:
@@ -899,7 +899,7 @@ categories:
         default: 0.5
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sostenuto_sw"
       short_description: "Turns the sostenuto switch on or off."
@@ -918,7 +918,7 @@ categories:
         default: 64
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sustain_lo"
       short_description:
@@ -930,7 +930,7 @@ categories:
         default: 0.5
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sustain_sw"
       short_description: "Turns the sustain switch on or off."
@@ -951,7 +951,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_hikey"
       short_description:
@@ -963,7 +963,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_last"
       short_description:
@@ -976,7 +976,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_down"
       short_description:
@@ -990,7 +990,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_up"
       short_description:
@@ -1002,7 +1002,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_previous"
       short_description:
@@ -1013,7 +1013,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_vel"
       short_description:
@@ -1040,7 +1040,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hiprog"
       short_description:
@@ -1052,7 +1052,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lohdccN"
       short_description:
@@ -1082,7 +1082,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_label"
       short_description: "Label for activated keyswitch on GUI."
@@ -1099,7 +1099,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "sw_hilast"
       short_description:
@@ -1110,7 +1110,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "varNN_mod"
       short_description:
@@ -1198,7 +1198,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hichanaft"
       short_description:
@@ -1210,7 +1210,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lopolyaft"
       short_description:
@@ -1222,7 +1222,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "hipolyaft"
       short_description:
@@ -1234,7 +1234,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "lorand"
       short_description:
@@ -1346,7 +1346,7 @@ categories:
         default: -1
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
       alias:
       - name: "start_loccN"
         version: "SFZ v2"
@@ -1362,7 +1362,7 @@ categories:
         default: -1
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
       alias:
       - name: "start_hiccN"
         version: "SFZ v2"
@@ -1406,7 +1406,7 @@ categories:
         default: -1
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "stop_hiccN"
       short_description:
@@ -1419,7 +1419,7 @@ categories:
         default: -1
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "stop_lohdccN"
       short_description:
@@ -1610,7 +1610,7 @@ categories:
         default: 60
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "amp_keytrack"
       short_description:
@@ -1654,7 +1654,7 @@ categories:
         type_name: "integer"
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
       value:
         type_name: "float"
         default:
@@ -1689,7 +1689,7 @@ categories:
         unit: "dB"
 
     - name: "xf_cccurve"
-      short_description: "MIDI controllers crossfade curve for the region."
+      short_description: "Midis crossfade curve for the region."
       version: "SFZ v1"
       value:
         type_name: "string"
@@ -1756,7 +1756,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfin_hiccN"
       short_description: "Fade in control based on MIDI CC."
@@ -1766,7 +1766,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_loccN"
       short_description: "Fade out control based on MIDI CC."
@@ -1776,7 +1776,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_hiccN"
       short_description: "Fade out control based on MIDI CC."
@@ -1786,7 +1786,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfin_lokey"
       short_description: "Fade in control based on MIDI note (keyboard position)."
@@ -1796,7 +1796,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfin_hikey"
       short_description: "Fade in control based on MIDI note (keyboard position)."
@@ -1806,7 +1806,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_lokey"
       short_description:
@@ -1817,7 +1817,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_hikey"
       short_description:
@@ -1828,7 +1828,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfin_lovel"
       short_description: "Fade in control based on velocity."
@@ -1838,7 +1838,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfin_hivel"
       short_description: "Fade in control based on velocity."
@@ -1848,7 +1848,7 @@ categories:
         default: 0
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_lovel"
       short_description: "Fade out control, based on velocity."
@@ -1858,7 +1858,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "xfout_hivel"
       short_description: "Fade out control, based on velocity."
@@ -1868,7 +1868,7 @@ categories:
         default: 127
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "phase"
       short_description:
@@ -1967,7 +1967,7 @@ categories:
         default: 60
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "pan_keytrack"
       short_description:
@@ -2253,7 +2253,7 @@ categories:
         default: 60
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
       alias:
       - name: "fil2_keycenter"
         short_description:
@@ -2719,7 +2719,7 @@ categories:
         default: 60 # (C4)
         min: 0
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "pitch_keytrack"
       short_description:
@@ -2774,7 +2774,7 @@ categories:
         default: 0
         min: -127
         max: 127
-        unit: "MIDI Controller"
+        unit: "Midi"
 
     - name: "bend_stepup"
       version: "SFZ v2"
@@ -4648,7 +4648,7 @@ categories:
       type_name: "integer"
       min: 0
       max: 127
-      unit: "MIDI Controller"
+      unit: "Midi"
     value:
       type_name: "float"
       min: -1
