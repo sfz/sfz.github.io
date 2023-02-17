@@ -105,7 +105,7 @@ depth_lfo_oncc and depthadd_lfo_oncc do not appear to be available.
 - eqNfreq_stepcc
 - eqNbw
 - eqNbw_oncc
-- eq1bw_smoothcc
+- eqNbw_smoothcc
 - eqNbw_stepcc
 - eqNgain
 - eqNgain_oncc
