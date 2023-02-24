@@ -114,6 +114,13 @@ categories:
             unit: "seconds"
         - name: "delay_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate delay."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 255
 
     - name: "delay_random"
       short_description: "Region random delay time."
@@ -350,6 +357,13 @@ categories:
           version: "ARIA"
         - name: "delay_beats_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate delay_beats."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 255
 
     - name: "delay_beats_random"
       short_description:
@@ -1101,7 +1115,7 @@ categories:
         - name: "varNN_curveccX"
           short_description:
             "Specifies the ‹<a href='/headers/curve'>curve</a>› number
-            which MIDI CC X uses to modulate variable NN."
+            which MIDI CC X uses to modulate varNN."
           value:
             type_name: "integer"
             min: 0
@@ -1417,6 +1431,9 @@ categories:
             version: "ARIA"
         - name: "pan_curveccN"
           version: "Cakewalk"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate pan."
           value:
             type_name: "integer"
             min: 0
@@ -1455,6 +1472,13 @@ categories:
           version: "ARIA"
         - name: "position_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate position."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 255
         - name: "position_smoothccN"
           version: "ARIA"
         - name: "position_stepccN"
@@ -1511,6 +1535,9 @@ categories:
             unit: "dB"
         - name: "volume_curveccN"
           version: "SFZ v2"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate volume."
           value:
             type_name: "integer"
             min: 0
@@ -1539,6 +1566,9 @@ categories:
           version: "Cakewalk"
         - name: "width_curveccN"
           version: "Cakewalk"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate width."
           value:
             type_name: "integer"
             min: 0
@@ -1589,6 +1619,13 @@ categories:
           - name: "amp_veltrack_ccN"
         - name: "amp_veltrack_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate amp_veltrack."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 255
 
     - name: "amp_veltrack_random"
       short_description: ""
@@ -1838,6 +1875,9 @@ categories:
             max: 100
             unit: "%"
         - name: "amplitude_curveccN"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate amplitude."
           value:
             type_name: "integer"
             min: 0
@@ -2109,11 +2149,13 @@ categories:
             version: "SFZ v2"
         - name: "cutoff_curveccN"
           version: "SFZ v2"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate cutoff."
           value:
             type_name: "integer"
             min: 0
             max: 255
-            unit: "cents"
         - name: "cutoff_smoothccN"
           version: "SFZ v2"
           value:
@@ -2155,6 +2197,13 @@ categories:
           - name: "cutoff2_ccN"
           - name: "cutoff2_onccN"
           - name: "cutoff2_curveccN"
+            short_description:
+              "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+              which MIDI CC N uses to modulate cutoff2."
+            value:
+              type_name: "integer"
+              min: 0
+              max: 255
           - name: "cutoff2_smoothccN"
           - name: "cutoff2_stepccN"
           - name: "cutoff2_chanaft"
@@ -2344,6 +2393,9 @@ categories:
           - name: "resonance_ccN"
         - name: "resonance_curveccN"
           version: "SFZ v2"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate resonance."
           value:
             type_name: "integer"
             min: 0
@@ -2377,6 +2429,9 @@ categories:
             - name: "resonance2_ccN"
               version: "SFZ v2" # TODO: Inherit from the last defined?
           - name: "resonance2_curveccN"
+            short_description:
+              "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+              which MIDI CC N uses to modulate resonance2."
             value:
               type_name: "integer"
               min: 0
@@ -2576,10 +2631,13 @@ categories:
           alias:
           - name: "tune_curveccN"
             version: "ARIA"
-          value:
-            type_name: "integer"
-            min: 0
-            max: 255
+            short_description:
+              "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+              which MIDI CC N uses to modulate pitch/tune."
+            value:
+              type_name: "integer"
+              min: 0
+              max: 255
         - name: "pitch_smoothccN"
           version: "SFZ v2"
           value:
@@ -2795,6 +2853,9 @@ categories:
             version: "SFZ v2"
         - name: "ampeg_decay_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate ampeg_decay."
           value:
             type_name: "integer"
             min: 0
@@ -2879,6 +2940,9 @@ categories:
             version: "SFZ v2"
         - name: "ampeg_hold_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate ampeg_hold."
           value:
             type_name: "integer"
             min: 0
@@ -2963,6 +3027,9 @@ categories:
             unit: "%"
         - name: "ampeg_sustain_curveccN"
           version: "ARIA"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC N uses to modulate ampeg_sustain."
           value:
             type_name: "integer"
             min: 0
@@ -3817,6 +3884,13 @@ categories:
       modulation:
         midi_cc:
         - name: "egN_pan_curveccX"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC X uses to modulate egN_pan."
+          value:
+            type_name: "integer"
+            min: 0
+            max: 255
 
     - name: "egN_freq_lfoX"
       short_description: ""
@@ -4399,6 +4473,9 @@ categories:
       modulation:
         midi_cc:
         - name: "lfoN_pitch_curveccX"
+          short_description:
+            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            which MIDI CC X uses to modulate lfoN_pitch."
           value:
             type_name: "integer"
             min: 0
@@ -4649,6 +4726,13 @@ categories:
       midi_cc:
       - name: "bitred_onccN"
       - name: "bitred_curveccN"
+        short_description:
+          "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+          which MIDI CC N uses to modulate bitred."
+        value:
+          type_name: "integer"
+          min: 0
+          max: 255
       - name: "bitred_smoothccN"
       - name: "bitred_stepccN"
 
@@ -4741,6 +4825,13 @@ categories:
       midi_cc:
       - name: "decim_onccN"
       - name: "decim_curveccN"
+        short_description:
+          "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+          which MIDI CC N uses to modulate decim."
+        value:
+          type_name: "integer"
+          min: 0
+          max: 255
       - name: "decim_smoothccN"
       - name: "decim_stepccN"
 
