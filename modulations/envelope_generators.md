@@ -61,10 +61,10 @@ with an envelope depth of 2400 cents.
 - amplitude
 - amplitude_oncc
 - depth
-- depth_lfo
+- depth_lfoX
 - depth_oncc
-- depthadd_lfo
-- freq_lfo
+- depthadd_lfoX
+- freq_lfoX
 - pitch
 - pitch_oncc
 - cutoff
