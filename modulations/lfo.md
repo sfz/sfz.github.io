@@ -68,9 +68,9 @@ up to 1.3 Hertz to the frequency of LFO 01, with the amount modulated by MIDI
 CC 117. So, freq_lfo_oncc would be added to the below list for ARIA, though
 depth_lfo_oncc and depthadd_lfo_oncc do not appear to be available.
 
-- freq_lfo
-- depth_lfo
-- depthadd_lfo
+- freq_lfoX
+- depth_lfoX
+- depthadd_lfoX
 - pitch
 - pitch_oncc
 - pitch_smoothcc
