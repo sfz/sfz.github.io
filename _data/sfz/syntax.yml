@@ -2404,6 +2404,17 @@ categories:
         max: 40
         unit: "dB"
 
+    - name: "resonance2_random"
+      short_description:
+        "Filter#2 cutoff resonance random value, in decibels."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 40
+        unit: "dB"
+
     - name: "noise_filter"
       version: "Cakewalk"
       short_description: ""
