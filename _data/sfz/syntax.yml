@@ -4554,15 +4554,15 @@ categories:
   url: "/headers/curve"
   opcodes:
   - name: "curve_index"
-    short_description: "Curve ID definition."
+    short_description: "Curve definition ID."
     version: "ARIA"
     value:
       type_name: "integer"
       min: 0
       max: 255
 
-  - name: "vN"
-    short_description: ""
+  - name: "vNNN"
+    short_description: "Defines a point in a custom curve definition."
     version: "SFZ v2"
     index:
       type_name: "integer"
