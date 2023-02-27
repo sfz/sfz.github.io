@@ -2619,8 +2619,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: -100
-        max: 100
+        min: -9600
+        max: 9600
         unit: "cents"
 
     - name: "master_tune"
@@ -2632,8 +2632,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: -100
-        max: 100
+        min: -9600
+        max: 9600
         unit: "cents"
 
     - name: "global_tune"
@@ -2645,8 +2645,8 @@ categories:
       value:
         type_name: "integer"
         default: 0
-        min: -100
-        max: 100
+        min: -9600
+        max: 9600
         unit: "cents"
 
     - name: "pitch_keycenter"
