@@ -109,7 +109,7 @@ categories:
           value:
             type_name: "float"
             default: 0
-            min: 0
+            min: -100
             max: 100
             unit: "seconds"
         - name: "delay_curveccN"
@@ -1884,7 +1884,7 @@ categories:
           - name: "amplitude_ccN"
           value:
             type_name: "float"
-            min: 0
+            min: -100
             max: 100
             unit: "%"
         - name: "amplitude_curveccN"
@@ -2402,7 +2402,7 @@ categories:
           value:
             type_name: "float"
             default: 0
-            min: 0
+            min: -40
             max: 40
             unit: "dB"
           alias:
@@ -2439,7 +2439,7 @@ categories:
             value:
               type_name: "float"
               default: 0
-              min: 0
+              min: -40
               max: 40
               unit: "dB"
             alias:
