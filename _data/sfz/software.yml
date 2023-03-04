@@ -464,6 +464,16 @@ categories:
     - name: "Windows"
     short_description:
       ""
+      
+  - name: "SFZ to HISE Converter"
+    author: "Anders Eklöv"
+    license: "MIT"
+    url: "https://keypleezer.com/sfz-to-hise-converter/"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "Parses and translates/converts SFZ instruments to HISE samplemaps and extracts SFZ opcode data to a JS/JSON object. Runs in a web browser."
 
 - name: "Misc"
   applications:
