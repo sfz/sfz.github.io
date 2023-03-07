@@ -3927,12 +3927,20 @@ categories:
             max: 255
 
     - name: "egN_freq_lfoX"
-      short_description: ""
+      short_description: "Allows egN to shape a change to lfoX's frequency"
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 0
+        unit: "Hz"
 
     - name: "egN_depth_lfoX"
-      short_description: ""
+      short_description: "Allows egN to scale lfoX's effect on its targets"
       version: "SFZ v2"
+      value:
+        type_name: "float"
+        default: 100
+        unit: "%"
 
     - name: "egN_depthadd_lfoX"
       short_description: ""
