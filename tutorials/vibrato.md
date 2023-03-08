@@ -79,6 +79,28 @@ lfo02_freq=1
 lfo02_phase_oncc132=0.7
 lfo02_freq_lfo01_oncc117=1
 ```
+This will vary the rate of the vibrato, but the depth will be constant. It is possible to have
+an LFO modulate the depth of another LFO, measured as a percentage, for example 120% for 20% variation:
+```
+lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+lfo02_depth_lfo01=120
+```
+However, note that the depth modulation is fixed, and not modulated by cc117 like the frequency modulation
+is. This is because having a CC modulate the depth modulation does not appear to be implemented in ARIA.
+It is, however, possible to modulate the depth of a flex envelope with MIDI CC, and then have that envelope
+depth modulate the depth of the secondary LFO. This is, admittedly, very much a kludge, but it appears to
+work.
+```
+lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+lfo02_depth_lfo01=120
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo2=100
+```
 For additional complexity, it's also possible to have the random LFO itself modulate pitch,
 which will create some pitch drift, and have more than two LFOs involved. Here is a fairly
 sophisticated example.
@@ -110,12 +132,20 @@ lfo03_freq=0.5
 lfo03_freq_oncc117=-0.4
 lfo03_freq_lfo2_oncc117=1
 lfo03_pitch_oncc117=-4
+
+lfo03_depth_lfo01=144
+lfo02_depth_lfo01=122
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo2=100
+eg1_depth_lfo3=100
 ```
 Something similar to the above will work fairly well for a range of strings and voices.
 However, there are cases where vibrato should only go in one direction - for example,
 bending guitar strings only moves the pitch upwards, while on saxophone it's possible
 to play vibrato centered around the pitch, but most of the time players will go only
-below the pitch. Let's use saxophone vibrato as an example.
+below the pitch. Let's use saxophone vibrato as an example. To keep it simple, let's
+just go back to a simple, non-humanized vibrato with only depth and rate paremeters.
 
 To have vibrato which will go below the main pitch is simple - the LFO phase can be
 set so the wave starts at the top, and the note [tuned](/opcodes/tune) down by the vibrato depth amount.
@@ -220,4 +250,40 @@ lfo01_volume_oncc114=6 //Volume tremolo
 lfo01_cutoff=0 //Filter wobble
 lfo01_cutoff_oncc113=3600
 ```
-This by no means exhausts all the possibilties of vibrato. It does provide a decent combination of control and realism for a lot of common instrument types.
+An unusual use of extremely deep vibrato and tremolo plus humanization is emulating vinyl
+scratching. Pitch sweeps of 2+ octaves with strongly humanized LFO rate can resemble vinyl
+scratching, though unlike real scratching, these LFOs are not controllable, and therefore
+rhythmic scratching is not an option.
+```
+//Extreme vibrato that can resemble vinyl scratching
+//The depths are high but will be made even higher by the modulation of the LFO depth
+lfo01_pitch_oncc21=1333 //Extremely deep vibrato for vinyl emulation
+lfo01_freq=1
+lfo01_freq_oncc112=9
+//No delay but there is fade
+lfo01_fade_oncc116=0.5
+//This LFO also does tremolo
+lfo01_volume_oncc21=7 //Again very heavy
+
+lfo02_wave=1 //Second LFO to make things wobblier
+lfo02_phase=0
+lfo02_phase_oncc135=1 //Random
+lfo02_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo02_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo02_freq_lfo01_oncc117=1 //Affect the rate of the other LFO for unsteady vibrato
+
+lfo03_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo03_phase=0.4
+lfo03_phase_oncc135=0.479 //Different phase response to velocity than the second LFO
+lfo03_freq=0.5
+lfo03_freq_oncc117=-0.4
+lfo03_freq_lfo2_oncc117=1
+
+lfo03_depth_lfo01=200
+lfo02_depth_lfo01=233
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo2=100
+eg1_depth_lfo3=100
+```
+This by no means exhausts all the possibilties of vibrato. It does provide a decent combination of control and realism for a lot of common instrument types, as well as some wild possibilities.
