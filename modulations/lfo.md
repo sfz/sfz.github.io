@@ -1,7 +1,7 @@
 ---
 title: LFO
 ---
-LFO (Low Frequency Oscillator) opcodes are part of the [Modulation](/misc/categories#modulation)
+LFO (Low Frequency Oscillator) opcodes are part of the [Modulation]
 category of opcodes. They are used to create effects such as pitch vibrato
 (when modulating pitch), tremolo (when modulating volume) and filter wobble
 (when modulating filter cutoff)
@@ -21,37 +21,37 @@ in as a plugin.
 - fillfo (filter)
 - pitchlfo (pitch)
 
-[Here's a very simple example of a pitch LFO integration](/tutorials/lfo)
+[Here's a very simple example of a pitch LFO integration][1]
 
-- [(lfo type)_delay](/opcodes/amplfo_delay)
-- [(lfo type)_fade](/opcodes/amplfo_fade)
-- [(lfo type)_freq](/opcodes/amplfo_freq)
-- [(lfo type)_freqccX](/opcodes/amplfo_freq)
-- [(lfo type)_depth](/opcodes/amplfo_depth)
-- [(lfo type)_depthccX](/opcodes/amplfo_depth)
-- [(lfo type)_depthchanaft](/opcodes/amplfo_depthchanaft)
-- [(lfo type)_depthpolyaft](/opcodes/amplfo_depthpolyaft)
-- [(lfo type)_freqchanaft](/opcodes/amplfo_freqchanaft)
-- [(lfo type)_freqpolyaft](/opcodes/amplfo_freqpolyaft)
+- [(lfo type)_delay]
+- [(lfo type)_fade]
+- [(lfo type)_freq]
+- [(lfo type)_freqccX]
+- [(lfo type)_depth]
+- [(lfo type)_depthccX]
+- [(lfo type)_depthchanaft]
+- [(lfo type)_depthpolyaft]
+- [(lfo type)_freqchanaft]
+- [(lfo type)_freqpolyaft]
 
 #### Assignable LFOs (SFZ 2)
 
 Much like the Flex EG, these newer LFO can target almost any tone-defining parameter:
 
-[Here's a very simple example of an sfz 2 lfo integration, targeted to pitch](/tutorials/lfo)
+[Here's a very simple example of an sfz 2 lfo integration, targeted to pitch][1]
 
-- [lfoN_wave](/opcodes/lfoN_wave)
-- [lfoN_freq](/opcodes/lfoN_freq)
-- [lfoN_freq_onccX](/opcodes/lfoN_freq)
-- [lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
-- [lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
-- [lfoN_delay](/opcodes/lfoN_delay)
-- [lfoN_delay_onccX](/opcodes/lfoN_delay)
-- [lfoN_fade](/opcodes/lfoN_fade)
-- [lfoN_fade_onccX](/opcodes/lfoN_fade)
-- [lfoN_phase](/opcodes/lfoN_phase)
-- [lfoN_phase_onccX](/opcodes/lfoN_phase)
-- [lfoN_count](/opcodes/lfoN_count)
+- [lfoN_wave]
+- [lfoN_freq]
+- [lfoN_freq_onccX]
+- [lfoN_freq_smoothccX]
+- [lfoN_freq_stepccX]
+- [lfoN_delay]
+- [lfoN_delay_onccX]
+- [lfoN_fade]
+- [lfoN_fade_onccX]
+- [lfoN_phase]
+- [lfoN_phase_onccX]
+- [lfoN_count]
 
 #### Assignable LFO Destinations
 
@@ -142,3 +142,29 @@ update cycle.
 
 This both keeps LFO feedback controlled, and reduces the CPU needed to calculate
 LFO modulations.
+
+
+[Modulation]:              {{ '/misc/categories#modulation' | relative_url }}
+[1]:                       {{ '/tutorials/lfo' | relative_url }}
+[(lfo type)_delay]:        {{ '/opcodes/amplfo_delay' | relative_url }}
+[(lfo type)_fade]:         {{ '/opcodes/amplfo_fade' | relative_url }}
+[(lfo type)_freq]:         {{ '/opcodes/amplfo_freq' | relative_url }}
+[(lfo type)_freqccX]:      {{ '/opcodes/amplfo_freq' | relative_url }}
+[(lfo type)_depth]:        {{ '/opcodes/amplfo_depth' | relative_url }}
+[(lfo type)_depthccX]:     {{ '/opcodes/amplfo_depth' | relative_url }}
+[(lfo type)_depthchanaft]: {{ '/opcodes/amplfo_depthchanaft' | relative_url }}
+[(lfo type)_depthpolyaft]: {{ '/opcodes/amplfo_depthpolyaft' | relative_url }}
+[(lfo type)_freqchanaft]:  {{ '/opcodes/amplfo_freqchanaft' | relative_url }}
+[(lfo type)_freqpolyaft]:  {{ '/opcodes/amplfo_freqpolyaft' | relative_url }}
+[lfoN_wave]:               {{ '/opcodes/lfoN_wave' | relative_url }}
+[lfoN_freq]:               {{ '/opcodes/lfoN_freq' | relative_url }}
+[lfoN_freq_onccX]:         {{ '/opcodes/lfoN_freq' | relative_url }}
+[lfoN_freq_smoothccX]:     {{ '/opcodes/lfoN_freq_smoothccX' | relative_url }}
+[lfoN_freq_stepccX]:       {{ '/opcodes/lfoN_freq_stepccX' | relative_url }}
+[lfoN_delay]:              {{ '/opcodes/lfoN_delay' | relative_url }}
+[lfoN_delay_onccX]:        {{ '/opcodes/lfoN_delay' | relative_url }}
+[lfoN_fade]:               {{ '/opcodes/lfoN_fade' | relative_url }}
+[lfoN_fade_onccX]:         {{ '/opcodes/lfoN_fade' | relative_url }}
+[lfoN_phase]:              {{ '/opcodes/lfoN_phase' | relative_url }}
+[lfoN_phase_onccX]:        {{ '/opcodes/lfoN_phase' | relative_url }}
+[lfoN_count]:              {{ '/opcodes/lfoN_count' | relative_url }}
