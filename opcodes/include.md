@@ -5,14 +5,14 @@ opcode_name: "#include"
 The file to which #include points is, in effect,
 pasted into the SFZ file at the point of the #include. This means that
 the file structure needs to be respected - after all #includes are processed,
-‹[control](/headers/control)› header needs to be before the regions in the file,
-‹[curve](/headers/curve)› opcodes need to be at the bottom etc. This can be
+[‹control›] header needs to be before the regions in the file,
+[‹curve›] opcodes need to be at the bottom etc. This can be
 nested - #included files can contain more #includes of their own,
 though of course recursion must be avoided!
 
 The included path must be surrounded by double quotes, similar to how include
 works in C/C++ files. Note that this is different from how the paths in the
-<[sample](/opcodes/sample)> opcode works, which do not need quotes.
+[sample] opcode works, which do not need quotes.
 
 Either a filename or a path can be used. If the #included files are in another
 folder, the SFZ is interpreted as if it was in the main SFZ file's path, not the
@@ -22,7 +22,7 @@ for clarity when #including a header.
 
 This is useful for creating large complex files, and also for simplifying the
 management of files which repeat similar regions with different opcodes. This is
-especially convenient in conjunction with the ‹[master](/headers/master)› header.
+especially convenient in conjunction with the [‹master›] header.
 
 ## Examples
 
@@ -66,9 +66,16 @@ tune_cc55=-250
 #include "mappings/bobobo_tenor_l_2.sfz"
 ```
 
-Using #include with [#define](/opcodes/define) in the same instrument requires care,
+Using #include with [#define] in the same instrument requires care,
 especially if the same value has to be #defined to have different settings at
 different points in an instrument. Using #define to set the same variable to different
 values at one point in the same SFZ file does not work well at least in ARIA/Sforzando
 when loading an instrument. However, a workaround there is to use #include to put each
 #define statement in a separate file. In simple tests, that has been successful.
+
+
+[#define]: define
+[sample]:  sample
+[‹control›]: {{ '/headers/control' | relative_url }}
+[‹curve›]:   {{ '/headers/curve' | relative_url }}
+[‹master›]:  {{ '/headers/master' | relative_url }}

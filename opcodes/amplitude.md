@@ -17,4 +17,7 @@ amplitude_oncc50=35
 When modulated by MIDI CC, this is a very convenient way to set up a volume
 control which goes from silence to full volume.
 
-See also the ‹[curve](/headers/curve)› header example.
+See also the [‹curve›] header example.
+
+
+[‹curve›]: {{ '/headers/curve' | relative_url }}

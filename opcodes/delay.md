@@ -26,6 +26,7 @@ delaying regions to emulate more distant microphone positions.
 In ARIA, if [loop_mode] is set to **one_shot**, the region will play regardless
 of whether a note-off message is received or not.
 
+
 [ampeg_delay]: ampeg_delay
 [loop_mode]:   loop_mode
 

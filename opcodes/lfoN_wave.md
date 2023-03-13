@@ -7,9 +7,8 @@ This can be used to create more complex LFOs.
 Up to 8 waveforms can be used in one LFO.
 The second waveform is set by `lfoN_wave2`, the third by `lfoN_wave3` etc.
 
-[lfoN_ratio2](lfoN_ratio) is important for giving each wave a different
-frequency, and [lfoN_scale2](lfoN_scale) scale [lfoN_offsetX](lfoN_offsetX)
-can optionally be used as well.
+[lfoN_ratio2] is important for giving each wave a different
+frequency, and [lfoN_scale2] scale [lfoN_offsetX] can optionally be used as well.
 
 In [SFZ v2], the waves are:
 
@@ -84,6 +83,10 @@ lfo01_step03_oncc73=100 lfo01_step03_smoothcc73=100
 lfo01_step04_oncc73=100 lfo01_step04_smoothcc73=100
 ```
 
-[ARIA]:        /opcodes/?v=aria
-[SFZ v2]:      /opcodes/?v=2
-[stepped LFO]: /opcodes/lfoN_steps
+
+[lfoN_ratio2]:  lfoN_ratio
+[lfoN_scale2]:  lfoN_scale
+[lfoN_offsetX]: lfoN_offsetX
+[stepped LFO]:  lfoN_steps
+[ARIA]:         ./?v=aria
+[SFZ v2]:       ./?v=2

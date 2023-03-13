@@ -15,11 +15,12 @@ the possibility to support vendor-specific effects as well.
 effect2=40
 ```
 
+
+[‹effect›]: {{ '/headers/effect' | relative_url }}
+[‹region›]: {{ '/headers/region' | relative_url }}
 [effect1]:  effect1
 [effect2]:  effect2
 [effect3]:  effect3
 [effect4]:  effect4
-[‹effect›]: /headers/effect
-[‹region›]: /headers/region
-[SFZ v1]:   /opcodes/?v=1
-[SFZ v2]:   /opcodes/?v=2
+[SFZ v1]:   ./?v=1
+[SFZ v2]:   ./?v=2

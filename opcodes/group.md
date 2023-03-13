@@ -42,5 +42,6 @@ ARIA/Sforzando will also do this with text strings. The behavior of
 non-integer numbers is also currently unknown. This makes it possible to use
 an extremely large number for one group, but it's obviously not recommended.
 
-[group]:  /headers/group
+
 [off_by]: off_by
+[group]: {{ '/headers/group' | relative_url }}

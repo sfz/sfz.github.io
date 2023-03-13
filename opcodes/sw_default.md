@@ -33,7 +33,8 @@ used to select an articulation.
 
 `sw_label` causes ARIA/Sforzando to display the most recent selected keyswitch label
 appear on its interface. This apparently needs to be set for all regions for which
-that sw_last value is set, which can mean setting the label in multiple places in
+that [sw_last] value is set, which can mean setting the label in multiple places in
 an sfz file.
+
 
 [sw_last]: sw_last

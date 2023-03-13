@@ -2,8 +2,8 @@
 layout: "sfz/opcode"
 opcode_name: "seq_position"
 ---
-This is used together with [seq_length](/opcodes/seq_length) to use samples
-as round robins. The player will keep an internal counter creating a consecutive
+This is used together with [seq_length] to use samples as round robins.
+The player will keep an internal counter creating a consecutive
 note-on sequence for each region, starting at 1 and resetting at seq_length.
 Maximum allowed value is 100.
 
@@ -31,17 +31,17 @@ round robins, would look like this:
 <region>seq_position=3 sample=snare_rr3.wav
 ```
 
-An alternative to this is using [lorand / hirand](/opcodes/lorand) for
+An alternative to this is using [lorand / hirand] for
 random, instead of sequential, round robins. If there are enough samples
 available, both methods can also be combined - the combination is described on
-the [lorand / hirand](/opcodes/lorand) page. However, lorand/hirand might not
+the [lorand / hirand] page. However, lorand/hirand might not
 be a good idea to use with samples which have multiple microphone positions,
-and sticking to seq_position and seq_length might be necessary.
+and sticking to `seq_position` and [seq_length] might be necessary.
 
 ## Practical Considerations
 
 In at least some SFZ players, sequence position is not tracked together for
-all regions, which means seq_position is not a practical way to implement
+all regions, which means `seq_position` is not a practical way to implement
 alternating left/right hand or up/down bowing samples.
 
 Some players also match velocity ranges for each step in the sequence, which
@@ -86,5 +86,9 @@ key=48
 <region> lovel=96 hivel=127 sample=*saw
 ```
 
-Setting seq_position to 0 will cause the region to not play in most sfz player,
-except for sfizz where it will behave the same as setting seq_position to 1.
+Setting `seq_position` to 0 will cause the region to not play in most sfz player,
+except for sfizz where it will behave the same as setting `seq_position` to 1.
+
+
+[seq_length]:      seq_length
+[lorand / hirand]: lorand

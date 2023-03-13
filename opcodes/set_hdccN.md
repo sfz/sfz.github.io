@@ -5,7 +5,7 @@ opcode_name: "set_hdccN"
 Sets a default initial value for MIDI CC number N using a floating point value,
 when the instrument is initially loaded.
 
-Used under the ‹[control](/headers/control)› header.
+Used under the ‹[control]› header.
 
 ## Examples
 
@@ -18,3 +18,6 @@ Used under the ‹[control](/headers/control)› header.
 ## Practical Considerations
 
 `set_realccN` is a deprecated alias for `set_hdccN`.
+
+
+[control]: {{ '/headers/control' | relative_url }}

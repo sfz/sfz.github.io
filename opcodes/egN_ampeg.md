@@ -15,6 +15,7 @@ eg1_time3=1 eg1_level3=0
 
 eg1_ampeg=1 //ARIA boolean value, 1=true, 0=false
 ```
+
 ## Practical Considerations
 
 `egN_ampeg` allows the regions envelope to be controlled by the FlexEG: egN completely.

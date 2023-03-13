@@ -9,11 +9,10 @@ instruments such as drums and pianos. It is also possible to use `lovel` / `hive
 to control other things instead, such as articulations - for example, a guitar
 could have palm-muted samples on low velocities, and pinch harmonics on velocity 127.
 
-These opcodes will often need to be used with [amp_velcurve_N](/opcodes/amp_velcurve_N),
-unless [amp_veltrack](/opcodes/amp_veltrack) is set to 0. The reason for this is
-that with default velocity tracking behavior and non-normalized samples (and
-there are many reasons why normalizing samples should be avoided), the quiet
-velocity layers will be too quiet.
+These opcodes will often need to be used with [amp_velcurve_N], unless
+[amp_veltrack] is set to 0. The reason for this is that with default
+velocity tracking behavior and non-normalized samples (and there are many reasons
+why normalizing samples should be avoided), the quiet velocity layers will be too quiet.
 
 Velocity 0 is a note-off message, so 1 is the lowest usable value with hivel/lovel.
 
@@ -39,4 +38,8 @@ volume at velocity 31. The kick_vl2.wav region will play at velocties 32 to 63,
 with volume being full at velocity 63 and lower volume (but not zero) at 32.
 The kick_vl3 wav region will play at velocites 64 to 95, with full volume at
 velocity 95. Finally, the kick_vl4 layer plays at velocities 96 to 127, with no
-`amp_velcurve_N` set meaning it will have full volume at velocity 127.
+[amp_velcurve_N] set meaning it will have full volume at velocity 127.
+
+
+[amp_velcurve_N]: amp_velcurve_N
+[amp_veltrack]:   amp_veltrack

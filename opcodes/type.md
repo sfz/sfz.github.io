@@ -6,7 +6,7 @@ opcode_name: "type"
 ## ARIA Extensions
 
 In the PC version of ARIA, the MDA effects are bundled. That means
-that under the [‹effect›](/headers/effect) header, any of these effect types can be set.
+that under the [‹effect›] header, any of these effect types can be set.
 
 ```
 com.mda.Limiter
@@ -25,12 +25,11 @@ com.mda.SubSynth
 com.mda.RezFilter
 ```
 
-Also see [param_offset](/opcodes/param_offset) for how to
-configure the parameters for these effects in ARIA.
+Also see [param_offset] for how to configure the parameters for these effects in ARIA.
 The order of the parameters is the same as at [the plugin version of the MDA effects](http://mda.smartelectronix.com/).
 These effects are not part of the SFZ engine, so it is not possible to, for
 example, have one MIDI CC parameter control two parameters in the same effect,
-or use [custom curves](/headers/curve). Example usage below:
+or use [custom curves]. Example usage below:
 
 ```
 <control>
@@ -190,3 +189,8 @@ On this site, non-working effect types mentioned in the book were replaced with 
 ones. For example, `autopan` does not appear to work in any Cakewalk product, while
 `apan` works. Same for `lofi` instead `bitred` and `decim`, and `disto` instead of
 `distortion`.
+
+
+[custom curves]: {{ '/headers/curve' | relative_url }}
+[‹effect›]:      {{ '/headers/curve' | relative_url }}
+[param_offset]: param_offset
