@@ -14,8 +14,8 @@ synths, but it's a start.
 
 Though subtractive synths get their name from having frequencies
 subtracted from the sound by filter, the volume envelope is probably
-the most fundamental modulation. Here is an [AHDSR envelope](/opcodes/ampeg_attack) including
-[control](/headers/control) parameter labels and defaults.
+the most fundamental modulation. Here is an [AHDSR envelope] including
+[‹control›] parameter labels and defaults.
 
 ```
 <control>
@@ -41,7 +41,7 @@ ampeg_sustain_oncc103=100
 ampeg_release_oncc104=2
 ```
 
-An ADSR envelope would simple leave out the [hold](/opcodes/ampeg_hold) stage control,
+An ADSR envelope would simple leave out the [hold] stage control,
 leaving the default hold time of zero.
 
 ## Further envelope possibilities
@@ -52,14 +52,14 @@ envelopes modulating the volume of different oscillators, for
 example using a shorter envelope to turn a noise oscillator into
 a short transient.
 
-If more envelope stages are required, an [SFZ2 envelope](/modulations/envelope_generators) with an
+If more envelope stages are required, an [SFZ2 envelope] with an
 arbitrary amount of points can be used to modulate amplitude
 instead of the SFZ1 envelope above.
 
 In the ARIA SFZ player, amplifier envelope durations are calculated
 once on trigger, which means changing envelope parameters other than
 sustain and release while a note is playing will not change the sound.
-The [ampeg_dynamic](/opcodes/ampeg_dynamic) opcode could be set to 1 in order to recalculate
+The [ampeg_dynamic] opcode could be set to 1 in order to recalculate
 envelope parameters every time one of the control parameters receives
 a MIDI message, which could be closer to the behavior of most
 analog synthesizer hardware.
@@ -123,10 +123,9 @@ locc18=71
 
 ## Basic filter
 
-The filter in the example instrument is a single [lowpass](/opcodes/fil_type) filter
-with [cutoff](/opcodes/cutoff) and [resonance](/opcodes/resonance) controls,
-adjustable [velocity](/extensions/midi_ccs) tracking using [var](/opcodes/varNN_mod)
-a two-stage [filter cutoff envelope](/opcodes/fileg_attack).
+The filter in the example instrument is a single [lowpass] filter
+with [cutoff] and [resonance] controls, adjustable [velocity] tracking using
+[var] a two-stage [filter cutoff envelope].
 
 ```
 <control>
@@ -165,7 +164,7 @@ fileg_decaycc127=2
 ## Filter keytracking
 
 Making the filter cutoff keytrack is a simple matter of
-setting the [fil_keytrack](/opcodes/fil_keytrack) to 100; however, things get
+setting the [fil_keytrack] to 100; however, things get
 more complicated if filter keytracking is not desired.
 Although fil_keytrack can be set to 0 and the base
 filter cutoff will then not keytrack, the filter cutoff
@@ -204,7 +203,7 @@ var02_curvecc133=11
 fil_keytrack=70
 ```
 
-At the end of the SFZ file, the [curve](/headers/curve) is then specified:
+At the end of the SFZ file, the [‹curve›] is then specified:
 
 ```
 <curve>
@@ -226,7 +225,7 @@ longer attack, moderate decay).
 Using fil2_type and cutoff2 allows two filters in series,
 for example a lowpass and highpass filter. Fil_type can
 also be used to choose different filter types, perhaps with
-[locc/hicc](/opcodes/loccN).
+[locc/hicc].
 
 Modulating the filter cutoff with LFOs is added below, in the
 vibrato section.
@@ -234,7 +233,7 @@ vibrato section.
 ## Vibrato
 
 Vibrato can affect pitch, volume (for tremolo) and filter cutoff
-(for wobble). Here is a typical setup using one [LFO](/modulations/lfo) to modulate
+(for wobble). Here is a typical setup using one [LFO] to modulate
 all three.
 
 ```
@@ -268,7 +267,7 @@ Technically, though, it's not difficult to implement.
 The example instrument adds CC 117 for controlling the
 amount of randomization
 of the vibrato LFOs. This is similar to the humanization
-described in the [vibrato tutorial](/tutorials/vibrato), but using CC 135 to
+described in the [vibrato tutorial], but using CC 135 to
 generate a true random number for each voice, which
 means any unison voices' vibrato will drift out of sync
 with those belonging to other voices. This is musically
@@ -337,16 +336,16 @@ the phase of the voices.
 The example instrument uses many sets of samples from an
 analog keyboard, with every key producing a slightly
 different timbre, and transposed versions of those sounds
-used for unison. The [detune](/opcodes/pitch_onccN) and width amounts vary for
+used for unison. The [detune] and width amounts vary for
 each of the three oscillators, but here is a simplified
 version assuming there is only one oscillator.
 
-Note that although there is a [width](/opcodes/width) opcodes for
+Note that although there is a [width] opcodes for
 use with stereo samples, in this case the left channel and right are
-separate mono samples, so [pan](/opcodes/pan) is used to spread them
+separate mono samples, so [pan] is used to spread them
 in stereo - not width.
 
-As the samples here are quite long, [offset_random](/opcodes/offset_random)
+As the samples here are quite long, [offset_random]
 is applied globally to effecitvely randomize each voice's phase. With
 true single-cycle waveforms, the max offset would have to be set to
 match each voice's max sample length.
@@ -392,7 +391,7 @@ Another highly unsual feature of Caveman Cosmonaut, though, is
 that the detune doesn't have to be fixed. There are additional
 detune controls which detune the additional voices more at the
 start of the note, and then drift towards a common pitch over
-time, using [pitch envelopes](/opcodes/pitcheg_attack). This is definitely not part of
+time, using [pitch envelopes]. This is definitely not part of
 any typical hardware analog synthesizer's feature set, but it
 does have something in common with the way real world choirs
 or instrumental ensembles find a commmon pitch.
@@ -444,7 +443,7 @@ pitcheg_decay_oncc29=5
 
 ## Waveform selection and oscillator mixing
 
-This is just locc/hicc for selection, and [amplitude](/opcodes/amplitude) for volume
+This is just locc/hicc for selection, and [amplitude] for volume
 controls.
 
 ## Mono mode and portamento
@@ -456,7 +455,7 @@ tutorial](/tutorials/legato).
 
 This is the main file for the example instrument. The unison and detune
 settings, along with oscillator selection and mixing, are inside SFZ files
-added via the [include](/opcodes/include) directives.
+added via the [#include] directives.
 
 ```
 <control>
@@ -617,3 +616,27 @@ v024=1
 v084=0.63
 v127=0.25
 ```
+
+[‹control›]:              {{ '/headers/control' | relative_url }}
+[‹curve›]:                {{ '/headers/curve' | relative_url }}
+[#include]:               {{ '/opcodes/include' | relative_url }}
+[amplitude]:              {{ '/opcodes/amplitude' | relative_url }}
+[AHDSR envelope]:         {{ '/opcodes/ampeg_attack' | relative_url }}
+[ampeg_dynamic]:          {{ '/opcodes/ampeg_dynamic' | relative_url }}
+[hold]:                   {{ '/opcodes/ampeg_hold' | relative_url }}
+[cutoff]:                 {{ '/opcodes/cutoff' | relative_url }}
+[fil_keytrack]:           {{ '/opcodes/fil_keytrack' | relative_url }}
+[lowpass]:                {{ '/opcodes/fil_type' | relative_url }}
+[filter cutoff envelope]: {{ '/opcodes/fileg_attack' | relative_url }}
+[locc/hicc]:              {{ '/opcodes/loccN' | relative_url }}
+[offset_random]:          {{ '/opcodes/offset_random' | relative_url }}
+[pan]:                    {{ '/opcodes/pan' | relative_url }}
+[detune]:                 {{ '/opcodes/pitch_onccN' | relative_url }}
+[pitch envelopes]:        {{ '/opcodes/pitcheg_attack' | relative_url }}
+[resonance]:              {{ '/opcodes/resonance' | relative_url }}
+[var]:                    {{ '/opcodes/varNN_mod' | relative_url }}
+[width]:                  {{ '/opcodes/width' | relative_url }}
+[velocity]:               {{ '/extensions/midi_ccs' | relative_url }}
+[SFZ2 envelope]:          {{ '/modulations/envelope_generators' | relative_url }}
+[LFO]:                    {{ '/modulations/lfo' | relative_url }}
+[vibrato tutorial]:       {{ '/tutorials/vibrato' | relative_url }}

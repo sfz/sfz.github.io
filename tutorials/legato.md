@@ -6,9 +6,9 @@ title: Legato
 
 In the basic sustained instruments
 tutorial, we have the below example of a monophonic flute, which uses the
-[group](/opcodes/group) and [off_by](/opcodes/off_by) opcodes to allow only one be played at a time, and the [off_mode](/opcodes/off_mode)
-together with [ampeg_release](/opcodes/ampeg_release) make the fadeout of the previous note a little
-smoother. This is a starting point for implementing legato.
+[group] and [off_by] opcodes to allow only one be played at a time,
+and the [off_mode] together with [ampeg_release] make the fadeout of the previous
+note a little smoother. This is a starting point for implementing legato.
 
 If only group and off_by are specified, the resulting sound will probably be quite bad, as
 this will use default values for off_mode, ampeg_attack and ampeg_release. This means the note being
@@ -42,8 +42,8 @@ group=1 off_by=1 off_mode=normal
 The above will allow only one note to sound at a time, with a quick crossfade between
 the old and new note. In many cases, though, it makes sense to treat the legato notes
 differently than the notes which start a phrase when no other note is playing. The
-[trigger](/opcodes/trigger) opcode is used to separate regions into initial and legato. For
-sustained sounds, it can make sense to use the [offset](/opcodes/offset) opcode to skip the start
+[trigger] opcode is used to separate regions into initial and legato. For
+sustained sounds, it can make sense to use the [offset] opcode to skip the start
 of the sample for legato regions. It's also probably a good idea to use offset_attack
 in these cases, which both makes the transition sound smoother and avoids clicks and
 pops in cases where the offset does not fall on a zero crossing. Here are the relevant
@@ -121,7 +121,7 @@ narrower the interval and the shorter the time, the easier it is to sound
 convincing. With the portamento time at zero, this is effectively the same as
 non-portamento legato in the above example.
 
-In the below setup, MIDI CC109 controls the glide time and an SFZ2 [envelope](/modulations/envelope_generators)
+In the below setup, MIDI CC109 controls the glide time and an SFZ2 [envelope]
 is used to make the pitch change happen. CC140 is the ARIA extension CC for pitch
 delta, and being the difference in pitch between the previous note and the
 current note, it sets the depth of the glide envelope.
@@ -183,7 +183,7 @@ pitch_keycenter=48
 ## True sampled legato
 
 Here are examples from a simple flute test by MatFluor. The trigger=first regions
-work similarly as all the above examples, and the [sw_previous](/opcodes/sw_previous) opcode can be used
+work similarly as all the above examples, and the [sw_previous] opcode can be used
 to choose which sample plays for the legato regions. If the samples would include
 both the legato transition and the complete sustain of the following note, things
 would be very simple:
@@ -236,7 +236,7 @@ off_mode=normal
 
 Another consideration is that for instruments with a wide range, it may not be worthwhile
 to record every possible transition, and only record transitions of up to one octave, for
-example. The [extended CCs](/extensions/midi_ccs) do not always behave quite like other CCs,
+example. The [extended CCs] do not always behave quite like other CCs,
 necessitating using hdcc in ARIA, but the below works for a legato vocal with a range of
 less than two octaves.
 
@@ -286,3 +286,14 @@ offset=12000
 
 It would also be possible to use CC 140 in a similar way in an instrument which,
 for example, had legato transitions recorded ascending but not descending.
+
+
+[extended CCs]:  {{ '/extensions/midi_ccs' | relative_url }}
+[envelope]:      {{ '/modulations/envelope_generators' | relative_url }}
+[ampeg_release]: {{ '/opcodes/ampeg_release' | relative_url }}
+[group]:         {{ '/opcodes/group' | relative_url }}
+[off_by]:        {{ '/opcodes/off_by' | relative_url }}
+[off_mode]:      {{ '/opcodes/off_mode' | relative_url }}
+[offset]:        {{ '/opcodes/offset' | relative_url }}
+[sw_previous]:   {{ '/opcodes/sw_previous' | relative_url }}
+[trigger]:       {{ '/opcodes/trigger' | relative_url }}

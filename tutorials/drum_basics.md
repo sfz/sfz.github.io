@@ -14,7 +14,7 @@ apply this knowledge to instruments such as piano, guitar, violin and flute.
 A very simple instrument to make would be an electronic drum kit with one sample
 for each sound. A functional mapping for an entire sampled drum machine using
 one-shot samples could be made using only the region header, and two opcodes
-[sample](/opcodes/sample) and [key](/opcodes/key). With kick, snare
+[sample] and [key]. With kick, snare
 and hi-hat samples on their standard General MIDI notes, this could be the
 entire SFZ file:
 
@@ -28,7 +28,7 @@ This would work. Load this into an SFZ player, hit the C on MIDI note 36, and
 you get the kick sample playing. However, each sound would play only while a
 note is held. With drums it's usually a good idea to play the entire sample, so
 a very short note will result in a complete drum hit sounding. We can do that
-with the [loop_mode](/opcodes/loop_mode) opcode, which is also used for
+with the [loop_mode] opcode, which is also used for
 looping (as the name implies), but `loop_mode=one_shot` causes the sampler to
 play the entire sample from start to end, ignoring note off.
 
@@ -39,7 +39,7 @@ play the entire sample from start to end, ignoring note off.
 ```
 
 There's no need to set the one_shot for each region, though. We can simplify
-our life by using the ‹[global](/headers/global)› header like this:
+our life by using the [‹global›] header like this:
 
 ```
 <global>loop_mode=one_shot
@@ -73,7 +73,7 @@ kick_vl4.wav
 ```
 
 To trigger the quiet sample at low MIDI note velocities, we'd use the
-[lovel and hivel](/opcodes/lovel) opcodes like this:
+[lovel and hivel] opcodes like this:
 
 ```
 <region>key=36 lovel=0 hivel=31 sample=kick_vl1.wav
@@ -98,7 +98,7 @@ sample=kick_vl4.wav
 ```
 This can, again, be simplified. The defalut value for lovel is 0, and for hivel
 it's 127, so we don't need to specify setting them to those numbers. Also, we
-can use a ‹[group](/headers/group)› header to make the key opcode the same
+can use a [‹group›] header to make the key opcode the same
 across all four regions:
 
 ```
@@ -115,8 +115,7 @@ However, the quiet samples will play quieter than they should - because of
 standard velocity tracking, each sample would play at full volume if the
 velocity was 127, but we actually need each sample to play at full volume at the
 velocity which is equal to its hivel value. This can be done in various ways,
-and the way we recommend is the [amp_velcurve_N](/opcodes/amp_velcurve_N)
-opcode, like this:
+and the way we recommend is the [amp_velcurve_N] opcode, like this:
 
 ```
 <global>loop_mode=one_shot
@@ -131,8 +130,8 @@ opcode, like this:
 Let's say that each dynamic layer also contains four round robins - four samples
 with roughly the same dynamic. This allows us to include some variation, and
 sound more natural - fast parts won't sound like a "machine gun". There are two
-basic ways to put round robins to use. One is to use the [seq_length](/opcodes/seq_length)
-and [seq_position](/opcodes/seq_position) opcodes, like this:
+basic ways to put round robins to use. One is to use the [seq_length]
+and [seq_position] opcodes, like this:
 
 ```
 <global>loop_mode=one_shot
@@ -165,7 +164,7 @@ in every group. Those two opcodes could be moved to the global level if all we
 wanted was a kick drum, but as we're going to have other instruments with other
 keys and possibly different numbers of round robins, we kept them at the group
 level. The other way to use round robins is randomized, using the
-[lorand and hirand](/opcodes/lorand) opcodes. This will make the sample
+[lorand and hirand] opcodes. This will make the sample
 player generate a random number, then play the region whose lorand to hirand
 range includes that random number. Whether robins should be used in this random
 way or the above sequential way, the answer is "it depends". It seems that more
@@ -251,4 +250,17 @@ three round robins, plus a few comments, the resulting SFZ would look like this:
 
 This is almost all the information needed to map basic drum kits in SFZ. Almost,
 because well-sampled hi-hats will have many different articulations, and that
-creates some additional considerations, which we will describe on [another page](/tutorials/cymbal_muting).
+creates some additional considerations, which we will describe on [another page].
+
+
+[another page]: cymbal_muting
+[‹global›]:          {{ '/headers/global' | relative_url }}
+[‹group›]:           {{ '/headers/group' | relative_url }}
+[amp_velcurve_N]:    {{ '/opcodes/amp_velcurve_N' | relative_url }}
+[key]:               {{ '/opcodes/key' | relative_url }}
+[loop_mode]:         {{ '/opcodes/loop_mode' | relative_url }}
+[lorand and hirand]: {{ '/opcodes/lorand' | relative_url }}
+[lovel and hivel]:   {{ '/opcodes/lovel' | relative_url }}
+[sample]:            {{ '/opcodes/sample' | relative_url }}
+[seq_length]:        {{ '/opcodes/seq_length' | relative_url }}
+[seq_position]:      {{ '/opcodes/seq_position' | relative_url }}

@@ -10,12 +10,10 @@ though it might be turned into another type of page eventually.
 
 ## Opcodes affecting playback volume
 
-The relevant opcodes are: [volume](/opcodes/volume), [amplitude](/opcodes/amplitude), 
-[xfin/xfout](/opcodes/xfin_loccN), [amp_veltrack](/opcodes/amp_veltrack),
-[amp_keytrack](/opcodes/amp_keytrack), [amp_velcurve_N](/opcodes/amp_velcurve_N).
-There are also envelope and LFO modulation sources: [ampeg](/opcodes/ampeg_attack), 
-[amplfo](/opcodes/amplfo_depth), and volume-related targets for
-[egN and lfoN](/tutorials/sfz2_modulations). Some of them will have multiple stages,
+The relevant opcodes are: [volume], [amplitude], [xfin / xfout], [amp_veltrack],
+[amp_keytrack], [amp_velcurve_N].
+There are also envelope and LFO modulation sources: [ampeg], [amplfo], and
+volume-related targets for [egN and lfoN]. Some of them will have multiple stages,
 points, CCs etc, so the volume of one sample can be affected by many different things
 at once.
 
@@ -31,7 +29,7 @@ by things other than velocity and dynamics should be controlled, for examle, by
 mod wheel, then set amp_veltrack to 0, as in the code example in the next section.
 
 When using velocity layers, remember that a quiet velocity layer will have a certain
-max velocity, for example if a region has [hivel](/opcodes/hivel) set to 31, it
+max velocity, for example if a region has [hivel] set to 31, it
 will never be triggered by velocities higher than 31, and therefore should usually
 either have amp_velcurve_31 set to 1, or amp_veltrack should be set to 0.
 
@@ -68,8 +66,8 @@ have a layer which has more than zero amplitude at the start of the fade-in. Thi
 important for instruments such as bowed strings, which have a certain minimum practical
 playable loudness. These will often have dynamics linked to CC1 or some other CC, and
 need to have some small amount of audible volume even at the lowest CC level. Here,
-amplitude with [curveccN](/modulations/curveccN) can be used to fade in the lowest
-layer. It's still possible to use xfout to fade the layer out at higher CC values as
+amplitude with [curveccN] can be used to fade in the lowest layer.
+It's still possible to use xfout to fade the layer out at higher CC values as
 the next layer fades in, though it may be simpler to just use amplitude for all layers,
 for example like this:
 
@@ -108,9 +106,9 @@ region differently across time, obviously.
 
 ## Randomization
 
-[amp_random](/opcodes/amp_random) and its alias gain_random work like volume/gain
-and are measured in decibels. In ARIA and Cakewalk, amp_random is unipolar. In the
-rgc sfz player, amp_random is bipolar.
+[amp_random] and its alias gain_random work like volume/gain
+and are measured in decibels. In ARIA and Cakewalk, amp_random is unipolar.
+In the rgc sfz player, amp_random is bipolar.
 
 In ARIA, CC135 (unipolar random) and 136 (bipolar random) can also be used by
 various opcodes which modulate volume.
@@ -143,3 +141,17 @@ trigger=release
 amplitude_oncc82=100 //Release noise volume
 #include "far_releases.sfz"
 ```
+
+
+[egN and lfoN]:   sfz2_modulations
+[curveccN]:       {{ '/modulations/curveccN' | relative_url }}
+[amp_keytrack]:   {{ '/opcodes/amp_keytrack' | relative_url }}
+[amp_random]:     {{ '/opcodes/amp_random' | relative_url }}
+[amp_veltrack]:   {{ '/opcodes/amp_veltrack' | relative_url }}
+[amp_velcurve_N]: {{ '/opcodes/amp_velcurve_N' | relative_url }}
+[ampeg]:          {{ '/opcodes/ampeg_attack' | relative_url }}
+[amplfo]:         {{ '/opcodes/amplfo_depth' | relative_url }}
+[amplitude]:      {{ '/opcodes/amplitude' | relative_url }}
+[hivel]:          {{ '/opcodes/hivel' | relative_url }}
+[volume]:         {{ '/opcodes/volume' | relative_url }}
+[xfin / xfout]:   {{ '/opcodes/xfin_loccN' | relative_url }}

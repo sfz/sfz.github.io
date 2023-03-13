@@ -9,8 +9,7 @@ pitch envelope.
 ## Basic MIDI CC modulation
 
 A few opcodes can be modulated simply by MIDI CC, with the modulation adding
-to what the opcode would normally do. These are: [offset](/opcodes/offset) and
-[delay](/opcodes/delay).
+to what the opcode would normally do. These are: [offset] and [delay].
 
 For example, this would have a sample offset of 500 when the modulating CC is
 at 0, and a sample offset of 1000 when the modulating CC is at max:
@@ -31,9 +30,9 @@ offset_cc100=1000
 
 ## Modulating default values
 
-The three EQ bands' [frequency](/opcodes/eqN_freq), [bandwidth](/opcodes/eqN_bw) and
-[gain](/opcodes/eqN_gain) work similarly, but also add velocity tracking. The EQ
-bandwidth and center frequency also have non-zero defaults,
+The three EQ bands' [frequency][1], [bandwidth] and [gain][2] work similarly,
+but also add velocity tracking. The EQ bandwidth and center frequency also have
+non-zero defaults,
 for example eq2_freq is 500 if not specified. So, this would modulate the center
 frequency of the second EQ band between 500 and 1500 if eq2_freq is left at default:
 
@@ -43,9 +42,9 @@ eq2_freqcc110=1000
 
 ## Velocity tracking, keytracking and randomization
 
-EQ [frequency](/opcodes/eqN_vel2freq) and [gain](/opcodes/eqN_vel2gain) (but not
-bandwidth) can additionally be modulated by velocity. For example, if we want to
-make a sound brighter when the velocity is higher, we might use something like this:
+EQ [frequency][3] and [gain][4] (but not bandwidth) can additionally be modulated by velocity.
+For example, if we want to make a sound brighter when the velocity is higher,
+we might use something like this:
 
 ```
 eq1_vel2gain=-6
@@ -53,9 +52,8 @@ eq2_vel2gain=12
 eq2_vel2freq=500
 ```
 
-The [xfin](/opcodes/xfin_loccN)/[xfout](/opcodes/xfout_loccN) CCs are also a
-way to fade sounds in and out using MIDI CC. An example of one note with two
-dynamic layers being crossfaded:
+The [xfin]/[xfout] CCs are also a way to fade sounds in and out using MIDI CC.
+An example of one note with two dynamic layers being crossfaded:
 
 ```
 <region>sample=e4_ft_p.wav xfin_locc1=0 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=127
@@ -63,16 +61,16 @@ dynamic layers being crossfaded:
 ```
 
 In addition to MIDI CC, crossfades can also use MIDI note number and velocity as
-modulation sources, and the [xf_cccurve](/opcodes/xf_cccurve), [xf_keycurve](/opcodes/xf_keycurve)
-and [xf_velcurve](/opcodes/xf_velcurve) give the choice of two curves for each of these modulations.
+modulation sources, and the [xf_cccurve], [xf_keycurve] and [xf_velcurve]
+give the choice of two curves for each of these modulations.
 
 More sophisticated modulations are possible with volume,
-pitch and [filter cutoff](/opcodes/cutoff). Volume and cutoff can be modulated by MIDI CC directly
+pitch and [filter cutoff]. Volume and cutoff can be modulated by MIDI CC directly
 (pitch can't in SFZ1 - the tune_ccN modulation is an ARIA extension). All three
 can also have randomization applied and be modulated by MIDI note number and
-velocity. The nomenclature for volume is a little confusing, with [gain_ccN](/opcodes/volume) using
-"gain" in the name, while the others are called [amp_random](/opcodes/amp_random),
-[amp_keytrack](/opcodes/amp_keytrack) and [amp_veltrack](/opcodes/amp_veltrack).
+velocity. The nomenclature for volume is a little confusing, with [gain_ccN] using
+"gain" in the name, while the others are called [amp_random],
+[amp_keytrack] and [amp_veltrack].
 
 ```
 gain_cc80=-6
@@ -125,8 +123,25 @@ fileg_vel2depth=4000
 ```
 
 If something is not described above, then modulating it is not possible under the
-SFZ1 specification, and will require [using SFZ2](/tutorials/sfz2_modulations)
-or possibly some extension opcodes.
+SFZ1 specification, and will require [using SFZ2] or possibly some extension opcodes.
 
 
-[modulations]: /modulations/index
+[using SFZ2]:    sfz2_modulations
+[modulations]:   {{ '/modulations/' | relative_url }}
+[amp_keytrack]:  {{ '/opcodes/amp_keytrack' | relative_url }}
+[amp_random]:    {{ '/opcodes/amp_random' | relative_url }}
+[amp_veltrack]:  {{ '/opcodes/amp_veltrack' | relative_url }}
+[bandwidth]:     {{ '/opcodes/eqN_bw' | relative_url }}
+[delay]:         {{ '/opcodes/delay' | relative_url }}
+[filter cutoff]: {{ '/opcodes/cutoff' | relative_url }}
+[gain_ccN]:      {{ '/opcodes/volume' | relative_url }}
+[offset]:        {{ '/opcodes/offset' | relative_url }}
+[xf_cccurve]:    {{ '/opcodes/xf_cccurve' | relative_url }}
+[xf_keycurve]:   {{ '/opcodes/xf_keycurve' | relative_url }}
+[xf_velcurve]:   {{ '/opcodes/xf_velcurve' | relative_url }}
+[xfin]:          {{ '/opcodes/xfin_loccN' | relative_url }}
+[xfout]:         {{ '/opcodes/xfout_loccN' | relative_url }}
+[1]:             {{ '/opcodes/eqN_freq' | relative_url }}
+[2]:             {{ '/opcodes/eqN_gain' | relative_url }}
+[3]:             {{ '/opcodes/eqN_vel2freq' | relative_url }}
+[4]:             {{ '/opcodes/eqN_vel2gain' | relative_url }}

@@ -23,12 +23,11 @@ MIDI CC 4 - the common hi-hat pedal assignment in electronic drum kits.
 The above hi-hat has no muting implemented, so playing
 a closed hit after an open one would result in the open hit unrealistically
 continuing to ring. The simplest way to take care of that is to put all the
-regions in the same ‹[group](/headers/group)› and use [off_by](/opcodes/off_by)
-to make that group mute itself - that
-will mean any hi-hat hit will mute any currently playing hi-hat hit.
-Setting [off_mode](/opcodes/off_mode) to normal and using [ampeg_release](/opcodes/ampeg_release)
-or [off_time](/opcodes/off_time) to set the time it takes for
-the previous sample to fade out also helps this sound a bit more natural.
+regions in the same [‹group›] and use [off_by] to make that group mute itself -
+that will mean any hi-hat hit will mute any currently playing hi-hat hit.
+Setting [off_mode] to normal and using [ampeg_release]
+or [off_time] to set the time it takes for the previous sample to fade out
+also helps this sound a bit more natural.
 
 ```
 <group>
@@ -57,11 +56,11 @@ mute open hits, and open hits would mute nothing. So, we need to put each hi-hat
 articulation in a different group. This, however, means we need a group which
 mutes several other groups, and regions in a group cannot have multiple or
 varying off_by values. So, what we have to do is use silence - either the silence*
-setting of [sample](/opcodes/sample) ARIA extension, or an actual file of
-a short silence. Note that the silence samples also have to have off_by settings
+setting of [sample] ARIA extension, or an actual file of a short silence.
+Note that the silence samples also have to have off_by settings
 the same as the hi-hat samples in their mute group. Also, since group 1 doesn't
 mute anything, we don't need to add any silence regions to that group.
-Note that the [group](/opcodes/group) opcode used here and the ‹[group](/headers/group)›
+Note that the [group] opcode used here and the [‹group›]
 header are completely separate concepts - "group" for the remainder of this
 article refers to the opcode, not the header, though group headers are also used
 in the code examples.
@@ -186,7 +185,7 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 This works reasonably well. Another potential refinement is to also avoid
 excessive buildup when the more open articulations (which with some hi-hat pairs
 can ring for upwards of 20 seconds), while still allowing enough for ride
-patterns on an open hi-hat to sound right. We can do this by using the [polyphony](/opcodes/polyphony)
+patterns on an open hi-hat to sound right. We can do this by using the [polyphony]
 opcode to put a limit on the number of polyphony voices used by a specific group.
 Note this must be set for the silence regions, also, so that every region in a
 group will have the same off_by and polyphony as all the other regions in that
@@ -267,9 +266,8 @@ of the soft closed hit, as the pedal needs to be closed before a closed hit can 
 This would, of course, cause many edge clashes along the way, which we do not have a way
 to emulate. However, it is possible to use the pedal's MIDI CC to make the open sample quieter
 outside of the range where the open hi-hat sample would be triggered. This can be done by modulating
-the hi-hat's [amplitude](/opcodes/amplitude), and applying a [curve](/headers/curve) which will
-keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample
-was triggered.
+the hi-hat's [amplitude], and applying a [‹curve›] which will
+keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample was triggered.
 
 ```
 <group>
@@ -302,8 +300,8 @@ result in obviously unrealistic volume fluctuations. So, this is not a perfect s
 by any means.
 
 It's probably better to do this by using a volume envelope and using CC4 to modulate its
-decay time, with the sustain set to a low level. and the [ampeg_dynamic](/opcodes/ampeg_dynamic)
-opcode set to 1 so that moving the pedal will cause the decay time to be recalculated.
+decay time, with the sustain set to a low level. and the [ampeg_dynamic] opcode
+set to 1 so that moving the pedal will cause the decay time to be recalculated.
 However, that has not been tested yet, as the author's test kit was already using envelopes
 on the hi-hat to emulate drier cymbals.
 
@@ -403,11 +401,11 @@ ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
 ## Header organization
 
 That is as complex as it gets, though there are a few minor points to be aware of.
-Many drum kits with round robins will set [seq_length](/opcodes/seq_length)
-at the ‹[global](/headers/global)› level, and in those cases, the silence regions
+Many drum kits with round robins will set [seq_length]
+at the [‹global›] level, and in those cases, the silence regions
 would only trigger for the first hit in the round robin sequence, unless they
-have seq_length set to 1 to override the global setting. Also, the ‹[master](/headers/master)›
-header level and #[include](/opcodes/include) statement are useful ARIA
+have seq_length set to 1 to override the global setting. Also, the [‹master›]
+header level and [#include] statement are useful ARIA
 extensions for keeping deeply sampled hi-hat mappings organized.
 
 ## Cymbals other than hi-hats
@@ -464,9 +462,9 @@ key=71 ampeg_attack=0.15 group=43
 sample=ride_choke_rm.wav
 ```
 
-It is also possible to use <[note_polyphony]>(/opcodes/note_polyphony) here, which
-has the advantage of allowing <[note_selfmask]>(/opcodes/note_selfmask) to be used. This
-is good when a hard hit is followed by several lighter ones on the same cymbal - using
+It is also possible to use [note_polyphony] here, which
+has the advantage of allowing [note_selfmask] to be used. This is good when
+a hard hit is followed by several lighter ones on the same cymbal - using
 polyphony, the quieter hits will mute the loud one when the polyphony
 limit is reached, which can result in the louder hit's sustain suddenly and unrealistically
 vanishing. However, this can cause problems with hi-hats where one MIDI note needs to
@@ -995,3 +993,22 @@ v037=0.7
 v077=1
 v127=1
 ```
+
+
+[‹curve›]:        {{ '/headers/curve' | relative_url }}
+[‹global›]:       {{ '/headers/global' | relative_url }}
+[‹group›]:        {{ '/headers/group' | relative_url }}
+[‹master›]:       {{ '/headers/master' | relative_url }}
+[#include]:       {{ '/opcodes/include' | relative_url }}
+[ampeg_dynamic]:  {{ '/opcodes/ampeg_dynamic' | relative_url }}
+[ampeg_release]:  {{ '/opcodes/ampeg_release' | relative_url }}
+[amplitude]:      {{ '/opcodes/amplitude' | relative_url }}
+[group]:          {{ '/opcodes/group' | relative_url }}
+[note_polyphony]: {{ '/opcodes/note_polyphony' | relative_url }}
+[note_selfmask]:  {{ '/opcodes/note_selfmask' | relative_url }}
+[off_by]:         {{ '/opcodes/off_by' | relative_url }}
+[off_mode]:       {{ '/opcodes/off_mode' | relative_url }}
+[off_time]:       {{ '/opcodes/off_time' | relative_url }}
+[polyphony]:      {{ '/opcodes/polyphony' | relative_url }}
+[sample]:         {{ '/opcodes/sample' | relative_url }}
+[seq_length]:     {{ '/opcodes/seq_length' | relative_url }}
