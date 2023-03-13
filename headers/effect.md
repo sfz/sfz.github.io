@@ -14,13 +14,14 @@ between SFZ players. The information on available effects and
 how to control them in ARIA and Cakewalk products can be found on
 the [type] page.
 
-[SFZ v1]:       /opcodes/?v=1
-[SFZ v2]:       /opcodes/?v=2
-[‹region›]:     /headers/region
-[effect1]:      /opcodes/effect1
-[effect2]:      /opcodes/effect2
-[effect3]:      /opcodes/effect3
-[effect4]:      /opcodes/effect4
-[bus]:          /opcodes/bus
-[type]:         /opcodes/type
-[dsp_order]:    /opcodes/dsp_order
+
+[‹region›]:     region
+[SFZ v1]:       {{ '/opcodes/?v=1' | relative_url }}
+[SFZ v2]:       {{ '/opcodes/?v=2' | relative_url }}
+[effect1]:      {{ '/opcodes/effect1' | relative_url }}
+[effect2]:      {{ '/opcodes/effect2' | relative_url }}
+[effect3]:      {{ '/opcodes/effect3' | relative_url }}
+[effect4]:      {{ '/opcodes/effect4' | relative_url }}
+[bus]:          {{ '/opcodes/bus' | relative_url }}
+[type]:         {{ '/opcodes/type' | relative_url }}
+[dsp_order]:    {{ '/opcodes/dsp_order' | relative_url }}
