@@ -43,4 +43,5 @@ default_path= // relative path of your samples
 <region> sample= key=
 ```
 
-[tools page]: /software/tools
+
+[tools page]: {{ '/software/tools' | relative_url }}

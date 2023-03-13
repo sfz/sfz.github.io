@@ -300,7 +300,7 @@ If there are true legato samples, that adds considerable complexity to the
 transposition trick. The below steps are not a universal set of instructions, but
 have worked successfully for at least one instrument.
 
-* Create an extended-range map extending the range by the largest transposition amount in the direction opposite of the transposition. For example, if there are four transposed voices and are to be transposed down by a half-step, a full step, a minor third and a major third, add a major third of range to the top of the extended map. See [the range extension tutorial](/tutorials/range_extension) for details.
+* Create an extended-range map extending the range by the largest transposition amount in the direction opposite of the transposition. For example, if there are four transposed voices and are to be transposed down by a half-step, a full step, a minor third and a major third, add a major third of range to the top of the extended map. See [the range extension tutorial] for details.
 * Make copies of this extended map to create the to-be-transposed maps.
 * In each map, add the aomount of shift for the particular map (for example -1) to lokey, hikey and sw_previous.
 * Delete any regions with lokey or hikey above or below the final desired range, which might be both at the top and bottom of a map.
@@ -544,3 +544,6 @@ larger transposition, but with some instruments it can be
 possible to get away with it. If there are many dynamic layers
 available, it's also possible to borrow from nearby dynamic layers,
 especially in the case of drums.
+
+
+[the range extension tutorial]: range_extension

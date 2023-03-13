@@ -60,7 +60,8 @@ If we create an SFZ file called sample_map.sfz with the following content:
 <region>key=60 sample=c5.wav
 ```
 
-Then the sample map becomes a reusable module which can be "called" using an [#include](/opcodes/include) statement.
+Then the sample map becomes a reusable module which can be "called" using
+an [#include] statement.
 The instrument can be decluttered to this:
 
 ```
@@ -162,8 +163,9 @@ The same file can also be included in multiple instruments, for example a violin
 be used in both a spiccato-only instrument and in a keyswitch instrument which contains other articulations as
 well.
 
-Putting each set of round robins inside its own file without defining [seq_position](/opcodes/seq_position) inside that
-file can also be useful for emulating double-tracking. If the basic non-doubletracked instrument is set up like this:
+Putting each set of round robins inside its own file without defining [seq_position]
+inside that file can also be useful for emulating double-tracking.
+If the basic non-doubletracked instrument is set up like this:
 
 ```
 <global>
@@ -226,11 +228,12 @@ seq_position=4
 
 ## Include And Headers
 
-When including files, it's common to put lower levels of [header](/headers) organization, such as region and group in the
-included file,  and put higher levels in the main file. However, this is not necessary, and any levels of headers can be
-included. It is important to keep in mind that included files are essentially just concatenated to make the SFZ file which
+When including files, it's common to put lower levels of [header] organization,
+such as region and group in the included file, and put higher levels in the main file.
+However, this is not necessary, and any levels of headers can be included.
+It is important to keep in mind that included files are essentially just concatenated to make the SFZ file which
 the SFZ instrument actually parses. Although an included file is a little like a procedure in a programming language, it
-isn't really one, and the end of the included file is not meaningful when 
+isn't really one, and the end of the included file is not meaningful when
 
 SFZ opcodes set under headers within an included file will be in effect until encountering another header of the same or
 higher level. For example, let's say a snare drum sample map contains one-shot samples under `<region>` headers and also
@@ -289,11 +292,12 @@ the headers are not immediately visible because they're in an included file, it 
 
 ## The Define Statement
 
-In addition to include, [#define](/opcodes/define) is the other statement which is very useful in making instruments more modular.
+In addition to include, [#define] is the other statement which is very useful
+in making instruments more modular.
 
 Define and include can be used together. For example, user-editable parameters, such as MIDI note assignments for drum kits
 and CC ranges, can also be placed in a separate file such as the below.
-	
+
 ```
 #define $KICKKEY 36
 #define $SIDESTICKKEY 37
@@ -334,3 +338,10 @@ This will fail in at least some SFZ players, because the complete name of one va
 ```
 #define $SNARE 38
 #define $SNARE_RIMSHOT 40
+```
+
+
+[header]:       {{ '/headers/' | relative_url }}
+[#define]:      {{ '/opcodes/define' | relative_url }}
+[#include]:     {{ '/opcodes/include' | relative_url }}
+[seq_position]: {{ '/opcodes/seq_position' | relative_url }}

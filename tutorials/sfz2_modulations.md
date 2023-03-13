@@ -2,9 +2,9 @@
 title: SFZ2 modulations
 ---
 The [modulations] available under SFZ2 are much more flexible than the fixed set
-[specified by SFZ1](/tutorials/sfz1_modulations). All SFZ1 modulations are still
-available under the SFZ2 spec, and will often be easier to use in cases such as
-envelopes where the standard AHDSR shape is all that's needed.
+[specified by SFZ1]. All SFZ1 modulations are still available under the SFZ2 spec,
+and will often be easier to use in cases such as envelopes where the standard
+AHDSR shape is all that's needed.
 
 The basic difference is that SFZ1 has three envelopes - one assigned to
 volume, one to pitch, and one to filter cutoff. There are also three LFOs,
@@ -16,7 +16,7 @@ In addition, SFZ2 envelopes can have an arbitrary number of points.
 
 ## Additional MIDI CC modulation
 
-SFZ2 adds one more paramter which can be modulated with MIDI CC - [stereo width](/opcodes/width_onccN).
+SFZ2 adds one more paramter which can be modulated with MIDI CC - [stereo width].
 Also need to document pan_onccX and find out whether it's SFZ1 or SFZ2 - currently
 not sure, needs testing.
 
@@ -25,18 +25,18 @@ not sure, needs testing.
 For each LFO, an LFO number must be specified - lfo01, lfo02 etc. Each
 LFO has the following parameters:
 
-- [lfoN_wave](/opcodes/lfoN_wave)
-- [lfoN_freq](/opcodes/lfoN_freq)
-- [lfoN_freq_onccX](/opcodes/lfoN_freq)
-- [lfoN_freq_smoothccX](/opcodes/lfoN_freq_smoothccX)
-- [lfoN_freq_stepccX](/opcodes/lfoN_freq_stepccX)
-- [lfoN_delay](/opcodes/lfoN_delay)
-- [lfoN_delay_onccX](/opcodes/lfoN_delay)
-- [lfoN_fade](/opcodes/lfoN_fade)
-- [lfoN_fade_onccX](/opcodes/lfoN_fade)
-- [lfoN_phase](/opcodes/lfoN_phase)
-- [lfoN_phase_onccX](/opcodes/lfoN_phase)
-- [lfoN_count](/opcodes/lfoN_count)
+[lfoN_wave]
+[lfoN_freq]
+[lfoN_freq_onccX]
+[lfoN_freq_smoothccX]
+[lfoN_freq_stepccX]
+[lfoN_delay]
+[lfoN_delay_onccX]
+[lfoN_fade]
+[lfoN_fade_onccX]
+[lfoN_phase]
+[lfoN_phase_onccX]
+[lfoN_count]
 
 Click on each link for a detailed description. Similarly to SFZ1 LFOs,
 there's a frequency, a delay and a fade-in time. In addition, the
@@ -200,15 +200,15 @@ SFZ2 envelopes are numbered and can have an arbitrary number of points, with
 the level at each point and its modulation set separately. The opcodes used
 to create these envelopes are:
 
-- [egN_points](/opcodes/egN_points)
-- [egN_levelX](/opcodes/egN_levelX)
-- [egN_levelX_onccY](/opcodes/egN_levelX)
-- [egN_timeX](/opcodes/egN_timeX)
-- [egN_timeX_onccY](/opcodes/egN_timeX)
-- [egN_shapeX](/opcodes/egN_shapeX)
-- [egN_curveX](/opcodes/egN_curveX)
-- [egN_sustain](/opcodes/egN_sustain)
-- [egN_loop](/opcodes/egN_loop)
+- [egN_points]
+- [egN_levelX]
+- [egN_levelX_onccY]
+- [egN_timeX]
+- [egN_timeX_onccY]
+- [egN_shapeX]
+- [egN_curveX]
+- [egN_sustain]
+- [egN_loop]
 
 ## Envelope targets
 
@@ -336,8 +336,8 @@ pitcheg_depth_oncc111=-20
 
 ## SmoothccN and stepccN
 
-Most MIDI CC modulations, though not all, can have use [smoothccN](/modulations/smoothccN) and [stepccN](/modulations/stepccN).
-These work similarly to [bend_smooth](/opcodes/bend_smooth) and [bend_step](/opcodes/bend_step).
+Most MIDI CC modulations, though not all, can have use [smoothccN] and [stepccN].
+These work similarly to [bend_smooth] and [bend_step].
 
 SmoothccN adds "inertia" to a modulation, so quickly changing the MIDI CC value has a slower effect
 on the modulation target than it would normally. StepccN causes the modulation to happen in a
@@ -345,8 +345,36 @@ discrete number of steps. Setting the number of steps to 1 would make the modula
 all-or-nothing control.
 
 This is what's possible under the SFZ2 specification. There are some additional modulations
-available as [ARIA extensions](/opcodes/?v=aria), with [amplitude_onccN](/opcodes/amplitude)
-being a very useful one.
+available as [ARIA extensions], with [amplitude_onccN] being a very useful one.
 
 
-[modulations]: /modulations/index
+[specified by SFZ1]:   sfz1_modulations
+[modulations]:         {{ '/modulations/' | relative_url }}
+[smoothccN]:           {{ '/modulations/smoothccN' | relative_url }}
+[stepccN]:             {{ '/modulations/stepccN' | relative_url }}
+[ARIA extensions]:     {{ '/opcodes/?v=aria' | relative_url }}
+[amplitude_onccN]:     {{ '/opcodes/amplitude' | relative_url }}
+[bend_smooth]:         {{ '/opcodes/bend_smooth' | relative_url }}
+[bend_step]:           {{ '/opcodes/bend_step' | relative_url }}
+[egN_points]:          {{ '/opcodes/egN_points' | relative_url }}
+[egN_levelX]:          {{ '/opcodes/egN_levelX' | relative_url }}
+[egN_levelX_onccY]:    {{ '/opcodes/egN_levelX' | relative_url }}
+[egN_timeX]:           {{ '/opcodes/egN_timeX' | relative_url }}
+[egN_timeX_onccY]:     {{ '/opcodes/egN_timeX' | relative_url }}
+[egN_shapeX]:          {{ '/opcodes/egN_shapeX' | relative_url }}
+[egN_curveX]:          {{ '/opcodes/egN_curveX' | relative_url }}
+[egN_sustain]:         {{ '/opcodes/egN_sustain' | relative_url }}
+[egN_loop]:            {{ '/opcodes/egN_loop' | relative_url }}
+[lfoN_wave]:           {{ '/opcodes/lfoN_wave' | relative_url }}
+[lfoN_freq]:           {{ '/opcodes/lfoN_freq' | relative_url }}
+[lfoN_freq_onccX]:     {{ '/opcodes/lfoN_freq' | relative_url }}
+[lfoN_freq_smoothccX]: {{ '/opcodes/lfoN_freq_smoothccX' | relative_url }}
+[lfoN_freq_stepccX]:   {{ '/opcodes/lfoN_freq_stepccX' | relative_url }}
+[lfoN_delay]:          {{ '/opcodes/lfoN_delay' | relative_url }}
+[lfoN_delay_onccX]:    {{ '/opcodes/lfoN_delay' | relative_url }}
+[lfoN_fade]:           {{ '/opcodes/lfoN_fade' | relative_url }}
+[lfoN_fade_onccX]:     {{ '/opcodes/lfoN_fade' | relative_url }}
+[lfoN_phase]:          {{ '/opcodes/lfoN_phase' | relative_url }}
+[lfoN_phase_onccX]:    {{ '/opcodes/lfoN_phase' | relative_url }}
+[lfoN_count]:          {{ '/opcodes/lfoN_count' | relative_url }}
+[stereo width]:        {{ '/opcodes/width_onccN' | relative_url }}

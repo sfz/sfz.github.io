@@ -1,10 +1,10 @@
 ---
 title: Brush stirs
 ---
-Not all drum sounds are hits which can be used in the usual way described in our [drum basics](/tutorials/drum_basics)
-article. One major exception are brush techniques which involve scraping the
-brush across a drum head, often in a circle. If you are not sure what this
-looks or sounds like, [this video is a good guide](https://www.youtube.com/watch?v=R982CdhRF9E).
+Not all drum sounds are hits which can be used in the usual way described in our
+[drum basics][1] article. One major exception are brush techniques which involve
+scraping the brush across a drum head, often in a circle. If you are not sure what
+this looks or sounds like, [this video is a good guide][2].
 These techniques are called swirls or stirs, and for the purpose of this article
 we'll call them stirs. As the sound changes in intensity, and the duration
 of the scrapes needs to fit the tempo and rhythm of the song, sampling them
@@ -42,9 +42,9 @@ the purposes of this example they can be half the length of speed 1.
 ## Simple stir model
 
 We can make a very simple stir using speed 1 by playing the sample with
-[loop_mode](/opcodes/loop_mode) set to one_shot, like we normally would set it for a
-drum hit, and using a simple [volume envelope](/modulations/envelope_generators#sfz-1-egs)
-to fade this sample in over a time, and then fade it out.
+[loop_mode][3] set to one_shot, like we normally would set it for a
+drum hit, and using a simple [volume envelope][4] to fade this sample
+in over a time, and then fade it out.
 
 ```
 <region>key=26 loop_mode=one_shot
@@ -152,8 +152,7 @@ more energetic tracks might sound better with even sharper envelope peaks. It
 would be nice to adjust the envelope curve shapes with MIDI CC, but it is not
 currently possible to do this. It's possible to work around this by crossfading
 sharp-envelope and flat-envelope regions, or use locc/hicc to select between
-several pre-baked [envelope shapes](/opcodes/ampeg_attack_shape). Here's an
-example of the latter method.
+several pre-baked [envelope shapes][5]. Here's an example of the latter method.
 
 ```
 <group>key=26 loop_mode=one_shot
@@ -265,10 +264,11 @@ ampeg_attack_shape=5.2 ampeg_decay_shape=-3.5
 
 As all the above sounds have loop_mode set to one_shot, triggering a note causes
 the sound to play until the volume envelope drops to zero. If ending a stir
-earlier than that is required, we can use polyphony groups. The [group](/opcodes/group) and [off_by](/opcodes/off_by)
-opcodes are the key ones here. We can use them to make stirs self-mute, so that
-triggering a new stir will mute any previously playing stirs, as well as add a key
-which produces no sound, using [silence instead of a sample](/opcodes/sample), but
+earlier than that is required, we can use polyphony groups. The [group][6]
+and [off_by][7] opcodes are the key ones here. We can use them to make stirs
+self-mute, so that triggering a new stir will mute any previously playing stirs,
+as well as add a key which produces no sound, using [silence instead of a sample][8],
+but
 is in the same mute groups, so triggering this key will mute any stir or accent
 currently playing. This key can be used to stop stirs early.
 
@@ -278,7 +278,7 @@ positions then those would need separate groups as well. In the below example we
 also have stirs mute accents, and vice versa, although the ornaments are left
 out of the mute groups and can be layered on top of other sounds without muting them.
 For a more sophisticated use of mute groups with other pieces of the drum kit,
-please see [cymbal muting](/tutorials/cymbal_muting).
+please see [cymbal muting][9].
 
 ```
 <global>loop_mode=one_shot off_mode=normal
@@ -385,8 +385,8 @@ group=2 off_by=2
 <region>group=2 off_by=2
 ```
 
-It is, of course, possible to apply [round robins](/opcodes/seq_position) and [dynamic layers](/opcodes/lovel) to this,
-just like any other drum sound. That is left as an exercise to the reader.
+It is, of course, possible to apply [round robins][10] and [dynamic layers][11]
+to this, just like any other drum sound. That is left as an exercise to the reader.
 
 ## Alternative approach
 
@@ -395,11 +395,11 @@ controller. For keyboard controllers or sequencing, another approach is possible
 where instead of using a MIDI note to trigger a new stir every time the drummer
 would complete a circle, we hold down a long note for as long as we want to produce
 stirs (so, possibly for several measures, or even the entire duration of a song).
-We then [use MIDI CC to crossfade between the layers](/opcodes/xfin_loccN) to
+We then [use MIDI CC to crossfade between the layers][12] to
 modulate the speed of the stir in order to create realism and rhythmic interest.
 In order to be able to do this, the samples will have to be looped, but as stated
 at the beginning, looping or crossfading noisy samples is very easy as there are
-no phase issues. We also set the [loop_mode](/opcodes/loop_mode) opcode to continuous
+no phase issues. We also set the [loop_mode][3] opcode to continuous
 instead of the one_shot setting used in the earlier approach.
 
 ```
@@ -425,3 +425,17 @@ shaking smoothly for an extended duration.
 
 It is also certainly possible to further improve the above model with more realism
 and playablity.
+
+
+[1]:  drum_basics
+[2]:  https://www.youtube.com/watch?v=R982CdhRF9E
+[3]:  {{ '/opcodes/loop_mode' | relative_url }}
+[4]:  {{ '/modulations/envelope_generators#sfz-1-egs' | relative_url }}
+[5]:  {{ '/opcodes/ampeg_attack_shape' | relative_url }}
+[6]:  {{ '/opcodes/group' | relative_url }}
+[7]:  {{ '/opcodes/off_by' | relative_url }}
+[8]:  {{ '/opcodes/sample' | relative_url }}
+[9]:  cymbal_muting
+[10]: {{ '/opcodes/seq_position' | relative_url }}
+[11]: {{ '/opcodes/lovel' | relative_url }}
+[12]: {{ '/opcodes/xfin_loccN' | relative_url }}

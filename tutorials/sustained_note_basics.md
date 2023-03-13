@@ -2,7 +2,7 @@
 title: Sustained note basics
 ---
 We've covered the basic opcodes required to map simple drum instruments on
-[another page](/tutorials/drum_basics), and here we are going to apply that
+[another page][1], and here we are going to apply that
 knowledge to pitched instruments, plus add more opcodes. Let's say we want to
 sample a folk flute whose lowest note is a D. If the lowest five notes are
 D, E, F#, G and A, and there is one sample available for each note, they could
@@ -20,8 +20,7 @@ This would work well enough to make a sound when a MIDI note corresponding to
 one of the sampled pitches is played. However, playing notes inbetween
 the D and E, or E and F#, would mean no sound. We can "stretch" one of the
 neighboring notes to cover that D# and that F using the
-[lokey, hikey](/opcodes/lokey) and
-[pitch_keycenter](/opcodes/pitch_keycenter) opcodes instead of key.
+[lokey / hikey] and [pitch_keycenter] opcodes instead of key.
 If a sample does not need to cover multiple notes, it can still use key. Whether
 to use the D or E sample to cover the D# in our example is a judgment call -
 which sounds better?
@@ -38,7 +37,7 @@ The samples will play as long as a note is held, but when the note is released,
 they will end suddenly, which is probably not realistic for a flute sound, or
 indeed most other instruments. We'll need to apply a volume envelope with a
 release time set, which can be applied to all regions.
-The [ampeg_release](/opcodes/ampeg_release) opcode accomplishes this.
+The [ampeg_release] opcode accomplishes this.
 
 ```
 <global>ampeg_release=0.3
@@ -54,11 +53,9 @@ note velocity to choose which sample is played - however, while this makes
 perfect sense for drum hits or piano notes, with instruments such as flute or
 violin, it's possible for the player to vary the dynamic level while a note is
 being sustained. This can be simulated with the
-[xfin_loccN/xfin_hiccN](/opcodes/xfin_loccN) and
-[xfout_loccN/xfout_hiccN](/opcodes/xfout_loccN) opcodes. Using only the
+[xfin_loccN / xfin_hiccN] and [xfout_loccN / xfout_hiccN] opcodes. Using only the
 D4 and E4 samples as an example, and controlling the dynamics with CC1 (mod wheel).
-The [amp_veltrack](/opcodes/amp_veltrack) opcode is set to 0,
-so that velocity does not affect volume.
+The [amp_veltrack] opcode is set to 0, so that velocity does not affect volume.
 
 ```
 <global>ampeg_release=0.3 amp_veltrack=0
@@ -81,9 +78,8 @@ example regular sustains and fluttertongue sustains, we need a way to switch
 between them. Each could be its own independent and complete SFZ file, and we
 could just load the desired file into the player, but for convenience,
 especially in live performance, it's good to load both at once and have a way of
-switching between them. One way is [loccN/hiccN](/opcodes/loccN)
-where which sample is triggered for a particular note depends on the value of
-a MIDI CC - let's use MIDI CC 11.
+switching between them. One way is [loccN / hiccN] where which sample is triggered
+for a particular note depends on the value of a MIDI CC - let's use MIDI CC 11.
 Notice that the fluttertongue samples in this example have fewer dynamic layers
 than the main sustain samples - it's common for the "core" articulations of an
 instrument to be sampled in more detail, and the SFZ format is flexible enough
@@ -111,8 +107,7 @@ for different notes within the same articulation.
 
 Another, probably more common, way is to use keyswitches. If we define the
 keyswitch range as the C and C# below our lowest D using
-[sw_lokey/sw_hikey](/opcodes/sw_lokey), we can then use
-[sw_last](/opcodes/sw_last) to select articulations.
+[sw_lokey / sw_hikey], we can then use [sw_last] to select articulations.
 
 ```
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
@@ -135,17 +130,17 @@ keyswitch range as the C and C# below our lowest D using
 
 There are other possibilities - for example, since velocity is not needed to
 control dynamics, we could use that to select articulations using
-[lovel/hivel](/opcodes/lovel), for example. However, it' is quite common,
+[lovel / hivel], for example. However, it' is quite common,
 especially with string instruments, to use a MIDI CC to control the dynamics of
 sustained articulations, and velocity to control the dynamics of short
 articulations such as staccato. In those cases, the short articulations could
 use amp_veltrack set to 100 instead of 0, and generally be mapped in the same
-way as [the drums we've discussed before](/tutorials/drum_basics). The flute is
+way as [the drums we've discussed before][1]. The flute is
 a monophonic instrument in reality - you can't play chords on it, while you can
 using our SFZ here. For more realism, playing a note on this flute should mute
 any previously playing notes. To make an instrument which can only play one note
-at a time, the [group](/opcodes/group) and [off_by](/opcodes/off_by)
-opcodes can be used. Although these can be used in more complex scenarios, for a
+at a time, the [group] and [off_by] opcodes can be used.
+Although these can be used in more complex scenarios, for a
 monophonic instrument with no multiple microphone positions sampled, it's enough
 to put all samples in the same group, and have that group muted whenever a new
 note from that group is played.
@@ -170,7 +165,7 @@ note from that group is played.
 ```
 
 However, this cuts off the note suddenly, creating a gap before the next note
-can reach full volume. That problem can be fixed by setting [off_mode](/opcodes/off_mode)
+can reach full volume. That problem can be fixed by setting [off_mode]
 to normal, which will make the notes being muted fade out gradually over the
 duration previously specified with the ampeg_release opcode.
 
@@ -197,5 +192,21 @@ group=1 off_by=1 off_mode=normal
 This is enough to make a basic monophonic wind instrument, vocal, or other
 monophonic instrument. There are more possibilities - better legato, vibrato
 emulation, multiple microphone positions etc. - which we'll describe later in
-another part of this guide. Together with the information covered in [drum basics](/tutorials/drum_basics)
+another part of this guide. Together with the information covered in [drum basics][1]
 earlier, this should also be enough to make a basic sampled piano or guitar.
+
+
+[1]: drum_basics
+[amp_veltrack]:              {{ '/opcodes/amp_veltrack' | relative_url }}
+[ampeg_release]:             {{ '/opcodes/ampeg_release' | relative_url }}
+[group]:                     {{ '/opcodes/group' | relative_url }}
+[loccN / hiccN]:             {{ '/opcodes/loccN' | relative_url }}
+[lokey / hikey]:             {{ '/opcodes/lokey' | relative_url }}
+[lovel / hivel]:             {{ '/opcodes/lovel' | relative_url }}
+[off_by]:                    {{ '/opcodes/off_by' | relative_url }}
+[off_mode]:                  {{ '/opcodes/off_mode' | relative_url }}
+[pitch_keycenter]:           {{ '/opcodes/pitch_keycenter' | relative_url }}
+[sw_last]:                   {{ '/opcodes/sw_last' | relative_url }}
+[sw_lokey / sw_hikey]:       {{ '/opcodes/sw_lokey' | relative_url }}
+[xfin_loccN / xfin_hiccN]:   {{ '/opcodes/xfin_loccN' | relative_url }}
+[xfout_loccN / xfout_hiccN]: {{ '/opcodes/xfout_loccN' | relative_url }}
