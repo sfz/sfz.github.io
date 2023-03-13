@@ -12,8 +12,7 @@ If `loop_start` is specified, it will be used instead the loop start point defin
 in the sample. For files which have multiple loops defined, this is the only way
 to get anything other than the first defined loop to play.
 
-This opcode will not have any effect if [loop_mode](loop_mode) is set
-to ***no_loop***.
+This opcode will not have any effect if [loop_mode] is set to **no_loop**.
 
 ## Examples
 
@@ -22,3 +21,6 @@ loop_start=4503
 
 loop_start=12445
 ```
+
+
+[loop_mode]: loop_mode

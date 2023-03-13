@@ -4,7 +4,7 @@ opcode_name: "fil_type"
 title: "fil_type / fil2_type"
 ---
 Allows you to choose which type of filter you use if not specified
-(ie.: only [cutoff](cutoff) and [resonance](resonance) in the SFZ).
+(ie.: only [cutoff] and [resonance] in the SFZ).
 
 `fil_type` was created in SFZ v1, so under that specification level only the
 v1 filters listed below are supported.
@@ -49,7 +49,12 @@ The following table describes which SFZ v2 and ARIA extension filter types they 
 `lsh`, `hsh` and `peq` are ARIA extensions, allowing filters to be used as low-shelf,
 high-shelf or up to two additional parametric EQ bands,
 in addition to the default three eqN bands.
-Filters of these three types use [fil_gain](fil_gain) or fil2_gain
+Filters of these three types use [fil_gain] or fil2_gain
 to set the gain of the shelf or band.
 
 {% include sfz/fil_type_players_compatibility_table.html %}
+
+
+[cutoff]:    cutoff
+[fil_gain]:  fil_gain
+[resonance]: resonance

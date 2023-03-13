@@ -26,7 +26,7 @@ lokey=72 hikey=72 pitch_keycenter=72
 ```
 
 Key can also be combined with the others, which will override the value set by key
-although key should be specified first. In ARIA, the value set by [pitch_keycenter](/opcodes/pitch_keycenter)
+although key should be specified first. In ARIA, the value set by [pitch_keycenter]
 will always be used, whether key or pitch_keycenter is set first in the SFZ file.
 However, in some other players, setting pitch_keycenter to a different value than key
 is only effective if key is set first and pitch_keycenter second. Therefore, for
@@ -48,3 +48,6 @@ the lokey value it would set will override the previous lokey.
 ```
 lokey=70 key=72
 ```
+
+
+[pitch_keycenter]: pitch_keycenter

@@ -34,5 +34,8 @@ easily. Defining the same variable to have multiple values at different points i
 same instrument, however, requires care. Using #define to set the same variable to
 different values at one point in the same SFZ file does not work well at least in
 ARIA/Sforzando when loading an instrument. However, a workaround there is to
-use [#include](/opcodes/include) to put each set of #define statements with different
+use [#include] to put each set of #define statements with different
 values in a separate file.  In simple tests, that has been successful.
+
+
+[#include]: {{ '/opcodes/include' | relative_url }}

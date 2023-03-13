@@ -3,7 +3,7 @@ layout: "sfz/opcode"
 opcode_name: "region_label"
 ---
 Useful for debugging. In order to work properly, generally needs to be set under
-a ‹[region](/headers/region)› header.
+a [‹region›] header.
 If not set, the info tab will display the file path of the most recently played sample.
 
 ## Example
@@ -19,4 +19,5 @@ If not set, the info tab will display the file path of the most recently played 
   img="/assets/img/opcodes/labels.jpg"
   alt="region_label example image"%}
 
-[region]: /headers/region
+
+[‹region›]: {{ '/headers/region' | relative_url }}

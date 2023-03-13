@@ -15,4 +15,5 @@ group_label=Edge
   img="/assets/img/opcodes/labels.jpg"
   alt="group_label example image"%}
 
-[group]: /headers/group
+
+[group]: {{ '/headers/group' | relative_url }}

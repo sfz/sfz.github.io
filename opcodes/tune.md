@@ -28,7 +28,7 @@ tune=-100
 pitch_oncc27=200
 ```
 
-Another way is to use default [curve](/headers/curve) 1 which ranges from -1 to 1,
+Another way is to use default [‹curve›] 1 which ranges from -1 to 1,
 and set the pitch control to the tuning range.
 
 ```
@@ -39,3 +39,6 @@ pitch_curvecc27=1
 ## Practical Considerations
 
 In ARIA, `tune_*ccN` can also be used as an alias for `pitch_*ccN` (see below).
+
+
+[‹curve›]: {{ '/headers/curve' | relative_url }}

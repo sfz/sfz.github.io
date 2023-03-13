@@ -4,14 +4,14 @@ opcode_name: "script"
 ---
 This is an extension to the SFZ file format which is currently only available
 with LinuxSampler v2.0.0.svn37 or higher.
-Find out more about [Instrument Scripts](http://doc.linuxsampler.org/Instrument_Scripts).
+Find out more about [Instrument Scripts].
 
 The mandatory path parameter defines the file system path to the real-time
 instrument script file that shall be loaded and executed, which may either be an
 absolute path or a relative path. A relative path is always interpreted relative
 to the SFZ file's location.
 
-May only be used in ‹[global](/headers/global)› section.
+May only be used in [‹global›] section.
 
 ## Example
 
@@ -29,3 +29,7 @@ sample=some_sound.wav
 ```
 
 Source: [LinuxSampler Documentation](http://doc.linuxsampler.org/sfz/script_opcode/)
+
+
+[‹global›]: {{ '/headers/global' | relative_url }}
+[Instrument Scripts]: http://doc.linuxsampler.org/Instrument_Scripts

@@ -9,8 +9,8 @@ var01_cutoff=4800
 var02_pitch=400
 ```
 
-Here is how this could be used, together with [varNN_mod](varNN_mod) and
-[varNN_onccX](varNN_onccX) to control velocity tracking on a filter cutoff:
+Here is how this could be used, together with [varNN_mod] and
+[varNN_onccX] to control velocity tracking on a filter cutoff:
 
 ```
 //Lowpass filter
@@ -35,3 +35,7 @@ or to modulate another variable.
 This list has not been verified by testing. It was created by cutting down the
 list of available targets for modulation by LFO. Decim and bitred might not
 actually be implemented.
+
+
+[varNN_mod]:   varNN_mod
+[varNN_onccX]: varNN_onccX

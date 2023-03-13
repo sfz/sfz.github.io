@@ -18,14 +18,13 @@ Getting the sample to play back at the correct pitch is not automatic, and
 generally can't be done with the sample opcode alone, even if the file name
 includes pitch information. Assuming that the tune or transpose opcodes are not
 used to change the pitch, the sample will play unchanged in pitch when a note
-equal to the [pitch_keycenter](pitch_keycenter) opcode value is played.
-If [pitch_keycenter](pitch_keycenter) is not defined for the region, sample will
-play unchanged on note 60 (middle C). If [pitch_keytrack](pitch_keytrack)
+equal to the [pitch_keycenter] opcode value is played.
+If [pitch_keycenter] is not defined for the region, sample will
+play unchanged on note 60 (middle C). If [pitch_keytrack]
 is set to 0, the sample will also play unchanged in pitch,
-regardless of how [pitch_keycenter](pitch_keycenter) is set.
-If the key opcode is used to define the range of the sample (instead of [lokey](lokey),
-[hikey](lokey) and [pitch_keycenter](pitch_keycenter)) the sample will also
-be unchanged in pitch.
+regardless of how [pitch_keycenter] is set.
+If the key opcode is used to define the range of the sample (instead of [lokey],
+[hikey] and [pitch_keycenter]) the sample will also be unchanged in pitch.
 
 ## Formats
 
@@ -71,13 +70,19 @@ sample=*silence
 
 Tri is an alias for triangle. For cases where we don't want to actually play
 a sample but want a region to exist and be played
-(for example, to mute other sounds when using [group](/opcodes/group) and
-[off_by](/opcodes/off_by), the silence value can be very convenient).
+(for example, to mute other sounds when using [group] and
+[off_by], the silence value can be very convenient).
 
 Note that in this case the `*` is a real character and not a wildcard.
 
 
+[group]:           group
+[hikey]:           hikey
+[lokey]:           lokey
+[off_by]:          off_by
+[pitch_keycenter]: pitch_keycenter
+[pitch_keytrack]:  pitch_keytrack
+[formats]:  {{ '/software/engines/' | relative_url }}
+[Features]: {{ '/#features' | relative_url }}
 [FLAC]:     https://en.wikipedia.org/wiki/FLAC
 [lossless]: https://en.wikipedia.org/wiki/Lossless_compression
-[formats]:  /software/engines/
-[Features]: /#features

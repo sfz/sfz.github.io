@@ -46,9 +46,6 @@ into two sequential subsets might look like this:
 <region> seq_length=2 seq_position=2 lorand=0.75 sample=kick_vl1_rr8.wav
 ```
 
-[seq_length]:   seq_length
-[seq_position]: seq_position
-
 ## Practical Considerations
 
 In the ARIA implementation of SFZ, sequence position is not tracked together for
@@ -63,3 +60,7 @@ mics which do not match, and that can result in phasing issues etc.
 There are other potential uses which have nothing to do with round robins, for
 example having key fingering noises on a clarinet trigger sometimes
 (but not always) when a note is played.
+
+
+[seq_length]:   seq_length
+[seq_position]: seq_position

@@ -15,4 +15,5 @@ master_label=China2
   img="/assets/img/opcodes/labels.jpg"
   alt="master_label example image"%}
 
-[master]: /headers/master
+
+[master]: {{ '/headers/master' | relative_url }}

@@ -27,12 +27,12 @@ round robins, would look like this:
 <region>seq_position=3 sample=snare_rr3.wav
 ```
 
-An alternative to this is using [lorand / hirand](/opcodes/lorand) for
+An alternative to this is using [lorand / hirand] for
 random, instead of sequential, round robins. If there are enough samples
 available, both methods can also be combined - the combination is described
-on the [lorand / hirand](/opcodes/lorand) page. However, lorand/hirand might
+on the [lorand / hirand] page. However, lorand/hirand might
 not be a good idea to use with samples which have multiple microphone
-positions, and sticking to seq_position and seq_length might be necessary.
+positions, and sticking to [seq_position] and `seq_length` might be necessary.
 
 ## Practical Considerations
 
@@ -40,7 +40,11 @@ In the ARIA implementation of SFZ, sequence position is not tracked together
 for all regions, which means sequential round robins is not a practical way
 to implement alternating left/right hand or up/down bowing samples.
 
-Setting seq_length to 0 behaves the same as setting it to 1 in Cakewalk
+Setting `seq_length` to 0 behaves the same as setting it to 1 in Cakewalk
 players, sfizz and BassMIDI, but a setting of 0 in ARIA will cause each
 round robin in the sequence to be played once, and playing more notes once
-the counter exceeds the highest seq_position will result in no sound.
+the counter exceeds the highest [seq_position] will result in no sound.
+
+
+[lorand / hirand]: lorand
+[seq_position]:    seq_position
