@@ -28,12 +28,12 @@ Below are the known links to the various lists of supported opcodes:\
 - Alchemy (Camel Audio was acquired by Apple,
   and the current incarnation of Alchemy no longer supports SFZ.)
 
-[ARIA extensions]: /opcodes/?v=aria
-[OSI]:     https://opensource.org/licenses
-[SFZ v1]: /opcodes/?v=1
-[SFZ v2]: /opcodes/?v=2
-[sfz]:    https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
 
+[ARIA extensions]: {{ '/opcodes/?v=aria' | relative_url }}
+[SFZ v1]:          {{ '/opcodes/?v=1' | relative_url }}
+[SFZ v2]:          {{ '/opcodes/?v=2' | relative_url }}
+[OSI]: https://opensource.org/licenses
+[sfz]: https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
 [BassMIDI]:     https://www.un4seen.com/doc/#bassmidi/BASS_MIDI_FontInit.html
 [Bitwig]:       https://github.com/sfzformat/sfzformat.github.io/pull/48#issuecomment-731244523
 [Equator 2]:    https://github.com/sfzformat/sfzformat.github.io/wiki/Player-Equator2

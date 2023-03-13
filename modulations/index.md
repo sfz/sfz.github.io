@@ -21,8 +21,8 @@ See also the related tutorials for [SFZ1] and [SFZ2].
 - [stepccN](stepccN)
 
 
-[cutoff_ccN]:          /opcodes/cutoff
-[ampeg_releaseccN]:    /opcodes/ampeg_release
-[delay_samples_onccN]: /opcodes/delay_samples
-[SFZ1]:                /tutorials/sfz1_modulations
-[SFZ2]:                /tutorials/sfz2_modulations
+[cutoff_ccN]:          {{ '/opcodes/cutoff' | relative_url }}
+[ampeg_releaseccN]:    {{ '/opcodes/ampeg_release' | relative_url }}
+[delay_samples_onccN]: {{ '/opcodes/delay_samples' | relative_url }}
+[SFZ1]:                {{ '/tutorials/sfz1_modulations' | relative_url }}
+[SFZ2]:                {{ '/tutorials/sfz2_modulations' | relative_url }}

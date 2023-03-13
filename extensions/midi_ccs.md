@@ -63,8 +63,8 @@ all DAWs.
 
 While all the "regular" CCs have the same range of 0 to 127, and some of these extended CCs
 behave the same way (for example CC 131 or note on velocity), others do not. CC136 or bipolar
-random can have a negative value, for example. Many will often have non-integer values. These 
-CCs will not always behave the same as others and have not been thoroughly documented.
+random can have a negative value, for example. Many will often have non-integer values.
+These CCs will not always behave the same as others and have not been thoroughly documented.
 
 Some of the additional CCs are shared across all instances of the ARIA engine currently running,
 for example the host tempo. Others can have concurrently have a different value for different
@@ -106,6 +106,7 @@ scenarios.
 
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
-[ARIA]:  /opcodes/?v=aria
-[SFZ 2]: /opcodes/?v=2
+
+[ARIA]:  {{ '/opcodes/?v=aria' | relative_url }}
+[SFZ 2]: {{ '/opcodes/?v=2' | relative_url }}
 [MIDI Control Change Messages]: https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2
