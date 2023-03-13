@@ -29,13 +29,17 @@ be unchanged in pitch.
 
 ## Formats
 
-At the SFZ1 specification level, there is no information about what sample
-formats are supported. For SFZ2, however, the Cakewalk book specifies the following
-sample types are supported:
-+ WAV and AIFF formats of any sample rate (even 384k)
+At the SFZ1 specification level, the supported sample formats are:
++ WAV of any sample rate
 + Ogg Vorbis compressed samples
-+ [FLAC] support is not specified as mandatory, though FLAC was supported by Cakewalk
-Session Drummer, and is supported by ARIA
+
+For SFZ2, the Cakewalk book specifies the following sample types in addiction of
+the above:
++ AIFF of any sample rate
++ [FLAC] support is not specified as mandatory, though FLAC was supported by
+  Cakewalk Session Drummer, and is supported by ARIA
+
+See also [Features] section in the home page.
 
 WAV is usually the first choice, or perhaps AIFF when using macOS.
 FLAC is the second choice, as it is [lossless] compression audio is always preferable,
@@ -65,10 +69,10 @@ sample=*noise
 sample=*silence
 ```
 
-Tri is an alias for triangle. For cases where we don't want to actually play a sample but want a region to
-exist and be played (for example, to mute other sounds when using
-[group](/opcodes/group) and [off_by](/opcodes/off_by), the silence
-value can be very convenient.
+Tri is an alias for triangle. For cases where we don't want to actually play
+a sample but want a region to exist and be played
+(for example, to mute other sounds when using [group](/opcodes/group) and
+[off_by](/opcodes/off_by), the silence value can be very convenient).
 
 Note that in this case the `*` is a real character and not a wildcard.
 
@@ -76,3 +80,4 @@ Note that in this case the `*` is a real character and not a wildcard.
 [FLAC]:     https://en.wikipedia.org/wiki/FLAC
 [lossless]: https://en.wikipedia.org/wiki/Lossless_compression
 [formats]:  /software/engines/
+[Features]: /#features
