@@ -57,4 +57,5 @@ The alphabet used for the coding is as following:
 | **$0F** | $39 | $49   | $59 | $69 | $79 | $89 | $99 | $A9 | $B9 | $C9 | $D9 | $E9 | $F9 | $3D1F | $19   | $29   |
 {: .table .table-sm .table-bordered .table-striped }
 
-[This C source file]: /assets/src/makesample.c
+
+[This C source file]: {{ '/assets/src/makesample.c' | relative_url }}

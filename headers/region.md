@@ -2,11 +2,11 @@
 title:  "‹region›"
 layout: "sfz/header"
 ---
-Inside the definition file, a region starts with the <region\> header. A region
-is defined between two <region\> headers, or between a <region\> header and a
-<group\> header, or between a <region\> header and the end of the file.
+Inside the definition file, a region starts with the `‹region›` header. A region
+is defined between two `‹region›` headers, or between a `‹region›` header and a
+`‹group›` header, or between a `‹region›` header and the end of the file.
 
-Following the <region\> header one or more opcodes can be defined. The opcodes are
+Following the `‹region›` header one or more opcodes can be defined. The opcodes are
 special keywords which instruct the player on what, when and how to play a sample.
 
 Opcodes within a region can appear in any order, and they have to be separated
