@@ -86,20 +86,6 @@ lfo02_phase_oncc132=0.7
 lfo02_freq_lfo01_oncc117=1
 lfo02_depth_lfo01=120
 ```
-However, note that the depth modulation is fixed, and not modulated by cc117 like the frequency modulation
-is. This is because having a CC modulate the depth modulation does not appear to be implemented in ARIA.
-It is, however, possible to modulate the depth of a flex envelope with MIDI CC, and then have that envelope
-depth modulate the depth of the secondary LFO. This is, admittedly, very much a kludge, but it appears to
-work.
-```
-lfo02_freq=1
-lfo02_phase_oncc132=0.7
-lfo02_freq_lfo01_oncc117=1
-lfo02_depth_lfo01=120
-eg1_level0_oncc117=1
-eg1_level1_oncc117=1
-eg1_depth_lfo2=100
-```
 For additional complexity, it's also possible to have the random LFO itself modulate pitch,
 which will create some pitch drift, and have more than two LFOs involved. Here is a fairly
 sophisticated example.
@@ -129,15 +115,68 @@ lfo03_phase=0.4
 lfo03_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
 lfo03_freq=0.5
 lfo03_freq_oncc117=-0.4
-lfo03_freq_lfo2_oncc117=1
+lfo03_freq_lfo02_oncc117=1
 lfo03_pitch_oncc117=-4
-
-lfo03_depth_lfo01=144
-lfo02_depth_lfo01=122
+```
+However, note that the depth modulation is fixed, and not modulated by cc117 like the frequency modulation
+is. This is because having a CC modulate the depth modulation does not appear to be implemented in ARIA.
+It is, however, possible to modulate the depth of a flex envelope with MIDI CC, and then have that envelope
+depth modulate the depth of the secondary LFO. This is, admittedly, very much a kludge, but it appears to
+work.
+```
+lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+lfo02_depth_lfo01=120
 eg1_level0_oncc117=1
 eg1_level1_oncc117=1
-eg1_depth_lfo2=100
-eg1_depth_lfo3=100
+eg1_depth_lfo02=100
+```
+However, when the depth of lfo02 is zero, this will effectively also make lfo01's depth zero, so there
+will be no vibrato at all unless cc117 is turned up. Getting around this requires another kludge, which
+is leaving lfo01 with fixed depth and creating yet another LFO for the variable part of the depth.
+```
+//Vibrato
+lfo01_pitch_oncc21=29 //Vibrato LFO
+lfo01_freq=2 //Any slower than this sounds really lousy
+lfo01_freq_oncc112=6 //8 Hz is about as fast as vibrato on cello can go
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+//This LFO also does tremolo
+lfo01_volume_oncc21=1 //Not much - just a subtle effect on volume
+eq1_freq=2200 //EQ band for vibrato
+eq1_bw=2
+lfo01_eq1gain_oncc21=3 //Again, pretty subtle
+
+lfo02_pitch_oncc21=19 //Extra LFO for variable depth, shallower than main and pitch only
+lfo02_freq=2 //Same timing as first LFO
+lfo02_freq_oncc112=6
+lfo02_delay_oncc115=0.500
+lfo02_fade_oncc116=0.500
+
+lfo03_wave=1 //Second LFO to make things wobblier
+lfo03_phase=0
+lfo03_phase_oncc131=0.7 //Phase affected by velocity, to pseudo-randomize while keeping both mics' LFOs in sync
+lfo03_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo03_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo03_pitch=6 //Slight pitch wobbliness
+lfo03_freq_lfo01=1
+lfo03_freq_lfo02=1 //Affect the rate of the vibrato LFOs for unsteady vibrato
+
+lfo04_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo04_phase=0.4
+lfo04_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
+lfo04_freq=0.5
+lfo04_freq_oncc117=-0.4
+lfo04_freq_lfo03=1
+lfo04_pitch=-4
+
+lfo03_depth_lfo02=120
+lfo04_depth_lfo02=120
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo03=100
+eg1_depth_lfo04=100
 ```
 Something similar to the above will work fairly well for a range of strings and voices.
 However, there are cases where vibrato should only go in one direction - for example,
