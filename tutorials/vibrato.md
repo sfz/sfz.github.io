@@ -1,6 +1,7 @@
 ---
 title: Vibrato
 ---
+## Basic LFO vibrato
 Emulating vibrato for solo instruments or voices with LFOs is not difficult. The challenges
 are understanding the key aspects of vibrato on the real instrument, and keeping the number of
 parameters from growing too large to be easy to use. The examples here use SFZ 2 spec [numbered
@@ -18,6 +19,7 @@ lfo01_pitch_oncc111=35
 lfo01_freq=2
 lfo01_freq_oncc112=8
 ```
+## Additional parameters
 In real life, however, players and singers will often start a note without vibrato,
 and add vibrato a fraction of a second later. This is where modulating the [LFO delay parameter][2] becomes useful, and possibly [LFO fade][3] as well. Delay seems like enough for most wind
 instruments and vocals, but having both delay and fade seems effective with bowed strings.
@@ -50,6 +52,7 @@ eq1_bw=2
 lfo01_eq1gain_oncc111=2
 lfo01_eq1freq_oncc111=500
 ```
+## Humanization
 Vibrato can also be humanized, by varying the rate of the vibrato LFO. This can be done
 by modulating the rate of the vibrato LFO with another LFO. The ARIA sample & hold
 [waveform][4] can be used here, and the modulation depth controlled by MIDI CC, so when that's
@@ -178,6 +181,7 @@ eg1_level1_oncc117=1
 eg1_depth_lfo03=100
 eg1_depth_lfo04=100
 ```
+## Asymmetrical vibrato
 Something similar to the above will work fairly well for a range of strings and voices.
 However, there are cases where vibrato should only go in one direction - for example,
 bending guitar strings only moves the pitch upwards, while on saxophone it's possible
@@ -261,7 +265,7 @@ lfo02_volume_oncc113=-3 //Diaphragm vibrato affects volume in the opposite direc
 Humanization and having the diaphragm vibrato affect timbre can be done similarly as with
 the strings above, ensuring both LFOs are humanized in sync with each other, so they do not
 drift apart.
-
+## More special cases
 Some instruments will have vibrato types which require special treatment, for example guitar
 tremolo bridges will bend each string's pitch by a different amount when playing chords. This
 requires different pitch modulation depths for each string. Vibrato can also be used to
