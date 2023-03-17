@@ -154,7 +154,7 @@ lfo02_freq_oncc112=6
 lfo02_delay_oncc115=0.500
 lfo02_fade_oncc116=0.500
 
-lfo03_wave=1 //Second LFO to make things wobblier
+lfo03_wave=1 //Third LFO to make the flrst two LFOs wobblier
 lfo03_phase=0
 lfo03_phase_oncc131=0.7 //Phase affected by velocity, to pseudo-randomize while keeping both mics' LFOs in sync
 lfo03_freq=0.01 //Basically no movement at very slow speeds, just randomization
@@ -163,7 +163,7 @@ lfo03_pitch=6 //Slight pitch wobbliness
 lfo03_freq_lfo01=1
 lfo03_freq_lfo02=1 //Affect the rate of the vibrato LFOs for unsteady vibrato
 
-lfo04_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo04_wave=1 //And a fourth LFO for secondhand complex wobbliness
 lfo04_phase=0.4
 lfo04_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
 lfo04_freq=0.5
@@ -171,8 +171,8 @@ lfo04_freq_oncc117=-0.4
 lfo04_freq_lfo03=1
 lfo04_pitch=-4
 
-lfo03_depth_lfo02=120
-lfo04_depth_lfo02=120
+lfo03_depth_lfo02=100
+lfo04_depth_lfo02=100
 eg1_level0_oncc117=1
 eg1_level1_oncc117=1
 eg1_depth_lfo03=100
