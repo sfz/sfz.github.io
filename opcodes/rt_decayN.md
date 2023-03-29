@@ -25,3 +25,7 @@ In ARIA, extended MIDI CC 151 can be used alongside (or instead of) rt_decay to 
 different release samples for different time ranges. However, CCs have one value
 across the entire instrument. CC 151 is time since the last note-on message in seconds.
 This can give undesired results in arpeggios.
+
+The rt_decayN opcode does have the advantage of not being affected by subsequently played
+notes, but unlike CC 151, it cannot be used to select completely different release
+samples for different time ranges.
