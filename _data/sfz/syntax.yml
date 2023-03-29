@@ -1690,6 +1690,8 @@ categories:
         The volume decrease (in decibels) per seconds after the
         corresponding attack region was triggered, for decrease curve segment number N."
       version: "ARIA"
+      alias:
+      - name: "rt_decayN_time"
       value:
         type_name: "float"
         default: 0
