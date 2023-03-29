@@ -23,7 +23,11 @@ and can use the default value of 0.
 
 ## Practical Considerations
 
-In ARIA, extended MIDI CC 151 can be used alongside (or instead of) rt_decay to select
-different release samples for different time ranges. However, CCs have one value
-across the entire instrument. CC 151 is time since the last note-on message in seconds.
-This can give undesired results in arpeggios.
+In ARIA, extended MIDI CC 151 can be used alongside rt_decay to select different release
+samples for different time ranges. However, CCs have one value across the entire
+instrument. CC 151 is time since the last note-on message in seconds. This can give
+undesired results in arpeggios.
+
+The ARIA extension [rt_decayN] does not allow different release samples to be selected,
+but it does allow different values of the volume decrease rate to be used for different
+time ranges. Unlike CC 151, this is not affected by subsequently played notes.
