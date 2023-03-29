@@ -1675,7 +1675,7 @@ categories:
       short_description:
         "Applies only to regions that triggered through trigger=release.
         The volume decrease (in decibels) per seconds
-        after the note has been attacked."
+        after the corresponding attack region was triggered."
       version: "SFZ v1"
       value:
         type_name: "float"
@@ -1683,7 +1683,28 @@ categories:
         min: 0
         max: 200
         unit: "dB"
-
+        
+    - name: "rt_decayN"
+      short_description:
+        "Applies only to regions that triggered through trigger=release.
+        The volume decrease (in decibels) per seconds after the
+        corresponding attack region was triggered, for decrease curve segment number N."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        default: 0
+        min: 0
+        max: 200
+        unit: "dB"
+        
+    - name: "rt_decayN_time"
+      short_description:
+        "The duration of release sample volume decrease curve segment number N."
+      version: "ARIA"
+      value:
+        type_name: "float"
+        unit: "seconds"
+        
     - name: "xf_cccurve"
       short_description: "MIDI controllers crossfade curve for the region."
       version: "SFZ v1"
