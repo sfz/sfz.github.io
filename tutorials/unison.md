@@ -136,6 +136,12 @@ transpose=-3
 <region>sample=b4.wav key=60 transpose=1
 ```
 
+Note that all of the above assumes the instrument is sampled chromatically; for
+instruments which are sampled at wholetone intervals or diatonically, transposition
+by at least a whole step will be necessary to avoid using the same samples for a
+note. Instruments which are sampled every minor third will need an interval of at
+least a minor third etc.
+
 ## Unison By Transposition
 
 If we put both the original and transposed samples in the same SFZ file, each MIDI
@@ -179,10 +185,12 @@ transpose=-1
 
 For cases where the goal is to emulate overdubbed copies of the same instrument
 with the same timbre, rather than different instruments with different timbres,
-it's still necessary to avoid triggering the same samples. This can be done
-by using different round robins for each simultaneously playing sample. This
-is how guitar multitracking is often emulated. Using one note with four round
-robins as an example:
+it's still necessary to avoid triggering the same samples. For example,
+is how guitar multitracking is typically emulated. This approach also
+works for instruments which are not pitched but it makes sense to layer them,
+for example handclaps. In such cases, unison can be implemented by using
+different round robin samples for each simultaneously playing sample. Using
+one note with four round robins as an example:
 
 ```
 <group>seq_length=4 key=48
