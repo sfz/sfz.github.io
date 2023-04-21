@@ -414,6 +414,17 @@ categories:
 - name: "Converters"
   applications:
 
+  - name: "ConvertWithMoss (Java)"
+    author: "Jürgen Moßgraber"
+    license: "LGPL-3.0-only"
+    url: "https://www.mossgrabers.de/Software/ConvertWithMoss/ConvertWithMoss.html"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Converts multisamples in a specific source format to a different destination format."
+
   - name: "exs2sfz (Python)"
     author: "vonRed"
     license: "ISC"
@@ -423,6 +434,16 @@ categories:
     - name: "macOS"
     - name: "Windows"
     short_description: "EXS24 to SFZ sample library metadata converter."
+
+  - name: "SFZ to HISE Converter"
+    author: "Anders Eklöv"
+    license: "MIT"
+    url: "https://keypleezer.com/sfz-to-hise-converter/"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "Parses and translates/converts SFZ instruments to HISE samplemaps and extracts SFZ opcode data to a JS/JSON object. Runs in a web browser."
 
   - name: "EXS2SFZ"
     author: "Björn Bojahr"
@@ -474,16 +495,6 @@ categories:
     - name: "Windows"
     short_description:
       ""
-      
-  - name: "SFZ to HISE Converter"
-    author: "Anders Eklöv"
-    license: "MIT"
-    url: "https://keypleezer.com/sfz-to-hise-converter/"
-    os:
-    - name: "Linux"
-    - name: "macOS"
-    - name: "Windows"
-    short_description: "Parses and translates/converts SFZ instruments to HISE samplemaps and extracts SFZ opcode data to a JS/JSON object. Runs in a web browser."
 
   - name: "sfz-tools-cli"
     author: "kmturley"
