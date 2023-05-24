@@ -457,6 +457,121 @@ ampeg_vel2attack=-0.43
 #include "mappings/t2/ord_sus_map.sfz"
 ```
 
+## Releases
+
+Implementing release samples with unison requires a little extra effort. It's easiest
+to simply implement releases for the center voice only, but even then it's necessary
+to be careful to avoid triggering too many release samples.
+
+At least in ARIA and Sforzando, a note-on event which triggers multiple regions
+(for example a multimic instrument, or one with simulated unison) will have multiple
+corresponding regions for the release region, causing the release region to be triggered
+multiple times. With seven mics and a separate release for each mic, this would mean a
+key release would trigger a total of 49 samples if not controlled with note_polyphony.
+However, setting note_polyphony=1 and giving each mic a different group number solves this.
+There's no need tu use off_by with the release groups.
+
+An example with releases only for the center voice:
+
+```
+<global>
+//Basic global stuff shared by all voices
+ampeg_release=0.25
+off_mode=normal
+
+//Center voice
+<master>
+
+//Sustains
+<group>
+#include "mappings/ord_sus_map.sfz"
+
+//Releases
+<group>
+trigger=release
+group=501
+note_polyphony=1
+#include "mappings/ord_rel_map.sfz"
+
+
+<master>
+//Left voice using sample maps transposed by a half-step
+//Pan control not used in the central voice
+pan_oncc101=-100
+
+//Sustains
+<group>
+#include "mappings/t1/ord_sus_map.sfz"
+
+<master>
+//Right voice using sample maps transposed by a whole step
+//Pan control not used in the central voice
+pan_oncc101=100
+
+//Sustains
+<master>
+#include "mappings/t2/ord_sus_map.sfz"
+```
+
+With releases for all voices, just use a different group number for each voice's
+releases, like this example:
+
+```
+<global>
+//Basic global stuff shared by all voices
+ampeg_release=0.25
+off_mode=normal
+
+//Center voice
+<master>
+
+//Sustains
+<group>
+#include "mappings/ord_sus_map.sfz"
+
+//Releases
+<group>
+trigger=release
+group=501
+note_polyphony=1
+#include "mappings/ord_rel_map.sfz"
+
+
+<master>
+//Left voice using sample maps transposed by a half-step
+//Pan control not used in the central voice
+pan_oncc101=-100
+
+//Sustains
+<group>
+#include "mappings/t1/ord_sus_map.sfz"
+
+//Releases
+<group>
+trigger=release
+group=502
+note_polyphony=1
+#include "mappings/t1/ord_rel_map.sfz"
+
+
+<master>
+//Right voice using sample maps transposed by a whole step
+//Pan control not used in the central voice
+pan_oncc101=100
+
+//Sustains
+<master>
+#include "mappings/t2/ord_sus_map.sfz"
+
+//Releases
+<group>
+trigger=release
+group=503
+note_polyphony=1
+#include "mappings/t2/ord_rel_map.sfz"
+
+```
+
 ## Round Robin Neighbor Borrowing
 
 Although not a method of achieving unison, round robin neighbor borrowing
