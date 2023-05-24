@@ -71,6 +71,13 @@ samples which are noises not dependent on the volume of any corresponding note, 
 as hurdy-gurdy key returns, which will sound the same whether the wheel is turning
 or not.
 
+Note that at least in ARIA and Sforzando, a note-on event which triggers multiple regions
+(for example a multimic instrument, or one with simulated unison) will have multiple
+corresponding regions for the release region, causing the release region to be triggered
+multiple times. With seven mics and a separate release for each mic, this would mean a
+key release would trigger a total of 49 samples if not controlled with [note_polyphony].
+However, setting note_polyphony=1 and giving each mic a different [group] number solves this.
+
 [//]: # TODO: the following is currently a 404, can we recover the content?
 [//]: #
 [//]: # More detail about release sample behavior in different SFZ players can be found at
