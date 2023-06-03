@@ -1,11 +1,12 @@
 {%-assign opcode_value_default = "N/A"-%}
-		{%-if include.opcode.deprecated-%}
-		<tr style="background-color:lightpink;">
-		{%-else-%}
 		<tr>
+		{%-if include.opcode.deprecated-%}
+			{%- assign td = "<td class='table-danger'>"-%}
+		{%-else-%}
+			{%- assign td = "<td>"-%}
 		{%-endif-%}
 			<td class="{{ include.category.id }}"><span style="display:none">{{ include.category.name }}</span></td>
-			<td>{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.opcode-%}</td>
+			{{ td }}{%-include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.opcode-%}</td>
 		{%-if include.type == "alias"-%}
 			<td>{% include sfz/functions/getOpcodeUrlAsHtml.liquid opcode=include.parent %} alias.</td>
 			<td>{{ include.parent.value.type_name }}</td>
