@@ -7,10 +7,10 @@ $scrollbutton-color:      rgba(0, 0, 0, 0.5);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-table/dist/bootstrap-table.css";
-@import "highlightjs";
+@import "docs";
 
 /* Mimic Bootstrap tables for markdown tables only
-   from bootstrap/scss/_variables:
+   from bootstrap/scss/_variables: */
 
 $white:    #fff !default;
 $gray-300: #dee2e6 !default;
@@ -26,7 +26,7 @@ $border-width:                1px !default;
 
 $table-accent-bg:             rgba($black, .05) !default;
 $table-striped-order:         odd !default;
-*/
+
 $table-dark-bg:               #222;
 
 table {
@@ -46,13 +46,10 @@ thead > tr > th {
 tbody tr:nth-child(#{$table-striped-order}) {
 	background-color: $table-accent-bg;
 }
-/*
 pre {
-	padding: 0.5rem 0.75rem;
 	border: 2px solid rgba($black, .2);
 	border-radius: 0.50rem;
 }
-*/
 #scrollButton {
 	display: none;
 	position: fixed;
@@ -92,4 +89,15 @@ blockquote:before {
   font-size: x-large;
   color: $body-color;
   text-align: center;
+}
+$color-mode-type: data;
+@include color-mode(light) {
+  h1, h2, h3 {
+    color: $blue;
+  }
+}
+@include color-mode(dark) {
+  h1, h2, h3 {
+    color: $gray-300;
+  }
 }

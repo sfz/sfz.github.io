@@ -19,6 +19,7 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 	exit 0
 fi
 
+# Install or update ruby and yarn packages
 if [ ! -d "node_modules" ] || [ "$1" == "-i" ] || [ "$1" == "--install" ]; then
 	gem update
 	gem install bundler
@@ -26,10 +27,12 @@ if [ ! -d "node_modules" ] || [ "$1" == "-i" ] || [ "$1" == "--install" ]; then
 	yarn --no-bin-links
 fi
 
+# Rebuild minimized assets
 if [ ! -f "assets/css/style.min.css" ] || [ "$1" == "-a" ] || [ "$1" == "--assets" ]; then
 	yarn dist
 fi
 
+# Enable Jekyll incremental build
 if [ "$1" == "-I" ] || [ "$1" == "--incremental" ]; then
 	incremental="-I"
 fi
