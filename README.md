@@ -4,15 +4,15 @@
 
 The website is built using the following software and technologies:
 
-- [Bootstrap] UI toolkit, MIT license 
+- [Bootstrap] UI toolkit, code under MIT license, docs under [Creative Commons]
 - [Favicon Generator] for favicons
 - [Font Awesome] for icons, [SIL OFL 1.1] license
-- [highlight.js], for syntax highlighting, BSD 3-Clause license
-- [Jekyll] static website generator, MIT license 
+- [highlight.js] for syntax highlighting, BSD 3-Clause license
+- [Jekyll] static website generator, MIT license
 - [jekyll-anchor-headings] by [Alleyo], for anchors headings, MIT license
 - [Markdown] markup language
 - [Node.js] to compile all static assets, including the Bootstrap library, [see license]
-- [SASS] for stylesheets, MIT license 
+- [SASS] for stylesheets, MIT license
 
 ## Local Build Quick-start Guide
 
@@ -59,18 +59,19 @@ $ ./new_post.sh "New post title" "<author_name>"
   <span property="dct:title">sfz format website</span>.
 </p>
 
-[Alleyo]:                 https://pure-liquid.allejo.org/
 [SFZ Format]:             https://sfzformat.github.io/
-[Bootstrap]:              http://getbootstrap.com/
+[Alleyo]:                 https://pure-liquid.allejo.org/
+[Bootstrap]:              https://getbootstrap.com/
+[Creative Commons]:       https://creativecommons.org/licenses/by/3.0/
 [Favicon Generator]:      https://realfavicongenerator.net/
-[Font Awesome]:           http://fontawesome.io/
+[Font Awesome]:           https://fontawesome.io/
 [front-matter]:           https://jekyllrb.com/docs/front-matter/
-[Jekyll]:                 http://jekyllrb.com/
+[highlight.js]:           https://highlightjs.org/
+[Jekyll]:                 https://jekyllrb.com/
 [jekyll-anchor-headings]: https://github.com/allejo/jekyll-anchor-headings/
 [Markdown]:               https://daringfireball.net/projects/markdown/
-[Node.js]:                http://nodejs.org/
+[Node.js]:                https://nodejs.org/
 [_posts]:                 https://github.com/sfzformat/sfzformat.github.io/tree/source/_posts/
 [SASS]:                   https://sass-lang.com/
-[highlight.js]:           https://highlightjs.org/
 [see license]:            https://github.com/nodejs/node/blob/main/LICENSE
 [SIL OFL 1.1]:            https://scripts.sil.org/cms/scripts/page.php?item_id=OFL
