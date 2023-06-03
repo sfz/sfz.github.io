@@ -5,8 +5,8 @@ no_title_header: true
 ### Welcome to SFZFormat.com!
 
 <div
-  markdown="1" class="jumbotron p-4 mb-3"
-  class="h-100 p-5 bg-body-tertiary border rounded-3"
+  markdown="1"
+  class="h-100 p-5 mb-3 bg-body-tertiary border rounded-3"
 >
 
 This is the main reference point for anyone who wants to create virtual musical
