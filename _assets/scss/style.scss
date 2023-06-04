@@ -1,12 +1,7 @@
-$dark: #161b22 !default;
-
+@import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-table/dist/bootstrap-table.css";
 @import "docs";
-
-$scrollbutton-bg:       rgba(255, 255, 255, 0.5);
-$scrollbutton-bg-hover: rgba(255, 255, 255, 0.8);
-$scrollbutton-color:    rgba(0, 0, 0, 0.5);
 
 pre {
 	border: 2px solid rgba($black, .2);
@@ -55,15 +50,15 @@ blockquote:before {
 $color-mode-type: data;
 @include color-mode(light) {
 	h1, h2, h3 {
-		color: #161b22;
+		color: $body-color;
 	}
-	--bs-body-bg:    $white;
-	--bs-body-color: $gray-900;
+	--bs-body-bg:    $body-bg;
+	--bs-body-color: $body-color;
 }
 @include color-mode(dark) {
 	h1, h2, h3 {
-		color: $gray-300;
+		color: $body-color-dark;
 	}
-	--bs-body-bg:    #0d1117;
-	--bs-body-color: #c9d1d9;
+	--bs-body-bg-dark:    $body-bg-dark;
+	--bs-body-color-dark: $body-color-dark;
 }
