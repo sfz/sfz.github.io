@@ -1,5 +1,5 @@
-{% for card in site.data.locale[page.lang].layout.cards %}
-						<div class="card border-dark mb-3">
+					{%- for card in site.data.locale[page.lang].layout.cards %}
+						<div class="card mb-3">
 							<div class="card-header bg-dark text-bg-dark">
 								<i class="{{ card.icon_category }} fa-{{ card.icon_type }}"
 									aria-hidden="true"></i>
@@ -7,12 +7,12 @@
 							</div>
 							<div class="card-body" style="padding: 0.5rem">
 								<ul class="nav nav-pills flex-column">
-	{% for item in card.links %}
-		{%-if item.title-%}
-			{%-assign item_title = item.title-%}
-		{%-else-%}
-			{%-assign item_title = item.label-%}
-		{%-endif-%}
+								{%- for item in card.links %}
+									{%- if item.title %}
+										{%- assign item_title = item.title %}
+									{%- else %}
+										{%- assign item_title = item.label %}
+									{%- endif %}
 									<li class="nav-item">
 										<a class="nav-link" href="{{ item.url }}"
 											title="{{ item_title }}" style="padding: 0.35rem 0.25rem">
@@ -20,8 +20,8 @@
 										aria-hidden="true"></i>
 										{{ item.label }}</a>
 									</li>
-	{% endfor %}
+								{%- endfor %}
 								</ul>
 							</div>
 						</div>
-{% endfor %}
+					{%- endfor %}
