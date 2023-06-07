@@ -12,9 +12,9 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 	echo "Usage: ${script_name} [option]"
 	echo ""
 	echo "Options are not mandatory, only one at a time."
-	echo "-a, --assets      Build minimized css style and js script from sources."
-	echo "-i, --install     Install Bundler and node modules using Yarn."
-	echo "-I, --incremental Runs Jekyll in incremental mode."
+	echo "-a, --assets    Build minimized css style and js script from sources."
+	echo "-i, --install   Install Bundler and node modules using Yarn."
+	echo "-n, --normal    Runs Jekyll in normal, non incremental mode."
 	echo ""
 	exit 0
 fi
@@ -32,8 +32,10 @@ if [ ! -f "assets/css/style.min.css" ] || [ "$1" == "-a" ] || [ "$1" == "--asset
 	yarn dist
 fi
 
-# Enable Jekyll incremental build
-if [ "$1" == "-I" ] || [ "$1" == "--incremental" ]; then
+# Enable Jekyll incremental build by default
+if [ "$1" == "-n" ] || [ "$1" == "--normal" ]; then
+	incremental=
+else
 	incremental="-I"
 fi
 
