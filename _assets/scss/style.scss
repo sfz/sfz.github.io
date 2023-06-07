@@ -2,7 +2,27 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-table/dist/bootstrap-table.css";
 @import "docs";
-
+/*
+	Mimic Bootstrap tables for markdown tables
+	from bootstrap/scss/_variables:
+*/
+table {
+	width:100%;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+thead > tr > th, tbody > tr > td {
+	text-align: left;
+	padding: 5px 10px;
+	border: $border-width solid $border-color;
+}
+thead > tr > th {
+	color: $light;
+	background-color: $dark;
+}
+tbody tr:nth-child(#{$table-striped-order}) {
+	background-color: $table-accent-bg;
+}
 pre {
 	border: 2px solid rgba($black, .2);
 	border-radius: 0.50rem;
