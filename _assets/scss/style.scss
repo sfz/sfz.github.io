@@ -24,7 +24,8 @@ tbody tr:nth-child(#{$table-striped-order}) {
 	background-color: $table-accent-bg;
 }
 pre {
-	border: 2px solid rgba($black, .2);
+	border-width:  2px;
+	border-style:  solid;
 	border-radius: 0.50rem;
 }
 #scrollButton {
@@ -69,16 +70,14 @@ blockquote:before {
 }
 $color-mode-type: data;
 @include color-mode(light) {
-	h1, h2, h3 {
-		color: $body-color;
-	}
-	--bs-body-bg:    $body-bg;
-	--bs-body-color: $body-color;
+	h1, h2, h3 { color:   $body-color }
+	pre { border-color:   $border-color }
+	--bs-body-bg:         $body-bg;
+	--bs-body-color:      $body-color;
 }
 @include color-mode(dark) {
-	h1, h2, h3 {
-		color: $body-color-dark;
-	}
+	h1, h2, h3 { color:   $body-color-dark }
+	pre { border-color:   $gray-800 }
 	--bs-body-bg-dark:    $body-bg-dark;
 	--bs-body-color-dark: $body-color-dark;
 }
