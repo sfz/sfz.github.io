@@ -11,9 +11,11 @@ It can be set anywhere, not just under the ‹[group]› header.
 group_label=Edge
 ```
 
-{%include img-fluid.liquid
-  img="/assets/img/opcodes/labels.jpg"
-  alt="group_label example image"%}
+<img
+  class="img-fluid"
+  alt="group_label example image"
+  src="./../assets/img/opcodes/labels.jpg"
+/>
 
 
 [group]: {{ '/headers/group' | relative_url }}

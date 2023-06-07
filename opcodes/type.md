@@ -48,8 +48,11 @@ controlling its parameters. Here is a list of what is currently known.
 
 The effect routing logic in Rapture is as follows:
 
-<img src="{{ '/assets/img/effect/routing.svg' | relative_path }}"
-	class="img-fluid" alt="Effect routing image">
+<img
+  class="img-fluid"
+  alt="Effect routing image"
+  src="./../assets/img/effect/routing.svg"
+/>
 
 ### apan
 Automatic panning with LFO:
@@ -193,4 +196,4 @@ ones. For example, `autopan` does not appear to work in any Cakewalk product, wh
 
 [custom curves]: {{ '/headers/curve' | relative_url }}
 [‹effect›]:      {{ '/headers/curve' | relative_url }}
-[param_offset]: param_offset
+[param_offset]:  param_offset
