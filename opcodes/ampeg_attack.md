@@ -29,6 +29,8 @@ $$ x_{n+1} = \mu \times x_{n}. $$
 Here is a screenshot of a file output using Sforzando, showing the
 ampeg_envelope shape and its stages.
 
-{%include img-fluid.liquid
-  img="/assets/img/ampeg_env.jpg"
-  alt="DAHDSR envelope shape image"%}
+<img
+  class="img-fluid"
+  alt="DAHDSR envelope shape image"
+  src="./../assets/img/ampeg_env.jpg"
+/>

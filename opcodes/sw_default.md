@@ -25,9 +25,11 @@ used to select an articulation.
 <region> sw_last=40 sw_label=Saw lokey=41 sample=*saw
 ```
 
-{%include img-fluid.liquid
-  img="/assets/img/opcodes/sw_label.jpg"
-  alt="sw_label example image"%}
+<img
+  class="img-fluid"
+  alt="sw_label example image"
+  src="./../assets/img/opcodes/sw_label.jpg"
+/>
 
 ## Practical Considerations
 
