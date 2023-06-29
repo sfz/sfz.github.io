@@ -39,6 +39,13 @@ categories:
     short_description:
       "Fully-featured audio plugin host, with support for many audio drivers and plugin formats."
 
+  - name: "Grace"
+    author: "Shannon Oram"
+    license: "MIT"
+    url: "https://github.com/s-oram/Grace/"
+    os:
+    - name: "Windows"
+
   - name: "liquidsfz"
     author: "Stefan Westerfeld"
     license: "LGPL-2.1"
@@ -103,14 +110,18 @@ categories:
       and custom event sequences, using SF2 soundfonts and/or SFZ to provide
       the sounds. MIDI input is also supported."
 
-  - name: "Grace"
-    author: "Shannon Oram"
-    license: "MIT"
-    url: "https://github.com/s-oram/Grace/"
+  - name: "HighLife"
+    author: "discoDSP"
+    license: "Freeware"
+    url: "https://www.discodsp.com/highlife/"
     os:
+    - name: "Linux"
+    - name: "macOS"
     - name: "Windows"
     short_description:
-      ""
+      "A sampler with integrated effects and wave editor,
+      with support for WAV, MP3, OGG, RAW, FLAC, SND (Akai MPC 2000)
+      and even AKP (Akai S5000/S6000) audio formats."
 
   - name: "sforzando"
     author: "Plogue"
@@ -165,7 +176,8 @@ categories:
     - name: "macOS"
     - name: "Windows"
     short_description:
-      ""
+      "An UI themable sampler and wave editor in VST2/3 and AU audio plugin format
+      with selectable high quality interpolation and integrated effects."
 
   - name: "Samplelord"
     author: "Wlodzimierz Grabowski"
