@@ -571,6 +571,17 @@ note_polyphony=1
 #include "mappings/t2/ord_rel_map.sfz"
 
 ```
+When using releases with round robins, it can be tricky to make the release sample
+round robin counter advance correctly. When there are 2 "matching" samples playing,
+ARIA appears to advance the counter for the releases by 2, and if there are 4
+release round robins, only 2 of them will actually be used. One workaround for that
+is triggering an extra region of silence to make the round robin counter advance by
+3, but this will only work if the number of regions is consistent and predictable.
+
+With instruments that have release samples with a number of microphone positions
+or organ stops, any of which could be on or off, the total number of matching
+regions is very difficult to assess, and it's far easier to use lorand/hirand to
+select the release samples instead.
 
 ## Round Robin Neighbor Borrowing
 
