@@ -16,6 +16,8 @@ Values can be:
 
 ## Practical Considerations
 
+This entire section is dedicated to release triggers, which can get quite complex.
+
 Setting trigger to release or release_key will cause the region to play as if
 [loop_mode] was set to **one_shot**.
 
@@ -78,10 +80,16 @@ multiple times. With seven mics and a separate release for each mic, this would 
 key release would trigger a total of 49 samples if not controlled with [note_polyphony].
 However, setting note_polyphony=1 and giving each mic a different [group] number solves this.
 
-[//]: # TODO: the following is currently a 404, can we recover the content?
-[//]: #
-[//]: # More detail about release sample behavior in different SFZ players can be found at
-[//]: # https://github.com/kinwie/sfztest/wiki/How-Release-Trigger-Works-in-SFZ
+When using releases with round robins and multiple voices, it can be tricky to make
+the release sample round robin counter advance correctly. When there are 2 matching
+regions playing, ARIA appears to advance the counter for the releases by 2, and if
+there are 4 release round robins, only 2 of them will actually be used. One workaround
+for that is triggering an extra region of silence to make the round robin counter
+advance by 3, but this will only work if the number of regions is consistent and
+predictable. With instruments that have release samples with a number of microphone
+positions or organ stops, any of which could be on or off, the total number of matching
+regions is very difficult to assess, and it's far easier to use lorand/hirand to
+select the release samples instead.
 
 [on_loccN / on_hiccN] effectively replace the default trigger=attack,
 as it is used for regions which are to be triggered by MIDI CC messages and not MIDI
