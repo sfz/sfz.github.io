@@ -13,7 +13,7 @@ delay=0.03
 sample=snare2.wav
 ```
 ## Basic Guitar Chord Strum
-Here is how a open E major chord could be triggered with a single key:
+Here is how an open E major chord could be triggered with a single key:
 ```
 <group>
 key=40
