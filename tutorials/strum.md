@@ -101,8 +101,7 @@ The free Emilyguitar instrument located at https://github.com/sfzinstruments/kar
 strum patch with keyswitchable power chords, major barre chords and minor barre chords. It has downward strums only
 with a very short strum time. However, it is not well-organized and not at all commented, its patches being just
 output from sfzed. Somewhat more organized and including power chords (which are simply the lowest three strings of
-the barre chord), our E chord might look
-like this:
+the barre chord), our E chord might look like this:
 ```
 <global>
 sw_lokey=36
@@ -286,10 +285,86 @@ sample=b4.wav
 delay_cc1=1
 sample=e6.wav
 ```
-## Harps, Lyres And Zithers
-Harp glissandi could be set up very similarly to the above, only with more notes. For simplicty's sake,
-let's consider just one octave. Speed is still controlled by CC1, and MIDI note 24 will trigger an
-upward glissando starting with the C4 note.
+## Ringing And Muting
+With the above examples, the samples will play until a note-off message, then follow the usual amp
+envelope release. In reality, the strings will often ring until the string is hit again, and it
+can be more convenient to have the samples always play in their entirety unless muted:
+```
+<global>
+loop_mode=one_shot
+<group>
+key=40
+<region>
+sample=e4.wav
+group=6
+off_by=6
+<region>
+delay_cc1=0.2
+sample=b4.wav
+group=5
+off_by=5
+<region>
+delay_cc1=0.4
+sample=e5.wav
+group=4
+off_by=4
+<region>
+delay_cc1=0.6
+sample=g#4.wav
+group=3
+off_by=3
+<region>
+delay_cc1=0.8
+sample=b4.wav
+group=2
+off_by=2
+<region>
+delay_cc1=1
+sample=e6.wav
+group=1
+off_by=1
+```
+Note that a new strum will mute all strings, without waiting for their delay for that specific string to be completed.
+There is currently no known solution for this, though using a longer off time could be a possible workaround. On the
+positive side, a partial strum that does not hit all the strings would let the other strings keep ringing.
+
+If one shot mode is used, it's probably also useful to allow for quickly muting all strings when desired. That can be
+done with a placeholder region for each string, and combining those regions on another key, here one above the
+octave of the strums.
+```
+<group>
+key=60
+ampeg_sustain=0
+ampeg_release=0
+<region>
+sample=*silence
+group=6
+off_by=6
+<region>
+sample=*silence
+group=5
+off_by=5
+<region>
+sample=*silence
+group=4
+off_by=4
+<region>
+sample=*silence
+group=3
+off_by=3
+<region>
+sample=*silence
+group=2
+off_by=2
+<region>
+sample=*silence
+group=1
+off_by=1
+```
+## Harp Glissandi
+Harp glissandi could be set up very similarly to a guitar strum, only with potentially a lot more notes.
+For simplicty's sake, let's consider just one octave. Speed is still controlled by CC1, and MIDI note
+24 will trigger an upward glissando starting with the C4 note.
 ```
 <group>
 key=24
@@ -356,14 +431,20 @@ This is essentially how a harp glissando on a folk harp operates. Concert harps 
 allow the retuning of strings to allow playing other scales, and this would need to be implemented,
 perhaps with a different MIDI CC for each pitch class. Strumming the drone strings on a Hungarian
 zither also works essentially as described here.
-
+## Lyres And Zithers
 Many folk lyres, guslis etc. are tuned diatonically and chords on those are played by muting some
 strings, and strumming across both the open and muted strings. Keyswitches in another octave could
 be added to mute the strings, so that samples are only played when the switch matching that string is
-down.
+down. This basically works like a harp gliss, but the samples for the muted strings are not played.
 
 The keyswitches will not be displayed on the keyboard by most sfz players, so it will also likely
 be necessary to add some placeholder regions just to make them display.
+
+It's also common to strum across fewer than all the strings; this is basically what the power
+chord in the above guitar examples is. Instead of keyswitching, it is also possible to have partial
+strums on different keys (though this can easily require more keys than an 88-key keyboard),
+or selectable by CC, note velocity and possibly other variables as well. The below example uses
+CC4 to control how many strings are strummed.
 ```
 <group>
 key=24
