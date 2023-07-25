@@ -362,11 +362,6 @@ strings, and strumming across both the open and muted strings. Keyswitches in an
 be added to mute the strings, so that samples are only played when the switch matching that string is
 down.
 
-Although muting the strings for the keyswitches which are up and skipping the strings where the
-switch is down would be more analogous to the way the instruments are played in real life, this
-sort of "negative space" chord fingering is much more awkward for most composers to play on a
-keyboard.
-
 The keyswitches will not be displayed on the keyboard by most sfz players, so it will also likely
 be necessary to add some placeholder regions just to make them display.
 ```
@@ -434,6 +429,11 @@ key=47
 key=48
 ```
 For more realism, muted samples could be triggered for the strings which are not down.
+Although muting the strings for the keyswitches which are up and skipping the strings where the
+switch is down would be more analogous to the way the instruments are played in real life, this
+sort of "negative space" chord fingering is much more awkward for most users to play on a keyboard.
+It could easily be accomplished by merely switching the sw_up and sw_down opcodes in the below
+example.
 ```
 <group>
 key=24
@@ -539,8 +539,20 @@ key=47
 <region>
 key=48
 ```
-## Chromatic Strumming On Diatonic Lyres
+## Chromatic Strumming On Diatonic Instruments
 The cithara barbarica instrument at https://github.com/sfzinstruments/cithara-barbarica has a patch like this.
+It simply duplicates each string's regions to cover the "missing" pitches. This works fine as long as there are
+no muted samples used for the stopped strings, and having a muted string sound every half-step would not be
+idiomatic for instruments other than the very rare chromatic gusli.
+
+One way to have muted sounds while playing chromatically would be to always trigger a muted sound for whatever
+the "real" pitch of each string should be, but have it instantly muted if a pitch in that string's range is
+played. This is not great, as the muted sound would be a half-step off, but as the muted strings are shortened
+and produce a higher pitch anyway, it might be tolerable. Need an example here.
+
+A more realistic way to handle this would be to have a MIDI CC for each string to set its tuning, so for example
+the C string could sound a B or C# note, like on a concert harp with pedals. However, this is probably not very
+convenient for most players who would rather hit a B note to sound a B.
 ## Further Possibilities
 In reality, a strum will transfer force to the first strings it hits, and subsequent strings will
 be hit with a little less force, and the delay between strings might also be nonlinear.
