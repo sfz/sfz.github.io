@@ -309,6 +309,16 @@ categories:
         max: 4294967296
         unit: "sample units"
 
+    - name: "offset_mode"
+      short_description: "Defines whether offset is measured in samples or percentage of sample length."
+      version: "ARIA"
+      value:
+        type_name: "string"
+        default: "samples"
+        options:
+        - name: "samples"
+        - name: "percent"
+        
     - name: "sample"
       short_description: "Defines which sample file the region will play."
       version: "SFZ v1"
