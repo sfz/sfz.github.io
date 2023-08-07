@@ -3897,15 +3897,6 @@ categories:
         type_name: "float"
         default: 0
 
-    - name: "egN_dynamic"
-      short_description: "Specifies when envelope durations are recalculated."
-      version: "ARIA"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 1
-
     - name: "egN_curveX"
       short_description:
         "Instructs the player to use a curve shape defined under a curve header
