@@ -114,6 +114,7 @@ These are 6-points Delay-Attack-Hold-Decay-Sustain-Release.
 - [(eg type)_delay]
 - [(eg type)_delay_oncc]
 - [(eg type)_depth]
+- [(eg type)_dynamic]
 - [(eg type)_hold]
 - [(eg type)_hold_oncc]
 - [(eg type)_release]
@@ -135,6 +136,7 @@ Flexible EG can have as many points as needed. level and time for each point is
 set accordingly.
 
 - [egN_curveX]
+- [egN_dynamic]
 - [egN_levelX]
 - [egN_levelX_onccY]
 - [egN_loop]
@@ -189,6 +191,7 @@ with an envelope depth of 2400 cents.
 [(eg type)_delay]:        {{ '/opcodes/ampeg_delay' | relative_url }}
 [(eg type)_delay_oncc]:   {{ '/opcodes/ampeg_delay' | relative_url }}
 [(eg type)_depth]:        {{ '/opcodes/fileg_depth' | relative_url }}
+[(eg type)_dynamic]:      {{ '/opcodes/ampeg_dynamic' | relative_url }}
 [(eg type)_hold]:         {{ '/opcodes/ampeg_hold' | relative_url }}
 [(eg type)_hold_oncc]:    {{ '/opcodes/ampeg_hold' | relative_url }}
 [(eg type)_release]:      {{ '/opcodes/ampeg_release' | relative_url }}
@@ -204,6 +207,7 @@ with an envelope depth of 2400 cents.
 [(eg type)_vel2release]:  {{ '/opcodes/ampeg_vel2release' | relative_url }}
 [(eg type)_vel2sustain]:  {{ '/opcodes/ampeg_vel2sustain' | relative_url }}
 [egN_curveX]:             {{ '/opcodes/egN_curveX' | relative_url }}
+[egN_dynamic]:            {{ '/opcodes/egN_dynamic' | relative_url }}
 [egN_levelX]:             {{ '/opcodes/egN_levelX' | relative_url }}
 [egN_levelX_onccY]:       {{ '/opcodes/egN_levelX' | relative_url }}
 [egN_loop]:               {{ '/opcodes/egN_loop' | relative_url }}
