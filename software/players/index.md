@@ -16,7 +16,7 @@ as "software to be freely used, modified, and shared."
 ## Supported Opcodes
 
 Below are the known links to the various lists of supported opcodes:\
-[BassMIDI], [Bitwig], [Equator 2], [HISE], [LinuxSampler], [liquidsfz],
+[BassMIDI], [Bitwig], [HISE], [LinuxSampler], [liquidsfz],
 [OpenMPT], [sfizz] and [zerberus] (MuseScore <= v3.6.2).
 
 {% include sfz/software-table-generator.liquid %}
@@ -24,10 +24,10 @@ Below are the known links to the various lists of supported opcodes:\
 
 ## No longer available
 
-- Cakewalk [sfz] (backup on web.archive.org)
 - Alchemy (Camel Audio was acquired by Apple,
   and the current incarnation of Alchemy no longer supports SFZ.)
-
+- Cakewalk [sfz] (backup on web.archive.org)
+- Equator 2 (per [Equator 2 FAQ], "SFZ import is not currently supported")
 
 [ARIA extensions]: {{ '/opcodes/?v=aria' | relative_url }}
 [SFZ v1]:          {{ '/opcodes/?v=1' | relative_url }}
@@ -36,7 +36,7 @@ Below are the known links to the various lists of supported opcodes:\
 [sfz]: https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
 [BassMIDI]:     https://www.un4seen.com/doc/#bassmidi/BASS_MIDI_FontInit.html
 [Bitwig]:       https://github.com/sfzformat/sfzformat.github.io/pull/48#issuecomment-731244523
-[Equator 2]:    https://github.com/sfzformat/sfzformat.github.io/wiki/Player-Equator2
+[Equator 2 FAQ]: https://support.roli.com/support/solutions/articles/36000255935-equator2-faqs#Can-I-import-my-own-samples-or-wavetable-files-into-Equator2?
 [HISE]:         https://github.com/christophhart/HISE/blob/master/hi_sampler/sampler/SfzImporter.h#L47
 [LinuxSampler]: http://linuxsampler.org/sfz/
 [liquidsfz]:    https://github.com/swesterfeld/liquidsfz/blob/master/OPCODES.md
