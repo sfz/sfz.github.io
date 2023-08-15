@@ -285,6 +285,43 @@ sample=b4.wav
 delay_cc1=1
 sample=e6.wav
 ```
+It would also be easy to add a small random delay to each voice. However, because delay is not an
+available target for the var modulator, it is not possible to have an adjustable amount of
+randomization, or make the random amount smaller when the CC adjusting the non-random delay is low.
+This means adding a simple delay_random to each voice would create the risk of "earlier" notes
+actually sounding after "later" ones when the non-random delay is close to zero. However, making
+the delay partially fixed and partially adjustable avoids this.
+```
+<group>
+key=40
+<region>
+sample=e4.wav
+<region>
+delay=0.01
+delay_cc1=0.2
+delay_random=0.01
+sample=b4.wav
+<region>
+delay=0.02
+delay_cc1=0.4
+delay_random=0.01
+sample=e5.wav
+<region>
+delay=0.03
+delay_cc1=0.6
+delay_random=0.01
+sample=g#4.wav
+<region>
+delay=0.04
+delay_cc1=0.8
+delay_random=0.01
+sample=b4.wav
+<region>
+delay=0.05
+delay_cc1=1
+delay_random=0.01
+sample=e6.wav
+```
 ## Ringing And Muting
 With the above examples, the samples will play until a note-off message, then follow the usual amp
 envelope release. In reality, the strings will often ring until the string is hit again, and it
@@ -325,8 +362,9 @@ group=1
 off_by=1
 ```
 Note that a new strum will mute all strings, without waiting for their delay for that specific string to be completed.
-There is currently no known solution for this, though using a longer off time could be a possible workaround. On the
-positive side, a partial strum that does not hit all the strings would let the other strings keep ringing.
+There is currently elegant solution known for this. Using a longer off time or triggering a release sample could be 
+possible workarounds to fill the sonic gap, though. On the positive side, a partial strum that does not hit all the
+strings would let the other strings keep ringing.
 
 If one shot mode is used, it's probably also useful to allow for quickly muting all strings when desired. That can be
 done with a placeholder region for each string, and combining those regions on another key, here one above the
