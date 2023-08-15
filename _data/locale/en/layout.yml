@@ -85,6 +85,9 @@ navigation:
 
   - label: "Pitch LFO Examples"
     url: "/tutorials/lfo"
+
+  - label: "Strumming"
+    url: "/tutorials/strum"
   -
   - label: "Video Tutorials"
     url: "/tutorials/videos"
