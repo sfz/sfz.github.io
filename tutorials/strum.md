@@ -3,8 +3,8 @@ title: Strums
 ---
 Strumming can be difficult to produce with samples. SFZ does have some capabilities to make it a little easier.
 
-Creating a strum by triggering several single-string samples with some of them delayed slightly. Similar but even
-simpler is a drum flam, which is two drum hits in rapid succession.
+Creating a strum is basically triggering several single-string samples with some of them delayed slightly.
+Similar but even simpler is a drum flam, which is two drum hits in rapid succession.
 ```
 <region>
 sample=snare1.wav
@@ -629,11 +629,72 @@ idiomatic for instruments other than the very rare chromatic gusli.
 One way to have muted sounds while playing chromatically would be to always trigger a muted sound for whatever
 the "real" pitch of each string should be, but have it instantly muted if a pitch in that string's range is
 played. This is not great, as the muted sound would be a half-step off, but as the muted strings are shortened
-and produce a higher pitch anyway, it might be tolerable. Need an example here.
+and produce a higher pitch anyway, it seems to work well enough.
+```
+<group>
+key=26
 
+//Muted regions, each with its own group and off_by
+
+<region>
+sample=d4_muted.wav
+group=11
+off_by=21
+
+<region>
+sample=e4_muted.wav
+group=12
+off_by=22
+delay_cc1=0.100
+
+<region>
+sample=f4_muted.wav
+group=13
+off_by=23
+delay_cc1=0.200
+
+//Non-muted regions, with groups that will mute the above regions if one of the keys covered by that sample is held down
+
+<region>
+sample=d4_finger.wav
+sw_down=36
+group=21
+transpose=-2
+
+<region>
+sample=d4_finger.wav
+sw_down=37
+group=21
+transpose=-1
+
+<region>
+sample=d4_finger.wav
+sw_down=38
+group=21
+
+<region>
+sample=e4_finger.wav
+sw_down=39
+group=22
+transpose=-1
+delay_cc1=0.100
+
+<region>
+sample=e4_finger.wav
+sw_down=40
+group=22
+delay_cc1=0.100
+
+<region>
+sample=f4_finger.wav
+sw_down=41
+group=23
+delay_cc1=0.200
+```
 A more realistic way to handle this would be to have a MIDI CC for each string to set its tuning, so for example
 the C string could sound a B or C# note, like on a concert harp with pedals. However, this is probably not very
-convenient for most players who would rather hit a B note to sound a B.
+convenient for most players who would rather hit a B note to sound a B. This, of course, would not actually be
+chromatic - but not limited to a single scale.
 ## Further Possibilities
 In reality, a strum will transfer force to the first strings it hits, and subsequent strings will
 be hit with a little less force, and the delay between strings might also be nonlinear.
