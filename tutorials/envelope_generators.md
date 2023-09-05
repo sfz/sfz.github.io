@@ -25,11 +25,8 @@ can substitute "volume" for "EG" below.
 | Attack time (s)       | \_attack  | time from note start (at start level) to 100% level
 | Hold time (s)         | \_hold    | time the volume is held at 100% level
 | Decay time[^1] (s)    | \_decay   | time[^3] for the volume to decrease from 100% to the sustain level
-| Sustain **level** (%) | \_sustain | the % level at which the EG remains while the key is down
-|                       |           | or the sustain pedal is down
-| Release time[^2]      | \_release | time[^3] for the EG to decrease to zero.
-|                       |           | This begins when both key and sustain pedal are released,
-|                       |           | even if the prior stages have not completed.
+| Sustain **level** (%) | \_sustain | the % level at which the EG remains while the key is down or the sustain pedal is down
+| Release time[^2]      | \_release | time[^3] for the EG to decrease to zero. This begins when both key and sustain pedal are released, even if the prior stages have not completed.
 
 Here is a screenshot of an audio file created using Sforzando,
 showing the ampeg envelope shape and its stages.
