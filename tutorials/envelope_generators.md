@@ -18,7 +18,7 @@ which are applied in the order given below. An EG can control a variety of param
 but to help understand, you can imagine it controlling the volume, in which case you
 can substitute "volume" for "EG" below.
 
-| Parameter nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nbsp; &nbsp | Suffix | Description
+| Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp | Suffix | Description
 | ---                   | ---       | ---
 | Delay time (s)        | \_delay   | time to wait after key is depressed until the EG starts
 | Start **level** (%)   | \_start   | level at which to start
