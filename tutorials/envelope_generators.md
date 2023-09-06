@@ -95,3 +95,5 @@ the above. This is briefly described in [SFZ2 Modulations:Envelopes].
 
 [SFZ1 Modulations]:           sfz1_modulations
 [SFZ2 Modulations:Envelopes]: sfz2_modulations#envelopes
+
+<style>th:nth-of-type(1){width:20%;}</style>
