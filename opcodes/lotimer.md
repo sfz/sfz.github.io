@@ -2,8 +2,17 @@
 layout: "sfz/opcode"
 title: "lotimer / hitimer"
 ---
-## Practical Considerations
 
 Not implemented in ARIA, may have been implemented in some Cakewalk products.
-If implemented, the unit would be seconds, but it is not clear what the timer
-is or how it's intended to be used.
+The timer is how long has passed since the last sample had played in the same
+group. It is, however, not known whether this is a group header or polyphony group.
+
+## Examples
+```
+<region>
+hitimer=0.25
+sample=quick.wav
+<region>
+lotimer=0.25
+sample=slow.wav
+```
