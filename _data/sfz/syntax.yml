@@ -1266,8 +1266,8 @@ categories:
 
     - name: "lotimer"
       short_description:
-        "Region plays if timer is between <code>lotimer</code> and
-        <code>hitimer</code>."
+        "Region plays if the time passed since the last sample in the same group played
+        is between <code>lotimer</code> and <code>hitimer</code>."
       version: "SFZ v2"
       value:
         type_name: "float"
