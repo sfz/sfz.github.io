@@ -11,6 +11,11 @@ resulting in a narrower stereo field image.
 
 Negative width values will reverse left and right channels.
 
+Note: Range in the table is specified as -100 to 100.  Some players, such as
+Aria/Sforzando, do not clamp the range.  Values over 100 expand the stereo
+width.  For example, for a mono signal panned 6dB to the left, a value of
+200 produces the mono signal panned 12B to the left.
+
 ## Examples
 
 ```
