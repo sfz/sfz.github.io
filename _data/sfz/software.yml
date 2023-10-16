@@ -313,7 +313,7 @@ categories:
   - name: "sfZed"
     author: "Steve Holt"
     license: "Freeware"
-    url: "http://steveholt.drealm.info/sfZed.html"
+    url: "https://github.com/sfzformat/bin/releases/download/utilities/sfZed09.zip"
     os:
     - name: "Windows"
     short_description:
