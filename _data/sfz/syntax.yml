@@ -318,7 +318,7 @@ categories:
         options:
         - name: "samples"
         - name: "percent"
-        
+
     - name: "sample"
       short_description: "Defines which sample file the region will play."
       version: "SFZ v1"
@@ -1693,7 +1693,7 @@ categories:
         min: 0
         max: 200
         unit: "dB"
-        
+
     - name: "rt_decayN"
       short_description:
         "Applies only to regions that triggered through trigger=release.
@@ -2874,6 +2874,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "ampeg_attack_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "ampeg_vel2attack"
           short_description: "Velocity effect on EG attack time."
@@ -2961,6 +2968,13 @@ categories:
           alias:
           - name: "ampeg_delay_onccN"
             version: "SFZ v2"
+        - name: "ampeg_delay_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "ampeg_vel2delay"
           short_description: "Velocity effect on EG delay time."
@@ -3049,6 +3063,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "ampeg_release_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "ampeg_vel2release"
           short_description: "Velocity effect on EG release time."
@@ -3134,6 +3155,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "ampeg_start_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
 
     - name: "ampeg_attack_shape"
       short_description: "Specifies the curvature of attack stage of the envelope."
@@ -3304,6 +3332,13 @@ categories:
             unit: "seconds"
           alias:
           - name: "fileg_attackccN"
+        - name: "fileg_attack_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2attack"
           short_description: "Velocity effect on EG attack time."
@@ -3342,6 +3377,13 @@ categories:
             max: 100
           alias:
           - name: "fileg_decayccN"
+        - name: "fileg_decay_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2decay"
           short_description: "Velocity effect on filter EG decay time."
@@ -3381,6 +3423,13 @@ categories:
             max: 100
           alias:
           - name: "fileg_delayccN"
+        - name: "fileg_delay_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2delay"
           short_description: "Velocity effect on filter EG delay time."
@@ -3420,6 +3469,13 @@ categories:
             unit: "cents"
           alias:
           - name: "fileg_depthccN"
+        - name: "fileg_depth_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2depth"
           short_description:
@@ -3460,6 +3516,13 @@ categories:
             max: 100
           alias:
           - name: "fileg_holdccN"
+        - name: "fileg_hold_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2hold"
           short_description: "Velocity effect on EG hold time."
@@ -3499,6 +3562,13 @@ categories:
             unit: "seconds"
           alias:
           - name: "fileg_releaseccN"
+        - name: "fileg_release_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2release"
           short_description: "Velocity effect on EG release time."
@@ -3535,6 +3605,13 @@ categories:
             unit: "seconds"
           alias:
           - name: "fileg_startccN"
+        - name: "fileg_start_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
 
     - name: "fileg_sustain"
       short_description: "EG sustain level, in percentage."
@@ -3561,6 +3638,13 @@ categories:
             unit: "seconds"
           alias:
           - name: "fileg_sustainccN"
+        - name: "fileg_sustain_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "fileg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
@@ -3592,6 +3676,13 @@ categories:
         midi_cc:
         - name: "pitcheg_attack_onccN"
           version: "ARIA"
+        - name: "pitcheg_attack_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2attack"
           short_description: "Velocity effect on EG attack time."
@@ -3628,6 +3719,13 @@ categories:
             default: 0
             min: -100
             max: 100
+        - name: "pitcheg_decay_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2decay"
           short_description: "Velocity effect on EG decay time."
@@ -3665,6 +3763,13 @@ categories:
             default: 0
             min: -100
             max: 100
+        - name: "pitcheg_delay_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2delay"
           short_description: "Velocity effect on EG delay time."
@@ -3704,6 +3809,13 @@ categories:
             unit: "cents"
           alias:
           - name: "pitcheg_depthccN"
+        - name: "pitcheg_depth_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2depth"
           short_description:
@@ -3742,6 +3854,13 @@ categories:
             default: 0
             min: -100
             max: 100
+        - name: "pitcheg_hold_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2hold"
           short_description: "Velocity effect on EG hold time."
@@ -3779,6 +3898,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "pitcheg_release_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2release"
           short_description: "Velocity effect on EG release time."
@@ -3813,6 +3939,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "pitcheg_start_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
 
     - name: "pitcheg_sustain"
       short_description: "EG sustain level, in percentage."
@@ -3837,6 +3970,13 @@ categories:
             min: -100
             max: 100
             unit: "seconds"
+        - name: "pitcheg_sustain_curveccN"
+          version: "ARIA"
+          value:
+            type_name: "integer"
+            default: 0
+            min: 0
+            max: 255
         velocity:
         - name: "pitcheg_vel2sustain"
           short_description: "Velocity effect on EG sustain level, in percentage."
