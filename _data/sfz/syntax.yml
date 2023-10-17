@@ -4030,6 +4030,15 @@ categories:
       short_description: ""
       version: "ARIA"
 
+    - name: "egN_dynamic"
+      short_description: "Specifies when envelope durations are recalculated."
+      version: "ARIA"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 1
+
     - name: "egN_shapeX"
       short_description: ""
       version: "SFZ v2"
