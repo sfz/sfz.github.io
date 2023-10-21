@@ -17,7 +17,7 @@ as "software to be freely used, modified, and shared."
 
 Below are the known links to the various lists of supported opcodes:\
 [BassMIDI], [Bitwig], [HISE], [LinuxSampler], [liquidsfz],
-[OpenMPT], [sfizz] and [zerberus] (MuseScore <= v3.6.2).
+[OpenMPT], [sfizz], [zerberus] (MuseScore <= v3.6.2) or else in [our Wiki].
 
 {% include sfz/software-table-generator.liquid %}
 {%-comment-%} Tables data is at /_data/sfz/software.yml {%-endcomment-%}
@@ -43,3 +43,4 @@ Below are the known links to the various lists of supported opcodes:\
 [OpenMPT]:      https://wiki.openmpt.org/Manual:_SFZ_Implementation
 [sfizz]:        https://sfz.tools/sfizz/development/status/opcodes
 [zerberus]:     https://github.com/musescore/MuseScore/blob/3.6.2/audio/midi/zerberus/README
+[our Wiki]:     https://github.com/sfzformat/sfzformat.github.io/wiki/Players
