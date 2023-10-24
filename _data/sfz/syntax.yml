@@ -334,6 +334,17 @@ categories:
         type_name: "float"
         unit: "seconds"
 
+    - name: "sample_dyn_paramN"
+      short_description: ""
+      version: "ARIA"
+      value:
+        type_name: "float"
+      modulation:
+        midi_cc:
+        - name: "sample_dyn_paramN_onccX"
+          value:
+            type_name: "float"
+
     - name: "sync_beats"
       short_description: "Region playing synchronization to host position."
       version: "SFZ v1"
@@ -1150,6 +1161,7 @@ categories:
       - name: "pitch"
       - name: "resonance"
       - name: "resonance2"
+      - name: "sample_dyn_paramX"
       - name: "volume"
       - name: "width"
 
@@ -4848,6 +4860,13 @@ categories:
       - name: "lfoN_scaleX"
       value:
         type_name: "float"
+
+    - name: "lfoN_sample_dyn_paramX"
+      short_description: ""
+      version: "ARIA"
+      modulation:
+        midi_cc:
+        - name: "lfoN_sample_dyn_paramX_onccY"
 
 - name: "Curves"
   id: "crv"
