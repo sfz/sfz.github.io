@@ -5,3 +5,5 @@
 - name: "Ogg"
   lossy: true
 - name: "WAV"
+- name: "WavPack"
+  lossy: true
