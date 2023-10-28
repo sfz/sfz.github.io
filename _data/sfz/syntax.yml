@@ -1,5 +1,5 @@
 format: 2
-versions: ["ARIA", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "sfizz"] # , "Unknown"
+versions: ["ARIA", "Calfbox", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "sfizz"] # , "Unknown"
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -502,6 +502,12 @@ categories:
   - name: "label_keyN"
     short_description: "Creates a label for a key."
     version: "sfizz"
+    value:
+      type_name: "string"
+
+  - name: "label_outputN"
+    short_description: "Creates a label for the <a href='/opcodes/output'>output</a> N."
+    version: "Calfbox"
     value:
       type_name: "string"
 
