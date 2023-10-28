@@ -5,6 +5,13 @@
   - name: "Ogg"
   - name: "WAV"
 
+- name: "Calfbox"
+  formats:
+  - name: "AIFF"
+  - name: "FLAC"
+  - name: "Ogg"
+  - name: "WAV"
+
 - name: "sfizz"
   formats:
   - name: "AIFF"
