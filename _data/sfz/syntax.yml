@@ -1,5 +1,5 @@
 format: 2
-versions: ["ARIA", "Calfbox", "Cakewalk", "LinuxSampler", "SFZ v1", "SFZ v2", "sfizz"] # , "Unknown"
+versions: ["ARIA", "Calfbox", "LinuxSampler", "SFZ v1", "SFZ v2", "sfizz"] # , "Unknown"
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -48,7 +48,7 @@ headers:
 
 - name: "sample"
   short_description: "Allows to embed sample data directly in SFZ files (Rapture)."
-  version: "Cakewalk"
+  version: "SFZ v2"
 # ------------------------------------------------------------------------------
 # Opcodes
 #
@@ -190,7 +190,7 @@ categories:
       modulation:
         midi_cc:
         - name: "loop_lengthccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
           short_description: "Change of loop end point."
           alias:
           - name: "loop_length_onccN"
@@ -245,13 +245,13 @@ categories:
         midi_cc:
         - name: "loop_startccN"
           short_description: "Change of loop start point."
-          version: "Cakewalk"
+          version: "SFZ v2"
           alias:
           - name: "loop_start_onccN"
 
     - name: "loop_tune"
       short_description: "Tuning for only the loop segment."
-      version: "Cakewalk"
+      version: "SFZ v2"
       alias:
       - name: "looptune"
         version: "ARIA"
@@ -329,7 +329,7 @@ categories:
       short_description:
         "Number of seconds before the end of sample playback that the player
         should begin a realtime fadeout."
-      version: "Cakewalk"
+      version: "SFZ v2"
       value:
         type_name: "float"
         unit: "seconds"
@@ -1456,12 +1456,12 @@ categories:
       modulation:
         midi_cc:
         - name: "pan_onccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
           alias:
           - name: "pan_ccN"
             version: "ARIA"
         - name: "pan_curveccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
           short_description:
             "Specifies the ‹<a href='/headers/curve'>curve</a>› number
             which MIDI CC N uses to modulate pan."
@@ -1471,9 +1471,9 @@ categories:
             min: 0
             max: 255
         - name: "pan_smoothccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
         - name: "pan_stepccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
 
     - name: "pan_random"
       short_description: "Random panoramic position for the region."
@@ -1602,9 +1602,9 @@ categories:
         lfo: "✓"
         midi_cc:
         - name: "width_onccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
         - name: "width_curveccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
           short_description:
             "Specifies the ‹<a href='/headers/curve'>curve</a>› number
             which MIDI CC N uses to modulate width."
@@ -1614,9 +1614,9 @@ categories:
             min: 0
             max: 255
         - name: "width_smoothccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
         - name: "width_stepccN"
-          version: "Cakewalk"
+          version: "SFZ v2"
 
     - name: "amp_keycenter"
       short_description:
@@ -1697,7 +1697,7 @@ categories:
         unit: "dB"
       alias:
       - name: "gain_random"
-        version: "Cakewalk"
+        version: "SFZ v2"
 
     - name: "rt_decay"
       short_description:
@@ -2538,7 +2538,7 @@ categories:
         unit: "dB"
 
     - name: "noise_filter"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description: ""
       value:
         type_name: "string"
@@ -2563,7 +2563,7 @@ categories:
         - name: "pink"
 
     - name: "noise_stereo"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description: ""
       value:
         type_name: "string"
@@ -2572,7 +2572,7 @@ categories:
         - name: "off"
 
     - name: "noise_level"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description: ""
       value:
         type_name: "float"
@@ -2595,7 +2595,7 @@ categories:
             unit: "ms"
 
     - name: "noise_step"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description: ""
       value:
         type_name: "integer"
@@ -2610,7 +2610,7 @@ categories:
             max: 100
 
     - name: "noise_tone"
-      version: "Cakewalk"
+      version: "SFZ v2"
       short_description: ""
       value:
         type_name: "integer"
@@ -2870,7 +2870,7 @@ categories:
     - name: "ampeg_attack"
       alias:
       - name: "amp_attack"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       short_description: "EG attack time."
       version: "SFZ v1"
@@ -2904,7 +2904,7 @@ categories:
           short_description: "Velocity effect on EG attack time."
           alias:
           - name: "amp_vel2attack"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -2918,7 +2918,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "amp_decay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -2953,7 +2953,7 @@ categories:
           alias:
           - name: "amp_vel2decay"
             deprecated: true
-            version: "Cakewalk"
+            version: "SFZ v2"
           value:
             type_name: "float"
             default: 0
@@ -2966,7 +2966,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "amp_delay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -2998,7 +2998,7 @@ categories:
           short_description: "Velocity effect on EG delay time."
           alias:
           - name: "amp_vel2delay"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3012,7 +3012,7 @@ categories:
       short_description: "EG hold time."
       alias:
       - name: "amp_hold"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3047,7 +3047,7 @@ categories:
           short_description: "Velocity effect on EG hold time."
           alias:
           - name: "amp_vel2hold"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3061,7 +3061,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "amp_release"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3093,7 +3093,7 @@ categories:
           short_description: "Velocity effect on EG release time."
           alias:
           - name: "amp_vel2release"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3107,7 +3107,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "amp_sustain"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3142,7 +3142,7 @@ categories:
           short_description: "Velocity effect on EG sustain level, in percentage."
           alias:
           - name: "amp_vel2sustain"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3330,7 +3330,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_attack"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3362,7 +3362,7 @@ categories:
           short_description: "Velocity effect on EG attack time."
           alias:
           - name: "fil_vel2attack"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3376,7 +3376,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_decay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3407,7 +3407,7 @@ categories:
           short_description: "Velocity effect on filter EG decay time."
           alias:
           - name: "fil_vel2decay"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3421,7 +3421,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_delay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3453,7 +3453,7 @@ categories:
           short_description: "Velocity effect on filter EG delay time."
           alias:
           - name: "fil_vel2delay"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3467,7 +3467,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_depth"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "integer"
@@ -3500,7 +3500,7 @@ categories:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
           alias:
           - name: "fil_vel2depth"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "integer"
@@ -3514,7 +3514,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_hold"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3546,7 +3546,7 @@ categories:
           short_description: "Velocity effect on EG hold time."
           alias:
           - name: "fil_vel2hold"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3560,7 +3560,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_release"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3592,7 +3592,7 @@ categories:
           short_description: "Velocity effect on EG release time."
           alias:
           - name: "fil_vel2release"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3636,7 +3636,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "fil_sustain"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3668,7 +3668,7 @@ categories:
           short_description: "Velocity effect on EG sustain level, in percentage."
           alias:
           - name: "fil_vel2sustain"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3682,7 +3682,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_attack"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3706,7 +3706,7 @@ categories:
           short_description: "Velocity effect on EG attack time."
           alias:
           - name: "pitch_vel2attack"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3720,7 +3720,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_decay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3749,7 +3749,7 @@ categories:
           short_description: "Velocity effect on EG decay time."
           alias:
           - name: "pitch_vel2decay"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3763,7 +3763,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_delay"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3793,7 +3793,7 @@ categories:
           short_description: "Velocity effect on EG delay time."
           alias:
           - name: "pitch_vel2delay"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3807,7 +3807,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_depth"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "integer"
@@ -3840,7 +3840,7 @@ categories:
             "Velocity effect on EG depth, in cents for pitch or filter cutoff."
           alias:
           - name: "pitch_vel2depth"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "integer"
@@ -3854,7 +3854,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_hold"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3884,7 +3884,7 @@ categories:
           short_description: "Velocity effect on EG hold time."
           alias:
           - name: "pitch_vel2hold"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3898,7 +3898,7 @@ categories:
       short_description: "EG release time (after note release)."
       alias:
       - name: "pitch_release"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -3928,7 +3928,7 @@ categories:
           short_description: "Velocity effect on EG release time."
           alias:
           - name: "pitch_vel2release"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -3970,7 +3970,7 @@ categories:
       version: "SFZ v1"
       alias:
       - name: "pitch_sustain"
-        version: "Cakewalk"
+        version: "SFZ v2"
         deprecated: true
       value:
         type_name: "float"
@@ -4000,7 +4000,7 @@ categories:
           short_description: "Velocity effect on EG sustain level, in percentage."
           alias:
           - name: "pitch_vel2sustain"
-            version: "Cakewalk"
+            version: "SFZ v2"
             deprecated: true
           value:
             type_name: "float"
@@ -4202,56 +4202,56 @@ categories:
 
     - name: "egN_decim"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_decim_onccX"
 
     - name: "egN_bitred"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_bitred_onccX"
 
     - name: "egN_rectify"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_rectify_onccX"
 
     - name: "egN_ringmod"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_ringmod_onccX"
 
     - name: "egN_noiselevel"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noiselevel_onccX"
 
     - name: "egN_noisestep"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisestep_onccX"
 
     - name: "egN_noisetone"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_noisetone_onccX"
 
     - name: "egN_driveshape"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "egN_driveshape_onccX"
@@ -4788,7 +4788,7 @@ categories:
 
     - name: "lfoN_decim"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_decim_onccX"
@@ -4797,7 +4797,7 @@ categories:
 
     - name: "lfoN_bitred"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_bitred_onccX"
@@ -4806,7 +4806,7 @@ categories:
 
     - name: "lfoN_noiselevel"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noiselevel_onccX"
@@ -4815,7 +4815,7 @@ categories:
 
     - name: "lfoN_noisestep"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisestep_onccX"
@@ -4824,7 +4824,7 @@ categories:
 
     - name: "lfoN_noisetone"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_noisetone_onccX"
@@ -4833,7 +4833,7 @@ categories:
 
     - name: "lfoN_drive"
       short_description: ""
-      version: "Cakewalk"
+      version: "SFZ v2"
       modulation:
         midi_cc:
         - name: "lfoN_drive_onccX"
@@ -4904,7 +4904,7 @@ categories:
   opcodes:
   - name: "apan_depth"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -4915,7 +4915,7 @@ categories:
 
   - name: "apan_dry"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -4926,7 +4926,7 @@ categories:
 
   - name: "apan_freq"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "Hz"
@@ -4936,7 +4936,7 @@ categories:
 
   - name: "apan_phase"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       min: 0
@@ -4948,11 +4948,11 @@ categories:
 
   - name: "apan_waveform"
     short_description: "LFO wave number."
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "apan_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -4962,7 +4962,7 @@ categories:
       - name: "apan_wet_onccN"
 
   - name: "bitred"
-    version: "Cakewalk"
+    version: "SFZ v2"
     short_description: "Bit reduction."
     value:
       type_name: ""
@@ -5012,27 +5012,27 @@ categories:
   - name: "bypass_onccN"
     short_description:
       "Sets up a bypass controller for the effect."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
 
   - name: "comp_attack"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "comp_gain"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "dB"
 
   - name: "comp_ratio"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5040,14 +5040,14 @@ categories:
 
   - name: "comp_release"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "comp_stlink"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5056,13 +5056,13 @@ categories:
 
   - name: "comp_threshold"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "dB"
 
   - name: "decim"
-    version: "Cakewalk"
+    version: "SFZ v2"
     short_description: "Decimator."
     value:
       type_name: ""
@@ -5087,7 +5087,7 @@ categories:
 
   - name: "delay_cutoff"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "Hz"
@@ -5097,7 +5097,7 @@ categories:
 
   - name: "delay_damphi"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5108,7 +5108,7 @@ categories:
 
   - name: "delay_damplo"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5119,7 +5119,7 @@ categories:
 
   - name: "delay_dry"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5130,7 +5130,7 @@ categories:
 
   - name: "delay_feedback"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5141,13 +5141,13 @@ categories:
 
   - name: "delay_filter"
     short_description: "Name of filter type."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
 
   - name: "delay_input"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5158,7 +5158,7 @@ categories:
 
   - name: "delay_levelc"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5166,7 +5166,7 @@ categories:
 
   - name: "delay_levell"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5174,7 +5174,7 @@ categories:
 
   - name: "delay_levelr"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5182,7 +5182,7 @@ categories:
 
   - name: "delay_lfofreq"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "Hz"
@@ -5192,7 +5192,7 @@ categories:
 
   - name: "delay_moddepth"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5203,7 +5203,7 @@ categories:
 
   - name: "delay_mode"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5222,7 +5222,7 @@ categories:
 
   - name: "delay_panc"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5233,7 +5233,7 @@ categories:
 
   - name: "delay_panl"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5244,7 +5244,7 @@ categories:
 
   - name: "delay_panr"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5255,7 +5255,7 @@ categories:
 
   - name: "delay_resonance"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "dB"
@@ -5265,7 +5265,7 @@ categories:
 
   - name: "delay_spread"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5276,23 +5276,23 @@ categories:
 
   - name: "delay_syncc_onccN"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "delay_syncl_onccN"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "delay_syncr_onccN"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "delay_time_tap"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "delay_timec"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "seconds"
@@ -5302,7 +5302,7 @@ categories:
 
   - name: "delay_timel"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "seconds"
@@ -5312,7 +5312,7 @@ categories:
 
   - name: "delay_timer"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "seconds"
@@ -5322,7 +5322,7 @@ categories:
 
   - name: "delay_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5334,7 +5334,7 @@ categories:
   - name: "directtomain"
     short_description:
       "Gain of the main bus into the output."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "%"
@@ -5344,7 +5344,7 @@ categories:
 
   - name: "disto_depth"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5355,7 +5355,7 @@ categories:
 
   - name: "disto_dry"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5366,11 +5366,11 @@ categories:
 
   - name: "disto_stages"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "disto_tone"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5381,7 +5381,7 @@ categories:
 
   - name: "disto_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5393,7 +5393,7 @@ categories:
   - name: "dsp_order"
     short_description:
       "Signal flow type in Rapture's DSP block."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 0
@@ -5445,32 +5445,32 @@ categories:
 
   - name: "eq_bw"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     modulation:
       midi_cc:
       - name: "eq_bw_onccN"
 
   - name: "eq_freq"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     modulation:
       midi_cc:
       - name: "eq_freq_onccN"
 
   - name: "eq_gain"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     modulation:
       midi_cc:
       - name: "eq_gain_onccN"
 
   - name: "eq_type"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "filter_cutoff"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "Hz"
@@ -5480,7 +5480,7 @@ categories:
 
   - name: "filter_resonance"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "dB"
@@ -5490,14 +5490,14 @@ categories:
 
   - name: "filter_type"
     short_description: "Name of filter type."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
 
   - name: "fxNtomain"
     short_description:
       "Gain of the Nth effect bus into the output."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "%"
@@ -5508,7 +5508,7 @@ categories:
   - name: "fxNtomix"
     short_description:
       "Gain of the Nth effect bus into the Mix node."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "%"
@@ -5518,25 +5518,25 @@ categories:
 
   - name: "gate_onccN"
     short_description: "Gate manual control."
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "gate_attack"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "seconds"
 
   - name: "gate_release"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "seconds"
 
   - name: "gate_stlink"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5545,14 +5545,14 @@ categories:
 
   - name: "gate_threshold"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
    #value:
      #type_name: "float"
      #unit: "dB"
 
   - name: "internal"
     short_description: "Cakewalk internal features switch."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5570,7 +5570,7 @@ categories:
 
   - name: "phaser_depth"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5581,7 +5581,7 @@ categories:
 
   - name: "phaser_feedback"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5592,7 +5592,7 @@ categories:
 
   - name: "phaser_freq"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "Hz"
@@ -5602,7 +5602,7 @@ categories:
 
   - name: "phaser_phase_onccN"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5610,15 +5610,15 @@ categories:
 
   - name: "phaser_stages"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "phaser_waveform"
     short_description: "LFO wave number."
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "phaser_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5629,7 +5629,7 @@ categories:
 
   - name: "reverb_damp"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5640,7 +5640,7 @@ categories:
 
   - name: "reverb_dry"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5651,7 +5651,7 @@ categories:
 
   - name: "reverb_input"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5662,7 +5662,7 @@ categories:
 
   - name: "reverb_predelay"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
@@ -5672,7 +5672,7 @@ categories:
 
   - name: "reverb_size"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5683,7 +5683,7 @@ categories:
 
   - name: "reverb_tone"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5694,7 +5694,7 @@ categories:
 
   - name: "reverb_type"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5708,7 +5708,7 @@ categories:
 
   - name: "reverb_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5719,7 +5719,7 @@ categories:
 
   - name: "static_cyclic_level"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5727,20 +5727,20 @@ categories:
 
   - name: "static_cyclic_time"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_filter"
     short_description: "Name of filter type."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
 
   - name: "static_level"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5751,7 +5751,7 @@ categories:
 
   - name: "static_random_level"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5759,25 +5759,25 @@ categories:
 
   - name: "static_random_maxtime"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_random_mintime"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "seconds"
 
   - name: "static_stereo"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "static_tone"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5785,11 +5785,11 @@ categories:
 
   - name: "strings_number"
     short_description: "Number of synthesized resonant strings."
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "strings_wet_onccN"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5797,7 +5797,7 @@ categories:
 
   - name: "tdfir_dry"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5808,7 +5808,7 @@ categories:
 
   - name: "tdfir_gain"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5816,11 +5816,11 @@ categories:
 
   - name: "tdfir_impulse"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
 
   - name: "tdfir_wet"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: ""
       min: 0
@@ -5894,7 +5894,7 @@ categories:
   opcodes:
   - name: "load_mode"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 0
@@ -5902,19 +5902,19 @@ categories:
 
   - name: "load_start"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
 
   - name: "load_end"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
 
   - name: "sample_quality"
     short_description: "Sample playback quality settings."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 1
@@ -5922,7 +5922,7 @@ categories:
 
   - name: "image"
     short_description: "Sets the background image of the instrument."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
 
@@ -5932,7 +5932,7 @@ categories:
   opcodes:
   - name: "oscillator"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "string"
       options:
@@ -5941,14 +5941,14 @@ categories:
 
   - name: "oscillator_detune"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     modulation:
       midi_cc:
       - name: "oscillator_detune_onccN"
 
   - name: "oscillator_mode"
     short_description: "The modulation type."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 0
@@ -5957,7 +5957,7 @@ categories:
 
   - name: "oscillator_mod_depth"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     modulation:
       midi_cc:
       - name: "oscillator_mod_depth_onccN"
@@ -5965,7 +5965,7 @@ categories:
 
   - name: "oscillator_multi"
     short_description: "Configure a region to use more than one oscillator."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 1
@@ -5974,7 +5974,7 @@ categories:
 
   - name: "oscillator_phase"
     short_description: "Oscillator phase. Negative values for random phase."
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "float"
       unit: "°"
@@ -5983,7 +5983,7 @@ categories:
 
   - name: "oscillator_quality"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
     value:
       type_name: "integer"
       min: 0
@@ -5991,4 +5991,4 @@ categories:
 
   - name: "oscillator_table_size"
     short_description: ""
-    version: "Cakewalk"
+    version: "SFZ v2"
