@@ -12,3 +12,6 @@ applies to both fixed offset and offset modulated by MIDI CC.
 offset_mode=percent
 offset_oncc25=50
 ```
+
+
+[offset]: offset
