@@ -32,7 +32,7 @@ At the SFZ1 specification level, the supported sample formats are:
 + WAV of any sample rate
 + Ogg Vorbis compressed samples
 
-For SFZ2, the Cakewalk book specifies the following sample types in addiction of
+For SFZ2, the Cakewalk book specifies the following sample types in addition of
 the above:
 + AIFF of any sample rate
 + [FLAC] support is not specified as mandatory, though FLAC was supported by
