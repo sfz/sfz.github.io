@@ -413,6 +413,17 @@ categories:
     short_description:
       ""
 
+  - name: "soundmap"
+    author: "KMIJPH"
+    license: "GPL-3.0"
+    url: "https://codeberg.org/KMIJPH/soundmap"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Online automapper. Can create .sfz and .dspreset"
+
 - name: "Converters"
   applications:
 
