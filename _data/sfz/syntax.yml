@@ -170,8 +170,8 @@ categories:
     - name: "loop_crossfade"
       short_description: "Loop cross fade."
       version: "SFZ v2"
-#     alias:
-#     - name: "loopcrossfade"
+    # alias:
+    # - name: "loopcrossfade"
       value:
         type_name: "float"
         unit: "seconds"
@@ -654,8 +654,8 @@ categories:
     - name: "off_mode"
       short_description: "Region off mode."
       version: "SFZ v1"
-#     alias:
-#     - name: "offmode"
+    # alias:
+    # - name: "offmode"
       value:
         type_name: "string"
         default: "fast"
@@ -5890,7 +5890,7 @@ categories:
 
 - name: "Loading"
   id: "ldg"
-  url: "/opcodes/?v=cakewalk&c=ldg"
+  url: "/opcodes/?c=ldg"
   opcodes:
   - name: "load_mode"
     short_description: ""
@@ -5928,7 +5928,7 @@ categories:
 
 - name: "Wavetable Oscillator"
   id: "wos"
-  url: "opcodes/?v=cakewalk&c=wos"
+  url: "opcodes/?c=wos"
   opcodes:
   - name: "oscillator"
     short_description: ""
