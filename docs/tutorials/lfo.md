@@ -6,7 +6,7 @@ We also have a section in the [tools page] listing some text editor's
 SFZ syntax highlighting add-ons.
 Add to your own SFZ to spice up your instruments:
 
-```
+```sfz
 // **********************************************************************
 // SFZ1 Pitch LFO Example
 //
@@ -21,7 +21,7 @@ Add to your own SFZ to spice up your instruments:
 <region> sample=*sine
 ```
 
-```
+```sfz
 // **********************************************************************
 // SFZ2 Pitch LFO Example
 //
@@ -36,4 +36,4 @@ Add to your own SFZ to spice up your instruments:
 <region> sample=*sine
 ```
 
-[tools page]: /software/tools
+[tools page]: ../software/tools.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "sw_lokey / sw_hikey"
 ---
 Basically, this tells the SFZ player where the keyswitches are.
@@ -20,13 +20,13 @@ or in MIDI note names (C-1 to G9)
 
 ## Example
 
-```
+```sfz
 sw_lokey=48 sw_hikey=53
 ```
 
 
-[‹global›]: {{ '/headers/global' | relative_url }}
-[sw_down / sw_up]:  sw_down
-[sw_lokey / hikey]: sw_lokey
-[sw_last]:          sw_last
-[sw_previous]:      sw_previous
+[‹global›]:         ../headers/global.md
+[sw_down / sw_up]:  sw_down.md
+[sw_lokey / hikey]: sw_lokey.md
+[sw_last]:          sw_last.md
+[sw_previous]:      sw_previous.md

@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_release"
 ---
 ## Examples
 
-```
+```sfz
 ampeg_release=1.34
 fileg_release=0.2
 ```
@@ -19,5 +19,5 @@ Although the spec default is 0.001, ARIA uses a default of 0.03 for smoother
 default cutoffs. Cakewalk products use 0.001.
 
 
-[loop_mode]: loop_mode
-[off_mode]:  off_mode
+[loop_mode]: loop_mode.md
+[off_mode]:  off_mode.md

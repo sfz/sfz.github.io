@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "xfin_loccN / xfin_hiccN"
 ---
 `xfin_loccN` and `xfin_hiccN` set the range of values in the MIDI continuous
@@ -11,7 +11,7 @@ volume opcode) for values greater than or equal to `xfin_hiccN`.
 
 ## Examples
 
-```
+```sfz
 xfin_locc1=64
 xfin_hicc1=127
 ```
@@ -32,5 +32,5 @@ alongside [loccN / hiccN] to keep the regions which would be at zero
 volume from being triggered and consuming resources.
 
 
-[loccN / hiccN]: loccN
-[xfout_loccN / xfout_hiccN]: xfout_loccN
+[loccN / hiccN]:             loccN.md
+[xfout_loccN / xfout_hiccN]: xfout_loccN.md

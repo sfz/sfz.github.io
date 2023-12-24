@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "label_ccN"
 ---
 Used under the ‹[control]› header.
@@ -8,7 +8,7 @@ use them in the Control tab if no GUI is defined.
 
 ## Examples
 
-```
+```sfz
 label_cc30=Bass vol
 label_cc31=Bass pan
 label_cc32=Tune
@@ -18,8 +18,8 @@ label_cc33=Mute
 <img
   class="img-fluid"
   alt="label_cc example image"
-  src="./../assets/img/opcodes/label_cc.jpg"
+  src="../../assets/img/opcodes/label_cc.jpg"
 />
 
 
-[control]: {{ '/headers/control' | relative_url }}
+[control]: ../headers/control.md

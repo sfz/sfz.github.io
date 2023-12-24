@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "xfin_lovel / xfin_hivel"
 ---
 `xfin_lovel` and `xfin_hivel` define the fade-in velocity range for the region.
@@ -10,7 +10,7 @@ greater than or equal to `xfin_hivel`.
 
 ## Example
 
-```
+```sfz
 xfin_lovel=0 xfin_hivel=31
 ```
 
@@ -19,4 +19,4 @@ crossfaded based on velocity, instead of having hard
 [lovel / hivel] cutoffs between the layers.
 
 
-[lovel / hivel]: lovel
+[lovel / hivel]: lovel.md

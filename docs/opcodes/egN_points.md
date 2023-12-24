@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_points"
 ---
 Sets the number of points in envelope number N. The level of the envelope
@@ -9,7 +9,7 @@ envelope with 4 points will have points numbered 0 through 3, _not_ 1 through 4.
 
 ## Examples
 
-```
+```sfz
 eg01_points=3 	eg01_sustain=2
 eg01_level0=0 	eg01_time0=0
 eg01_level1=1 	eg01_time1=1
@@ -37,4 +37,4 @@ effect, in ARIA this opcode appears to do nothing.
 It may be necessary to specify this in Cakewalk players, however.
 
 
-[egN_levelX]: egN_levelX
+[egN_levelX]: egN_levelX.md

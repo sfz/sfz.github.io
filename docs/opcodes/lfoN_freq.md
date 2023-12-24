@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_freq"
 ---
 Can be modulated by MIDI CC, and the modulation can be smoothed
@@ -7,7 +7,7 @@ so that rapid controller changes are applied with some "inertia".
 
 ## Examples
 
-```
+```sfz
 lfo01_freq=2
 lfo01_freq_oncc117=8.2
 lfo01_freq_smoothcc117=50

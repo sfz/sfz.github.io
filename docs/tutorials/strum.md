@@ -5,7 +5,8 @@ Strumming can be difficult to produce with samples. SFZ does have some capabilit
 
 Creating a strum is basically triggering several single-string samples with some of them delayed slightly.
 Similar but even simpler is a drum flam, which is two drum hits in rapid succession.
-```
+
+```sfz
 <region>
 sample=snare1.wav
 <region>
@@ -14,7 +15,8 @@ sample=snare2.wav
 ```
 ## Basic Guitar Chord Strum
 Here is how an open E major chord could be triggered with a single key:
-```
+
+```sfz
 <group>
 key=40
 <region>
@@ -35,9 +37,11 @@ sample=b4.wav
 delay=0.1
 sample=e6.wav
 ```
+
 This is a downward strum - physically the lower strings on a guitar are located higher, so downward strums begin with the lowest
 notes. An upstroke would have the same samples but with the delays in reversed order, so it starts with the higest notes.
-```
+
+```sfz
 <group>
 key=40
 <region>
@@ -58,9 +62,12 @@ sample=b4.wav
 <region>
 sample=e6.wav
 ```
+
 ## Different Chord Types
+
 An E minor chord would be similar, only with a G instead of the G#. Leaving out the upward strum:
-```
+
+```sfz
 <global>
 sw_lokey=36
 sw_hikey=37
@@ -94,6 +101,7 @@ sample=b4.wav
 delay=0.1
 sample=e6.wav
 ```
+
 Of course for non-barre chords, there could be differences in voicings for more than one string, but the principle
 remains the same.
 
@@ -102,7 +110,8 @@ strum patch with keyswitchable power chords, major barre chords and minor barre 
 with a very short strum time. However, it is not well-organized and not at all commented, its patches being just
 output from sfzed. Somewhat more organized and including power chords (which are simply the lowest three strings of
 the barre chord), our E chord might look like this:
-```
+
+```sfz
 <global>
 sw_lokey=36
 sw_hikey=38
@@ -170,11 +179,13 @@ sample=b4.wav
 delay=0.1
 sample=e6.wav
 ```
+
 For upwards strums, simply reversing the order of delay values would result in the power chords being
 delayed as the e5.wav region would be the first sample triggered, and it would have 0.006 seconds of
 delay. This would not be good. Therefore, if we want to add upwards strums on lower keyswitches, we
 might end up with something like this:
-```
+
+```sfz
 <global>
 sw_lokey=33
 sw_hikey=38
@@ -258,13 +269,17 @@ sample=b4.wav
 <region>
 sample=e6.wav
 ```
+
 Depending on needs, this might not be worth implementing, as duplicaton of regions adds to the time
 required for many SFZ players (certainly ARIA/sforzando) to parse and open an instrument. It is,
 however, certainly possible.
+
 ## Adjusting Time
+
 The above strums all have a fixed duration. Adjusting strum time is easily done by replacing the
 fixed delay with a modulated one. Going back to the simple E major example for brevity's sake:
-```
+
+```sfz
 <group>
 key=40
 <region>
@@ -285,13 +300,15 @@ sample=b4.wav
 delay_cc1=1
 sample=e6.wav
 ```
+
 It would also be easy to add a small random delay to each voice. However, because delay is not an
 available target for the var modulator, it is not possible to have an adjustable amount of
 randomization, or make the random amount smaller when the CC adjusting the non-random delay is low.
 This means adding a simple delay_random to each voice would create the risk of "earlier" notes
 actually sounding after "later" ones when the non-random delay is close to zero. However, making
 the delay partially fixed and partially adjustable avoids this.
-```
+
+```sfz
 <group>
 key=40
 <region>
@@ -322,11 +339,14 @@ delay_cc1=1
 delay_random=0.01
 sample=e6.wav
 ```
+
 ## Ringing And Muting
+
 With the above examples, the samples will play until a note-off message, then follow the usual amp
 envelope release. In reality, the strings will often ring until the string is hit again, and it
 can be more convenient to have the samples always play in their entirety unless muted:
-```
+
+```sfz
 <global>
 loop_mode=one_shot
 <group>
@@ -361,15 +381,15 @@ sample=e6.wav
 group=1
 off_by=1
 ```
+
 Note that a new strum will mute all strings, without waiting for their delay for that specific string to be completed.
-There is currently elegant solution known for this. Using a longer off time or triggering a release sample could be 
+There is currently elegant solution known for this. Using a longer off time or triggering a release sample could be
 possible workarounds to fill the sonic gap, though. On the positive side, a partial strum that does not hit all the
 strings would let the other strings keep ringing.
 
-If one shot mode is used, it's probably also useful to allow for quickly muting all strings when desired. That can be
-done with a placeholder region for each string, and combining those regions on another key, here one above the
-octave of the strums.
-```
+If one shot mode is used, it's probably also useful to allow for quickly muting all strings when desired. That can be done with a placeholder region for each string, and combining those regions on another key, here one above the octave of the strums.
+
+```sfz
 <group>
 key=60
 ampeg_sustain=0
@@ -399,11 +419,14 @@ sample=*silence
 group=1
 off_by=1
 ```
+
 ## Harp Glissandi
+
 Harp glissandi could be set up very similarly to a guitar strum, only with potentially a lot more notes.
 For simplicty's sake, let's consider just one octave. Speed is still controlled by CC1, and MIDI note
 24 will trigger an upward glissando starting with the C4 note.
-```
+
+```sfz
 <group>
 key=24
 <region>
@@ -430,9 +453,11 @@ delay_cc1=0.6
 sample=c5.wav
 delay_cc1=0.7
 ```
+
 In order to make this more usable, we can add another control which will determine for how many notes
 the gliss keeps going before it stops. Let's use CC4.
-```
+
+```sfz
 <group>
 key=24
 //First three notes are not affected by CC4, and are always played
@@ -465,6 +490,7 @@ sample=c5.wav
 delay_cc1=0.7
 locc4=127
 ```
+
 This is essentially how a harp glissando on a folk harp operates. Concert harps have pedals which
 allow the retuning of strings to allow playing other scales, and this would need to be implemented,
 perhaps with a different MIDI CC for each pitch class. Strumming the drone strings on a Hungarian
@@ -483,7 +509,8 @@ chord in the above guitar examples is. Instead of keyswitching, it is also possi
 strums on different keys (though this can easily require more keys than an 88-key keyboard),
 or selectable by CC, note velocity and possibly other variables as well. The below example uses
 CC4 to control how many strings are strummed.
-```
+
+```sfz
 <group>
 key=24
 //First three notes are not affected by CC4
@@ -547,13 +574,15 @@ key=47
 <region>
 key=48
 ```
+
 For more realism, muted samples could be triggered for the strings which are not down.
 Although muting the strings for the keyswitches which are up and skipping the strings where the
 switch is down would be more analogous to the way the instruments are played in real life, this
 sort of "negative space" chord fingering is much more awkward for most users to play on a keyboard.
 It could easily be accomplished by merely switching the sw_up and sw_down opcodes in the below
 example.
-```
+
+```sfz
 <group>
 key=24
 
@@ -658,7 +687,9 @@ key=47
 <region>
 key=48
 ```
+
 ## Chromatic Strumming On Diatonic Instruments
+
 The cithara barbarica instrument at https://github.com/sfzinstruments/cithara-barbarica has a patch like this.
 It simply duplicates each string's regions to cover the "missing" pitches. This works fine as long as there are
 no muted samples used for the stopped strings, and having a muted string sound every half-step would not be
@@ -668,7 +699,8 @@ One way to have muted sounds while playing chromatically would be to always trig
 the "real" pitch of each string should be, but have it instantly muted if a pitch in that string's range is
 played. This is not great, as the muted sound would be a half-step off, but as the muted strings are shortened
 and produce a higher pitch anyway, it seems to work well enough.
-```
+
+```sfz
 <group>
 key=26
 
@@ -729,12 +761,12 @@ sw_down=41
 group=23
 delay_cc1=0.200
 ```
-A more realistic way to handle this would be to have a MIDI CC for each string to set its tuning, so for example
-the C string could sound a B or C# note, like on a concert harp with pedals. However, this is probably not very
-convenient for most players who would rather hit a B note to sound a B. This, of course, would not actually be
-chromatic - but not limited to a single scale.
+
+A more realistic way to handle this would be to have a MIDI CC for each string to set its tuning, so for example the C string could sound a B or C# note, like on a concert harp with pedals. However, this is probably not very convenient for most players who would rather hit a B note to sound a B. This, of course, would not actually be chromatic - but not limited to a single scale.
+
 ## Further Possibilities
-In reality, a strum will transfer force to the first strings it hits, and subsequent strings will
-be hit with a little less force, and the delay between strings might also be nonlinear.
+In reality, a strum will transfer force to the first strings it hits,
+and subsequent strings will be hit with a little less force,
+and the delay between strings might also be nonlinear.
 
 This tutorial is open source, so feel free to contribute.

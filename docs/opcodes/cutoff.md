@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "cutoff"
 title: "cutoff / cutoff2"
 ---
@@ -9,7 +9,7 @@ of the second by cutoff2.
 
 ## Examples
 
-```
+```sfz
 cutoff=343
 cutoff2=1200
 cutoff_cc1=1200

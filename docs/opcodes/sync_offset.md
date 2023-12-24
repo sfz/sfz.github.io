@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sync_offset"
 ---
 When [sync_beats] is specified and after input controls instruct
@@ -8,7 +8,7 @@ the specified value plus the `sync_offset` value is crossed.
 
 ## Example
 
-```
+```sfz
 sync_beats=4
 sync_offset=1
 ```
@@ -20,4 +20,4 @@ This opcode will only work in hosts featuring song position information
 (vstTimeInfo ppqPos).
 
 
-[sync_beats]: sync_beats
+[sync_beats]: sync_beats.md

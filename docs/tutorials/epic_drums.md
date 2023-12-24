@@ -15,7 +15,7 @@ real recording, and the clarity and definition of the originally pitched sample.
 This could be done using the [tune] opcode, though [transpose] is likely
 more convenient.Here is a very simple example using a single floor tom sample:
 
-```
+```sfz
 <region>
 sample=Rack_Tom.wav
 
@@ -28,7 +28,7 @@ If the sample maps are modularized using [#include] statements,
 it becomes very simple to set up a volume control, and also use [locc] so that
 the transposed samples don't use up polyphony voices when their volume is at zero.
 
-```
+```sfz
 <master>
 amplitude_oncc101=100
 locc101=1
@@ -50,7 +50,7 @@ this to kick close mics.
 Although sample maps can often be reused, as in the above example, instruments which have self-muting behavior, such as hi-hats, or instruments with polyphony limitations
 will need separate polyphony [group] numbers for the transposed regions, just as if the transposed regions were separate microphone positions. With [complex muting scenarios] this will result in very large numbers of groups which can be difficult to keep track of, but with simple self-muting it could look like this:
 
-```
+```sfz
 <master>
 amplitude_oncc101=100
 locc101=1
@@ -81,10 +81,10 @@ Applying this trick to a snare bottom mic usually results in a sound which is no
 Beyond drums, this could work reasonably well with other instruments. Sounds with fast, distinct attacks will behave more similarly to drums, though at least on principle this could be used with sounds such as sustained bowed strings also. Of course, pitched instruments can be doubled with another note an octave lower without transposition, as long as the lower note also falls in their range. However, transposition an octave down does make the reverb tails twice as long.
 
 
-[complex muting scenarios]: cymbal_muting
-[#include]:  {{ '/opcodes/include' | relative_url }}
-[group]:     {{ '/opcodes/group' | relative_url }}
-[locc]:      {{ '/opcodes/hiccN' | relative_url }}
-[offset]:    {{ '/opcodes/offset' | relative_url }}
-[transpose]: {{ '/opcodes/transpose' | relative_url }}
-[tune]:      {{ '/opcodes/tune' | relative_url }}
+[complex muting scenarios]: cymbal_muting.md
+[#include]:  ../opcodes/include.md
+[group]:     ../opcodes/group.md
+[locc]:      ../opcodes/hiccN.md
+[offset]:    ../opcodes/offset.md
+[transpose]: ../opcodes/transpose.md
+[tune]:      ../opcodes/tune.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "oscillator_multi"
 ---
 Assuming [oscillator_mode]=0:
@@ -38,7 +38,8 @@ With `i` the number of the oscillator (starting at 1),
 the left gain is `(i-1)/(m-1)`, and the right gain is `1-((i-1)/(m-1))`.
 
 ## Example
-```
+
+```sfz
 /*
 # Left:
   [4]   25 cents,        0 dB
@@ -59,5 +60,5 @@ oscillator_detune=100
 oscillator_multi=5
 ```
 
-[oscillator_mode]:   oscillator_mode
-[oscillator_detune]: oscillator_detune
+[oscillator_mode]:   oscillator_mode.md
+[oscillator_detune]: oscillator_detune.md

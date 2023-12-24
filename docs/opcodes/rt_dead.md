@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "rt_dead"
 ---
 Allowed values are on and off, default is off, so by default, release
@@ -7,7 +7,7 @@ samples do not play if their sustain samples have expired.
 
 ## Example
 
-```
+```sfz
 rt_dead=on
 ```
 

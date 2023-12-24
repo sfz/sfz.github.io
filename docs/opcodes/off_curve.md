@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "off_curve"
 ---
 
@@ -12,7 +12,7 @@ opcode_name: "off_curve"
 
 ## Examples
 
-```
+```sfz
 off_curve=-1
 off_curve=10
 ```

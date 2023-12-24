@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_start"
 ---
 If `loop_start` is not specified and the sample has a loop defined, the SFZ player
@@ -16,11 +16,11 @@ This opcode will not have any effect if [loop_mode] is set to **no_loop**.
 
 ## Examples
 
-```
+```sfz
 loop_start=4503
 
 loop_start=12445
 ```
 
 
-[loop_mode]: loop_mode
+[loop_mode]: loop_mode.md

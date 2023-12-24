@@ -36,7 +36,7 @@ If it were nonzero, the tip of the left-pointing arrow would look chopped off ve
 <img
   class="img-fluid"
   alt="DAHDSR envelope shape image"
-  src="./../assets/img/ampeg_env.jpg"
+  src="../../assets/img/ampeg_env.jpg"
 />
 
 Here's a play-by-play explanation, when using the EG for volume (ampeg_xxx).
@@ -93,7 +93,7 @@ the above. This is briefly described in [SFZ2 Modulations:Envelopes].
       and silence in dB is negative infinity, which complicates the math.
 
 
-[SFZ1 Modulations]:           sfz1_modulations
-[SFZ2 Modulations:Envelopes]: sfz2_modulations#envelopes
+[SFZ1 Modulations]:           sfz1_modulations.md
+[SFZ2 Modulations:Envelopes]: sfz2_modulations.md#envelopes
 
 <style>th:nth-of-type(1){width:20%;}</style>

@@ -1,6 +1,6 @@
 ---
-title:  "‹control›"
-layout: "sfz/header"
+title: "‹control›"
+template: "sfz/header.j2"
 ---
 SFZ 2 header which should come before [‹global›] in the file,
 and can contain the following special directives,
@@ -24,11 +24,11 @@ unreasonable.
 See also [ARIA Extensions].
 
 
-[‹global›]:      global
-[ARIA Extensions]: {{ '/extensions/aria/#instrument-settings' | relative_url }}
-[#define]:         {{ '/opcodes/define' | relative_url }}
-[default_path]:    {{ '/opcodes/default_path' | relative_url }}
-[note_offset]:     {{ '/opcodes/note_offset' | relative_url }}
-[octave_offset]:   {{ '/opcodes/octave_offset' | relative_url }}
-[label_ccN]:       {{ '/opcodes/label_ccN' | relative_url }}
-[set_ccN]:         {{ '/opcodes/set_ccN' | relative_url }}
+[‹global›]:        global.md
+[ARIA Extensions]: ../opcodes/index.md#instrument-settings
+[#define]:         ../opcodes/define.md
+[default_path]:    ../opcodes/default_path.md
+[note_offset]:     ../opcodes/note_offset.md
+[octave_offset]:   ../opcodes/octave_offset.md
+[label_ccN]:       ../opcodes/label_ccN.md
+[set_ccN]:         ../opcodes/set_ccN.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "xfout_loccN / xfout_hiccN"
 ---
 `xfout_loccN` and `xfout_hiccN` set the range of values in the MIDI continuous
@@ -11,7 +11,7 @@ and zero for values greater than or equal to `xfout_hiccN`.
 
 ## Examples
 
-```
+```sfz
 xfout_locc1=64
 xfout_hicc1=127
 ```

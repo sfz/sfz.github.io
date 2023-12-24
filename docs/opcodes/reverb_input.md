@@ -1,8 +1,8 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "reverb_input"
 ---
 Used under the `‹effect›` header, with [type]=`fverb`.
 
 
-[type]: type#fverb
+[type]: type.md#fverb

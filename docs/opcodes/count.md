@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "count"
 ---
 If this opcode is specified, the sample will play as many times as defined.
@@ -11,7 +11,7 @@ loop_mode=one_shot.
 
 ## Examples
 
-```
+```sfz
 count=3
 
 count=2
@@ -26,4 +26,4 @@ count=0 will have the same effect as count=1 - essentially set loop_mode
 to one_shot and cause the sample to be played once.
 
 
-[loop_mode]: loop_mode
+[loop_mode]: loop_mode.md

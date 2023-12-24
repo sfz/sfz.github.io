@@ -1,6 +1,7 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_crossfade"
+math: true
 ---
 This can be used to add a crossfade to a loop where the looped sample does not have the crossfade "baked into" its audio data.
 
@@ -8,10 +9,9 @@ This can be used to add a crossfade to a loop where the looped sample does not h
 
 This opcode is uinimplemented in most SFZ players, but it is avaialble in OpenMPT and sfizz.
 sfizz currently uses a sinusoidal formula as default.
-```
-amp = (1-cos(pi*x))/2
-```
+
+$$ amp = (1-cos(pi*x))/2 $$
+
 OpenMPT's crossfade implementation currently applies a fade halfway between a constant volume fade and constant power fade.
-```
-amp = pow(x, 0.75)
-```
+
+$$ amp = pow(x, 0.75) $$

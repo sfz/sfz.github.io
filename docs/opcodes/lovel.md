@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lovel / hivel"
 ---
 This is obviously useful for instruments with dynamic layers controlled by velocity.
@@ -18,14 +18,14 @@ Velocity 0 is a note-off message, so 1 is the lowest usable value with hivel/lov
 
 ## Example
 
-```
+```sfz
 lovel=64 hivel=95
 ```
 
 An instrument with four velocity-controlled dynamic layers might use `lovel` and
 `hivel` like this:
 
-```
+```sfz
 <region>hivel=31 amp_velcurve_31=1 sample=kick_vl1.wav
 <region>lovel=32 hivel=63 amp_velcurve_63=1 sample=kick_vl2.wav
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav
@@ -41,5 +41,5 @@ velocity 95. Finally, the kick_vl4 layer plays at velocities 96 to 127, with no
 [amp_velcurve_N] set meaning it will have full volume at velocity 127.
 
 
-[amp_velcurve_N]: amp_velcurve_N
-[amp_veltrack]:   amp_veltrack
+[amp_velcurve_N]: amp_velcurve_N.md
+[amp_veltrack]:   amp_veltrack.md

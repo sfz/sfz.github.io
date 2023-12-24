@@ -17,7 +17,7 @@ transition, unless the next note has an extremely fast attack. Therefore, at lea
 will need to be specified in most cases - though most instruments will need to specify that even
 if not using legato.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
 
 group=1 off_by=1 off_mode=normal
@@ -65,7 +65,7 @@ would then be group 3 and also be muted by group 2. As with hi-hat muting, if th
 are multiple mic positions in separate files, each mic position will need its own
 polyphony groups.
 
-```
+```sfz
 <global>off_mode=time
 off_time=1
 amp_veltrack=0
@@ -89,7 +89,7 @@ As this does not use velocity to control note volume, that frees up velocity for
 something else, so in this specific case velocity is repurposed to shorten the
 attack time on the legato notes, which makes the patch more intuitively playable.
 
-```
+```sfz
 <global>off_mode=time
 off_time=1
 amp_veltrack=0
@@ -126,7 +126,7 @@ is used to make the pitch change happen. CC140 is the ARIA extension CC for pitc
 delta, and being the difference in pitch between the previous note and the
 current note, it sets the depth of the glide envelope.
 
-```
+```sfz
 <global>eg06_sustain=1 //Pitch envelope setup for legato slides
 eg06_level0=-1 //Envelope starts away from the note pitch
 eg06_time0=0
@@ -148,7 +148,7 @@ versions. Here's an example non-legato region with trigger
 set to first and no eg06_time_oncc109 set. The group and off_by work just like
 in the above examples.
 
-```
+```sfz
 <group>
 trigger=first
 off_mode=normal
@@ -165,7 +165,7 @@ envelope time control, and also an attack time, to let the note fade in
 more gradually, with this controlled by CC100 rather than velocity, as the
 example above. This is another option.
 
-```
+```sfz
 <group>
 trigger=legato
 off_mode=normal
@@ -173,7 +173,6 @@ group=1
 off_by=1
 eg06_time1_oncc109=0.3
 ampeg_attack_oncc100=0.5
-
 
 <region>
 sample=..\Samples\arco_looped\c4_sustain.wav
@@ -188,7 +187,7 @@ to choose which sample plays for the legato regions. If the samples would includ
 both the legato transition and the complete sustain of the following note, things
 would be very simple:
 
-```
+```sfz
 <group>
 // Legato transitions and the complete sustain of the next note both in the same sample
 trigger=legato
@@ -211,7 +210,7 @@ time, diskspace and RAM use, however. It may be necessary in some cases, such as
 solo vocals, but in other cases it's possible to use transition samples which
 are short, then fade in the regular sustain sample.
 
-```
+```sfz
 <group>
 // Legato transitions in one sample, crossfaded into standard sustain in another sample
 trigger=legato
@@ -240,7 +239,7 @@ example. The [extended CCs] do not always behave quite like other CCs,
 necessitating using hdcc in ARIA, but the below works for a legato vocal with a range of
 less than two octaves.
 
-```
+```sfz
 <global>
 off_mode=time
 off_time=0.4
@@ -288,12 +287,12 @@ It would also be possible to use CC 140 in a similar way in an instrument which,
 for example, had legato transitions recorded ascending but not descending.
 
 
-[extended CCs]:  {{ '/extensions/midi_ccs' | relative_url }}
-[envelope]:      {{ '/modulations/envelope_generators' | relative_url }}
-[ampeg_release]: {{ '/opcodes/ampeg_release' | relative_url }}
-[group]:         {{ '/opcodes/group' | relative_url }}
-[off_by]:        {{ '/opcodes/off_by' | relative_url }}
-[off_mode]:      {{ '/opcodes/off_mode' | relative_url }}
-[offset]:        {{ '/opcodes/offset' | relative_url }}
-[sw_previous]:   {{ '/opcodes/sw_previous' | relative_url }}
-[trigger]:       {{ '/opcodes/trigger' | relative_url }}
+[extended CCs]:  ../extensions/midi_ccs.md
+[envelope]:      ../modulations/envelope_generators.md
+[ampeg_release]: ../opcodes/ampeg_release.md
+[group]:         ../opcodes/group.md
+[off_by]:        ../opcodes/off_by.md
+[off_mode]:      ../opcodes/off_mode.md
+[offset]:        ../opcodes/offset.md
+[sw_previous]:   ../opcodes/sw_previous.md
+[trigger]:       ../opcodes/trigger.md

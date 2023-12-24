@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sync_beats"
 ---
 When `sync_beats` is specified and after input controls instruct the region to play,
@@ -8,7 +8,7 @@ is crossed.
 
 ## Example
 
-```
+```sfz
 sync_beats=4
 ```
 

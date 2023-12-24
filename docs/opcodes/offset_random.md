@@ -1,8 +1,8 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "offset_random"
 ---
-In many cases, will need to be used with a small [ampeg_attack](ampeg_attack)
+In many cases, will need to be used with a small [ampeg_attack]
 value to avoid clicks caused by the region playing starting with a point
 in the sample file where the value is non-zero. Computed when the note is
 triggered. Unipolar in ARIA, Cakewalk and rcg sfz.
@@ -16,7 +16,7 @@ higher than 20000 or so on most systems.
 
 ## Examples
 
-```
+```sfz
 offset_random=300
 
 offset_random=100
@@ -25,3 +25,6 @@ offset_random=100
 Potential uses: randomizing the phase alignment of multiple samples playing in
 unison; playing a looped sample from a randomized start point in order to create
 natural variation.
+
+
+[ampeg_attack]: ampeg_attack.md

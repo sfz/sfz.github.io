@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_tune"
 ---
 ## Examples
 
-```
+```sfz
 loop_tune=-4
 loop_tune=6
 ```

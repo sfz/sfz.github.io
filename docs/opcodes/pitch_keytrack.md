@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pitch_keytrack"
 ---
 Default value is 100, which means pitch will change one hundred cents
@@ -10,7 +10,7 @@ pitch, particularly useful when mapping drum sounds.
 
 ## Examples
 
-```
+```sfz
 pitch_keytrack=20
 
 pitch_keytrack=0

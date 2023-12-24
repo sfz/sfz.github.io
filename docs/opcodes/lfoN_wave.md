@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_wave"
 ---
 In [ARIA] it's possible for one LFO to use sub waveforms in addition to the main waveform.
@@ -51,14 +51,14 @@ The waveforms supported in the other player engines need to be tested.
 
 ## Examples
 
-```
+```sfz
 lfo01_wave=6
 lfo02_wave=3
 lfo01_wave2=1
 lfo03_wave2=12
 ```
 
-```
+```sfz
 lfo01_wave=12 //S&H style LFO used here for randomization
 lfo01_pitch=10
 lfo01_freq=2
@@ -72,7 +72,7 @@ lfo01_scale2=0.3 //Shallower than the main wave
 
 Wave 13 is a provision for ARIA to support SFZ 2.0's [stepped LFO], equivalent to:
 
-```
+```sfz
 lfo01_steps=4
 lfo01_freq=1
 lfo01_pitch=1200
@@ -84,9 +84,9 @@ lfo01_step04_oncc73=100 lfo01_step04_smoothcc73=100
 ```
 
 
-[lfoN_ratio2]:  lfoN_ratio
-[lfoN_scale2]:  lfoN_scale
-[lfoN_offsetX]: lfoN_offsetX
-[stepped LFO]:  lfoN_steps
-[ARIA]:         ./?v=aria
-[SFZ v2]:       ./?v=2
+[lfoN_ratio2]:  lfoN_ratio.md
+[lfoN_scale2]:  lfoN_scale.md
+[lfoN_offsetX]: lfoN_offsetX.md
+[stepped LFO]:  lfoN_steps.md
+[ARIA]:         index.md/?v=aria
+[SFZ v2]:       index.md/?v=2

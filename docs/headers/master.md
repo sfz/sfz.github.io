@@ -1,10 +1,10 @@
 ---
-title:  "‹master›"
-layout: "sfz/header"
+title: "‹master›"
+template: "sfz/header.j2"
 ---
 ## Example
 
-```
+```sfz
 <global>
 loop_mode=one_shot
 ampeg_attack=0.001

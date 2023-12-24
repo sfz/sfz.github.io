@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_sustain"
 ---
 Defines which envelope point is used for the sustain level.
@@ -10,9 +10,9 @@ the same numbered [egN_level] opcode.
 
 ## Example
 
-```
+```sfz
 eg01_sustain=5
 ```
 
 
-[egN_level]: egN_levelX
+[egN_level]: egN_levelX.md

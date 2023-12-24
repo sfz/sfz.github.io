@@ -1,12 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_loop_count"
 ---
 Specifies how many times the loop for envelope N is to repeat.
 
 ## Example
 
-```
+```sfz
 eg01_loop=2
 eg01_loop_shape=1
 eg01_loop_count=8

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fil_type"
 title: "fil_type / fil2_type"
 ---
@@ -16,7 +16,7 @@ ARIA adds three more possible values for both opcodes.
 
 ## Examples
 
-```
+```sfz
 fil_type=lpf_2p
 fil_type=hpf_1p
 ```
@@ -24,7 +24,7 @@ fil_type=hpf_1p
 Passive tone controls in guitars are one-pole low pass filters.
 Typical subtractive synthesizer filters are two-pole filters.
 
-```
+```sfz
 fil2_type=hpf_2p
 ```
 
@@ -34,7 +34,7 @@ In the below example, the first filter does not have a type
 set explicitly, so fil_type defaults to lpf_2p, making it
 a lowpass filter. The second filter is set to be a highpass filter.
 
-```
+```sfz
 cutoff=1200
 resonance=6
 fil2_type=hpf_2p
@@ -42,19 +42,16 @@ cutoff2=250
 resonance2=3
 ```
 
-## Players support
+## Practical Considerations
 
-Both ARIA and LinuxSampler supports all SFZ v1 filter types.
-The following table describes which SFZ v2 and ARIA extension filter types they support.
 `lsh`, `hsh` and `peq` are ARIA extensions, allowing filters to be used as low-shelf,
 high-shelf or up to two additional parametric EQ bands,
 in addition to the default three eqN bands.
-Filters of these three types use [fil_gain] or fil2_gain
+Filters of these three types use [fil_gain] or [fil2_gain]
 to set the gain of the shelf or band.
 
-{% include sfz/fil_type_players_compatibility_table.html %}
 
-
-[cutoff]:    cutoff
-[fil_gain]:  fil_gain
-[resonance]: resonance
+[cutoff]:    cutoff.md
+[fil_gain]:  fil_gain.md
+[fil2_gain]: fil2_gain.md
+[resonance]: resonance.md

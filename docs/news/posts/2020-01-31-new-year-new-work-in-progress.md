@@ -13,6 +13,7 @@ for adding our news feed on [Linuxaudio Planet], jpcima, MatFluor, PaulFd and sf
 This website is an opensource non profit project, I hope to see more people
 involved in the future to help make it grow.
 
+
 [Instruments]:       https://sfzinstruments.github.io
-[Modulations]:       /modulations/
+[Modulations]:       ../../modulations/index.md
 [Linuxaudio Planet]: https://planet.linuxaudio.org/

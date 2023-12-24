@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "script"
 ---
 This is an extension to the SFZ file format which is currently only available
@@ -20,7 +20,7 @@ instrument, and loads the real-time instrument script file "my_nksp_script.txt"
 from the subdirectory "myscripts". The script will be executed on the respective
 events the script file provides event handlers for.
 
-```
+```sfz
 <global>
 script=myscripts/my_nksp_script.txt
 
@@ -31,5 +31,5 @@ sample=some_sound.wav
 Source: [LinuxSampler Documentation](http://doc.linuxsampler.org/sfz/script_opcode/)
 
 
-[‹global›]: {{ '/headers/global' | relative_url }}
+[‹global›]:           ../headers/global.md
 [Instrument Scripts]: http://doc.linuxsampler.org/Instrument_Scripts

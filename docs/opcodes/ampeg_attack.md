@@ -1,11 +1,11 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_attack"
 math: true
 ---
 ## Examples
 
-```
+```sfz
 ampeg_attack=1.2
 fileg_attack=0.1
 ```
@@ -32,5 +32,5 @@ ampeg_envelope shape and its stages.
 <img
   class="img-fluid"
   alt="DAHDSR envelope shape image"
-  src="./../assets/img/ampeg_env.jpg"
+  src="../../assets/img/ampeg_env.jpg"
 />

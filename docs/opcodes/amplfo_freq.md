@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "amplfo_freq"
 ---
 ## Examples
 
-```
+```sfz
 amplfo_freq=0.4
 amplfo_freq=10
 ```

@@ -1,19 +1,19 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "#define"
 ---
 Variable names start with the $ character.
 
 ## Example
 
-```
+```sfz
 #define $KICKKEY 36
 #define $LOWEBENDT 507
 ```
 
 The defined variables can then be used like this:
 
-```
+```sfz
 <control>
 #define $KICKKEY 36
 #define $SNAREKEY 38
@@ -38,4 +38,4 @@ use [#include] to put each set of #define statements with different
 values in a separate file.  In simple tests, that has been successful.
 
 
-[#include]: {{ '/opcodes/include' | relative_url }}
+[#include]: include.md

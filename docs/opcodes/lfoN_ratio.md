@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_ratio"
 ---
 It's possible for one LFO to use sub waveforms in addition to the main waveform.
@@ -13,12 +13,12 @@ but it can also be set for the main waveform if needed.
 
 ## Example
 
-```
+```sfz
 lfo01_ratio2=4
 lfo03_ratio=0.321
 ```
 
-```
+```sfz
 lfo01_wave=12 //S&H style LFO used here for randomization
 lfo01_pitch=10
 lfo01_freq=2

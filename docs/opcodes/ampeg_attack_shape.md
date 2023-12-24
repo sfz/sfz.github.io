@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_attack_shape"
 ---
 0 is linear. Positive values are slower curves (that means the envelope will
@@ -12,7 +12,7 @@ vertical line (if positive) or a vertical line followed by a horizontal line
 
 ## Examples
 
-```
+```sfz
 ampeg_attack_shape=2.1
 ampeg_attack_shape=-3.8
 ```
@@ -23,8 +23,21 @@ As aid to estimate what the values will do, here some examples.
 All curves were made at 120bpm with `ampeg_attack=1`, note held for 2 seconds.
 Each vertical line represents 0.5 seconds.
 
-{%-assign images  = "sine_neg8.jpg,sine_neg3p8.jpg,sine_0.jpg,sine_pos2p1.jpg,sine_pos8.jpg" | split: ','-%}
-{%-assign titles  = "ampeg_attack_shape=-8,ampeg_attack_shape=-3.8,ampeg_attack_shape=0,ampeg_attack_shape=2.1,ampeg_attack_shape=8" | split: ','-%}
-{%-assign gallery = "ampeg_attack_shape"-%}
-{%-assign path    = "/assets/img/ampeg_attack_shape/"-%}
-{%-include lightbox_gallery.liquid const_images=images const_titles=titles const_gallery=gallery const_path=path-%}
+{%-set images = [
+  "sine_neg8.jpg",
+  "sine_neg3p8.jpg",
+  "sine_0.jpg",
+  "sine_pos2p1.jpg",
+  "sine_pos8.jpg"
+] %}
+{%-set titles = [
+  "ampeg_attack_shape=-8",
+  "ampeg_attack_shape=-3.8",
+  "ampeg_attack_shape=0",
+  "ampeg_attack_shape=2.1",
+  "ampeg_attack_shape=8"
+] %}
+{%-set name = "ampeg_attack_shape" %}
+{%-set path = "../../assets/img/ampeg_attack_shape/" %}
+{%-import "lightbox.j2" as lightbox with context %}
+{{ lightbox.make_gallery(images, titles, name, path) }}

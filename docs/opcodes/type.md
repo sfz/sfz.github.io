@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "type"
 ---
 
@@ -51,140 +51,153 @@ The effect routing logic in Rapture is as follows:
 <img
   class="img-fluid"
   alt="Effect routing image"
-  src="./../assets/img/effect/routing.svg"
+  src="../../assets/img/effect/routing.svg"
 />
 
 ### apan
 Automatic panning with LFO:
-- [apan_depth](apan_depth)
-- [apan_dry](apan_dry)
-- [apan_freq](apan_freq)
-- [apan_phase](apan_phase)
-- [apan_waveform](apan_waveform)
-- [apan_wet](apan_wet)
+
+- [apan_depth](apan_depth.md)
+- [apan_dry](apan_dry.md)
+- [apan_freq](apan_freq.md)
+- [apan_phase](apan_phase.md)
+- [apan_waveform](apan_waveform.md)
+- [apan_wet](apan_wet.md)
 
 ### comp
 Compressor:
-- [comp_attack](comp_attack)
-- [comp_gain](comp_gain)
-- [comp_ratio](comp_ratio)
-- [comp_release](comp_release)
-- [comp_stlink](comp_stlink)
-- [comp_threshold](comp_threshold)
+
+- [comp_attack](comp_attack.md)
+- [comp_gain](comp_gain.md)
+- [comp_ratio](comp_ratio.md)
+- [comp_release](comp_release.md)
+- [comp_stlink](comp_stlink.md)
+- [comp_threshold](comp_threshold.md)
 
 ### delay
 Multi-purpose delay line:
-- [delay_cutoff](delay_cutoff)
-- [delay_damphi](delay_damphi)
-- [delay_damplo](delay_damplo)
-- [delay_dry](delay_dry)
-- [delay_feedback](delay_feedback)
-- [delay_filter](delay_filter)
-- [delay_input](delay_input)
-- [delay_levelc](delay_levelc)
-- [delay_levell](delay_levell)
-- [delay_levelr](delay_levelr)
-- [delay_lfofreq](delay_lfofreq)
-- [delay_moddepth](delay_moddepth)
-- [delay_mode](delay_mode)
-- [delay_panc](delay_panc)
-- [delay_panl](delay_panl)
-- [delay_panr](delay_panr)
-- [delay_resonance](delay_resonance)
-- [delay_spread](delay_spread)
-- [delay_syncc_onccN](delay_syncc_onccN)
-- [delay_syncl_onccN](delay_syncl_onccN)
-- [delay_syncr_onccN](delay_syncr_onccN)
-- [delay_time_tap](delay_time_tap)
-- [delay_timec](delay_timec)
-- [delay_timel](delay_timel)
-- [delay_timer](delay_timer)
-- [delay_wet](delay_wet)
+
+- [delay_cutoff](delay_cutoff.md)
+- [delay_damphi](delay_damphi.md)
+- [delay_damplo](delay_damplo.md)
+- [delay_dry](delay_dry.md)
+- [delay_feedback](delay_feedback.md)
+- [delay_filter](delay_filter.md)
+- [delay_input](delay_input.md)
+- [delay_levelc](delay_levelc.md)
+- [delay_levell](delay_levell.md)
+- [delay_levelr](delay_levelr.md)
+- [delay_lfofreq](delay_lfofreq.md)
+- [delay_moddepth](delay_moddepth.md)
+- [delay_mode](delay_mode.md)
+- [delay_panc](delay_panc.md)
+- [delay_panl](delay_panl.md)
+- [delay_panr](delay_panr.md)
+- [delay_resonance](delay_resonance.md)
+- [delay_spread](delay_spread.md)
+- [delay_syncc_onccN](delay_syncc_onccN.md)
+- [delay_syncl_onccN](delay_syncl_onccN.md)
+- [delay_syncr_onccN](delay_syncr_onccN.md)
+- [delay_time_tap](delay_time_tap.md)
+- [delay_timec](delay_timec.md)
+- [delay_timel](delay_timel.md)
+- [delay_timer](delay_timer.md)
+- [delay_wet](delay_wet.md)
 
 ### disto
 Asymmetric distorsion with tone control:
-- [disto_depth](disto_depth)
-- [disto_dry](disto_dry)
-- [disto_stages](disto_stages)
-- [disto_tone](disto_tone)
-- [disto_wet](disto_wet)
+
+- [disto_depth](disto_depth.md)
+- [disto_dry](disto_dry.md)
+- [disto_stages](disto_stages.md)
+- [disto_tone](disto_tone.md)
+- [disto_wet](disto_wet.md)
 
 ### eq
 Equalizer (Same opcode meanings as ordinary EQ):
-- [eq_bw](eq_bw)
-- [eq_freq](eq_freq)
-- [eq_gain](eq_gain)
-- [eq_type](eq_type)
+
+- [eq_bw](eq_bw.md)
+- [eq_freq](eq_freq.md)
+- [eq_gain](eq_gain.md)
+- [eq_type](eq_type.md)
 
 ### filter
 (Same opcode meanings as ordinary filter):
-- [filter_cutoff](filter_cutoff)
-- [filter_resonance](filter_resonance)
-- [filter_type](filter_type)
+
+- [filter_cutoff](filter_cutoff.md)
+- [filter_resonance](filter_resonance.md)
+- [filter_type](filter_type.md)
 
 ### fverb
 Algorithmic reverberation:
-- [reverb_damp](reverb_damp)
-- [reverb_dry](reverb_dry)
-- [reverb_input](reverb_input)
-- [reverb_predelay](reverb_predelay)
-- [reverb_size](reverb_size)
-- [reverb_tone](reverb_tone)
-- [reverb_type](reverb_type)
-- [reverb_wet](reverb_wet)
+
+- [reverb_damp](reverb_damp.md)
+- [reverb_dry](reverb_dry.md)
+- [reverb_input](reverb_input.md)
+- [reverb_predelay](reverb_predelay.md)
+- [reverb_size](reverb_size.md)
+- [reverb_tone](reverb_tone.md)
+- [reverb_type](reverb_type.md)
+- [reverb_wet](reverb_wet.md)
 
 ### gate
 Signal gate:
-- [gate_onccN](gate_onccN)
-- [gate_attack](gate_attack)
-- [gate_release](gate_release)
-- [gate_stlink](gate_stlink)
-- [gate_threshold](gate_threshold)
+
+- [gate_onccN](gate_onccN.md)
+- [gate_attack](gate_attack.md)
+- [gate_release](gate_release.md)
+- [gate_stlink](gate_stlink.md)
+- [gate_threshold](gate_threshold.md)
 
 ### limiter
 No opcodes for this type.
 
 ### lofi
 Bit depth reducer and decimator combined:
-- [bitred](bitred)
-- [decim](decim)
+
+- [bitred](bitred.md)
+- [decim](decim.md)
 
 ### mverb
 Present in some Cakewalk products only, undocumented.
 
 ### phaser
 Dual-notch phaser with LFO:
-- [phaser_depth](phaser_depth)
-- [phaser_feedback](phaser_feedback)
-- [phaser_freq](phaser_freq)
-- [phaser_phase_onccN](phaser_phase_onccN)
-- [phaser_stages](phaser_stages)
-- [phaser_waveform](phaser_waveform)
-- [phaser_wet](phaser_wet)
+
+- [phaser_depth](phaser_depth.md)
+- [phaser_feedback](phaser_feedback.md)
+- [phaser_freq](phaser_freq.md)
+- [phaser_phase_onccN](phaser_phase_onccN.md)
+- [phaser_stages](phaser_stages.md)
+- [phaser_waveform](phaser_waveform.md)
+- [phaser_wet](phaser_wet.md)
 
 ### static
 Static noise generator:
-- [static_cyclic_level](static_cyclic_level)
-- [static_cyclic_time](static_cyclic_time)
-- [static_filter](static_filter)
-- [static_level](static_level)
-- [static_random_level](static_random_level)
-- [static_random_maxtime](static_random_maxtime)
-- [static_random_mintime](static_random_mintime)
-- [static_stereo](static_stereo)
-- [static_tone](static_tone)
+
+- [static_cyclic_level](static_cyclic_level.md)
+- [static_cyclic_time](static_cyclic_time.md)
+- [static_filter](static_filter.md)
+- [static_level](static_level.md)
+- [static_random_level](static_random_level.md)
+- [static_random_maxtime](static_random_maxtime.md)
+- [static_random_mintime](static_random_mintime.md)
+- [static_stereo](static_stereo.md)
+- [static_tone](static_tone.md)
 
 ### strings
 Sympathetic resonance with waveguide synthesis:
-- [strings_number](strings_number)
-- [strings_wet_onccN](strings_wet_onccN)
+
+- [strings_number](strings_number.md)
+- [strings_wet_onccN](strings_wet_onccN.md)
 
 ### tdfir
 Impulse response convolver:
-- [tdfir_dry](tdfir_dry)
-- [tdfir_gain](tdfir_gain)
-- [tdfir_impulse](tdfir_impulse)
-- [tdfir_wet](tdfir_wet)
+
+- [tdfir_dry](tdfir_dry.md)
+- [tdfir_gain](tdfir_gain.md)
+- [tdfir_impulse](tdfir_impulse.md)
+- [tdfir_wet](tdfir_wet.md)
 
 Note that the Cakewalk book has some typos in opcode names, such as `EffectN`
 (capital letter) or `‹effects›`.
@@ -194,6 +207,6 @@ ones. For example, `autopan` does not appear to work in any Cakewalk product, wh
 `distortion`.
 
 
-[custom curves]: {{ '/headers/curve' | relative_url }}
-[‹effect›]:      {{ '/headers/curve' | relative_url }}
-[param_offset]:  param_offset
+[custom curves]: ../headers/curve.md
+[‹effect›]:      ../headers/curve.md
+[param_offset]:  param_offset.md

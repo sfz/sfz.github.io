@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_shapeX"
 ---
 Curve shape before the specified envelope point in envelope N.
@@ -12,7 +12,7 @@ Shapes values can also be applied to "regular" ampeg, pitch and cutoff envelopes
 
 ## Examples
 
-```
+```sfz
 eg01_shape1=5.2
 eg02_shape2=-3.5
 ampeg_attack_shape=3.8

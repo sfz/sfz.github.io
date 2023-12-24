@@ -1,4 +1,4 @@
 ---
-title:  "‹midi›"
-layout: "sfz/header"
+title: "‹midi›"
+template: "sfz/header.j2"
 ---

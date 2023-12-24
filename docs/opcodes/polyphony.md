@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "polyphony"
 ---
 
@@ -19,7 +19,7 @@ is set to 1, and the following behavior is also triggered:
 
 ## Examples
 
-```
+```sfz
 polyphony=12
 polyphony=5
 polyphony=legato_low
@@ -27,7 +27,7 @@ polyphony=legato_low
 
 An example limiting a crash cymbal to four polyphony voices.
 
-```
+```sfz
 group=1
 polyphony=4
 <region> key=49 sample=crash.wav
@@ -37,7 +37,7 @@ Here is a ride limited to a total of seven voices, with both bow and bell
 articulations sharing the same polyphony group and the same seven-voice
 limit.
 
-```
+```sfz
 group=2
 polyphony=7
 <region> key=51 sample=ride_bow.wav
@@ -54,7 +54,7 @@ An alternative for controlling sound buildup is using
 It's also possible to have a group with limited polyphony which can be muted by
 another group, such as a cymbal with edge chokes.
 
-```
+```sfz
 <group>
 group=2
 off_by=3
@@ -78,10 +78,10 @@ articulations, and note_polyphony would be limited to working within an
 articulation.
 
 
-[‹global›]: {{ '/headers/global' | relative_url }}
-[‹group›]:  {{ '/headers/group' | relative_url }}
-[ampeg_release]:  ampeg_release
-[group]:          group
-[note_polyphony]: note_polyphony
-[note_selfmask]:  note_selfmask
-[off_mode]:       off_mode
+[‹global›]:       ../headers/global.md
+[‹group›]:        ../headers/group.md
+[ampeg_release]:  ampeg_release.md
+[group]:          group.md
+[note_polyphony]: note_polyphony.md
+[note_selfmask]:  note_selfmask.md
+[off_mode]:       off_mode.md

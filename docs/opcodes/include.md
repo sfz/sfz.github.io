@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "#include"
 ---
 The file to which #include points is, in effect,
@@ -26,7 +26,7 @@ especially convenient in conjunction with the [‹master›] header.
 
 ## Examples
 
-```
+```sfz
 #include "header.sfz"
 #include "note_map.sfz"
 #include "legato/dynfade_legato_first_map.sfz"
@@ -34,7 +34,7 @@ especially convenient in conjunction with the [‹master›] header.
 
 Here's an example of how #include and master can be used together:
 
-```
+```sfz
 <global>
 loop_mode=one_shot
 off_mode=normal
@@ -74,8 +74,8 @@ when loading an instrument. However, a workaround there is to use #include to pu
 #define statement in a separate file. In simple tests, that has been successful.
 
 
-[#define]: define
-[sample]:  sample
-[‹control›]: {{ '/headers/control' | relative_url }}
-[‹curve›]:   {{ '/headers/curve' | relative_url }}
-[‹master›]:  {{ '/headers/master' | relative_url }}
+[#define]: define.md
+[sample]:  sample.md
+[‹control›]: ../headers/control.md
+[‹curve›]:   ../headers/curve.md
+[‹master›]:  ../headers/master.md

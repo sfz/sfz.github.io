@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "eqN_bw"
 ---
 ## Examples
 
-```
+```sfz
 eq1_bw=1
 eq2_bw=0.4
 eq3_bw=1.4

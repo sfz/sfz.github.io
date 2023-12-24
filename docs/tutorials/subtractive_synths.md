@@ -1,7 +1,6 @@
 ---
 title: Subtractive synthesizers
 ---
-
 ## Introduction
 
 This tutorial describes implementing typical subtractive synthesizer
@@ -17,7 +16,7 @@ subtracted from the sound by filter, the volume envelope is probably
 the most fundamental modulation. Here is an [AHDSR envelope] including
 [‹control›] parameter labels and defaults.
 
-```
+```sfz
 <control>
 label_cc100=Attack time
 label_cc101=Hold time
@@ -75,7 +74,7 @@ organic. That's set per oscillator, rather than globally, like
 this, with CC 18 selecting the oscillator, and CC 106 being the
 envelope soften:
 
-```
+```sfz
 <master>
 locc18=11
 hicc18=20
@@ -127,7 +126,7 @@ The filter in the example instrument is a single [lowpass] filter
 with [cutoff] and [resonance] controls, adjustable [velocity] tracking using
 [var] a two-stage [filter cutoff envelope].
 
-```
+```sfz
 <control>
 label_cc120=Filter cutoff
 label_cc121=Resonance
@@ -189,7 +188,7 @@ at all standard, and means the base cutoff has moderate
 positive keytracking while the cutoff modulation has
 negative keytracking.
 
-```
+```sfz
 //By default, cutoff modulation is measured in cents
 //To make the modulation not keytrack, we make a kludge
 //Using var
@@ -205,7 +204,7 @@ fil_keytrack=70
 
 At the end of the SFZ file, the [‹curve›] is then specified:
 
-```
+```sfz
 <curve>
 curve_index=11
 v000=1
@@ -236,7 +235,7 @@ Vibrato can affect pitch, volume (for tremolo) and filter cutoff
 (for wobble). Here is a typical setup using one [LFO] to modulate
 all three.
 
-```
+```sfz
 <control>
 label_cc111=Vibrato to pitch
 label_cc112=Vibrato speed
@@ -275,7 +274,7 @@ useful for creating more complex pads, for example. Similar
 principles could also be used to emulate analog oscillators'
 much more subtle pitch drift.
 
-```
+```sfz
 <control>
 label_cc111=Vibrato to pitch
 label_cc112=Vibrato speed
@@ -349,7 +348,8 @@ As the samples here are quite long, [offset_random]
 is applied globally to effecitvely randomize each voice's phase. With
 true single-cycle waveforms, the max offset would have to be set to
 match each voice's max sample length.
-```
+
+```sfz
 <control>
 label_cc25=Unison
 label_cc26=Width
@@ -396,7 +396,7 @@ any typical hardware analog synthesizer's feature set, but it
 does have something in common with the way real world choirs
 or instrumental ensembles find a commmon pitch.
 
-```
+```sfz
 <control>
 label_cc25=Unison
 label_cc26=Width
@@ -448,8 +448,7 @@ controls.
 
 ## Mono mode and portamento
 
-This is implemented similarly to any non-synth - see our [legato
-tutorial](/tutorials/legato).
+This is implemented similarly to any non-synth - see our [legato tutorial].
 
 ## Putting it all together
 
@@ -457,7 +456,7 @@ This is the main file for the example instrument. The unison and detune
 settings, along with oscillator selection and mixing, are inside SFZ files
 added via the [#include] directives.
 
-```
+```sfz
 <control>
 label_cc15=Bass Osc Vol
 label_cc16=Bass Osc Sel
@@ -617,26 +616,28 @@ v084=0.63
 v127=0.25
 ```
 
-[‹control›]:              {{ '/headers/control' | relative_url }}
-[‹curve›]:                {{ '/headers/curve' | relative_url }}
-[#include]:               {{ '/opcodes/include' | relative_url }}
-[amplitude]:              {{ '/opcodes/amplitude' | relative_url }}
-[AHDSR envelope]:         {{ '/opcodes/ampeg_attack' | relative_url }}
-[ampeg_dynamic]:          {{ '/opcodes/ampeg_dynamic' | relative_url }}
-[hold]:                   {{ '/opcodes/ampeg_hold' | relative_url }}
-[cutoff]:                 {{ '/opcodes/cutoff' | relative_url }}
-[fil_keytrack]:           {{ '/opcodes/fil_keytrack' | relative_url }}
-[lowpass]:                {{ '/opcodes/fil_type' | relative_url }}
-[filter cutoff envelope]: {{ '/opcodes/fileg_attack' | relative_url }}
-[locc/hicc]:              {{ '/opcodes/loccN' | relative_url }}
-[offset_random]:          {{ '/opcodes/offset_random' | relative_url }}
-[pan]:                    {{ '/opcodes/pan' | relative_url }}
-[detune]:                 {{ '/opcodes/pitch_onccN' | relative_url }}
-[pitch envelopes]:        {{ '/opcodes/pitcheg_attack' | relative_url }}
-[resonance]:              {{ '/opcodes/resonance' | relative_url }}
-[var]:                    {{ '/opcodes/varNN_mod' | relative_url }}
-[width]:                  {{ '/opcodes/width' | relative_url }}
-[velocity]:               {{ '/extensions/midi_ccs' | relative_url }}
-[SFZ2 envelope]:          {{ '/modulations/envelope_generators' | relative_url }}
-[LFO]:                    {{ '/modulations/lfo' | relative_url }}
-[vibrato tutorial]:       {{ '/tutorials/vibrato' | relative_url }}
+
+[‹control›]:              ../headers/control.md
+[‹curve›]:                ../headers/curve.md
+[#include]:               ../opcodes/include.md
+[amplitude]:              ../opcodes/amplitude.md
+[AHDSR envelope]:         ../opcodes/ampeg_attack.md
+[ampeg_dynamic]:          ../opcodes/ampeg_dynamic.md
+[hold]:                   ../opcodes/ampeg_hold.md
+[cutoff]:                 ../opcodes/cutoff.md
+[fil_keytrack]:           ../opcodes/fil_keytrack.md
+[lowpass]:                ../opcodes/fil_type.md
+[filter cutoff envelope]: ../opcodes/fileg_attack.md
+[locc/hicc]:              ../opcodes/loccN.md
+[offset_random]:          ../opcodes/offset_random.md
+[pan]:                    ../opcodes/pan.md
+[detune]:                 ../opcodes/pitch_onccN.md
+[pitch envelopes]:        ../opcodes/pitcheg_attack.md
+[resonance]:              ../opcodes/resonance.md
+[var]:                    ../opcodes/varNN_mod.md
+[width]:                  ../opcodes/width.md
+[velocity]:               ../extensions/midi_ccs.md
+[SFZ2 envelope]:          ../modulations/envelope_generators.md
+[LFO]:                    ../modulations/lfo.md
+[legato tutorial]:        legato.md
+[vibrato tutorial]:       vibrato.md

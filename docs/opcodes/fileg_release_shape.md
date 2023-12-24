@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_release_shape"
 ---
 0 is linear, positive values are slower curves (that means the envelope will
@@ -11,7 +11,7 @@ that point, the envelope is practically a horizontal line and a vertical line
 
 ## Examples
 
-```
+```sfz
 ampeg_release_shape=2.1
 ampeg_release_shape=-3.8
 ```

@@ -1,6 +1,6 @@
 ---
-title:  "‹curve›"
-layout: "sfz/header"
+title: "‹curve›"
+template: "sfz/header.j2"
 ---
 One curve header is used to define each curve.
 The values for various points along the curve can then be set, from `v000` to `v127`.
@@ -25,7 +25,7 @@ Curve_index in ARIA can be any integer from 0 to 255.
 
 ## Examples
 
-```
+```sfz
 <curve>curve_index=17
 v000=0
 v095=1
@@ -40,7 +40,7 @@ v127=1
 Here's a scenario using one MIDI CC to control the amplitude of two samples
 along two different curves.
 
-```
+```sfz
 <region>
 amplitude_oncc110=100
 amplitude_curvecc110=9
@@ -68,7 +68,7 @@ And how to use the default curve 1 to create a tuning control which
 goes down and up, with the pitch unmodulated when the control is in
 the middle.
 
-```
+```sfz
 pitch_oncc27=100
 pitch_curvecc27=1
 ```

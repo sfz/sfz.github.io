@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "sw_default / sw_label"
 ---
 `sw_default` sets a default value for [sw_last]. In a guitar instrument
@@ -10,7 +10,7 @@ used to select an articulation.
 
 ## Example
 
-```
+```sfz
 // **********************************************************************
 // A Keyswitching Example
 //
@@ -28,7 +28,7 @@ used to select an articulation.
 <img
   class="img-fluid"
   alt="sw_label example image"
-  src="./../assets/img/opcodes/sw_label.jpg"
+  src="../../assets/img/opcodes/sw_label.jpg"
 />
 
 ## Practical Considerations
@@ -39,4 +39,4 @@ that [sw_last] value is set, which can mean setting the label in multiple places
 an sfz file.
 
 
-[sw_last]: sw_last
+[sw_last]: sw_last.md

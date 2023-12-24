@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_mode"
 ---
 If `loop_mode` is not specified, each sample will play according to its predefined
@@ -50,13 +50,13 @@ the entire sample file.
 
 ## Examples
 
-```
+```sfz
 loop_mode=no_loop
 
 loop_mode=loop_continuous
 ```
 
 
-[ampeg_release]: ampeg_release
-[count]:         count
-[trigger]:       trigger
+[ampeg_release]: ampeg_release.md
+[count]:         count.md
+[trigger]:       trigger.md

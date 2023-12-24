@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "sw_down / sw_up"
 ---
 Can be entered in either MIDI note numbers (0 to 127) or in MIDI note
@@ -7,7 +7,7 @@ names (C-1 to G9)
 
 ## Example
 
-```
+```sfz
 sw_down=C3
 sw_down=24
 sw_up=25
@@ -31,6 +31,6 @@ can be in the playable range if `sw_lokey/hikey` are not defined, but if they
 are defined, then `sw_down` and `sw_up` notes must fall in the `sw_lokey/hikey` range.
 
 
-[sw_last]:          sw_last
-[sw_lokey / hikey]: sw_lokey
-[sw_previous]:      sw_previous
+[sw_last]:          sw_last.md
+[sw_lokey / hikey]: sw_lokey.md
+[sw_previous]:      sw_previous.md

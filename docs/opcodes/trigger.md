@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "trigger"
 ---
 Values can be:
@@ -24,6 +24,7 @@ Setting trigger to release or release_key will cause the region to play as if
 Beyond that, release region behavior varies considerably between SFZ players.
 
 rcg sfz:
+
 * Both release or release_key regions play whether there is a previous attack region or not.
 * Release_key regions won't play when releasing the sustain pedal. Release samples only play
 when sustain pedal is up (not depressed).
@@ -32,15 +33,17 @@ release regions playing, which can result in a very large number of release regi
 when the sustain pedal is raised.
 
 DropZone and other Cakewalk players:
+
 * Both release or release_key require a previous attack region.
 * Release_key regions won't play when releasing the sustain pedal. Release samples only play
 when sustain pedal is up (not depressed).
-* To make release or release_key plays without any previous attack region, set
-[rt_dead] to on.
+* To make release or release_key plays without any previous attack region,
+  set [rt_dead] to on.
 * [note_polyphony] is now available to control the accumulation of
 release voices of repeated notes when Sustain pedal is down.
 
 ARIA and Sforzando:
+
 * release requires a previous attack region.
 * release_key doesn't require a previous attack region.
 * release responds to Sustain Pedal position.
@@ -97,14 +100,14 @@ note messages. For regions which use these opcodes, trigger should be left unspe
 
 ## Examples
 
-```
+```sfz
 trigger=release
 trigger=legato
 ```
 
 
-[loop_mode]:         loop_mode
-[note_polyphony]:    note_polyphony
-[on_loccN / on_hiccN]: on_loccN
-[rt_dead]:           rt_dead
-[rt_decay]:          rt_decay
+[loop_mode]:           loop_mode.md
+[note_polyphony]:      note_polyphony.md
+[on_loccN / on_hiccN]: on_loccN.md
+[rt_dead]:             rt_dead.md
+[rt_decay]:            rt_decay.md

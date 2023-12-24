@@ -1,6 +1,6 @@
 ---
-title:  "‹effect›"
-layout: "sfz/header"
+title: "‹effect›"
+template: "sfz/header.j2"
 ---
 In [SFZ v1] only [effect1] and [effect2] opcodes was available
 and only at [‹region›] level.
@@ -15,13 +15,13 @@ how to control them in ARIA and Cakewalk products can be found on
 the [type] page.
 
 
-[‹region›]:     region
-[SFZ v1]:       {{ '/opcodes/?v=1' | relative_url }}
-[SFZ v2]:       {{ '/opcodes/?v=2' | relative_url }}
-[effect1]:      {{ '/opcodes/effect1' | relative_url }}
-[effect2]:      {{ '/opcodes/effect2' | relative_url }}
-[effect3]:      {{ '/opcodes/effect3' | relative_url }}
-[effect4]:      {{ '/opcodes/effect4' | relative_url }}
-[bus]:          {{ '/opcodes/bus' | relative_url }}
-[type]:         {{ '/opcodes/type' | relative_url }}
-[dsp_order]:    {{ '/opcodes/dsp_order' | relative_url }}
+[‹region›]:     region.md
+[SFZ v1]:       ../opcodes/index.md?v=1
+[SFZ v2]:       ../opcodes/index.md?v=2
+[effect1]:      ../opcodes/effect1.md
+[effect2]:      ../opcodes/effect2.md
+[effect3]:      ../opcodes/effect3.md
+[effect4]:      ../opcodes/effect4.md
+[bus]:          ../opcodes/bus.md
+[type]:         ../opcodes/type.md
+[dsp_order]:    ../opcodes/dsp_order.md

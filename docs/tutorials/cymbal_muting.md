@@ -11,7 +11,7 @@ Let's start with a simple hi-hat with closed hit, foot chik, half-open and open
 samples, with the latter two on the same key and degree of openness selected by
 MIDI CC 4 - the common hi-hat pedal assignment in electronic drum kits.
 
-```
+```sfz
 <region>key=42 sample=hh_closed.wav
 <region>key=44 sample=hh_chik.wav
 <region>key=46 sample=hh_half_open.wav hicc4=63
@@ -29,7 +29,7 @@ Setting [off_mode] to normal and using [ampeg_release]
 or [off_time] to set the time it takes for the previous sample to fade out
 also helps this sound a bit more natural.
 
-```
+```sfz
 <group>
 off_mode=normal
 ampeg_release=0.07
@@ -65,7 +65,7 @@ header are completely separate concepts - "group" for the remainder of this
 article refers to the opcode, not the header, though group headers are also used
 in the code examples.
 
-```
+```sfz
 <group>
 // Here are the hi-hat samples
 off_mode=normal
@@ -127,7 +127,7 @@ MIDI that's supposed to be the cowbell note), we'd need to set up one more group
 and have that mute itself. It will also need to be muted by all other types of
 hi-hat hits, except for fully open hits.
 
-```
+```sfz
 <group>
 //Here are the hi-hat samples
 off_mode=normal
@@ -197,7 +197,7 @@ in practice, unless playing unrealistically dense trap hi-hat patterns, because
 they don't ring very long anyway. Limiting the polyphony for the foot splash is
 not necessary at all, because it mutes itself.
 
-```
+```sfz
 <group>
 //Here are the hi-hat samples
 off_mode=normal
@@ -269,7 +269,7 @@ outside of the range where the open hi-hat sample would be triggered. This can b
 the hi-hat's [amplitude], and applying a [‹curve›] which will
 keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample was triggered.
 
-```
+```sfz
 <group>
 //Here are the hi-hat samples
 off_mode=normal
@@ -331,7 +331,7 @@ groups which have polyphony will also have to be multiplied by the same factor.
 Here is an example with close and overhead, with slightly longer fadeout times
 for the more distant overhead mics:
 
-```
+```sfz
 <group>
 //Here are the hi-hat samples
 off_mode=normal
@@ -425,7 +425,7 @@ the overhead mics and no room mic to be created without breaking anything, as
 each mic's samples have separate groups. Having different polyphony numbers for
 different mics can result in an inconsistent sound, so it is not recommended.
 
-```
+```sfz
 <group>
 off_mode=normal
 
@@ -478,7 +478,7 @@ is tracked separately for each MIDI note value.
 The above example modified to use note_polyphony instead of polyphony would look
 like this:
 
-```
+```sfz
 <group>
 off_mode=normal
 
@@ -530,7 +530,7 @@ will build up the most and bell hits the least. Of course, it's not very possibl
 to modulate the buildup of a cymbal in the real world, but that doesn't mean it
 can't be useful in the sampled world.
 
-```
+```sfz
 <group>
 off_mode=normal
 ampeg_release=0.1
@@ -575,7 +575,7 @@ open, half open, open, foot chik, foot splash and pedal return samples, with
 separate shank and tip hits for tightly closed, closed, loosely closed and
 quarter open might look like this:
 
-```
+```sfz
 <control>
 //Key assignments - hi-hat
 #define $htclstkey 42
@@ -995,20 +995,20 @@ v127=1
 ```
 
 
-[‹curve›]:        {{ '/headers/curve' | relative_url }}
-[‹global›]:       {{ '/headers/global' | relative_url }}
-[‹group›]:        {{ '/headers/group' | relative_url }}
-[‹master›]:       {{ '/headers/master' | relative_url }}
-[#include]:       {{ '/opcodes/include' | relative_url }}
-[ampeg_dynamic]:  {{ '/opcodes/ampeg_dynamic' | relative_url }}
-[ampeg_release]:  {{ '/opcodes/ampeg_release' | relative_url }}
-[amplitude]:      {{ '/opcodes/amplitude' | relative_url }}
-[group]:          {{ '/opcodes/group' | relative_url }}
-[note_polyphony]: {{ '/opcodes/note_polyphony' | relative_url }}
-[note_selfmask]:  {{ '/opcodes/note_selfmask' | relative_url }}
-[off_by]:         {{ '/opcodes/off_by' | relative_url }}
-[off_mode]:       {{ '/opcodes/off_mode' | relative_url }}
-[off_time]:       {{ '/opcodes/off_time' | relative_url }}
-[polyphony]:      {{ '/opcodes/polyphony' | relative_url }}
-[sample]:         {{ '/opcodes/sample' | relative_url }}
-[seq_length]:     {{ '/opcodes/seq_length' | relative_url }}
+[‹curve›]:        ../headers/curve.md
+[‹global›]:       ../headers/global.md
+[‹group›]:        ../headers/group.md
+[‹master›]:       ../headers/master.md
+[#include]:       ../opcodes/include.md
+[ampeg_dynamic]:  ../opcodes/ampeg_dynamic.md
+[ampeg_release]:  ../opcodes/ampeg_release.md
+[amplitude]:      ../opcodes/amplitude.md
+[group]:          ../opcodes/group.md
+[note_polyphony]: ../opcodes/note_polyphony.md
+[note_selfmask]:  ../opcodes/note_selfmask.md
+[off_by]:         ../opcodes/off_by.md
+[off_mode]:       ../opcodes/off_mode.md
+[off_time]:       ../opcodes/off_time.md
+[polyphony]:      ../opcodes/polyphony.md
+[sample]:         ../opcodes/sample.md
+[seq_length]:     ../opcodes/seq_length.md

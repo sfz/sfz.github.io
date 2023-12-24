@@ -13,7 +13,7 @@ Let's say we have only one sampled violin section, and need to use both first an
 second violins. Using just one octave of range for simplicity, this is our first
 violins example:
 
-```
+```sfz
 <global>
 <region>sample=c4.wav key=48
 <region>sample=db4.wav key=49
@@ -36,7 +36,7 @@ transposed, and get a different timbre. Instead of using the C4 sample to play C
 use the Db4 sample transposed down a half step to play C4. This can be done by
 using lokey, hikey and pitch_keycenter opcodes instead of just key.
 
-```
+```sfz
 <region>sample=c4.wav lokey=47 hikey=47 pitch_keycenter=48
 <region>sample=db4.wav lokey=48 hikey=48 pitch_keycenter=49
 <region>sample=d4.wav lokey=49 hikey=49 pitch_keycenter=50
@@ -55,7 +55,7 @@ using lokey, hikey and pitch_keycenter opcodes instead of just key.
 Howerver, in most cases it's easier to use the key and transpose opcodes instead,
 and set the transpose amount for all the transposed regions at once.
 
-```
+```sfz
 <global>
 transpose=-1
 <region>sample=c4.wav key=47
@@ -88,7 +88,7 @@ both sections. So, we can instead use the next-to-highest note, transposed up.
 This might not sound very consistent with the rest, but under these limitations,
 it can be a reasonable compromise.
 
-```
+```sfz
 <global>
 transpose=-1
 <region>sample=db4.wav key=48
@@ -118,7 +118,7 @@ emulation.
 Transposing down by a minor third while preserving the range in our example, and
 filling in the lost top of the range by transposing upwards might look like this:
 
-```
+```sfz
 <global>
 transpose=-3
 <region>sample=eb4.wav key=48
@@ -148,7 +148,7 @@ If we put both the original and transposed samples in the same SFZ file, each MI
 note will trigger two regions, and we now will have the sound of an ensemble which
 is twice as large as what was actually sampled.
 
-```
+```sfz
 <group>
 <region>sample=c4.wav key=48
 <region>sample=db4.wav key=49
@@ -192,7 +192,7 @@ for example handclaps. In such cases, unison can be implemented by using
 different round robin samples for each simultaneously playing sample. Using
 one note with four round robins as an example:
 
-```
+```sfz
 <group>seq_length=4 key=48
 <region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
@@ -202,7 +202,7 @@ one note with four round robins as an example:
 
 We can create two by offsetting the round robins like this:
 
-```
+```sfz
 <group>seq_length=4 key=48
 <region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
@@ -220,7 +220,7 @@ but for organizational purposes, they can make things easier.
 
 Or three, or a maximum of four:
 
-```
+```sfz
 <group>seq_length=4 key=48
 <region>sample=c4_rr1.wav seq_position=1
 <region>sample=c4_rr2.wav seq_position=2
@@ -253,7 +253,7 @@ Multitracked guitars will often be spread in stereo, as will unison voices
 in synthesizers etc. Spreading the above quad-tracked guitar in stereo
 is simple:
 
-```
+```sfz
 <group>seq_length=4 key=48
 pan=-100
 <region>sample=c4_rr1.wav seq_position=1
@@ -289,7 +289,7 @@ to create multiple voices, and this is an especially viable approach for
 synthesizers. The amount of detune, as well as width, can be modulated. Here
 is an example of a saw oscillator with seven voices.
 
-```
+```sfz
 <region>sample=*saw
 <region>pitch_oncc100=20 pan_oncc101=100 sample=*saw
 <region>pitch_oncc100=-20 pan_oncc101=-100 sample=*saw
@@ -336,7 +336,7 @@ depth, in the initial phase of the vibrato humanization LFOs, and in the fade ti
 the legato regions. The shallower vibrato and slower legato of the transposed regions
 emulate less confident, more hesitant players.
 
-```
+```sfz
 <global>
 //Basic global stuff shared by all voices
 ampeg_release=0.25
@@ -473,7 +473,7 @@ There's no need tu use off_by with the release groups.
 
 An example with releases only for the center voice:
 
-```
+```sfz
 <global>
 //Basic global stuff shared by all voices
 ampeg_release=0.25
@@ -516,7 +516,7 @@ pan_oncc101=100
 With releases for all voices, just use a different group number for each voice's
 releases, like this example:
 
-```
+```sfz
 <global>
 //Basic global stuff shared by all voices
 ampeg_release=0.25
@@ -569,8 +569,8 @@ trigger=release
 group=503
 note_polyphony=1
 #include "mappings/t2/ord_rel_map.sfz"
-
 ```
+
 When using releases with round robins, it can be tricky to make the release sample
 round robin counter advance correctly. When there are 2 "matching" samples playing,
 ARIA appears to advance the counter for the releases by 2, and if there are 4
@@ -594,7 +594,7 @@ This works with either sequential round robin and random round robin
 approaches, or both at once. Let's use sequential round robins for this
 example, with a very small note range and three round robins sampled.
 
-```
+```sfz
 <global>
 seq_length=3
 
@@ -628,7 +628,7 @@ and transposed notes for positions four through six. So, we
 increase the sequence length to six, and alternate between
 transposed and untransposed samples like this:
 
-```
+```sfz
 <global>
 seq_length=6
 
@@ -680,4 +680,4 @@ available, it's also possible to borrow from nearby dynamic layers,
 especially in the case of drums.
 
 
-[the range extension tutorial]: range_extension
+[the range extension tutorial]: range_extension.md

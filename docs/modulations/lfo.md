@@ -144,27 +144,27 @@ This both keeps LFO feedback controlled, and reduces the CPU needed to calculate
 LFO modulations.
 
 
-[Modulation]:              {{ '/misc/categories#modulation' | relative_url }}
-[1]:                       {{ '/tutorials/lfo' | relative_url }}
-[(lfo type)_delay]:        {{ '/opcodes/amplfo_delay' | relative_url }}
-[(lfo type)_fade]:         {{ '/opcodes/amplfo_fade' | relative_url }}
-[(lfo type)_freq]:         {{ '/opcodes/amplfo_freq' | relative_url }}
-[(lfo type)_freqccX]:      {{ '/opcodes/amplfo_freq' | relative_url }}
-[(lfo type)_depth]:        {{ '/opcodes/amplfo_depth' | relative_url }}
-[(lfo type)_depthccX]:     {{ '/opcodes/amplfo_depth' | relative_url }}
-[(lfo type)_depthchanaft]: {{ '/opcodes/amplfo_depthchanaft' | relative_url }}
-[(lfo type)_depthpolyaft]: {{ '/opcodes/amplfo_depthpolyaft' | relative_url }}
-[(lfo type)_freqchanaft]:  {{ '/opcodes/amplfo_freqchanaft' | relative_url }}
-[(lfo type)_freqpolyaft]:  {{ '/opcodes/amplfo_freqpolyaft' | relative_url }}
-[lfoN_wave]:               {{ '/opcodes/lfoN_wave' | relative_url }}
-[lfoN_freq]:               {{ '/opcodes/lfoN_freq' | relative_url }}
-[lfoN_freq_onccX]:         {{ '/opcodes/lfoN_freq' | relative_url }}
-[lfoN_freq_smoothccX]:     {{ '/opcodes/lfoN_freq_smoothccX' | relative_url }}
-[lfoN_freq_stepccX]:       {{ '/opcodes/lfoN_freq_stepccX' | relative_url }}
-[lfoN_delay]:              {{ '/opcodes/lfoN_delay' | relative_url }}
-[lfoN_delay_onccX]:        {{ '/opcodes/lfoN_delay' | relative_url }}
-[lfoN_fade]:               {{ '/opcodes/lfoN_fade' | relative_url }}
-[lfoN_fade_onccX]:         {{ '/opcodes/lfoN_fade' | relative_url }}
-[lfoN_phase]:              {{ '/opcodes/lfoN_phase' | relative_url }}
-[lfoN_phase_onccX]:        {{ '/opcodes/lfoN_phase' | relative_url }}
-[lfoN_count]:              {{ '/opcodes/lfoN_count' | relative_url }}
+[Modulation]:              ../misc/categories.md#modulation
+[1]:                       ../tutorials/lfo.md
+[(lfo type)_delay]:        ../opcodes/amplfo_delay.md
+[(lfo type)_fade]:         ../opcodes/amplfo_fade.md
+[(lfo type)_freq]:         ../opcodes/amplfo_freq.md
+[(lfo type)_freqccX]:      ../opcodes/amplfo_freq.md
+[(lfo type)_depth]:        ../opcodes/amplfo_depth.md
+[(lfo type)_depthccX]:     ../opcodes/amplfo_depth.md
+[(lfo type)_depthchanaft]: ../opcodes/amplfo_depthchanaft.md
+[(lfo type)_depthpolyaft]: ../opcodes/amplfo_depthpolyaft.md
+[(lfo type)_freqchanaft]:  ../opcodes/amplfo_freqchanaft.md
+[(lfo type)_freqpolyaft]:  ../opcodes/amplfo_freqpolyaft.md
+[lfoN_wave]:               ../opcodes/lfoN_wave.md
+[lfoN_freq]:               ../opcodes/lfoN_freq.md
+[lfoN_freq_onccX]:         ../opcodes/lfoN_freq.md
+[lfoN_freq_smoothccX]:     ../opcodes/lfoN_freq_smoothccX.md
+[lfoN_freq_stepccX]:       ../opcodes/lfoN_freq_stepccX.md
+[lfoN_delay]:              ../opcodes/lfoN_delay.md
+[lfoN_delay_onccX]:        ../opcodes/lfoN_delay.md
+[lfoN_fade]:               ../opcodes/lfoN_fade.md
+[lfoN_fade_onccX]:         ../opcodes/lfoN_fade.md
+[lfoN_phase]:              ../opcodes/lfoN_phase.md
+[lfoN_phase_onccX]:        ../opcodes/lfoN_phase.md
+[lfoN_count]:              ../opcodes/lfoN_count.md

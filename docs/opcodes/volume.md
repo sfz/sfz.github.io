@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "volume"
 ---
 Range is -144.6 to 6 in the specification,
@@ -9,7 +9,7 @@ perhaps even more.
 
 ## Examples
 
-```
+```sfz
 volume=-24
 volume=0
 volume=3.5

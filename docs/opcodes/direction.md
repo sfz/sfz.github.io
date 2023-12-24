@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "direction"
 ---
 This is similar to [loop_type] but affects the entire sample,
@@ -7,7 +7,7 @@ not just the defined loop regions.
 
 ## Example
 
-```
+```sfz
 direction=reverse
 ```
 
@@ -21,4 +21,4 @@ cases where one region has the sample playing forward, and another
 region has the same sample playing backwards.
 
 
-[loop_type]: loop_type
+[loop_type]: loop_type.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sw_last"
 ---
 `sw_last` can be entered in either MIDI note numbers (0 to 127) or in MIDI note
@@ -7,7 +7,7 @@ names (C-1 to G9)
 
 ## Example
 
-```
+```sfz
 sw_last=49
 ```
 
@@ -45,5 +45,5 @@ used to set the sine to default as well.
 ```
 
 
-[sw_default]: sw_default
-[sw_down]:    sw_down
+[sw_default]: sw_default.md
+[sw_down]:    sw_down.md

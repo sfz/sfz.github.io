@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pan"
 ---
 If a mono sample is used, pan value defines the position in the stereo image
@@ -11,7 +11,7 @@ positive to the right.
 
 ## Examples
 
-```
+```sfz
 pan=-30.5
 pan=0
 pan=43

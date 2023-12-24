@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "seq_position"
 ---
 This is used together with [seq_length] to use samples as round robins.
@@ -9,7 +9,7 @@ Maximum allowed value is 100.
 
 ## Example
 
-```
+```sfz
 seq_length=4 seq_position=2
 ```
 
@@ -18,7 +18,7 @@ In above example, the region will play on the second note every four notes.
 A typical usage for a kick drum with four round robins, and a snare with three
 round robins, would look like this:
 
-```
+```sfz
 <group>key=36 seq_length=4
 <region>seq_position=1 sample=kick_rr1.wav
 <region>seq_position=2 sample=kick_rr2.wav
@@ -50,7 +50,7 @@ layer split points. For example, this can produce occasional silence, depending
 on the velocity of incoming MIDI notes, the velocity of the previous MIDI note,
 and the current point in the sequence:
 
-```
+```sfz
 <global>
 seq_length=2
 key=48
@@ -70,7 +70,7 @@ not possible to make the layer split points match then.
 
 In those players, this is a workaround:
 
-```
+```sfz
 <global>
 seq_length=2
 key=48
@@ -90,5 +90,5 @@ Setting `seq_position` to 0 will cause the region to not play in most sfz player
 except for sfizz where it will behave the same as setting `seq_position` to 1.
 
 
-[seq_length]:      seq_length
-[lorand / hirand]: lorand
+[seq_length]:      seq_length.md
+[lorand / hirand]: lorand.md

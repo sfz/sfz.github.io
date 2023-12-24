@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "off_by"
 ---
 When a new region with a group number equal to `off_by` plays,
@@ -7,13 +7,13 @@ this region will be turned off.
 
 ## Examples
 
-```
+```sfz
 off_by=3
 
 off_by=334
 ```
 
-This is used in conjunction with [group](/opcodes/group) to make things
+This is used in conjunction with [group] to make things
 monophonic, but can also be used in other contexts where one sound should cause
 another to stop - for example, cymbal chokes.
 
@@ -32,3 +32,6 @@ ARIA/Sforzando will also do this with text strings. The behavior of
 non-integer numbers is also currently unknown. This makes it possible to use
 an extremely large number for one group/off_by combination, but it's obviously
 not recommended.
+
+
+[group]: group.md

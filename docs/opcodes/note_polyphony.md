@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "note_polyphony"
 ---
 ## Example
 
-```
+```sfz
 note_polyphony=3
 ```
 
@@ -39,7 +39,7 @@ a separate group number for each microphone position, so the note polyphony limi
 is tracked separately for each mic.
 
 
-[group]:           group
-[note_selfmask]:   note_selfmask
-[polyphony]:       polyphony
-[polyphony_group]: polyphony_group
+[group]:           group.md
+[note_selfmask]:   note_selfmask.md
+[polyphony]:       polyphony.md
+[polyphony_group]: polyphony_group.md

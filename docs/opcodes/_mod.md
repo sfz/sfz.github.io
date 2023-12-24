@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "*_mod"
 ---
 ARIA extension specifying whether modulation of the target parameter
@@ -13,7 +13,7 @@ implemented in ARIA.
 
 ## Examples
 
-```
+```sfz
 cutoff_mod=mult
 amplitude_mod=add
 pitch_mod=add

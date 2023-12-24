@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "eqN_type"
 ---
 ## Example
@@ -12,7 +12,7 @@ Allowed values are lshelf (low shelf), hshelf (high shelf) and peak
 In ARIA, low-shelf or high-shelf EQ "borrows" one of the filters instead,
 as documented under the [fil_gain] opcode.
 
-```
+```sfz
 <region>
 eq1_gain=20
 eq1_freq=10000
@@ -21,4 +21,4 @@ eq1_type=lshelf
 ```
 
 
-[fil_gain]: fil_gain
+[fil_gain]: fil_gain.md

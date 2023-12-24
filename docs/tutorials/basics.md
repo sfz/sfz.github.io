@@ -19,6 +19,21 @@ The SFZ file's role is a simple, two-part operation:
 1. Explain how to **filter** or **sort** the incoming MIDI data and determine which sample(s), if any, should sound in response.
 2. Instruct the Sampler how to **modulate**, or _adapt_, those samples, such as make them quieter or apply a filter.
 
+{%-if true %}
+<pre class="mermaid">
+graph LR
+A(Incoming MIDI Data) --> B(Sampler)
+B --> C(Audio Output)
+B --> D(SFZ File)
+D --> E(Sample1.wav)
+D --> F(Sample2.wav)
+D --> G(Sample3.wav)
+E --> H(Modulation)
+F --> H
+G --> H
+H --> C
+</pre>
+{%-else %}
 ```
 Incoming MIDI Data ---> Sampler  - - - - - - - - -> Audio Output
                           |                              ^
@@ -26,6 +41,7 @@ Incoming MIDI Data ---> Sampler  - - - - - - - - -> Audio Output
                                  ---> Sample2.wav >> Modulation
                                  ---> Sample3.wav
 ```
+{%-endif %}
 
 ## Opcodes
 
@@ -40,17 +56,19 @@ On the other hand, `lokey=36 hikey=38` limits what condition
 the sound may play: the key to trigger the sound must be in the range 36 through 38.
 
 You can think of your SFZ file as a giant conditional filter, which systematically takes a MIDI message and attempts to perform a specific action in response. At the most basic level, if you simply type
-```
+
+```sfz
 <region>
 sample=piano.wav
 ```
+
 Then that sample will be mapped to MIDI key 60 (middle C), and be available at ALL velocity ranges, ALL key ranges, and under ALL continuous controller values (i.e. regardless of if sustain pedal is held down or not, for example).
 
 If we add `lokey=58 hikey=62 pitch_keycenter=60` to the region, then our piano note will ONLY respond if a key within the range 58-62 (Bb to D on either side of middle C) is played. We are restricting the conditions under which that specific sample will be played.
 
 We can restrict whether or not a specific sample will play by a very wide range of parameters, including which keys are pressed, at what velocity, and what MIDI continuous controller (CC) values are currently present. For example, we can have a piano sample for when the sustain pedal is down AND velocity is less than 20 AND the key pressed is between 58 and 62 as follows:
 
-```
+```sfz
 <region>
 sample=piano.wav
 
@@ -82,7 +100,7 @@ such as `default_path`.
 Generally SFZ instruments are not indented, but if they were,
 they would appear as such:
 
-```
+```sfz
 <control>
 <global>
 	<group>
@@ -107,7 +125,7 @@ those groups as welll, allowing the parameters of dozens,
 hundreds, or thousands of samples to be altered with a single line. This massively
 cuts down on file size, as you do not need to repeat the same text in each item.
 
-```
+```sfz
 <group>
 lovel=64 // enter stuff here if you want to apply it to all regions
 hivel=127
@@ -124,8 +142,10 @@ key=61
 sample=Trumpet_D4_v2.wav
 key=62
 ```
+
 is the same as:
-```
+
+```sfz
 <region>
 sample=Trumpet_C4_v2.wav
 key=60
@@ -148,7 +168,7 @@ hivel=127
 This behavior can be overriden if that same opcode is specified within
 the lesser header with a different value. For example:
 
-```
+```sfz
 <global>
 	volume=6 //this value will be inherited by everything, unless overriden below
 
@@ -192,7 +212,8 @@ Keep in mind that group, global, and master are merely macros to reduce duplicat
 ## Organization of Opcodes within Headers
 
 Opcodes may be listed in a row OR one per line, unofficially known as 'condensed' and 'expanded' view:
-```
+
+```sfz
 <region>
 sample=piano_D4_vl1.wav
 lokey=62
@@ -201,23 +222,27 @@ pitch_keycenter=62
 lovel=1
 hivel=50
 ```
+
 is equal to:
-```
+
+```sfz
 <region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
 ```
 
 You can see how much space is saved in the latter case, and it allows bulk adjustments to be done easier and makes debugging slightly easier, e.g.:
-```
+
+```sfz
 <region> sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
 <region> sample=piano_E4_vl1.wav lokey=64 hikey=65 pitch_keycenter=64 lovel=1 hivel=50
 <region> sample=piano_F#4_vl1.wav lokey=66 hikey=67 pitch_keycenter=66 lovel=11 hivel=50
 <region> sample=piano_G#4_vl1.wav lokey=68 hikey=69 pitch_keycenter=68 lovel=1 hivel=50
 ```
+
 You can see there is something wrong with the third region, a typo of `lovel=11` instaed of `lovel=1`.
 
 These four lines would replace over 20 lines, making files much more manageable. It is possible to swap between the two by using a find-and-replace operation in your text editor (e.g. Notepad++ or equivalent) to replace new line character with a space (this can be done by selecting a blank line by clicking and dragging down on a blank so that one line is highlighted, _THEN_ open the find/replace dialog and it will be auto-filled in the 'find' field; put a single space in the 'replace with' field. Try executing and see if it works; see the video below for a visual representation of the process).
 
-https://www.youtube.com/watch?v=Lr7_qS2iV30
+https://youtu.be/Lr7_qS2iV30
 
 ## Pitch
 
@@ -260,7 +285,8 @@ For example, let us say we record a piano with three such velocity layers. The s
 In SFZ, we would assign each layer to a velocity range from the 1-127 range. For example, the lowest layer might get the range of 1-50, the medium from 51-100, and the loudest from 101-127.
 
 We express this in SFZ using lovel and hivel, for example:
-```
+
+```sfz
 <region>
 sample=piano_C4_vl1.wav
 lovel=1
@@ -285,7 +311,7 @@ To simplify our lives and keep our SFZ files from being huge, we can also use th
 
 Any `<region>` within a `<group>` will of course inherit whatever is listed in that `<group>`, so if we group our samples as shown below, we can significantly cut down on the amount of space needed in the file:
 
-```
+```sfz
 <group> //velocity layer 1 (pp)
 lovel=1
 hivel=50
@@ -381,4 +407,4 @@ One final more advanced topic to discuss is Includes. Perhaps the dark magic of 
 
 This allows you to keep an extremely tidy workflow, creating easily-managed main files where you can rapidly change key ranges and other control values to get the controls you need.
 
-{% include open-embed.html %}
+{%-include "open_embed.html" %}

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "bypass_onccN"
 ---
 When the MIDI CC value (0-127) is >= a threshold, the effect plays,

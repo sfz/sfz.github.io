@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_count"
 ---
 This is in addition to the time the sample is played unlooped, as normal,
@@ -12,7 +12,7 @@ sample will be played after all repetitions of the loop have been completed
 
 ## Examples
 
-```
+```sfz
 loop_count=3
 loop_count=15
 ```

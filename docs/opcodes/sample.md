@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sample"
 ---
 Possibly the most important opcode, this is the one that tells the sampler which
@@ -50,7 +50,7 @@ See also the table of supported sample [formats] by some engines for more detail
 
 ## Examples
 
-```
+```sfz
 sample=A3.wav
 sample=..\Samples\close\c4_pp_rr3.wav
 ```
@@ -58,7 +58,7 @@ sample=..\Samples\close\c4_pp_rr3.wav
 Each engine can also support custom oscillators. For example, ARIA supports
 using this opcode for some basic synthesized sound waves such as:
 
-```
+```sfz
 sample=*sine
 sample=*saw
 sample=*square
@@ -76,13 +76,13 @@ a sample but want a region to exist and be played
 Note that in this case the `*` is a real character and not a wildcard.
 
 
-[group]:           group
-[hikey]:           hikey
-[lokey]:           lokey
-[off_by]:          off_by
-[pitch_keycenter]: pitch_keycenter
-[pitch_keytrack]:  pitch_keytrack
-[formats]:  {{ '/software/engines/' | relative_url }}
-[Features]: {{ '/#features' | relative_url }}
-[FLAC]:     https://en.wikipedia.org/wiki/FLAC
-[lossless]: https://en.wikipedia.org/wiki/Lossless_compression
+[group]:           group.md
+[hikey]:           hikey.md
+[lokey]:           lokey.md
+[off_by]:          off_by.md
+[pitch_keycenter]: pitch_keycenter.md
+[pitch_keytrack]:  pitch_keytrack.md
+[formats]:         ../software/engines.md
+[Features]:        #features
+[FLAC]:            https://en.wikipedia.org/wiki/FLAC
+[lossless]:        https://en.wikipedia.org/wiki/Lossless_compression

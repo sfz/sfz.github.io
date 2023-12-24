@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_steps"
 ---
 
@@ -17,7 +17,7 @@ lfoN_fade and lfoN_count all can.
 
 ## Examples
 
-```
+```sfz
 lfo3_steps=16
 lfo1_steps=8
 ```

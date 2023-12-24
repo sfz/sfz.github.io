@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lorand / hirand"
 ---
 Random values. The player will generate a new random number on every note-on event,
@@ -7,7 +7,7 @@ in the range 0 to 1.
 
 ## Examples
 
-```
+```sfz
 lorand=0.2 hirand=0.4
 
 lorand=0.4 hirand=1
@@ -20,7 +20,7 @@ that would result in no sound playing if the random number generated was, for
 example, 0.2496343491. So, an 0.001 chance of no sound at all - a difficult
 problem to spot when testing.
 
-```
+```sfz
 <region> hirand=0.25 sample=kick_vl1_rr1.wav
 <region> lorand=0.25 hirand=0.5 sample=kick_vl1_rr2.wav
 <region> lorand=0.5 hirand=0.75 sample=kick_vl1_rr3.wav
@@ -35,7 +35,7 @@ same range as the previously generated number. This can be good when there are
 a lot (6 or more) round robin samples available. The code for 8 samples split
 into two sequential subsets might look like this:
 
-```
+```sfz
 <region> seq_length=2 seq_position=1 hirand=0.25 sample=kick_vl1_rr1.wav
 <region> seq_length=2 seq_position=1 lorand=0.25 hirand=0.5 sample=kick_vl1_rr2.wav
 <region> seq_length=2 seq_position=1 lorand=0.5 hirand=0.75 sample=kick_vl1_rr3.wav
@@ -62,5 +62,5 @@ example having key fingering noises on a clarinet trigger sometimes
 (but not always) when a note is played.
 
 
-[seq_length]:   seq_length
-[seq_position]: seq_position
+[seq_length]:   seq_length.md
+[seq_position]: seq_position.md
