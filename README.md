@@ -1,43 +1,34 @@
-# Source code for the [SFZ Format] website
-
-## Dependencies and license information
+# SFZ Format documentation website
 
 The website is built using the following software and technologies:
 
+- [AnchorJS] anchors headings, MIT license
 - [Bootstrap] UI toolkit, code under MIT license, docs under [Creative Commons]
 - [Favicon Generator] for favicons
-- [Font Awesome] for icons, [SIL OFL 1.1] license
+- [Fork Awesome] for icons, [SIL OFL 1.1] license
 - [highlight.js] for syntax highlighting, BSD 3-Clause license
-- [Jekyll] static website generator, MIT license
-- [jekyll-anchor-headings] by [Alleyo], for anchors headings, MIT license
 - [Markdown] markup language
-- [Node.js] to compile all static assets, including the Bootstrap library, [see license]
+- [MKDocs] static website generator, BSD-2-Clause license
 - [SASS] for stylesheets, MIT license
 
 ## Local Build Quick-start Guide
 
-- Install `ruby` and `yarn`
-- Use the automatic setup via `setup.sh`
-
-or manually:
+Install [poetry] and run:
 
 ```bash
-$ gem update --user-install
-$ gem install bundler --user-install
-$ bundle config set path '.bundle'
-$ bundle install
-$ yarn --no-bin-links
-$ yarn dist
-$ bundle exec jekyll serve --watch --host 0.0.0.0
+$ poetry install
+$ poetry run mkdocs serve
 ```
 
-The local website should be available at <http://localhost:4000/>
+Use the automatic setup via `mkdocs.sh`
+
+The local website should be available at <http://localhost:8000/>
 
 ## Creating posts
 
 This can be done either manually by creating a new .md file
-in the [_posts] directory, paying attention for a correct filename, date and
-[front-matter], or by running the following command:
+in the `mkdocs/docs/news/posts` directory, paying attention for a correct filename,
+date and [front-matter], or by running the following command:
 
 ```bash
 $ ./new_post.sh "New post title" "<author_name>"
@@ -59,19 +50,16 @@ $ ./new_post.sh "New post title" "<author_name>"
   <span property="dct:title">sfz format website</span>.
 </p>
 
-[SFZ Format]:             https://sfzformat.github.io/
-[Alleyo]:                 https://pure-liquid.allejo.org/
-[Bootstrap]:              https://getbootstrap.com/
-[Creative Commons]:       https://creativecommons.org/licenses/by/3.0/
-[Favicon Generator]:      https://realfavicongenerator.net/
-[Font Awesome]:           https://fontawesome.io/
-[front-matter]:           https://jekyllrb.com/docs/front-matter/
-[highlight.js]:           https://highlightjs.org/
-[Jekyll]:                 https://jekyllrb.com/
-[jekyll-anchor-headings]: https://github.com/allejo/jekyll-anchor-headings/
-[Markdown]:               https://daringfireball.net/projects/markdown/
-[Node.js]:                https://nodejs.org/
-[_posts]:                 https://github.com/sfzformat/sfzformat.github.io/tree/source/_posts/
-[SASS]:                   https://sass-lang.com/
-[see license]:            https://github.com/nodejs/node/blob/main/LICENSE
-[SIL OFL 1.1]:            https://scripts.sil.org/cms/scripts/page.php?item_id=OFL
+
+[AnchorJS]:          https://www.bryanbraun.com/anchorjs/
+[Bootstrap]:         https://getbootstrap.com/
+[Creative Commons]:  https://creativecommons.org/licenses/by/3.0/
+[Favicon Generator]: https://realfavicongenerator.net/
+[Fork Awesome]:      https://forkaweso.me/Fork-Awesome/icons/
+[front-matter]:      https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+[highlight.js]:      https://highlightjs.org/
+[Markdown]:          https://daringfireball.net/projects/markdown/
+[MKDocs]:            https://www.mkdocs.org/
+[poetry]:            https://python-poetry.org/
+[SASS]:              https://sass-lang.com/
+[SIL OFL 1.1]:       https://scripts.sil.org/cms/scripts/page.php?item_id=OFL
