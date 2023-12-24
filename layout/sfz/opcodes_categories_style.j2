@@ -1,28 +1,29 @@
-{%-for category in site.data.sfz.syntax.categories-%}
-	{%if category.opcodes.size > 0%}
-		{%-assign categories = categories | append: ',' | append: category.name-%}
-		{%-assign category_ids = category_ids | append: ',' | append: category.id-%}
-	{%-endif-%}
-	{%-for category_type in category.types-%}
-		{%-assign categories = categories | append: ',' | append: category_type.name-%}
-		{%-assign category_ids = category_ids | append: ',' | append: category_type.id-%}
-	{%-endfor-%}
-{%-endfor-%}
-{%-assign categories = categories | remove_first: ',' | split: ','-%}
-{%-assign category_ids = category_ids | remove_first: ',' | split: ','-%}
+{%- set categories = [] %}
+{%- set category_ids = [] %}
+{%- set sfz_syntax = load_yaml(config.extra.db.sfz.syntax) %}
+{%- for category in sfz_syntax.categories %}
+	{%- if category.opcodes %}
+		{{- categories.append(category.name) or '' }}
+		{{- category_ids.append(category.id) or '' }}
+	{%- endif %}
+	{%- for category_type in category.types %}
+		{{- categories.append(category_type.name) or '' }}
+		{{- category_ids.append(category_type.id) or '' }}
+	{%- endfor %}
+{%- endfor %}
 <style>
 div.checkbox-filter {
 	border-left: 10px solid;
 	padding-left: 5px;
 	margin: 1px 0 1px 0
 }
-{%-assign i = 0-%}
-{%-assign j = 1-%}
-{%-for category in categories-%}
-	{%-assign id = category_ids[i]-%}
-	{%-assign n = 360 | times: j | divided_by: categories.size-%}
-	div.{{ id }} {border-color:hsl({{n}},100%,50%)} td.{{ id }} {background-color:hsl({{n}},100%,50%)}
-	{%-assign i = i | plus: 1-%}
-	{%-assign j = j | plus: 1-%}
-{%-endfor-%}
+{%- set i = namespace(value=0) %}
+{%- set j = namespace(value=1) %}
+{%-for category in categories %}
+	{%- set id = category_ids[i.value] %}
+	{%- set n = 360 * j.value // (categories | count) %}
+	div.{{ id }} {border-color:hsl({{ n }},100%,50%)} td.{{ id }} {background-color:hsl({{ n }},100%,50%)}
+	{%- set i.value = i.value + 1 %}
+	{%- set j.value = j.value + 1 %}
+{%-endfor %}
 </style>

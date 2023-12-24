@@ -1,19 +1,17 @@
 		<script
-			src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js">
+			type="text/javascript"
+			src="{{ 'assets/js/highlight.min.js'|url }}">
 		</script>
 		<script
-			src="https://cdn.jsdelivr.net/gh/sfz/highlight.js@master/dist/sfz.min.js">
-		</script>
-		<script>hljs.configure({languages:["sfz"]});hljs.highlightAll();</script>
-		<script defer
 			type="text/javascript"
-			src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js">
+			src="{{ 'assets/js/bash.min.js'|url }}">
 		</script>
-		<script>
-		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-			event.preventDefault();
-			$(this).ekkoLightbox({
-				alwaysShowClose: true
-			});
-		});
+		<script
+			type="text/javascript"
+			src="{{ 'assets/js/cpp.min.js'|url }}">
 		</script>
+		<script
+			type="text/javascript"
+			src="{{ 'assets/js/sfz.min.js'|url }}">
+		</script>
+		<script>hljs.highlightAll();</script>

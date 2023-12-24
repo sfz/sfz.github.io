@@ -1,71 +1,54 @@
----
-layout: default
----
-{%-comment-%}
-	Get the opcode info based from the opcode name, which can be specified in
-	frontmatter with the variable `opcode_name`, otherwise from the filename.
-	If the file is a symlink, the filename option is OK only for opcode aliases,
-	so the opcode alias info can be used instead, otherwise for related ccN opcodes
-	we need to use the original opcode info, so this is not an option.
-{%-endcomment-%}
-{%-if page.opcode_name-%}
-	{%-assign opcode_name = page.opcode_name-%}
-{%-else-%}
-	{%-assign opcode_name = page.name | replace: ".md", ''-%}
-{%-endif-%}
-{%-assign found = false-%}
-{%-for category in site.data.sfz.syntax.categories-%}
-	{%-for opcode in category.opcodes-%}
-		{%-if opcode.name == opcode_name-%}
-			{%-assign found = true-%}
-			{%-assign opcode_info = opcode-%}
-			{%-assign category_info = category-%}
-			{%-assign see_also = site.data.sfz.see_also | where: "name", opcode_name-%}
-			{%break%}
-		{%-endif-%}
-	{%-endfor-%}
-	{%-if found == false-%}
-		{%-for category_type in category.types-%}
-			{%-for opcode in category_type.opcodes-%}
-				{%-if opcode.name == opcode_name-%}
-					{%-assign opcode_info = opcode-%}
-					{%-assign category_info = category-%}
-					{%-assign category_type_info = category_type-%}
-					{%-assign see_also = site.data.sfz.see_also | where: "name", opcode_name-%}
-					{%break%}
-				{%-endif-%}
-			{%-endfor-%}
-		{%-endfor-%}
-	{%-endif-%}
-{%-endfor-%}
-{%-assign value_versions = opcode_info.version-%}
-{%-if opcode_info.value.min == nil-%}
-	{%-if opcode_info.value.options-%}
-		{%-for option in opcode_info.value.options-%}
-			{%-if option.version-%}
-				{%-unless value_versions contains option.version-%}
-					{%-assign value_versions = value_versions | append: ','
-						| append: option.version-%}
-				{%-endunless-%}
-			{%-endif-%}
-		{%-endfor-%}
-		{%-assign value_versions = value_versions | split: ','-%}
-	{%-else-%}
-		{%-assign opcode_info_range = "N/A"-%}
-	{%-endif-%}
-{%-else-%}
-	{%-assign opcode_info_range =
-		opcode_info.value.min | append: " to " | append: opcode_info.value.max-%}
-{%-endif-%}
-{%-if opcode_info.value.default == nil-%}
-		{%-assign opcode_info_default = "N/A"-%}
-{%-else-%}
-		{%-assign opcode_info_default = opcode_info.value.default-%}
-{%-endif-%}
+{#-
+	Gets the opcode information details from the database by passing the opcode name,
+	which can be specified in the frontmatter with the variable `opcode_name`,
+	otherwise automatically from the opcode' document filename.
 
-<p>{{ opcode_info.short_description }}</p>
+	The filename option is OK only for opcodes without aliases and/or modulations,
+	otherwise we need also the original opcode info,
+	so this is not an option in the latter case.
+-#}
+{%-extends "base.j2" %}
 
-{{ content }}
+{%-set opcode_name = page.meta.opcode_name %}
+{%-if not opcode_name %}
+	{%-set opcode_name = page.file.name %}
+{%-endif %}
+
+{%-block title %}
+	{%-if page.meta and page.meta.title %}
+		<title>{{ page.meta.title }} - {{ config.site_name }}</title>
+	{%-else %}
+		<title>{{ page.file.name }} - {{ config.site_name }}</title>
+	{%-endif %}
+{%-endblock %}
+
+{%-set opcode          = find_opcode(opcode_name) %}
+{%-set info            = get_info(opcode) %}
+{%-set range_title     = "Range" %}
+{%-set option_versions = [opcode.version] %}
+
+{%-if opcode.value and opcode.value.options %}
+	{%-set range_title = "Options" %}
+	{%-for option in opcode.value.options %}
+		{%-if option.version and not option.version in option_versions %}
+			{%-do option_versions.append(option.version) %}
+		{%-endif %}
+	{%-endfor %}
+{%-endif %}
+
+{%-block title_header %}
+	{%-if not page.meta.no_title_header %}
+		{%-if page.meta.title %}
+			<h1>{{ page.meta.title }}</h1>
+		{%-else %}
+			<h1>{{ opcode_name }}</h1>
+		{%-endif %}
+	{%-endif %}
+{%-endblock %}
+
+{%-block content %}
+<p>{{ opcode.short_description }}</p>
+{{-page.content }}
 
 <table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
 	<thead class="table-dark">
@@ -74,154 +57,126 @@ layout: default
 			<th scope="col">Version</th>
 			<th scope="col">Type</th>
 			<th scope="col">Default</th>
-			<th scope="col">Range</th>
+			<th scope="col">{{ range_title }}</th>
 			<th scope="col">Unit</th>
 		</tr>
 	</thead>
 	<tbody>
-{%-if opcode_info_range-%}
+{%-if opcode.value and opcode.value.options %}
+	{%-set temp = namespace(version = "") %}
+	{%-for option_version in option_versions %}
+		{%-set options_string_list = [] %}
+		{%-for option in opcode.value.options %}
+			{%-if option.version %}
+				{%-set temp.version = option.version %}
+			{%-else %}
+				{%-set temp.version = info.version %}
+			{%-endif %}
+			{%-if temp.version == option_version %}
+				{%-do options_string_list.append(option.name) %}
+			{%-endif %}
+		{%-endfor %}
+		{%-if loop.first %}
 		<tr>
-			<td>{{ opcode_info.name }}</td>
-			<td>{{ opcode_info.version }}</td>
-			<td>{{ opcode_info.value.type_name }}</td>
-			<td>{{ opcode_info_default }}</td>
-			<td>{{ opcode_info_range }}</td>
-			<td>{{ opcode_info.value.unit }}</td>
+			<td>{{ info.name          }}</td>
+			<td>{{ info.version       }}</td>
+			<td>{{ info.value_type    }}</td>
+			<td>{{ info.value_default }}</td>
+			<td>{{ options_string_list|join(', ') }}</td>
 		</tr>
-{%-elsif opcode_info.value.options-%}
-	{%-for value_version in value_versions-%}
-		{%-assign version_options = nil-%}
-		{%-for option in opcode_info.value.options-%}
-			{%-if option.version-%}
-				{%-assign option_version = option.version-%}
-			{%-else-%}
-				{%-assign option_version = opcode_info.version-%}
-			{%-endif-%}
-			{%-if option_version == value_version-%}
-				{%-assign version_options = version_options | append: option.name | append: ", "-%}
-			{%-endif-%}
-		{%-endfor-%}
-		{%-assign size = version_options | size | minus: 2-%}
-		{%-assign version_options = version_options | slice: 0, size-%}
-		{%-if forloop.first-%}
-		<tr>
-			<td>{{ opcode_info.name }}</td>
-			<td>{{ opcode_info.version }}</td>
-			<td>{{ opcode_info.value.type_name }}</td>
-			<td>{{ opcode_info_default }}</td>
-			<td>{{ version_options }}</td>
-		</tr>
-		{%-else-%}
+		{%-else %}
 		<tr>
 			<td></td>
-			<td>{{ value_version }}</td>
+			<td>{{ option_version }}</td>
 			<td></td>
 			<td></td>
-			<td>{{ version_options }}</td>
+			<td>{{ options_string_list|join(', ') }}</td>
 		</tr>
-		{%-endif-%}
-	{%-endfor-%}
-{%-endif-%}
-{%-if opcode_info.modulation.midi_cc or opcode_info.modulation.velocity-%}
+		{%-endif %}
+	{%-endfor %}
+{%-else %}
+		<tr>
+			<td>{{ info.name          }}</td>
+			<td>{{ info.version       }}</td>
+			<td>{{ info.value_type    }}</td>
+			<td>{{ info.value_default }}</td>
+			<td>{{ info.value_range   }}</td>
+			<td>{{ info.value_unit    }}</td>
+		</tr>
+{%-endif %}
+{%-if opcode.modulation and	(opcode.modulation.midi_cc or opcode.modulation.velocity) %}
 		<thead class="table-dark">
 			<tr>
 				<th colspan="6">Modulations</th>
 			</tr>
 		</thead>
-{%-endif-%}
-{%-for midi_cc in opcode_info.modulation.midi_cc-%}
-	{%-if midi_cc.value.default != nil-%}
-		{%-assign midi_cc_default = midi_cc.value.default-%}
-	{%-else-%}
-		{%-assign midi_cc_default = "N/A"-%}
-	{%-endif-%}
-	{%-if midi_cc.value.min != nil-%}
-		{%-assign midi_cc_range = midi_cc.value.min | append: " to " |
-			append: midi_cc.value.max-%}
-	{%-else-%}
-		{%-assign midi_cc_range = "N/A"-%}
-	{%-endif-%}
-		<tr>
-			<td>{{ midi_cc.name }}</td>
-			<td>{{ midi_cc.version }}</td>
-			<td>{{ midi_cc.value.type_name }}</td>
-			<td>{{ midi_cc_default }}</td>
-			<td>{{ midi_cc_range }}</td>
-			<td>{{ midi_cc.value.unit }}</td>
-		</tr>
-{%-endfor-%}
-{%-for velocity in opcode_info.modulation.velocity-%}
-	{%-if velocity.value.default != nil-%}
-		{%-assign velocity_default = velocity.value.default-%}
-	{%-else-%}
-		{%-assign velocity_default = "N/A"-%}
-	{%-endif-%}
-	{%-if velocity.value.min != nil-%}
-		{%-assign velocity_range = velocity.value.min | append: " to " |
-			append: velocity.value.max-%}
-	{%-else-%}
-		{%-assign velocity_range = "N/A"-%}
-	{%-endif-%}
-	<tr>
-		<td>{{ velocity.name }}</td>
-		<td>{{ velocity.version }}</td>
-		<td>{{ velocity.value.type_name }}</td>
-		<td>{{ velocity_default }}</td>
-		<td>{{ velocity_range }}</td>
-		<td>{{ velocity.value.unit }}</td>
-	</tr>
-{%-endfor-%}
+		<tbody>
+	{%-for midi_cc in opcode.modulation.midi_cc %}
+		{%-set info = get_info(midi_cc) %}
+			<tr>
+				<td>{{ info.name          }}</td>
+				<td>{{ info.version       }}</td>
+				<td>{{ info.value_type    }}</td>
+				<td>{{ info.value_default }}</td>
+				<td>{{ info.value_range   }}</td>
+				<td>{{ info.value_unit    }}</td>
+			</tr>
+	{%-endfor %}
+	{%-for velocity in opcode.modulation.velocity %}
+		{%-set info = get_info(velocity) %}
+			<tr>
+				<td>{{ info.name          }}</td>
+				<td>{{ info.version       }}</td>
+				<td>{{ info.value_type    }}</td>
+				<td>{{ info.value_default }}</td>
+				<td>{{ info.value_range   }}</td>
+				<td>{{ info.value_unit    }}</td>
+			</tr>
+	{%-endfor %}
 		</tbody>
+{%-endif %}
+	<tbody>
 </table>
 
-{%-if opcode_info.modulation.envelope or opcode_info.modulation.lfo-%}
-	<h2>Other modulations</h2>
-	{%-assign envelope = opcode_info.modulation.envelope-%}
-	{%-assign lfo = opcode_info.modulation.lfo-%}
-	{%-if envelope == nil-%}
-		{%-assign envelope = 'X'-%}
-	{%-endif-%}
-	{%-if lfo == nil-%}
-		{%-assign lfo = 'X'-%}
-	{%-endif-%}
-	<ul>
-		<li>Envelope: {{ envelope }}</li>
-		<li>LFO: {{ lfo }}</li>
-	</ul>
-{%-endif-%}
+{%-if opcode.modulation and (opcode.modulation.envelope or opcode.modulation.lfo) %}
+<h2>Other modulations</h2>
+	{%-set envelope = opcode.modulation.envelope %}
+	{%-set lfo      = opcode.modulation.lfo %}
+	{%-if envelope is none  %}
+		{%-set envelope = 'X' %}
+	{%-endif %}
+	{%-if lfo is none %}
+		{%-set lfo = 'X' %}
+	{%-endif %}
+<ul>
+	<li>Envelope: {{ envelope }}</li>
+	<li>LFO: {{ lfo }}</li>
+</ul>
+{%-endif %}
 
-{%-if see_also.size > 0-%}
-	{%-for opcode_ref in see_also[0].pages-%}
-		{%-if see_also_list != nil-%}
-			{%-assign see_also_list = see_also_list | append: ", "-%}
-		{%-endif-%}
-		{%if opcode_ref.url != nil%}
-			{%-assign opcode_ref_url = opcode_ref.url-%}
-		{%-else-%}
-			{%-assign opcode_ref_url = "opcodes/" | append: opcode_ref.name | relative_url-%}
-		{%-endif-%}
-		{%-assign see_also_list = see_also_list | append: "<a href='" |
-			append: opcode_ref_url | append: "'>" | append: opcode_ref.name | append: "</a>"-%}
-	{%-endfor-%}
-	<p>See also: {{ see_also_list }}</p>
-{%-endif-%}
+{%-set see_also       = load_yaml(config.extra.db.sfz.see_also) %}
+{%-set see_also_dict  = see_also|selectattr("name", "equalto", opcode.name)|list|first or '' %}
+{%-set see_also_pages = see_also_dict.pages %}
 
-{%-if category_info.url != nil-%}
-	{%-assign category_url = "<a href='" | append: category_info.url |
-		append: "'>" | append: category_info.name | append: "</a>"-%}
-{%else%}
-	{%-assign category_url = category_info.name-%}
-{%-endif-%}
+{%-if see_also_pages|count %}
+	{%-set see_also_list = [] %}
+	{%-for page in see_also_pages %}
+		{%-if page.url is not none %}
+			{%-set page_url = page.url %}
+		{%-else %}
+			{%-set page_url = page.name %}
+		{%-endif %}
+		{%-do see_also_list.append('<a href="' ~ page_url ~ '">' ~ page.name ~ '</a>') %}
+	{%-endfor %}
+	<p>See also: {{ see_also_list|join(", ") }}</p>
+{%-endif %}
 
-{%-if category_type_info.url != nil-%}
-	{%-assign category_type_url = "<a href='" | append: category_type_info.url |
-		append: "'>" | append: category_type_info.name  | append: "</a>"-%}
-{%else%}
-	{%-assign category_type_url = category_type_info.name-%}
-{%-endif-%}
+{%-set as_type      = true %}
+{%-set category_url = get_category_url(opcode_name) %}
+{%-set type_url     = get_category_url(opcode_name, as_type) %}
 
-{%-if category_type_url != nil-%}
-	{%-assign category_url = category_url | append: ", " | append: category_type_url-%}
-{%-endif-%}
+{%-if category_url %}
+	<p>Category: {{ category_url-}}{%-if type_url %}, {{ type_url }}{%-endif %}</p>
+{%-endif %}
 
-<p>Category: {{ category_url }}</p>
+{%-endblock %} {# content #}

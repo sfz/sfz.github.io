@@ -1,4 +1,8 @@
-{% include sfz/opcodes-filters.liquid %}
+{%-extends "base.j2" %}
+
+{%-block content %}
+	{{-page.content }}
+	{%-include "sfz/opcodes_categories_style.j2" %}
 <table
 	class="table table-bordered table-hover table-responsive-xl table-sm table-striped"
 	id="table-opcodes"
@@ -17,19 +21,27 @@
 		</tr>
 	</thead>
 	<tbody>
-{%-for category_ in site.data.sfz.syntax.categories-%}
-	{%-for toplevel_opcode in category_.opcodes-%}
-		{% include sfz/functions/processOpcode.liquid
-			category = category_
-			opcode   = toplevel_opcode %}
-	{%-endfor-%}
-	{%-for category_type in category_.types-%}
-		{%-for toplevel_opcode in category_type.opcodes-%}
-			{% include sfz/functions/processOpcode.liquid
-				category = category_type
-				opcode   = toplevel_opcode %}
-		{%-endfor-%}
-	{%-endfor-%}
-{%-endfor-%}
+{%-for opcode in opcode_set %}
+	{%-if opcode.deprecated %}{%-set a = '<a class="link-danger" ' %}{%-else %}{%-set a = '<a ' %}{%-endif %}
+	{%-set info     = get_info(opcode) %}
+	{%-set name     = info.name|replace('*', '')|replace('#', '') %}
+	{%-set category = get_opcode_category(opcode) %}
+		<tr>
+			<td class="{{ category.id }}"><span style="display:none">{{ category.name }}</span></td>
+			<td>{{a}} href="{{ name }}">{{ name }}</a></td>
+		{%-if "isa" in opcode and opcode["isa"] == "alias" %}
+			{%-set alias = opcode["alias_of"]["name"] %}
+			{%-set alias_url = '<a href="' + alias + '">' + alias + '</a>' %}
+			<td>{{ alias_url }} alias.</td>
+		{%-else %}
+			<td>{{ opcode.short_description }}</td>
+		{%-endif %}
+			<td>{{ info.value_type }}</td>
+			<td>{{ info.value_default }}</td>
+			<td>{{ info.value_range }}</td>
+			<td>{{ info.version }}</td>
+		</tr>
+{%-endfor %}
 	</tbody>
 </table>
+{%-endblock %}{# content #}

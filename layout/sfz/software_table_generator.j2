@@ -1,42 +1,44 @@
-{%-assign apps_os         = site.data.sfz.software.os-%}
-{%-assign apps_categories = site.data.sfz.software.categories-%}
+{%-set apps_os         = macros_sfz_software.os %}
+{%-set apps_categories = macros_sfz_software.categories %}
 
-{%-for page_category in page.app_categories-%}
-	{%-for category in apps_categories-%}
-		{%-if page_category == category.name -%}
-			{%-if page.show_category_titles-%}
-				{%-assign page_category_id = page_category | downcase | replace: " ", '-'-%}
+{%-for page_category in page.meta.app_categories %}
+	{%-for category in apps_categories %}
+		{%-if page_category == category.name %}
+			{%-if page.meta.show_category_titles %}
+				{%-set page_category_id = page_category|lower|replace(' ', '-') %}
 <h2 id="{{page_category_id}}">{{ page_category }}</h2>
-			{%-endif-%}
+			{%-endif %}
 <table class="table table-bordered table-hover table-responsive-xl table-sm table-striped">
 	<thead class="table-dark">
 		<tr>
 			<th scope="col">Name</th>
 			<th scope="col">License</th>
-			{%-for os in apps_os-%}
+			{%-for os in apps_os %}
 			<th scope="col" style="text-align:center">{{ os.name }}</th>
-			{%-endfor-%}
+			{%-endfor %}
 			<th scope="col">Description</th>
 		</tr>
 	</thead>
 	<tbody>
-			{%-for app in category.applications-%}
+			{%-for app in category.applications %}
 	<tr>
 		<td><a href="{{ app.url }}">{{ app.name }}</a></td>
 		<td>{{ app.license }}</td>
-				{%-for os in apps_os-%}
-					{%-if app.os contains os-%}
-						{%-assign os_supported = "✓"-%}
-					{%-else-%}
-						{%-assign os_supported = "X"-%}
-					{%-endif-%}
+				{%-for os in apps_os %}
+					{%-if os in app.os %}
+						{%-set os_supported = "✓" %}
+					{%-else %}
+						{%-set os_supported = "X" %}
+					{%-endif %}
 		<td style="text-align:center">{{ os_supported }}</td>
-				{%-endfor-%}
+				{%-endfor %}
+				{%-if app.short_description %}
 		<td>{{ app.short_description }}</td>
+				{%-endif %}
 	</tr>
-			{%-endfor-%}
+			{%-endfor %}
 	</tbody>
 </table>
-		{%-endif-%}
-	{%-endfor-%}
-{%-endfor-%}
+		{%-endif %}
+	{%-endfor %}
+{%-endfor %}
