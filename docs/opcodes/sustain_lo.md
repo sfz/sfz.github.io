@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sustain_lo"
 ---
 This ARIA extension sets the minimum point
@@ -22,7 +22,7 @@ in the same way.
 
 ## Examples
 
-```
+```sfz
 sustain_lo=64
 sustain_lo=20
 ```

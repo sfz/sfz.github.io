@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "loop_end"
 ---
 This is inclusive - the sample specified is played as part of the loop.
@@ -38,12 +38,12 @@ in the SFZ.
 
 ## Examples
 
-```
+```sfz
 loop_end=4503
 
 loop_end=12445
 ```
 
 
-[loop_mode]:         loop_mode
-[loop_start]:        loop_start
+[loop_mode]:  loop_mode.md
+[loop_start]: loop_start.md

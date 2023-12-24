@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_delay"
 ---
 This is the time elapsed from note on to the start of
@@ -11,11 +11,11 @@ have both completed their duration.
 
 ## Examples
 
-```
+```sfz
 fileg_delay=0.004
 ampeg_delay=0.05
 ```
 
 
-[delay]:        delay
-[delay_random]: delay_random
+[delay]:        delay.md
+[delay_random]: delay_random.md

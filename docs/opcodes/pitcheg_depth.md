@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pitcheg_depth"
 ---
 For pitcheg and fileg, this is in cents, and can range from -12000 to 12000.
@@ -9,7 +9,7 @@ For ampeg, this should not normally be used.
 
 ## Examples
 
-```
+```sfz
 fileg_depth=1200
 pitcheg_depth=-100
 ```

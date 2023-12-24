@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "varNN_*"
 ---
 ## Example
 
-```
+```sfz
 var01_cutoff=4800
 var02_pitch=400
 ```
@@ -37,5 +37,5 @@ list of available targets for modulation by LFO. Decim and bitred might not
 actually be implemented.
 
 
-[varNN_mod]:   varNN_mod
-[varNN_onccX]: varNN_onccX
+[varNN_mod]:   varNN_mod.md
+[varNN_onccX]: varNN_onccX.md

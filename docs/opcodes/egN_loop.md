@@ -1,12 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_loop"
 ---
 Specifies which envelope node is the loop node.
 
 ## Example
 
-```
+```sfz
 eg01_loop=2
 eg01_loop_shape=1
 eg01_loop_count=8

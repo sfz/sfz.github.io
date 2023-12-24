@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "note_selfmask"
 ---
 This affects only muting of notes where the polyphony is limited by
@@ -25,10 +25,10 @@ for certain instruments.
 
 ## Example
 
-```
+```sfz
 note_selfmask=off
 ```
 
 
-[note_polyphony]: note_polyphony
-[polyphony]:      polyphony
+[note_polyphony]: note_polyphony.md
+[polyphony]:      polyphony.md

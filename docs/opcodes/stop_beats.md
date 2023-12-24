@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "stop_beats"
 ---
 ## Practical Considerations
@@ -9,4 +9,4 @@ implemented. This opcode passes the parser in ARIA but seems to have no effect
 on its region.
 
 
-[delay_beats]: delay_beats
+[delay_beats]: delay_beats.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lopolyaft / hipolyaft"
 ---
 ## Example
@@ -7,7 +7,7 @@ title: "lopolyaft / hipolyaft"
 The region will play only if last Polyphonic Aftertouch message received was
 in the 30-100 range.
 
-```
+```sfz
 lopolyaft=30 hipolyaft=100
 ```
 

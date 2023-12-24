@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pan_law"
 ---
 Allowed values are balance and mma. In earlier versions of ARIA,
@@ -8,7 +8,7 @@ and if no_law is specified then balance will be used.
 
 ## Examples
 
-```
+```sfz
 pan_law=balance
 pan_law=mma
 ```

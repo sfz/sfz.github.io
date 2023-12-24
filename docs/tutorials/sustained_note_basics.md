@@ -8,7 +8,7 @@ sample a folk flute whose lowest note is a D. If the lowest five notes are
 D, E, F#, G and A, and there is one sample available for each note, they could
 be mapped like this:
 
-```
+```sfz
 <region>key=50 sample=d4.wav
 <region>key=52 sample=e4.wav
 <region>key=54 sample=f#4.wav
@@ -25,7 +25,7 @@ If a sample does not need to cover multiple notes, it can still use key. Whether
 to use the D or E sample to cover the D# in our example is a judgment call -
 which sounds better?
 
-```
+```sfz
 <region>lokey=50 hikey=51 pitch_keycenter=50 sample=d4.wav
 <region>lokey=52 hikey=53 pitch_keycenter=52 sample=e4.wav
 <region>key=54 sample=f#4.wav
@@ -39,7 +39,7 @@ indeed most other instruments. We'll need to apply a volume envelope with a
 release time set, which can be applied to all regions.
 The [ampeg_release] opcode accomplishes this.
 
-```
+```sfz
 <global>ampeg_release=0.3
 
 <region>lokey=50 hikey=51 pitch_keycenter=50 sample=d4.wav
@@ -57,7 +57,7 @@ being sustained. This can be simulated with the
 D4 and E4 samples as an example, and controlling the dynamics with CC1 (mod wheel).
 The [amp_veltrack] opcode is set to 0, so that velocity does not affect volume.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0
 
 <group>lokey=50 hikey=51 pitch_keycenter=50
@@ -86,7 +86,7 @@ instrument to be sampled in more detail, and the SFZ format is flexible enough
 to allow this, or even allow different amounts of dynamic layers or round robins
 for different notes within the same articulation.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0
 
 <group>lokey=50 hikey=51 pitch_keycenter=50 hicc11=63
@@ -109,7 +109,7 @@ Another, probably more common, way is to use keyswitches. If we define the
 keyswitch range as the C and C# below our lowest D using
 [sw_lokey / sw_hikey], we can then use [sw_last] to select articulations.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
 
 <group>lokey=50 hikey=51 pitch_keycenter=50 sw_last=48
@@ -145,7 +145,7 @@ monophonic instrument with no multiple microphone positions sampled, it's enough
 to put all samples in the same group, and have that group muted whenever a new
 note from that group is played.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49 group=1 off_by=1
 
 <group>lokey=50 hikey=51 pitch_keycenter=50 sw_last=48
@@ -169,7 +169,7 @@ can reach full volume. That problem can be fixed by setting [off_mode]
 to normal, which will make the notes being muted fade out gradually over the
 duration previously specified with the ampeg_release opcode.
 
-```
+```sfz
 <global>ampeg_release=0.3 amp_veltrack=0 sw_lokey=48 sw_hikey=49
 
 group=1 off_by=1 off_mode=normal
@@ -196,17 +196,17 @@ another part of this guide. Together with the information covered in [drum basic
 earlier, this should also be enough to make a basic sampled piano or guitar.
 
 
-[1]: drum_basics
-[amp_veltrack]:              {{ '/opcodes/amp_veltrack' | relative_url }}
-[ampeg_release]:             {{ '/opcodes/ampeg_release' | relative_url }}
-[group]:                     {{ '/opcodes/group' | relative_url }}
-[loccN / hiccN]:             {{ '/opcodes/loccN' | relative_url }}
-[lokey / hikey]:             {{ '/opcodes/lokey' | relative_url }}
-[lovel / hivel]:             {{ '/opcodes/lovel' | relative_url }}
-[off_by]:                    {{ '/opcodes/off_by' | relative_url }}
-[off_mode]:                  {{ '/opcodes/off_mode' | relative_url }}
-[pitch_keycenter]:           {{ '/opcodes/pitch_keycenter' | relative_url }}
-[sw_last]:                   {{ '/opcodes/sw_last' | relative_url }}
-[sw_lokey / sw_hikey]:       {{ '/opcodes/sw_lokey' | relative_url }}
-[xfin_loccN / xfin_hiccN]:   {{ '/opcodes/xfin_loccN' | relative_url }}
-[xfout_loccN / xfout_hiccN]: {{ '/opcodes/xfout_loccN' | relative_url }}
+[1]:                         drum_basics.md
+[amp_veltrack]:              ../opcodes/amp_veltrack.md
+[ampeg_release]:             ../opcodes/ampeg_release.md
+[group]:                     ../opcodes/group.md
+[loccN / hiccN]:             ../opcodes/loccN.md
+[lokey / hikey]:             ../opcodes/lokey.md
+[lovel / hivel]:             ../opcodes/lovel.md
+[off_by]:                    ../opcodes/off_by.md
+[off_mode]:                  ../opcodes/off_mode.md
+[pitch_keycenter]:           ../opcodes/pitch_keycenter.md
+[sw_last]:                   ../opcodes/sw_last.md
+[sw_lokey / sw_hikey]:       ../opcodes/sw_lokey.md
+[xfin_loccN / xfin_hiccN]:   ../opcodes/xfin_loccN.md
+[xfout_loccN / xfout_hiccN]: ../opcodes/xfout_loccN.md

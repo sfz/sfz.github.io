@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "xfin_lokey / xfin_hikey"
 ---
 `xfin_lokey` and `xfin_hikey` define the fade-in keyboard zone for the region.
@@ -10,6 +10,6 @@ for keys greater than or equal to `xfin_hikey`.
 
 ## Example
 
-```
+```sfz
 xfin_lokey=c3 xfin_hikey=c4
 ```

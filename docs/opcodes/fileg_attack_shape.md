@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_attack_shape"
 ---
 0 is linear. Positive values are slower curves (that means the envelope will
@@ -12,7 +12,7 @@ vertical line (if positive) or a vertical line followed by a horizontal line
 
 ## Examples
 
-```
+```sfz
 ampeg_attack_shape=2.1
 ampeg_attack_shape=-3.8
 ```

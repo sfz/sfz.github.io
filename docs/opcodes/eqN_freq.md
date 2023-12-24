@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "eqN_freq"
 ---
 The SFZ specification has three EQ bands, with this opcode setting
@@ -12,7 +12,7 @@ EQ bands, including low shelf and high shelf.
 
 ## Examples
 
-```
+```sfz
 eq1_freq=80
 eq2_freq=1000
 eq3_freq=4500
@@ -21,4 +21,4 @@ eq2_freq_oncc30=2500
 ```
 
 
-[fil_type]: fil_type
+[fil_type]: fil_type.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_release_shape"
 ---
 0 is linear, positive values are slower curves (that means the envelope will
@@ -9,13 +9,26 @@ tail fading out more slowly).
 
 ## Examples
 
-```
+```sfz
 ampeg_release_shape=2.1
 ampeg_release_shape=-3.8
 ```
 
-{%-assign images  = "sine_neg8.jpg,sine_neg3p8.jpg,sine_0.jpg,sine_pos2p1.jpg,sine_pos8.jpg" | split: ','-%}
-{%-assign titles  = "ampeg_decay_shape=-8,ampeg_decay_shape=-3.8,ampeg_decay_shape=0,ampeg_decay_shape=2.1,ampeg_decay_shape=8" | split: ','-%}
-{%-assign gallery = "ampeg_release_shape"-%}
-{%-assign path    = "/assets/img/ampeg_decay_shape/"-%}
-{%-include lightbox_gallery.liquid const_images=images const_titles=titles const_gallery=gallery const_path=path-%}
+{%-set images = [
+  "sine_neg8.jpg",
+  "sine_neg3p8.jpg",
+  "sine_0.jpg",
+  "sine_pos2p1.jpg",
+  "sine_pos8.jpg"
+] %}
+{%-set titles = [
+  "ampeg_decay_shape=-8",
+  "ampeg_decay_shape=-3.8",
+  "ampeg_decay_shape=0",
+  "ampeg_decay_shape=2.1",
+  "ampeg_decay_shape=8"
+] %}
+{%-set home = "ampeg_release_shape" %}
+{%-set path = "../../assets/img/ampeg_decay_shape/" %}
+{%-import "lightbox.j2" as lightbox with context %}
+{{ lightbox.make_gallery(images, titles, name, path) }}

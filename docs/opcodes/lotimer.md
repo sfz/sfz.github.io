@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lotimer / hitimer"
 ---
 
@@ -8,7 +8,8 @@ The timer is how long has passed since the last sample had played in the same
 group. It is, however, not known whether this is a group header or polyphony group.
 
 ## Examples
-```
+
+```sfz
 <region>
 hitimer=0.25
 sample=quick.wav

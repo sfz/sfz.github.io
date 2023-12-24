@@ -73,7 +73,7 @@ instances or different instruments concurrently, for example keydelta.
 CC 140 and 141 are measured in half-steps. So, the below will result in an envelope with a depth
 of 100 cents per half-step. This is typically what would be used for portamento glides.
 
-```
+```sfz
 eg07_pitch_oncc140=100
 ```
 
@@ -82,8 +82,8 @@ can be used with lohdcc and hihdcc. For example, the below will restrict a regio
 when the interval between the current note and the previous one is an octave, ascending. Whether
 the decimal is necessary needs to be tested, but the below is confirmed to work.
 
-```
-lohdc140=12
+```sfz
+lohdcc140=12
 hihdcc140=12.1
 ```
 
@@ -92,7 +92,7 @@ with a high value will. The below example was tested in an instrument with a ran
 two octaves, and there works as a way to trigger some regions only when the interval is more than
 one octave in either direction.
 
-```
+```sfz
 lohdcc141=12.1
 hihdcc141=24
 ```
@@ -107,6 +107,6 @@ scenarios.
 In Cakewalk Dimension Pro, 140 is bitred and 141 is decim.
 
 
-[ARIA]:  {{ '/opcodes/?v=aria' | relative_url }}
-[SFZ 2]: {{ '/opcodes/?v=2' | relative_url }}
+[ARIA]:                         ../opcodes/index.md?v=aria
+[SFZ 2]:                        ../opcodes/index.md?v=2
 [MIDI Control Change Messages]: https://www.midi.org/specifications-old/item/table-3-control-change-messages-data-bytes-2

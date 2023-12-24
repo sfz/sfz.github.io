@@ -66,7 +66,7 @@ faster speed on top of it near the stir's peak, with half the duration
 of the base layer. We use ampeg_delay to delay the start of the second
 layer by the same amount, so the peaks of both layers align in time.
 
-```
+```sfz
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_1.wav
 ampeg_attack=1.0 ampeg_decay=1.0 ampeg_sustain=0
@@ -89,7 +89,7 @@ envelope durations. Extremely short stirs, lasting only a small fraction
 of a second, are obviously not going to sound realistic, so we can use
 a minimum value to prevent that. Let's use CC1 (standard mod wheel).
 
-```
+```sfz
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_1.wav
 ampeg_attack=0.1 ampeg_decay=0.1 ampeg_sustain=0
@@ -111,7 +111,7 @@ so the peak will remain aligned at all values of the modulation
 parameter. The attack stage should generally be shorter than the hold
 stage.
 
-```
+```sfz
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_1.wav
 ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
@@ -133,7 +133,7 @@ with linear envelopes. Changing the envelope curves accomplishes this,
 though the initial attack envelope of the base layer can remain
 linear. The below values seem like a decent start.
 
-```
+```sfz
 <region>key=26 loop_mode=one_shot
 sample=snare_stir_speed_1.wav
 ampeg_attack=0.05 ampeg_hold=0.05 ampeg_decay=0.1 ampeg_sustain=0
@@ -162,7 +162,7 @@ currently possible to do this. It's possible to work around this by crossfading
 sharp-envelope and flat-envelope regions, or use locc/hicc to select between
 several pre-baked [envelope shapes][5]. Here's an example of the latter method.
 
-```
+```sfz
 <group>key=26 loop_mode=one_shot
 
 <region>hicc100=42
@@ -208,7 +208,7 @@ to trigger short ornaments which will add a brief extra sound to the
 stir, thus emulating a momentary acceleration of the brush. We can use
 one of the higher stir speeds for this.
 
-```
+```sfz
 <group>key=27 loop_mode=one_shot sample=snare_stir_speed_2.wav
 ampeg_attack=0.05 ampeg_decay=0.05 ampeg_sustain=0
 ampeg_attackcc1=0.2 ampeg_decaycc1=0.2
@@ -231,7 +231,7 @@ short, aggressive stirs, or added on top of basic stirs to create more complex
 patterns. The difference in the SFZ here is that the attack curve shape can be applied to
 the attack portion as well, and there is no hold stage in the envelope.
 
-```
+```sfz
 <group>key=28 loop_mode=one_shot
 
 <region>hicc100=42
@@ -288,7 +288,7 @@ out of the mute groups and can be layered on top of other sounds without muting 
 For a more sophisticated use of mute groups with other pieces of the drum kit,
 please see [cymbal muting][9].
 
-```
+```sfz
 <global>loop_mode=one_shot off_mode=normal
 ampeg_release=0.1 ampeg_releasecc1=0.2
 
@@ -410,7 +410,7 @@ at the beginning, looping or crossfading noisy samples is very easy as there are
 no phase issues. We also set the [loop_mode][3] opcode to continuous
 instead of the one_shot setting used in the earlier approach.
 
-```
+```sfz
 <group>key=26 loop_mode=continuous ampeg_release=0.25
 <region>sample=snare_stir_speed_1.wav xfin_locc1=0 xfin_hicc1=31 xfout_locc1=32 xfout_hicc1=63
 <region>sample=snare_stir_speed_2.wav xfin_locc1=32 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=95
@@ -435,15 +435,15 @@ It is also certainly possible to further improve the above model with more reali
 and playablity.
 
 
-[1]:  drum_basics
+[1]:  drum_basics.md
 [2]:  https://www.youtube.com/watch?v=R982CdhRF9E
-[3]:  {{ '/opcodes/loop_mode' | relative_url }}
-[4]:  {{ '/modulations/envelope_generators#sfz-1-egs' | relative_url }}
-[5]:  {{ '/opcodes/ampeg_attack_shape' | relative_url }}
-[6]:  {{ '/opcodes/group' | relative_url }}
-[7]:  {{ '/opcodes/off_by' | relative_url }}
-[8]:  {{ '/opcodes/sample' | relative_url }}
-[9]:  cymbal_muting
-[10]: {{ '/opcodes/seq_position' | relative_url }}
-[11]: {{ '/opcodes/lovel' | relative_url }}
-[12]: {{ '/opcodes/xfin_loccN' | relative_url }}
+[3]:  ../opcodes/loop_mode.md
+[4]:  ../modulations/envelope_generators.md#sfz-1-egs
+[5]:  ../opcodes/ampeg_attack_shape.md
+[6]:  ../opcodes/group.md
+[7]:  ../opcodes/off_by.md
+[8]:  ../opcodes/sample.md
+[9]:  cymbal_muting.md
+[10]: ../opcodes/seq_position.md
+[11]: ../opcodes/lovel.md
+[12]: ../opcodes/xfin_loccN.md

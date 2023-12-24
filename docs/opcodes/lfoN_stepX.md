@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_stepX"
 ---
 The level of step number X in an LFO used as a step sequencer,
@@ -15,7 +15,7 @@ step is 0.
 
 ## Examples
 
-```
+```sfz
 lfo01_step01=10
 lfo01_step01_oncc1=50
 

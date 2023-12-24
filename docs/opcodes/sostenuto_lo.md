@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sostenuto_lo"
 ---
 Default is 0.5, meaning the sustain pedal is down as long as the CC value is
@@ -12,7 +12,7 @@ sostenuto pedal as an on/off switch for instruments with no half-pedaling.
 
 ## Examples
 
-```
+```sfz
 sostenuto_lo=64
 sostenuto_lo=20
 ```

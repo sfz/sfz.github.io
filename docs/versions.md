@@ -33,8 +33,8 @@ See also the Plogue forum's [ARIA's Custom opcodes] post.
 
 [rgc:audio website]:       https://web.archive.org/web/20071020023100/http://www.rgcaudio.com/sfzformat.htm
 [Cakewalk Synthesizers]:   https://noisesculpture.com/cakewalk-synthesizers/
-[all opcodes]:             {{ '/opcodes/' | relative_url }}
-[headers]:                 {{ '/headers/' | relative_url }}
-[extended MIDI CCs]:       {{ '/extensions/midi_ccs' | relative_url }}
-[XML instrument banks]:    {{ '/extensions/aria/xml_instrument_bank' | relative_url }}
+[all opcodes]:             opcodes/index.md
+[headers]:                 headers/index.md
+[extended MIDI CCs]:       extensions/midi_ccs.md
+[XML instrument banks]:    extensions/aria/xml_instrument_bank.md
 [ARIA's Custom opcodes]:   https://www.plogue.com/plgfrms/viewtopic.php?f=14&t=4389&sid=1499dd5d481dc9c02a51c57da3b11364

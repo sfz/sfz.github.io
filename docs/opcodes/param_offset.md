@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "param_offset"
 ---
 Multiples of 100 seem most convenient, because with param_offset=300 that would
@@ -11,14 +11,14 @@ best. Higher numbers work, but may not be accessible to DAWs for automation etc.
 
 ## Examples
 
-```
+```sfz
 param_offset=300
 param_offset=400
 param_offset=412
 ```
 
 This is how this can actually be used with Sforzando's built in
-MDA Limiter ‹[effect](/headers/effect)›:
+MDA Limiter ‹[effect]›:
 
 ```
 <control>
@@ -33,3 +33,6 @@ set_cc401=63
 param_offset=400
 type=com.mda.Limiter
 ```
+
+
+[effect]: ../headers/effect.md

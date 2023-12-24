@@ -33,7 +33,7 @@ max velocity, for example if a region has [hivel] set to 31, it
 will never be triggered by velocities higher than 31, and therefore should usually
 either have amp_velcurve_31 set to 1, or amp_veltrack should be set to 0.
 
-```
+```sfz
 <group>
 hivel=42
 amp_velcurve_42=1
@@ -71,7 +71,7 @@ It's still possible to use xfout to fade the layer out at higher CC values as
 the next layer fades in, though it may be simpler to just use amplitude for all layers,
 for example like this:
 
-```
+```sfz
 <global>
 amp_veltrack=0
 
@@ -122,7 +122,7 @@ mic controls with the amplitude for all samples recorded through that mic. The e
 with amplitude would be multiplicative - so with either control at 0, there would be
 no sound.
 
-```
+```sfz
 <master>
 amplitude_oncc80=100 //Close mic volume
 <group>
@@ -143,15 +143,15 @@ amplitude_oncc82=100 //Release noise volume
 ```
 
 
-[egN and lfoN]:   sfz2_modulations
-[curveccN]:       {{ '/modulations/curveccN' | relative_url }}
-[amp_keytrack]:   {{ '/opcodes/amp_keytrack' | relative_url }}
-[amp_random]:     {{ '/opcodes/amp_random' | relative_url }}
-[amp_veltrack]:   {{ '/opcodes/amp_veltrack' | relative_url }}
-[amp_velcurve_N]: {{ '/opcodes/amp_velcurve_N' | relative_url }}
-[ampeg]:          {{ '/opcodes/ampeg_attack' | relative_url }}
-[amplfo]:         {{ '/opcodes/amplfo_depth' | relative_url }}
-[amplitude]:      {{ '/opcodes/amplitude' | relative_url }}
-[hivel]:          {{ '/opcodes/hivel' | relative_url }}
-[volume]:         {{ '/opcodes/volume' | relative_url }}
-[xfin / xfout]:   {{ '/opcodes/xfin_loccN' | relative_url }}
+[egN and lfoN]:   sfz2_modulations.md
+[curveccN]:       ../modulations/curveccN.md
+[amp_keytrack]:   ../opcodes/amp_keytrack.md
+[amp_random]:     ../opcodes/amp_random.md
+[amp_veltrack]:   ../opcodes/amp_veltrack.md
+[amp_velcurve_N]: ../opcodes/amp_velcurve_N.md
+[ampeg]:          ../opcodes/ampeg_attack.md
+[amplfo]:         ../opcodes/amplfo_depth.md
+[amplitude]:      ../opcodes/amplitude.md
+[hivel]:          ../opcodes/hivel.md
+[volume]:         ../opcodes/volume.md
+[xfin / xfout]:   ../opcodes/xfin_loccN.md

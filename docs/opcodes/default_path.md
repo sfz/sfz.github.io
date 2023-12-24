@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "default_path"
 ---
 Default path under which the samples should be found. Can also be
@@ -22,11 +22,11 @@ does not seem unreasonable.
 
 ## Examples
 
-```
+```sfz
 default_path=../Samples/
 default_path=D:/TEST/Count_0_10/
 ```
 
 
-[sample]: sample
-[control]: {{ '/headers/control' | relative_url }}
+[sample]: sample.md
+[control]: ../headers/control.md

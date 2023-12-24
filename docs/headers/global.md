@@ -1,6 +1,6 @@
 ---
-title:  "‹global›"
-layout: "sfz/header"
+title: "‹global›"
+template: "sfz/header.j2"
 ---
 If the same opcode defined in global is also defined in group or
 region, the group or region setting is used. This means global can be used to
@@ -16,7 +16,7 @@ It is possible to have multiple global headers in one file, at least under
 ARIA. As with any other header, anything specified under a global header is
 active until another global header is encountered in the SFZ file.
 
-```
+```sfz
 <global>loop_mode=one_shot seq_length=4
 
 <group>key=36 hivel=31 amp_velcurve_31=1

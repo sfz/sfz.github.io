@@ -1,3 +1,3 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 ---

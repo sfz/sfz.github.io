@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "on_loccN / on_hiccN"
 ---
 Sample trigger on MIDI continuous control N.
@@ -7,7 +7,7 @@ This does not involve playing any MIDI notes.
 
 ## Example
 
-```
+```sfz
 on_locc64=127 on_hicc64=127
 ```
 
@@ -20,10 +20,13 @@ will send a MIDI note when the pedal hits bottom.
 
 ## Practical Considerations
 
-on_locc/on_hicc effectively replaces the default [trigger](/opcodes/trigger)=attack.
+on_locc/on_hicc effectively replaces the default [trigger]=attack.
 The behavior of a region which has on_locc/on_hicc and trigger=attack both explicitly
 specified is not defined by the SFZ specification, and that combination should be used.
 
 In ARIA if on_locc/on_hicc and trigger=release or trigger=release_key is used, the
 on_locc/on_hicc opcode will be effectively disregarded, and the region will behave
 like a normal release or release_key region.
+
+
+[trigger]: trigger.md

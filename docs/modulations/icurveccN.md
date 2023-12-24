@@ -2,7 +2,7 @@
 title: icurveccN
 ---
 (target)_icurvecc is a deprecated ARIA extension. It acted as a companion to
-[(target)_curvecc](curveccN) and determined whether the curve for the specified
+[(target)_curvecc](curveccN.md) and determined whether the curve for the specified
 target and CC should be calculated allowing fractional values,
 or whether the calculations should be rounded off to allow whole numbers only.
 With interpolation, it would be possible, for example, for CC2 to be effectively

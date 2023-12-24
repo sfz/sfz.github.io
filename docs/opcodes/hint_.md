@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "hint_*"
 ---
 ARIA supports specific opcodes in ‹[control]›
@@ -13,4 +13,4 @@ sound dropout with larger instruments on lower-performance systems,
 or instruments located on a HDD.
 
 
-[control]: {{ '/headers/control' | relative_url }}
+[control]: ../headers/control.md

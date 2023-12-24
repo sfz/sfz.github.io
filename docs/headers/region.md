@@ -1,6 +1,6 @@
 ---
-title:  "‹region›"
-layout: "sfz/header"
+title: "‹region›"
+template: "sfz/header.j2"
 ---
 Inside the definition file, a region starts with the `‹region›` header. A region
 is defined between two `‹region›` headers, or between a `‹region›` header and a
@@ -16,14 +16,14 @@ lines within a region.
 Opcodes and assigned opcode values are separated by the equal to sign (=),
 without spaces between the opcode and the sign. For instance:
 
-```
+```sfz
 sample=trombone_a4_ff.wav
 sample=cello_a5_pp_first_take.wav
 ```
 
 are valid examples, while:
 
-```
+```sfz
 sample = cello_a4_pp.wav
 ```
 
@@ -34,14 +34,14 @@ and will be used if there's no definition.
 
 Example region definitions:
 
-```
+```sfz
 <region> sample=440.wav
 ```
 
 This region definition instructs the player to play the sample file '440.wav'
 for the whole keyboard range.
 
-```
+```sfz
 <region> lokey=64 hikey=67 sample=440.wav
 ```
 
@@ -54,7 +54,7 @@ It is very important to note that all Input Controls defined in a region act
 using the AND boolean operator. Consequently, all conditions must be matched for
 the region to play. For instance:
 
-```
+```sfz
 <region> lokey=64 hikey=67 lovel=0 hivel=34 locc1=0 hicc1=40 sample=440.wav
 ```
 

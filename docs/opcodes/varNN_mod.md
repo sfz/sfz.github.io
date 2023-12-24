@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "varNN_mod"
 ---
 - **mult**: multiplication, with 1 being full scale - 0 at a CC value of 0,
@@ -10,7 +10,7 @@ opcode_name: "varNN_mod"
 
 ## Example
 
-```
+```sfz
 var01_mod=mult
 var02_mod=add
 ```
@@ -19,7 +19,7 @@ Here is how multiplication could be used, together with [varNN_*]
 (in this case, var01_cutoff as 01 is the variable number and cutoff is the target)
 and [varNN_onccX] to control velocity tracking on a filter cutoff:
 
-```
+```sfz
 //Lowpass filter
 cutoff=120
 cutoff_cc102=8400
@@ -33,8 +33,8 @@ var01_oncc111=1
 ```
 
 
-[amplitude]:   amplitude
-[cutoff]:      cutoff
-[varNN_*]:     varNN_
-[varNN_onccX]: varNN_onccX
-[volume]:      volume
+[amplitude]:   amplitude.md
+[cutoff]:      cutoff.md
+[varNN_*]:     varNN_.md
+[varNN_onccX]: varNN_onccX.md
+[volume]:      volume.md

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "rt_decayN"
 ---
 
@@ -8,7 +8,7 @@ of each segment and a different decrease rate for each segment can be set.
 
 ## Example
 
-```
+```sfz
 <region> sample=pianoA4.wav trigger=attack
 
 <region> sample=keyup_noise.wav trigger=release

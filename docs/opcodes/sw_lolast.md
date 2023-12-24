@@ -1,12 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "sw_lolast / sw_hilast"
 ---
 `sw_lolast` specifies the bottom of the range, and `sw_hilast` the high.
 
 ## Example
 
-```
+```sfz
 sw_lolast=24
 sw_hilast=25
 ```

@@ -16,7 +16,7 @@ Let's say we have only one sampled violin section with the following map, and
 we want to be able to play the notes for another octave above the highest
 currently avaialble note.
 
-```
+```sfz
 <region>sample=c4.wav key=48
 <region>sample=db4.wav key=49
 <region>sample=d4.wav key=50
@@ -33,11 +33,11 @@ currently avaialble note.
 ```
 
 The simplest way is to just stretch the highest note. Using
-lokey, hikey and pitch_keycenter as separate opcodes is 
+lokey, hikey and pitch_keycenter as separate opcodes is
 better than using key and transpose, as it allows one region
 to cover a wide range of pitches.
 
-```
+```sfz
 <region>sample=c5.wav lokey=60 hikey=72 pitch_keycenter=60
 ```
 
@@ -60,7 +60,7 @@ scale.
 
 Let's say we have a simple pentatonic xylophone.
 
-```
+```sfz
 <region>sample=c4.wav key=48
 <region>sample=d4.wav key=50
 <region>sample=f4.wav key=53
@@ -83,7 +83,7 @@ The below example goes up and doesn't extend the range
 beyond the highest or lowest available sample, only
 fills in the gaps.
 
-```
+```sfz
 <region>sample=c4.wav lokey=48 hikey=49 pitch_keycenter=48
 <region>sample=d4.wav lokey=50 hikey=51 pitch_keycenter=50
 <region>sample=f4.wav lokey=52 hikey=54 pitch_keycenter=53
@@ -104,7 +104,7 @@ become obviously audible that the entire top octave uses
 the same sample. We could use the top two or three samples
 instead, and alternate them like this:
 
-```
+```sfz
 <region>sample=c5.wav key=60
 <region>sample=bb4.wav lokey=61 hikey=61 pitch_keycenter=58
 <region>sample=b4.wav lokey=62 hikey=62 pitch_keycenter=59
@@ -124,7 +124,7 @@ in both minor and major triads. There might not be a good way
 to get around this with the sample set we have above, but if we
 have two round robins, we could do something like this:
 
-```
+```sfz
 <group>
 seq_length=2
 <region>sample=c4_rr1.wav key=48
@@ -194,7 +194,7 @@ sample too many times, it's possible to start addressing this
 at the recording stage, and record additional samples of the notes
 which will need to be stretched. Of course this could be more
 work than just recording the target pitches in the first place,
-but if the pitches are difficult to produce consistently (for 
+but if the pitches are difficult to produce consistently (for
 example are notes that a singer can hit only with considerable
 strain) or just physically fall outside the range, it may be a
 viable option.

@@ -1,11 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "egN_ampeg"
 ---
 ## Examples
 
 Generate a standard ADSR shape FlexEG envelope
-```
+
+```sfz
 <region>
 sample=*sine
 

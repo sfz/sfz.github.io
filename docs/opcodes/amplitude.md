@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "amplitude"
 ---
 100% amplitude meaning no volume change is applied to the sample when played.
@@ -10,7 +10,7 @@ Aria/Sforazando do not clamp the range.  Negative values invert the signal.
 
 ## Examples
 
-```
+```sfz
 amplitude=12
 amplitude=40
 amplitude_oncc108=100
@@ -23,4 +23,4 @@ control which goes from silence to full volume.
 See also the [‹curve›] header example.
 
 
-[‹curve›]: {{ '/headers/curve' | relative_url }}
+[‹curve›]: ../headers/curve.md

@@ -1,4 +1,4 @@
 ---
 title: "Engines sample formats support"
 ---
-{% include sfz/engines-sample-formats-table.liquid %}
+{%-include "sfz/engines_sample_formats_table.j2" %}

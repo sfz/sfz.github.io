@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pitcheg_start"
 ---
 ## Examples
 
-```
+```sfz
 ampeg_start=20
 fileg_start=100
 ```

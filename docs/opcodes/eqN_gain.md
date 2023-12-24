@@ -1,16 +1,17 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "eqN_gain"
 ---
 ## Examples
 
-```
+```sfz
 eq1_gain=-3
 eq2_gain=6
 eq3_gain=-6
 
 eq1_gain_oncc23=-12
 ```
+
 ##### Notes
 
 When emulating timbral changes when there are not enough dynamic level samples

@@ -9,4 +9,4 @@ XML banks for ARIA must be digitally signed by Plogue - contact them if
 interested in creating instruments with banks and graphical user interfaces.
 
 
-[#define]: {{ '/opcodes/define' | relative_url }}
+[#define]: ../../opcodes/define.md

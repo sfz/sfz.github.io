@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "off_mode"
 ---
 Region off mode. This opcode will determinate how a region is turned off by an
@@ -20,7 +20,7 @@ in end result, but time is the true default value "under the hood".
 
 ## Examples
 
-```
+```sfz
 off_mode=fast
 
 off_mode=normal
@@ -36,7 +36,7 @@ long sustain and can have the sound of several notes build up - for example,
 hammered dulcimers or ride cymbals.
 
 
-[off_by]:    off_by
-[off_curve]: off_curve
-[off_shape]: off_shape
-[off_time]:  off_time
+[off_by]:    off_by.md
+[off_curve]: off_curve.md
+[off_shape]: off_shape.md
+[off_time]:  off_time.md

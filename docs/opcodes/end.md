@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "end"
 ---
 `end` is inclusive, so if set to 133000, the sample will play all samples up to and
@@ -21,17 +21,17 @@ the same thing is to use an ampeg envelope wiht zero [ampeg_attack],
 
 ## Examples
 
-```
+```sfz
 end=133000
 end=4432425
 end=-1
 ```
 
 
-[ampeg_attack]:  ampeg_attack
-[ampeg_decay]:   ampeg_decay
-[ampeg_sustain]: ampeg_sustain
-[group]:         group
-[loop_mode]:     loop_mode
-[off_by]:        off_by
-[sample]:        sample
+[ampeg_attack]:  ampeg_attack.md
+[ampeg_decay]:   ampeg_decay.md
+[ampeg_sustain]: ampeg_sustain.md
+[group]:         group.md
+[loop_mode]:     loop_mode.md
+[off_by]:        off_by.md
+[sample]:        sample.md

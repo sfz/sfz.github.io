@@ -183,36 +183,36 @@ with an envelope depth of 2400 cents.
 - width_oncc
 
 
-[Modulation]: {{ '/misc/categories#modulation' | relative_url }}
-[(eg type)_attack]:       {{ '/opcodes/ampeg_attack' | relative_url }}
-[(eg type)_attack_oncc]:  {{ '/opcodes/ampeg_attack' | relative_url }}
-[(eg type)_decay]:        {{ '/opcodes/ampeg_decay' | relative_url }}
-[(eg type)_decay_oncc]:   {{ '/opcodes/ampeg_decay' | relative_url }}
-[(eg type)_delay]:        {{ '/opcodes/ampeg_delay' | relative_url }}
-[(eg type)_delay_oncc]:   {{ '/opcodes/ampeg_delay' | relative_url }}
-[(eg type)_depth]:        {{ '/opcodes/fileg_depth' | relative_url }}
-[(eg type)_dynamic]:      {{ '/opcodes/ampeg_dynamic' | relative_url }}
-[(eg type)_hold]:         {{ '/opcodes/ampeg_hold' | relative_url }}
-[(eg type)_hold_oncc]:    {{ '/opcodes/ampeg_hold' | relative_url }}
-[(eg type)_release]:      {{ '/opcodes/ampeg_release' | relative_url }}
-[(eg type)_release_oncc]: {{ '/opcodes/ampeg_release' | relative_url }}
-[(eg type)_start]:        {{ '/opcodes/ampeg_start' | relative_url }}
-[(eg type)_start_oncc]:   {{ '/opcodes/ampeg_start' | relative_url }}
-[(eg type)_sustain]:      {{ '/opcodes/ampeg_sustain' | relative_url }}
-[(eg type)_sustain_oncc]: {{ '/opcodes/ampeg_sustain' | relative_url }}
-[(eg type)_vel2attack]:   {{ '/opcodes/ampeg_vel2attack' | relative_url }}
-[(eg type)_vel2decay]:    {{ '/opcodes/ampeg_vel2decay' | relative_url }}
-[(eg type)_vel2delay]:    {{ '/opcodes/ampeg_vel2delay' | relative_url }}
-[(eg type)_vel2hold]:     {{ '/opcodes/ampeg_vel2hold' | relative_url }}
-[(eg type)_vel2release]:  {{ '/opcodes/ampeg_vel2release' | relative_url }}
-[(eg type)_vel2sustain]:  {{ '/opcodes/ampeg_vel2sustain' | relative_url }}
-[egN_curveX]:             {{ '/opcodes/egN_curveX' | relative_url }}
-[egN_dynamic]:            {{ '/opcodes/egN_dynamic' | relative_url }}
-[egN_levelX]:             {{ '/opcodes/egN_levelX' | relative_url }}
-[egN_levelX_onccY]:       {{ '/opcodes/egN_levelX' | relative_url }}
-[egN_loop]:               {{ '/opcodes/egN_loop' | relative_url }}
-[egN_points]:             {{ '/opcodes/egN_points' | relative_url }}
-[egN_shapeX]:             {{ '/opcodes/egN_shapeX' | relative_url }}
-[egN_sustain]:            {{ '/opcodes/egN_sustain' | relative_url }}
-[egN_timeX]:              {{ '/opcodes/egN_timeX' | relative_url }}
-[egN_timeX_onccY]:        {{ '/opcodes/egN_timeX' | relative_url }}
+[Modulation]:             ../misc/categories.md#modulation.md
+[(eg type)_attack]:       ../opcodes/ampeg_attack.md
+[(eg type)_attack_oncc]:  ../opcodes/ampeg_attack.md
+[(eg type)_decay]:        ../opcodes/ampeg_decay.md
+[(eg type)_decay_oncc]:   ../opcodes/ampeg_decay.md
+[(eg type)_delay]:        ../opcodes/ampeg_delay.md
+[(eg type)_delay_oncc]:   ../opcodes/ampeg_delay.md
+[(eg type)_depth]:        ../opcodes/fileg_depth.md
+[(eg type)_dynamic]:      ../opcodes/ampeg_dynamic.md
+[(eg type)_hold]:         ../opcodes/ampeg_hold.md
+[(eg type)_hold_oncc]:    ../opcodes/ampeg_hold.md
+[(eg type)_release]:      ../opcodes/ampeg_release.md
+[(eg type)_release_oncc]: ../opcodes/ampeg_release.md
+[(eg type)_start]:        ../opcodes/ampeg_start.md
+[(eg type)_start_oncc]:   ../opcodes/ampeg_start.md
+[(eg type)_sustain]:      ../opcodes/ampeg_sustain.md
+[(eg type)_sustain_oncc]: ../opcodes/ampeg_sustain.md
+[(eg type)_vel2attack]:   ../opcodes/ampeg_vel2attack.md
+[(eg type)_vel2decay]:    ../opcodes/ampeg_vel2decay.md
+[(eg type)_vel2delay]:    ../opcodes/ampeg_vel2delay.md
+[(eg type)_vel2hold]:     ../opcodes/ampeg_vel2hold.md
+[(eg type)_vel2release]:  ../opcodes/ampeg_vel2release.md
+[(eg type)_vel2sustain]:  ../opcodes/ampeg_vel2sustain.md
+[egN_curveX]:             ../opcodes/egN_curveX.md
+[egN_dynamic]:            ../opcodes/egN_dynamic.md
+[egN_levelX]:             ../opcodes/egN_levelX.md
+[egN_levelX_onccY]:       ../opcodes/egN_levelX.md
+[egN_loop]:               ../opcodes/egN_loop.md
+[egN_points]:             ../opcodes/egN_points.md
+[egN_shapeX]:             ../opcodes/egN_shapeX.md
+[egN_sustain]:            ../opcodes/egN_sustain.md
+[egN_timeX]:              ../opcodes/egN_timeX.md
+[egN_timeX_onccY]:        ../opcodes/egN_timeX.md

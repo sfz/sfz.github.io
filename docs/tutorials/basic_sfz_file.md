@@ -6,7 +6,7 @@ We also have a section in the [tools page] listing some text editor's
 SFZ syntax highlighting add-ons.
 Fill in the blanks and save as an SFZ:
 
-```
+```sfz
 //------------------------------------------------------------------------------
 // A basic sfz template
 //------------------------------------------------------------------------------
@@ -44,4 +44,4 @@ default_path= // relative path of your samples
 ```
 
 
-[tools page]: {{ '/software/tools' | relative_url }}
+[tools page]: ../software/tools.md

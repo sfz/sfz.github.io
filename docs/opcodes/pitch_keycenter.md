@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pitch_keycenter"
 ---
 For samples which only need to be played at their
@@ -25,7 +25,7 @@ or higher levels.
 
 ## Examples
 
-```
+```sfz
 pitch_keycenter=56
 
 pitch_keycenter=c#2
@@ -33,4 +33,4 @@ pitch_keycenter=c#2
 pitch_keycenter=sample
 ```
 
-[key]: key
+[key]: key.md

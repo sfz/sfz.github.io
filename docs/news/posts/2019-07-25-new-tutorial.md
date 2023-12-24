@@ -2,13 +2,17 @@
 title: "New Tutorial"
 author: "DSmolken"
 ---
-We've published a [new tutorial](/tutorials/brush_stirs) explaining how to use samples to
+We've published a [new tutorial] explaining how to use samples to
 model brushed drum techniques which produce a continuous sound
 rather than a discrete hit. Admittedly, this is a rather niche technique not only
 in the samples world but also in real-world music, mainly used in
-jazz and some indie music. Next we plan to expand the [vibrato tutorial](/tutorials/vibrato),
+jazz and some indie music. Next we plan to expand the [vibrato tutorial],
 which is currently only a simple code example.
 
 Minor updates:
 + global_label, master_label, group_label and region_label opcodes added.
 + Added Carla and Bliss Sampler to SFZ players, updated TAL Sampler info.
+
+
+[new tutorial]:     ../../tutorials/brush_stirs.md
+[vibrato tutorial]: ../../tutorials/vibrato.md

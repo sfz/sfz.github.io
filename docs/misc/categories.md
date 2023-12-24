@@ -47,6 +47,6 @@ It could be samples or oscillators:
 - **Sample Playback**: defines the parameters of the sound generation.
 
 
-[‹control›]: {{ '/headers/control' | relative_url }}
-[1]: {{ '/modulations/envelope_generators' | relative_url }}
-[2]: {{ '/modulations/lfo' | relative_url }}
+[‹control›]: ../headers/control.md
+[1]:         ../modulations/envelope_generators.md
+[2]:         ../modulations/lfo.md

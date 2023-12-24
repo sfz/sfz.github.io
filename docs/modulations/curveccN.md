@@ -10,5 +10,5 @@ either built in or user-defined, which corresponds to the `‹curve›` opcode
 [curve_index].
 
 
-[‹curve›]: {{ '/headers/curve' | relative_url }}
-[curve_index]: curve_index
+[‹curve›]:     ../headers/curve.md
+[curve_index]: ../opcodes/curve_index.md

@@ -1,12 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "pitch_random"
 ---
 ## Examples
 Computed when the note is triggered,
 remains the same for that region for as long as the region plays.
 
-```
+```sfz
 pitch_random=10
 
 pitch_random=400
@@ -23,14 +23,14 @@ amount in the range from 0 cents to +20 cents. In order to get pitch to fluctuat
 between -20 and +20 cents, there would be two ways to get there, either by
 applying a fixed shift of -20 cents and a random shift of up to 40 cents:
 
-```
+```sfz
 pitch=-20
 pitch_random=40
 ```
 
 Or use CC136, which is bipolar random from -1 to 1:
 
-```
+```sfz
 pitch_oncc136=20
 ```
 In rcg sfz and Cakewalk, this is bipolar.

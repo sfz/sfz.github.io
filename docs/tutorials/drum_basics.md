@@ -18,7 +18,7 @@ one-shot samples could be made using only the region header, and two opcodes
 and hi-hat samples on their standard General MIDI notes, this could be the
 entire SFZ file:
 
-```
+```sfz
 <region>key=36 sample=kick.wav
 <region>key=38 sample=snare.wav
 <region>key=42 sample=closedhat.wav
@@ -32,7 +32,7 @@ with the [loop_mode] opcode, which is also used for
 looping (as the name implies), but `loop_mode=one_shot` causes the sampler to
 play the entire sample from start to end, ignoring note off.
 
-```
+```sfz
 <region>key=36 loop_mode=one_shot sample=kick.wav
 <region>key=38 loop_mode=one_shot sample=snare.wav
 <region>key=42 loop_mode=one_shot sample=closedhat.wav
@@ -41,7 +41,7 @@ play the entire sample from start to end, ignoring note off.
 There's no need to set the one_shot for each region, though. We can simplify
 our life by using the [‹global›] header like this:
 
-```
+```sfz
 <global>loop_mode=one_shot
 
 <region>key=36 sample=kick.wav
@@ -65,7 +65,7 @@ If we have an acoustic kick drum sampled at four dynamics - quiet, kind of quiet
 kind of loud and loud - we have four dynamic layers. Let's say the files for
 these layers are named like this:
 
-```
+```sfz
 kick_vl1.wav
 kick_vl2.wav
 kick_vl3.wav
@@ -75,14 +75,14 @@ kick_vl4.wav
 To trigger the quiet sample at low MIDI note velocities, we'd use the
 [lovel and hivel] opcodes like this:
 
-```
+```sfz
 <region>key=36 lovel=0 hivel=31 sample=kick_vl1.wav
 ```
 
 All four hits with velocity ranges assigned, evenly splitting the full 0 to 127
 velocity range into four, would look like this:
 
-```
+```sfz
 <region>key=36
 lovel=0 hivel=31
 sample=kick_vl1.wav
@@ -96,12 +96,13 @@ sample=kick_vl3.wav
 lovel=96 hivel=127
 sample=kick_vl4.wav
 ```
+
 This can, again, be simplified. The defalut value for lovel is 0, and for hivel
 it's 127, so we don't need to specify setting them to those numbers. Also, we
 can use a [‹group›] header to make the key opcode the same
 across all four regions:
 
-```
+```sfz
 <global>loop_mode=one_shot
 
 <group>key=36
@@ -117,7 +118,7 @@ velocity was 127, but we actually need each sample to play at full volume at the
 velocity which is equal to its hivel value. This can be done in various ways,
 and the way we recommend is the [amp_velcurve_N] opcode, like this:
 
-```
+```sfz
 <global>loop_mode=one_shot
 
 <group>key=36
@@ -133,7 +134,7 @@ sound more natural - fast parts won't sound like a "machine gun". There are two
 basic ways to put round robins to use. One is to use the [seq_length]
 and [seq_position] opcodes, like this:
 
-```
+```sfz
 <global>loop_mode=one_shot
 
 <group>key=36 hivel=31 amp_velcurve_31=1 seq_length=4
@@ -171,7 +172,7 @@ way or the above sequential way, the answer is "it depends". It seems that more
 instruments use sequential, though. This is how random round robins would be
 set up for our kick drum samples:
 
-```
+```sfz
 <global>loop_mode=one_shot
 
 <group>key=36 hivel=31 amp_velcurve_31=1
@@ -199,7 +200,7 @@ set up for our kick drum samples:
 If we go back to sequential round robins and add a snare with only
 three round robins, plus a few comments, the resulting SFZ would look like this:
 
-```
+```sfz
 // This is an example of a basic drum kit mapping
 // All samples set to play in their entirety when a note is received
 
@@ -253,14 +254,14 @@ because well-sampled hi-hats will have many different articulations, and that
 creates some additional considerations, which we will describe on [another page].
 
 
-[another page]: cymbal_muting
-[‹global›]:          {{ '/headers/global' | relative_url }}
-[‹group›]:           {{ '/headers/group' | relative_url }}
-[amp_velcurve_N]:    {{ '/opcodes/amp_velcurve_N' | relative_url }}
-[key]:               {{ '/opcodes/key' | relative_url }}
-[loop_mode]:         {{ '/opcodes/loop_mode' | relative_url }}
-[lorand and hirand]: {{ '/opcodes/lorand' | relative_url }}
-[lovel and hivel]:   {{ '/opcodes/lovel' | relative_url }}
-[sample]:            {{ '/opcodes/sample' | relative_url }}
-[seq_length]:        {{ '/opcodes/seq_length' | relative_url }}
-[seq_position]:      {{ '/opcodes/seq_position' | relative_url }}
+[another page]:      cymbal_muting.md
+[‹global›]:          ../headers/global.md
+[‹group›]:           ../headers/group.md
+[amp_velcurve_N]:    ../opcodes/amp_velcurve_N.md
+[key]:               ../opcodes/key.md
+[loop_mode]:         ../opcodes/loop_mode.md
+[lorand and hirand]: ../opcodes/lorand.md
+[lovel and hivel]:   ../opcodes/lovel.md
+[sample]:            ../opcodes/sample.md
+[seq_length]:        ../opcodes/seq_length.md
+[seq_position]:      ../opcodes/seq_position.md

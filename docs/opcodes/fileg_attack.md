@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_attack"
 ---
 ## Examples
 
-```
+```sfz
 ampeg_attack=1.2
 fileg_attack=0.1
 ```

@@ -6,7 +6,7 @@ title: Modular SFZ Instruments
 
 SFZ is not a programming language, and has a structure based on a hierarchy of headers. There are no procedure or function calls which would allow the same block of code to be called from various places in an SFZ file. This can lead to a lot of repetition in large SFZ instruments. As a simple example, here's a polyphony switch in an instrument causing duplication of the sample map.
 
-```
+```sfz
 <group>
 hicc100=63
 <region>key=48 sample=c4.wav
@@ -44,7 +44,7 @@ off_by=1
 
 If we create an SFZ file called sample_map.sfz with the following content:
 
-```
+```sfz
 <region>key=48 sample=c4.wav
 <region>key=49 sample=db4.wav
 <region>key=50 sample=d4.wav
@@ -64,7 +64,7 @@ Then the sample map becomes a reusable module which can be "called" using
 an [#include] statement.
 The instrument can be decluttered to this:
 
-```
+```sfz
 <group>
 hicc100=63
 #include "sample_map.sfz"
@@ -86,7 +86,7 @@ the instrument file.
 So, if our above example instrument has the main SFZ file, called main.sfz, in a Programs folder under the instrument
 root, samples in a Samples folder under that, and the sample_map.sfz is in Programs/mappings, then main.sfz should contain:
 
-```
+```sfz
 <group>
 hicc100=63
 #include "mappings/sample_map.sfz"
@@ -100,7 +100,7 @@ off_by=1
 
 The sample_map.sfz file in mappings should have the following contents:
 
-```
+```sfz
 <region>key=48 sample=../Samples/c4.wav
 <region>key=49 sample=../Samples/db4.wav
 <region>key=50 sample=../Samples/d4.wav
@@ -131,7 +131,7 @@ In addition to sample maps, modulations can also be reused. For example, a commo
 for violin samples which need them, but left out for samples which don't, such as harmonics, percussive noises and legato
 transitions. Different dynamics controls for long vs. short bowed articulations are also candidates for such treatment.
 
-```
+```sfz
 <master>
 sw_last=34
 sw_label=Sustain
@@ -167,7 +167,7 @@ Putting each set of round robins inside its own file without defining [seq_posit
 inside that file can also be useful for emulating double-tracking.
 If the basic non-doubletracked instrument is set up like this:
 
-```
+```sfz
 <global>
 seq_length=4
 
@@ -187,7 +187,7 @@ seq_position=4
 
 It then becomes very simple to make a doubletracked instrument which uses differnt round robins in the left and right channels:
 
-```
+```sfz
 <global>
 seq_length=4
 
@@ -239,7 +239,7 @@ SFZ opcodes set under headers within an included file will be in effect until en
 higher level. For example, let's say a snare drum sample map contains one-shot samples under `<region>` headers and also
 multisampled hits under a `<group>` header later in the file, and this file is called snare_map.sfz.
 
-```
+```sfz
 <region>
 key=37
 sample=Sidestick.wav
@@ -268,7 +268,7 @@ sample=Center_rr4.wav
 
 If we want to put snare controls which apply to all those, this would work:
 
-```
+```sfz
 <master>
 amplitude_oncc100=100
 tune_oncc101=1200
@@ -278,7 +278,7 @@ tune_curvecc101=1
 
 This, however, would make the controls affect the sidesticks, off-center hits and rimshot, but not the center hits:
 
-```
+```sfz
 <group>
 amplitude_oncc100=100
 tune_oncc101=1200
@@ -298,7 +298,7 @@ in making instruments more modular.
 Define and include can be used together. For example, user-editable parameters, such as MIDI note assignments for drum kits
 and CC ranges, can also be placed in a separate file such as the below.
 
-```
+```sfz
 #define $KICKKEY 36
 #define $SIDESTICKKEY 37
 #define $SNAREKEY 38
@@ -320,7 +320,7 @@ play. There's a balance of when to use include statements and when to just copy 
 
 Multiple defined variables can be used in the same line.
 
-```
+```sfz
 #define $MIC_NAME Room
 #define $MIC_MIX_CC 32
 <control>
@@ -328,20 +328,20 @@ label_cc$MIC_MIX_CC=$MIC_NAME
 ```
 One thing to keep in mind is that each variable name should be unique. This is good:
 
-```
+```sfz
 #define $SNARE_KEY 38
 #define $SNARE_RIMSHOT_KEY 40
 ```
 
 This will fail in at least some SFZ players, because the complete name of one variable is also the start of another variable's name:
 
-```
+```sfz
 #define $SNARE 38
 #define $SNARE_RIMSHOT 40
 ```
 
 
-[header]:       {{ '/headers/' | relative_url }}
-[#define]:      {{ '/opcodes/define' | relative_url }}
-[#include]:     {{ '/opcodes/include' | relative_url }}
-[seq_position]: {{ '/opcodes/seq_position' | relative_url }}
+[header]:       ../headers/index.md
+[#define]:      ../opcodes/define.md
+[#include]:     ../opcodes/include.md
+[seq_position]: ../opcodes/seq_position.md

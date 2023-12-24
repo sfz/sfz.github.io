@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "delay_random"
 ---
 If the region receives a note-off message before delay time,
@@ -9,7 +9,7 @@ Similar to [delay] in general. Computed when the note is triggered.
 
 ## Examples
 
-```
+```sfz
 delay_random=1
 
 delay_random=0.2
@@ -20,5 +20,5 @@ delay_random=0.2
 In ARIA, Cakewalk and rcg sfz, this is unipolar.
 
 
-[delay]:     delay
-[loop_mode]: loop_mode
+[delay]:     delay.md
+[loop_mode]: loop_mode.md

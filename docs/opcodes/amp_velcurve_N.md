@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "amp_velcurve_N"
 ---
 This opcode range allows defining a specific point along the amplifier velocity curve.
@@ -8,7 +8,7 @@ for the specified velocity. N can be from 0 to 127.
 
 The player will interpolate lineraly between specified opcodes for unspecified ones:
 
-```
+```sfz
 amp_velcurve_1=0.2 amp_velcurve_3=0.3
 // amp_velcurve_2 is calculated to 0.25
 ```
@@ -22,7 +22,7 @@ so that low-velocity notes will still produce a fairly loud sound. This is simil
 (but probably not quite identical mathematically) to setting amp_veltrack to less
 than 100.
 
-```
+```sfz
 // linear, compressed dynamic range
 // amplitude changes from 0.5 to 1
 amp_velcurve_1=0.5
@@ -30,7 +30,7 @@ amp_velcurve_1=0.5
 
 It can also be used to set up a specific velocity response.
 
-```
+```sfz
 amp_velcurve_1=0.1
 amp_velcurve_63=0.25
 amp_velcurve_95=0.5
@@ -43,7 +43,7 @@ below the lovel or above the hivel for a particular region. So, in practice, thi
 ends up meaning just setting amp_velcurve_N=1 with N being equal to the hivel value for
 each layer.
 
-```
+```sfz
 <region>hivel=31 amp_velcurve_31=1 sample=kick_vl1.wav
 <region>lovel=32 hivel=63 amp_velcurve_63=1 sample=kick_vl2.wav
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav
@@ -53,7 +53,7 @@ each layer.
 This could also be combined with the first example so that velocity 1 hits will still
 be reasonably audible.
 
-```
+```sfz
 <region>hivel=31 amp_velcurve_1=0.3 amp_velcurve_31=1 sample=kick_vl1.wav
 <region>lovel=32 hivel=63 amp_velcurve_63=1 sample=kick_vl2.wav
 <region>lovel=64 hivel=95 amp_velcurve_95=1 sample=kick_vl3.wav

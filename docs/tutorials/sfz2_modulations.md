@@ -53,13 +53,13 @@ desired target.
 The available modulation targets for LFOs are These destinations are
 added as a suffix to 'lfoN_'. For example
 
-```
+```sfz
 lfo01_pitch=100
 ```
 
 makes LFO 01 affect pitch with a max depth of 100 cents.
 
-```
+```sfz
 lfo03_freq_lfo01_oncc117=1.3
 ```
 
@@ -150,7 +150,7 @@ Here is an example of how one LFO could be used to control both pitch vibrato
 and volume vibrato (tremolo) with the rate, pitch vibrato depth, tremolo
 depth, delay and fade each controlled by a separate MIDI CC parameter:
 
-```
+```sfz
 lfo01_pitch_oncc111=22 // Vibrato LFO
 lfo01_freq=2
 lfo01_freq_oncc113=7
@@ -163,7 +163,7 @@ lfo01_volume_oncc112=2
 And an LFO which does just pitch vibrato, and has a second LFO modulating its
 rate to create some unsteadiness:
 
-```
+```sfz
 lfo01_pitch_oncc111=22 // Vibrato LFO
 lfo01_freq=2
 lfo01_freq_oncc113=7
@@ -179,7 +179,7 @@ lfo02_freq_oncc116=0.9
 For randomized humanization, the extended MIDI CC 135 can be used to randomize the
 initial phase and speed of the second LFO.
 
-```
+```sfz
 lfo01_pitch_oncc111=22 // Vibrato LFO
 lfo01_freq=2
 lfo01_freq_oncc113=7
@@ -215,7 +215,7 @@ to create these envelopes are:
 Similarly to LFOs, envelopes have assignable modulation targets. These
 destinations are added as a suffix to ‘egN_’  - so, for example:
 
-```
+```sfz
 eg01_pitch=2400
 ```
 
@@ -276,7 +276,7 @@ Here is a simple pitch envelope which will start a note with a glide from up to 
 lower, with the depth and time modulated by MIDI CCs. The envelope will statt at a lower
 value at envelope point 0, and return the pitch to normal at envelope point 1.
 
-```
+```sfz
 eg01_sustain=1 //Pitch envelope setup for slides
 eg01_level0=1
 eg01_level1=0
@@ -300,7 +300,7 @@ to lower the pitch by the same amount as the vibrato depth. Using an envelope fo
 allows us to delay the onset of the vibrato (again, an important element of idiomatic
 saxophone vibrato) without a discontinuous jump in pitch.
 
-```
+```sfz
 lfo01_pitch_oncc111=20 //Saxy vibrato LFO - goes down from the main pitch
 lfo01_freq=2
 lfo01_freq_oncc112=8
@@ -324,7 +324,7 @@ the above using the SFZ1 pitch envelope, as it is sufficient in this case, with 
 LFO. Setting the initial phase and modulating the delay with MIDI CC would not be possible
 with the SFZ1 pitch LFO.
 
-```
+```sfz
 lfo01_pitch_oncc111=20 //Saxy vibrato LFO - goes down from the main pitch
 lfo01_freq=2
 lfo01_freq_oncc112=8
@@ -348,33 +348,33 @@ This is what's possible under the SFZ2 specification. There are some additional 
 available as [ARIA extensions], with [amplitude_onccN] being a very useful one.
 
 
-[specified by SFZ1]:   sfz1_modulations
-[modulations]:         {{ '/modulations/' | relative_url }}
-[smoothccN]:           {{ '/modulations/smoothccN' | relative_url }}
-[stepccN]:             {{ '/modulations/stepccN' | relative_url }}
-[ARIA extensions]:     {{ '/opcodes/?v=aria' | relative_url }}
-[amplitude_onccN]:     {{ '/opcodes/amplitude' | relative_url }}
-[bend_smooth]:         {{ '/opcodes/bend_smooth' | relative_url }}
-[bend_step]:           {{ '/opcodes/bend_step' | relative_url }}
-[egN_points]:          {{ '/opcodes/egN_points' | relative_url }}
-[egN_levelX]:          {{ '/opcodes/egN_levelX' | relative_url }}
-[egN_levelX_onccY]:    {{ '/opcodes/egN_levelX' | relative_url }}
-[egN_timeX]:           {{ '/opcodes/egN_timeX' | relative_url }}
-[egN_timeX_onccY]:     {{ '/opcodes/egN_timeX' | relative_url }}
-[egN_shapeX]:          {{ '/opcodes/egN_shapeX' | relative_url }}
-[egN_curveX]:          {{ '/opcodes/egN_curveX' | relative_url }}
-[egN_sustain]:         {{ '/opcodes/egN_sustain' | relative_url }}
-[egN_loop]:            {{ '/opcodes/egN_loop' | relative_url }}
-[lfoN_wave]:           {{ '/opcodes/lfoN_wave' | relative_url }}
-[lfoN_freq]:           {{ '/opcodes/lfoN_freq' | relative_url }}
-[lfoN_freq_onccX]:     {{ '/opcodes/lfoN_freq' | relative_url }}
-[lfoN_freq_smoothccX]: {{ '/opcodes/lfoN_freq_smoothccX' | relative_url }}
-[lfoN_freq_stepccX]:   {{ '/opcodes/lfoN_freq_stepccX' | relative_url }}
-[lfoN_delay]:          {{ '/opcodes/lfoN_delay' | relative_url }}
-[lfoN_delay_onccX]:    {{ '/opcodes/lfoN_delay' | relative_url }}
-[lfoN_fade]:           {{ '/opcodes/lfoN_fade' | relative_url }}
-[lfoN_fade_onccX]:     {{ '/opcodes/lfoN_fade' | relative_url }}
-[lfoN_phase]:          {{ '/opcodes/lfoN_phase' | relative_url }}
-[lfoN_phase_onccX]:    {{ '/opcodes/lfoN_phase' | relative_url }}
-[lfoN_count]:          {{ '/opcodes/lfoN_count' | relative_url }}
-[stereo width]:        {{ '/opcodes/width_onccN' | relative_url }}
+[specified by SFZ1]:   sfz1_modulations.md
+[modulations]:         ../modulations/index.md
+[smoothccN]:           ../modulations/smoothccN.md
+[stepccN]:             ../modulations/stepccN.md
+[ARIA extensions]:     ../opcodes/index.md?v=aria
+[amplitude_onccN]:     ../opcodes/amplitude.md
+[bend_smooth]:         ../opcodes/bend_smooth.md
+[bend_step]:           ../opcodes/bend_step.md
+[egN_points]:          ../opcodes/egN_points.md
+[egN_levelX]:          ../opcodes/egN_levelX.md
+[egN_levelX_onccY]:    ../opcodes/egN_levelX.md
+[egN_timeX]:           ../opcodes/egN_timeX.md
+[egN_timeX_onccY]:     ../opcodes/egN_timeX.md
+[egN_shapeX]:          ../opcodes/egN_shapeX.md
+[egN_curveX]:          ../opcodes/egN_curveX.md
+[egN_sustain]:         ../opcodes/egN_sustain.md
+[egN_loop]:            ../opcodes/egN_loop.md
+[lfoN_wave]:           ../opcodes/lfoN_wave.md
+[lfoN_freq]:           ../opcodes/lfoN_freq.md
+[lfoN_freq_onccX]:     ../opcodes/lfoN_freq.md
+[lfoN_freq_smoothccX]: ../opcodes/lfoN_freq_smoothccX.md
+[lfoN_freq_stepccX]:   ../opcodes/lfoN_freq_stepccX.md
+[lfoN_delay]:          ../opcodes/lfoN_delay.md
+[lfoN_delay_onccX]:    ../opcodes/lfoN_delay.md
+[lfoN_fade]:           ../opcodes/lfoN_fade.md
+[lfoN_fade_onccX]:     ../opcodes/lfoN_fade.md
+[lfoN_phase]:          ../opcodes/lfoN_phase.md
+[lfoN_phase_onccX]:    ../opcodes/lfoN_phase.md
+[lfoN_count]:          ../opcodes/lfoN_count.md
+[stereo width]:        ../opcodes/width_onccN.md

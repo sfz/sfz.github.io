@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "effect4"
 ---
 
@@ -13,7 +13,7 @@ The below example should work in Cakewalk Rapture.
 
 ## Example
 
-```
+```sfz
 <group>
 sample=../samples/soundfx.wav
 ...
@@ -29,11 +29,11 @@ bus=fx4
 ```
 
 
-[‹effect›]: {{ '/headers/effect' | relative_url }}
-[‹region›]: {{ '/headers/region' | relative_url }}
-[effect1]:  effect1
-[effect2]:  effect2
-[effect3]:  effect3
-[effect4]:  effect4
-[SFZ v1]:   ./?v=1
-[SFZ v2]:   ./?v=2
+[‹effect›]: ../headers/effect.md
+[‹region›]: ../headers/region.md
+[effect1]:  effect1.md
+[effect2]:  effect2.md
+[effect3]:  effect3.md
+[effect4]:  effect4.md
+[SFZ v1]:   index.md/?v=1
+[SFZ v2]:   index.md/?v=2

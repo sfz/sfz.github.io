@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "width"
 ---
 A `width` value of 0 makes a stereo sample play as if it were mono (adding both
@@ -18,7 +18,7 @@ width.  For example, for a mono signal panned 6dB to the left, a value of
 
 ## Examples
 
-```
+```sfz
 width=100 // stereo
 width=0   // play this stereo sample as mono
 width=50  // mix 50% of one channel with the other

@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "region_label"
 ---
 Useful for debugging. In order to work properly, generally needs to be set under
@@ -8,7 +8,7 @@ If not set, the info tab will display the file path of the most recently played 
 
 ## Example
 
-```
+```sfz
 <region> sample=china2_30_01.flac seq_position=1 region_label=30 one
 // ...
 <region> sample=china2_30_09.flac seq_position=9 region_label=30 nine
@@ -22,4 +22,4 @@ If not set, the info tab will display the file path of the most recently played 
 />
 
 
-[‹region›]: ./../headers/region
+[‹region›]: ../headers/region.md

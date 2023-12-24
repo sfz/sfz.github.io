@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_release_zero"
 ---
 When 1, indicates release time is the time it would take to get
@@ -10,7 +10,7 @@ setting this to 1 makes the release slope fixed but time will be shorter
 when sustain level is lower.
 ## Examples
 
-```
+```sfz
 fileg_release_zero=1
 fileg_release_zero=0
 ```

@@ -93,18 +93,18 @@ Some more advanced topics
 	drum techniques which produce a continuous sound rather than a hit.
 
 
-[ARIA / Sforzando]:      /opcodes/?v=aria
-[basic SFZ file]:        /tutorials/basic_sfz_file
-[Brush stirs]:           /tutorials/brush_stirs
-[Cymbal muting]:         /tutorials/cymbal_muting
-[Drum basics]:           /tutorials/drum_basics
-[list of SFZ 1 opcodes]: /opcodes/?v=1
-[list of SFZ headers]:   /headers
-[SFZ creation tools]:    /software/tools
-[Samples]:               /opcodes/sample
-[SFZ file]:              /tutorials/basic_sfz_file
-[SFZ player]:            /software/players
-[starting here]:         /opcodes/?v=2
-[Sustained note basics]: /tutorials/sustained_note_basics
-[Legato]:                /tutorials/legato
-[Vibrato]:               /tutorials/vibrato
+[list of SFZ headers]:   headers/index.md
+[list of SFZ 1 opcodes]: opcodes/index.md?v=1
+[starting here]:         opcodes/index.md?v=2
+[ARIA / Sforzando]:      opcodes/index.md?v=aria
+[Samples]:               opcodes/sample.md
+[SFZ player]:            software/players.md
+[SFZ creation tools]:    software/tools.md
+[basic SFZ file]:        tutorials/basic_sfz_file.md
+[SFZ file]:              tutorials/basic_sfz_file.md
+[Brush stirs]:           tutorials/brush_stirs.md
+[Cymbal muting]:         tutorials/cymbal_muting.md
+[Drum basics]:           tutorials/drum_basics.md
+[Legato]:                tutorials/legato.md
+[Sustained note basics]: tutorials/sustained_note_basics.md
+[Vibrato]:               tutorials/vibrato.md

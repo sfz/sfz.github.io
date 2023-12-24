@@ -26,4 +26,4 @@ For a detailed overview of how DAWs handle instananeous jumps in automation, see
 <https://www.admiralbumblebee.com/music/2019/06/22/Daw-V-Daw-Automation-Part-4.html>.
 
 
-[bend_smooth]: {{ '/opcodes/bend_smooth' | relative_url }}
+[bend_smooth]: ../opcodes/bend_smooth.md

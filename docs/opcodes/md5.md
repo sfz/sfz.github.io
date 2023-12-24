@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "md5"
 ---
 It may be used to verify the integrity of the sample file,
@@ -7,7 +7,7 @@ or to locate renamed files by content.
 
 ## Example
 
-```
+```sfz
 /*
   University of Iowa Music Instrument Samples - Piano
   http://theremin.music.uiowa.edu/MISpiano.html

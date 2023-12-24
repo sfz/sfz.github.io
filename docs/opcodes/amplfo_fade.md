@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "amplfo_fade"
 ---
 ## Examples
 
-```
+```sfz
 amplfo_fade=1
 pitchlfo_fade=0.4
 ```

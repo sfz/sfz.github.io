@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "rt_decay"
 ---
 ## Example
 
-```
+```sfz
 <region> sample=pianoA4.wav trigger=attack
 
 <region> sample=keyup_noise.wav trigger=release rt_decay=3
@@ -31,3 +31,6 @@ undesired results in arpeggios.
 The ARIA extension [rt_decayN] does not allow different release samples to be selected,
 but it does allow different values of the volume decrease rate to be used for different
 time ranges. Unlike CC 151, this is not affected by subsequently played notes.
+
+
+[rt_decayN]: rt_decayN.md

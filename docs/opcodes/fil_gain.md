@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fil_gain"
 title: "fil_gain / fil2_gain"
 ---
@@ -16,7 +16,7 @@ and uses the [eqN_type] opcode.
 
 ## Examples
 
-```
+```sfz
 fil_type=lsh
 cutoff=150
 fil_gain=-6
@@ -26,4 +26,4 @@ fil2_gain=3
 ```
 
 
-[eqN_type]: eqN_type
+[eqN_type]: eqN_type.md

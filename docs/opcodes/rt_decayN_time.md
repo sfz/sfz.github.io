@@ -1,11 +1,11 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "rt_decayN"
 ---
 
 ## Example
 
-```
+```sfz
 <region> sample=pianoA4.wav trigger=attack
 
 <region> sample=keyup_noise.wav trigger=release

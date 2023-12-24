@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "xfout_lovel / xfout_hivel"
 ---
 `xfout_lokey` and `xfout_hikey` define the fade-out velocity range for the region.
@@ -10,6 +10,6 @@ greater than or equal to `xfout_hivel`.
 
 ## Example
 
-```
+```sfz
 xfout_lovel=32 xfout_hivel=63
 ```

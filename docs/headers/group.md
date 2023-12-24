@@ -1,6 +1,6 @@
 ---
-title:  "‹group›"
-layout: "sfz/header"
+title: "‹group›"
+template: "sfz/header.j2"
 ---
 The group header is different than the [group] opcode, and
 it's important to avoid confusing the two. ARIA adds the [polyphony_group]
@@ -10,7 +10,7 @@ Groups allow entering common parameters for multiple regions. A group is defined
 with the `‹group›` opcode, and the parameters enumerated on it last till the next
 group opcode, or till the end of the file.
 
-```
+```sfz
 <group>
 ampeg_attack=0.04 ampeg_release=0.45
 <region> sample=trumpet_pp_c4.wav key=c4
@@ -29,7 +29,7 @@ setting overrides the group setting and is used. If an opcode is defined under
 the global level and group level but not region, the group setting overrides
 the global setting. For example:
 
-```
+```sfz
 <group>
 ampeg_attack=0.04 ampeg_release=0.45
 <region> sample=trumpet_pp_c4.wav key=c4
@@ -42,5 +42,5 @@ With the above code, C#4 would use an attack time of 0.05 seconds,
 while C4, D4 and D#4 would use the 0.04 seconds set at the group level.
 
 
-[group]:           {{ '/opcodes/group' | relative_url }}
-[polyphony_group]: {{ '/opcodes/polyphony_group' | relative_url }}
+[group]:           ../opcodes/group.md
+[polyphony_group]: ../opcodes/polyphony_group.md

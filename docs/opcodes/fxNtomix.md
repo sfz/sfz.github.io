@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fxNtomix"
 ---
 Global, can be set under any [‹effect›] header for identical

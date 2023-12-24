@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fillfo_depth"
 ---
 ## Examples
 
-```
+```sfz
 amplfo_depth=1
 pitchlfo_depth=40
 ```

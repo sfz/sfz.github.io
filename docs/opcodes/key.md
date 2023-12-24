@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "key"
 ---
 Because of this, it is a very useful and convenient opcode for instruments which
@@ -13,15 +13,15 @@ behave the same in all DAWs.
 
 These two conventions will yield the same key mapping:
 
-```
+```sfz
 key=72
-or
+// or
 key=c5
 ```
 
 Both are also equivalent to:
 
-```
+```sfz
 lokey=72 hikey=72 pitch_keycenter=72
 ```
 
@@ -32,22 +32,22 @@ However, in some other players, setting pitch_keycenter to a different value tha
 is only effective if key is set first and pitch_keycenter second. Therefore, for
 compatibility, it is best to set key first, and pitch_keycenter later.
 
-```
+```sfz
 key=72 lokey=70
 ```
 
 Will be equivalent to
 
-```
+```sfz
 lokey=70 hikey=72 pitch_keycenter=72
 ```
 
 However, this would just be the same as setting key=72, as key comes later and
 the lokey value it would set will override the previous lokey.
 
-```
+```sfz
 lokey=70 key=72
 ```
 
 
-[pitch_keycenter]: pitch_keycenter
+[pitch_keycenter]: pitch_keycenter.md

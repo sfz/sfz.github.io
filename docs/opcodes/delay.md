@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "delay"
 ---
 If a `delay` value is specified, the region playback will be postponed for the
@@ -12,7 +12,7 @@ after region delay time - this is the core difference between this and
 
 ## Examples
 
-```
+```sfz
 delay=1
 
 delay=0.2
@@ -27,6 +27,6 @@ In ARIA, if [loop_mode] is set to **one_shot**, the region will play regardless
 of whether a note-off message is received or not.
 
 
-[ampeg_delay]: ampeg_delay
-[loop_mode]:   loop_mode
+[ampeg_delay]: ampeg_delay.md
+[loop_mode]:   loop_mode.md
 

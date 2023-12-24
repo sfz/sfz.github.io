@@ -1,9 +1,10 @@
 ---
-title:  "‹sample›"
-layout: "sfz/header"
+title: "‹sample›"
+template: "sfz/header.j2"
 ---
 ## Example
-```
+
+```sfz
 <region> sample=mysample.wav
 <sample> name=mysample.wav data=[encoded-content-of-mysample.wav]
 ```
@@ -58,4 +59,4 @@ The alphabet used for the coding is as following:
 {: .table .table-sm .table-bordered .table-striped }
 
 
-[This C source file]: {{ '/assets/src/makesample.c' | relative_url }}
+[This C source file]: ../assets/src/makesample.c

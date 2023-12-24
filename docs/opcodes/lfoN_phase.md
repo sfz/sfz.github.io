@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "lfoN_phase"
 ---
 ## Example
 
-```
+```sfz
 lfo02_phase=0.5
 lfo01_phase=0.25
 ```

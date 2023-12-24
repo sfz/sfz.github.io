@@ -1,12 +1,12 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "loccN / hiccN"
 ---
 N will normally be a number from 1 to 127.
 
 ## Examples
 
-```
+```sfz
 locc74=30 hicc74=100
 ```
 
@@ -21,7 +21,7 @@ to the same MIDI note, and hicc/locc used to define the ranges for which each
 degree of openness should play. A simpler example would be switching between
 sine, saw and noise waveforms:
 
-```
+```sfz
 <region>hicc1=63 sample=*sine
 <region>locc1=64 hicc=126 sample=*saw
 <region>locc1=127 sample=*noise
@@ -35,6 +35,6 @@ and [xfout_loccN / xfout_hiccN] should be used, or perhaps
 the [amplitude_onccN] ARIA extension.
 
 
-[amplitude_onccN]:           amplitude
-[xfin_loccN / xfin_hiccN]:   xfin_loccN
-[xfout_loccN / xfout_hiccN]: xfout_loccN
+[amplitude_onccN]:           amplitude.md
+[xfin_loccN / xfin_hiccN]:   xfin_loccN.md
+[xfout_loccN / xfout_hiccN]: xfout_loccN.md

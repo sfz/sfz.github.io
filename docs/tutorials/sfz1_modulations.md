@@ -14,7 +14,7 @@ to what the opcode would normally do. These are: [offset] and [delay].
 For example, this would have a sample offset of 500 when the modulating CC is
 at 0, and a sample offset of 1000 when the modulating CC is at max:
 
-```
+```sfz
 offset=500
 offset_cc100=500
 ```
@@ -24,7 +24,7 @@ default value is what will be modulated. The defaults for offset, delay and
 EQ band gain are 0, so this would result in the offset being modulated between
 0 and 1000:
 
-```
+```sfz
 offset_cc100=1000
 ```
 
@@ -36,7 +36,7 @@ non-zero defaults,
 for example eq2_freq is 500 if not specified. So, this would modulate the center
 frequency of the second EQ band between 500 and 1500 if eq2_freq is left at default:
 
-```
+```sfz
 eq2_freqcc110=1000
 ```
 
@@ -46,7 +46,7 @@ EQ [frequency][3] and [gain][4] (but not bandwidth) can additionally be modulate
 For example, if we want to make a sound brighter when the velocity is higher,
 we might use something like this:
 
-```
+```sfz
 eq1_vel2gain=-6
 eq2_vel2gain=12
 eq2_vel2freq=500
@@ -55,7 +55,7 @@ eq2_vel2freq=500
 The [xfin]/[xfout] CCs are also a way to fade sounds in and out using MIDI CC.
 An example of one note with two dynamic layers being crossfaded:
 
-```
+```sfz
 <region>sample=e4_ft_p.wav xfin_locc1=0 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=127
 <region>sample=e4_ft_f.wav xfin_locc1=64 xfin_hicc1=127
 ```
@@ -72,7 +72,7 @@ velocity. The nomenclature for volume is a little confusing, with [gain_ccN] usi
 "gain" in the name, while the others are called [amp_random],
 [amp_keytrack] and [amp_veltrack].
 
-```
+```sfz
 gain_cc80=-6
 amp_random=3
 amp_keytrack=-1.3
@@ -81,13 +81,13 @@ amp_veltrack=80
 
 ## LFOs and envelopes
 
-Volume, filter and cutoff also each get an [LFO](/modulations/lfo#sfz-1-lfos) and an
-[envelope](/modulations/envelope_generators#sfz-1-egs). The LFO rate and
-depth can be modulated by MIDI CC. Each LFO also has a simple envelope with
-delay and fade, but modulating the duration of these is not allowed under the
-SFZ1 spec (though it is with SFZ2 LFOs). Here's a typical pitch vibrato LFO:
+Volume, filter and cutoff also each get an [LFO] and an [envelope].
+The LFO rate and depth can be modulated by MIDI CC.
+Each LFO also has a simple envelope with delay and fade,
+but modulating the duration of these is not allowed under the SFZ1 spec
+(though it is with SFZ2 LFOs). Here's a typical pitch vibrato LFO:
 
-```
+```sfz
 pitchlfo_freq=2
 pitchlfo_freqcc50=10
 pitchlfo_depthcc51=33
@@ -98,7 +98,7 @@ exmple setup for a synth-style ADSR volume envelope (hold is not specified so th
 default hold value of 0 is used) controlled by CCs and some initial
 minimum values set for attack and release, along with a default sustain of 0:
 
-```
+```sfz
 ampeg_attack=0.001
 ampeg_attack_oncc40=1
 ampeg_decay_oncc41=4
@@ -111,7 +111,7 @@ ampeg_release_oncc43=0.9
 Modulating envelope parameters with velocity allows, for example, setting up a filter
 on an acid bass which will sweep farther with higher velocity, and also sweep faster.
 
-```
+```sfz
 cutoff=120
 resonance=12
 fileg_attack=0.5
@@ -126,22 +126,24 @@ If something is not described above, then modulating it is not possible under th
 SFZ1 specification, and will require [using SFZ2] or possibly some extension opcodes.
 
 
-[using SFZ2]:    sfz2_modulations
-[modulations]:   {{ '/modulations/' | relative_url }}
-[amp_keytrack]:  {{ '/opcodes/amp_keytrack' | relative_url }}
-[amp_random]:    {{ '/opcodes/amp_random' | relative_url }}
-[amp_veltrack]:  {{ '/opcodes/amp_veltrack' | relative_url }}
-[bandwidth]:     {{ '/opcodes/eqN_bw' | relative_url }}
-[delay]:         {{ '/opcodes/delay' | relative_url }}
-[filter cutoff]: {{ '/opcodes/cutoff' | relative_url }}
-[gain_ccN]:      {{ '/opcodes/volume' | relative_url }}
-[offset]:        {{ '/opcodes/offset' | relative_url }}
-[xf_cccurve]:    {{ '/opcodes/xf_cccurve' | relative_url }}
-[xf_keycurve]:   {{ '/opcodes/xf_keycurve' | relative_url }}
-[xf_velcurve]:   {{ '/opcodes/xf_velcurve' | relative_url }}
-[xfin]:          {{ '/opcodes/xfin_loccN' | relative_url }}
-[xfout]:         {{ '/opcodes/xfout_loccN' | relative_url }}
-[1]:             {{ '/opcodes/eqN_freq' | relative_url }}
-[2]:             {{ '/opcodes/eqN_gain' | relative_url }}
-[3]:             {{ '/opcodes/eqN_vel2freq' | relative_url }}
-[4]:             {{ '/opcodes/eqN_vel2gain' | relative_url }}
+[using SFZ2]:    sfz2_modulations.md
+[modulations]:   ../modulations/index.md
+[envelope]:      ../modulations/envelope_generators.md#sfz-1-egs
+[LFO]:           ../modulations/lfo.md#sfz-1-lfos
+[amp_keytrack]:  ../opcodes/amp_keytrack.md
+[amp_random]:    ../opcodes/amp_random.md
+[amp_veltrack]:  ../opcodes/amp_veltrack.md
+[bandwidth]:     ../opcodes/eqN_bw.md
+[delay]:         ../opcodes/delay.md
+[filter cutoff]: ../opcodes/cutoff.md
+[gain_ccN]:      ../opcodes/volume.md
+[offset]:        ../opcodes/offset.md
+[xf_cccurve]:    ../opcodes/xf_cccurve.md
+[xf_keycurve]:   ../opcodes/xf_keycurve.md
+[xf_velcurve]:   ../opcodes/xf_velcurve.md
+[xfin]:          ../opcodes/xfin_loccN.md
+[xfout]:         ../opcodes/xfout_loccN.md
+[1]:             ../opcodes/eqN_freq.md
+[2]:             ../opcodes/eqN_gain.md
+[3]:             ../opcodes/eqN_vel2freq.md
+[4]:             ../opcodes/eqN_vel2gain.md

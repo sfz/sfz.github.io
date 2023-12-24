@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lobend / hibend"
 ---
 The region will play only if last Pitch Bend message received was in the
@@ -7,6 +7,6 @@ The region will play only if last Pitch Bend message received was in the
 
 ## Examples
 
-```
+```sfz
 lobend=0 hibend=4000
 ```

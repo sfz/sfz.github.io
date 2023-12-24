@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sw_vel"
 ---
 Values can be:
@@ -9,7 +9,7 @@ Values can be:
 
 ## Example
 
-```
+```sfz
 sw_vel=previous
 ```
 

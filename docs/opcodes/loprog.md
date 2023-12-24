@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "loprog / hiprog"
 ---
 MIDI program numbers in the General MIDI spec ranged from 0 to 127 but were
@@ -9,7 +9,7 @@ loprog higher than 0 without sending program change messages results in no sound
 
 ## Examples
 
-```
+```sfz
 loprog=0 hiprog=0
 loprog=1 hiprog=1
 loprog=10 hiprog=12

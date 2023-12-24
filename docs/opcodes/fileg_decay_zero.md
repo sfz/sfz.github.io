@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_decay_zero"
 ---
 When set to 1, the decay slope is fixed, and the higher
@@ -14,11 +14,11 @@ time period specified by `fileg_decay`, regardless of the current
 
 ## Examples
 
-```
+```sfz
 fileg_decay_zero=0
 fileg_decay_zero=1
 ```
 
 
-[fileg_decay]:   fileg_decay
-[fileg_sustain]: fileg_sustain
+[fileg_decay]:   fileg_decay.md
+[fileg_sustain]: fileg_sustain.md

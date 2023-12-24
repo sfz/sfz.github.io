@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "delay_samples"
 ---
 
@@ -8,4 +8,4 @@ If the region receives a note-off message before delay time, the region won’t 
 Similar to [delay], but measured in samples rather than seconds.
 
 
-[delay]: delay
+[delay]: delay.md

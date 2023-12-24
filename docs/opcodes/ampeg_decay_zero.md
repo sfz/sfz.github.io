@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "ampeg_decay_zero"
 ---
 When 1, indicates decay time is the time it would take to get from 0dBs to -oo,
@@ -18,11 +18,11 @@ time period specified by `ampeg_decay`, regardless of the current
 
 ## Examples
 
-```
+```sfz
 ampeg_decay_zero=0
 ampeg_decay_zero=1
 ```
 
 
-[ampeg_decay]:   ampeg_decay
-[ampeg_sustain]: ampeg_sustain
+[ampeg_decay]:   ampeg_decay.md
+[ampeg_sustain]: ampeg_sustain.md

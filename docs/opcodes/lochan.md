@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 title: "lochan / hichan"
 ---
  `lochan` and `hichan` will almost always be used together.
@@ -10,7 +10,7 @@ proper number.
 
 ## Examples
 
-```
+```sfz
 lochan=1 hichan=7
 
 lochan=2 hichan=2

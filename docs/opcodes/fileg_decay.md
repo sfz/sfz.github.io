@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_decay"
 ---
 ## Examples
 
-```
+```sfz
 ampeg_decay=1.5
 fileg_decay=0.5
 ```

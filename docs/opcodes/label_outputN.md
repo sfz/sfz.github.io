@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "label_outputN"
 ---
 Used under the ‹[control]› header.
@@ -22,4 +22,4 @@ output=1
 ```
 
 
-[control]: {{ '/headers/control' | relative_url }}
+[control]: ../headers/control.md

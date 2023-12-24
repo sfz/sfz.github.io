@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sample_fadeout"
 ---
 The fadeout end coincides with playback end.
@@ -8,7 +8,7 @@ The fadeout end coincides with playback end.
 
 ## Example
 
-```
+```sfz
 <region>
 sample=4_seconds_c3.wav
 loop_mode=no_loop

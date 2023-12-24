@@ -1,5 +1,5 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "sample_quality"
 ---
 Defines the interpolation algorithm used for samples.

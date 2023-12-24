@@ -1,10 +1,10 @@
 ---
-layout: "sfz/opcode"
+template: "sfz/opcode.j2"
 opcode_name: "fileg_release"
 ---
 ## Examples
 
-```
+```sfz
 ampeg_release=1.34
 fileg_release=0.2
 ```
@@ -16,5 +16,5 @@ even if amplifier envelopes are not used otherwise to shape the sound.
 Also, `ampeg_release` is used when [off_mode] is set to normal.
 
 
-[loop_mode]: loop_mode
-[off_mode]:  off_mode
+[loop_mode]: loop_mode.md
+[off_mode]:  off_mode.md
