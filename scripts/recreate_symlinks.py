@@ -38,7 +38,7 @@ def process(data):
 			process(v)
 
 def process_data():
-	with open('_data/sfz/syntax.yml') as f:
+	with open('data/sfz/syntax.yml') as f:
 		data = yaml.load(f, Loader=yaml.FullLoader)
 		process(data)
 
@@ -62,7 +62,7 @@ def recreate_symlinks():
 	main_list = list(opcodes)
 	main_list.append("index")
 	[main_pages.add(o + ".md") for o in main_list]
-	os.chdir("opcodes")
+	os.chdir("docs/opcodes")
 
 	for f in os.listdir('.'):
 		if f not in main_pages or os.path.islink(f):
@@ -78,6 +78,7 @@ def recreate_symlinks():
 	[os.symlink('%s.md' % (dst), '%s.md' % (src)) for src, dst in mods_vl]
 	os.symlink('../headers/curve.md', 'curve_index.md')
 	os.symlink('../headers/curve.md', 'vN.md')
+	os.symlink('../headers/curve.md', 'vNNN.md')
 	os.symlink('sw_down.md', 'sw_up.md')
 	os.symlink('sw_default.md', 'sw_label.md')
 
