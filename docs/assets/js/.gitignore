@@ -1,0 +1,5 @@
+*
+!.gitignore
+!amp_velcurve_N_gen.js
+!color-modes.js
+!opcodes_table_filters.js
