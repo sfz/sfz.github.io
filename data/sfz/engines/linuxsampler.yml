@@ -1,0 +1,38 @@
+name: "LinuxSampler"
+license: "Custom"
+url: "https://linuxsampler.org/sfz/"
+versions: ["ARIA", "SFZ v1", "SFZ v2"]
+
+os:
+- name: "Linux"
+- name: "macOS"
+- name: "Windows"
+
+opcodes:
+- name: "script"
+# TODO
+
+fil_types:
+- name: "lpf_1p"
+- name: "hpf_1p"
+- name: "lpf_2p"
+- name: "hpf_2p"
+- name: "bpf_2p"
+- name: "brf_2p"
+# name: "bpf_1p"
+# name: "brf_1p"
+# name: "apf_1p"
+# name: "lpf_2p_sv"
+# name: "hpf_2p_sv"
+# name: "bpf_2p_sv"
+# name: "brf_2p_sv"
+# name: "pkf_2p"
+- name: "lpf_4p"
+- name: "hpf_4p"
+- name: "lpf_6p"
+- name: "hpf_6p"
+# name: "comb"
+# name: "pink"
+# name: "lsh"
+# name: "hsh"
+# name: "peq"

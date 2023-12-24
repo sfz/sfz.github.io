@@ -1,0 +1,58 @@
+- label: "Follow us"
+  icon_type: "eye"
+  icon_category: "fa"
+  links:
+  - label: "Discord Chat"
+    url: "https://discord.gg/t7nrZ6d"
+    icon_type: "discord"
+    icon_category: "fab"
+
+  - label: "IRC"
+    title: "Internet Relay Chat"
+    url: "https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+    icon_type: "hashtag"
+    icon_category: "fa"
+
+  - label: "GitHub Organization"
+    url: "https://github.com/sfzformat/"
+    icon_type: "github"
+    icon_category: "fab"
+
+  - label: "News Atom Feed"
+    url: "/atom.xml"
+    icon_type: "rss"
+    icon_category: "fa"
+
+- label: "Quick links"
+  icon_type: "link"
+  icon_category: "fa"
+  links:
+  - label: "Old rgc:audio SFZ page"
+    url: "/legacy"
+    icon_type: "book"
+    icon_category: "fa"
+
+  - label: "Peter L. Jones' SFZ page"
+    url: "http://www.drealm.info/sfz/"
+    icon_type: "book"
+    icon_category: "fa"
+
+  - label: "KVR Forum SFZ post"
+    url: "https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+    icon_type: "users"
+    icon_category: "fa"
+
+  - label: "Plogue Forum"
+    url: "https://www.plogue.com/plgfrms/viewforum.php?f=14"
+    icon_type: "users"
+    icon_category: "fa"
+
+  - label: "rgc:audio SFZ test suite"
+    url: "https://github.com/sfz/tests/"
+    icon_type: "download"
+    icon_category: "fa"
+
+  - label: "Opcode suggestions"
+    url: "https://github.com/sfz/opcode-suggestions/"
+    icon_type: "lightbulb"
+    icon_category: "fa"

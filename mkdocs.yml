@@ -1,0 +1,103 @@
+docs_dir:         "docs"
+site_name:        "SFZ Format"
+site_author:      "Karoryfer Samples and SFZ Format Team"
+site_url:         "https://sfzformat.github.io"
+site_description: "SFZ File Format Documentation Website"
+site_dir:         "_site"
+repo_name:        "GitHub"
+repo_url:         "https://github.com/sfzformat/sfzformat.github.io"
+edit_uri:         "edit/source/docs/"
+remote_branch:    "www"
+extra:
+  site_since: 2018 #-03-18
+  site_web_author: "redtide and SFZ Format Team"
+  show_logo: true
+  show_name: false
+  repo_owner_url: "https://github.com/sfzformat"
+  repo_branch:    "source"
+  db:
+    layout:
+      cards: "data/layout/cards.yml"
+      nav:   "data/layout/navigation.yml"
+    sfz:
+      engines:  "data/sfz/engines.yml"
+      formats:  "data/sfz/formats.yml"
+      see_also: "data/sfz/see_also.yml"
+      software: "data/sfz/software.yml"
+      syntax:   "data/sfz/syntax.yml"
+extra_css:
+- "assets/css/fontawesome.min.css"
+- "assets/css/brands.min.css"
+- "assets/css/solid.min.css"
+- "assets/css/v4-font-face.min.css"
+- "assets/css/bootstrap-table.min.css"
+extra_javascript:
+- "assets/js/index.bundle.min.js"
+- "assets/js/bootstrap-table.min.js"
+- "assets/js/mermaid.min.js"
+hooks:
+- "scripts/hooks/extensions.py"
+- "scripts/hooks/fs.py"
+- "scripts/hooks/sfz.py"
+markdown_extensions:
+- pymdownx.emoji:
+    emoji_generator: !!python/name:pymdownx.emoji.to_png
+    alt: "short"
+    options:
+      attributes:
+        align:  "absmiddle"
+        height: "20px"
+        width:  "20px"
+plugins:
+  search: {}
+  blogging:
+    dirs:
+    - "news/posts"
+    locale: "en"
+    full_content: true
+    paging: true
+    show_total: false
+    size: 5
+    template: "layout/blogging-plugin.html"
+    meta_time_format: "%Y-%m-%dT%H:%M:%S%z"
+    time_format: "%Y-%m-%d %H:%M:%S"
+  exclude: # TODO: to remove when 1.5 comes out
+    glob:
+    - "docs/templates"
+    - "*.j2"
+  gen-files:
+    scripts:
+    - scripts/generators/atom_feed.py
+  macros:
+    include_yaml:
+    # TODO: data for both documentation and layout/theme?
+    - macros_sfz_engines:  "data/sfz/engines.yml"
+    - macros_sfz_formats:  "data/sfz/formats.yml"
+    - macros_sfz_syntax:   "data/sfz/syntax.yml"
+    - macros_sfz_software: "data/sfz/software.yml"
+  # include_dir:         "macros/includes"
+    include_dir:         "layout"
+  # module_name:         "macros/module"
+    verbose: true
+theme:
+  name:        null
+  custom_dir: "layout"
+  highlightjs: true
+  hljs_light: "github"
+  hljs_dark:  "github-dark-dimmed"
+  nav_style:  "dark"
+  locale:     "en"
+  bootstrap_version: "5.3.0"
+  favicons:
+    apple_touch_icon_size: "152x152"
+    msapp_tilecolor: "#da532c"
+    theme_color: "#ffffff"
+  shortcuts:
+    help:     191 # ?
+    next:      78 # n
+    previous:  80 # p
+    search:    70 # f
+watch:
+- "data"
+- "docs"
+- "layout"

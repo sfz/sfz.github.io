@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html
+	lang="{{ config.theme.locale|default('en') }}"
+	data-bs-theme="auto"
+>
+	<head>
+	{%-block meta %}
+		<meta charset="utf-8">
+		{%-if config.site_author %}
+		<meta name="author" content="{{ config.site_author }}">
+		{%-endif %}
+		{%-if config.extra.site_web_author %}
+		<meta name="web-author" content="{{ config.extra.site_web_author }}">
+		{%-endif %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% endblock %}
+
+	{%-block title %}
+		{%-if page.meta and page.meta.title %}
+		<title>{{ page.meta.title }} - {{ config.site_name }}</title>
+		{%-elif page.title and not page.is_homepage %}
+		<title>{{ page.title|striptags }} - {{ config.site_name }}</title>
+		{%-else %}
+		<title>{{ config.site_name }}</title>
+		{%-endif %}
+	{% endblock %}
+
+	{%-block libs %}
+		<script src="{{ 'assets/js/color-modes.js'|url }}"></script>
+		{%-if page.meta.math %}
+		<!-- Mathjax Support -->
+		<script type="text/javascript" async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		{%-endif %}
+	{%-endblock %}
+
+		{#-Atom Feeds #}
+		<link href="{{ 'atom.xml'|url }}" rel="alternate" title="News" type="application/atom+xml" />
+
+		{% include "partials/favicons.j2" %}
+
+	{%-block styles %}
+		<link href="{{ 'assets/css/style.min.css'|url }}" rel="stylesheet" media="screen">
+
+		{%-for style in extra_css %}
+		<link href="{{ style|url }}" rel="stylesheet">
+		{%-endfor %}
+
+		{%-for style in page.meta.styles %}
+		<link href="{{ 'assets/css/' + style + '.css'|url }}" rel="stylesheet">
+		{%-endfor %}
+
+		{%-include "partials/custom-styles.html" %}
+	{%-endblock %}
+	</head>
+
+	{%- if page.classes %}
+	<body class="{{ page.classes|join(' ') }}">
+	{%- else %}
+	<body>
+	{%- endif %}
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">
+			{%- include "partials/header.html" %}
+			{%- include "partials/navigation.j2" %}
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+					{%-block title_header %}
+						{%- if not page.meta.no_title_header and page.meta.title %}
+						<h1>{{ page.meta.title }}</h1>
+						{%- endif %}
+					{%-endblock %}
+					{%-block content %}
+						{{- page.content }}
+					{%-endblock %}
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						{%- if page.meta.cards %}
+							{%- include page.meta.cards %}
+						{%- else %}
+							{%- include "partials/cards.j2" %}
+						{%endif%}
+					</aside>
+				</div>
+			</div>
+			{%- include "partials/footer.j2" %}
+		</div>
+		{%- include "partials/scripts.j2" %}
+		{%- if 'search' in config['plugins'] %}
+			{%- include "partials/search-modal.html" %}
+		{%- endif %}
+		{%- include "partials/keyboard-modal.html" %}
+	</body>
+</html>
