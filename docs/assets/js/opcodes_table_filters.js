@@ -1,7 +1,12 @@
 $(function() {
+/*
+	Reads a search parameter from URL if any, e.g.:
+	https://sfz.tools/sfizz/development/status/opcodes/?q=ampeg_decay
 
-// Reads a search parameter from URL if any, e.g.:
-// https://sfzformat.com/opcodes/?c=eg&q=decay&v=cakewalk
+	c (category):  see _data/sfz/syntax.yml categories ids
+	q (query):     any string contained in the opcode name
+	v (version):   1, 2, aria, calfbox, linuxsampler, sfizz
+*/
 const urlParams = new URLSearchParams(window.location.search);
 var   hasParams = false;
 
@@ -32,9 +37,9 @@ var versionColumnNumber = 6;
 var updateTable = function() {
 	var searchText = $opcodeSearch.val();
 	var activeVersionFilters = $versionFilters.filter(':checked')
-			.map(function() { return $(this).val(); }).toArray();
+			.map(function() { return $(this).val() }).toArray();
 	var activeCategoryFilters = $categoryFilters.filter(':checked')
-			.map(function() { return $(this).val(); }).toArray();
+			.map(function() { return $(this).val() }).toArray();
 
 	var acceptRow = function($row) {
 		if (searchText !== "") {
