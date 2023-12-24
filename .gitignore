@@ -1,17 +1,11 @@
+/.bootstrap/
 /_site/
-/.bundle/
-/.jekyll-cache/
-/.sass-cache/
-/.vendor/
-/node_modules/
-/assets/css/*.map
-/assets/css/style.css
-/assets/css/style.min.css
-/assets/js/*.map
-/assets/js/scripts.min.js
-.jekyll-metadata
-Gemfile.lock
-package-lock.json
-*.code-workspace
-*.diff
-*.log
+
+# fork-awesome
+/docs/assets/fonts/
+
+# fontawesome
+/docs/assets/webfonts/
+
+/docs/info.md
+__pycache__/
