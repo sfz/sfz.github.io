@@ -170,8 +170,8 @@ categories:
     - name: "loop_crossfade"
       short_description: "Loop cross fade."
       version: "SFZ v2"
-    # alias:
-    # - name: "loopcrossfade"
+     #alias:
+     #- name: "loopcrossfade"
       value:
         type_name: "float"
         unit: "seconds"
