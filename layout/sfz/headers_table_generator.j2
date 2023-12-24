@@ -6,9 +6,9 @@
 		</tr>
 	</thead>
 	<tbody>
-{%-for header in site.data.sfz.syntax.headers-%}
+{%-for header in macros_sfz_syntax.headers-%}
 		<tr>
-			<td>&lt;<a href="{{ '/headers/' | append: header.name | relative_url }}">{{ header.name }}</a>&gt;</td>
+			<td>&lt;<a href="{{ '/headers/' + header.name }}">{{ header.name }}</a>&gt;</td>
 			<td style="text-align:center">{{ header.version }}</td>
 		</tr>
 {%-endfor-%}

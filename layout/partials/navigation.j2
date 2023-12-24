@@ -1,39 +1,28 @@
-{%-assign locale_count = 0-%}
-{%-for language in site.data.locale-%}
-	{%-if language[0] == page.lang-%}
-		{%-assign current_locale_dir = language[1]-%}
-	{%-endif-%}
-	{%-assign locale_count = forloop.length-%}
-{%-endfor-%}
-{%-assign default_locale = site.locale.default-%}
-{%-if page.lang == default_locale-%}
-	{%-assign page_path_prefix = "/"-%}
-{%-else-%}
-	{%-assign page_path_prefix = '/' | append: page.lang | append: '/'-%}
-{%-endif-%}
-{% assign t = current_locale_dir.translation %}
-
 			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-				<symbol id="sun-fill" viewBox="0 0 16 16">
-					<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
 				</symbol>
-				<symbol id="moon-stars-fill" viewBox="0 0 16 16">
-					<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-					<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
 				</symbol>
-				<symbol id="circle-half" viewBox="0 0 16 16">
-					<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
 				</symbol>
-				<symbol id="check2" viewBox="0 0 16 16">
-					<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
 				</symbol>
 			</svg>
-
 			<nav
-				class="navbar navbar-expand-lg bg-dark" text-bg-dark
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
 				data-bs-theme="dark"
 			>
-				<div class="container">
+				<div class="container-fluid">
 
 					<button
 						class="navbar-toggler"
@@ -49,20 +38,26 @@
 
 					<a
 						class="navbar-brand"
-						href="{{ page_path_prefix | relative_url }}"
-					>
-						<img
-							src="{{ '/assets/img/logo.png' | relative_url }}"
-							width="120" height="30" class="d-inline-block align-top" alt=""
-						/>
-						{%-comment-%}{{ site.name }}{%-endcomment-%}
+						href="{{ base_dir|url }}"
+						>
+						{%-if config.extra.show_logo %}
+							<img
+								alt="Logo image"
+								src="{{ 'assets/img/logo.svg'|url }}"
+							/>
+						{%-endif %}
+						{%-if config.extra.show_name %}
+						{{ config.site_name }}
+						{%-endif %}
 					</a>
 
 					<div class="collapse navbar-collapse" id="navbarContent">
-						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
-						{%- for item in current_locale_dir.layout.navigation %}
-							{%- if item.type == "dropdown" %}
-								{% assign item_id = 'navbar' | append: item.label %}
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							{%-set navigation = load_yaml(config.extra.db.layout.nav) %}
+							{%-if navigation %}
+								{%-for item in navigation %}
+									{%-if item.type == "dropdown" %}
+										{%-set item_id = 'navbar' + item.label %}
 							<li class="nav-item dropdown">
 								<a
 									class="nav-link dropdown-toggle"
@@ -73,63 +68,80 @@
 									aria-expanded="false"
 									aria-haspopup="true"
 								>
-								{%-if item.icon_type-%}
+									{%-if item.icon_type %}
 									<i
 										class="{{ item.icon_category }} fa-{{ item.icon_type }} fa-fw"
 										aria-hidden="true"></i>&nbsp;
-								{%-endif-%}
+									{%-endif %}
 									{{ item.label }}
 								</a>
 								<ul
 									class="dropdown-menu"
 									aria-labelledby="{{ item_id }}"
 								>
-								{%- for subitem in item.pages %}
-									{%- if subitem.label == nil %}
+									{%-for subitem in item.pages %}
+										{%-if not subitem.label %}
 									<div class="dropdown-divider"></div>
-									{%- else %}
-										{%- assign disabled = "" %}
-										{%- if subitem.disabled %}{%- assign disabled = " disabled" %}{%- endif %}
+										{%-else %}
+											{%-set disabled = "" %}
+											{%-if subitem.disabled %}{%-set disabled = " disabled" %}{%-endif %}
 									<li>
 										<a class="dropdown-item{{ disabled }}"
-											href="{{ subitem.url | relative_url }}"
+											href="{{ subitem.url|url }}"
 										>
-										{%-if subitem.icon_type-%}
+											{%-if subitem.icon_type %}
 											<i
 												class="{{ subitem.icon_category }} fa-{{ subitem.icon_type }} fa-fw"
 												aria-hidden="true"
 											></i>&nbsp;
-										{%- endif %}
+											{%-endif %}
 											{{ subitem.label }}
 										</a>
 									</li>
-									{%- endif %}
-								{%- endfor %}
+										{%-endif %}
+									{%-endfor %}
 								</ul>
-							{%- else %}
+								{%-else %} {#-if item.type == "dropdown" #}
 							<li class="nav-item">
 								<a
 									class="nav-link"
-									href="{{ item.url | relative_url }}"
+									href="{{ item.url|url }}"
 								>
-									{%- if item.icon_type %}
+										{%-if item.icon_type %}
 									<i class="{{ item.icon_category }} fa-{{ item.icon_type }} fa-fw"
 										aria-hidden="true"></i>&nbsp;
-									{%- endif %}
+										{%-endif %}
 									{{ item.label }}
 								</a>
-							{%- endif %}
+								{%-endif %} {#-if item.type == "dropdown" #}
 							</li>
-						{%- endfor %}
+							{%-endfor %} {#-for item in navigation #}
+						{%-endif %} {#-if navigation #}
 						</ul>
-						<ul class="navbar-nav">
-							{%-comment%} SEARCH {%-endcomment%}
+						<ul class="navbar-nav ms-auto">
+							{#-Global Download ?
 							<li class="nav-item">
 								<a class="nav-link"
-									href="{{ page_path_prefix | append: 'search/' | relative_url }}">
-									{{ t.search }}</a>
+									href="{{ 'downloads'|url }}"
+								>
+									<i class="fa fa-download fa-fw" aria-hidden="true"></i>
+									Download
+								</a>
 							</li>
-							{%-comment%} COLOR MODE {%-endcomment%}
+							-#}
+							{%-block search_button %}
+							{%-if 'search' in config['plugins'] %}
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							{%-endif %}
+							{%-endblock %}
 							<li class="nav-item dropdown">
 								<button
 									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
@@ -139,7 +151,7 @@
 									data-bs-toggle="dropdown"
 									data-bs-display="static"
 									aria-label="Toggle theme (auto)">
-									<svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
 									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
 								</button>
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
@@ -149,9 +161,9 @@
 											class="dropdown-item d-flex align-items-center"
 											data-bs-theme-value="light"
 											aria-pressed="false">
-											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
 											Light
-											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
 										</button>
 									</li>
 									<li>
@@ -160,9 +172,9 @@
 											class="dropdown-item d-flex align-items-center"
 											data-bs-theme-value="dark"
 											aria-pressed="false">
-											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
 											Dark
-											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
 										</button>
 									</li>
 									<li>
@@ -171,9 +183,9 @@
 											class="dropdown-item d-flex align-items-center active"
 											data-bs-theme-value="auto"
 											aria-pressed="true">
-											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
 											Auto
-											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
 										</button>
 									</li>
 								</ul>

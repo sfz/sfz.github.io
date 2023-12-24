@@ -1,28 +1,26 @@
-{%-assign formats = site.data.sfz.formats-%}
-{%-assign engines = site.data.sfz.engines-%}
-
 <table class="table table-bordered table-hover table-responsive-xl table-sm table-striped">
 	<thead class="table-dark">
 		<tr>
 			<th scope="col">Name</th>
-			{%-for format in formats-%}
+			{%-for format in macros_sfz_formats %}
 			<th scope="col" style="text-align:center">{{ format.name }}</th>
-			{%-endfor-%}
+			{%-endfor %}
 		</tr>
 	</thead>
 	<tbody>
-	{%-for engine in engines-%}
+	{%-for engine in macros_sfz_engines %}
 		<tr>
 			<td>{{ engine.name }}</td>
-				{%-for format in formats-%}
-					{%-assign result = ""-%}
-					{%-assign engine_format = engine.formats | where: "name", format.name-%}
-					{%-if engine_format[0].name == format.name-%}
-						{%-assign result = "•"-%}
-					{%-endif-%}
+				{%-for format in macros_sfz_formats %}
+					{%-set result = "" %}
+					{%-set engine_format = engine.formats
+						| selectattr("name", "equalto", format.name) | list | first or '' %}
+					{%-if engine_format.name == format.name %}
+						{%-set result = "•" %}
+					{%-endif %}
 			<td style="text-align:center">{{ result }}</td>
-				{%-endfor-%}
+				{%-endfor %}
 		</tr>
-	{%-endfor-%}
+	{%-endfor %}
 	</tbody>
 </table>
