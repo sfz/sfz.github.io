@@ -2,7 +2,6 @@
 
 ## Website
 
-- Fix mathjax css display in `ampeg_attack.md`
 - Fix lightbox for `ampeg_{attack|decay|release}_shape.md`
 - Variables inheritance
 - Allow selection of which files to download in `scripts/assets/download.py`

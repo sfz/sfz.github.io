@@ -41,6 +41,8 @@ hooks:
 - "scripts/hooks/sfz.py"
 markdown_extensions:
   footnotes: {}
+  pymdownx.arithmatex:
+    generic: true
   pymdownx.emoji:
     emoji_generator: !!python/name:pymdownx.emoji.to_png
     alt: "short"
