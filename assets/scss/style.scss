@@ -50,27 +50,23 @@ pre {
 	border-style:  solid;
 	border-radius: 0.50rem;
 }
-/*
-	Mimic Bootstrap tables for markdown tables
-	from bootstrap/scss/_variables:
+//	Mimic Bootstrap tables for markdown tables
 table {
-	width:100%;
+	width:           100%;
 	border-collapse: collapse;
-	margin-bottom: 1em;
+	margin-bottom:   1em;
+	thead > tr > th {
+			color:            $light;
+			background-color: $dark;
+	}
+	thead	> tr > th,
+	tbody > tr > td {
+		text-align:   left;
+		padding:      5px 10px;
+		border-width: $border-width;
+		border-style: solid;
+	}
 }
-thead > tr > th, tbody > tr > td {
-	text-align: left;
-	padding: 5px 10px;
-	border: $border-width solid $border-color;
-}
-thead > tr > th {
-	color: $light;
-	background-color: $dark;
-}
-tbody tr:nth-child(#{$table-striped-order}) {
-	background-color: $table-accent-bg;
-}
-*/
 .navbar-brand img {
 	height: 30px;
 }
@@ -94,14 +90,18 @@ tbody tr:nth-child(#{$table-striped-order}) {
 }
 $color-mode-type: data;
 @include color-mode(light) {
-	h1, h2, h3 { color:   $body-color; }
-	pre { border-color:   $border-color }
-	--bs-body-bg:         $body-bg;
-	--bs-body-color:      $body-color;
+	h1, h2, h3  { color:    $body-color; }
+	pre, table, thead, th, td {
+		border-color:         $border-color
+	}
+	--bs-body-bg:           $body-bg;
+	--bs-body-color:        $body-color;
 }
 @include color-mode(dark) {
-	h1, h2, h3 { color:   $body-color-dark }
-	pre { border-color:   $gray-800 }
-	--bs-body-bg-dark:    $body-bg-dark;
-	--bs-body-color-dark: $body-color-dark;
+	h1, h2, h3  { color:    $body-color-dark }
+	pre, table, thead, th, td {
+		border-color:         $gray-800
+	}
+	--bs-body-bg-dark:      $body-bg-dark;
+	--bs-body-color-dark:   $body-color-dark;
 }

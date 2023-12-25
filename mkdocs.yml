@@ -40,7 +40,8 @@ hooks:
 - "scripts/hooks/fs.py"
 - "scripts/hooks/sfz.py"
 markdown_extensions:
-- pymdownx.emoji:
+  footnotes: {}
+  pymdownx.emoji:
     emoji_generator: !!python/name:pymdownx.emoji.to_png
     alt: "short"
     options:
