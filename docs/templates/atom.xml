@@ -11,7 +11,9 @@
 		<title>{{ post.title }}</title>
 		<author><name>{{ post.author }}</name></author>
 		<link href="{{ config.site_url + post.id + '/' }}"/>
+	{%-if post.date is not none %}
 		<published>{{ post.date }}</published>
+	{%-endif %}
 		<id>{{ post.id }}</id>
 		<content type="html">{{ markdown(post.content) }}</content>
 	</entry>
