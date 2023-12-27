@@ -21,7 +21,6 @@ files = [
 for f in sorted(files, key=lambda x: x, reverse=True):
   with open(f) as file:
     post = frontmatter.load(file)
-
   try:
     post["date"] = datetime.strptime(post["date"], "%Y-%m-%dT%H:%M:%S%z").isoformat()
   except KeyError:
