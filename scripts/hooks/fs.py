@@ -1,4 +1,4 @@
-import jinja2, os, json, yaml
+import json, os, yaml
 
 def path_exists(path):
   if isinstance(path, str):
