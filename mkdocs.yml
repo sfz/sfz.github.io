@@ -99,7 +99,7 @@ theme:
     help:     191 # ?
     next:      78 # n
     previous:  80 # p
-    search:    70 # f
+    search:    83 # s
 watch:
 - "data"
 - "docs"
