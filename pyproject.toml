@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "sfzformat_website"
 version = "1.0.0"
-description = "SFZ Format Website"
+description = "SFZ format website"
 authors = ["redtide <redtid3@gmail.com>"]
 readme = "README.md"
 
