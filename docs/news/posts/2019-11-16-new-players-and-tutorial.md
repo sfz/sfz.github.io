@@ -1,6 +1,7 @@
 ---
 title: "New players and tutorial"
 author: "RedTide"
+date: "2019-11-16T00:00:00+0000"
 ---
 New applications were added to the players list recently:
 - [HISE]

@@ -1,6 +1,7 @@
 ---
 title: "New year, new work in progress"
 author: "redtide"
+date: "2020-01-31T00:00:00+0000"
 ---
 The most relevant additions on the website for this month were [Instruments]
 and [Modulations] sections, adding slowly one by one some sample instruments

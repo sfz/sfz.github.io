@@ -1,6 +1,7 @@
 ---
 title: "Modulations Explained"
 author: "DSmolken"
+date: "2019-08-01T00:00:00+0000"
 ---
 We have two new articles explaining the modulations possible in [SFZ1] and [SFZ2].
 Hopefully it will now be much easier to understand what's possible

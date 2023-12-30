@@ -1,6 +1,7 @@
 ---
 title: "New tutorial and opcode additions"
 author: "redtide"
+date: "2020-03-17T00:00:00+0000"
 ---
 A new tutorial about [subtractive synthesizers] was shared by DSmolken's
 sample instruments experience applied in the [Caveman Cosmonaut] sample library.<br>

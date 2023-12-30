@@ -1,6 +1,7 @@
 ---
 title: "New Tutorial"
 author: "DSmolken"
+date: "2019-07-25T00:00:00+0000"
 ---
 We've published a [new tutorial] explaining how to use samples to
 model brushed drum techniques which produce a continuous sound
