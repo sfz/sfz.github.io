@@ -67,9 +67,6 @@ table {
 		border-style: solid;
 	}
 }
-.navbar-brand img {
-	height: 30px;
-}
 #scrollButton {
 	display: none;
 	position: fixed;
@@ -87,6 +84,9 @@ table {
 }
 #scrollButton:hover {
 	background-color: $scrollbutton-bg-hover;
+}
+.navbar-brand img {
+	height: 30px;
 }
 $color-mode-type: data;
 @include color-mode(light) {

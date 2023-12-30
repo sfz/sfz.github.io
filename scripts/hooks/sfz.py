@@ -121,15 +121,6 @@ def get_info(opcode):
       max_ = "?"
 
     value_range = min_ + " to " + max_
-
-  return OpcodeInfo(
-    opcode["name"],
-    opcode["version"] if "version" in opcode else "",
-    opcode["value"]["type_name"] if "value" in opcode and "type_name" in opcode["value"] else "N/A",
-    opcode["value"]["default"]   if "value" in opcode and "default"   in opcode["value"] else "N/A",
-    value_range,
-    opcode["value"]["unit"] if "value" in opcode and "unit" in opcode["value"] else "N/A"
-  )
   """
   return OpcodeInfo(
     opcode.name,
@@ -140,23 +131,19 @@ def get_info(opcode):
     opcode.value.unit if value in opcode and unit in opcode.value else "N/A"
   )
   """
+  return OpcodeInfo(
+    opcode["name"],
+    opcode["version"] if "version" in opcode else "",
+    opcode["value"]["type_name"] if "value" in opcode and "type_name" in opcode["value"] else "N/A",
+    opcode["value"]["default"]   if "value" in opcode and "default"   in opcode["value"] else "N/A",
+    value_range,
+    opcode["value"]["unit"] if "value" in opcode and "unit" in opcode["value"] else "N/A"
+  )
 
 def get_opcode_category(opcode):
   if "type" in opcode:
     return opcode["type"]
   return opcode["category"]
-
-def include(path):
-  if not path_exists(path):
-    return ''
-  with open(path, "r") as f:
-    content = f.read()
-  content = jinja2.Template(content).render(
-    headers=headers,
-    opcodes=opcodes,
-    opcode_set=opcode_set
-  )
-  return content
 
 print("initializing database...")
 _process(_sfz_dict)
@@ -172,5 +159,4 @@ def on_env(env, **kwargs):
   env.globals["get_category_url"]    = get_category_url
   env.globals["get_info"]            = get_info
   env.globals["get_opcode_category"] = get_opcode_category
-  env.globals["include"]             = include
   env.globals["see_also"]            = see_also
