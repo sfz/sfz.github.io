@@ -1,6 +1,7 @@
 ---
 title: "New Website Launched"
 author: "RedTide"
+date: "2019-04-23T00:00:00+0000"
 ---
 We're proud to announce a new website!
 

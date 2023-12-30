@@ -1,6 +1,7 @@
 ---
 title: "Happy new year!"
 author: "RedTide"
+date: "2019-12-29T00:00:00+0000"
 ---
 Here we are with the latest relevant updates, the last ones for this year:
 
