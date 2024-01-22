@@ -13,4 +13,4 @@ In ARIA this opcode can be used, but every region uses up a polyphony voice, and
 MAX is recommended for sequences beyond a very short length.
 
 
-[delay_beats]: delay_beats.md
+[stop_beats]: stop_beats.md
