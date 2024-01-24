@@ -6,6 +6,7 @@ Used in Cakewalk Dimension Pro and DropZone, alongside [stop_beats], to play sli
 ## Examples
 ```sfz
 delay_beats=1
+delay_beats=2.25 stop_beats=3
 delay_beats=25.9922 stop_beats=26.0964  
 ```
 ## Practical Considerations
