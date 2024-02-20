@@ -11,5 +11,11 @@ and zero for keys greater than or equal to `xfout_hikey`.
 ## Example
 
 ```sfz
+xfout_lokey=72 xfout_hikey=84
+```
+
+As with the [key] opcode, the values can also be MIDI note names:
+
+```sfz
 xfout_lokey=c5 xfout_hikey=c6
 ```
