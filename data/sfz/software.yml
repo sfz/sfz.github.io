@@ -230,6 +230,16 @@ categories:
     short_description:
       ""
 
+  - name: "sfz-web-player"
+    author: "kmturley"
+    license: "CC0-1.0"
+    url: "https://github.com/kmturley/sfz-web-player"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "TypeScript/JavaScript SFZ player using the Web Audio API."
+
 - name: "Import from SFZ"
   applications:
 
@@ -499,6 +509,16 @@ categories:
     short_description:
       ""
 
+  - name: "sfz-tools-cli"
+    author: "kmturley"
+    license: "CC0-1.0"
+    url: "https://github.com/kmturley/sfz-tools-cli"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "Command line interface comprised of several tools to read, convert and parse SFZ and audio files."
+
 - name: "Misc"
   applications:
 
@@ -524,6 +544,16 @@ categories:
     - name: "macOS"
     - name: "Windows"
     short_description: "Linter and parser for .sfz files."
+
+  - name: "sfz-tools-core"
+    author: "kmturley"
+    license: "CC0-1.0"
+    url: "https://github.com/kmturley/sfz-tools-core"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description: "TypeScript/JavaScript library to read, convert and parse SFZ and audio files."
 
 - name: "Syntax Highlighting"
   applications:
