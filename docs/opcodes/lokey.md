@@ -20,13 +20,13 @@ for example, pedal noises which are triggered whether any keys are pressed or no
 ## Examples
 
 ```sfz
-<region> sample=*sine lokey=c5 hikey=c6
+<region> sample=*sine lokey=72 hikey=84
 ```
 
-As with the [key] opcode, the values can also be MIDI note numbers:
+As with the [key] opcode, the values can also be MIDI note names:
 
 ```sfz
-<region> sample=*sine lokey=72 hikey=84
+<region> sample=*sine lokey=c5 hikey=c6
 ```
 
 When an instrument is sampled every minor third, this kind of usage will be common:
