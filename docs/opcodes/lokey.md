@@ -6,6 +6,11 @@ When a region only covers one note, it is generally more convenient to use
 [key] instead of `hikey` and `lokey`. When `hikey` and `lokey` are used,
 they will usually need to be used together with [pitch_keycenter].
 
+These opcodes, as well as [key], can use either MIDI note numbers (0 to 127) or
+MIDI note names (e.g. c3 or D#4). Using note numbers is recommended, however,
+as note numbers are interpreted consistently, while the same note names can be
+mapped to note numbers an octave or even two apart in different DAWs.
+
 In the SFZ 1 specification, the allowed range is 0 to 127. However, SFZ 2 additionally
 includes the possibility to set lokey and hikey to -1, to prevent a region from
 being triggered by any keys. This is a way (though, admittedly, not a very
