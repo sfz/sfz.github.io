@@ -73,9 +73,9 @@ different points in an instrument.
 The following does not work well in ARIA/Sforzando, assuming that B.sfz uses `MYVAR`:
 
 ```sfz
-#define MYVAR cc12
+#define $MYVAR cc12
 #include B.sfz
-#define MYVAR cc13
+#define $MYVAR cc13
 #include B.sfz
 ```
 
