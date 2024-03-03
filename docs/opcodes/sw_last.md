@@ -29,7 +29,7 @@ such as sustain or staccato.
 An example of using `sw_last` to select oscillator waves, with [sw_default]
 used to set the sine to default as well.
 
-```
+```sfz
 // **********************************************************************
 // A Keyswitching Example
 //
