@@ -1,11 +1,11 @@
 docs_dir:         "docs"
 site_name:        "SFZ Format"
 site_author:      "Karoryfer Samples and SFZ Format Team"
-site_url:         "https://sfzformat.github.io"
+site_url:         "https://sfz.github.io"
 site_description: "SFZ File Format Documentation Website"
 site_dir:         "_site"
 repo_name:        "GitHub"
-repo_url:         "https://github.com/sfzformat/sfzformat.github.io"
+repo_url:         "https://github.com/sfzformat/sfz.github.io"
 edit_uri:         "edit/source/docs/"
 remote_branch:    "www"
 extra:
