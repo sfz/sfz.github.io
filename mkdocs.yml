@@ -5,7 +5,7 @@ site_url:         "https://sfz.github.io"
 site_description: "SFZ File Format Documentation Website"
 site_dir:         "_site"
 repo_name:        "GitHub"
-repo_url:         "https://github.com/sfzformat/sfz.github.io"
+repo_url:         "https://github.com/sfz/sfz.github.io"
 edit_uri:         "edit/source/docs/"
 remote_branch:    "www"
 extra:
@@ -13,7 +13,7 @@ extra:
   site_web_author: "redtide and SFZ Format Team"
   show_logo: true
   show_name: false
-  repo_owner_url: "https://github.com/sfzformat"
+  repo_owner_url: "https://github.com/sfz"
   repo_branch:    "source"
   db:
     layout:
