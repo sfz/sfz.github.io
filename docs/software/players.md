@@ -36,7 +36,7 @@ Below are the known links to the various lists of supported opcodes:\
 [OSI]:             https://opensource.org/licenses
 [sfz]:             https://web.archive.org/web/20071011005744/http://www.rgcaudio.com/sfz.htm
 [BassMIDI]:        https://www.un4seen.com/doc/#bassmidi/BASS_MIDI_FontInit.html
-[Bitwig]:          https://github.com/sfzformat/sfzformat.github.io/pull/48#issuecomment-731244523
+[Bitwig]:          https://github.com/sfz/sfz.github.io/pull/48#issuecomment-731244523
 [Equator 2 FAQ]:   https://support.roli.com/support/solutions/articles/36000255935-equator2-faqs#Can-I-import-my-own-samples-or-wavetable-files-into-Equator2?
 [HISE]:            https://github.com/christophhart/HISE/blob/master/hi_sampler/sampler/SfzImporter.h#L47
 [LinuxSampler]:    http://linuxsampler.org/sfz/
@@ -44,4 +44,4 @@ Below are the known links to the various lists of supported opcodes:\
 [OpenMPT]:         https://wiki.openmpt.org/Manual:_SFZ_Implementation
 [sfizz]:           https://sfz.tools/sfizz/development/status/opcodes
 [zerberus]:        https://github.com/musescore/MuseScore/blob/3.6.2/audio/midi/zerberus/README
-[our Wiki]:        https://github.com/sfzformat/sfzformat.github.io/wiki/Players
+[our Wiki]:        https://github.com/sfz/sfz.github.io/wiki/Players
