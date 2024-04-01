@@ -306,13 +306,15 @@ own polyphony groups, same as would be needed with multiple microphone positions
 
 If there are true legato samples, that adds considerable complexity to the
 transposition trick. The below steps are not a universal set of instructions, but
-have worked successfully for at least one instrument.
+have worked successfully for at least two instruments.
 
-* Create an extended-range map extending the range by the largest transposition amount in the direction opposite of the transposition. For example, if there are four transposed voices and are to be transposed down by a half-step, a full step, a minor third and a major third, add a major third of range to the top of the extended map. See [the range extension tutorial] for details.
+* Create an extended-range map extending the range by the largest transposition amount in the direction opposite of the transposition. For example, if there are four transposed voices and are to be transposed down by a half-step, a full step, a minor third and a major third, add a major third of range to the top of the extended map. See [the range extension tutorial] for details on the basics.
+* In addition to extending the lokey/hikey range, remember that the sw_previous range will also need to be extended. For the extremes of the range, there will be no samples with the correct interval available - use the nearest available interval. For the highest note of the extended range, there will be no upward interval sample available, but in practice using a sample of a downward half-step interval seems to work tolerably well.
 * Make copies of this extended map to create the to-be-transposed maps.
-* In each map, add the aomount of shift for the particular map (for example -1) to lokey, hikey and sw_previous.
+* In each map, add the amount of shift for the particular map (for example -1) to lokey, hikey and sw_previous.
 * Delete any regions with lokey or hikey above or below the final desired range, which might be both at the top and bottom of a map.
-* Delete any regions with sw_previous above or below the final desired range. This isn't strictly necessary as those regions "should" never be played, but will reduce parsing time and prevent weirdness when a note slightly outside the range is held by mistake and a note inside the range is pressed.
+* Delete any regions with sw_previous above or below the final desired range. This isn't strictly necessary as those regions "should" never be played and will not affect the visible keyboard map, but will reduce parsing time and prevent weirdness when a note slightly outside the range is held by mistake and a note inside the range is pressed.
+* Delete any regions where the sw_previous ened up being the same as the lokey/hikey, as these will likewise be never triggered. In theory these should never be created, so this is just to catch mistakes.
 
 ## Humanization
 
