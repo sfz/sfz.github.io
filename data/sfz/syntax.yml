@@ -335,7 +335,7 @@ categories:
         unit: "seconds"
 
     - name: "sample_dyn_paramN"
-      short_description: ""
+      short_description: "ARIA-specific nameless destination for plugin modulations."
       version: "ARIA"
       value:
         type_name: "float"
@@ -4256,6 +4256,13 @@ categories:
         midi_cc:
         - name: "egN_driveshape_onccX"
 
+    - name: "egN_sample_dyn_paramX"
+      short_description: "ARIA-specific nameless destination for plugin envelope modulations."
+      version: "ARIA"
+      modulation:
+        midi_cc:
+        - name: "egN_sample_dyn_paramX_onccY"
+        
   - name: "LFO"
     id: "lfo"
     url: "/modulations/lfo"
@@ -4868,7 +4875,7 @@ categories:
         type_name: "float"
 
     - name: "lfoN_sample_dyn_paramX"
-      short_description: ""
+      short_description: "ARIA-specific nameless destination for plugin LFO modulations."
       version: "ARIA"
       modulation:
         midi_cc:
