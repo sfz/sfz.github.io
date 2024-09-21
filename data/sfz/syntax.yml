@@ -5984,9 +5984,8 @@ categories:
     version: "SFZ v2"
     value:
       type_name: "float"
-      unit: "°"
-      min: -1
-      max: 360
+      min: 0
+      max: 1
 
   - name: "oscillator_quality"
     short_description: ""
