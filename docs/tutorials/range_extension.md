@@ -215,18 +215,16 @@ by a minor third.
 * Copy regions with the sw_previous to be extended (which will include some regions copied in the previous step). Likewise add the amount of shift to sw_previous, lokey and hikey to the copy.
 * Delete the regions with sw_previous above the new max range (or could try avoiding copying them in the first step, but this way is probably safer).
 * Delete the duplicate regions copied in both of the first two steps.
-* Add in regions going from the bottom three values of sw_previous to the notes in the extended range. This is where either some sort of defaults will be needed - using a sample of an ascending octave transition for all intervals over an octave seems to often work fine in practice.
-* Add regions going from the new extended notes to the bottom three pitches, as above.
 
-Note that there will be no legato samples covering the widest intervals
+There will be no legato samples covering the widest intervals
 from the extended notes to the farthest notes on the other side. If the
 instrument has legato samples only recorded within a certain range (for
 example only for intervals up to an octave), this isn't going to create
 any additional problems that didn't already have to be solved when making
-the non-extended legato instruments - so whether defaulting to the
-largest interval sampled, triggering a regular sustain or just producing
-no sound at all, just do the same when there's no interval wide enough
-for a leap to or from an extended note. If an instrument does have every
-possible note transition in its range sampled, however (quite possible
-for instruments with a small range, such as rebab), the same
-compromises are available for the missing intervals in the extended range.
+the non-extended legato instruments. Often the best choice us defaulting
+to an octave leap in the correct direction is the best choice, but other
+possibilities are triggering a regular sustain and even producing no
+sound at all. If an instrument does have every possible note transition
+in its range sampled, however (quite possible for instruments with a
+small range, such as rebab), the nearest available interval is probably
+the most reasonable choice.
