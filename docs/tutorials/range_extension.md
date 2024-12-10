@@ -10,7 +10,7 @@ example when an instrument is sampled every minor third or every octave, there
 won't be much choice, though if round robins are available the last approach
 can prove useful.
 
-## Simple extension of closest avaialble sample
+## Simple extension of closest available sample
 
 Let's say we have only one sampled violin section with the following map, and
 we want to be able to play the notes for another octave above the highest
