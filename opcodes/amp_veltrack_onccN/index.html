@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Karoryfer Samples and SFZ Format Team">
+		<meta name="web-author" content="redtide and SFZ Format Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>amp_veltrack_onccN - SFZ Format</title>
+		<script src="../../assets/js/color-modes.js"></script>
+		<!-- Mathjax Support -->
+		<script type="text/javascript" async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<link href="../../atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+		
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="152x152" href="../../assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../../assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link href="../../assets/css/style.min.css" rel="stylesheet" media="screen">
+		<link href="../../../../assets/css/fontawesome.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/brands.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/solid.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/v4-font-face.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/bootstrap-table.min.css" rel="stylesheet">		<link
+			rel="stylesheet"
+			href="../../assets/css/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../assets/css/github-dark-dimmed.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+				</symbol>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+				</symbol>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+				</symbol>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+				</symbol>
+			</svg>
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container-fluid">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../.."
+						>
+							<img
+								alt="Logo image"
+								src="../../assets/img/logo.svg"
+							/>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSyntax"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Syntax
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSyntax"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/headers/"
+										>
+											Headers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/opcodes/"
+										>
+											Opcodes
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/"
+										>
+											Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/lfo"
+										>
+											LFO
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/extensions/midi_ccs"
+										>
+											Extended MIDI CCs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/misc/categories"
+										>
+											Types & Categories
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/versions"
+										>
+											Versions
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSoftware"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Software
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSoftware"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/software/players"
+										>
+											Players
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/software/tools"
+										>
+											Tools
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarTutorials"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Tutorials
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarTutorials"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basics"
+										>
+											Basics
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basic_sfz_file"
+										>
+											Basic / Template
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sustained_note_basics"
+										>
+											Sustained Note Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/vibrato"
+										>
+											Vibrato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/legato"
+										>
+											Legato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/unison"
+										>
+											Unison
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/range_extension"
+										>
+											Range Extension
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/modular_instruments"
+										>
+											Modular Instruments
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/subtractive_synths"
+										>
+											Subtractive Synthesizers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/strum"
+										>
+											Strumming
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/drum_basics"
+										>
+											Drum & Round Robin Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/cymbal_muting"
+										>
+											Cymbal Muting
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/epic_drums"
+										>
+											Epic Drums
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/brush_stirs"
+										>
+											Brush Stirs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz1_modulations"
+										>
+											SFZ 1 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz2_modulations"
+										>
+											SFZ 2 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/lfo"
+										>
+											Pitch LFO Examples
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/videos"
+										>
+											Video Tutorials
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="https://sfzinstruments.github.io"
+								>
+									Instruments
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="/news"
+								>
+									News
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+			<h1>amp_veltrack</h1>
+<p>Amplifier velocity tracking, represents how much the amplitude changes with incoming note velocity.</p><p>With <code>amp_veltrack</code> at the default value of 100, volume is modified by the amount
+calculated by the following expression, based on incoming velocity.</p>
+<div class="arithmatex">\[ Gain(v) = 20 * log_{10}[(\frac{v}{127})^2] dB \]</div>
+<p>The <a href="../amp_velcurve_N/">amp_velcurve_N</a> opcodes allow overriding the default
+velocity curve, and are useful for making more complex curves than
+<code>amp_veltrack</code> allows.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-sfz">amp_veltrack=0
+
+amp_veltrack=100
+</code></pre>
+<p>Allowed values are from -100 (which would make velocity 127 notes silent, and
+low-velocity notes loud) to 100, but for most practical purposes this paramter
+is generally set to either 0 or 100.</p>
+
+<table class="table table-sm table-bordered table-hover table-striped table-responsive-xl">
+	<thead class="table-dark">
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Version</th>
+			<th scope="col">Type</th>
+			<th scope="col">Default</th>
+			<th scope="col">Range</th>
+			<th scope="col">Unit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>amp_veltrack</td>
+			<td>SFZ v1</td>
+			<td>float</td>
+			<td>100</td>
+			<td>-100 to 100</td>
+			<td>%</td>
+		</tr>
+		<thead class="table-dark">
+			<tr>
+				<th colspan="6">Modulations</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>amp_veltrack_onccN</td>
+				<td>ARIA</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td></td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>amp_veltrack_curveccN</td>
+				<td>ARIA</td>
+				<td>integer</td>
+				<td>0</td>
+				<td>0 to 255</td>
+				<td>N/A</td>
+			</tr>
+		</tbody>
+	<tbody>
+</table>
+	<p>Category: <a href="/misc/categories#performance-parameters">Performance Parameters</a>, Amplifier</p>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-eye"
+									aria-hidden="true"></i>
+								Follow us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/"
+											title="GitHub Organization" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub Organization</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="News Atom Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-rss fa-fw"
+										aria-hidden="true"></i>
+										News Atom Feed</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/t7nrZ6d"
+											title="Discord Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord Chat</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+											title="Internet Relay Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-link"
+									aria-hidden="true"></i>
+								Quick links
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="/legacy"
+											title="Old rgc:audio SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Old rgc:audio SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://www.drealm.info/sfz/"
+											title="Peter L. Jones' SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Peter L. Jones' SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+											title="KVR Forum SFZ post" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										KVR Forum SFZ post</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14"
+											title="Plogue Forum" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										Plogue Forum</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/tests/"
+											title="rgc:audio SFZ test suite" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-download fa-fw"
+										aria-hidden="true"></i>
+										rgc:audio SFZ test suite</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/opcode-suggestions/"
+											title="Opcode suggestions" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-lightbulb fa-fw"
+										aria-hidden="true"></i>
+										Opcode suggestions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">
+					<span style="float:right">
+						This site is open source.
+						<a href="https://github.com/sfz/sfz.github.io/edit/source/docs/opcodes/amp_veltrack_onccN.md">
+						Improve this page</a>
+					</span>
+				</p>
+			</footer>
+		</div>		<script>
+			var base_url	= "../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script async defer src="../../assets/js/popper.min.js"></script>
+		<script async defer src="../../assets/js/bootstrap.min.js"></script>
+		<script async defer src="../../assets/js/anchor.min.js"></script>
+		<script async defer src="../../assets/js/base.min.js"></script>
+		<script async defer src="../../assets/js/scroll-to-top.min.js"></script>
+		<script async defer src="../../../../assets/js/index.bundle.min.js"></script>
+		<script async defer src="../../../../assets/js/bootstrap-table.min.js"></script>
+		<script async defer src="../../../../assets/js/mermaid.min.js"></script>
+		<script async defer src="../../../../search/main.js"></script>		<script
+			type="text/javascript"
+			src="../../assets/js/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/bash.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			window.addEventListener("load", function (event) {
+				if (anchors) {
+					anchors.options.placement = 'left';
+					anchors.add();
+				}
+			});
+		</script><!-- Search Dialog -->
+<div
+	class="modal fade"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-body">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div
+						id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Karoryfer Samples and SFZ Format Team">
+		<meta name="web-author" content="redtide and SFZ Format Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Vibrato - SFZ Format</title>
+	
+		<script src="../../assets/js/color-modes.js"></script>
+		<link href="../../atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+		
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="152x152" href="../../assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../../assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link href="../../assets/css/style.min.css" rel="stylesheet" media="screen">
+		<link href="../../../../assets/css/fontawesome.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/brands.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/solid.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/v4-font-face.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/bootstrap-table.min.css" rel="stylesheet">		<link
+			rel="stylesheet"
+			href="../../assets/css/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../assets/css/github-dark-dimmed.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+				</symbol>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+				</symbol>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+				</symbol>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+				</symbol>
+			</svg>
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container-fluid">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../.."
+						>
+							<img
+								alt="Logo image"
+								src="../../assets/img/logo.svg"
+							/>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSyntax"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Syntax
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSyntax"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/headers/"
+										>
+											Headers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/opcodes/"
+										>
+											Opcodes
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/"
+										>
+											Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/lfo"
+										>
+											LFO
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/extensions/midi_ccs"
+										>
+											Extended MIDI CCs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/misc/categories"
+										>
+											Types & Categories
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/versions"
+										>
+											Versions
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSoftware"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Software
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSoftware"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/software/players"
+										>
+											Players
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/software/tools"
+										>
+											Tools
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarTutorials"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Tutorials
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarTutorials"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basics"
+										>
+											Basics
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basic_sfz_file"
+										>
+											Basic / Template
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sustained_note_basics"
+										>
+											Sustained Note Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/vibrato"
+										>
+											Vibrato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/legato"
+										>
+											Legato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/unison"
+										>
+											Unison
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/range_extension"
+										>
+											Range Extension
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/modular_instruments"
+										>
+											Modular Instruments
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/subtractive_synths"
+										>
+											Subtractive Synthesizers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/strum"
+										>
+											Strumming
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/drum_basics"
+										>
+											Drum & Round Robin Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/cymbal_muting"
+										>
+											Cymbal Muting
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/epic_drums"
+										>
+											Epic Drums
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/brush_stirs"
+										>
+											Brush Stirs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz1_modulations"
+										>
+											SFZ 1 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz2_modulations"
+										>
+											SFZ 2 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/lfo"
+										>
+											Pitch LFO Examples
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/videos"
+										>
+											Video Tutorials
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="https://sfzinstruments.github.io"
+								>
+									Instruments
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="/news"
+								>
+									News
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+						<h1>Vibrato</h1><h2 id="basic-lfo-vibrato">Basic LFO vibrato</h2>
+<p>Emulating vibrato for solo instruments or voices with LFOs is not difficult. The challenges
+are understanding the key aspects of vibrato on the real instrument, and keeping the number of
+parameters from growing too large to be easy to use. The examples here use SFZ 2 spec
+<a href="../../modulations/lfo/">numbered LFOs</a>, rather than the <a href="../../opcodes/amplfo_depth/">dedicated pitch, volume and filter LFOs</a>
+and envelopes of SFZ 1. A lot of this can be done under the SFZ 1 specification as well, but
+there are some limitations.</p>
+<p>The most basic, typical vibrato is pitch vibrato - just an LFO modulating pitch. Making the
+minimum and maximum rates and depths that would be used by players in real life is important,
+of course. The numbers here are examples which would be decent for bowed strings - it has a
+rate of 2-10 Hz and a maximum depth of 35 cents. Wider and slower are certainly possible
+on real instruments, but isn't commonly used in performance.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=35
+lfo01_freq=2
+lfo01_freq_oncc112=8
+</code></pre>
+<h2 id="additional-parameters">Additional parameters</h2>
+<p>In real life, however, players and singers will often start a note without vibrato,
+and add vibrato a fraction of a second later. This is where modulating the <a href="../../opcodes/lfoN_delay/">LFO delay parameter</a> becomes useful, and possibly <a href="../../opcodes/lfoN_fade/">LFO fade</a> as well. Delay seems like enough for most wind
+instruments and vocals, but having both delay and fade seems effective with bowed strings.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=35
+lfo01_freq=2
+lfo01_freq_oncc112=8
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+</code></pre>
+<p>Vibrato on many instruments doesn't just affect pitch; on bowed strings, it seems to have
+a subtle effect on volume and timbre as well. We can have the same MIDI CC parameter control
+how much the vibrato LFO affects pitch, volume, and an EQ band, with the latter two being
+quite subtle.</p>
+<p>This is a good a time as any to note that not all vibrato is equal - it's not really
+practical to add vibrato to the lowest note playable on a cello, for example, or to a
+natural harmonic. With pizzicato, vibrato is possible, but probably should not affect the
+EQ band, and either only affect pitch or pitch plus a subtle effect on volume. The below
+will work reasonably for most bowed notes, however.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=35
+lfo01_volume_oncc111=1
+lfo01_freq=2
+lfo01_freq_oncc112=8
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+eq1_freq=2000
+eq1_bw=2
+lfo01_eq1gain_oncc111=2
+lfo01_eq1freq_oncc111=500
+</code></pre>
+<h2 id="humanization">Humanization</h2>
+<p>Vibrato can also be humanized, by varying the rate of the vibrato LFO. This can be done
+by modulating the rate of the vibrato LFO with another LFO. The ARIA sample &amp; hold
+<a href="../../opcodes/lfoN_wave/">waveform</a> can be used here, and the modulation depth controlled by MIDI CC, so when that's
+at zero, no humanization happens.</p>
+<pre><code class="language-sfz">lfo02_freq=1
+lfo02_wave=12 //Sample &amp; hold LFO waveform number
+lfo02_freq_lfo01_oncc117=1
+</code></pre>
+<p>Or, to stay in the SFZ 2 spec and not use ARIA extensions, a sine wave with randomized
+<a href="../../opcodes/lfoN_phase/">starting phase</a> will also work:</p>
+<pre><code class="language-sfz">lfo02_freq=1
+lfo02_phase_oncc135=1
+lfo02_freq_lfo01_oncc117=1
+</code></pre>
+<p>However, when playing multiple layers, such as sustain samples with crossfaded dynamics
+or multiple mic positions, this can cause each layer's vibrato to drift out of sync and
+sound like separate instruments. This is generally not desirable, so it is possible to
+pseudo-randomize the starting phase using a non-random <a href="../../extensions/midi_ccs/">CC, such as velocity</a>
+(which is often otherwise unused in sustain sounds with crossfaded dynamics). If the SFZ
+player can have a global sample and hold LFO which does not retrigger for each note, this
+would also be a solution, though ARIA does not allow this.</p>
+<pre><code class="language-sfz">lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+</code></pre>
+<p>This will vary the rate of the vibrato, but the depth will be constant. It is possible to have
+an LFO modulate the depth of another LFO, measured as a percentage, for example 120% for 20% variation:</p>
+<pre><code class="language-sfz">lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+lfo02_depth_lfo01=120
+</code></pre>
+<p>For additional complexity, it's also possible to have the random LFO itself modulate pitch,
+which will create some pitch drift, and have more than two LFOs involved. Here is a fairly
+sophisticated example.</p>
+<pre><code class="language-sfz">//Vibrato
+lfo01_pitch_oncc21=29 //Vibrato LFO
+lfo01_freq=2 //Any slower than this sounds really lousy
+lfo01_freq_oncc112=6 //8 Hz is about as fast as vibrato on cello can go
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+//This LFO also does tremolo
+lfo01_volume_oncc21=1 //Not much - just a subtle effect on volume
+eq1_freq=2200 //EQ band for vibrato
+eq1_bw=2
+lfo01_eq1gain_oncc21=3 //Again, pretty subtle
+
+lfo02_wave=1 //Second LFO to make things wobblier
+lfo02_phase=0
+lfo02_phase_oncc131=0.7 //Phase affected by velocity, to pseudo-randomize while keeping both mics' LFOs in sync
+lfo02_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo02_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo02_pitch_oncc117=6 //Slight pitch wobbliness
+lfo02_freq_lfo01_oncc117=1 //Affect the rate of the other LFO for unsteady vibrato
+
+lfo03_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo03_phase=0.4
+lfo03_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
+lfo03_freq=0.5
+lfo03_freq_oncc117=-0.4
+lfo03_freq_lfo02_oncc117=1
+lfo03_pitch_oncc117=-4
+</code></pre>
+<p>However, note that the depth modulation is fixed, and not modulated by cc117 like the frequency modulation
+is. This is because having a CC modulate the depth modulation does not appear to be implemented in ARIA.
+It is, however, possible to modulate the depth of a flex envelope with MIDI CC, and then have that envelope
+depth modulate the depth of the secondary LFO. This is, admittedly, very much a kludge, but it appears to
+work.</p>
+<pre><code class="language-sfz">lfo02_freq=1
+lfo02_phase_oncc132=0.7
+lfo02_freq_lfo01_oncc117=1
+lfo02_depth_lfo01=120
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo02=100
+</code></pre>
+<p>However, when the depth of lfo02 is zero, this will effectively also make lfo01's depth zero, so there
+will be no vibrato at all unless cc117 is turned up. Getting around this requires another kludge, which
+is leaving lfo01 with fixed depth and creating yet another LFO for the variable part of the depth.</p>
+<pre><code class="language-sfz">//Vibrato
+lfo01_pitch_oncc21=29 //Vibrato LFO
+lfo01_freq=2 //Any slower than this sounds really lousy
+lfo01_freq_oncc112=6 //8 Hz is about as fast as vibrato on cello can go
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+//This LFO also does tremolo
+lfo01_volume_oncc21=1 //Not much - just a subtle effect on volume
+eq1_freq=2200 //EQ band for vibrato
+eq1_bw=2
+lfo01_eq1gain_oncc21=3 //Again, pretty subtle
+
+lfo02_pitch_oncc21=19 //Extra LFO for variable depth, shallower than main and pitch only
+lfo02_freq=2 //Same timing as first LFO
+lfo02_freq_oncc112=6
+lfo02_delay_oncc115=0.500
+lfo02_fade_oncc116=0.500
+
+lfo03_wave=1 //Third LFO to make the flrst two LFOs wobblier
+lfo03_phase=0
+lfo03_phase_oncc131=0.7 //Phase affected by velocity, to pseudo-randomize while keeping both mics' LFOs in sync
+lfo03_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo03_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo03_pitch=6 //Slight pitch wobbliness
+lfo03_freq_lfo01=1
+lfo03_freq_lfo02=1 //Affect the rate of the vibrato LFOs for unsteady vibrato
+
+lfo04_wave=1 //And a fourth LFO for secondhand complex wobbliness
+lfo04_phase=0.4
+lfo04_phase_oncc131=0.479 //Different phase response to velocity than the second LFO
+lfo04_freq=0.5
+lfo04_freq_oncc117=-0.4
+lfo04_freq_lfo03=1
+lfo04_pitch=-4
+
+lfo03_depth_lfo02=100
+lfo04_depth_lfo02=100
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo03=100
+eg1_depth_lfo04=100
+</code></pre>
+<h2 id="asymmetrical-vibrato">Asymmetrical vibrato</h2>
+<p>Something similar to the above will work fairly well for a range of strings and voices.
+However, there are cases where vibrato should only go in one direction - for example,
+bending guitar strings only moves the pitch upwards, while on saxophone it's possible
+to play vibrato centered around the pitch, but most of the time players will go only
+below the pitch. Let's use saxophone vibrato as an example. To keep it simple, let's
+just go back to a simple, non-humanized vibrato with only depth and rate paremeters.</p>
+<p>To have vibrato which will go below the main pitch is simple - the LFO phase can be
+set so the wave starts at the top, and the note <a href="../../opcodes/tune/">tuned</a> down by the vibrato depth amount.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=20
+lfo01_phase=0.25
+lfo01_freq=1.5
+lfo01_freq_oncc112=6
+pitch_oncc111=-20
+</code></pre>
+<p>This will work fine, as long as we don't try to apply delay or fade to the LFO, which
+would result in the note starting out flat with no vibrato. To solve that problem, we
+can combine the LFO with a pitch <a href="../../modulations/envelope_generators/">envelope</a>. Here is an example with just delay:</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=20
+lfo01_freq=1.5
+lfo01_freq_oncc112=6
+lfo01_phase=0.25
+lfo01_delay_oncc116=1
+pitcheg_delay_oncc116=1
+pitcheg_depth_oncc111=-20
+</code></pre>
+<p>To have the choice of idiomatic sax vibrato and violin-style vibrato centered around the pitch
+can be done separate LFOs and separate depth controls. It's also possible to duplicate all the
+regions and use <a href="../../opcodes/loccN/">loccN/hiccN</a> to select between ones with different styles of vibrato.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=20 //Sax vibrato LFO - goes down from the main pitch
+lfo01_freq=1.5
+lfo01_freq_oncc112=6
+lfo01_phase=0.25 //Starts at top
+lfo01_delay_oncc116=1
+pitcheg_delay_oncc116=1 //Pitch envelope to drop the central pitch when sax vibrato kicks in
+pitcheg_depth_oncc111=-20
+
+lfo02_pitch_oncc114=20 //Violin vibrato LFO - goes below and above main pitch
+lfo02_freq=1.5
+lfo02_freq_oncc112=6 //Same rate as the first LFO
+lfo02_phase=0.5 //Starts in the middle, goes down first before going up
+lfo02_delay_oncc116=1 //Same delay, too
+</code></pre>
+<p>This covers jaw vibrato, but sax players also use diaphragm vibrato, which changes volume
+and has no effect on pitch, which means there are now three vibrato depths. Having the
+volume modulated by the second LFO is a little easier, as the phase setting of the first
+LFO would mean having to apply a volume envelope as well.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=20 //Sax vibrato LFO - goes down from the main pitch
+lfo01_freq=1.5
+lfo01_freq_oncc112=6
+lfo01_phase=0.25 //Starts at top
+lfo01_delay_oncc116=1
+pitcheg_delay_oncc116=1 //Pitch envelope to drop the central pitch when sax vibrato kicks in
+pitcheg_depth_oncc111=-20
+
+lfo02_pitch_oncc114=20 //Violin vibrato LFO - goes below and above main pitch
+lfo02_freq=1.5
+lfo02_freq_oncc112=6 //Same rate as the first LFO
+lfo02_delay_oncc116=1 //Same delay, too
+lfo02_phase=0.5 //Starts in the middle, goes down first before going up
+lfo02_volume=0 //This LFO also does tremolo
+lfo02_volume_oncc113=3
+</code></pre>
+<p>There is one additional consideration with diaphragm vibrato - when
+the volume of the note drops down, the breath noise can become more prominent, especially on
+quiet notes or when using the subtone technique. If the volume of the breath noise can be
+modulated separately, the noise regions should not be affected by pitch vibrato, and be
+affected by the diaphragm vibrato in an opposite direction to the notes. So, if the above
+vibrato settings are set under a <a href="../../headers/global/">‹global›</a> header, the breath noise
+sample regions could have settings similar to this.</p>
+<pre><code class="language-sfz">lfo01_pitch_oncc111=0 //LFOs do not affect pitch
+pitcheg_depth_oncc111=0
+lfo02_pitch_oncc114=0
+lfo02_volume_oncc113=-3 //Diaphragm vibrato affects volume in the opposite direction
+</code></pre>
+<p>Humanization and having the diaphragm vibrato affect timbre can be done similarly as with
+the strings above, ensuring both LFOs are humanized in sync with each other, so they do not
+drift apart.</p>
+<h2 id="more-special-cases">More special cases</h2>
+<p>Some instruments will have vibrato types which require special treatment, for example guitar
+tremolo bridges will bend each string's pitch by a different amount when playing chords. This
+requires different pitch modulation depths for each string. Vibrato can also be used to
+modulate <a href="../../opcodes/cutoff/">filter cutoffs</a>, which is commonly used in synthesizers to create
+evolving pads or wobble basses. This is not difficult to implement. Here is an example of a
+synthesizer style vibrato with a typical lowpass filter, and vibrato which can affect pitch,
+volume or filter cutoff.</p>
+<pre><code class="language-sfz">//Filter
+//Lowpass filter
+cutoff=120
+cutoff_cc120=13200
+fil_keytrack=100
+resonance=0
+resonance_cc121=12
+
+//Vibrato
+lfo01_freq=1
+lfo01_freq_oncc112=11
+lfo01_delay_oncc115=0.500
+lfo01_fade_oncc116=0.500
+lfo01_pitch_oncc111=22 //Vibrato LFO affects pitch
+lfo01_volume_oncc114=6 //Volume tremolo
+lfo01_cutoff=0 //Filter wobble
+lfo01_cutoff_oncc113=3600
+</code></pre>
+<p>An unusual use of extremely deep vibrato and tremolo plus humanization is emulating vinyl
+scratching. Pitch sweeps of 2+ octaves with strongly humanized LFO rate can resemble vinyl
+scratching, though unlike real scratching, these LFOs are not controllable, and therefore
+rhythmic scratching is not an option.</p>
+<pre><code class="language-sfz">//Extreme vibrato that can resemble vinyl scratching
+//The depths are high but will be made even higher by the modulation of the LFO depth
+lfo01_pitch_oncc21=1333 //Extremely deep vibrato for vinyl emulation
+lfo01_freq=1
+lfo01_freq_oncc112=9
+//No delay but there is fade
+lfo01_fade_oncc116=0.5
+//This LFO also does tremolo
+lfo01_volume_oncc21=7 //Again very heavy
+
+lfo02_wave=1 //Second LFO to make things wobblier
+lfo02_phase=0
+lfo02_phase_oncc135=1 //Random
+lfo02_freq=0.01 //Basically no movement at very slow speeds, just randomization
+lfo02_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo02_freq_lfo01_oncc117=1 //Affect the rate of the other LFO for unsteady vibrato
+
+lfo03_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo03_phase=0.4
+lfo03_phase_oncc135=0.479 //Different phase response to velocity than the second LFO
+lfo03_freq=0.5
+lfo03_freq_oncc117=-0.4
+lfo03_freq_lfo2_oncc117=1
+
+lfo03_depth_lfo01=200
+lfo02_depth_lfo01=233
+eg1_level0_oncc117=1
+eg1_level1_oncc117=1
+eg1_depth_lfo2=100
+eg1_depth_lfo3=100
+</code></pre>
+<p>This by no means exhausts all the possibilties of vibrato. It does provide a decent combination of control and realism for a lot of common instrument types, as well as some wild possibilities.</p>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-eye"
+									aria-hidden="true"></i>
+								Follow us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/"
+											title="GitHub Organization" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub Organization</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="News Atom Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-rss fa-fw"
+										aria-hidden="true"></i>
+										News Atom Feed</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/t7nrZ6d"
+											title="Discord Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord Chat</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+											title="Internet Relay Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-link"
+									aria-hidden="true"></i>
+								Quick links
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="/legacy"
+											title="Old rgc:audio SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Old rgc:audio SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://www.drealm.info/sfz/"
+											title="Peter L. Jones' SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Peter L. Jones' SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+											title="KVR Forum SFZ post" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										KVR Forum SFZ post</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14"
+											title="Plogue Forum" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										Plogue Forum</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/tests/"
+											title="rgc:audio SFZ test suite" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-download fa-fw"
+										aria-hidden="true"></i>
+										rgc:audio SFZ test suite</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/opcode-suggestions/"
+											title="Opcode suggestions" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-lightbulb fa-fw"
+										aria-hidden="true"></i>
+										Opcode suggestions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">
+					<span style="float:right">
+						This site is open source.
+						<a href="https://github.com/sfz/sfz.github.io/edit/source/docs/tutorials/vibrato.md">
+						Improve this page</a>
+					</span>
+				</p>
+			</footer>
+		</div>		<script>
+			var base_url	= "../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script async defer src="../../assets/js/popper.min.js"></script>
+		<script async defer src="../../assets/js/bootstrap.min.js"></script>
+		<script async defer src="../../assets/js/anchor.min.js"></script>
+		<script async defer src="../../assets/js/base.min.js"></script>
+		<script async defer src="../../assets/js/scroll-to-top.min.js"></script>
+		<script async defer src="../../../../assets/js/index.bundle.min.js"></script>
+		<script async defer src="../../../../assets/js/bootstrap-table.min.js"></script>
+		<script async defer src="../../../../assets/js/mermaid.min.js"></script>
+		<script async defer src="../../../../search/main.js"></script>		<script
+			type="text/javascript"
+			src="../../assets/js/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/bash.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			window.addEventListener("load", function (event) {
+				if (anchors) {
+					anchors.options.placement = 'left';
+					anchors.add();
+				}
+			});
+		</script><!-- Search Dialog -->
+<div
+	class="modal fade"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-body">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div
+						id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>

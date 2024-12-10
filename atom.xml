@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>SFZ Format news</title>
+	<link href="https://sfz.github.io//atom.xml" rel="self"/>
+	<icon>https://sfz.github.io//assets/ico/favicon.ico</icon>
+	<link href="https://sfz.github.io/"/>
+	<updated>2024-12-10T20:22:42+00:00</updated>
+	<id>https://sfz.github.io/</id>
+	<entry>
+		<title>Bootstrap 5.3.0 with color modes</title>
+		<author><name>redtide</name></author>
+		<link href="https://sfz.github.io//news/posts/2023-06-03-bootstrap-530-with-color-modes/"/>
+		<published>2023-06-03T13:43:28+02:00</published>
+		<id>/news/posts/2023-06-03-bootstrap-530-with-color-modes</id>
+		<content type="html"><p>Bootstrap updated to v5.3.0 which supports <a href="https://getbootstrap.com/docs/5.3/customize/color-modes/">color modes</a>, which means that
+if your system uses a dark color theme, it will adapt to your visual preferences
+on browsers that supports it.
+Highlight.js will adapt to the chosen theme, so the sfz examples will be shown with it.</p></content>
+	</entry>
+	<entry>
+		<title>Opcodes page update</title>
+		<author><name>redtide</name></author>
+		<link href="https://sfz.github.io//news/posts/2020-10-16-opcodes-page-update/"/>
+		<published>2020-10-16T21:59:58+02:00</published>
+		<id>/news/posts/2020-10-16-opcodes-page-update</id>
+		<content type="html"><p>For those who missed it we have some updates on the website, mainly regarding
+the opcodes page. Recently I've added a <a href="https://bootstrap-table.com">javascript library</a> that permits tables
+column sorting, and now with an awesome contribution from @jpcima also a script
+to filter opcode names, versions and categories. Hope you'll find them handy!</p></content>
+	</entry>
+	<entry>
+		<title>New tutorial and opcode additions</title>
+		<author><name>redtide</name></author>
+		<link href="https://sfz.github.io//news/posts/2020-03-17-new-tutorial-and-opcode-additions/"/>
+		<published>2020-03-17T00:00:00+00:00</published>
+		<id>/news/posts/2020-03-17-new-tutorial-and-opcode-additions</id>
+		<content type="html"><p>A new tutorial about <a href="https://sfzformat.com/tutorials/subtractive_synths">subtractive synthesizers</a> was shared by DSmolken's
+sample instruments experience applied in the <a href="https://github.com/sfzinstruments/karoryfer.caveman-cosmonaut">Caveman Cosmonaut</a> sample library.<br>
+Some fixes and additions were made in our opcode database and in software as well,
+like the Windows <a href="https://openmpt.org/">OpenMPT</a> music tracker by sagamusix.<br>
+New contributions was provided by other users like jisaacstone,
+and a big contribution from jpcima for the <a href="https://sfzformat.com/opcodes/type#cakewalk-implementation">effects</a> section.<br>
+Now we have also a new page for convenience
+that lists <a href="https://sfzformat.com/misc/all_opcodes">all opcodes</a> present in our database.</p></content>
+	</entry>
+</feed>

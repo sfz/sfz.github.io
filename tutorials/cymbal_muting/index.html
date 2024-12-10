@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Karoryfer Samples and SFZ Format Team">
+		<meta name="web-author" content="redtide and SFZ Format Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Cymbal muting - SFZ Format</title>
+	
+		<script src="../../assets/js/color-modes.js"></script>
+		<link href="../../atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+		
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="152x152" href="../../assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../../assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link href="../../assets/css/style.min.css" rel="stylesheet" media="screen">
+		<link href="../../../../assets/css/fontawesome.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/brands.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/solid.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/v4-font-face.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/bootstrap-table.min.css" rel="stylesheet">		<link
+			rel="stylesheet"
+			href="../../assets/css/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../assets/css/github-dark-dimmed.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+				</symbol>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+				</symbol>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+				</symbol>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+				</symbol>
+			</svg>
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container-fluid">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../.."
+						>
+							<img
+								alt="Logo image"
+								src="../../assets/img/logo.svg"
+							/>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSyntax"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Syntax
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSyntax"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/headers/"
+										>
+											Headers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/opcodes/"
+										>
+											Opcodes
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/"
+										>
+											Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/lfo"
+										>
+											LFO
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/extensions/midi_ccs"
+										>
+											Extended MIDI CCs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/misc/categories"
+										>
+											Types & Categories
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/versions"
+										>
+											Versions
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSoftware"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Software
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSoftware"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/software/players"
+										>
+											Players
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/software/tools"
+										>
+											Tools
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarTutorials"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Tutorials
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarTutorials"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basics"
+										>
+											Basics
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basic_sfz_file"
+										>
+											Basic / Template
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sustained_note_basics"
+										>
+											Sustained Note Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/vibrato"
+										>
+											Vibrato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/legato"
+										>
+											Legato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/unison"
+										>
+											Unison
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/range_extension"
+										>
+											Range Extension
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/modular_instruments"
+										>
+											Modular Instruments
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/subtractive_synths"
+										>
+											Subtractive Synthesizers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/strum"
+										>
+											Strumming
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/drum_basics"
+										>
+											Drum & Round Robin Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/cymbal_muting"
+										>
+											Cymbal Muting
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/epic_drums"
+										>
+											Epic Drums
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/brush_stirs"
+										>
+											Brush Stirs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz1_modulations"
+										>
+											SFZ 1 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz2_modulations"
+										>
+											SFZ 2 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/lfo"
+										>
+											Pitch LFO Examples
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/videos"
+										>
+											Video Tutorials
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="https://sfzinstruments.github.io"
+								>
+									Instruments
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="/news"
+								>
+									News
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+						<h1>Cymbal muting</h1><p>A lot of the information in this article deals with implementing sampled hi-hats
+and cymbals in general, and although the code examples are in SFZ, the principles
+should also apply to other samplers, or even synthesized cymbals.
+Muting previously played notes is important with monophonic instruments, such as
+flutes or trumpets. With hi-hats, it is also crucial to sounding like a hi-hat -
+an open hi-hat hit will be muted in real life when the hi-hat pedal is closed.
+Let's start with a simple hi-hat with closed hit, foot chik, half-open and open
+samples, with the latter two on the same key and degree of openness selected by
+MIDI CC 4 - the common hi-hat pedal assignment in electronic drum kits.</p>
+<pre><code class="language-sfz">&lt;region&gt;key=42 sample=hh_closed.wav
+&lt;region&gt;key=44 sample=hh_chik.wav
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64
+</code></pre>
+<h2 id="simple-self-muting">Simple self-muting</h2>
+<p>The above hi-hat has no muting implemented, so playing
+a closed hit after an open one would result in the open hit unrealistically
+continuing to ring. The simplest way to take care of that is to put all the
+regions in the same <a href="../../headers/group/">‹group›</a> and use <a href="../../opcodes/off_by/">off_by</a> to make that group mute itself -
+that will mean any hi-hat hit will mute any currently playing hi-hat hit.
+Setting <a href="../../opcodes/off_mode/">off_mode</a> to normal and using <a href="../../opcodes/ampeg_release/">ampeg_release</a>
+or <a href="../../opcodes/off_time/">off_time</a> to set the time it takes for the previous sample to fade out
+also helps this sound a bit more natural.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+off_mode=normal
+ampeg_release=0.07
+&lt;region&gt;key=42 sample=hh_closed.wav group=1 off_by=1
+&lt;region&gt;key=44 sample=hh_chik.wav group=1 off_by=1
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63 group=1 off_by=1
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64 group=1 off_by=1
+</code></pre>
+<h2 id="hierarchical-self-muting">Hierarchical self-muting</h2>
+<p>This is the way many virtual drum kits work, but it is not fully satisfactory if,
+for example, playing a ride pattern on an open hi-hat. Things do start getting more
+complicated here, though, and many developers feel that it's enough to stop here, just
+implement the above rules, and have a reasonably working virtual hi-hat. For those
+who want more, however, Peter L. Jones has developed a hierarchy of muting, where
+hits which are more closed mute hits that are more open, but hits which are
+more open do not mute hits which are more closed. Hits also don't mute hits with
+the same degree of openness.</p>
+<p>So, chiks mute all hits, closed hits mute any partially open hits but not chiks
+or closed hits etc. With this amount of degrees of openness, half-open hits would
+mute open hits, and open hits would mute nothing. So, we need to put each hi-hat
+articulation in a different group. This, however, means we need a group which
+mutes several other groups, and regions in a group cannot have multiple or
+varying off_by values. So, what we have to do is use silence - either the silence*
+setting of <a href="../../opcodes/sample/">sample</a> ARIA extension, or an actual file of a short silence.
+Note that the silence samples also have to have off_by settings
+the same as the hi-hat samples in their mute group. Also, since group 1 doesn't
+mute anything, we don't need to add any silence regions to that group.
+Note that the <a href="../../opcodes/group/">group</a> opcode used here and the <a href="../../headers/group/">‹group›</a>
+header are completely separate concepts - "group" for the remainder of this
+article refers to the opcode, not the header, though group headers are also used
+in the code examples.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+// Here are the hi-hat samples
+off_mode=normal
+ampeg_release=0.07
+
+&lt;region&gt;key=42 sample=hh_closed.wav group=3 off_by=4
+&lt;region&gt;key=44 sample=hh_chik.wav group=4
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63 group=2 off_by=3
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64 group=1 off_by=2
+
+&lt;group&gt;group=2 off_by=3
+// The range which mutes open hi-hats - that is, everything except open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+
+&lt;group&gt;group=3 off_by=4
+// The range which mutes half-open and open hi-hats - that is, closed and chik
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+
+&lt;group&gt;group=4
+// The range which mutes closed, half-open and open hi-hats - that is, just chik
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=44
+</code></pre>
+<h2 id="special-treatment-of-foot-splashes">Special treatment of foot splashes</h2>
+<p>The above isn't perfect - for example, fully opening up a hi-hat after playing
+a hard half-open hit in the real world would stop the clashes between the top
+and bottom, effectively stopping a half-open sound and replacing it with quieter
+open ringing - but it is a reasonable compromise covering various degrees of
+openness. Also, the more degrees of openness there are, the more groups will be needed.</p>
+<p>There are, however, more hi-hat articulations possible. One which has special
+behavior when it comes to muting is the foot splash - closing the hi-hat with
+the pedal, then quickly reopening it. This articulation needs to mute itself,
+because playing one foot splash after another involves closing the hi-hat, which
+will mute the ringing.</p>
+<p>Whether the splash should mute other types of hits is an open question, however.
+Splashes, especially gentler ones, involve only momentary contact of the cymbal
+edges and not complete closure. Whether an open hi-hat hit followed by a splash
+sounds better when the splash mutes the open hit is left as a decision to the
+reader.</p>
+<p>The below example has the splash muting everything else, except for pedal chiks,
+because it invovles closing the hi-hat fully. So, if a
+kit has foot splash samples (for which there is no standard general MIDI note
+assignment, so let's use 54 here - an octave above the chik, though in general
+MIDI that's supposed to be the cowbell note), we'd need to set up one more group,
+and have that mute itself. It will also need to be muted by all other types of
+hi-hat hits, except for fully open hits.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+//Here are the hi-hat samples
+off_mode=normal
+ampeg_release=0.07
+
+&lt;region&gt;key=42 sample=hh_closed.wav group=4 off_by=5
+&lt;region&gt;key=44 sample=hh_chik.wav group=5
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64 group=2 off_by=3
+&lt;region&gt;key=54 sample=hh_splash.wav group=1 off_by=1
+
+&lt;group&gt;group=1 off_by=1
+//The range which mutes foot splashes - everything except open and foot splash
+//Foot splash mutes itself, but this group does not include the foot splash key
+//That's because the foot splash samples themselves are in the same group
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46
+
+&lt;group&gt;group=3 off_by=4
+//The range which mutes open hi-hats - that is, everything except open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+&lt;region&gt; key=54
+
+&lt;group&gt;group=4 off_by=5
+//The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=54
+
+&lt;group&gt;group=5
+//The range which mutes closed, half-open and open hi-hats - that is, just chik and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=44
+&lt;region&gt; key=54
+</code></pre>
+<h2 id="limiting-polyphony">Limiting polyphony</h2>
+<p>This works reasonably well. Another potential refinement is to also avoid
+excessive buildup when the more open articulations (which with some hi-hat pairs
+can ring for upwards of 20 seconds), while still allowing enough for ride
+patterns on an open hi-hat to sound right. We can do this by using the <a href="../../opcodes/polyphony/">polyphony</a>
+opcode to put a limit on the number of polyphony voices used by a specific group.
+Note this must be set for the silence regions, also, so that every region in a
+group will have the same off_by and polyphony as all the other regions in that
+group. Polyphony of 4 for the open hi-hats and 3 for the half-open are judgment
+calls. Drier cymbals and articulations with less sustain will generally sound
+realistic with lower numbers here, and brushes might need a lower number than
+sticks. Limiting the polyphony for the more closed articulations is not necessary
+in practice, unless playing unrealistically dense trap hi-hat patterns, because
+they don't ring very long anyway. Limiting the polyphony for the foot splash is
+not necessary at all, because it mutes itself.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+//Here are the hi-hat samples
+off_mode=normal
+ampeg_release=0.07
+
+&lt;region&gt;key=42 sample=hh_closed.wav group=4 off_by=5
+&lt;region&gt;key=44 sample=hh_chik.wav group=5
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 polyphony=3
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 polyphony=4
+&lt;region&gt;key=54 sample=hh_splash.wav group=1 off_by=1
+
+&lt;group&gt;group=1 off_by=1
+//The range which mutes foot splashes
+//All sounds except open mute foot splashes, but this group does not include the foot splash key
+//That's because the foot splash samples are in the same group, and will mute anything else
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+
+&lt;group&gt;group=3 off_by=4 polyphony=3
+//The range which mutes open hi-hats - that is, everything except open and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+&lt;region&gt; key=54
+
+&lt;group&gt;group=4 off_by=5
+//The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=54
+
+&lt;group&gt;group=5
+//The range which mutes closed, half-open and open hi-hats - that is, just chik and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=44
+</code></pre>
+<h2 id="edge-cases">Edge cases</h2>
+<p>The above can sound strange when a hard hi-hat hit is being muted by a much quieter one. If
+the hit doing the muting is both quiet and short, it can be practically inaudible, and the
+resulting sound seems to only be the open hit, suddenly fading out. This is especially risky
+if using amp_veltrack set to 100, which will make hits with very low velocity extremely quiet,
+or if the lowest dynamic layers of more closed hits and foot chiks are recorded very quietly.</p>
+<p>Lowering amp_veltrack for the lowest velocity layers is one potential way to reduce this
+problem, as is setting amp_velcurve_1 to some value around 0.2 to 0.5 (higher values if there
+are more dynamic layers).</p>
+<p>In real life, however, a hard open hi-hat hit would have reduced in volume before the start
+of the soft closed hit, as the pedal needs to be closed before a closed hit can be made.
+This would, of course, cause many edge clashes along the way, which we do not have a way
+to emulate. However, it is possible to use the pedal's MIDI CC to make the open sample quieter
+outside of the range where the open hi-hat sample would be triggered. This can be done by modulating
+the hi-hat's <a href="../../opcodes/amplitude/">amplitude</a>, and applying a <a href="../../headers/curve/">‹curve›</a> which will
+keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample was triggered.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+//Here are the hi-hat samples
+off_mode=normal
+ampeg_release=0.07
+
+&lt;region&gt;key=42 sample=hh_closed.wav group=4 off_by=5
+&lt;region&gt;key=44 sample=hh_chik.wav group=5
+&lt;region&gt;key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+&lt;region&gt;key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+&lt;region&gt;key=54 sample=hh_splash.wav group=1 off_by=1
+
+&lt;curve&gt;curve_index=21
+v000=0.13
+v037=0.8
+v077=1
+v127=1
+
+&lt;curve&gt;curve_index=22
+v000=0.1
+v037=0.7
+v077=1
+v127=1
+</code></pre>
+<p>Using smoothing on the amplitude modulation helps avoid sudden jumps, though playing an
+open hit, closing the hi-hat pedal most of the way and then reopening it will still
+result in obviously unrealistic volume fluctuations. So, this is not a perfect solution
+by any means.</p>
+<p>It's probably better to do this by using a volume envelope and using CC4 to modulate its
+decay time, with the sustain set to a low level. and the <a href="../../opcodes/ampeg_dynamic/">ampeg_dynamic</a> opcode
+set to 1 so that moving the pedal will cause the decay time to be recalculated.
+However, that has not been tested yet, as the author's test kit was already using envelopes
+on the hi-hat to emulate drier cymbals.</p>
+<p>Also, applying this to splash samples, which involve the pedal starting closed and opening
+rapidly, is another problem which requires a solution.</p>
+<h2 id="multimic-samples">Multimic samples</h2>
+<p>So far, each hi-hat articulation has only one sample, which will obviously not
+be the case in most virtual drum kits. This does not add much complexity, though,
+as the samples for each degree of openness simply need to all be in the same group.
+All half-open samples, for example, including all round robins, all velocity layers,
+can share the same group.</p>
+<p>If there are separate articulations for each degree of openness, such as shank,
+tip and bell, those can also all be on the same group. Brushes, sticks and
+mallets can often also share the same groups, unless the brushes need lower
+polyphony numbers. However, if there are separate samples for different
+microphones and the groups are self-muting, they will need to be in different
+groups. In the current example, only the footsplash is self-muting, but if using
+the simpler rules where all hi-hat articulations mute all others, all groups are
+self-muting. So, having separate close hi-hat mic and a stereo overhead pair
+would mean twice as many of those groups (assuming the stereo overheads are in
+the L and R channel of the same sample), and close hi-hat, stereo overheads,
+close room and far room would mean four times as many. The polyphony numbers for
+groups which have polyphony will also have to be multiplied by the same factor.
+Here is an example with close and overhead, with slightly longer fadeout times
+for the more distant overhead mics:</p>
+<pre><code class="language-sfz">&lt;group&gt;
+//Here are the hi-hat samples
+off_mode=normal
+
+&lt;region&gt;key=42 sample=hh_closed_close.wav group=4 off_by=5 ampeg_release=0.12
+&lt;region&gt;key=42 sample=hh_closed_oh.wav group=4 off_by=5 ampeg_release=0.2
+&lt;region&gt;key=44 sample=hh_chik_close.wav group=5 ampeg_release=0.12
+&lt;region&gt;key=44 sample=hh_chik_oh.wav group=5 ampeg_release=0.2
+&lt;region&gt;key=46 sample=hh_half_open_close.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.12
+&lt;region&gt;key=46 sample=hh_half_open_oh.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.2
+&lt;region&gt;key=46 sample=hh_open_close.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.12
+&lt;region&gt;key=46 sample=hh_open_oh.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.2
+&lt;region&gt;key=54 sample=hh_splash_close.wav group=1 off_by=1 ampeg_release=0.12
+&lt;region&gt;key=54 sample=hh_splash_oh.wav group=11 off_by=11 ampeg_release=0.2
+
+&lt;group&gt;group=1 off_by=1
+//The range which mutes foot splashes for the close mic
+//All sounds except open mute foot splashes, but this group does not include the foot splash key
+//That's because the foot splash samples are in the same group, and will mute anything else
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+
+&lt;group&gt;group=11 off_by=11
+//The range which mutes foot splashes for the overhead mics
+//All sounds mute foot splashes, but this group does not include the foot splash key
+//That's because the foot splash samples are in the same group, and will mute anything else
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+
+&lt;group&gt;group=3 off_by=4 polyphony=3
+//The range which mutes open hi-hats for both close and overhead mics - that is, everything except open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=46 hicc4=63
+&lt;region&gt; key=54
+
+&lt;group&gt;group=4 off_by=5
+//The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=42
+&lt;region&gt; key=44
+&lt;region&gt; key=54
+
+&lt;group&gt;group=5
+//The range which mutes closed, half-open and open hi-hats - that is, just chik
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=44
+</code></pre>
+<h2 id="header-organization">Header organization</h2>
+<p>That is as complex as it gets, though there are a few minor points to be aware of.
+Many drum kits with round robins will set <a href="../../opcodes/seq_length/">seq_length</a>
+at the <a href="../../headers/global/">‹global›</a> level, and in those cases, the silence regions
+would only trigger for the first hit in the round robin sequence, unless they
+have seq_length set to 1 to override the global setting. Also, the <a href="../../headers/master/">‹master›</a>
+header level and <a href="../../opcodes/include/">#include</a> statement are useful ARIA
+extensions for keeping deeply sampled hi-hat mappings organized.</p>
+<h2 id="cymbals-other-than-hi-hats">Cymbals other than hi-hats</h2>
+<p>Cymbals other than hi-hats are simpler, but there are
+two considerations when muting those. One is limiting polyphony, which is
+especially important with cymbals intended for playing rolls, and with jazz ride
+cymbals (rock/metal rides which primarily use the bell articulation, not as much).
+The other is that it's also possible to record separate choke samples, and have
+those mute everything else. A ride with bell, bow and edge articulations, choke
+samples and overhead and room mics might be set up like below. Note that while
+each articulation has its own groups and different polyphony limits, all
+articulations for each mic have the same off_by value, which is the group value
+of the choke samples for that mic. It would not be necessary to have this many
+groups to implement muting, but this setup would also allow a mapping using only
+the overhead mics and no room mic to be created without breaking anything, as
+each mic's samples have separate groups. Having different polyphony numbers for
+different mics can result in an inconsistent sound, so it is not recommended.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+off_mode=normal
+
+//Bow hits
+&lt;region&gt;
+key=51 group=30 off_by=33 polyphony=5 ampeg_release=0.3
+sample=ride_bow_oh.wav
+&lt;region&gt;
+key=51 group=40 off_by=43 polyphony=5 ampeg_release=0.4
+sample=ride_bow_rm.wav
+
+//Bell hits
+&lt;region&gt;
+key=53 group=31 off_by=33 polyphony=4 ampeg_release=0.3
+sample=ride_bell_oh.wav
+&lt;region&gt;
+key=53 group=41 off_by=43 polyphony=4 ampeg_release=0.4
+sample=ride_bell_rm.wav
+
+//Edge hits (crashes)
+&lt;region&gt;
+key=59 group=32 off_by=33 polyphony=6 ampeg_release=0.3
+sample=ride_edge_oh.wav
+&lt;region&gt;
+key=59 group=42 off_by=43 polyphony=6 ampeg_release=0.4
+sample=ride_edge_rm.wav
+
+//Edge chokes
+&lt;region&gt;
+key=71 ampeg_attack=0.15 group=33
+sample=ride_choke_oh.wav
+&lt;region&gt;
+key=71 ampeg_attack=0.15 group=43
+sample=ride_choke_rm.wav
+</code></pre>
+<p>It is also possible to use <a href="../../opcodes/note_polyphony/">note_polyphony</a> here, which
+has the advantage of allowing <a href="../../opcodes/note_selfmask/">note_selfmask</a> to be used. This is good when
+a hard hit is followed by several lighter ones on the same cymbal - using
+polyphony, the quieter hits will mute the loud one when the polyphony
+limit is reached, which can result in the louder hit's sustain suddenly and unrealistically
+vanishing. However, this can cause problems with hi-hats where one MIDI note needs to
+trigger several silence groups as well. This is why Virtuosity Drums has the
+hi-hat regions set with note_polyphony=MAX, though there might be a better way.</p>
+<p>Note_polyphony is also separated by keys; while the polyphony limit under a
+group can be tracked together for several keys under one group, note_polyphony
+is tracked separately for each MIDI note value.</p>
+<p>The above example modified to use note_polyphony instead of polyphony would look
+like this:</p>
+<pre><code class="language-sfz">&lt;group&gt;
+off_mode=normal
+
+//Bow hits
+&lt;region&gt;
+key=51 group=30 off_by=33 note_polyphony=5 ampeg_release=0.3
+sample=ride_bow_oh.wav
+&lt;region&gt;
+key=51 group=40 off_by=43 note_polyphony=5 ampeg_release=0.4
+sample=ride_bow_rm.wav
+
+//Bell hits
+&lt;region&gt;
+key=53 group=31 off_by=33 note_polyphony=4 ampeg_release=0.3
+sample=ride_bell_oh.wav
+&lt;region&gt;
+key=53 group=41 off_by=43 note_polyphony=4 ampeg_release=0.4
+sample=ride_bell_rm.wav
+
+//Edge hits (crashes)
+&lt;region&gt;
+key=59 group=32 off_by=33 note_polyphony=6 ampeg_release=0.3
+sample=ride_edge_oh.wav
+&lt;region&gt;
+key=59 group=42 off_by=43 note_polyphony=6 ampeg_release=0.4
+sample=ride_edge_rm.wav
+
+//Edge chokes
+&lt;region&gt;
+key=71 ampeg_attack=0.15 group=33
+sample=ride_choke_oh.wav
+&lt;region&gt;
+key=71 ampeg_attack=0.15 group=43
+sample=ride_choke_rm.wav
+</code></pre>
+<h2 id="another-approach-to-limiting-polyphony">Another approach to limiting polyphony</h2>
+<p>If there is no need have a choke group, it's possible to limit the polyphony of
+a cymbal in a way which is more controllable, by having it self-mute but making
+the fadeout time of the previous samples long. This cannot be done when chokes
+are required, because chokes need a fast fadeout, but it is another option which
+allows how much dense patterns on a cymbal will build up to be controlled with a
+MIDI CC parameter - the polyphony opcode cannot be modulated by MIDI CC, but
+ampeg_release can. Here is how that might work using CC 100 to modulate the time,
+with different maximum times for different articulations, as in general edge hits
+will build up the most and bell hits the least. Of course, it's not very possible
+to modulate the buildup of a cymbal in the real world, but that doesn't mean it
+can't be useful in the sampled world.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+off_mode=normal
+ampeg_release=0.1
+
+//Bow hits
+&lt;region&gt;
+key=51 group=30 off_by=30
+ampeg_release_oncc100=5
+sample=ride_bow_oh.wav
+&lt;region&gt;
+key=51 group=40 off_by=40
+ampeg_release_oncc100=5.7
+sample=ride_bow_rm.wav
+
+//Bell hits
+&lt;region&gt;
+key=53 group=31 off_by=31
+ampeg_release_oncc100=3
+sample=ride_bell_oh.wav
+&lt;region&gt;
+key=53 group=41 off_by=41
+ampeg_release_oncc100=3.5
+sample=ride_bell_rm.wav
+
+//Edge hits (crashes)
+&lt;region&gt;
+key=59 group=32 off_by=32
+ampeg_release_oncc100=7
+sample=ride_edge_oh.wav
+&lt;region&gt;
+key=59 group=42 off_by=42
+ampeg_release_oncc100=8
+sample=ride_edge_rm.wav
+</code></pre>
+<h2 id="deep-sampled-hi-hat-example">Deep-sampled hi-hat example</h2>
+<p>Putting most of the above knowledge together into a complex example can result
+in long SFZ files, but the principles themselves remain the same. The mapping
+for a deeply sampled hi-hat with tightly closed, closed, loosely closed, quarter
+open, half open, open, foot chik, foot splash and pedal return samples, with
+separate shank and tip hits for tightly closed, closed, loosely closed and
+quarter open might look like this:</p>
+<pre><code class="language-sfz">&lt;control&gt;
+//Key assignments - hi-hat
+#define $htclstkey 42
+#define $htchkkey 44
+#define $htvartkey 46
+#define $htclsskey 54
+#define $htsplkey 56
+#define $htvarskey 58
+#define $htretkey 68
+
+//Hi-hat CC ranges - order for keyboard/sequencing use
+//E-kit pedal should be backwards
+#define $ht_lo_hi_init 127
+#define $ht_cl_lo 0
+#define $ht_cl_hi 25
+#define $ht_lc_lo 26
+#define $ht_lc_hi 51
+#define $ht_qo_lo 52
+#define $ht_qo_hi 76
+#define $ht_ho_lo 77
+#define $ht_ho_hi 102
+#define $ht_open_lo 103
+#define $ht_open_hi 127
+
+#define $mg_open_lo 0
+#define $mg_open_hi 102
+#define $mg_ho_lo 0
+#define $mg_ho_hi 76
+#define $mg_qo_lo 0
+#define $mg_qo_hi 51
+#define $mg_lc_lo 0
+#define $mg_lc_hi 25
+
+label_cc4=Hi-hat position
+label_cc100=Hi-hat close
+label_cc101=Hi-hat OH
+
+set_cc4=$ht_lo_hi_init
+set_cc100=40
+set_cc101=100
+
+&lt;global&gt; loop_mode=one_shot
+seq_length=4
+ampeg_release=0.12
+amp_velcurve_1=0.4
+
+//Foot chiks
+
+&lt;master&gt; key=$htchkkey amplitude_cc100=100
+#include &quot;mappings/hihat_14/ht_chik_cl.sfz&quot;
+
+&lt;master&gt; key=$htchkkey amplitude_cc101=100
+#include &quot;mappings/hihat_14/ht_chik_oh.sfz&quot;
+
+//Stick tip hits
+
+&lt;master&gt; key=$htclstkey amplitude_cc100=100 group=11 off_by=10
+#include &quot;mappings/hihat_14/ht_tc_cl.sfz&quot;
+
+&lt;master&gt; key=$htclstkey amplitude_cc101=100 group=21 off_by=20 ampeg_release=0.2
+#include &quot;mappings/hihat_14/ht_tc_oh.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc100=100 group=12 off_by=11
+locc4=$ht_cl_lo hicc4=$ht_cl_hi
+#include &quot;mappings/hihat_14/ht_cl_cl.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc101=100 group=22 off_by=21 ampeg_release=0.2
+locc4=$ht_cl_lo hicc4=$ht_cl_hi
+#include &quot;mappings/hihat_14/ht_cl_oh.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc100=100 group=13 off_by=12
+locc4=$ht_lc_lo hicc4=$ht_lc_hi
+#include &quot;mappings/hihat_14/ht_lc_cl.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc101=100 group=23 off_by=22 ampeg_release=0.2
+locc4=$ht_lc_lo hicc4=$ht_lc_hi
+#include &quot;mappings/hihat_14/ht_lc_oh.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc100=100 group=14 off_by=13
+locc4=$ht_qo_lo hicc4=$ht_qo_hi
+#include &quot;mappings/hihat_14/ht_qo_cl.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc101=100 group=24 off_by=23 ampeg_release=0.2
+locc4=$ht_qo_lo hicc4=$ht_qo_hi
+#include &quot;mappings/hihat_14/ht_qo_oh.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc100=100 group=15 off_by=14
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+locc4=$ht_ho_lo hicc4=$ht_ho_hi
+#include &quot;mappings/hihat_14/ht_ho_cl.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc101=100 group=25 off_by=24 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+locc4=$ht_ho_lo hicc4=$ht_ho_hi
+#include &quot;mappings/hihat_14/ht_ho_oh.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc100=100 group=16 off_by=15
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
+locc4=$ht_open_lo hicc4=$ht_open_hi
+#include &quot;mappings/hihat_14/ht_open_cl.sfz&quot;
+
+&lt;master&gt; key=$htvartkey amplitude_cc101=100 group=26 off_by=25 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
+locc4=$ht_open_lo hicc4=$ht_open_hi
+#include &quot;mappings/hihat_14/ht_open_oh.sfz&quot;
+
+//Stick shank hits
+
+&lt;master&gt; key=$htclsskey amplitude_cc100=100 group=11 off_by=10
+#include &quot;mappings/hihat_14/ht_tc_s_cl.sfz&quot;
+
+&lt;master&gt; key=$htclsskey amplitude_cc101=100 group=21 off_by=20 ampeg_release=0.2
+#include &quot;mappings/hihat_14/ht_tc_s_oh.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc100=100 group=12 off_by=11
+locc4=$ht_cl_lo hicc4=$ht_cl_hi
+#include &quot;mappings/hihat_14/ht_cl_s_cl.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc101=100 group=22 off_by=21 ampeg_release=0.2
+locc4=$ht_cl_lo hicc4=$ht_cl_hi
+#include &quot;mappings/hihat_14/ht_cl_s_oh.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc100=100 group=13 off_by=12
+locc4=$ht_lc_lo hicc4=$ht_lc_hi
+#include &quot;mappings/hihat_14/ht_lc_s_cl.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc101=10 group=23 off_by=22 ampeg_release=0.2
+locc4=$ht_lc_lo hicc4=$ht_lc_hi
+#include &quot;mappings/hihat_14/ht_lc_s_oh.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc100=100 group=14 off_by=13
+locc4=$ht_qo_lo hicc4=$ht_qo_hi
+#include &quot;mappings/hihat_14/ht_qo_s_cl.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc101=100 group=24 off_by=23 ampeg_release=0.2
+locc4=$ht_qo_lo hicc4=$ht_qo_hi
+#include &quot;mappings/hihat_14/ht_qo_s_oh.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc100=100 group=15 off_by=14
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+locc4=$ht_ho_lo hicc4=$ht_ho_hi
+#include &quot;mappings/hihat_14/ht_ho_cl.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc101=100 group=25 off_by=24 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+locc4=$ht_ho_lo hicc4=$ht_ho_hi
+#include &quot;mappings/hihat_14/ht_ho_oh.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc100=100 group=16 off_by=15
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
+locc4=$ht_open_lo hicc4=$ht_open_hi
+#include &quot;mappings/hihat_14/ht_open_cl.sfz&quot;
+
+&lt;master&gt; key=$htvarskey amplitude_cc101=100 group=26 off_by=25 ampeg_release=0.2
+amplitude_oncc4=100 amplitude_curvecc4=22 amplitude_smoothcc4=150
+locc4=$ht_open_lo hicc4=$ht_open_hi
+#include &quot;mappings/hihat_14/ht_open_oh.sfz&quot;
+
+//Footsplashes are the only self-muting group
+
+&lt;master&gt; key=$htsplkey amplitude_cc100=100 group=17 off_by=17
+#include &quot;mappings/hihat_14/ht_footspl_cl.sfz&quot;
+
+&lt;master&gt; key=$htsplkey amplitude_cc101=100 group=27 off_by=27 ampeg_release=0.2
+#include &quot;mappings/hihat_14/ht_footspl_oh.sfz&quot;
+
+//Stick hits on the shaft, not involved in muting
+
+&lt;master&gt; key=$htperckey amplitude_cc100=100
+#include &quot;mappings/hihat_14/ht_perc_cl.sfz&quot;
+
+&lt;master&gt; key=$htperckey amplitude_cc101=100
+#include &quot;mappings/hihat_14/ht_perc_oh.sfz&quot;
+
+//Hi hat pedal return noises, muted by anything else
+
+&lt;master&gt; key=$htretkey amplitude_cc100=100 group=18 off_by=17
+#include &quot;mappings/hihat_14/ht_return_cl.sfz&quot;
+
+&lt;master&gt; key=$htretkey amplitude_cc101=100 group=28 off_by=27 ampeg_release=0.2
+#include &quot;mappings/hihat_14/ht_return_oh.sfz&quot;
+
+//Hat mute silence groups
+&lt;master&gt; seq_length=1
+
+&lt;group&gt; group=18
+//The range which mutes hi-hat pedal return noises
+//Everything except themselves
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=17
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=17
+//The range which mutes footsplashes
+//Everything except pedal return noises and open
+//Footsplashes are the only articulation which mutes itself
+//Splash also mutes splash, but key=$htsplkey is not part of this silence group
+//Instead splash regions themselves are marked with group=17 also
+//Kind of a kludge, but keeps the silence from instantly muting the splash
+//while allowing a subsequent splash to mute the current splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=17
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
+
+&lt;group&gt; group=15
+//The range which mutes open hi-hats
+//Everything except pedal return noises and open
+//Just like the footsplash mute group, except the footsplash key is in this too
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=14
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htsplkey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=14
+//The range which mutes half open hi-hats
+//Everything except open and half-open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=13
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_ho_lo hicc4=$mg_ho_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_ho_lo hicc4=$mg_ho_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=13
+//The range which mutes quarter open hi-hats
+//Everything except open, half-open and quarter open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=12
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_qo_lo hicc4=$mg_qo_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_qo_lo hicc4=$mg_qo_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=12
+//The range which mutes loosely closed hi-hats
+//Everything except open, half-open, quarter open and loosely closed
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=11
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_lc_lo hicc4=$mg_lc_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_lc_lo hicc4=$mg_lc_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=11
+//The range which mutes regular closed hi-hats
+//Just foot chik, tightly closed and footsplash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=10
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=10
+//The range which mutes tightly closed hi-hats - just foot chik and footsplash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=28
+//The range which mutes hi-hat pedal return noises
+//Everything except themselves
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=27
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=27
+//The range which mutes footsplashes
+//Everything except pedal return noises and open
+//Footsplashes are the only articulation which mutes itself
+//Splash also mutes splash, but key=$htsplkey is not part of this silence group
+//Instead splash regions themselves are marked with group=27 also
+//Kind of a kludge, but keeps the silence from instantly muting the splash
+//while allowing a subsequent splash to mute the current splash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=27
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
+
+&lt;group&gt; group=25
+//The range which mutes open hi-hats
+//Everything except pedal return noises and open
+//Just like the footsplash mute group, except the footsplash key is in this too
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=24
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
+&lt;region&gt; key=$htsplkey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=24
+//The range which mutes half open hi-hats
+//Everything except open and half-open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=23
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_ho_lo hicc4=$mg_ho_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_ho_lo hicc4=$mg_ho_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=23
+//The range which mutes quarter open hi-hats
+//Everything except open, half-open and quarter open
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=22
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_qo_lo hicc4=$mg_qo_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_qo_lo hicc4=$mg_qo_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=22
+//The range which mutes loosely closed hi-hats
+//Everything except open, half-open, quarter open and loosely closed
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=21
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htvartkey locc4=$mg_lc_lo hicc4=$mg_lc_hi
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htvarskey locc4=$mg_lc_lo hicc4=$mg_lc_hi
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=21
+//The range which mutes regular closed hi-hats
+//Just foot chik, tightly closed and footsplash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+off_by=20
+&lt;region&gt; key=$htclstkey
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htclsskey
+&lt;region&gt; key=$htsplkey
+
+&lt;group&gt; group=20
+//The range which mutes tightly closed hi-hats - just foot chik and footsplash
+sample=*silence
+loop_mode=loop_continuous off_mode=fast
+ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+&lt;region&gt; key=$htchkkey
+&lt;region&gt; key=$htsplkey
+
+&lt;curve&gt;curve_index=21
+v000=0.13
+v037=0.8
+v077=1
+v127=1
+
+&lt;curve&gt;curve_index=22
+v000=0.1
+v037=0.7
+v077=1
+v127=1
+</code></pre>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-eye"
+									aria-hidden="true"></i>
+								Follow us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/"
+											title="GitHub Organization" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub Organization</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="News Atom Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-rss fa-fw"
+										aria-hidden="true"></i>
+										News Atom Feed</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/t7nrZ6d"
+											title="Discord Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord Chat</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+											title="Internet Relay Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-link"
+									aria-hidden="true"></i>
+								Quick links
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="/legacy"
+											title="Old rgc:audio SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Old rgc:audio SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://www.drealm.info/sfz/"
+											title="Peter L. Jones' SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Peter L. Jones' SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+											title="KVR Forum SFZ post" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										KVR Forum SFZ post</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14"
+											title="Plogue Forum" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										Plogue Forum</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/tests/"
+											title="rgc:audio SFZ test suite" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-download fa-fw"
+										aria-hidden="true"></i>
+										rgc:audio SFZ test suite</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/opcode-suggestions/"
+											title="Opcode suggestions" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-lightbulb fa-fw"
+										aria-hidden="true"></i>
+										Opcode suggestions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">
+					<span style="float:right">
+						This site is open source.
+						<a href="https://github.com/sfz/sfz.github.io/edit/source/docs/tutorials/cymbal_muting.md">
+						Improve this page</a>
+					</span>
+				</p>
+			</footer>
+		</div>		<script>
+			var base_url	= "../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script async defer src="../../assets/js/popper.min.js"></script>
+		<script async defer src="../../assets/js/bootstrap.min.js"></script>
+		<script async defer src="../../assets/js/anchor.min.js"></script>
+		<script async defer src="../../assets/js/base.min.js"></script>
+		<script async defer src="../../assets/js/scroll-to-top.min.js"></script>
+		<script async defer src="../../../../assets/js/index.bundle.min.js"></script>
+		<script async defer src="../../../../assets/js/bootstrap-table.min.js"></script>
+		<script async defer src="../../../../assets/js/mermaid.min.js"></script>
+		<script async defer src="../../../../search/main.js"></script>		<script
+			type="text/javascript"
+			src="../../assets/js/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/bash.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			window.addEventListener("load", function (event) {
+				if (anchors) {
+					anchors.options.placement = 'left';
+					anchors.add();
+				}
+			});
+		</script><!-- Search Dialog -->
+<div
+	class="modal fade"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-body">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div
+						id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>

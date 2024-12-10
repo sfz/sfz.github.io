@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Karoryfer Samples and SFZ Format Team">
+		<meta name="web-author" content="redtide and SFZ Format Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Strums - SFZ Format</title>
+	
+		<script src="../../assets/js/color-modes.js"></script>
+		<link href="../../atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+		
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="152x152" href="../../assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../../assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link href="../../assets/css/style.min.css" rel="stylesheet" media="screen">
+		<link href="../../../../assets/css/fontawesome.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/brands.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/solid.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/v4-font-face.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/bootstrap-table.min.css" rel="stylesheet">		<link
+			rel="stylesheet"
+			href="../../assets/css/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../assets/css/github-dark-dimmed.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+				</symbol>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+				</symbol>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+				</symbol>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+				</symbol>
+			</svg>
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container-fluid">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../.."
+						>
+							<img
+								alt="Logo image"
+								src="../../assets/img/logo.svg"
+							/>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSyntax"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Syntax
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSyntax"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/headers/"
+										>
+											Headers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/opcodes/"
+										>
+											Opcodes
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/"
+										>
+											Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/lfo"
+										>
+											LFO
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/extensions/midi_ccs"
+										>
+											Extended MIDI CCs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/misc/categories"
+										>
+											Types & Categories
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/versions"
+										>
+											Versions
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSoftware"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Software
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSoftware"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/software/players"
+										>
+											Players
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/software/tools"
+										>
+											Tools
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarTutorials"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Tutorials
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarTutorials"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basics"
+										>
+											Basics
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basic_sfz_file"
+										>
+											Basic / Template
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sustained_note_basics"
+										>
+											Sustained Note Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/vibrato"
+										>
+											Vibrato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/legato"
+										>
+											Legato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/unison"
+										>
+											Unison
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/range_extension"
+										>
+											Range Extension
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/modular_instruments"
+										>
+											Modular Instruments
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/subtractive_synths"
+										>
+											Subtractive Synthesizers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/strum"
+										>
+											Strumming
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/drum_basics"
+										>
+											Drum & Round Robin Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/cymbal_muting"
+										>
+											Cymbal Muting
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/epic_drums"
+										>
+											Epic Drums
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/brush_stirs"
+										>
+											Brush Stirs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz1_modulations"
+										>
+											SFZ 1 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz2_modulations"
+										>
+											SFZ 2 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/lfo"
+										>
+											Pitch LFO Examples
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/videos"
+										>
+											Video Tutorials
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="https://sfzinstruments.github.io"
+								>
+									Instruments
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="/news"
+								>
+									News
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+						<h1>Strums</h1><p>Strumming can be difficult to produce with samples. SFZ does have some capabilities to make it a little easier.</p>
+<p>Creating a strum is basically triggering several single-string samples with some of them delayed slightly.
+Similar but even simpler is a drum flam, which is two drum hits in rapid succession.</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=snare1.wav
+&lt;region&gt;
+delay=0.03
+sample=snare2.wav
+</code></pre>
+<h2 id="basic-guitar-chord-strum">Basic Guitar Chord Strum</h2>
+<p>Here is how an open E major chord could be triggered with a single key:</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+delay=0.04
+sample=e5.wav
+&lt;region&gt;
+delay=0.06
+sample=g#4.wav
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.1
+sample=e6.wav
+</code></pre>
+<p>This is a downward strum - physically the lower strings on a guitar are located higher, so downward strums begin with the lowest
+notes. An upstroke would have the same samples but with the delays in reversed order, so it starts with the higest notes.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+delay=0.1
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.06
+sample=e5.wav
+&lt;region&gt;
+delay=0.04
+sample=g#4.wav
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+sample=e6.wav
+</code></pre>
+<h2 id="different-chord-types">Different Chord Types</h2>
+<p>An E minor chord would be similar, only with a G instead of the G#. Leaving out the upward strum:</p>
+<pre><code class="language-sfz">&lt;global&gt;
+sw_lokey=36
+sw_hikey=37
+sw_default=36
+
+&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+delay=0.04
+sample=e5.wav
+//Fourth string is different for major versus minor chords.
+&lt;region&gt;
+sw_last=36
+sw_label=Major
+delay=0.06
+sample=g#4.wav
+&lt;region&gt;
+sw_last=37
+sw_label=Minor
+delay=0.06
+sample=g4.wav
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.1
+sample=e6.wav
+</code></pre>
+<p>Of course for non-barre chords, there could be differences in voicings for more than one string, but the principle
+remains the same.</p>
+<p>The free Emilyguitar instrument located at https://github.com/sfzinstruments/karoryfer.emilyguitar includes a simple
+strum patch with keyswitchable power chords, major barre chords and minor barre chords. It has downward strums only
+with a very short strum time. However, it is not well-organized and not at all commented, its patches being just
+output from sfzed. Somewhat more organized and including power chords (which are simply the lowest three strings of
+the barre chord), our E chord might look like this:</p>
+<pre><code class="language-sfz">&lt;global&gt;
+sw_lokey=36
+sw_hikey=38
+sw_default=36
+
+&lt;group&gt;
+key=40
+//Lowest three strings are the same regardless of keyswitch
+&lt;region&gt;
+sample=e4.wav
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+delay=0.04
+sample=e5.wav
+
+//In order to display the keyswitch label for power chords,
+//we need a placeholder
+&lt;group&gt;
+key=40
+sw_last=37
+sw_label=Power
+&lt;region&gt;
+sample=*silence
+ampeg_decay=0
+ampeg_sustain=0
+ampeg_release=0
+
+//Fourth string is different for major versus minor chords
+//It is not triggered at all for power chords
+&lt;group&gt;
+key=40
+&lt;region&gt;
+sw_last=36
+sw_label=Major
+delay=0.06
+sample=g#4.wav
+&lt;region&gt;
+sw_last=37
+sw_label=Minor
+delay=0.06
+sample=g4.wav
+
+//Top two strings are not triggered for power chords
+//Duplicated for major and minor keyswitches
+&lt;group&gt;
+key=40
+sw_last=36
+sw_label=Major
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.1
+sample=e6.wav
+&lt;group&gt;
+key=40
+sw_last=37
+sw_label=Minor
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.1
+sample=e6.wav
+</code></pre>
+<p>For upwards strums, simply reversing the order of delay values would result in the power chords being
+delayed as the e5.wav region would be the first sample triggered, and it would have 0.006 seconds of
+delay. This would not be good. Therefore, if we want to add upwards strums on lower keyswitches, we
+might end up with something like this:</p>
+<pre><code class="language-sfz">&lt;global&gt;
+sw_lokey=33
+sw_hikey=38
+sw_default=36 //Default is major chord, downward strum
+
+//Lower three strings for barre chords
+&lt;group&gt;
+key=40
+sw_last=35
+sw_label=Major Up
+&lt;region&gt;
+sample=e4.wav
+delay=0.1
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.06
+sample=e5.wav
+&lt;group&gt;
+key=40
+sw_last=34
+sw_label=Minor Up
+&lt;region&gt;
+sample=e4.wav
+delay=0.1
+&lt;region&gt;
+delay=0.08
+sample=b4.wav
+&lt;region&gt;
+delay=0.06
+sample=e5.wav
+
+//Lower three strings for power chords
+&lt;group&gt;
+key=40
+sw_last=33
+sw_label=Power Up
+&lt;region&gt;
+sample=e4.wav
+delay=0.04
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+sample=e5.wav
+
+//Fourth string is different for major versus minor chords
+//It is not triggered at all for power chords
+&lt;group&gt;
+key=40
+&lt;region&gt;
+sw_last=35
+sw_label=Major Up
+delay=0.004
+sample=g#4.wav
+&lt;region&gt;
+sw_last=34
+sw_label=Minor Up
+delay=0.004
+sample=g4.wav
+
+//Top two strings are not triggered for power chords
+//Duplicated for major and minor keyswitches
+&lt;group&gt;
+key=40
+sw_last=35
+sw_label=Major Up
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+sample=e6.wav
+&lt;group&gt;
+key=40
+sw_last=34
+sw_label=Minor up
+&lt;region&gt;
+delay=0.02
+sample=b4.wav
+&lt;region&gt;
+sample=e6.wav
+</code></pre>
+<p>Depending on needs, this might not be worth implementing, as duplicaton of regions adds to the time
+required for many SFZ players (certainly ARIA/sforzando) to parse and open an instrument. It is,
+however, certainly possible.</p>
+<h2 id="adjusting-time">Adjusting Time</h2>
+<p>The above strums all have a fixed duration. Adjusting strum time is easily done by replacing the
+fixed delay with a modulated one. Going back to the simple E major example for brevity's sake:</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+&lt;region&gt;
+delay_cc1=0.2
+sample=b4.wav
+&lt;region&gt;
+delay_cc1=0.4
+sample=e5.wav
+&lt;region&gt;
+delay_cc1=0.6
+sample=g#4.wav
+&lt;region&gt;
+delay_cc1=0.8
+sample=b4.wav
+&lt;region&gt;
+delay_cc1=1
+sample=e6.wav
+</code></pre>
+<p>It would also be easy to add a small random delay to each voice. However, because delay is not an
+available target for the var modulator, it is not possible to have an adjustable amount of
+randomization, or make the random amount smaller when the CC adjusting the non-random delay is low.
+This means adding a simple delay_random to each voice would create the risk of "earlier" notes
+actually sounding after "later" ones when the non-random delay is close to zero. However, making
+the delay partially fixed and partially adjustable avoids this.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+&lt;region&gt;
+delay=0.01
+delay_cc1=0.2
+delay_random=0.01
+sample=b4.wav
+&lt;region&gt;
+delay=0.02
+delay_cc1=0.4
+delay_random=0.01
+sample=e5.wav
+&lt;region&gt;
+delay=0.03
+delay_cc1=0.6
+delay_random=0.01
+sample=g#4.wav
+&lt;region&gt;
+delay=0.04
+delay_cc1=0.8
+delay_random=0.01
+sample=b4.wav
+&lt;region&gt;
+delay=0.05
+delay_cc1=1
+delay_random=0.01
+sample=e6.wav
+</code></pre>
+<h2 id="ringing-and-muting">Ringing And Muting</h2>
+<p>With the above examples, the samples will play until a note-off message, then follow the usual amp
+envelope release. In reality, the strings will often ring until the string is hit again, and it
+can be more convenient to have the samples always play in their entirety unless muted:</p>
+<pre><code class="language-sfz">&lt;global&gt;
+loop_mode=one_shot
+&lt;group&gt;
+key=40
+&lt;region&gt;
+sample=e4.wav
+group=6
+off_by=6
+&lt;region&gt;
+delay_cc1=0.2
+sample=b4.wav
+group=5
+off_by=5
+&lt;region&gt;
+delay_cc1=0.4
+sample=e5.wav
+group=4
+off_by=4
+&lt;region&gt;
+delay_cc1=0.6
+sample=g#4.wav
+group=3
+off_by=3
+&lt;region&gt;
+delay_cc1=0.8
+sample=b4.wav
+group=2
+off_by=2
+&lt;region&gt;
+delay_cc1=1
+sample=e6.wav
+group=1
+off_by=1
+</code></pre>
+<p>Note that a new strum will mute all strings, without waiting for their delay for that specific string to be completed.
+There is currently elegant solution known for this. Using a longer off time or triggering a release sample could be
+possible workarounds to fill the sonic gap, though. On the positive side, a partial strum that does not hit all the
+strings would let the other strings keep ringing.</p>
+<p>If one shot mode is used, it's probably also useful to allow for quickly muting all strings when desired. That can be done with a placeholder region for each string, and combining those regions on another key, here one above the octave of the strums.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=60
+ampeg_sustain=0
+ampeg_release=0
+&lt;region&gt;
+sample=*silence
+group=6
+off_by=6
+&lt;region&gt;
+sample=*silence
+group=5
+off_by=5
+&lt;region&gt;
+sample=*silence
+group=4
+off_by=4
+&lt;region&gt;
+sample=*silence
+group=3
+off_by=3
+&lt;region&gt;
+sample=*silence
+group=2
+off_by=2
+&lt;region&gt;
+sample=*silence
+group=1
+off_by=1
+</code></pre>
+<h2 id="harp-glissandi">Harp Glissandi</h2>
+<p>Harp glissandi could be set up very similarly to a guitar strum, only with potentially a lot more notes.
+For simplicty's sake, let's consider just one octave. Speed is still controlled by CC1, and MIDI note
+24 will trigger an upward glissando starting with the C4 note.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=24
+&lt;region&gt;
+sample=c4.wav
+&lt;region&gt;
+sample=d4.wav
+delay_cc1=0.1
+&lt;region&gt;
+sample=e4.wav
+delay_cc1=0.2
+&lt;region&gt;
+sample=f4.wav
+delay_cc1=0.3
+&lt;region&gt;
+sample=g4.wav
+delay_cc1=0.4
+&lt;region&gt;
+sample=a4.wav
+delay_cc1=0.5
+&lt;region&gt;
+sample=b4.wav
+delay_cc1=0.6
+&lt;region&gt;
+sample=c5.wav
+delay_cc1=0.7
+</code></pre>
+<p>In order to make this more usable, we can add another control which will determine for how many notes
+the gliss keeps going before it stops. Let's use CC4.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=24
+//First three notes are not affected by CC4, and are always played
+&lt;region&gt;
+sample=c4.wav
+&lt;region&gt;
+sample=d4.wav
+delay_cc1=0.1
+&lt;region&gt;
+sample=e4.wav
+delay_cc1=0.2
+&lt;region&gt;
+sample=f4.wav
+delay_cc1=0.3
+locc4=1
+&lt;region&gt;
+sample=g4.wav
+delay_cc1=0.4
+locc4=32
+&lt;region&gt;
+sample=a4.wav
+delay_cc1=0.5
+locc4=64
+&lt;region&gt;
+sample=b4.wav
+delay_cc1=0.6
+locc4=96
+&lt;region&gt;
+sample=c5.wav
+delay_cc1=0.7
+locc4=127
+</code></pre>
+<p>This is essentially how a harp glissando on a folk harp operates. Concert harps have pedals which
+allow the retuning of strings to allow playing other scales, and this would need to be implemented,
+perhaps with a different MIDI CC for each pitch class. Strumming the drone strings on a Hungarian
+zither also works essentially as described here.</p>
+<h2 id="lyres-and-zithers">Lyres And Zithers</h2>
+<p>Many folk lyres, guslis etc. are tuned diatonically and chords on those are played by muting some
+strings, and strumming across both the open and muted strings. Keyswitches in another octave could
+be added to mute the strings, so that samples are only played when the switch matching that string is
+down. This basically works like a harp gliss, but the samples for the muted strings are not played.</p>
+<p>The keyswitches will not be displayed on the keyboard by most sfz players, so it will also likely
+be necessary to add some placeholder regions just to make them display.</p>
+<p>It's also common to strum across fewer than all the strings; this is basically what the power
+chord in the above guitar examples is. Instead of keyswitching, it is also possible to have partial
+strums on different keys (though this can easily require more keys than an 88-key keyboard),
+or selectable by CC, note velocity and possibly other variables as well. The below example uses
+CC4 to control how many strings are strummed.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=24
+//First three notes are not affected by CC4
+&lt;region&gt;
+sample=c4.wav
+sw_down=36
+&lt;region&gt;
+sample=d4.wav
+delay_cc1=0.1
+sw_down=38
+&lt;region&gt;
+sample=e4.wav
+delay_cc1=0.2
+sw_down=40
+&lt;region&gt;
+sample=f4.wav
+delay_cc1=0.3
+sw_down=41
+locc4=1
+&lt;region&gt;
+sample=g4.wav
+delay_cc1=0.4
+sw_down=43
+locc4=32
+&lt;region&gt;
+sample=a4.wav
+delay_cc1=0.5
+sw_down=45
+locc4=64
+&lt;region&gt;
+sample=b4.wav
+delay_cc1=0.6
+sw_down=47
+locc4=96
+&lt;region&gt;
+sample=c5.wav
+delay_cc1=0.7
+sw_down=48
+locc4=127
+
+//Placeholders to get the switch keys to be visible
+&lt;group&gt;
+sample=*silence
+ampeg_decay=0
+ampeg_sustain=0
+ampeg_release=0
+&lt;region&gt;
+key=36
+&lt;region&gt;
+key=38
+&lt;region&gt;
+key=40
+&lt;region&gt;
+key=41
+&lt;region&gt;
+key=43
+&lt;region&gt;
+key=45
+&lt;region&gt;
+key=47
+&lt;region&gt;
+key=48
+</code></pre>
+<p>For more realism, muted samples could be triggered for the strings which are not down.
+Although muting the strings for the keyswitches which are up and skipping the strings where the
+switch is down would be more analogous to the way the instruments are played in real life, this
+sort of "negative space" chord fingering is much more awkward for most users to play on a keyboard.
+It could easily be accomplished by merely switching the sw_up and sw_down opcodes in the below
+example.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=24
+
+//Ringing strings
+//First three notes are not affected by CC4
+&lt;region&gt;
+sample=c4.wav
+sw_down=36
+&lt;region&gt;
+sample=d4.wav
+delay_cc1=0.1
+sw_down=38
+&lt;region&gt;
+sample=e4.wav
+delay_cc1=0.2
+sw_down=40
+&lt;region&gt;
+sample=f4.wav
+delay_cc1=0.3
+sw_down=41
+locc4=1
+&lt;region&gt;
+sample=g4.wav
+delay_cc1=0.4
+sw_down=43
+locc4=32
+&lt;region&gt;
+sample=a4.wav
+delay_cc1=0.5
+sw_down=45
+locc4=64
+&lt;region&gt;
+sample=b4.wav
+delay_cc1=0.6
+sw_down=47
+locc4=96
+&lt;region&gt;
+sample=c5.wav
+delay_cc1=0.7
+sw_down=48
+locc4=127
+
+//Muted strings
+//First three notes are not affected by CC4
+&lt;region&gt;
+sample=c4_muted.wav
+sw_up=36
+&lt;region&gt;
+sample=d4_muted.wav
+delay_cc1=0.1
+sw_up=38
+&lt;region&gt;
+sample=e4_muted.wav
+delay_cc1=0.2
+sw_up=40
+&lt;region&gt;
+sample=f4_muted.wav
+delay_cc1=0.3
+sw_up=41
+locc4=1
+&lt;region&gt;
+sample=g4_muted.wav
+delay_cc1=0.4
+sw_up=43
+locc4=32
+&lt;region&gt;
+sample=a4_muted.wav
+delay_cc1=0.5
+sw_up=45
+locc4=64
+&lt;region&gt;
+sample=b4_muted.wav
+delay_cc1=0.6
+sw_up=47
+locc4=96
+&lt;region&gt;
+sample=c5_muted.wav
+delay_cc1=0.7
+sw_up=48
+locc4=127
+
+//Placeholders to get the switch keys to be visible
+&lt;group&gt;
+sample=*silence
+ampeg_decay=0
+ampeg_sustain=0
+ampeg_release=0
+&lt;region&gt;
+key=36
+&lt;region&gt;
+key=38
+&lt;region&gt;
+key=40
+&lt;region&gt;
+key=41
+&lt;region&gt;
+key=43
+&lt;region&gt;
+key=45
+&lt;region&gt;
+key=47
+&lt;region&gt;
+key=48
+</code></pre>
+<h2 id="chromatic-strumming-on-diatonic-instruments">Chromatic Strumming On Diatonic Instruments</h2>
+<p>The cithara barbarica instrument at https://github.com/sfzinstruments/cithara-barbarica has a patch like this.
+It simply duplicates each string's regions to cover the "missing" pitches. This works fine as long as there are
+no muted samples used for the stopped strings, and having a muted string sound every half-step would not be
+idiomatic for instruments other than the very rare chromatic gusli.</p>
+<p>One way to have muted sounds while playing chromatically would be to always trigger a muted sound for whatever
+the "real" pitch of each string should be, but have it instantly muted if a pitch in that string's range is
+played. This is not great, as the muted sound would be a half-step off, but as the muted strings are shortened
+and produce a higher pitch anyway, it seems to work well enough.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+key=26
+
+//Muted regions, each with its own group and off_by
+
+&lt;region&gt;
+sample=d4_muted.wav
+group=11
+off_by=21
+
+&lt;region&gt;
+sample=e4_muted.wav
+group=12
+off_by=22
+delay_cc1=0.100
+
+&lt;region&gt;
+sample=f4_muted.wav
+group=13
+off_by=23
+delay_cc1=0.200
+
+//Non-muted regions, with groups that will mute the above regions if one of the keys covered by that sample is held down
+
+&lt;region&gt;
+sample=d4_finger.wav
+sw_down=36
+group=21
+transpose=-2
+
+&lt;region&gt;
+sample=d4_finger.wav
+sw_down=37
+group=21
+transpose=-1
+
+&lt;region&gt;
+sample=d4_finger.wav
+sw_down=38
+group=21
+
+&lt;region&gt;
+sample=e4_finger.wav
+sw_down=39
+group=22
+transpose=-1
+delay_cc1=0.100
+
+&lt;region&gt;
+sample=e4_finger.wav
+sw_down=40
+group=22
+delay_cc1=0.100
+
+&lt;region&gt;
+sample=f4_finger.wav
+sw_down=41
+group=23
+delay_cc1=0.200
+</code></pre>
+<p>A more realistic way to handle this would be to have a MIDI CC for each string to set its tuning, so for example the C string could sound a B or C# note, like on a concert harp with pedals. However, this is probably not very convenient for most players who would rather hit a B note to sound a B. This, of course, would not actually be chromatic - but not limited to a single scale.</p>
+<h2 id="further-possibilities">Further Possibilities</h2>
+<p>In reality, a strum will transfer force to the first strings it hits,
+and subsequent strings will be hit with a little less force,
+and the delay between strings might also be nonlinear.</p>
+<p>This tutorial is open source, so feel free to contribute.</p>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-eye"
+									aria-hidden="true"></i>
+								Follow us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/"
+											title="GitHub Organization" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub Organization</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="News Atom Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-rss fa-fw"
+										aria-hidden="true"></i>
+										News Atom Feed</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/t7nrZ6d"
+											title="Discord Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord Chat</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+											title="Internet Relay Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-link"
+									aria-hidden="true"></i>
+								Quick links
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="/legacy"
+											title="Old rgc:audio SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Old rgc:audio SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://www.drealm.info/sfz/"
+											title="Peter L. Jones' SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Peter L. Jones' SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+											title="KVR Forum SFZ post" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										KVR Forum SFZ post</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14"
+											title="Plogue Forum" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										Plogue Forum</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/tests/"
+											title="rgc:audio SFZ test suite" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-download fa-fw"
+										aria-hidden="true"></i>
+										rgc:audio SFZ test suite</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/opcode-suggestions/"
+											title="Opcode suggestions" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-lightbulb fa-fw"
+										aria-hidden="true"></i>
+										Opcode suggestions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">
+					<span style="float:right">
+						This site is open source.
+						<a href="https://github.com/sfz/sfz.github.io/edit/source/docs/tutorials/strum.md">
+						Improve this page</a>
+					</span>
+				</p>
+			</footer>
+		</div>		<script>
+			var base_url	= "../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script async defer src="../../assets/js/popper.min.js"></script>
+		<script async defer src="../../assets/js/bootstrap.min.js"></script>
+		<script async defer src="../../assets/js/anchor.min.js"></script>
+		<script async defer src="../../assets/js/base.min.js"></script>
+		<script async defer src="../../assets/js/scroll-to-top.min.js"></script>
+		<script async defer src="../../../../assets/js/index.bundle.min.js"></script>
+		<script async defer src="../../../../assets/js/bootstrap-table.min.js"></script>
+		<script async defer src="../../../../assets/js/mermaid.min.js"></script>
+		<script async defer src="../../../../search/main.js"></script>		<script
+			type="text/javascript"
+			src="../../assets/js/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/bash.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			window.addEventListener("load", function (event) {
+				if (anchors) {
+					anchors.options.placement = 'left';
+					anchors.add();
+				}
+			});
+		</script><!-- Search Dialog -->
+<div
+	class="modal fade"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-body">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div
+						id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>

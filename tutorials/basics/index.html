@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Karoryfer Samples and SFZ Format Team">
+		<meta name="web-author" content="redtide and SFZ Format Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Intro to SFZ - SFZ Format</title>
+	
+		<script src="../../assets/js/color-modes.js"></script>
+		<link href="../../atom.xml" rel="alternate" title="News" type="application/atom+xml" />
+
+		
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="152x152" href="../../assets/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/ico/favicon-16x16.png">
+		<link rel="manifest" href="../../assets/ico/site.webmanifest">
+		<link rel="mask-icon" href="../../assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../../assets/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link href="../../assets/css/style.min.css" rel="stylesheet" media="screen">
+		<link href="../../../../assets/css/fontawesome.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/brands.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/solid.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/v4-font-face.min.css" rel="stylesheet">
+		<link href="../../../../assets/css/bootstrap-table.min.css" rel="stylesheet">		<link
+			rel="stylesheet"
+			href="../../assets/css/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../assets/css/github-dark-dimmed.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  		<!--!
+				Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
+				https://fontawesome.com/license/free
+				(Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+				Copyright 2023 Fonticons, Inc.
+			-->
+				<symbol id="sun" viewBox="0 0 512 512">
+					<path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+				</symbol>
+				<symbol id="moon" viewBox="0 0 384 512">
+					<path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+				</symbol>
+				<symbol id="circle-half-stroke" viewBox="0 0 512 512">
+					<path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+				</symbol>
+				<symbol id="check" viewBox="0 0 448 512">
+					<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+				</symbol>
+			</svg>
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container-fluid">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../.."
+						>
+							<img
+								alt="Logo image"
+								src="../../assets/img/logo.svg"
+							/>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav mt-2 mt-lg-0">
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSyntax"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Syntax
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSyntax"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/headers/"
+										>
+											Headers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/opcodes/"
+										>
+											Opcodes
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/"
+										>
+											Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/modulations/lfo"
+										>
+											LFO
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/extensions/midi_ccs"
+										>
+											Extended MIDI CCs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/misc/categories"
+										>
+											Types & Categories
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/versions"
+										>
+											Versions
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarSoftware"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Software
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarSoftware"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/software/players"
+										>
+											Players
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/software/tools"
+										>
+											Tools
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarTutorials"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+									aria-haspopup="true"
+								>
+									Tutorials
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarTutorials"
+								>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basics"
+										>
+											Basics
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/basic_sfz_file"
+										>
+											Basic / Template
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sustained_note_basics"
+										>
+											Sustained Note Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/vibrato"
+										>
+											Vibrato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/legato"
+										>
+											Legato
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/unison"
+										>
+											Unison
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/range_extension"
+										>
+											Range Extension
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/modular_instruments"
+										>
+											Modular Instruments
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/subtractive_synths"
+										>
+											Subtractive Synthesizers
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/strum"
+										>
+											Strumming
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/drum_basics"
+										>
+											Drum & Round Robin Basics
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/cymbal_muting"
+										>
+											Cymbal Muting
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/epic_drums"
+										>
+											Epic Drums
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/brush_stirs"
+										>
+											Brush Stirs
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/envelope_generators"
+										>
+											Envelope Generators
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz1_modulations"
+										>
+											SFZ 1 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/sfz2_modulations"
+										>
+											SFZ 2 Modulations
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/lfo"
+										>
+											Pitch LFO Examples
+										</a>
+									</li>
+									<div class="dropdown-divider"></div>
+									<li>
+										<a class="dropdown-item"
+											href="/tutorials/videos"
+										>
+											Video Tutorials
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="https://sfzinstruments.github.io"
+								>
+									Instruments
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="/news"
+								>
+									News
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half-stroke"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half-stroke"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article>
+						<h1>Intro to SFZ</h1><p>A SFZ file is a set of plain text, computer-readable instructions, which
+accompany a sample set and define how the sampler should load and work with
+those samples. If the samples are the strings of a piano or pipes of an organ,
+the SFZ file is the mechanism that connects the key to the hammer which strikes
+the strings or the air and signals to the pipes of the organ.</p>
+<p>SFZ files can be opened, edited, and created in any text editor application,
+even the default 'Notepad' in Windows. No external software is necessary
+to create or modify a SFZ file, though there are some pieces of software
+or scripts out there which greatly ease the creation or editing process.
+An example of this is an automapper, which is a script or application that takes
+a sample set and uses the names of the samples or actual audio content
+to determine how to map those samples.</p>
+<p>The SFZ file's role is a simple, two-part operation:
+1. Explain how to <strong>filter</strong> or <strong>sort</strong> the incoming MIDI data and determine which sample(s), if any, should sound in response.
+2. Instruct the Sampler how to <strong>modulate</strong>, or <em>adapt</em>, those samples, such as make them quieter or apply a filter.</p>
+<pre class="mermaid">
+graph LR
+A(Incoming MIDI Data) --> B(Sampler)
+B --> C(Audio Output)
+B --> D(SFZ File)
+D --> E(Sample1.wav)
+D --> F(Sample2.wav)
+D --> G(Sample3.wav)
+E --> H(Modulation)
+F --> H
+G --> H
+H --> C
+</pre>
+
+<h2 id="opcodes">Opcodes</h2>
+<p>The primary component of any SFZ file is the opcode. Opcodes essentially define
+'thing=value'. For example, the opcode 'volume=6' defines the volume
+of the sample as +6 decibels relative to normal.</p>
+<p>Opcodes functionally perform two different roles: (1) <em>defining performance parameters</em>,
+or (2) <em>restricting the conditions under which that sound may be used</em>. For example,
+<code>volume=6</code> defines a performance property: the sample will sound 6 decibels louder.
+On the other hand, <code>lokey=36 hikey=38</code> limits what condition
+the sound may play: the key to trigger the sound must be in the range 36 through 38.</p>
+<p>You can think of your SFZ file as a giant conditional filter, which systematically takes a MIDI message and attempts to perform a specific action in response. At the most basic level, if you simply type</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=piano.wav
+</code></pre>
+<p>Then that sample will be mapped to MIDI key 60 (middle C), and be available at ALL velocity ranges, ALL key ranges, and under ALL continuous controller values (i.e. regardless of if sustain pedal is held down or not, for example).</p>
+<p>If we add <code>lokey=58 hikey=62 pitch_keycenter=60</code> to the region, then our piano note will ONLY respond if a key within the range 58-62 (Bb to D on either side of middle C) is played. We are restricting the conditions under which that specific sample will be played.</p>
+<p>We can restrict whether or not a specific sample will play by a very wide range of parameters, including which keys are pressed, at what velocity, and what MIDI continuous controller (CC) values are currently present. For example, we can have a piano sample for when the sustain pedal is down AND velocity is less than 20 AND the key pressed is between 58 and 62 as follows:</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=piano.wav
+
+pitch_keycenter=60 //here we define the real &quot;concert&quot; pitch of the sample, MIDI note 60 or middle C
+lokey=58 //here we set the range of pitches the region will play on
+hikey=62
+
+lovel=1 //here we set the range of key velocities that the region will play on
+hivel=20
+
+locc64=64 //here we set that the sustain pedal, cc64, must be on for the region to play
+hicc64=127
+</code></pre>
+<p>If for any reason the MIDI signal DOES NOT meet ALL of the conditions, that sample will not play. That is the basic underlying framework on how SFZ files are organized.</p>
+<h2 id="headers">Headers</h2>
+<p>Headers serve to organize and separate opcodes, and are marked with <code>&lt;</code> <code>&gt;</code>
+on either side. There are three primary headers: <code>&lt;region&gt;</code>, <code>&lt;group&gt;</code>,
+and <code>&lt;global&gt;</code>, from most to least restrictive. A region, for example,
+may only contain a single sample. A group is comprised of a series of regions,
+each containing a single sample. A global is comprised of a series of groups,
+each containing a series of regions, etc.</p>
+<p><code>&lt;control&gt;</code> is a special purpose header used for a few special opcodes
+such as <code>default_path</code>.</p>
+<p>Generally SFZ instruments are not indented, but if they were,
+they would appear as such:</p>
+<pre><code class="language-sfz">&lt;control&gt;
+&lt;global&gt;
+    &lt;group&gt;
+        &lt;region&gt;
+            sample=
+        &lt;region&gt;
+            sample=
+    &lt;group&gt;
+        &lt;region&gt;
+            sample=
+        &lt;region&gt;
+            sample=
+</code></pre>
+<h3 id="inheriting">Inheriting</h3>
+<p>Note that if you entered an opcode between a <code>&lt;group&gt;</code> and its first <code>&lt;region&gt;</code>,
+that opcode would be inherited by the <code>&lt;region&gt;</code>s within the group.
+The same can be done for <code>&lt;global&gt;</code> as well, with <code>&lt;global&gt;</code> affecting all of the
+<code>&lt;group&gt;</code>s within it, and that being passed down to each of the <code>&lt;region&gt;</code>s within
+those groups as welll, allowing the parameters of dozens,
+hundreds, or thousands of samples to be altered with a single line. This massively
+cuts down on file size, as you do not need to repeat the same text in each item.</p>
+<pre><code class="language-sfz">&lt;group&gt;
+lovel=64 // enter stuff here if you want to apply it to all regions
+hivel=127
+
+&lt;region&gt;
+sample=Trumpet_C4_v2.wav
+key=60
+
+&lt;region&gt;
+sample=Trumpet_C#4_v2.wav
+key=61
+
+&lt;region&gt;
+sample=Trumpet_D4_v2.wav
+key=62
+</code></pre>
+<p>is the same as:</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=Trumpet_C4_v2.wav
+key=60
+lovel=64
+hivel=127
+
+&lt;region&gt;
+sample=Trumpet_C#4_v2.wav
+key=61
+lovel=64
+hivel=127
+
+&lt;region&gt;
+sample=Trumpet_D4_v2.wav
+key=62
+lovel=64
+hivel=127
+</code></pre>
+<p>This behavior can be overriden if that same opcode is specified within
+the lesser header with a different value. For example:</p>
+<pre><code class="language-sfz">&lt;global&gt;
+    volume=6 //this value will be inherited by everything, unless overriden below
+
+    &lt;group&gt; //Group A
+        volume=5
+
+        &lt;region&gt; //Region 1
+            volume=4
+
+        &lt;region&gt; //Region 2
+
+    &lt;group&gt; //Group B
+
+        &lt;region&gt; //Region 3
+            volume=2
+
+        &lt;region&gt; //Region 4
+</code></pre>
+<p>(indented for clarity; SFZ is not usually indented)</p>
+<p>Here's what's going on here:</p>
+<ul>
+<li>Region 1's volume is 4, as it has volume defined.</li>
+<li>Region 2's volume is 5, as it doesn't have volume defined,
+  so it inherits from Group A, as Group A has volume defined.</li>
+<li>Region 3's volume is 2, as it has volume defined.</li>
+<li>Region 4's volume is 6 as it doesn't have volume defined, nor does Group B,
+  so it inherits from the Global volume setting which is 6.</li>
+</ul>
+<p>Always look for opportunities to use inheriting to keep your scripts tidy
+by removing duplicate code.</p>
+<h3 id="header-nesting">Header Nesting</h3>
+<p>Unlike many popular scripting or programming languages or markup languages like HTML, XML, JSON, etc. there is no such concept as <em>nesting</em> in SFZ. <em>Nesting</em> is when a header of the same type can exist within another header of the same type. Nesting is very useful, but it can add a lot of complexity and layers to a language, and is a common source of bugs or mistakes as well as a slight impediment of speed. The downside to the lack of nesting is that the number of layers is restricted severely rather than infinite. That is why there is both <code>&lt;group&gt;</code> and <code>&lt;global&gt;</code>, and the ARIA Player/Sforzando will also use an intermediate between the two, <code>&lt;master&gt;</code> to provide one more layer.</p>
+<p>In SFZ format, a header ends when the next header of that type is started. For example, if I put a <code>&lt;region&gt;</code> after another <code>&lt;region&gt;</code>, it will end the first region automatically at the start of declaring the next.</p>
+<p>Keep in mind that group, global, and master are merely macros to reduce duplicate code. When compiled (in most SFZ players), the SFZ file will run as if everything is inside the regions themselves.</p>
+<h2 id="organization-of-opcodes-within-headers">Organization of Opcodes within Headers</h2>
+<p>Opcodes may be listed in a row OR one per line, unofficially known as 'condensed' and 'expanded' view:</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=piano_D4_vl1.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+lovel=1
+hivel=50
+</code></pre>
+<p>is equal to:</p>
+<pre><code class="language-sfz">&lt;region&gt; sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+</code></pre>
+<p>You can see how much space is saved in the latter case, and it allows bulk adjustments to be done easier and makes debugging slightly easier, e.g.:</p>
+<pre><code class="language-sfz">&lt;region&gt; sample=piano_D4_vl1.wav lokey=62 hikey=63 pitch_keycenter=62 lovel=1 hivel=50
+&lt;region&gt; sample=piano_E4_vl1.wav lokey=64 hikey=65 pitch_keycenter=64 lovel=1 hivel=50
+&lt;region&gt; sample=piano_F#4_vl1.wav lokey=66 hikey=67 pitch_keycenter=66 lovel=11 hivel=50
+&lt;region&gt; sample=piano_G#4_vl1.wav lokey=68 hikey=69 pitch_keycenter=68 lovel=1 hivel=50
+</code></pre>
+<p>You can see there is something wrong with the third region, a typo of <code>lovel=11</code> instaed of <code>lovel=1</code>.</p>
+<p>These four lines would replace over 20 lines, making files much more manageable. It is possible to swap between the two by using a find-and-replace operation in your text editor (e.g. Notepad++ or equivalent) to replace new line character with a space (this can be done by selecting a blank line by clicking and dragging down on a blank so that one line is highlighted, <em>THEN</em> open the find/replace dialog and it will be auto-filled in the 'find' field; put a single space in the 'replace with' field. Try executing and see if it works; see the video below for a visual representation of the process).</p>
+<p>https://youtu.be/Lr7_qS2iV30</p>
+<h2 id="pitch">Pitch</h2>
+<p>If using a pitch based instrument, you will most likely be working heavily with
+three opcodes: <code>lokey</code>, <code>hikey</code>, and <code>pitch_keycenter</code>. These opcodes define the range
+of MIDI note numbers or note names that will allow the note to play.
+It is highly recommended that you use MIDI note numbers, as pitch naming
+conventions are poorly standardized at best.</p>
+<p>You can remember the MIDI note numbers for the C's as follows,
+using <em>International Pitch Notation</em>, which states C4=MIDI note number 60:</p>
+<pre><code>C1:24
+C2: 36 (this is the C below bass clef)
+C3: 48 (this is the C in bass clef)
+C4: 60 (this is Middle C)
+C5: 72 (this is the C in treble clef)
+C6: 84 (this is the C above treble clef)
+C7: 96
+</code></pre>
+<p>(note that many, many samplers use a different standard of C3=60,
+in which case all numbers are shifted down one; in fact, this is probably much more commonly found)</p>
+<p>You'll notice each value is exactly 12 notes apart from the others.
+It's not too difficult to calculate notes between the C's, or keep a chart
+on your wall or desk with the note names and MIDI numbers listed out.
+Many hours have been saved debugging and mapping for me in this way.</p>
+<h2 id="velocity-layers">Velocity Layers</h2>
+<p>For most instruments, it is possible to perform notes of varying intensity. For classically trained musicians, this might be called <em>dynamics</em> (such as <em>piano, forte, mezzo-forte,</em> etc.). For a piano, when a key is struck with minimal force versus a great deal of force, a rather different tone is emitted, with harder strikes having more higher frequency content present.</p>
+<p>In the MIDI world, we refer to this as <em>Velocity</em>, borrowing the term from the world of physics. In the original MIDI spec, velocity has a range of 1-127 (aside: a velocity value of '0' is actually an alias of 'note off' signal, so the actual range is 1-127, not 0-127).</p>
+<p>So, to make a realistic piano (or really most any instrument), it is necessary to sample the tone of the instrument at several different dynamic levels or velocities. We collectively refer to these sets of levels as <em>Velocity Layers</em> or <em>Dynamic Layers</em>.</p>
+<p>For example, let us say we record a piano with three such velocity layers. The softest layer might be what a classically trained pianist might call <em>piano</em> or <em>pianissimo (p or pp</em> marking). The moderate layer might be <em>mezzo-forte (mf)</em>, and the hardest layer <em>fortissimo (ff)</em>.</p>
+<p>In SFZ, we would assign each layer to a velocity range from the 1-127 range. For example, the lowest layer might get the range of 1-50, the medium from 51-100, and the loudest from 101-127.</p>
+<p>We express this in SFZ using lovel and hivel, for example:</p>
+<pre><code class="language-sfz">&lt;region&gt;
+sample=piano_C4_vl1.wav
+lovel=1
+hivel=50
+
+&lt;region&gt;
+sample=piano_C4_vl2.wav
+lovel=51
+hivel=100
+
+&lt;region&gt;
+sample=piano_C4_vl3.wav
+lovel=101
+hivel=127
+</code></pre>
+<p>We would of course also add our <code>lokey</code>, <code>hikey</code>, and <code>pitch_keycenter</code> to these as well if we recorded multiple tones on the instrument.</p>
+<h3 id="using-velocity-with-groups-inheriting">Using Velocity with Groups &amp; Inheriting</h3>
+<p>To simplify our lives and keep our SFZ files from being huge, we can also use the <code>&lt;group&gt;</code> header to organize our velocity layers, for example.</p>
+<p>Any <code>&lt;region&gt;</code> within a <code>&lt;group&gt;</code> will of course inherit whatever is listed in that <code>&lt;group&gt;</code>, so if we group our samples as shown below, we can significantly cut down on the amount of space needed in the file:</p>
+<pre><code class="language-sfz">&lt;group&gt; //velocity layer 1 (pp)
+lovel=1
+hivel=50
+
+&lt;region&gt; //C4
+sample=piano_C4_vl1.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+&lt;region&gt; //D4
+sample=piano_D4_vl1.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+&lt;region&gt; //E4
+sample=piano_E4_vl1.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+&lt;region&gt; //F4
+sample=piano_F4_vl1.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+
+&lt;group&gt; //velocity layer 2 (mf)
+lovel=51
+hivel=100
+
+&lt;region&gt; //C4
+sample=piano_C4_vl2.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+&lt;region&gt; //D4
+sample=piano_D4_vl2.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+&lt;region&gt; //E4
+sample=piano_E4_vl2.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+&lt;region&gt; //F4
+sample=piano_F4_vl2.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+
+&lt;group&gt; //velocity layer 3 (ff)
+lovel=101
+hivel=127
+
+&lt;region&gt; //C4
+sample=piano_C4_vl3.wav
+lokey=60
+hikey=61
+pitch_keycenter=60
+
+&lt;region&gt; //D4
+sample=piano_D4_vl3.wav
+lokey=62
+hikey=63
+pitch_keycenter=62
+
+&lt;region&gt; //E4
+sample=piano_E4_vl3.wav
+lokey=64
+hikey=64
+pitch_keycenter=64
+
+&lt;region&gt; //F4
+sample=piano_F4_vl3.wav
+lokey=65
+hikey=66
+pitch_keycenter=65
+</code></pre>
+<p>Keep in mind of course that we can always override the inheriting behavior here, such as in the case of a sample for which only two velocity layers were recorded. This might happen in the case of a mistake, or in the case where time was running short in the session, or in some cases where the instrument physically has less distinction between its quietest and loudest sounds and it was desirable to save some time.</p>
+<p>You can also use group, master, and global to organize other things than velocity layers, such as keys, sustain pedal state, round robins, mic positions, and more. Just be careful as in some cases you might run out of headers to use if the file gets too complex, such as if you are using multiple mic positions, round robins, and grouping your velocity layers as well.</p>
+<h2 id="includes">Includes</h2>
+<p>One final more advanced topic to discuss is Includes. Perhaps the dark magic of SFZ, <code>#include</code> allows you to take the contents of one SFZ file and import them into your current file. This allows another layer of organiziation to take place, with, for example, all of the samples for each drum in a drum kit to exist in a separate .sfz file without an assigned key range, and a single master .sfz file to inherit each of those into a <code>&lt;group&gt;</code> where their key range is assigned (see Virtuosity Drums as a good example of this process). This might also be useful for an acoustic instrument to organize by mic position or articulation.</p>
+<p>This allows you to keep an extremely tidy workflow, creating easily-managed main files where you can rapidly change key ranges and other control values to get the controls you need.</p>
+<style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=)|youtube-nocookie\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+          el.innerHTML = theInnerHTML;
+        }
+      }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube-nocookie.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                if(p[i].innerHTML.indexOf('start=') !== -1) theInnerHTML += '&start='+p[i].innerHTML.substring(p[i].innerHTML.indexOf('start=')+6);
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-eye"
+									aria-hidden="true"></i>
+								Follow us
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/"
+											title="GitHub Organization" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-github fa-fw"
+										aria-hidden="true"></i>
+										GitHub Organization</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/atom.xml"
+											title="News Atom Feed" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-rss fa-fw"
+										aria-hidden="true"></i>
+										News Atom Feed</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://discord.gg/t7nrZ6d"
+											title="Discord Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fab fa-discord fa-fw"
+										aria-hidden="true"></i>
+										Discord Chat</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#sfzformat"
+											title="Internet Relay Chat" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-hashtag fa-fw"
+										aria-hidden="true"></i>
+										IRC</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header bg-dark text-bg-dark">
+								<i class="fa fa-link"
+									aria-hidden="true"></i>
+								Quick links
+							</div>
+							<div class="card-body" style="padding: 0.5rem">
+								<ul class="nav nav-pills flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="/legacy"
+											title="Old rgc:audio SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Old rgc:audio SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="http://www.drealm.info/sfz/"
+											title="Peter L. Jones' SFZ page" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-book fa-fw"
+										aria-hidden="true"></i>
+										Peter L. Jones' SFZ page</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.kvraudio.com/forum/viewtopic.php?f=42&t=508861"
+											title="KVR Forum SFZ post" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										KVR Forum SFZ post</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.plogue.com/plgfrms/viewforum.php?f=14"
+											title="Plogue Forum" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-users fa-fw"
+										aria-hidden="true"></i>
+										Plogue Forum</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/tests/"
+											title="rgc:audio SFZ test suite" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-download fa-fw"
+										aria-hidden="true"></i>
+										rgc:audio SFZ test suite</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="https://github.com/sfz/opcode-suggestions/"
+											title="Opcode suggestions" style="padding: 0.35rem 0.25rem">
+										<i class="fa fa-lightbulb fa-fw"
+										aria-hidden="true"></i>
+										Opcode suggestions</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">
+					<span style="float:right">
+						This site is open source.
+						<a href="https://github.com/sfz/sfz.github.io/edit/source/docs/tutorials/basics.md">
+						Improve this page</a>
+					</span>
+				</p>
+			</footer>
+		</div>		<script>
+			var base_url	= "../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script async defer src="../../assets/js/popper.min.js"></script>
+		<script async defer src="../../assets/js/bootstrap.min.js"></script>
+		<script async defer src="../../assets/js/anchor.min.js"></script>
+		<script async defer src="../../assets/js/base.min.js"></script>
+		<script async defer src="../../assets/js/scroll-to-top.min.js"></script>
+		<script async defer src="../../../../assets/js/index.bundle.min.js"></script>
+		<script async defer src="../../../../assets/js/bootstrap-table.min.js"></script>
+		<script async defer src="../../../../assets/js/mermaid.min.js"></script>
+		<script async defer src="../../../../search/main.js"></script>		<script
+			type="text/javascript"
+			src="../../assets/js/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/bash.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="../../assets/js/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			window.addEventListener("load", function (event) {
+				if (anchors) {
+					anchors.options.placement = 'left';
+					anchors.add();
+				}
+			});
+		</script><!-- Search Dialog -->
+<div
+	class="modal fade"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-body">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div
+						id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>
