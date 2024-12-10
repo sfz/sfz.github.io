@@ -346,4 +346,4 @@ intervals.
 [offset]:        ../opcodes/offset.md
 [sw_previous]:   ../opcodes/sw_previous.md
 [trigger]:       ../opcodes/trigger.md
-[extending]:     ../range_extension.md
+[extending]:     range_extension.md
