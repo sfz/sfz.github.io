@@ -203,13 +203,19 @@ viable option.
 
 Extending the range with true legato samples requires extending the range
 for both the previous note (the sw_previous values) and the new note
-(the lokey/hikey values). Here is a process which has worked in practice
-for extending the range of a legato instrument upwards by a major second:
+(the lokey/hikey values). It is important that when transposing a legato
+transition sample, not only lokey and hikey must be changed, but lokey,
+hikey and sw_previous must all be changed by the same value.
+
+Here is a process which has worked in practice for extending the range of
+a legato instrument upwards by a major second by transposing the samples
+by a minor third.
 
 * Copy regions with the key to be extended. Add the amount of shift (3 if taking the second-highest and third-lowest note and extending the range by a major second) to sw_previous, lokey and hikey to the copy.
-* Copy regions with the sw_previous to be extended except those already copied in the previous step. Likewise add the amount of shift to sw_previous, lokey and hikey to the copy.
+* Copy regions with the sw_previous to be extended (which will include some regions copied in the previous step). Likewise add the amount of shift to sw_previous, lokey and hikey to the copy.
 * Delete the regions with sw_previous above the new max range (or could try avoiding copying them in the first step, but this way is probably safer).
-* Add in regions going from the bottom three values of sw_previous to the new notes. This is where some sort of defaults, as mentioned above, will be needed.
+* Delete the duplicate regions copied in both of the first two steps.
+* Add in regions going from the bottom three values of sw_previous to the notes in the extended range. This is where either some sort of defaults will be needed - using a sample of an ascending octave transition for all intervals over an octave seems to often work fine in practice.
 * Add regions going from the new extended notes to the bottom three pitches, as above.
 
 Note that there will be no legato samples covering the widest intervals
