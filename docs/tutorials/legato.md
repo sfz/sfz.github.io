@@ -283,8 +283,58 @@ offset=12000
 #include "modules/vowel_sustain_a.sfz"
 ```
 
-It would also be possible to use CC 140 in a similar way in an instrument which,
-for example, had legato transitions recorded ascending but not descending.
+It is also possible to use CC 140 in a similar way in an instrument which,
+for example, has legato transitions recorded ascending but not descending.
+
+## Further True Legato Possibilities
+
+It's possible to make a legato instrument that's not sampled chromatically. In
+such cases, it's necessary to use the same tricks used when [extending] range and
+transpose samples across a wider range. The important thing to remember is that
+when extending the range of a sample, lokey, hikey and sw_previous all need to
+be changed by the same amount from the original. For example, if an instrument
+has transitions sampled from C and D but not from C#, like this:
+
+```
+<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5
+<region> sample=legatovib_c5_a#4.wav key=A#4 sw_previous=C5
+<region> sample=legatovib_c5_b4.wav key=B4 sw_previous=C5
+<region> sample=legatovib_d5_a4.wav key=A4 sw_previous=D5
+<region> sample=legatovib_d5_a#4.wav key=A#4 sw_previous=D5
+<region> sample=legatovib_d5_b4.wav key=B4 sw_previous=D5
+```
+
+Extending the transitions from C5 to be used as transitions from C#5 for those same
+three notes could look like this:
+
+```
+<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5
+<region> sample=legatovib_c5_a#4.wav key=A#4 sw_previous=C5
+<region> sample=legatovib_c5_b4.wav key=B4 sw_previous=C5
+<region> sample=legatovib_c5_g#4.wav lokey=A4 hikey=A4 pitch_keycenter=G#4 sw_previous=C#5
+<region> sample=legatovib_c5_a4.wav lokey=A#4 hikey=A#4 pitch_keycenter=A4 sw_previous=C#5
+<region> sample=legatovib_c5_a#4.wav lokey=B4 hikey=B4 pitch_keycenter=A#4 sw_previous=C#5
+<region> sample=legatovib_d5_a4.wav key=A4 sw_previous=D5
+<region> sample=legatovib_d5_a#4.wav key=A#4 sw_previous=D5
+<region> sample=legatovib_d5_b4.wav key=B4 sw_previous=D5
+```
+
+In one real-world case where the notes from which the intervals were sampled was not
+completely consistent between different dynamic layers, the easiest way to deal with this
+was to copy the entire sample map, move the lokey, hikey and sw_previous values by one
+in the copy, then manually delete the duplicates and values where either the key or
+sw_previous falls outside the instrument's range.
+
+An instrument which does not have all interval transitions sampled, however, would be more
+tricky. For example, a diatonic folk flute in C would not have a minor second from C to C#,
+and the nearest available minor second transition would be from E to F, which would be a
+pretty big transposition. One possible compromise in such cases would probably be to use
+the C to D transition transposed down a minor second, which would include a bit of B at
+the start of the transition, but if the transitions are quick enough this might be
+passable. A better but more laborious solution would be processing the recordings with
+pitch transposition software such as Melodyne or Zplane reTune to create the missing
+intervals.
+
 
 
 [extended CCs]:  ../extensions/midi_ccs.md
@@ -296,3 +346,4 @@ for example, had legato transitions recorded ascending but not descending.
 [offset]:        ../opcodes/offset.md
 [sw_previous]:   ../opcodes/sw_previous.md
 [trigger]:       ../opcodes/trigger.md
+[extending]:     ../range_extension.md
