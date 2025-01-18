@@ -192,7 +192,7 @@ would be very simple:
 // Legato transitions and the complete sustain of the next note both in the same sample
 trigger=legato
 group=2
-off_by=1
+off_by=2
 ampeg_attack=0.05 ampeg_release=0.2
 off_mode=normal
 
@@ -215,7 +215,7 @@ are short, then fade in the regular sustain sample.
 // Legato transitions in one sample, crossfaded into standard sustain in another sample
 trigger=legato
 group=2
-off_by=1
+off_by=2
 ampeg_attack=0.05 ampeg_release=0.2
 off_mode=normal
 
