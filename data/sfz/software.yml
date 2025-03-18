@@ -305,6 +305,16 @@ categories:
     short_description:
       ""
 
+  - name: "Serum 2"
+    author: "Xfer Records"
+    license: "Commercial"
+    url: "https://xferrecords.com/products/serum-2"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "a wavetable synthesizer with multiple oscillator types.  Multisample Oscillator gives you the option to use xfer factory .sfz library or import your own .sfz instruments."
+
 - name: "Editors"
   applications:
 
