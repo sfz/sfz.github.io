@@ -598,6 +598,9 @@ categories:
     version: "ARIA"
     value:
       type_name: "integer"
+      default: 0
+      min: -1
+      max: 0
 
   - name: "global_label"
     short_description:
