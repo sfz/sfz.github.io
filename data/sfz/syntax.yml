@@ -592,6 +592,16 @@ categories:
     value:
       type_name: "integer"
 
+  - name: "loop_end_offset"
+    short_description:
+      "Subtracts 1 from sample numbers in file metadata, as a workaround for incorrectly generated loop points."
+    version: "ARIA"
+    value:
+      type_name: "integer"
+      default: 0
+      min: -1
+      max: 0
+
   - name: "global_label"
     short_description:
       "An ARIA extension which sets what is displayed
