@@ -19,6 +19,7 @@ The basic concept is simple: when a sustained note ends, a sympathetic resonance
 sample is played as a release sample. In the case of the nyckelharpa, the resonance
 samples were created by using only the tails of short notes. There is a set of
 round robin samples for each pitch, and they are mapped to the keys as normal.
+The [trigger] opcode is key.
 
 ```sfz
 <master>
@@ -31,7 +32,7 @@ ampeg_attack=0.1
 ```
 
 Instead of creating a separate set of samples it's even possible to simply use the
-shorts samples with an offset, if the shorts are performed consistently enough.
+shorts samples with an [offset], if the shorts are performed consistently enough.
 
 ```sfz
 <master>
@@ -46,7 +47,7 @@ offset=6600
 
 ## Controls
 
-We can add a simple volume control.
+We can add a simple volume control using [amplitude] modulation and [locc].
 
 ```sfz
 <master>
@@ -60,8 +61,8 @@ locc52=1
 #include "modules/maps/strings/nh/nh_release_map.sfz"
 ```
 
-To prevent the buildup of voices with fast playing, a polyphony group can be
-used.
+To prevent the buildup of voices with fast playing, a polyphony [group] and the
+[note_polyphony] opcode can be used.
 
 ```sfz
 <master>
@@ -92,7 +93,7 @@ to one-shot mode, so the entire sample played, resonance and all. This has its
 downsides, of course, but again it seems to work well enough in reality.
 
 However, with the jete technique, the same set of samples was used with the
-addition of rt_decay. Keeping it simple, here is the polyphonic implementation:
+addition of [rt_decay]. Keeping it simple, here is the polyphonic implementation:
 
 ```sfz
 <master>
@@ -106,13 +107,38 @@ ampeg_attack=0.1
 #include "modules/maps/strings/nh/nh_release_map.sfz"
 ```
 
+## Multiple voices
+
+When one key triggers multiple samples, whether they are crossfaded dynamic layers,
+mic posotions or unison voices, each sample playing is a voice which can trigger
+a release. In other words, with four mic positions having four sets of releases,
+sixteen release voices would be triggered for each note. This not only uses up
+unison voices but also is too loud and doesn't sound good. Fortunately this is
+easily fixed by creating a separate polyphony [group] for each voice's releases,
+and limiting its [note_polyphony].
+
+This is not a consideration limited to sympathetic resonance, of course, but a
+general principle of using release triggers with multiple voices.
+
+```sfz
+<master>
+trigger=release
+ampeg_attack=0.1
+//To keep from over-triggering when unison is on
+group=199
+note_polyphony=1
+#include "modules/maps/strings/nh/nh_release_map.sfz"
+```
+
 ## Legato
 
 The above works fine for polyphonic instruments, but with a mono instrument it's
 not enough to have a sample play on release; we also need to play a sample when
 a note is muted and a new note starts playing. At that point, we need to trigger
 the resonance based not on the incoming MIDI note but based on the previous pitch
-that was playing.
+that was playing. This means creating a separate map. This implementation also
+uses [extended CCs], specifically CC 153, so the resonance sample is only
+triggered when one key is currently down.
 
 ```sfz
 //Mono mode
@@ -155,28 +181,45 @@ pitch_keytrack=0
 #include "modules/maps/strings/nh/nh_release_swdown_map.sfz"
 ```
 
-## Multiple voices
+Inside the map will need to use [sw_down] to trigger the proper sample.
+[lokey/hikey] is not necessary for correct triggering, but it is used to
+determine which keys are shown as playable in ARIA, and leaving this out
+would make the entire keyboard appear as playable in the GUI.
 
-When one key triggers multiple samples, whether they are crossfaded dynamic layers,
-mic posotions or unison voices, each sample playing is a voice which can trigger
-a release. In other words, with four mic positions having four sets of releases,
-sixteen release voices would be triggered for each note. This not only uses up
-unison voices but also is too loud and doesn't sound good. Fortunately this is
-easily fixed by creating a separate polyphony group for each voice's releases,
-and limiting its note polyphony. If groups are already created as discussed above,
-just make sure each set of samples has its own group number.
+Whether it's strictly necessary to avoid creating regions where sw_down
+falls between lokey and hikey is not certian, but they are absent from
+the nyckelharpa on which this tutorial is based.
 
-This is not a consideration limited to sympathetic resonance, of course, but a
-general principle of using release triggers with multiple voices.
+```
+<region>
+sample=../Samples/strings/nyckelharpa/stac/nyckelharpa_g3_stac.wav
+lokey=44
+hikey=86
+sw_down=43
 
-```sfz
-<master>
-trigger=release
-ampeg_attack=0.1
-//To keep from over-triggering when unison is on
-group=199
-note_polyphony=1
-#include "modules/maps/strings/nh/nh_release_map.sfz"
+<region>
+sample=../Samples/strings/nyckelharpa/stac/nyckelharpa_ab3_stac.wav
+lokey=43
+hikey=43
+sw_down=44
+
+<region>
+sample=../Samples/strings/nyckelharpa/stac/nyckelharpa_ab3_stac.wav
+lokey=45
+hikey=86
+sw_down=44
+
+<region>
+sample=../Samples/strings/nyckelharpa/stac/nyckelharpa_a3_stac.wav
+lokey=43
+hikey=44
+sw_down=45
+
+<region>
+sample=../Samples/strings/nyckelharpa/stac/nyckelharpa_a3_stac.wav
+lokey=45
+hikey=86
+sw_down=45
 ```
 
 ## Other methods
@@ -185,3 +228,15 @@ At least in theory, a better way to do this would be to capture an impulse respo
 of the resonance, perhaps by giving the instrument a whack and letting the
 sympathetic strings ring. However, this would require an sfz player with
 convolution reverb implemented.
+
+
+[extended CCs]:   ../extensions/midi_ccs.md
+[trigger]:        ../opcodes/trigger.md
+[offset]:         ../opcodes/offset.md
+[amplitude]:      ../opcodes/amplitude.md
+[locc]:           ../opcodes/hiccN.md
+[group]:          ../opcodes/group.md
+[note_polyphony]: ../opcodes/note_polyphony.md
+[rt_decay]:       ../opcodes/rt_decay.md
+[sw_down]:        ../opcodes/sw_down.md
+[lokey/hikey]:    ../opcodes/lokey.md
