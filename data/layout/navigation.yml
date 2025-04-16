@@ -66,6 +66,9 @@
 
   - label: "Strumming"
     url: "/tutorials/strum"
+
+  - label: "Sympathetic Resonance"
+    url: "/tutorials/sympathetic_resonance"
   -
   - label: "Drum & Round Robin Basics"
     url: "/tutorials/drum_basics"
