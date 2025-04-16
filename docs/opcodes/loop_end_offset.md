@@ -9,7 +9,9 @@ loop points to be used. WAV files which follow the specification
 should start numbering their samples at 0, but many audio editors
 incorrectly start at 1, which creates a problem if the last sample
 is used as the end point of a loop, as is commonly the case.
-It should be used under the ‹[control]› header.
+It should be used under the ‹[control]› header, and affects only
+the loop points in WAV metadata - not loop points specified in
+the sfz file using opcodes.
 
 ## Example
 
