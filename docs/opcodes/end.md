@@ -19,6 +19,11 @@ continue to play and does not use up a polyphony voice. Another way to accomplis
 the same thing is to use an ampeg envelope wiht zero [ampeg_attack],
 [ampeg_decay] and [ampeg_sustain].
 
+Note that the WAV specification numbers samples starting with 0, though many audio editors
+incorrectly display sample numbers starting at 1. This means a 1-second file containing
+44100 samples will have samples numbering from 0 to 44099, and specifying end=44100 for
+such a file would be invalid.
+
 ## Examples
 
 ```sfz
