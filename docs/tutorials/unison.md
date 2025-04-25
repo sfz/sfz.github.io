@@ -471,7 +471,7 @@ corresponding regions for the release region, causing the release region to be t
 multiple times. With seven mics and a separate release for each mic, this would mean a
 key release would trigger a total of 49 samples if not controlled with note_polyphony.
 However, setting note_polyphony=1 and giving each mic a different group number solves this.
-There's no need tu use off_by with the release groups.
+There's no need to use off_by with the release groups.
 
 An example with releases only for the center voice:
 
