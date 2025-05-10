@@ -212,25 +212,38 @@ are short, then fade in the regular sustain sample.
 
 ```sfz
 <group>
-// Legato transitions in one sample, crossfaded into standard sustain in another sample
+// Legato transition group
 trigger=legato
 group=2
 off_by=2
-ampeg_attack=0.05 ampeg_release=0.2
+offset=45000
+ampeg_attack=0.05 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 ampeg_release=0.2
+ampeg_decay_shape=-1.4
 off_mode=normal
 
 // Leg transitions up
-<region> sample=legatovib_g4_a4.wav key=A4 sw_previous=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_g4_c5.wav key=C5 sw_previous=G4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_a4_c5.wav key=C5 sw_previous=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_g4_a4.wav key=A4 sw_previous=G4
+<region> sample=legatovib_g4_c5.wav key=C5 sw_previous=G4
+<region> sample=legatovib_a4_c5.wav key=C5 sw_previous=A4
 // Leg transitions down
-<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_c5_g4.wav key=G4 sw_previous=C5 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=45000 ampeg_decay_shape=-1.4
-<region> sample=legatovib_a4_g4.wav key=G4 sw_previous=A4 ampeg_hold=0.25 ampeg_decay=0.2 ampeg_sustain=0 offset=43000 ampeg_decay_shape=-1.4
+<region> sample=legatovib_c5_a4.wav key=A4 sw_previous=C5
+<region> sample=legatovib_c5_g4.wav key=G4 sw_previous=C5
+<region> sample=legatovib_a4_g4.wav key=G4 sw_previous=A4
+
+<group>
+// Sustain group crossfaded into after legato transition
+trigger=legato
+group=1
+off_by=2
+offset=5000
+ampeg_attack=0.3 ampeg_release=0.2
+ampeg_attack_shape=3.8 
+off_mode=normal
+
 // Leg sustains
-<region> sample=sustainvib_c5.wav key=C5 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
-<region> sample=sustainvib_a4.wav key=A4 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
-<region> sample=sustainvib_g4.wav key=G4 ampeg_attack=0.3 offset=5000 ampeg_attack_shape=3.8
+<region> sample=sustainvib_c5.wav key=C5
+<region> sample=sustainvib_a4.wav key=A4
+<region> sample=sustainvib_g4.wav key=G4
 ```
 
 Another consideration is that for instruments with a wide range, it may not be worthwhile
