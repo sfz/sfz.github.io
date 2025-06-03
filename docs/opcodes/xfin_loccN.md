@@ -31,6 +31,13 @@ mix (for example of microphone perspectives), it can make sense to use them
 alongside [loccN / hiccN] to keep the regions which would be at zero
 volume from being triggered and consuming resources.
 
+## Practical Considerations
+
+Xfin/xfout cannot use custom curves and the default curves used cannot be redefined.
+If custom curves are required (for example to fade in a layers starting with a
+non-zero volume), [amplitude] can be used instead, with amplitude_onccN and
+amplitude_curveccN.
 
 [loccN / hiccN]:             loccN.md
 [xfout_loccN / xfout_hiccN]: xfout_loccN.md
+[amplitude]:                 amplitude.md
