@@ -58,7 +58,7 @@ categories:
   - name: "sfizz"
     author: "SFZTools"
     license: "BSD-2-Clause"
-    url: "https://sfz.tools/sfizz/"
+    url: "https://sfztools.github.io/sfizz/"
     os:
     - name: "Linux"
     - name: "macOS"
