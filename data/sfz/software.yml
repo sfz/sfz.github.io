@@ -276,6 +276,16 @@ categories:
     short_description:
       "Sampler module imports/exports SFZ."
 
+  - name: "Nexus"
+    author: "reFX"
+    license: "Commercial"
+    url: "https://refx.com/nexus/"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "A 16 layer synthesizer with up to 64 oscillators.  Layers can be created from .sfz instruments via drag & drop."
+
   - name: "OpenMPT"
     author: "ModPlug Central"
     license: "BSD-3-Clause"
