@@ -68,36 +68,27 @@ article refers to the opcode, not the header, though group headers are also used
 in the code examples.
 
 ```sfz
-<group>
 // Here are the hi-hat samples
-off_mode=normal
-ampeg_release=0.07
+<group> off_mode=normal ampeg_release=0.07
 
-<region>key=42 sample=hh_closed.wav group=3 off_by=4
-<region>key=44 sample=hh_chik.wav group=4
-<region>key=46 sample=hh_half_open.wav hicc4=63 group=2 off_by=3
-<region>key=46 sample=hh_open.wav locc4=64 group=1 off_by=2
+<region> key=42 sample=hh_closed.wav group=3 off_by=4
+<region> key=44 sample=hh_chik.wav group=4
+<region> key=46 sample=hh_half_open.wav hicc4=63 group=2 off_by=3
+<region> key=46 sample=hh_open.wav locc4=64 group=1 off_by=2
 
-<group>group=2 off_by=3
 // The range which mutes open hi-hats - that is, everything except open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=2 off_by=3 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 
-<group>group=3 off_by=4
 // The range which mutes half-open and open hi-hats - that is, closed and chik
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=3 off_by=4 sample=*silence end=-1
 <region> key=42
 <region> key=44
 
-<group>group=4
 // The range which mutes closed, half-open and open hi-hats - that is, just chik
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=4 sample=*silence end=-1
 <region> key=44
 ```
 
@@ -130,54 +121,38 @@ and have that mute itself. It will also need to be muted by all other types of
 hi-hat hits, except for fully open hits.
 
 ```sfz
-<group>
 //Here are the hi-hat samples
-off_mode=normal
-ampeg_release=0.07
+<group> off_mode=normal ampeg_release=0.07
 
-<region>key=42 sample=hh_closed.wav group=4 off_by=5
-<region>key=44 sample=hh_chik.wav group=5
-<region>key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4
-<region>key=46 sample=hh_open.wav locc4=64 group=2 off_by=3
-<region>key=54 sample=hh_splash.wav group=1 off_by=1
+<region> key=42 sample=hh_closed.wav group=4 off_by=5
+<region> key=44 sample=hh_chik.wav group=5
+<region> key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4
+<region> key=46 sample=hh_open.wav locc4=64 group=2 off_by=3
+<region> key=54 sample=hh_splash.wav group=1 off_by=1
 
-<group>group=1 off_by=1
 //The range which mutes foot splashes - everything except open and foot splash
 //Foot splash mutes itself, but this group does not include the foot splash key
 //That's because the foot splash samples themselves are in the same group
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=1 off_by=1 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46
 
-<group>group=3 off_by=4
 //The range which mutes open hi-hats - that is, everything except open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=3 off_by=4 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 <region> key=54
 
-<group>group=4 off_by=5
 //The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=4 off_by=5 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=54
 
-<group>group=5
 //The range which mutes closed, half-open and open hi-hats - that is, just chik and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=5 sample=*silence end=-1
 <region> key=44
 <region> key=54
 ```
@@ -200,54 +175,38 @@ they don't ring very long anyway. Limiting the polyphony for the foot splash is
 not necessary at all, because it mutes itself.
 
 ```sfz
-<group>
 //Here are the hi-hat samples
-off_mode=normal
-ampeg_release=0.07
+<group> off_mode=normal ampeg_release=0.07
 
-<region>key=42 sample=hh_closed.wav group=4 off_by=5
-<region>key=44 sample=hh_chik.wav group=5
-<region>key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 polyphony=3
-<region>key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 polyphony=4
-<region>key=54 sample=hh_splash.wav group=1 off_by=1
+<region> key=42 sample=hh_closed.wav group=4 off_by=5
+<region> key=44 sample=hh_chik.wav group=5
+<region> key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 polyphony=3
+<region> key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 polyphony=4
+<region> key=54 sample=hh_splash.wav group=1 off_by=1
 
-<group>group=1 off_by=1
 //The range which mutes foot splashes
 //All sounds except open mute foot splashes, but this group does not include the foot splash key
 //That's because the foot splash samples are in the same group, and will mute anything else
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=1 off_by=1 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 
-<group>group=3 off_by=4 polyphony=3
 //The range which mutes open hi-hats - that is, everything except open and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=3 off_by=4 polyphony=3 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 <region> key=54
 
-<group>group=4 off_by=5
 //The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=4 off_by=5 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=54
 
-<group>group=5
 //The range which mutes closed, half-open and open hi-hats - that is, just chik and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=5 sample=*silence end=-1
 <region> key=44
 ```
 
@@ -272,24 +231,22 @@ the hi-hat's [amplitude], and applying a [‹curve›] which will
 keep the amplitude at 100% unless the pedal is a good deal more closed than it was when the sample was triggered.
 
 ```sfz
-<group>
 //Here are the hi-hat samples
-off_mode=normal
-ampeg_release=0.07
+<group> off_mode=normal ampeg_release=0.07
 
-<region>key=42 sample=hh_closed.wav group=4 off_by=5
-<region>key=44 sample=hh_chik.wav group=5
-<region>key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
-<region>key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
-<region>key=54 sample=hh_splash.wav group=1 off_by=1
+<region> key=42 sample=hh_closed.wav group=4 off_by=5
+<region> key=44 sample=hh_chik.wav group=5
+<region> key=46 sample=hh_half_open.wav hicc4=63 group=3 off_by=4 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+<region> key=46 sample=hh_open.wav locc4=64 group=2 off_by=3 amplitude_cc4=100 amplitude_curvecc4=21 amplitude_smoothcc4=150
+<region> key=54 sample=hh_splash.wav group=1 off_by=1
 
-<curve>curve_index=21
+<curve> curve_index=21
 v000=0.13
 v037=0.8
 v077=1
 v127=1
 
-<curve>curve_index=22
+<curve> curve_index=22
 v000=0.1
 v037=0.7
 v077=1
@@ -334,69 +291,52 @@ Here is an example with close and overhead, with slightly longer fadeout times
 for the more distant overhead mics:
 
 ```sfz
-<group>
 //Here are the hi-hat samples
+<group>
 off_mode=normal
 
-<region>key=42 sample=hh_closed_close.wav group=4 off_by=5 ampeg_release=0.12
-<region>key=42 sample=hh_closed_oh.wav group=4 off_by=5 ampeg_release=0.2
-<region>key=44 sample=hh_chik_close.wav group=5 ampeg_release=0.12
-<region>key=44 sample=hh_chik_oh.wav group=5 ampeg_release=0.2
-<region>key=46 sample=hh_half_open_close.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.12
-<region>key=46 sample=hh_half_open_oh.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.2
-<region>key=46 sample=hh_open_close.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.12
-<region>key=46 sample=hh_open_oh.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.2
-<region>key=54 sample=hh_splash_close.wav group=1 off_by=1 ampeg_release=0.12
-<region>key=54 sample=hh_splash_oh.wav group=11 off_by=11 ampeg_release=0.2
+<region> key=42 sample=hh_closed_close.wav group=4 off_by=5 ampeg_release=0.12
+<region> key=42 sample=hh_closed_oh.wav group=4 off_by=5 ampeg_release=0.2
+<region> key=44 sample=hh_chik_close.wav group=5 ampeg_release=0.12
+<region> key=44 sample=hh_chik_oh.wav group=5 ampeg_release=0.2
+<region> key=46 sample=hh_half_open_close.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.12
+<region> key=46 sample=hh_half_open_oh.wav hicc4=63 group=3 off_by=4 polyphony=6 ampeg_release=0.2
+<region> key=46 sample=hh_open_close.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.12
+<region> key=46 sample=hh_open_oh.wav locc4=64 group=2 off_by=3 polyphony=8 ampeg_release=0.2
+<region> key=54 sample=hh_splash_close.wav group=1 off_by=1 ampeg_release=0.12
+<region> key=54 sample=hh_splash_oh.wav group=11 off_by=11 ampeg_release=0.2
 
-<group>group=1 off_by=1
 //The range which mutes foot splashes for the close mic
 //All sounds except open mute foot splashes, but this group does not include the foot splash key
 //That's because the foot splash samples are in the same group, and will mute anything else
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=1 off_by=1 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 
-<group>group=11 off_by=11
 //The range which mutes foot splashes for the overhead mics
 //All sounds mute foot splashes, but this group does not include the foot splash key
 //That's because the foot splash samples are in the same group, and will mute anything else
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=11 off_by=11 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 
-<group>group=3 off_by=4 polyphony=3
 //The range which mutes open hi-hats for both close and overhead mics - that is, everything except open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=3 off_by=4 polyphony=3 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=46 hicc4=63
 <region> key=54
 
-<group>group=4 off_by=5
 //The range which mutes half-open and open hi-hats - that is, closed, chik and foot splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=4 off_by=5 sample=*silence end=-1
 <region> key=42
 <region> key=44
 <region> key=54
 
-<group>group=5
 //The range which mutes closed, half-open and open hi-hats - that is, just chik
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=5 sample=*silence end=-1
 <region> key=44
 ```
 
@@ -763,13 +703,9 @@ locc4=$ht_open_lo hicc4=$ht_open_hi
 //Hat mute silence groups
 <master> seq_length=1
 
-<group> group=18
 //The range which mutes hi-hat pedal return noises
 //Everything except themselves
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=17
+<group> group=18 off_by=17 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey
@@ -777,7 +713,6 @@ off_by=17
 <region> key=$htvarskey
 <region> key=$htsplkey
 
-<group> group=17
 //The range which mutes footsplashes
 //Everything except pedal return noises and open
 //Footsplashes are the only articulation which mutes itself
@@ -785,24 +720,17 @@ off_by=17
 //Instead splash regions themselves are marked with group=17 also
 //Kind of a kludge, but keeps the silence from instantly muting the splash
 //while allowing a subsequent splash to mute the current splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=17
+<group> group=17 off_by=17 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
 <region> key=$htclsskey
 <region> key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
 
-<group> group=15
 //The range which mutes open hi-hats
 //Everything except pedal return noises and open
 //Just like the footsplash mute group, except the footsplash key is in this too
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=14
+<group> group=15 off_by=14 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
@@ -811,13 +739,9 @@ off_by=14
 <region> key=$htsplkey
 <region> key=$htsplkey
 
-<group> group=14
 //The range which mutes half open hi-hats
 //Everything except open and half-open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=13
+<group> group=14 off_by=13 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_ho_lo hicc4=$mg_ho_hi
@@ -825,13 +749,9 @@ off_by=13
 <region> key=$htvarskey locc4=$mg_ho_lo hicc4=$mg_ho_hi
 <region> key=$htsplkey
 
-<group> group=13
 //The range which mutes quarter open hi-hats
 //Everything except open, half-open and quarter open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=12
+<group> group=13 off_by=12 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_qo_lo hicc4=$mg_qo_hi
@@ -839,13 +759,9 @@ off_by=12
 <region> key=$htvarskey locc4=$mg_qo_lo hicc4=$mg_qo_hi
 <region> key=$htsplkey
 
-<group> group=12
 //The range which mutes loosely closed hi-hats
 //Everything except open, half-open, quarter open and loosely closed
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=11
+<group> group=12 off_by=11 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_lc_lo hicc4=$mg_lc_hi
@@ -853,33 +769,22 @@ off_by=11
 <region> key=$htvarskey locc4=$mg_lc_lo hicc4=$mg_lc_hi
 <region> key=$htsplkey
 
-<group> group=11
 //The range which mutes regular closed hi-hats
 //Just foot chik, tightly closed and footsplash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=10
+<group> group=11 off_by=10 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htclsskey
 <region> key=$htsplkey
 
-<group> group=10
 //The range which mutes tightly closed hi-hats - just foot chik and footsplash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=10 sample=*silence end=-1
 <region> key=$htchkkey
 <region> key=$htsplkey
 
-<group> group=28
 //The range which mutes hi-hat pedal return noises
 //Everything except themselves
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=27
+<group> group=28 off_by=27 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey
@@ -887,7 +792,6 @@ off_by=27
 <region> key=$htvarskey
 <region> key=$htsplkey
 
-<group> group=27
 //The range which mutes footsplashes
 //Everything except pedal return noises and open
 //Footsplashes are the only articulation which mutes itself
@@ -895,24 +799,17 @@ off_by=27
 //Instead splash regions themselves are marked with group=27 also
 //Kind of a kludge, but keeps the silence from instantly muting the splash
 //while allowing a subsequent splash to mute the current splash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=27
+<group> group=27 off_by=27 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
 <region> key=$htclsskey
 <region> key=$htvarskey locc4=$mg_open_lo hicc4=$mg_open_hi
 
-<group> group=25
 //The range which mutes open hi-hats
 //Everything except pedal return noises and open
 //Just like the footsplash mute group, except the footsplash key is in this too
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=24
+<group> group=25 off_by=24 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_open_lo hicc4=$mg_open_hi
@@ -921,13 +818,9 @@ off_by=24
 <region> key=$htsplkey
 <region> key=$htsplkey
 
-<group> group=24
 //The range which mutes half open hi-hats
 //Everything except open and half-open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=23
+<group> group=24 off_by=23 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_ho_lo hicc4=$mg_ho_hi
@@ -935,13 +828,9 @@ off_by=23
 <region> key=$htvarskey locc4=$mg_ho_lo hicc4=$mg_ho_hi
 <region> key=$htsplkey
 
-<group> group=23
 //The range which mutes quarter open hi-hats
 //Everything except open, half-open and quarter open
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=22
+<group> group=23 off_by=22 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_qo_lo hicc4=$mg_qo_hi
@@ -949,13 +838,9 @@ off_by=22
 <region> key=$htvarskey locc4=$mg_qo_lo hicc4=$mg_qo_hi
 <region> key=$htsplkey
 
-<group> group=22
 //The range which mutes loosely closed hi-hats
 //Everything except open, half-open, quarter open and loosely closed
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=21
+<group> group=22 off_by=21 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htvartkey locc4=$mg_lc_lo hicc4=$mg_lc_hi
@@ -963,23 +848,16 @@ off_by=21
 <region> key=$htvarskey locc4=$mg_lc_lo hicc4=$mg_lc_hi
 <region> key=$htsplkey
 
-<group> group=21
 //The range which mutes regular closed hi-hats
 //Just foot chik, tightly closed and footsplash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
-off_by=20
+<group> group=21 off_by=20 sample=*silence end=-1
 <region> key=$htclstkey
 <region> key=$htchkkey
 <region> key=$htclsskey
 <region> key=$htsplkey
 
-<group> group=20
 //The range which mutes tightly closed hi-hats - just foot chik and footsplash
-sample=*silence end=-1
-loop_mode=loop_continuous off_mode=fast
-ampeg_attack=0 ampeg_decay=0 ampeg_sustain=0 ampeg_release=0
+<group> group=20 sample=*silence end=-1
 <region> key=$htchkkey
 <region> key=$htsplkey
 
