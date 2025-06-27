@@ -97,7 +97,7 @@ lovel=96 hivel=127
 sample=kick_vl4.wav
 ```
 
-This can, again, be simplified. The defalut value for lovel is 0, and for hivel
+This can, again, be simplified. The default value for lovel is 0, and for hivel
 it's 127, so we don't need to specify setting them to those numbers. Also, we
 can use a [‹group›] header to make the key opcode the same
 across all four regions:
