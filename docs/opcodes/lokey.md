@@ -13,9 +13,9 @@ mapped to note numbers an octave or even two apart in different DAWs.
 
 In the SFZ 1 specification, the allowed range is 0 to 127. However, SFZ 2 additionally
 includes the possibility to set lokey and hikey to -1, to prevent a region from
-being triggered by any keys. This is a way (though, admittedly, not a very
-elegant one) to use the [on_loccN / onhiccN] opcodes to trigger,
-for example, pedal noises which are triggered whether any keys are pressed or not.
+being triggered by any keys. The purpose of this is to use the [on_loccN / onhiccN] opcodes
+to trigger, for example, piano pedal noises or organ stop noises which need to be
+triggered by the MIDI CC message whether any keys are pressed or not.
 
 ## Examples
 
