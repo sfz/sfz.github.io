@@ -4,19 +4,41 @@ opcode_name: "rt_decayN"
 ---
 
 This works similarly to rt_decay, but with a multisegment volume decrease curve. The duration
-of each segment and a different decrease rate for each segment can be set.
+of each segment and a different decrease rate for each segment can be set. Negative values are
+also accepted (see last example) though of course these need to be used with care.
 
-## Example
+## Examples
 
 ```sfz
 <region> sample=pianoA4.wav trigger=attack
 
 <region> sample=keyup_noise.wav trigger=release
+//The sample keyup_noise.wav will play 3dB quieter for every second the key has been on
+//for up to two seconds.
 rt_decay1=3
 rt_decay1_time=2
+//After that it will play quieter by 1.5 dB per second.
 rt_decay2=1.5
+```
 
-//The sample keyup_noise.wav will play 3db quieter for every second the key has been on.
+```sfz
+//No decay for the first second, decay of 3 dB per second afterwards
+rt_decay1=0
+rt_decay1_time=1
+rt_decay2=3
+```
+
+```sfz
+//Sympathetic string resonance volume for a crescendo sample
+//For the first two seconds, volume starts 18 dB down but increases at 9 dB per second
+volume=-18
+rt_decay1=-9
+rt_decay1_time=2
+//During the third second, volume drops at a rate of 4 dB per second
+rt_decay2=4
+rt_decay2_time=1
+//After that, volume drops at a rate of 9 dB per second
+rt_decay3=9
 ```
 
 ## Practical Considerations
