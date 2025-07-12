@@ -38,7 +38,14 @@ pitch_curvecc27=1
 
 ## Practical Considerations
 
-In ARIA, `tune_*ccN` can also be used as an alias for `pitch_*ccN` (see below).
+In ARIA, `tune_*ccN` can also be used as an alias for `pitch_*ccN`.
+
+Although the sfz specification has a 1-cent resolution for tune, ARIA allows
+floating point values for tuning, as in the below example.
+
+```sfz
+tune=0.23
+```
 
 
 [‹curve›]: ../headers/curve.md
