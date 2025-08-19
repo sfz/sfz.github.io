@@ -58,7 +58,7 @@ not precise, only general shapes.
 <img
   class="img-fluid"
   alt="Simple stir envelope"
-  src="./../assets/img/tutorials/brush_stirs/stir1.jpg"
+  src="/assets/img/tutorials/brush_stirs/stir1.jpg"
 />
 
 This is a good start, and we can add expression and realism by layering a
@@ -78,7 +78,7 @@ ampeg_delay=0.5 ampeg_attack=0.5 ampeg_decay=0.5 ampeg_sustain=0
 <img
   class="img-fluid"
   alt="Two layer stir envelopes"
-  src="./../assets/img/tutorials/brush_stirs/stir2.jpg"
+  src="/assets/img/tutorials/brush_stirs/stir2.jpg"
 />
 
 ## Modulating stir duration
@@ -125,7 +125,7 @@ ampeg_delaycc1=0.25 ampeg_attackcc1=0.25 ampeg_decaycc1=0.25
 <img
   class="img-fluid"
   alt="Stir envelopes using hold in base layer"
-  src="./../assets/img/tutorials/brush_stirs/stir3.jpg"
+  src="/assets/img/tutorials/brush_stirs/stir3.jpg"
 />
 
 Also, the peak should be sharper and more accented than it is
@@ -149,7 +149,7 @@ ampeg_attack_shape=3.5 ampeg_decay_shape=-1.4
 <img
   class="img-fluid"
   alt="Stir envelopes with curves"
-  src="./../assets/img/tutorials/brush_stirs/stir4.jpg"
+  src="/assets/img/tutorials/brush_stirs/stir4.jpg"
 />
 
 ## Adjusting the envelope shapes
