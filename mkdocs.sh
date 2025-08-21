@@ -12,13 +12,16 @@ fi
 if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 	echo "Setup and run MKDocs"
 	echo ""
-	echo "Usage: ./${script_name} [option]"
+	echo "Usage: ./${script_name} [option] [arguments...]"
 	echo ""
 	echo "Options are not mandatory, only one at a time:"
 	echo "-a, --assets    Build minimized css styles and js scripts from sources."
 	echo "-b, --build     Build the site."
 	echo "-h, --help      Show this help message."
 	echo "-i, --install   Install poetry' packages (poetry must be already installed)."
+	echo "-s, --serve     Serve the site (default if no option)."
+	echo ""
+	echo "Pass --help to '--build' or '--serve' for more help."
 	echo ""
 	exit 0
 fi
@@ -36,8 +39,13 @@ if [ "$1" == "-i" ] || [ "$1" == "--install" ]; then
 fi
 
 if [ "$1" == "-b" ] || [ "$1" == "--build" ]; then
-	poetry run mkdocs build
+	shift
+	poetry run mkdocs build "$@"
 	exit 0
 fi
 
-poetry run mkdocs serve
+if [ "$1" == "-s" ] || [ "$1" == "--serve" ]; then
+	shift
+fi
+
+poetry run mkdocs serve "$@"
