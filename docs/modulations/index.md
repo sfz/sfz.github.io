@@ -17,7 +17,7 @@ ARIA extends some of the modulations with "high definition" values, using `hdccN
 see [extended MIDI CCs] for details, which also covers non-MIDI modulators.
 
 [Envelope generators](./envelope_generators.md) can also have paramters modulated by velocity,
-directly, without using [extended MIDI CCs].
+directly, without using [extended MIDI CCs].  For example, [fileg_vel2depth].
 
 Polyphonic aftertouch is a further modulation source.  Depending on implementation, this may
 or may not be truely polyphonic.  For example, [cutoff_polyaft].
@@ -66,6 +66,7 @@ See also the related tutorials for [SFZ1] and [SFZ2].
 [cutoff_ccN]:          ../opcodes/cutoff.md
 [cutoff_polyaft]:      ../opcodes/cutoff.md
 [ampeg_releaseccN]:    ../opcodes/ampeg_release.md
+[fileg_vel2depth]:     ../opcodes/fileg_vel2depth.md
 [delay_samples_onccN]: ../opcodes/delay_samples.md
 [opcode list]:         ../opcodes/index.md
 [extended MIDI CCs]:   ../extensions/midi_ccs.md
