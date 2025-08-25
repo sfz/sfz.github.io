@@ -1,22 +1,38 @@
 ---
 title: Envelope Generators
 ---
-Envelope Generator opcodes are part of the [Modulation] category of opcodes:
+Envelope Generators are a [modulation source].
+As such, every envelope generator has a "target opcode", which is the setting the envelope varies.
+As these target opcodes have different value types, units and ranges,
+so the envelope generator opcodes that specify the extent of the envelope have different
+value types, units and ranges.  As with other modulation sources, the range is generally
+sufficient to negate the effect of the target opcode.
+For implementation details, see the [Envelope Generators] category of opcodes.
+
+There are two types of envelope generator:
 
 ## Traditional (SFZ 1.0)
 
-Traditional envelope generators using ADSR phases can be set using the SFZ 1.0
+Traditional envelope generators can be set using the SFZ 1.0
 **ampeg** (amplitude), **pitcheg** (pitch) and **fileg** (filter) opcodes.
 These opcodes also support additional delay and hold phases.
-The phases in order are: **Delay-Attack-Hold-Decay-Sustain-Release**. See below
-for the full list of relevant opcodes.
+The envelope segment times are specified in seconds and
+the phases in order are: **Delay-Attack-Hold-Decay-Sustain-Release**.
+
+The [envelope curves](#envelope-curves) are described below and can be adjusted.
+
+The full list of [relevant opcodes](#sfz-1-eg-opcodes) is given below.
 
 ## Flex (SFZ 2.0)
 
 With SFZ 2.0, you can create one or more "flex" envelope generators.
-Each flex EG is mapped to a destination (amplitude, pitch, etc.)
-and contains two or more points with a duration and level determined at each point.
+
+Each flex EG is mapped to a destination (amplitude, pitch, filter, etc.)
+by specifying the source EG number, target opcode and maximum envelope depth.
+
+A Flex EG contains two or more points with a duration and level defined for each point.
 The duration indicates the amount of time it takes from the previous envelope point to the current.
+The level is a multiplier for the total envelope depth at a point along the envelope.
 In this way, you can use flex EGs to essentially draw any envelope shape you desire.
 
 Here is an example flex EG:
@@ -33,28 +49,25 @@ How to interpret the opcodes in the example above:
 
 * All of these opcodes begin with "eg01\_", indicating the first flex EG
   for the current region. A second flex EG would begin with "eg02\_", and so on.
-* The first opcode determines that the envelope will affect note pitch
-  to a maximum of 1200 cents (one octave).
-* Each envelope point is numbered, and these numbers appear at the end
-  of the opcode name (this opcode has four envelope points). There should be
-  both a "time" and and a "level" opcode specified for each envelope point.
+* As the target opcode is [pitch], the type is integer, the units are cents and the range -9600 to 9600 (implementation dependent).
+* The first opcode determines that the envelope will affect note pitch to a maximum of 1200 cents (one octave).
+* Each envelope point is numbered, and these numbers appear at the end of the opcode name (this opcode has four envelope points).
+  There should be both a "time" and and a "level" opcode specified for each envelope point.
 * The "time" opcodes indicate time duration in seconds from the previous envelope point.
-* The "level" opcodes indicate the level percentage at each envelope point
-  (0-1, with "1" meaning "100%").
-* The optional "sustain" opcode determines which envelope point will function
-  as "sustain" in the traditional ADSR model.
+* The "level" opcodes indicate the multiplier for the maximum value at each envelope point (with smoothing between points).
+* The optional "sustain" opcode determines which envelope point will function as "sustain" in the traditional ADSR model.
 
 So here is what happens in the four envelope points in the example:
 
 1. Note starts at original pitch.
 2. Pitch takes one second to rise 1200 cents (one octave).
-3. Pitch takes two seconds to lower to 50% of 1200 cents.
+3. Pitch takes two seconds to lower to half of 1200 cents.
    The pitch will remain at this level as long as the note is held.
 4. After releasing the note, the note will take one second to lower to the original pitch.
 
 ## Envelope Curves
 
-SFZ—at least the ARIA Engine and sfizz implementations—uses the following curves for SFZ 1.0 envelopes
+SFZ - at least the ARIA Engine and sfizz implementations - uses the following curves for SFZ 1.0 envelopes
 (**ampeg**, **pitcheg**, **fileg**, probably others but not tested):
 
 * **Attack:** linear (convex in dB)
@@ -183,7 +196,8 @@ with an envelope depth of 2400 cents.
 - width_oncc
 
 
-[Modulation]:             ../misc/categories.md#modulation.md
+[modulation source]:      index.md
+[Envelope Generators]:    ../opcodes/index.md?c=eg
 [(eg type)_attack]:       ../opcodes/ampeg_attack.md
 [(eg type)_attack_oncc]:  ../opcodes/ampeg_attack.md
 [(eg type)_decay]:        ../opcodes/ampeg_decay.md
