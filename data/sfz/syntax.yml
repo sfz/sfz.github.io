@@ -41,7 +41,7 @@ headers:
 - name: "midi"
   short_description:
     "ARIA extension, was added for MIDI pre-processor effects.
-    From ARIA v1.0.8.0+ an ‹<a href='/headers/effect'>effect<a>› section with a
+    From ARIA v1.0.8.0+ an &lt;<a href='/headers/effect'>effect<a>&gt; section with a
     <a href='/opcodes/bus'>bus</a>=midi can be used instead."
   version: "ARIA"
   deprecated: true
@@ -115,7 +115,7 @@ categories:
         - name: "delay_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate delay."
           value:
             type_name: "integer"
@@ -380,7 +380,7 @@ categories:
         - name: "delay_beats_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate delay_beats."
           value:
             type_name: "integer"
@@ -1153,7 +1153,7 @@ categories:
             max: 1
         - name: "varNN_curveccX"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC X uses to modulate varNN."
           value:
             type_name: "integer"
@@ -1473,7 +1473,7 @@ categories:
         - name: "pan_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate pan."
           value:
             type_name: "integer"
@@ -1515,7 +1515,7 @@ categories:
         - name: "position_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate position."
           value:
             type_name: "integer"
@@ -1584,7 +1584,7 @@ categories:
         - name: "volume_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate volume."
           value:
             type_name: "integer"
@@ -1616,7 +1616,7 @@ categories:
         - name: "width_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate width."
           value:
             type_name: "integer"
@@ -1670,7 +1670,7 @@ categories:
         - name: "amp_veltrack_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate amp_veltrack."
           value:
             type_name: "integer"
@@ -1948,7 +1948,7 @@ categories:
             unit: "%"
         - name: "amplitude_curveccN"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate amplitude."
           value:
             type_name: "integer"
@@ -1961,7 +1961,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/global'>global</a>› header."
+        the &lt;<a href='/headers/global'>global</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -1974,7 +1974,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/master'>master</a>› header."
+        the &lt;<a href='/headers/master'>master</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -1987,7 +1987,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/amplitude'>amplitude</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/group'>group</a>› header."
+        the &lt;<a href='/headers/group'>group</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -2039,7 +2039,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/volume'>volume</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/global'>global</a>› header."
+        the &lt;<a href='/headers/global'>global</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -2052,7 +2052,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/volume'>volume</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/master'>master</a>› header."
+        the &lt;<a href='/headers/master'>master</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -2065,7 +2065,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/volume'>volume</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/group'>group</a>› header."
+        the &lt;<a href='/headers/group'>group</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "float"
@@ -2223,7 +2223,7 @@ categories:
         - name: "cutoff_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate cutoff."
           value:
             type_name: "integer"
@@ -2272,7 +2272,7 @@ categories:
           - name: "cutoff2_onccN"
           - name: "cutoff2_curveccN"
             short_description:
-              "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+              "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
               which MIDI CC N uses to modulate cutoff2."
             value:
               type_name: "integer"
@@ -2469,7 +2469,7 @@ categories:
         - name: "resonance_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate resonance."
           value:
             type_name: "integer"
@@ -2506,7 +2506,7 @@ categories:
               version: "SFZ v2" # TODO: Inherit from the last defined?
           - name: "resonance2_curveccN"
             short_description:
-              "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+              "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
               which MIDI CC N uses to modulate resonance2."
             value:
               type_name: "integer"
@@ -2717,7 +2717,7 @@ categories:
         - name: "pitch_curveccN"
           version: "SFZ v2"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate pitch."
           value:
             type_name: "integer"
@@ -2750,7 +2750,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/group'>group</a>› header."
+        the &lt;<a href='/headers/group'>group</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "integer"
@@ -2763,7 +2763,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/master'>master</a>› header."
+        the &lt;<a href='/headers/master'>master</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "integer"
@@ -2776,7 +2776,7 @@ categories:
       short_description:
         "ARIA extension, like <a href='/opcodes/tune'>tune</a>,
         but affecting everything when set under
-        the ‹<a href='/headers/global'>global</a>› header."
+        the &lt;<a href='/headers/global'>global</a>&gt; header."
       version: "ARIA"
       value:
         type_name: "integer"
@@ -2950,7 +2950,7 @@ categories:
         - name: "ampeg_decay_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate ampeg_decay."
           value:
             type_name: "integer"
@@ -3045,7 +3045,7 @@ categories:
         - name: "ampeg_hold_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate ampeg_hold."
           value:
             type_name: "integer"
@@ -3140,7 +3140,7 @@ categories:
         - name: "ampeg_sustain_curveccN"
           version: "ARIA"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC N uses to modulate ampeg_sustain."
           value:
             type_name: "integer"
@@ -3182,7 +3182,7 @@ categories:
             default: 0
             min: -100
             max: 100
-            unit: "seconds"
+            unit: "%"
         - name: "ampeg_start_curveccN"
           version: "ARIA"
           value:
@@ -3663,7 +3663,7 @@ categories:
             default: 0
             min: -100
             max: 100
-            unit: "seconds"
+            unit: "%"
           alias:
           - name: "fileg_sustainccN"
         - name: "fileg_sustain_curveccN"
@@ -3966,7 +3966,7 @@ categories:
             default: 0
             min: -100
             max: 100
-            unit: "seconds"
+            unit: "%"
         - name: "pitcheg_start_curveccN"
           version: "ARIA"
           value:
@@ -3997,7 +3997,7 @@ categories:
             default: 0
             min: -100
             max: 100
-            unit: "seconds"
+            unit: "%"
         - name: "pitcheg_sustain_curveccN"
           version: "ARIA"
           value:
@@ -4126,7 +4126,7 @@ categories:
         midi_cc:
         - name: "egN_pan_curveccX"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC X uses to modulate egN_pan."
           value:
             type_name: "integer"
@@ -4731,7 +4731,7 @@ categories:
         midi_cc:
         - name: "lfoN_pitch_curveccX"
           short_description:
-            "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+            "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
             which MIDI CC X uses to modulate lfoN_pitch."
           value:
             type_name: "integer"
@@ -4992,7 +4992,7 @@ categories:
       - name: "bitred_onccN"
       - name: "bitred_curveccN"
         short_description:
-          "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+          "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
           which MIDI CC N uses to modulate bitred."
         value:
           type_name: "integer"
@@ -5092,7 +5092,7 @@ categories:
       - name: "decim_onccN"
       - name: "decim_curveccN"
         short_description:
-          "Specifies the ‹<a href='/headers/curve'>curve</a>› number
+          "Specifies the &lt;<a href='/headers/curve'>curve</a>&gt; number
           which MIDI CC N uses to modulate decim."
         value:
           type_name: "integer"
