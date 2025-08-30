@@ -6,7 +6,7 @@ MIDI CCs (Continuous Controllers) provide [modulation] sources that can be used 
 
 MIDI CCs are "attached" to _target_ opcodes by appending `ccN`, although the syntax for these varies:
 
-- SFZ1 generally uses `_ccN` or `ccN` (for example [cutoff_ccN] or [ampeg_releaseccN]).
+- SFZ1 generally uses `_ccN` or `ccN` (for example [cutoff_ccN][cutoff] or [ampeg_releaseccN]).
 - SFZ2 introduces a range of additional modulations using `_onccN` (for example [delay_samples_onccN]),
 although the `ccN` and `_ccN` versions may be aliases, depending on implementation.
 
@@ -59,7 +59,6 @@ See also the related tutorials for [SFZ1] and [SFZ2].
 
 [modulation]:          index.md
 [cutoff]:              ../opcodes/cutoff.md
-[cutoff_ccN]:          ../opcodes/cutoff.md
 [ampeg_releaseccN]:    ../opcodes/ampeg_release.md
 [delay_samples_onccN]: ../opcodes/delay_samples.md
 [opcode list]:         ../opcodes/index.md
