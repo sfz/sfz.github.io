@@ -66,5 +66,5 @@ See also the related tutorials for [SFZ1] and [SFZ2].
 [extended MIDI CCs]:   ../extensions/midi_ccs.md
 [width]:               ../opcodes/width.md
 [headers]:             ../headers/index.md
-[SFZ1]:                ../tutorials/sfz1_modulations.md
+[SFZ1]:                ../tutorials/sfz-1-midiccs.md
 [SFZ2]:                ../tutorials/sfz2_modulations.md
