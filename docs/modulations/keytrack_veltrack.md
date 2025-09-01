@@ -30,8 +30,8 @@ or random amount (appending `_random`).
 
 Again, see the [opcode list] and search for `_veltrack` to see more.
 
-See the last of the [Velocity tracking, keytracking and randomization] examples.
+See the last of the [Velocity tracking, keytracking and randomization][1] examples.
 
 [&lt;curve&gt;]: ../headers/curve.md
 [opcode list]:   ../opcodes/index.md
-[Velocity tracking, keytracking and randomization]: ../tutorials/sfz1_modulations.md#velocity-tracking-keytracking-and-randomization
+[1]:             ../tutorials/sfz1_modulations.md#velocity-tracking-keytracking-and-randomization
