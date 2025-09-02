@@ -24,7 +24,7 @@ The targets are:
 
 See the [opcode list] and search for `chanaft` or `polyaft` to see the syntax in full.
 
-## LFO modulation example
+### LFO modulation example
 
 The same basic principle applies as in the [SFZ1 LFO tutorial], just using
 `chanaft` or `polyaft` in place of `ccN`:

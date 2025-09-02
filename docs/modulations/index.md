@@ -9,8 +9,8 @@ There are several types of modulation _source_:
 
 - [MIDI CC controllers]
 - [Envelope Generators] and [Low Frequency Oscillators]
-- [Key Tracking] and [Velocity Tracking]
-- [Channel Aftertouch] and [Polyphonic Aftertouch]
+- [Key Tracking][1] and [Velocity Tracking][1]
+- [Channel Aftertouch][2] and [Polyphonic Aftertouch][2]
 
 Depending on player support, sometimes one modulation source can affect
 how another modulation source behaves - specifically for MIDI [Note Velocity].
@@ -22,9 +22,7 @@ to be reversed.
 [MIDI CC controllers]:       midi_ccs.md
 [Envelope Generators]:       envelope_generators.md
 [Low Frequency Oscillators]: lfo.md
-[Velocity Tracking]:         keytrack_veltrack.md
-[Key Tracking]:              keytrack_veltrack.md
-[Channel Aftertouch]:        chanaft_polyaft.md
-[Polyphonic Aftertouch]:     chanaft_polyaft.md
+[1]:                         keytrack_veltrack.md
+[2]:                         chanaft_polyaft.md
 [Note Velocity]:             vel2.md
 [cutoff]:                    ../opcodes/cutoff.md
