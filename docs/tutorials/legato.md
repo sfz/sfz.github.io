@@ -8,7 +8,11 @@ In the basic sustained instruments
 tutorial, we have the below example of a monophonic flute, which uses the
 [group] and [off_by] opcodes to allow only one be played at a time,
 and the [off_mode] together with [ampeg_release] make the fadeout of the previous
-note a little smoother. This is a starting point for implementing legato.
+note a little smoother. This is a starting point for implementing legato. There's
+also an [example] legato vocal with more complex variations which contains several patches.
+The https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/02-basic_monophonic_no_vibrato_a.sfz
+patch is also roughly equivalent to the below. The https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/01-no_legato_polyphonic_only_no_vibrato_a.sfz
+patch is a polyphonic version, with no self-muting defined at all.
 
 If only group and off_by are specified, the resulting sound will probably be quite bad, as
 this will use default values for off_mode, ampeg_attack and ampeg_release. This means the note being
@@ -299,6 +303,9 @@ offset=12000
 It is also possible to use CC 140 in a similar way in an instrument which,
 for example, has legato transitions recorded ascending but not descending.
 
+In the [example] vocal, the https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/08-no_unison_legato_a.sfz
+patch is roughly equivalent to what we have above.
+
 ## Further True Legato Possibilities
 
 It's possible to make a legato instrument that's not sampled chromatically. In
@@ -348,8 +355,16 @@ passable. A better but more laborious solution would be processing the recording
 pitch transposition software such as Melodyne or Zplane reTune to create the missing
 intervals.
 
+## True Legato With Unison
+
+In the [example] vocal, https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/09-complete_original_legato_a.sfz
+is identical to the "a" vowel patch from the original Hadzi-Fia commercial release, and includes
+[unison] implemented via transposition, including for the legato regions. This is not trivial
+to implement in a real instrument, but certainly possible, and has been implemented in a few
+other instruments as well.
 
 
+[example]:       https://github.com/sfzinstruments/legato_vocal_tutorial
 [extended CCs]:  ../extensions/midi_ccs.md
 [envelope]:      ../modulations/envelope_generators.md
 [ampeg_release]: ../opcodes/ampeg_release.md
@@ -360,3 +375,4 @@ intervals.
 [sw_previous]:   ../opcodes/sw_previous.md
 [trigger]:       ../opcodes/trigger.md
 [extending]:     range_extension.md
+[unison]:        unison.md
