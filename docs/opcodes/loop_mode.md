@@ -48,6 +48,12 @@ In ARIA, if loop_mode=loop_continuous or loop_sustain, `loop_end` is not specifi
 and the sample does not have a loop defined, the player will loop through
 the entire sample file.
 
+In ARIA and the Cakewalk players, if loop_mode=one_shot is set and the sample file
+metadata contains defined loop points, the loop points are disregarded and the sample is
+played through only once. This prevents regions which disregard note-off messages
+looping infinitely (unless muted by running out of polyphony voices, an [off_by] opcode,
+[ampeg_sustain] going to zero or some other external event).
+
 ## Examples
 
 ```sfz
@@ -58,5 +64,7 @@ loop_mode=loop_continuous
 
 
 [ampeg_release]: ampeg_release.md
+[ampeg_sustain]: ampeg_sustain.md
 [count]:         count.md
 [trigger]:       trigger.md
+[off_by]:        off_by.md
