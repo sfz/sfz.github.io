@@ -39,4 +39,4 @@ pitchlfo_depthpolyaft=33
 [cutoff_polyaft]:       ../opcodes/cutoff.md
 [pitchlfo_freqchanaft]: ../opcodes/pitchlfo_freq.md
 [first example]:        ../opcodes/cutoff.md#examples
-[SFZ1 LFO tutorial]:    ../tutorials/sfz1_modulations.md#lfos-and-envelopes
+[SFZ1 LFO tutorial]:    ../tutorials/sfz-1-lfos.md

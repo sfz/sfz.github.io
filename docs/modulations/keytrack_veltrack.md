@@ -14,11 +14,11 @@ Note On MIDI messages provide
 For note number modulation, the suffix `_keytrack` is appended to the target.
 The target can be:
 
-- amplifier (`amp`)
-- filters (`fil` and `fil2`)
-- pan position (`pan`)
-- pitch (`pitch` or `tune`)
-- start position in the sample (`position`)
+- amplifier [(`amp`)][1]
+- filters [(`fil` and `fil2`)][2]
+- pan position [(`pan`)][3]
+- pitch [(`pitch` or `tune`)][4]
+- stereo field position of the sample [(`position`)][5]
 
 See the [opcode list] and search for `_keytrack` to see more.
 
@@ -30,8 +30,18 @@ or random amount (appending `_random`).
 
 Again, see the [opcode list] and search for `_veltrack` to see more.
 
-See the last of the [Velocity tracking, keytracking and randomization][1] examples.
+For example:
+
+```sfz
+gain_cc80=-6
+amp_keytrack=-1.3
+amp_veltrack=80
+```
 
 [&lt;curve&gt;]: ../headers/curve.md
 [opcode list]:   ../opcodes/index.md
-[1]:             ../tutorials/sfz1_modulations.md#velocity-tracking-keytracking-and-randomization
+[1]:             ../opcodes/volume.md
+[2]:             ../opcodes/cutoff.md
+[3]:             ../opcodes/pan.md
+[4]:             ../opcodes/pitch.md
+[5]:             ../opcodes/position.md
