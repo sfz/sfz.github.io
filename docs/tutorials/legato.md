@@ -8,11 +8,7 @@ In the basic sustained instruments
 tutorial, we have the below example of a monophonic flute, which uses the
 [group] and [off_by] opcodes to allow only one be played at a time,
 and the [off_mode] together with [ampeg_release] make the fadeout of the previous
-note a little smoother. This is a starting point for implementing legato. There's
-also an [example] legato vocal with more complex variations which contains several patches.
-The https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/02-basic_monophonic_no_vibrato_a.sfz
-patch is also roughly equivalent to the below. The https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/01-no_legato_polyphonic_only_no_vibrato_a.sfz
-patch is a polyphonic version, with no self-muting defined at all.
+note a little smoother. This is a starting point for implementing legato.
 
 If only group and off_by are specified, the resulting sound will probably be quite bad, as
 this will use default values for off_mode, ampeg_attack and ampeg_release. This means the note being
@@ -40,6 +36,12 @@ group=1 off_by=1 off_mode=normal
 <region>sample=e4_ft_p.wav xfin_locc1=0 xfin_hicc1=63 xfout_locc1=64 xfout_hicc1=127
 <region>sample=e4_ft_f.wav xfin_locc1=64 xfin_hicc1=127
 ```
+
+There's also an [example] legato vocal with more complex variations which contains
+several patches, and also contains all the samples, so it is a working example which
+produces sound. The <https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/02-basic_monophonic_no_vibrato_a.sfz>
+patch is also roughly equivalent to the above. The <https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/01-no_legato_polyphonic_only_no_vibrato_a.sfz>
+patch is an even simpler polyphonic version, with no self-muting defined at all.
 
 ## Legato regions
 
@@ -183,6 +185,9 @@ sample=..\Samples\arco_looped\c4_sustain.wav
 pitch_keycenter=48
 ```
 
+The current version of the example legato vocal does not include portamento, but
+some other free instruments do, including the aforementioned <https://github.com/sfzinstruments/karoryfer.meatbass>.
+
 ## True sampled legato
 
 Here are examples from a simple flute test by MatFluor. The trigger=first regions
@@ -303,7 +308,7 @@ offset=12000
 It is also possible to use CC 140 in a similar way in an instrument which,
 for example, has legato transitions recorded ascending but not descending.
 
-In the [example] vocal, the https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/08-no_unison_legato_a.sfz
+In the [example] vocal, the <https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/08-no_unison_legato_a.sfz>
 patch is roughly equivalent to what we have above.
 
 ## Further True Legato Possibilities
@@ -357,7 +362,7 @@ intervals.
 
 ## True Legato With Unison
 
-In the [example] vocal, https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/09-complete_original_legato_a.sfz
+In the [example] vocal, <https://github.com/sfzinstruments/legato_vocal_tutorial/blob/main/Programs/09-complete_original_legato_a.sfz>
 is identical to the "a" vowel patch from the original Hadzi-Fia commercial release, and includes
 [unison] implemented via transposition, including for the legato regions. This is not trivial
 to implement in a real instrument, but certainly possible, and has been implemented in a few
