@@ -974,7 +974,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
+        default: -1
         min: 0
         max: 127
 
@@ -985,7 +985,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 127
+        default: -1
         min: 0
         max: 127
 
@@ -997,7 +997,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
+        default: -1
         min: 0
         max: 127
 
@@ -1010,7 +1010,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
+        default: -1
         min: 0
         max: 127
 
@@ -1021,7 +1021,7 @@ categories:
       version: "SFZ v1"
       value:
         type_name: "integer"
-        default: 0
+        default: -1
         min: 0
         max: 127
 
