@@ -2349,7 +2349,7 @@ categories:
         type_name: "string"
         default: "cents"
       alias:
-      - name: "fil2_mode
+      - name: "fil2_mode"
         short_description:
           "Same as <a href='/opcodes/fil_mode'>fil_mode</a>,
           but used to specify modulation mode for the second filter."
