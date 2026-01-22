@@ -2178,6 +2178,14 @@ categories:
         min: 0
         max: 1
 
+    - name: "eqN_mode"
+      version: "ARIA"
+      short_description:
+        "Specifies whether EQ frequency modulation is in cents of Hertz. Valid values are hz and cents."
+      value:
+        type_name: "string"
+        default: "hz"
+
     - name: "eqN_type"
       short_description: "Sets the type of EQ filter."
       version: "SFZ v2"
@@ -2330,8 +2338,22 @@ categories:
       - name: "fil2_keytrack"
         short_description:
           "Same as <a href='/opcodes/fil_keytrack'>fil_keytrack</a>,
-          but used to specify the type for the second filter."
+          but used to specify tracking for the second filter."
         version: "SFZ v2"
+
+    - name: "fil_mode"
+      version: "ARIA"
+      short_description:
+        "Specifies whether filter modulation is in cents of Hertz. Valid values are cents and hz"
+      value:
+        type_name: "string"
+        default: "cents"
+      alias:
+      - name: "fil2_mode"
+        short_description:
+          "Same as <a href='/opcodes/fil_mode'>fil_mode</a>,
+          but used to specify modulation mode for the second filter."
+        version: "ARIA"
 
     - name: "fil_random"
       short_description:
