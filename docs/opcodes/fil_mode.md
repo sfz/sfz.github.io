@@ -12,7 +12,3 @@ fil_mode=cents
 
 fil2_mode=hz
 ```
-
-
-
-[fil_keycenter]: fil_keycenter.md
