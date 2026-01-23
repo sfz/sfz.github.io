@@ -2181,7 +2181,7 @@ categories:
     - name: "eqN_mode"
       version: "ARIA"
       short_description:
-        "Specifies whether EQ frequency modulation is in cents of Hertz. Valid values are hz and cents."
+        "Specifies whether EQ frequency modulation is in cents or Hertz. Valid values are hz and cents."
       value:
         type_name: "string"
         default: "hz"
@@ -2344,7 +2344,7 @@ categories:
     - name: "fil_mode"
       version: "ARIA"
       short_description:
-        "Specifies whether filter modulation is in cents of Hertz. Valid values are cents and hz"
+        "Specifies whether filter modulation is in cents or Hertz. Valid values are cents and hz"
       value:
         type_name: "string"
         default: "cents"
