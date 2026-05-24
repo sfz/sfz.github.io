@@ -7,6 +7,10 @@ The player will keep an internal counter creating a consecutive
 note-on sequence for each region, starting at 1 and resetting at seq_length.
 Maximum allowed value is 100.
 
+Note that, as with other opcodes that restrict when a region plays,
+`seq_position` is _combined_ with other playback restrictions.
+If you have irregular region mappings, you may find you have "silent" steps.
+
 ## Example
 
 ```sfz
