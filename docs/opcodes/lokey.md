@@ -37,6 +37,15 @@ When an instrument is sampled every minor third, this kind of usage will be comm
 <region> sample=eb5.wav lokey=74 hikey=76 pitch_keycenter=75
 ```
 
+For cases where a region should not actually be triggered by a MIDI note message (usually
+this means a region triggered by MIDI CC changes, for example the movement of piano pedals),
+the special value of -1 can be used:
+
+```sfz
+lokey=-1
+hikey=-1
+```
+
 
 [key]:                key.md
 [on_loccN / onhiccN]: on_loccN.md

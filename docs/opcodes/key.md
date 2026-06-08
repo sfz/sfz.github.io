@@ -49,5 +49,13 @@ the lokey value it would set will override the previous lokey.
 lokey=70 key=72
 ```
 
+For cases where a region should not actually be triggered by a MIDI note message (usually
+this means a region triggered by MIDI CC changes, for example the movement of piano
+pedals), the special value of -1 can be used:
+
+```sfz
+key=-1
+```
+
 
 [pitch_keycenter]: pitch_keycenter.md
