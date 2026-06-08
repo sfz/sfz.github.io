@@ -779,43 +779,9 @@ categories:
   short_description:
     "Region Logic opcodes define the conditions under which a voice plays or stops."
   types:
-  - name: "Key Mapping"
-    id: "map"
+  - name: "MIDI Conditions"
+    id: "mid"
     opcodes:
-    - name: "key"
-      short_description:
-        "Equivalent to using <a href='/opcodes/lokey'>lokey</a>,
-        <a href='/opcodes/hikey'>hikey</a> and
-        <a href='/opcodes/pitch_keycenter'>pitch_keycenter</a>
-        and setting them all to the same note value."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        min: 0
-        max: 127
-
-    - name: "lokey"
-      short_description:
-        "Determine the low boundary of a certain
-        <a href='/headers/region'>region</a>."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 127
-
-    - name: "hikey"
-      short_description:
-        "Determine the high boundary of a certain
-        <a href='/headers/region'>region</a>."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 127
-        min: 0
-        max: 127
-
     - name: "lovel"
       short_description:
         "If a note with velocity value equal to or higher than <code>lovel</code>
@@ -840,9 +806,6 @@ categories:
         min: 1
         max: 127
 
-  - name: "MIDI Conditions"
-    id: "mid"
-    opcodes:
     - name: "lochan"
       short_description:
         "If incoming notes have a MIDI channel between <code>lochan</code> and
@@ -908,6 +871,50 @@ categories:
         default: 8192
         min: -8192
         max: 8192
+
+    - name: "lochanaft"
+      short_description:
+        "Defines the range of last Channel Aftertouch message required
+        for the region to play."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hichanaft"
+      short_description:
+        "Defines the range of last Channel Aftertouch message required
+        for the region to play."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
+    - name: "lopolyaft"
+      short_description:
+        "Defines the range of last Polyphonic Aftertouch message required
+        for the region to play."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hipolyaft"
+      short_description:
+        "Defines the range of last Polyphonic Aftertouch message required
+        for the region to play."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
 
     - name: "sostenuto_cc"
       short_description: "Reassigns the sostenuto pedal CC to a non-standard value."
@@ -1204,49 +1211,6 @@ categories:
         max: 500
         unit: "bpm"
 
-    - name: "lochanaft"
-      short_description:
-        "Defines the range of last Channel Aftertouch message required
-        for the region to play."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 127
-
-    - name: "hichanaft"
-      short_description:
-        "Defines the range of last Channel Aftertouch message required
-        for the region to play."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 127
-        min: 0
-        max: 127
-
-    - name: "lopolyaft"
-      short_description:
-        "Defines the range of last Polyphonic Aftertouch message required
-        for the region to play."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 0
-        min: 0
-        max: 127
-
-    - name: "hipolyaft"
-      short_description:
-        "Defines the range of last Polyphonic Aftertouch message required
-        for the region to play."
-      version: "SFZ v1"
-      value:
-        type_name: "integer"
-        default: 127
-        min: 0
-        max: 127
 
     - name: "lorand"
       short_description:
@@ -1311,6 +1275,40 @@ categories:
   - name: "Triggers"
     id: "trg"
     opcodes:
+    - name: "key"
+      short_description:
+        "Equivalent to using <a href='/opcodes/lokey'>lokey</a>,
+        <a href='/opcodes/hikey'>hikey</a> and
+        <a href='/opcodes/pitch_keycenter'>pitch_keycenter</a>
+        and setting them all to the same note value."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        min: 0
+        max: 127
+
+    - name: "lokey"
+      short_description:
+        "Determine the low boundary of a certain
+        <a href='/headers/region'>region</a>."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 0
+        min: 0
+        max: 127
+
+    - name: "hikey"
+      short_description:
+        "Determine the high boundary of a certain
+        <a href='/headers/region'>region</a>."
+      version: "SFZ v1"
+      value:
+        type_name: "integer"
+        default: 127
+        min: 0
+        max: 127
+
     - name: "trigger"
       short_description:
         "Sets the trigger which will be used for the sample to play."

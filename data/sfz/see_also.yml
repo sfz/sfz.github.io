@@ -135,3 +135,7 @@
     url: "../?q=vol&c=amp,eg,lfo"
   - name: "Cross fade"
     url: "../?q=xf"
+
+- name: "pitch_keycenter"
+  pages:
+  - name: "key"
