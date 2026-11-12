@@ -242,6 +242,17 @@ categories:
     - name: "Windows"
     short_description: "TypeScript/JavaScript SFZ player using the Web Audio API."
 
+
+  - name: "SFZ Studio"
+    author: "Dynamix Audio"
+    license: "Freeware / Commercial"
+    url: "https://dynamix-audio.com/keyboard/sfz-studio/"
+    os:
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "A powerful, professional graphical SFZ editor and sample player for Windows and macOS. Create, edit, save, and play SFZ instruments with a fully functional free version. Optional Pro features include protamento, microtonal scales, pro-grade effects, import groups and drum notes, region editor, and multi-format instrument import."
+
 - name: "Import from SFZ"
   applications:
 
