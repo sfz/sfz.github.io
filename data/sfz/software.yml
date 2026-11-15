@@ -242,6 +242,17 @@ categories:
     - name: "Windows"
     short_description: "TypeScript/JavaScript SFZ player using the Web Audio API."
 
+  - name: "Märmel"
+    author: "Björn Bojahr"
+    license: "AGPL-3.0-or-later"
+    url: "https://github.com/bjoernbojahr/Maermel"
+    os:
+    - name: "Linux"
+    - name: "macOS"
+    - name: "Windows"
+    short_description:
+      "Stage-ready SFZ player - one fixed set of controls that works the same for every instrument, all samples in RAM. AU/LV2/VST3 plugin."
+
 - name: "Import from SFZ"
   applications:
 
